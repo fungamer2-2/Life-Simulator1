@@ -167,7 +167,7 @@ class Player(Person):
 			else:
 				parent.change_relationship(-randint(0, 1))
 		print(f"Age {self.age}")
-		if self.age > randint(111, 121) or (self.age > randint(85, 100) and randint(1, 2) == 1):
+		if self.age > randint(112, 123) or (self.age > randint(80 + self.health // 10, 90 + self.health // 3) and randint(1, 2) == 1):
 			self.alive = False
 			return
 		if self.age > 50 and self.looks > randint(20, 25):
@@ -207,6 +207,7 @@ class Player(Person):
 			if self.happiness >= randint(20, 35):
 				display_event("You are no longer suffering from depression")
 				self.change_happiness((100 - self.happiness)//2)
+				self.change_health(randint(4, 8))
 				self.depressed = False
 			else:
 				self.change_happiness(-randint(1, 2))
