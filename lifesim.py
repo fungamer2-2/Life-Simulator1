@@ -5,7 +5,7 @@ from enum import Enum
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
 
-class Gender:
+class Gender(Enum):
 	Male = 0
 	Female = 1
 	
