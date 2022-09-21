@@ -108,6 +108,10 @@ def random_name(gender):
 		return random.choice(MALE_NAMES)
 	else:
 		return random.choice(FEMALE_NAMES)
+
+def display_event(message):
+	print(message)
+	input("Press Enter to continue...")	
 		
 class Player(Person):
 	
@@ -137,6 +141,9 @@ class Player(Person):
 		self.worked_out = False
 		self.money = 0
 		self.depressed = False
+		self.student_loan = 0
+		self.chose_student_loan = False
+		self.uv_years = 0
 		
 	@property
 	def relations(self):
@@ -167,24 +174,38 @@ class Player(Person):
 			decay = min((self.age - 51) // 5 + 1, 4)
 			self.change_looks(-randint(0, decay))
 		if self.happiness < 10 and not self.depressed:
-			print("You are suffering from depression.")
+			display_event("You are suffering from depression.")
 			self.depressed = True
 			self.change_happiness(-50)
 			self.change_health(-randint(4, 8))
 		for parent in list(self.parents.values()):
 			if parent.age >= randint(110, 120) or (randint(1, 100) <= 50 and parent.age >= max((randint(72, 90) + randint(0, parent.health//4)) for _ in range(2))):
 				rel_str = parent.name_accusative()
-				print(f"Your {rel_str} died at the age of {parent.age}")
-				print("Press enter to continue")
-				input()
+				display_event(f"Your {rel_str} died at the age of {parent.age}")
 				del self.parents[parent.get_type()]
 				self.change_happiness(-randint(40, 55))
 		self.random_events()
 		
 	def random_events(self):
+		if self.uv_years > 0:
+			self.uv_years -= 1
+			if self.uv_years == 0:
+				display_event("You graduated from university.")
+				self.change_happiness(randint(14, 20))
+				self.change_smarts(randint(10, 15))
+				if self.chose_student_loan:
+					self.student_loan = randint(20000, 40000)
+					print("You now have to start paying back your student loan")
+		if self.student_loan > 0:
+			amount = min(randint(1000, 3000) for _ in range(3))
+			amount = min(amount, self.student_loan)
+			self.money -= amount
+			self.student_loan -= amount
+			if self.student_loan == 0:
+				print("You've fully paid off your student loan")
 		if self.depressed:
 			if self.happiness >= randint(20, 35):
-				print("You are no longer suffering from depression")
+				display_event("You are no longer suffering from depression")
 				self.change_happiness((100 - self.happiness)//2)
 				self.depressed = False
 			else:
@@ -228,8 +249,41 @@ class Player(Person):
 				if self.smarts >= random.randint(28, 44):
 					print("Your application to university was accepted!")
 					self.change_happiness(randint(7, 9))
+					choices = [
+						"Scholarship",
+						"Student Loan",
+						"Ask parents to pay"
+					]
+					final_choice = None
+					while not final_choice:
+						print("How would you like to pay for your college tuition?")
+						choice = choices[choice_input(*choices) - 1]
+						if choice == "Scholarship":
+							if self.smarts >= random.randint(75, 95):
+								display_event("Your scholarship application has been awarded!")
+								final_choice = "Scholarship"
+								self.change_happiness(randint(10, 15))
+							else:
+								display_event("Your scholarship application was rejected.")
+								self.change_happiness(-randint(7, 9))
+								choices.remove("Scholarship")
+						elif choice == "Ask parents to pay":
+							if randint(1, 5) == 1:
+								display_event("Your parents agreed to pay for your university tuition!")
+								self.change_happiness(randint(7, 9))
+								final_choice = "Parents"
+							else:
+								display_event("Your parents refused to pay for your university tuition.")
+								self.change_happiness(-randint(7, 9))
+								choices.remove("Ask parents to pay")
+						else:
+							display_event("You took out a student loan to pay for your university tuition.")
+							final_choice = "Student Loan"
+							self.chose_student_loan = True
+					print("You are now enrolled in university.")
+					self.uv_years = 4
 				else:
-					print("Your application to university was rejected.")
+					display_event("Your application to university was rejected.")
 					self.change_happiness(-randint(7, 9))
 			
 def draw_bar(val, max_val, width):
@@ -240,6 +294,7 @@ p = Player()
 print(f"Your name: {p.name}")
 print(f"Gender: {'Male' if p.gender == Gender.Male else 'Female'}")
 while True:
+	print(f"Money: ${p.money:,}")
 	print(f"Happiness: {draw_bar(p.happiness, 100, 25)} {p.happiness}%")
 	print(f"Health:    {draw_bar(p.health, 100, 25)} {p.health}%")
 	print(f"Smarts:    {draw_bar(p.smarts, 100, 25)} {p.smarts}%")
