@@ -77,6 +77,9 @@ class Relationship(Person):
 	def get_type(self):
 		return "Unknown Relation"
 		
+	def name_accusative(self):
+		return "relationship"
+		
 	def age_up(self):
 		super().age_up()
 		self.change_relationship(randint(-4, 4))
@@ -89,6 +92,9 @@ class Parent(Relationship):
 		smarts = randint(0, 50) + randint(0, 50)
 		looks = randint(0, 60) + randint(0, 40)
 		super().__init__(random_name(gender), lastname, age, gender, happiness, health, smarts, looks, randint(90, 100))
+	
+	def name_accusative(self):
+		return "mother" if self.gender == Gender.Female else "father"
 	
 	def get_type(self):
 		return "Mother" if self.gender == Gender.Female else "Father"
@@ -129,6 +135,8 @@ class Player(Person):
 		self.total_happiness = 0
 		self.meditated = False
 		self.worked_out = False
+		self.money = 0
+		self.depressed = False
 		
 	@property
 	def relations(self):
@@ -147,7 +155,9 @@ class Player(Person):
 		self.change_karma(randint(-2, 2))
 		for parent in self.parents.values():
 			parent.age_up()
-			if self.age >= 18:
+			if self.age < 18:
+				parent.change_relationship(1)
+			else:
 				parent.change_relationship(-randint(0, 1))
 		print(f"Age {self.age}")
 		if self.age > randint(111, 121) or (self.age > randint(85, 100) and randint(1, 2) == 1):
@@ -156,17 +166,30 @@ class Player(Person):
 		if self.age > 50 and self.looks > randint(20, 25):
 			decay = min((self.age - 51) // 5 + 1, 4)
 			self.change_looks(-randint(0, decay))
+		if self.happiness < 10 and not self.depressed:
+			print("You are suffering from depression.")
+			self.depressed = True
+			self.change_happiness(-50)
+			self.change_health(-randint(4, 8))
 		for parent in list(self.parents.values()):
 			if parent.age >= randint(110, 120) or (randint(1, 100) <= 50 and parent.age >= max((randint(72, 90) + randint(0, parent.health//4)) for _ in range(2))):
-				rel_str = parent.get_type()
+				rel_str = parent.name_accusative()
 				print(f"Your {rel_str} died at the age of {parent.age}")
 				print("Press enter to continue")
 				input()
 				del self.parents[parent.get_type()]
-				self.change_happiness(-randint(30, 50))
+				self.change_happiness(-randint(40, 55))
 		self.random_events()
 		
 	def random_events(self):
+		if self.depressed:
+			if self.happiness >= randint(20, 35):
+				print("You are no longer suffering from depression")
+				self.change_happiness((100 - self.happiness)//2)
+				self.depressed = False
+			else:
+				self.change_happiness(-randint(1, 2))
+				self.change_health(-randint(1, 4))
 		if self.age == 2 and randint(1, 2) == 1:
 			print("Your mother is taking to to the doctor's office to get vaccinated.")
 			print("How will you behave?")
@@ -289,3 +312,4 @@ while True:
 					if p.looks < workout:
 						p.change_looks(randint(1, 3) + randint(0, round(workout / 33)))
 					p.worked_out = True
+				print()
