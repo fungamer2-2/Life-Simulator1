@@ -153,6 +153,9 @@ class Player(Person):
 		if self.age > randint(111, 121) or (self.age > randint(85, 100) and randint(1, 2) == 1):
 			self.alive = False
 			return
+		if self.age > 50 and self.looks > randint(20, 25):
+			decay = min((self.age - 51) // 5 + 1, 4)
+			self.change_looks(-randint(0, decay))
 		for parent in list(self.parents.values()):
 			if parent.age >= randint(110, 120) or (randint(1, 100) <= 50 and parent.age >= max((randint(72, 90) + randint(0, parent.health//4)) for _ in range(2))):
 				rel_str = parent.get_type()
@@ -212,6 +215,7 @@ def draw_bar(val, max_val, width):
 		
 p = Player()
 print(f"Your name: {p.name}")
+print(f"Gender: {'Male' if p.gender == Gender.Male else 'Female'}")
 while True:
 	print(f"Happiness: {draw_bar(p.happiness, 100, 25)} {p.happiness}%")
 	print(f"Health:    {draw_bar(p.health, 100, 25)} {p.health}%")
