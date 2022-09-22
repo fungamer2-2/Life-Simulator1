@@ -2,6 +2,8 @@
 
 A life simulator in Python inspired by "Bitlife - Life Simulator"
 
+Contributions are welcome! You can contribute my making an issue or pull request.
+
 ## Installation
 
 1. Clone this repository:
