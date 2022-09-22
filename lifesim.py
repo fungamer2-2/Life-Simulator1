@@ -68,11 +68,15 @@ class Relationship(Person):
 	def __init__(self, firstname, lastname, age, gender, happiness, health, smarts, looks, relationship):
 		super().__init__(firstname, lastname, age, gender, happiness, health, smarts, looks)
 		self.relationship = relationship
+		self.spent_time = False
 		
 	#TODO: add is_male() and is_female() methods
 		
 	def change_relationship(self, amount):
 		self.relationship = clamp(self.relationship + amount, 0, 100)
+	
+	def his_her(self):
+		return "his" if self.gender == Gender.Male else "her"
 	
 	def get_type(self):
 		return "Unknown Relation"
@@ -83,6 +87,7 @@ class Relationship(Person):
 	def age_up(self):
 		super().age_up()
 		self.change_relationship(randint(-4, 4))
+		self.spent_time = False
 			
 class Parent(Relationship):
 	
@@ -165,9 +170,9 @@ class Player(Person):
 			if self.age < 18:
 				parent.change_relationship(1)
 			else:
-				parent.change_relationship(-randint(0, 1))
+				parent.change_relationship(random.choice((-1, -1, 0)))
 		print(f"Age {self.age}")
-		if self.age > randint(112, 123) or (self.age > randint(80 + self.health // 10, 90 + self.health // 3) and randint(1, 2) == 1):
+		if self.age > randint(112, 123) or (self.age > randint(80 + self.health // 10, 90 + self.health // 3) and randint(1, 100) <= 65):
 			self.alive = False
 			return
 		if self.age > 50 and self.looks > randint(20, 25):
@@ -325,6 +330,20 @@ while True:
 			print(f"Age: {relation.age}")
 			print(f"Relation: {relation.get_type()}")
 			print(f"Relationship: {draw_bar(relation.relationship, 100, 25)}")
+			choices = [ "Back" ]
+			if p.age >= 5:
+				choices.append("Spend time")
+			choice = choices[choice_input(*choices) - 1]
+			if choice == "Spend time":
+				print(f"You spent time with your {relation.name_accusative()}.")
+				enjoyment1 = max(randint(0, 70), randint(0, 70)) + randint(0, 30)
+				enjoyment2 = round(random.triangular(0, 100, relation.relationship))
+				print(f"Your Enjoyment: {draw_bar(enjoyment1, 100, 25)}")
+				print(f"{relation.his_her().capitalize()} Enjoyment:  {draw_bar(enjoyment2, 100, 25)}")
+				if not relation.spent_time:
+					p.change_happiness(enjoyment1 // 12 + randint(0, 1))
+					relation.change_relationship(enjoyment2 // 12 + randint(0, 1))
+					relation.spent_time = True
 			print()
 	if choice == 3:
 		choices = [ "Back" ]
@@ -363,8 +382,8 @@ while True:
 				print("You worked out at the gym.")
 				print("Workout: " + draw_bar(workout, 100, 25))
 				if not p.worked_out:
-					p.change_happiness(round(workout / 8) + randint(0, 2))
-					p.change_health(round(workout / 12) + randint(1, 3))
+					p.change_happiness(round(workout / 8) + randint(0, 1))
+					p.change_health(round(workout / 12) + randint(1, 2))
 					if p.looks < workout:
 						p.change_looks(randint(1, 3) + randint(0, round(workout / 33)))
 					p.worked_out = True
