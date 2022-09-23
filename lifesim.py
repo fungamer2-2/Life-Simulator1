@@ -69,6 +69,7 @@ class Relationship(Person):
 		super().__init__(firstname, lastname, age, gender, happiness, health, smarts, looks)
 		self.relationship = relationship
 		self.spent_time = False
+		self.had_conversation = False
 		
 	#TODO: add is_male() and is_female() methods
 		
@@ -88,6 +89,7 @@ class Relationship(Person):
 		super().age_up()
 		self.change_relationship(randint(-4, 4))
 		self.spent_time = False
+		self.had_conversation = False
 			
 class Parent(Relationship):
 	
@@ -97,7 +99,7 @@ class Parent(Relationship):
 		smarts = randint(0, 50) + randint(0, 50)
 		looks = randint(0, 60) + randint(0, 40)
 		super().__init__(random_name(gender), lastname, age, gender, happiness, health, smarts, looks, randint(90, 100))
-	
+		
 	def name_accusative(self):
 		return "mother" if self.gender == Gender.Female else "father"
 	
@@ -274,7 +276,7 @@ class Player(Person):
 								self.change_happiness(-randint(7, 9))
 								choices.remove("Scholarship")
 						elif choice == "Ask parents to pay":
-							if randint(1, 5) == 1:
+							if randint(1, 6) == 1:
 								display_event("Your parents agreed to pay for your university tuition!")
 								self.change_happiness(randint(7, 9))
 								final_choice = "Parents"
@@ -331,8 +333,9 @@ while True:
 			print(f"Relation: {relation.get_type()}")
 			print(f"Relationship: {draw_bar(relation.relationship, 100, 25)}")
 			choices = [ "Back" ]
-			if p.age >= 5:
+			if p.age >= 4:
 				choices.append("Spend time")
+				choices.append("Have a conversation")
 			choice = choices[choice_input(*choices) - 1]
 			if choice == "Spend time":
 				print(f"You spent time with your {relation.name_accusative()}.")
@@ -344,6 +347,18 @@ while True:
 					p.change_happiness(enjoyment1 // 12 + randint(0, 1))
 					relation.change_relationship(enjoyment2 // 12 + randint(0, 1))
 					relation.spent_time = True
+			elif choice == "Have a conversation":
+				if relation.relationship < 24:
+					display_event(f"Your {relation.name_accusative()} isn't interested in having a conversation with you.")
+					p.change_happiness(-4)
+				else:
+					agreement = random.triangular(0, 100, 65)
+					agreement += randint(0, max(0, (relation.relationship - 50)//3))
+					agreement = min(round(agreement), randint(90, 100))
+					print(f"You had a conversation with your {relation.name_accusative()}.")
+					display_event(f"Agreement: {draw_bar(agreement, 100, 25)}")
+					p.change_happiness(4)
+					relation.change_relationship(agreement // 16)
 			print()
 	if choice == 3:
 		choices = [ "Back" ]
