@@ -1,9 +1,24 @@
-import random
+import random, math
 from random import randint
 from enum import Enum
 
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
+	
+def round_stochastic(value):
+	"""Randomly rounds a number up or down, based on its decimal part
+	For example, 5.3 has a 70% chance to be rounded to 5, 30% chance to be rounded to 6
+	And 2.8 has a 80% chance to be rounded to 3, 20% chance to be rounded to 2"""
+	low = math.floor(value)
+	high = math.ceil(value)
+	if value < 0:
+		if random.random() < high - value:
+			return low
+		return high
+	else:
+		if random.random() < value - low:
+			return high
+		return low 
 
 class Gender(Enum):
 	Male = 0
@@ -22,10 +37,13 @@ def int_input_range(lo, hi):
 		if lo <= val <= hi:
 			return val
 			
-def choice_input(*options):
+def choice_input(*options, return_text=False):
 	for i in range(len(options)):
 		print(f"{i+1}. {options[i]}")
-	return int_input_range(1, len(options))	
+	val = int_input_range(1, len(options))	
+	if return_text:
+		return options[val - 1]
+	return val
 		
 class Person:
 	
@@ -154,20 +172,30 @@ class Player(Person):
 		self.student_loan = 0
 		self.chose_student_loan = False
 		self.uv_years = 0
+		self.reset_already_did()
+		self.grades = None
 		
 	@property
 	def relations(self):
 		return list(self.parents.values())
 		
+	def change_grades(self, amount):
+		if self.grades is not None:
+			self.grades = clamp(self.grades + amount, 0, 100)
+		
 	def change_karma(self, amount):
 		self.karma = clamp(self.karma + amount, 0, 100)
+		
+	def reset_already_did(self):
+		self.meditated = False
+		self.worked_out = False
+		self.visited_library = False
+		self.studied = False
 		
 	def age_up(self):
 		self.total_happiness += self.happiness
 		super().age_up()
-		
-		self.meditated = False
-		self.worked_out = False
+		self.reset_already_did()
 		
 		self.change_karma(randint(-2, 2))
 		for parent in self.parents.values():
@@ -196,10 +224,14 @@ class Player(Person):
 				self.change_happiness(-randint(40, 55))
 		self.random_events()
 		
+	def calc_grades(self, offset):
+		self.grades = clamp(round(10 * math.sqrt(self.smarts + offset)), 0, 100)
+		
 	def random_events(self):
 		if self.uv_years > 0:
 			self.uv_years -= 1
 			if self.uv_years == 0:
+				self.grades = None
 				display_event("You graduated from university.")
 				self.change_happiness(randint(14, 20))
 				self.change_smarts(randint(10, 15))
@@ -241,16 +273,22 @@ class Player(Person):
 				self.change_happiness(-randint(6, 10))
 				self.parents["Mother"].change_relationship(-randint(25, 35))
 				print("You bit your mother")
+		if self.grades is not None:
+			self.change_grades(randint(-3, 3))
 		if self.age == 6:
 			print("You are starting elementary school")
 			self.change_smarts(randint(1, 2))
+			self.calc_grades(randint(4, 8))
 		if self.age == 12:
 			print("You are starting middle school")
 			self.change_smarts(randint(1, 3))
+			self.calc_grades(randint(0, 8))
 		if self.age == 14:
 			print("You are starting high school")
 			self.change_smarts(randint(1, 4))
+			self.calc_grades(randint(-8, 8))
 		if self.age == 17:
+			self.grades = None
 			print("You graduated from high school.")
 			self.change_happiness(randint(15, 20))
 			self.change_smarts(randint(6, 10))
@@ -268,7 +306,7 @@ class Player(Person):
 					final_choice = None
 					while not final_choice:
 						print("How would you like to pay for your college tuition?")
-						choice = choices[choice_input(*choices) - 1]
+						choice = choice_input(*choices, return_text=True)
 						if choice == "Scholarship":
 							if self.smarts >= randint(randint(75, 85), 95):
 								display_event("Your scholarship application has been awarded!")
@@ -293,6 +331,7 @@ class Player(Person):
 							self.chose_student_loan = True
 					print("You are now enrolled in university.")
 					self.uv_years = 4
+					self.calc_grades(randint(-4, 10))
 				else:
 					display_event("Your application to university was rejected.")
 					self.change_happiness(-randint(7, 9))
@@ -318,11 +357,14 @@ while True:
 		print(f"Lifetime Happiness: {draw_bar(score, 100, 25)}")
 		print(f"Karma:              {draw_bar(p.karma, 100, 25)}")
 		exit()
-	choice = choice_input("Age", "Relationships", "Activities")
-	if choice == 1:
+	choices = ["Age", "Relationships", "Activities"]
+	if p.grades is not None:
+		choices.append("School")
+	choice = choice_input(*choices, return_text=True)
+	if choice == "Age":
 		print()
 		p.age_up()
-	if choice == 2:
+	if choice == "Relationships":
 		relations = p.relations
 		print("Relationships: ")
 		for num, relation in enumerate(relations):
@@ -339,7 +381,7 @@ while True:
 			if p.age >= 4:
 				choices.append("Spend time")
 				choices.append("Have a conversation")
-			choice = choices[choice_input(*choices) - 1]
+			choice = choice_input(*choices, return_text=True)
 			if choice == "Spend time":
 				print(f"You spent time with your {relation.name_accusative()}.")
 				enjoyment1 = max(randint(0, 70), randint(0, 70)) + randint(0, 30)
@@ -360,19 +402,22 @@ while True:
 					agreement = min(round(agreement), randint(90, 100))
 					print(f"You had a conversation with your {relation.name_accusative()}.")
 					display_event(f"Agreement: {draw_bar(agreement, 100, 25)}")
-					p.change_happiness(4)
-					relation.change_relationship(agreement // 16)
+					if not relation.had_conversation:
+						p.change_happiness(4)
+						relation.change_relationship(agreement // 16)
+						relation.had_conversation = True
 			print()
-	if choice == 3:
+	if choice == "Activities":
 		choices = [ "Back" ]
 		if p.age >= 13:
 			choices.append("Meditate")
+			choices.append("Library")
 		if p.age >= 18:
 			choices.append("Gym")
-		choice = choices[choice_input(*choices) - 1]
+		choice = choice_input(*choices, return_text=True)
 		if choice == "Meditate":
 			print("You practiced meditation.")
-			if not p.meditated:
+			if not p.meditated: #You can only get the bonus once per year
 				p.change_health(randint(2, 5))
 				p.change_happiness(randint(3, 6))
 				p.change_karma(randint(0, 3))
@@ -381,6 +426,12 @@ while True:
 					print("You have achieved a deeper awareness of yourself.")
 					print("Karma: " + draw_bar(p.karma, 100, 25))
 				p.meditated = True
+		elif choice == "Library":
+			print("You went to the library.")
+			if not p.visited_library: #You can only get the bonus once per year
+				p.change_happiness(randint(0, 4))
+				p.change_smarts(randint(2, 5))
+				p.visited_library = True
 		elif choice == "Gym":
 			if p.health < 10:
 				print("Your health is too weak to visit the gym.")
@@ -406,3 +457,11 @@ while True:
 						p.change_looks(randint(1, 3) + randint(0, round(workout / 33)))
 					p.worked_out = True
 				print()
+	if choice == "School":
+		print(f"Grades: {draw_bar(p.grades, 100, 25)}")
+		choice = choice_input("Back", "Study harder")
+		if choice == 2:
+			print("You began studying harder")
+			if not p.studied:
+				p.grades += randint(2, 3 + (100 - p.grades)//5)
+				p.smarts += randint(0, 2)
