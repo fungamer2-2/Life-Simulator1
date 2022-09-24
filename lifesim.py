@@ -75,9 +75,12 @@ class Relationship(Person):
 		
 	def change_relationship(self, amount):
 		self.relationship = clamp(self.relationship + amount, 0, 100)
+		
+	def get_gender_word(self, wordmale, wordfemale):
+		return wordmale if self.gender == Gender.Male else wordfemale
 	
 	def his_her(self):
-		return "his" if self.gender == Gender.Male else "her"
+		return self.get_gender_word("his", "her")
 	
 	def get_type(self):
 		return "Unknown Relation"
@@ -101,11 +104,11 @@ class Parent(Relationship):
 		super().__init__(random_name(gender), lastname, age, gender, happiness, health, smarts, looks, randint(90, 100))
 		
 	def name_accusative(self):
-		return "mother" if self.gender == Gender.Female else "father"
-	
+		return self.get_gender_word("father", "mother")
+		
 	def get_type(self):
-		return "Mother" if self.gender == Gender.Female else "Father"
-
+		return self.get_gender_word("Father", "Mother")
+		
 MALE_NAMES = open("male_names.txt").read().splitlines()
 FEMALE_NAMES = open("female_names.txt").read().splitlines()
 LAST_NAMES = open("last_names.txt").read().splitlines()
@@ -267,7 +270,7 @@ class Player(Person):
 						print("How would you like to pay for your college tuition?")
 						choice = choices[choice_input(*choices) - 1]
 						if choice == "Scholarship":
-							if self.smarts >= random.randint(75, 95):
+							if self.smarts >= randint(randint(75, 85), 95):
 								display_event("Your scholarship application has been awarded!")
 								final_choice = "Scholarship"
 								self.change_happiness(randint(10, 15))
