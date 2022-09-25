@@ -3,6 +3,7 @@ from random import randint
 from enum import Enum
 from sys import platform
 
+
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
 	
