@@ -1,6 +1,7 @@
-import random, math
+import random, math, os
 from random import randint
 from enum import Enum
+from sys import platform
 
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
@@ -206,6 +207,7 @@ class Player(Person):
 				parent.change_relationship(1)
 			else:
 				parent.change_relationship(random.choice((-1, -1, 0)))
+		
 		print(f"Age {self.age}")
 		if self.age > randint(112, 123) or (self.age > randint(80 + self.health // 10, 90 + self.health//3) and randint(1, 100) <= 65):
 			self.alive = False
@@ -350,7 +352,15 @@ class Player(Person):
 def draw_bar(val, max_val, width):
 	num = round(width * val / max_val)
 	return "[" + "|"*num + " "*(width-num) + "]"
-		
+
+def clearScreen():
+	if platform == "linux" or platform == "linux2":
+		os.system('clear')
+	elif platform == "darwin":
+		os.system('clear')
+	elif platform == "win32":
+		os.system('cls')
+
 p = Player()
 print(f"Your name: {p.name}")
 print(f"Gender: {'Male' if p.gender == Gender.Male else 'Female'}")
@@ -369,6 +379,9 @@ while True:
 	if p.grades is not None:
 		choices.append("School")
 	choice = choice_input(*choices, return_text=True)
+
+	clearScreen()
+
 	if choice == "Age":
 		print()
 		p.age_up()
