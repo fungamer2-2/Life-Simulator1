@@ -37,6 +37,7 @@ def int_input_range(lo, hi):
 		try:
 			val = int(input())
 		except ValueError:
+			print(_("Invalid input; try again."))
 			continue
 		if lo <= val <= hi:
 			return val
