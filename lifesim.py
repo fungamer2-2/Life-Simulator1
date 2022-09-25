@@ -46,7 +46,7 @@ def choice_input(*options, return_text=False):
 	return val
 		
 class Person:
-	
+
 	def __init__(self, firstname, lastname, age, gender, happiness, health, smarts, looks):
 		self.firstname = firstname
 		self.lastname = lastname
@@ -127,9 +127,9 @@ class Parent(Relationship):
 	def get_type(self):
 		return self.get_gender_word("Father", "Mother")
 		
-MALE_NAMES = open("male_names.txt").read().splitlines()
-FEMALE_NAMES = open("female_names.txt").read().splitlines()
-LAST_NAMES = open("last_names.txt").read().splitlines()
+MALE_NAMES = open("assets/male_names.txt").read().splitlines()
+FEMALE_NAMES = open("assets/female_names.txt").read().splitlines()
+LAST_NAMES = open("assets/last_names.txt").read().splitlines()
 
 def random_name(gender):
 	if gender == Gender.Male:
