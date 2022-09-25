@@ -492,8 +492,9 @@ while True:
 		if choice == 2:
 			print("You began studying harder")
 			if not p.studied:
-				p.grades += randint(2, 3 + (100 - p.grades)//5)
-				p.smarts += randint(0, 2)
+				p.change_grades(randint(2, 3 + (100 - p.grades)//5))
+				p.change_smarts(randint(0, 2))
+				p.studied = True
 		if choice == 3:
 			can_drop_out = p.smarts < randint(8, 12) + randint(0, 13)
 			can_drop_out &= not p.tried_to_drop_out
