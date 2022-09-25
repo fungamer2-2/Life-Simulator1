@@ -174,6 +174,7 @@ class Player(Person):
 		self.uv_years = 0
 		self.reset_already_did()
 		self.grades = None
+		self.dropped_out = False
 		
 	@property
 	def relations(self):
@@ -191,6 +192,7 @@ class Player(Person):
 		self.worked_out = False
 		self.visited_library = False
 		self.studied = False
+		self.tried_to_drop_out = False
 		
 	def age_up(self):
 		self.total_happiness += self.happiness
@@ -205,7 +207,7 @@ class Player(Person):
 			else:
 				parent.change_relationship(random.choice((-1, -1, 0)))
 		print(f"Age {self.age}")
-		if self.age > randint(112, 123) or (self.age > randint(80 + self.health // 10, 90 + self.health // 3) and randint(1, 100) <= 65):
+		if self.age > randint(112, 123) or (self.age > randint(80 + self.health // 10, 90 + self.health//3) and randint(1, 100) <= 65):
 			self.alive = False
 			return
 		if self.age > 50 and self.looks > randint(20, 25):
@@ -226,7 +228,13 @@ class Player(Person):
 		
 	def calc_grades(self, offset):
 		self.grades = clamp(round(10 * math.sqrt(self.smarts + offset)), 0, 100)
-		
+	
+	def display_stats(self):
+		print(f"Happiness: {draw_bar(p.happiness, 100, 25)} {p.happiness}%")
+		print(f"Health:    {draw_bar(p.health, 100, 25)} {p.health}%")
+		print(f"Smarts:    {draw_bar(p.smarts, 100, 25)} {p.smarts}%")
+		print(f"Looks:     {draw_bar(p.looks, 100, 25)} {p.looks}%")
+	
 	def random_events(self):
 		if self.uv_years > 0:
 			self.uv_years -= 1
@@ -287,11 +295,14 @@ class Player(Person):
 			print("You are starting high school")
 			self.change_smarts(randint(1, 4))
 			self.calc_grades(randint(-8, 8))
-		if self.age == 17:
+		if self.age == 17 and not p.dropped_out:
 			self.grades = None
 			print("You graduated from high school.")
 			self.change_happiness(randint(15, 20))
 			self.change_smarts(randint(6, 10))
+			print()
+			self.display_stats()
+			print()
 			print("Would you like to apply to university?")
 			choice = choice_input("Yes", "No")
 			if choice == 1:
@@ -345,10 +356,7 @@ print(f"Your name: {p.name}")
 print(f"Gender: {'Male' if p.gender == Gender.Male else 'Female'}")
 while True:
 	print(f"Money: ${p.money:,}")
-	print(f"Happiness: {draw_bar(p.happiness, 100, 25)} {p.happiness}%")
-	print(f"Health:    {draw_bar(p.health, 100, 25)} {p.health}%")
-	print(f"Smarts:    {draw_bar(p.smarts, 100, 25)} {p.smarts}%")
-	print(f"Looks:     {draw_bar(p.looks, 100, 25)} {p.looks}%")
+	p.display_stats()
 	print()
 	if p.alive == False:
 		print("You died.")
@@ -459,9 +467,19 @@ while True:
 				print()
 	if choice == "School":
 		print(f"Grades: {draw_bar(p.grades, 100, 25)}")
-		choice = choice_input("Back", "Study harder")
+		choice = choice_input("Back", "Study harder", "Drop out")
 		if choice == 2:
 			print("You began studying harder")
 			if not p.studied:
 				p.grades += randint(2, 3 + (100 - p.grades)//5)
 				p.smarts += randint(0, 2)
+		if choice == 3:
+			can_drop_out = p.smarts < randint(8, 12) + randint(0, 13)
+			can_drop_out &= not p.tried_to_drop_out
+			if p.age >= 18 or (p.age >= randint(15, 16) and can_drop_out):
+				p.dropped_out = True
+				p.grades = None
+				print("You dropped out of school.")
+			else:
+				p.tried_to_drop_out = True
+				print("Your parents won't let you drop out of school.")
