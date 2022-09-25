@@ -245,11 +245,7 @@ class Player(Person):
 			(_("Looks"), self.looks),
 			show_percent=True
 		)
-		#print(_("Happiness") + f": {draw_bar(p.happiness, 100, 25)} {p.happiness}%")
-#		print(f"Health:    {draw_bar(p.health, 100, 25)} {p.health}%")
-#		print(f"Smarts:    {draw_bar(p.smarts, 100, 25)} {p.smarts}%")
-#		print(f"Looks:     {draw_bar(p.looks, 100, 25)} {p.looks}%")
-#	
+		
 	def random_events(self):
 		if self.uv_years > 0:
 			self.uv_years -= 1
@@ -397,12 +393,11 @@ while True:
 			(_("Karma"), p.karma)
 		)
 		exit()
-	AGE_ACTION = pgettext("verb", "Age")
-	choices = [ AGE_ACTION, _("Relationships"), _("Activities") ]
+	choices = [ _("Age +1"), _("Relationships"), _("Activities") ]
 	if p.grades is not None:
 		choices.append(_("School"))
 	choice = choice_input(*choices, return_text=True)
-	if choice == AGE_ACTION:
+	if choice == _("Age +1"):
 		print()
 		p.age_up()
 	if choice == _("Relationships"):
@@ -418,7 +413,7 @@ while True:
 			print(_("Name") + ": " + relation.name + f"({relation.get_translated_type()})")
 			print(_("Age") + f": {relation.age}")
 			display_bar(_("Relationship"), relation.relationship)
-			choices = [ pgettext("to main menu", "Back") ]
+			choices = [ _("Back") ]
 			if p.age >= 4:
 				choices.append(_("Spend time"))
 				choices.append(_("Have a conversation"))
@@ -453,7 +448,7 @@ while True:
 						relation.had_conversation = True
 			print()
 	if choice == _("Activities"):
-		choices = [ pgettext("to main menu", "Back") ]
+		choices = [ _("Back") ]
 		if p.age >= 13:
 			choices.append(_("Meditate"))
 			choices.append(_("Library"))
@@ -504,7 +499,7 @@ while True:
 				print()
 	if choice == _("School"):
 		display_bar(_("Grades"), p.grades)
-		choice = choice_input(pgettext("to main menu", "Back"), _("Study harder"), _("Drop out"))
+		choice = choice_input(_("Back"), _("Study harder"), _("Drop out"))
 		if choice == 2:
 			print(_("You began studying harder"))
 			if not p.studied:
