@@ -371,7 +371,7 @@ p = Player()
 print(f"Your name: {p.name}")
 print(f"Gender: {'Male' if p.gender == Gender.Male else 'Female'}")
 while True:
-	print(f"Money: ${p.money:,}")
+	print(f"\nMoney: ${p.money:,}")
 	p.display_stats()
 	print()
 	if p.alive == False:
