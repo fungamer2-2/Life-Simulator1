@@ -44,6 +44,7 @@ def choice_input(*options, return_text=False):
 	val = int_input_range(1, len(options))	
 	if return_text:
 		return options[val - 1]
+	
 	return val
 		
 class Person:
@@ -140,7 +141,8 @@ def random_name(gender):
 
 def display_event(message):
 	print(message)
-	input("Press Enter to continue...")	
+	input("Press Enter to continue...")
+	clearScreen()	
 		
 class Player(Person):
 	
@@ -273,6 +275,7 @@ class Player(Person):
 				"Bite her"
 			]
 			choice = choice_input(*choices)
+			clearScreen()
 			if choice == 1:
 				print("You remained calm")
 			elif choice == 2:
@@ -307,6 +310,7 @@ class Player(Person):
 			print()
 			print("Would you like to apply to university?")
 			choice = choice_input("Yes", "No")
+			clearScreen()
 			if choice == 1:
 				if self.smarts >= random.randint(28, 44):
 					print("Your application to university was accepted!")
@@ -320,6 +324,7 @@ class Player(Person):
 					while not final_choice:
 						print("How would you like to pay for your college tuition?")
 						choice = choice_input(*choices, return_text=True)
+						clearScreen()
 						if choice == "Scholarship":
 							if self.smarts >= randint(randint(75, 85), 95):
 								display_event("Your scholarship application has been awarded!")
@@ -379,9 +384,7 @@ while True:
 	if p.grades is not None:
 		choices.append("School")
 	choice = choice_input(*choices, return_text=True)
-
 	clearScreen()
-
 	if choice == "Age":
 		print()
 		p.age_up()
@@ -392,6 +395,7 @@ while True:
 			print(f"{num+1}. {relation.name} ({relation.get_type()})")
 		print(f"{len(relations)+1}. Back")
 		choice = int_input_range(1, len(relations)+1)
+		clearScreen()
 		if choice <= len(p.relations):
 			relation = relations[choice - 1]
 			print(f"Name: {relation.name}")
@@ -403,6 +407,7 @@ while True:
 				choices.append("Spend time")
 				choices.append("Have a conversation")
 			choice = choice_input(*choices, return_text=True)
+			clearScreen()
 			if choice == "Spend time":
 				print(f"You spent time with your {relation.name_accusative()}.")
 				enjoyment1 = max(randint(0, 70), randint(0, 70)) + randint(0, 30)
@@ -436,6 +441,7 @@ while True:
 		if p.age >= 18:
 			choices.append("Gym")
 		choice = choice_input(*choices, return_text=True)
+		clearScreen()
 		if choice == "Meditate":
 			print("You practiced meditation.")
 			if not p.meditated: #You can only get the bonus once per year
@@ -481,6 +487,7 @@ while True:
 	if choice == "School":
 		print(f"Grades: {draw_bar(p.grades, 100, 25)}")
 		choice = choice_input("Back", "Study harder", "Drop out")
+		clearScreen()
 		if choice == 2:
 			print("You began studying harder")
 			if not p.studied:
