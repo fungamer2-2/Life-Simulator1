@@ -241,8 +241,8 @@ class Player(Person):
 		print_align_bars(
 			(_("Happiness"), self.happiness),
 			(_("Health"), self.health),
-			(pgettext("noun", "Smarts"), self.smarts),
-			(pgettext("noun", "Looks"), self.looks),
+			(_("Smarts"), self.smarts),
+			(_("Looks"), self.looks),
 			show_percent=True
 		)
 		#print(_("Happiness") + f": {draw_bar(p.happiness, 100, 25)} {p.happiness}%")
