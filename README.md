@@ -20,6 +20,7 @@ python3 lifesim.py
 ```
 
 ##Translating
+
 `lifesim.pot` is a template for translations. <br />
 Fill in the translations, then upload it as a `.po` file in the `locale` folder.
 I will then convert it to a `.mo` file so it can be translated.
