@@ -1,7 +1,7 @@
 import random, math
 from random import randint
 from enum import Enum
-from gettext import pgettext
+import gettext
 
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
