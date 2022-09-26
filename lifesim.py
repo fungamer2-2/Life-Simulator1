@@ -245,7 +245,7 @@ class Player(Person):
 		for parent in list(self.parents.values()):
 			if parent.age >= randint(110, 120) or (randint(1, 100) <= 50 and parent.age >= max((randint(72, 90) + randint(0, parent.health//4)) for _ in range(2))):
 				rel_str = parent.name_accusative()
-				display_event(_("Your {relative} died at the age of {age}").format(relative=rel_str, age=self.age))
+				display_event(_("Your {relative} died at the age of {age}").format(relative=rel_str, age=parent.age))
 				del self.parents[parent.get_type()]
 				self.change_happiness(-randint(40, 55))
 		self.random_events()
