@@ -4,7 +4,6 @@ from enum import Enum
 import gettext
 from sys import platform
 
-
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
 	
@@ -118,7 +117,7 @@ class Relationship(Person):
 		return wordmale if self.gender == Gender.Male else wordfemale
 	
 	def his_her(self):
-		return self.get_gender_word("his", "her")
+		return self.get_gender_word(_("his"), _("her"))
 	
 	def get_type(self):
 		return "Unknown Relation"
@@ -163,7 +162,7 @@ def random_name(gender):
 def display_event(message):
 	print(message)
 	input(_("Press Enter to continue..."))
-	clearScreen()	
+	clear_screen()
 		
 class Player(Person):
 	
@@ -298,7 +297,7 @@ class Player(Person):
 				_("Bite her")
 			]
 			choice = choice_input(*choices)
-			clearScreen()
+			clear_screen()
 			if choice == 1:
 				print(_("You remained calm"))
 			elif choice == 2:
@@ -333,7 +332,7 @@ class Player(Person):
 			print()
 			print(_("Would you like to apply to university?"))
 			choice = choice_input(_("Yes"), _("No"))
-			clearScreen()
+			clear_screen()
 			if choice == 1:
 				if self.smarts >= random.randint(28, 44):
 					print(_("Your application to university was accepted!"))
@@ -350,7 +349,7 @@ class Player(Person):
 					while not chosen:
 						print(_("How would you like to pay for your college tuition?"))
 						choice = choice_input(*choices, return_text=True)
-						clearScreen()
+						clear_screen()
 						if choice == SCHOLARSHIP:
 							if self.smarts >= randint(randint(75, 85), 95):
 								display_event(_("Your scholarship application has been awarded!"))
@@ -381,7 +380,7 @@ class Player(Person):
 					self.change_happiness(-randint(7, 9))
 
 def display_bar(stat_name, val):
-	print(stat_name + ": " + val)
+	print(stat_name + ": " + draw_bar(val, 100, 25))
 	
 def print_align_bars(*name_pairs, show_percent=False):
 	l = 0
@@ -395,13 +394,11 @@ def draw_bar(val, max_val, width):
 	num = round(width * val / max_val)
 	return "[" + "|"*num + " "*(width-num) + "]"
 	
-def clearScreen():
-	if platform == "linux" or platform == "linux2":
-		os.system('clear')
-	elif platform == "darwin":
-		os.system('clear')
-	elif platform == "win32":
-		os.system('cls')
+def clear_screen():
+	if platform == "win32":
+		os.system("cls")
+	else:
+		os.system("clear")
 
 choice = choice_input(_("Random Life"), _("Custom Life"))
 if choice == 1:
@@ -418,11 +415,12 @@ else:
 	choice = choice_input("Male", "Female")
 	print()
 	p = Player(first, last, Gender.Male if choice == 1 else Gender.Female)
-print(f"Your name: {p.name}")
+
 gender = _("Male") if p.gender == Gender.Male else _("Female")
-print(_("Gender") + f": {gender}")
 while True:
 	print()
+	print(_("Your name") + f": {p.name}")
+	print(_("Gender") + f": {gender}")
 	print(_("Money") + f": ${p.money:,}")
 	p.display_stats()
 	print()
@@ -439,7 +437,7 @@ while True:
 	if p.grades is not None:
 		choices.append(_("School"))
 	choice = choice_input(*choices, return_text=True)
-	clearScreen()
+	clear_screen()
 	if choice == _("Age +1"):
 		print()
 		p.age_up()
@@ -448,10 +446,10 @@ while True:
 		print(_("Relationships: "))
 		for num, relation in enumerate(relations):
 			print(f"{num+1}. {relation.name} ({relation.get_translated_type()})")
-		back = pgettext("to main menu", "Back")
+		back = _("Back")
 		print(f"{len(relations)+1}. {back}")
 		choice = int_input_range(1, len(relations)+1)
-		clearScreen()
+		clear_screen()
 		if choice <= len(p.relations):
 			relation = relations[choice - 1]
 			print(_("Name") + ": " + relation.name + f"({relation.get_translated_type()})")
@@ -462,7 +460,7 @@ while True:
 				choices.append(_("Spend time"))
 				choices.append(_("Have a conversation"))
 			choice = choice_input(*choices, return_text=True)
-			clearScreen()
+			clear_screen()
 			if choice == _("Spend time"):
 				print(_("You spent time with your {relation}.").format(relation.name_accusative()))
 				enjoyment1 = max(randint(0, 70), randint(0, 70)) + randint(0, 30)
@@ -471,8 +469,6 @@ while True:
 					(_("Your Enjoyment"), enjoyment1),
 					(_("{his_her} Enjoyment").format(his_her=relation.his_her().capitalize()), enjoyment2)
 				)
-				#print(_("Your Enjoyment") + ": " + draw_bar(enjoyment1, 100, 25))
-#				print(_(f"{relation.his_her().capitalize()} Enjoyment:  {draw_bar(enjoyment2, 100, 25)}"))
 				if not relation.spent_time:
 					p.change_happiness(enjoyment1 // 12 + randint(0, 1))
 					relation.change_relationship(enjoyment2 // 12 + randint(0, 1))
@@ -493,6 +489,8 @@ while True:
 						relation.had_conversation = True
 			print()
 	if choice == _("Activities"):
+		print(_("Activities Menu"))
+		print()
 		choices = [ _("Back") ]
 		if p.age >= 13:
 			choices.append(_("Meditate"))
@@ -500,7 +498,7 @@ while True:
 		if p.age >= 18:
 			choices.append(_("Gym"))
 		choice = choice_input(*choices, return_text=True)
-		clearScreen()
+		clear_screen()
 		if choice == _("Meditate"):
 			print(_("You practiced meditation."))
 			if not p.meditated: #You can only get the bonus once per year
@@ -544,9 +542,11 @@ while True:
 					p.worked_out = True
 				print()
 	if choice == _("School"):
+		print(_("School Menu"))
+		print()
 		display_bar(_("Grades"), p.grades)
 		choice = choice_input(_("Back"), _("Study harder"), _("Drop out"))
-		clearScreen()
+		clear_screen()
 		if choice == 2:
 			print(_("You began studying harder"))
 			if not p.studied:
