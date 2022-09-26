@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-09-26 10:49-0400\n"
+"POT-Creation-Date: 2022-09-26 11:09-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -195,159 +195,179 @@ msgstr ""
 msgid "Your application to university was rejected."
 msgstr ""
 
-#: lifesim.py:393
+#: lifesim.py:391
+msgid "Custom Life"
+msgstr ""
+
+#: lifesim.py:391
+msgid "Random Life"
+msgstr ""
+
+#: lifesim.py:398
+msgid "Enter your first name: "
+msgstr ""
+
+#: lifesim.py:400
+msgid "Enter your last name: "
+msgstr ""
+
+#: lifesim.py:402
+msgid "Choose your gender:"
+msgstr ""
+
+#: lifesim.py:407
 msgid "Female"
 msgstr ""
 
-#: lifesim.py:393
+#: lifesim.py:407
 msgid "Male"
 msgstr ""
 
-#: lifesim.py:394
+#: lifesim.py:408
 msgid "Gender"
 msgstr ""
 
-#: lifesim.py:397
+#: lifesim.py:411
 msgid "Money"
 msgstr ""
 
-#: lifesim.py:401
+#: lifesim.py:415
 msgid "You died."
 msgstr ""
 
-#: lifesim.py:405
+#: lifesim.py:419
 msgid "Lifetime Happiness"
 msgstr ""
 
-#: lifesim.py:406 lifesim.py:480
+#: lifesim.py:420 lifesim.py:494
 msgid "Karma"
 msgstr ""
 
-#: lifesim.py:409 lifesim.py:413
+#: lifesim.py:423 lifesim.py:427
 msgid "Age +1"
 msgstr ""
 
-#: lifesim.py:409 lifesim.py:416
+#: lifesim.py:423 lifesim.py:430
 msgid "Relationships"
 msgstr ""
 
-#: lifesim.py:409 lifesim.py:463
+#: lifesim.py:423 lifesim.py:477
 msgid "Activities"
 msgstr ""
 
-#: lifesim.py:411 lifesim.py:513
+#: lifesim.py:425 lifesim.py:527
 msgid "School"
 msgstr ""
 
-#: lifesim.py:418
+#: lifesim.py:432
 msgid "Relationships: "
 msgstr ""
 
-#: lifesim.py:426
+#: lifesim.py:440
 msgid "Name"
 msgstr ""
 
-#: lifesim.py:427
+#: lifesim.py:441
 msgid "Age"
 msgstr ""
 
-#: lifesim.py:428
+#: lifesim.py:442
 msgid "Relationship"
 msgstr ""
 
-#: lifesim.py:429 lifesim.py:464 lifesim.py:515
+#: lifesim.py:443 lifesim.py:478 lifesim.py:529
 msgid "Back"
 msgstr ""
 
-#: lifesim.py:431 lifesim.py:434
+#: lifesim.py:445 lifesim.py:448
 msgid "Spend time"
 msgstr ""
 
-#: lifesim.py:432 lifesim.py:448
+#: lifesim.py:446 lifesim.py:462
 msgid "Have a conversation"
 msgstr ""
 
-#: lifesim.py:435
+#: lifesim.py:449
 msgid "You spent time with your {relation}."
 msgstr ""
 
-#: lifesim.py:439
+#: lifesim.py:453
 msgid "Your Enjoyment"
 msgstr ""
 
-#: lifesim.py:440
+#: lifesim.py:454
 msgid "{his_her} Enjoyment"
 msgstr ""
 
-#: lifesim.py:450
+#: lifesim.py:464
 msgid "Your {relation} isn't interested in having a conversation with you."
 msgstr ""
 
-#: lifesim.py:456
+#: lifesim.py:470
 msgid "You had a conversation with your {relation}."
 msgstr ""
 
-#: lifesim.py:457
+#: lifesim.py:471
 msgid "Agreement"
 msgstr ""
 
-#: lifesim.py:466 lifesim.py:471
+#: lifesim.py:480 lifesim.py:485
 msgid "Meditate"
 msgstr ""
 
-#: lifesim.py:467 lifesim.py:482
+#: lifesim.py:481 lifesim.py:496
 msgid "Library"
 msgstr ""
 
-#: lifesim.py:469 lifesim.py:488
+#: lifesim.py:483 lifesim.py:502
 msgid "Gym"
 msgstr ""
 
-#: lifesim.py:472
+#: lifesim.py:486
 msgid "You practiced meditation."
 msgstr ""
 
-#: lifesim.py:479
+#: lifesim.py:493
 msgid "You have achieved a deeper awareness of yourself."
 msgstr ""
 
-#: lifesim.py:483
+#: lifesim.py:497
 msgid "You went to the library."
 msgstr ""
 
-#: lifesim.py:490
+#: lifesim.py:504
 msgid "Your health is too weak to visit the gym."
 msgstr ""
 
-#: lifesim.py:504
+#: lifesim.py:518
 msgid "You worked out at the gym."
 msgstr ""
 
-#: lifesim.py:505
+#: lifesim.py:519
 msgid "Workout"
 msgstr ""
 
-#: lifesim.py:514
+#: lifesim.py:528
 msgid "Grades"
 msgstr ""
 
-#: lifesim.py:515
+#: lifesim.py:529
 msgid "Drop out"
 msgstr ""
 
-#: lifesim.py:515
+#: lifesim.py:529
 msgid "Study harder"
 msgstr ""
 
-#: lifesim.py:517
+#: lifesim.py:531
 msgid "You began studying harder"
 msgstr ""
 
-#: lifesim.py:528
+#: lifesim.py:542
 msgid "You dropped out of school."
 msgstr ""
 
-#: lifesim.py:533
+#: lifesim.py:547
 msgid "Your parents won't let you drop out of school."
 msgstr ""
 
