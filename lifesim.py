@@ -6,9 +6,13 @@ import gettext
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
 	
-def _(message): #Temporary translation placeholder
-	return message
+_ = lambda s: s
 	
+LANGUAGES = ["en", "ja", "ro"]
+langs = {}
+for lang in LANGUAGES:
+	l = gettext.translation("lifesim", localedir="locale", languages=[lang])
+		
 def round_stochastic(value):
 	"""Randomly rounds a number up or down, based on its decimal part
 	For example, 5.3 has a 70% chance to be rounded to 5, 30% chance to be rounded to 6
