@@ -6,7 +6,7 @@ from sys import platform
 
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
-	
+
 _ = lambda s: s
 	
 LANGUAGES = [dir for dir in os.listdir("./locale") if os.path.isdir(os.path.abspath("./locale/" + dir))]
@@ -54,6 +54,8 @@ def int_input_range(lo, hi):
 			continue
 		if lo <= val <= hi:
 			return val
+		else:
+			print(_("Invalid input; try again."))
 			
 def choice_input(*options, return_text=False):
 	for i in range(len(options)):
@@ -61,7 +63,6 @@ def choice_input(*options, return_text=False):
 	val = int_input_range(1, len(options))	
 	if return_text:
 		return options[val - 1]
-	
 	return val
 
 class Person:
@@ -359,7 +360,7 @@ class Player(Person):
 								display_event(_("Your scholarship application was rejected."))
 								self.change_happiness(-randint(7, 9))
 								choices.remove(SCHOLARSHIP)
-						elif choice == LOAN:
+						elif choice == PARENTS:
 							if randint(1, 6) == 1:
 								display_event(_("Your parents agreed to pay for your university tuition!"))
 								self.change_happiness(randint(7, 9))
@@ -462,7 +463,7 @@ while True:
 			choice = choice_input(*choices, return_text=True)
 			clear_screen()
 			if choice == _("Spend time"):
-				print(_("You spent time with your {relation}.").format(relation.name_accusative()))
+				print(_("You spent time with your {relation}.").format(relation=relation.name_accusative()))
 				enjoyment1 = max(randint(0, 70), randint(0, 70)) + randint(0, 30)
 				enjoyment2 = round(random.triangular(0, 100, relation.relationship))
 				print_align_bars(
@@ -481,7 +482,7 @@ while True:
 					agreement = random.triangular(0, 100, 65)
 					agreement += randint(0, max(0, (relation.relationship - 50)//3))
 					agreement = min(round(agreement), randint(90, 100))
-					print(_("You had a conversation with your {relation}.").format(relation.name_accusative()))
+					print(_("You had a conversation with your {relation}.").format(relation=relation.name_accusative()))
 					display_event(_("Agreement") + ": " + draw_bar(agreement, 100, 25))
 					if not relation.had_conversation:
 						p.change_happiness(4)
