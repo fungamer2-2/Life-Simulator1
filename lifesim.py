@@ -2,6 +2,8 @@ import random, math, os
 from random import randint
 from enum import Enum
 import gettext
+from sys import platform
+
 
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
@@ -60,10 +62,11 @@ def choice_input(*options, return_text=False):
 	val = int_input_range(1, len(options))	
 	if return_text:
 		return options[val - 1]
+	
 	return val
 
 class Person:
-	
+
 	def __init__(self, firstname, lastname, age, gender, happiness, health, smarts, looks):
 		self.firstname = firstname
 		self.lastname = lastname
@@ -147,9 +150,9 @@ class Parent(Relationship):
 	def get_translated_type(self):
 		return self.get_gender_word(_("Father"), _("Mother"))
 		
-MALE_NAMES = open("male_names.txt").read().splitlines()
-FEMALE_NAMES = open("female_names.txt").read().splitlines()
-LAST_NAMES = open("last_names.txt").read().splitlines()
+MALE_NAMES = open("assets/male_names.txt").read().splitlines()
+FEMALE_NAMES = open("assets/female_names.txt").read().splitlines()
+LAST_NAMES = open("assets/last_names.txt").read().splitlines()
 
 def random_name(gender):
 	if gender == Gender.Male:
@@ -159,7 +162,8 @@ def random_name(gender):
 
 def display_event(message):
 	print(message)
-	input(_("Press Enter to continue..."))	
+	input(_("Press Enter to continue..."))
+	clearScreen()	
 		
 class Player(Person):
 	
@@ -294,6 +298,7 @@ class Player(Person):
 				_("Bite her")
 			]
 			choice = choice_input(*choices)
+			clearScreen()
 			if choice == 1:
 				print(_("You remained calm"))
 			elif choice == 2:
@@ -328,6 +333,7 @@ class Player(Person):
 			print()
 			print(_("Would you like to apply to university?"))
 			choice = choice_input(_("Yes"), _("No"))
+			clearScreen()
 			if choice == 1:
 				if self.smarts >= random.randint(28, 44):
 					print(_("Your application to university was accepted!"))
@@ -344,6 +350,7 @@ class Player(Person):
 					while not chosen:
 						print(_("How would you like to pay for your college tuition?"))
 						choice = choice_input(*choices, return_text=True)
+						clearScreen()
 						if choice == SCHOLARSHIP:
 							if self.smarts >= randint(randint(75, 85), 95):
 								display_event(_("Your scholarship application has been awarded!"))
@@ -387,6 +394,14 @@ def print_align_bars(*name_pairs, show_percent=False):
 def draw_bar(val, max_val, width):
 	num = round(width * val / max_val)
 	return "[" + "|"*num + " "*(width-num) + "]"
+	
+def clearScreen():
+	if platform == "linux" or platform == "linux2":
+		os.system('clear')
+	elif platform == "darwin":
+		os.system('clear')
+	elif platform == "win32":
+		os.system('cls')
 
 choice = choice_input(_("Random Life"), _("Custom Life"))
 if choice == 1:
@@ -424,6 +439,7 @@ while True:
 	if p.grades is not None:
 		choices.append(_("School"))
 	choice = choice_input(*choices, return_text=True)
+	clearScreen()
 	if choice == _("Age +1"):
 		print()
 		p.age_up()
@@ -435,6 +451,7 @@ while True:
 		back = pgettext("to main menu", "Back")
 		print(f"{len(relations)+1}. {back}")
 		choice = int_input_range(1, len(relations)+1)
+		clearScreen()
 		if choice <= len(p.relations):
 			relation = relations[choice - 1]
 			print(_("Name") + ": " + relation.name + f"({relation.get_translated_type()})")
@@ -445,6 +462,7 @@ while True:
 				choices.append(_("Spend time"))
 				choices.append(_("Have a conversation"))
 			choice = choice_input(*choices, return_text=True)
+			clearScreen()
 			if choice == _("Spend time"):
 				print(_("You spent time with your {relation}.").format(relation.name_accusative()))
 				enjoyment1 = max(randint(0, 70), randint(0, 70)) + randint(0, 30)
@@ -482,6 +500,7 @@ while True:
 		if p.age >= 18:
 			choices.append(_("Gym"))
 		choice = choice_input(*choices, return_text=True)
+		clearScreen()
 		if choice == _("Meditate"):
 			print(_("You practiced meditation."))
 			if not p.meditated: #You can only get the bonus once per year
@@ -527,6 +546,7 @@ while True:
 	if choice == _("School"):
 		display_bar(_("Grades"), p.grades)
 		choice = choice_input(_("Back"), _("Study harder"), _("Drop out"))
+		clearScreen()
 		if choice == 2:
 			print(_("You began studying harder"))
 			if not p.studied:
