@@ -1,4 +1,4 @@
-import random, math
+import random, math, os
 from random import randint
 from enum import Enum
 import gettext
@@ -8,11 +8,22 @@ def clamp(val, lo, hi):
 	
 _ = lambda s: s
 	
-LANGUAGES = ["en", "ja", "ro"]
+LANGUAGES = [dir for dir in os.listdir("./locale") if os.path.isdir(os.path.abspath(dir))]
+for dir in os.listdir("./locale"):
+	if os.path.isdir(os.path.abspath("./locale/" + dir)):
+		LANGUAGES.append(dir)
+
 langs = {}
 for lang in LANGUAGES:
-	l = gettext.translation("lifesim", localedir="locale", languages=[lang])
+	try:
+		l = gettext.translation("lifesim", localedir="locale", languages=[lang])
+	except:
+		pass
 		
+GAME_LANGUAGE = "en"
+if GAME_LANGUAGE in langs:
+	langs[GAME_LANGUAGE].install()
+
 def round_stochastic(value):
 	"""Randomly rounds a number up or down, based on its decimal part
 	For example, 5.3 has a 70% chance to be rounded to 5, 30% chance to be rounded to 6
