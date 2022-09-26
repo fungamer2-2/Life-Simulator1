@@ -163,10 +163,10 @@ def display_event(message):
 		
 class Player(Person):
 	
-	def __init__(self):
-		gender = Gender.random()
-		first = random_name(gender)
-		last = random.choice(LAST_NAMES)
+	def __init__(self, first=None, last=None, gender=None):
+		gender = gender or Gender.random()
+		first = first or random_name(gender)
+		last = last or random.choice(LAST_NAMES)
 		happiness = randint(50, 100)
 		health = randint(75, 100)
 		smarts = randint(0, 50) + randint(0, 50)
@@ -175,10 +175,10 @@ class Player(Person):
 		last1 = last2 = last
 		if randint(1, 100) <= 40:
 			newlast = random.choice(LAST_NAMES)
-			if random.randint(1, 2) == 1:
-				last1 = newlast
+			if random.randint(1, 3) == 1:
+				last2 = newlast #Makes it more common to be named after the father's last name
 			else:
-				last2 = newlast
+				last1 = newlast
 		self.parents = {
 			"Mother": Parent(last1, min(randint(18, 50) for _ in range(3)), Gender.Female),
 			"Father": Parent(last2, min(randint(18, 65) for _ in range(3)), Gender.Male),
@@ -387,8 +387,22 @@ def print_align_bars(*name_pairs, show_percent=False):
 def draw_bar(val, max_val, width):
 	num = round(width * val / max_val)
 	return "[" + "|"*num + " "*(width-num) + "]"
-		
-p = Player()
+
+choice = choice_input(_("Random Life"), _("Custom Life"))
+if choice == 1:
+	p = Player()
+else:
+	first = ""
+	last = ""
+	while not first:
+		first = input(_("Enter your first name: ")).strip()
+	while not last:
+		last = input(_("Enter your last name: ")).strip()
+	print()
+	print(_("Choose your gender:"))
+	choice = choice_input("Male", "Female")
+	print()
+	p = Player(first, last, Gender.Male if choice == 1 else Gender.Female)
 print(f"Your name: {p.name}")
 gender = _("Male") if p.gender == Gender.Male else _("Female")
 print(_("Gender") + f": {gender}")
