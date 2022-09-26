@@ -19,7 +19,7 @@ Run [lifesim.py](lifesim.py) script:
 python3 lifesim.py
 ```
 
-##Translating
+## Translating
 
 `lifesim.pot` is a template for translations. <br />
 Fill in the translations, then upload it as a `.po` file in the `locale` folder.
