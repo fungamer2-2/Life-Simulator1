@@ -393,6 +393,7 @@ print(f"Your name: {p.name}")
 gender = _("Male") if p.gender == Gender.Male else _("Female")
 print(_("Gender") + f": {gender}")
 while True:
+	print()
 	print(_("Money") + f": ${p.money:,}")
 	p.display_stats()
 	print()
