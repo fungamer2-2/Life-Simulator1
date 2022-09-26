@@ -8,10 +8,7 @@ def clamp(val, lo, hi):
 	
 _ = lambda s: s
 	
-LANGUAGES = [dir for dir in os.listdir("./locale") if os.path.isdir(os.path.abspath(dir))]
-for dir in os.listdir("./locale"):
-	if os.path.isdir(os.path.abspath("./locale/" + dir)):
-		LANGUAGES.append(dir)
+LANGUAGES = [dir for dir in os.listdir("./locale") if os.path.isdir(os.path.abspath("./locale/" + dir))]
 
 langs = {}
 for lang in LANGUAGES:
@@ -20,7 +17,7 @@ for lang in LANGUAGES:
 	except:
 		pass
 		
-GAME_LANGUAGE = "en"
+GAME_LANGUAGE = "en" #TODO: Add a way to select the language at the start of the game
 if GAME_LANGUAGE in langs:
 	langs[GAME_LANGUAGE].install()
 
