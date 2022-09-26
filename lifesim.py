@@ -139,7 +139,7 @@ class Parent(Relationship):
 		super().__init__(random_name(gender), lastname, age, gender, happiness, health, smarts, looks, randint(90, 100))
 		
 	def name_accusative(self):
-		return self.get_gender_word("father", "mother")
+		return self.get_gender_word(_("father"), _("mother"))
 		
 	def get_type(self):
 		return self.get_gender_word("Father", "Mother")
