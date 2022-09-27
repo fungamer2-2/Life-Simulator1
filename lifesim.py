@@ -108,7 +108,8 @@ class Relationship(Person):
 		self.relationship = relationship
 		self.spent_time = False
 		self.had_conversation = False
-		
+		self.was_complimented = False
+				
 	#TODO: add is_male() and is_female() methods
 		
 	def change_relationship(self, amount):
@@ -131,6 +132,7 @@ class Relationship(Person):
 		self.change_relationship(randint(-4, 4))
 		self.spent_time = False
 		self.had_conversation = False
+		self.was_complimented = False
 			
 class Parent(Relationship):
 	
@@ -160,9 +162,12 @@ def random_name(gender):
 	else:
 		return random.choice(FEMALE_NAMES)
 
+def press_enter():
+	input(_("Press Enter to continue..."))
+	
 def display_event(message):
 	print(message)
-	input(_("Press Enter to continue..."))
+	press_enter()
 	clear_screen()
 		
 class Player(Person):
@@ -254,8 +259,20 @@ class Player(Person):
 		self.grades = clamp(round(10 * math.sqrt(self.smarts + offset)), 0, 100)
 	
 	def display_stats(self):
+		if self.happiness >= 60:
+			if self.happiness >= 85:
+				symbol = ":D"
+			else:
+				symbol = ":)"
+		elif self.happiness < 40:
+			if self.happiness < 15:
+				symbol = ":'("
+			else:
+				symbol = ":("
+		else:
+			symbol = ":|"
 		print_align_bars(
-			(_("Happiness"), self.happiness),
+			(_("Happiness"), self.happiness, " " + symbol),
 			(_("Health"), self.health),
 			(_("Smarts"), self.smarts),
 			(_("Looks"), self.looks),
@@ -273,6 +290,10 @@ class Player(Person):
 				if self.chose_student_loan:
 					self.student_loan = randint(20000, 40000)
 					print(_("You now have to start paying back your student loan"))
+			else:
+				if self.grades < randint(10, 35):
+					display_event(_("You were expelled from university after earning bad grades."))
+					self.change_happiness(-randint(30, 50))
 		if self.student_loan > 0:
 			amount = min(randint(1000, 3000) for _ in range(3))
 			amount = min(amount, self.student_loan)
@@ -311,6 +332,15 @@ class Player(Person):
 				print(_("You bit your mother"))
 		if self.grades is not None:
 			self.change_grades(randint(-3, 3))
+			base = round(10 * math.sqrt(self.smarts))
+			if self.grades < base:
+				self.change_grades(randint(1, 2))
+			elif self.grades > base:
+				self.change_grades(-randint(1, 2))
+			grade_delta = (self.happiness - 50)/30
+			if grade_delta > 0:
+				grade_delta /= 2
+			self.change_grades(round_stochastic(grade_delta))
 		if self.age == 6:
 			print(_("You are starting elementary school"))
 			self.change_smarts(randint(1, 2))
@@ -375,7 +405,7 @@ class Player(Person):
 							self.chose_student_loan = True
 					print(_("You are now enrolled in university."))
 					self.uv_years = 4
-					self.calc_grades(randint(-4, 10))
+					self.calc_grades(randint(-8, 10))
 				else:
 					display_event(_("Your application to university was rejected."))
 					self.change_happiness(-randint(7, 9))
@@ -385,11 +415,17 @@ def display_bar(stat_name, val):
 	
 def print_align_bars(*name_pairs, show_percent=False):
 	l = 0
-	for name, val in name_pairs:
+	for pair in name_pairs:
+		name = pair[0]
 		if len(name) > l:
 			l = len(name)
-	for name, val in name_pairs:
-		print((name + ": ").ljust(l + 2) + draw_bar(val, 100, 25) + (f" {val}%" if show_percent else ""))
+	for pair in name_pairs:
+		name, val = pair[:2]
+		if len(pair) >= 3:
+			extra = pair[2]
+		else:
+			extra = ""
+		print((name + ": ").ljust(l + 2) + draw_bar(val, 100, 25) + (f" {val}%" if show_percent else "") + extra)
 
 def draw_bar(val, max_val, width):
 	num = round(width * val / max_val)
@@ -453,13 +489,15 @@ while True:
 		clear_screen()
 		if choice <= len(p.relations):
 			relation = relations[choice - 1]
-			print(_("Name") + ": " + relation.name + f"({relation.get_translated_type()})")
+			print(_("Name") + ": " + relation.name + f" ({relation.get_translated_type()})")
 			print(_("Age") + f": {relation.age}")
 			display_bar(_("Relationship"), relation.relationship)
 			choices = [ _("Back") ]
-			if p.age >= 4:
+			if p.age >= 5:
 				choices.append(_("Spend time"))
 				choices.append(_("Have a conversation"))
+			if p.age >= 6:
+				choices.append(_("Compliment"))
 			choice = choice_input(*choices, return_text=True)
 			clear_screen()
 			if choice == _("Spend time"):
@@ -488,6 +526,20 @@ while True:
 						p.change_happiness(4)
 						relation.change_relationship(agreement // 16)
 						relation.had_conversation = True
+			elif choice == _("Compliment"):
+				appreciation = randint(0, 60) + randint(0, 40)
+				if randint(1, 100) <= p.smarts:
+					appreciation = max(appreciation, randint(0, 60) + randint(0, 40))
+				print(_("You complimented your {relation}.").format(relation=relation.name_accusative()))
+				display_bar(_("{his_her} Appreciation: ").format(his_her=relation.his_her().capitalize()), appreciation)
+				press_enter()
+				if not relation.was_complimented:
+					p.change_karma(randint(0, 3))
+					relation.change_relationship(round_stochastic(appreciation / 6))
+					if randint(1, 200) <= appreciation:
+						display_event(_("Your {relation} complimented you back!").format(relation=relation.name_accusative()))
+						p.change_happiness(randint(5, 9))
+					relation.was_complimented = True
 			print()
 	if choice == _("Activities"):
 		print(_("Activities Menu"))
@@ -536,8 +588,8 @@ while True:
 				print(_("You worked out at the gym."))
 				print(_("Workout") + ": " + draw_bar(workout, 100, 25))
 				if not p.worked_out:
-					p.change_happiness(round(workout / 8) + randint(0, 1))
-					p.change_health(round(workout / 12) + randint(1, 2))
+					p.change_happiness(round(workout / 12) + randint(0, 1))
+					p.change_health(round(workout / 14) + randint(1, 2))
 					if p.looks < workout:
 						p.change_looks(randint(1, 3) + randint(0, round(workout / 33)))
 					p.worked_out = True
@@ -557,7 +609,7 @@ while True:
 		if choice == 3:
 			can_drop_out = p.smarts < randint(8, 12) + randint(0, 13)
 			can_drop_out &= not p.tried_to_drop_out
-			if p.age >= 18 or (p.age >= randint(15, 16) and can_drop_out):
+			if p.age >= 18 or p.uv_years > 0 or (p.age >= randint(15, 16) and can_drop_out):
 				p.dropped_out = True
 				p.grades = None
 				print(_("You dropped out of school."))
