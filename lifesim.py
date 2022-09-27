@@ -237,7 +237,7 @@ class Player(Person):
 				parent.change_relationship(random.choice((-1, -1, 0)))
 		print(_("Age {age}").format(age=self.age))
 		if self.age > randint(98, 122) or (self.age > randint(80 + self.health//12, 90 + self.health//3) and randint(1, 100) <= 65):
-			self.alive = False
+			self.die(_("You died of old age."))
 			return
 		if self.age > 50 and self.looks > randint(20, 25):
 			decay = min((self.age - 51) // 5 + 1, 4)
@@ -257,6 +257,16 @@ class Player(Person):
 		
 	def calc_grades(self, offset):
 		self.grades = clamp(round(10 * math.sqrt(self.smarts + offset)), 0, 100)
+	
+	def die(self, message):
+		print(message)
+		avg_happy = round(p.total_happiness / p.age)
+		score = p.happiness * 0.3 + avg_happy * 0.7
+		print_align_bars(
+			(_("Lifetime Happiness"), avg_happy),
+			(_("Karma"), p.karma)
+		)
+		exit()
 	
 	def display_stats(self):
 		if self.happiness >= 60:
