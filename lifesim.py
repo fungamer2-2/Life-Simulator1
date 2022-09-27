@@ -190,7 +190,7 @@ class Player(Person):
 				last1 = newlast
 		self.parents = {
 			"Mother": Parent(last1, min(randint(18, 50) for _ in range(3)), Gender.Female),
-			"Father": Parent(last2, min(randint(18, 65) for _ in range(3)), Gender.Male),
+			"Father": Parent(last2, min(randint(18, 60) for _ in range(3)), Gender.Male),
 		}
 		self.karma = randint(0, 25) + randint(0, 25) + randint(0, 25) + randint(0, 25)
 		self.total_happiness = 0
@@ -236,7 +236,7 @@ class Player(Person):
 			else:
 				parent.change_relationship(random.choice((-1, -1, 0)))
 		print(_("Age {age}").format(age=self.age))
-		if self.age > randint(112, 123) or (self.age > randint(80 + self.health // 10, 90 + self.health//3) and randint(1, 100) <= 65):
+		if self.age > randint(98, 122) or (self.age > randint(80 + self.health//12, 90 + self.health//3) and randint(1, 100) <= 65):
 			self.alive = False
 			return
 		if self.age > 50 and self.looks > randint(20, 25):
@@ -449,7 +449,7 @@ else:
 		last = input(_("Enter your last name: ")).strip()
 	print()
 	print(_("Choose your gender:"))
-	choice = choice_input("Male", "Female")
+	choice = choice_input(_("Male"), _("Female"))
 	print()
 	p = Player(first, last, Gender.Male if choice == 1 else Gender.Female)
 
