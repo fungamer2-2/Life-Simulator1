@@ -17,7 +17,6 @@ from src.lifesim_lib.lifesim_lib import (
     yes_no,
 )
 from src.people.classes.player import Player
-from src.people.classes.relationship import Relationship
 
 _ = lambda s: s
 
