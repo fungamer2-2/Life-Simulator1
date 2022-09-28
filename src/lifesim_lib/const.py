@@ -16,3 +16,5 @@ class CONST:
         for dir in os.listdir("./locale")
         if os.path.isdir(os.path.abspath("./locale/" + dir))
     ]
+
+    DEBUG = False

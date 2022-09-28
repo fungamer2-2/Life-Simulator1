@@ -1,7 +1,7 @@
 from enum import Enum
 import math
 import os
-from random import choice, uniform, random
+from random import choice, uniform, random, randint
 from sys import platform
 
 from .const import CONST
@@ -112,3 +112,35 @@ def choice_input(*options, return_text=False):
     if return_text:
         return options[val - 1]
     return val
+
+
+def int_input_range_optional(lo, hi):
+    while True:
+        try:
+            val = input()
+            if val is None:
+                return None
+            val = int(val)
+        except ValueError:
+            print(_("Invalid input; try again."))
+            continue
+        if lo <= val <= hi:
+            return val
+        else:
+            print(_("Invalid input; try again."))
+
+
+def yes_no(message):
+    print(message)
+    return choice_input(_("Yes"), _("No")) == 1
+
+
+def death_check(self):
+    return self.age > randint(98, 122) or (
+        self.age > randint(80 + self.health // 12, 90 + self.health // 3)
+        and randint(1, 100) <= 65
+    )
+
+
+def display_data(name, value):
+    print(name + ": " + str(value))

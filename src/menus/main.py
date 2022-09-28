@@ -1,18 +1,23 @@
 from random import randint, triangular
 
+from src.lifesim_lib.const import CONST
 from src.lifesim_lib.lifesim_lib import (
     choice_input,
     clear_screen,
     display_bar,
+    display_data,
     display_event,
     draw_bar,
     Gender,
     int_input_range,
+    int_input_range_optional,
     press_enter,
     print_align_bars,
     round_stochastic,
+    yes_no,
 )
 from src.people.classes.player import Player
+from src.people.classes.relationship import Relationship
 
 _ = lambda s: s
 
@@ -34,11 +39,10 @@ def MainMenu():
         print()
         p = Player(first, last, Gender.Male if choice == 1 else Gender.Female)
 
-    gender = _("Male") if p.gender == Gender.Male else _("Female")
     while True:
         print()
         print(_("Your name") + f": {p.name}")
-        print(_("Gender") + f": {gender}")
+        print(_("Gender") + f": {p.get_gender_str()}")
         print(_("Money") + f": ${p.money:,}")
         p.display_stats()
         print()
@@ -53,6 +57,8 @@ def MainMenu():
         choices = [_("Age +1"), _("Relationships"), _("Activities")]
         if p.grades is not None:
             choices.append(_("School"))
+        if CONST.DEBUG:
+            choices.append(_("Debug Menu"))
         choice = choice_input(*choices, return_text=True)
         clear_screen()
         if choice == _("Age +1"):
@@ -83,6 +89,7 @@ def MainMenu():
                     choices.append(_("Have a conversation"))
                 if p.age >= 6:
                     choices.append(_("Compliment"))
+                    choices.append(_("Insult"))
                 choice = choice_input(*choices, return_text=True)
                 clear_screen()
                 if choice == _("Spend time"):
@@ -103,8 +110,8 @@ def MainMenu():
                         ),
                     )
                     if not relation.spent_time:
-                        p.change_happiness(enjoyment1 // 12 + randint(0, 1))
-                        relation.change_relationship(enjoyment2 // 12 + randint(0, 1))
+                        p.change_happiness(round_stochastic(enjoyment1 / 12))
+                        relation.change_relationship(round_stochastic(enjoyment2 / 12))
                         relation.spent_time = True
                 elif choice == _("Have a conversation"):
                     if relation.relationship < 24:
@@ -130,7 +137,9 @@ def MainMenu():
                         )
                         if not relation.had_conversation:
                             p.change_happiness(4)
-                            relation.change_relationship(agreement // 16)
+                            relation.change_relationship(
+                                round_stochastic(agreement / 12)
+                            )
                             relation.had_conversation = True
                 elif choice == _("Compliment"):
                     appreciation = randint(0, 60) + randint(0, 40)
@@ -151,16 +160,35 @@ def MainMenu():
                     )
                     press_enter()
                     if not relation.was_complimented:
-                        p.change_karma(randint(0, 3))
+                        p.change_karma(randint(0, 2))
                         relation.change_relationship(round_stochastic(appreciation / 6))
-                        if randint(1, 200) <= appreciation:
+                        if randint(1, 300) <= round_stochastic(
+                            appreciation * relation.relationship / 50
+                        ):
                             display_event(
                                 _("Your {relation} complimented you back!").format(
                                     relation=relation.name_accusative()
                                 )
                             )
-                            p.change_happiness(randint(5, 9))
+                            p.change_happiness(randint(6, 10))
                         relation.was_complimented = True
+                elif choice == _("Insult"):
+                    rel = relation.name_accusative()
+                    if yes_no(
+                        _("Are you sure you want to insult your {relation}?").format(
+                            relation=rel
+                        )
+                    ):
+                        display_event(_("You insulted your {rel}.").format(rel=rel))
+                        relation.change_relationship(-randint(4, 8))
+                        p.change_karma(-randint(2, 4))
+                        if randint(1, 3) == 1 and relation.relationship < randint(
+                            1, 100
+                        ):
+                            display_event(
+                                _("Your {rel} insulted you back.").format(rel=rel)
+                            )
+                            p.change_happiness(-randint(4, 9))
                 print()
         if choice == _("Activities"):
             print(_("Activities Menu"))
@@ -226,7 +254,7 @@ def MainMenu():
             if choice == 2:
                 print(_("You began studying harder"))
                 if not p.studied:
-                    p.change_grades(randint(2, 3 + (100 - p.grades) // 5))
+                    p.change_grades(randint(5, 7 + (100 - p.grades) // 5))
                     p.change_smarts(randint(0, 2))
                     p.studied = True
             if choice == 3:
@@ -245,3 +273,77 @@ def MainMenu():
                 else:
                     p.tried_to_drop_out = True
                     print(_("Your parents won't let you drop out of school."))
+
+        if choice == _("Debug Menu"):
+            choice = choice_input(_("Back"), _("Stats"), _("Identity"))
+            if choice == 2:
+                while True:
+                    clear_screen()
+                    print(_("Your stats"))
+                    display_data(_("Happiness"), p.happiness)
+                    display_data(_("Health"), p.health)
+                    display_data(_("Smarts"), p.smarts)
+                    display_data(_("Looks"), p.looks)
+                    display_data(_("Karma"), p.karma)
+                    choice = choice_input(
+                        _("Back"),
+                        _("Modify Happiness"),
+                        _("Modify Health"),
+                        _("Modify Smarts"),
+                        _("Modify Looks"),
+                        _("Modify Karma"),
+                    )
+                    if choice == 1:
+                        break
+                    elif choice == 2:
+                        print(_("What would you like to set Happiness to? (0-100)"))
+                        val = int_input_range_optional(0, 100)
+                        if val is not None:
+                            p.happiness = val
+                    elif choice == 3:
+                        print(_("What would you like to set Health to? (0-100)"))
+                        val = int_input_range_optional(0, 100)
+                        if val is not None:
+                            p.health = val
+                    elif choice == 4:
+                        print(_("What would you like to set Smarts to? (0-100)"))
+                        val = int_input_range_optional(0, 100)
+                        if val is not None:
+                            p.smarts = val
+                    elif choice == 5:
+                        print(_("What would you like to set Looks to? (0-100)"))
+                        val = int_input_range_optional(0, 100)
+                        if val is not None:
+                            p.looks = val
+                    elif choice == 6:
+                        print(_("What would you like to set Karma to? (0-100)"))
+                        val = int_input_range_optional(0, 100)
+                        if val is not None:
+                            p.karma = val
+            elif choice == 3:
+                while True:
+                    clear_screen()
+                    display_data(_("First name"), p.firstname)
+                    display_data(_("Last name"), p.lastname)
+                    display_data(_("Gender"), p.get_gender_str())
+                    choice = choice_input(
+                        _("Back"),
+                        _("Change first name"),
+                        _("Change last name"),
+                        _("Change gender"),
+                    )
+                    if choice == 1:
+                        break
+                    elif choice == 2:
+                        name = input(_("Enter first name: ")).strip()
+                        if name:
+                            p.firstname = name
+                    elif choice == 3:
+                        name = input(_("Enter last name: ")).strip()
+                        if name:
+                            p.lastname = name
+                    elif choice == 4:
+                        if p.gender == Gender.Male:
+                            p.gender = Gender.Female
+                        else:
+                            p.gender = Gender.Male

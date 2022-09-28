@@ -36,7 +36,7 @@ class Player(Person):
                 last2 = newlast  # Makes it more common to be named after the father's last name
             else:
                 last1 = newlast
-        self.parents = {
+        self.parents = {  # Cache these for performance since we only have one of each
             "Mother": Parent(
                 last1, min(randint(18, 50) for _ in range(3)), Gender.Female
             ),
@@ -44,6 +44,7 @@ class Player(Person):
                 last2, min(randint(18, 60) for _ in range(3)), Gender.Male
             ),
         }
+        self.relations = [self.parents["Mother"], self.parents["Father"]]
         self.karma = randint(0, 25) + randint(0, 25) + randint(0, 25) + randint(0, 25)
         self.total_happiness = 0
         self.meditated = False
@@ -56,10 +57,6 @@ class Player(Person):
         self.reset_already_did()
         self.grades = None
         self.dropped_out = False
-
-    @property
-    def relations(self):
-        return list(self.parents.values())
 
     def change_grades(self, amount):
         if self.grades is not None:
@@ -79,19 +76,18 @@ class Player(Person):
         self.total_happiness += self.happiness
         super().age_up()
         self.reset_already_did()
-
         self.change_karma(randint(-2, 2))
-        for parent in self.parents.values():
-            parent.age_up()
-            if self.age < 18:
-                parent.change_relationship(1)
-            else:
-                parent.change_relationship(choice((-1, -1, 0)))
+
+        for relation in self.relations:
+            relation.age_up()
+            if isinstance(relation, Parent):
+                if self.age < 18:
+                    relation.change_relationship(1)
+                else:
+                    relation.change_relationship(choice((-1, -1, 0)))
+
         print(_("Age {age}").format(age=self.age))
-        if self.age > randint(98, 122) or (
-            self.age > randint(80 + self.health // 12, 90 + self.health // 3)
-            and randint(1, 100) <= 65
-        ):
+        if self.death_check():
             self.die(_("You died of old age."))
             return
         if self.age > 50 and self.looks > randint(20, 25):
@@ -102,26 +98,25 @@ class Player(Person):
             self.depressed = True
             self.change_happiness(-50)
             self.change_health(-randint(4, 8))
-        for parent in list(self.parents.values()):
-            if parent.age >= randint(110, 120) or (
-                randint(1, 100) <= 50
-                and parent.age
-                >= max(
-                    (randint(72, 90) + randint(0, parent.health // 4)) for _ in range(2)
-                )
-            ):
-                rel_str = parent.name_accusative()
+        for relation in self.relations[:]:
+            if relation.death_check():
+                rel_str = relation.name_accusative()
                 display_event(
-                    _("Your {relative} died at the age of {age}").format(
-                        relative=rel_str, age=parent.age
-                    )
+                    _(
+                        "Your {relative} died at the age of {age} due to old age."
+                    ).format(relative=rel_str, age=relation.age)
                 )
-                del self.parents[parent.get_type()]
+                if isinstance(relation, Parent):
+                    del self.parents[relation.get_type()]
+                self.relations.remove(relation)
                 self.change_happiness(-randint(40, 55))
         self.random_events()
 
     def calc_grades(self, offset):
         self.grades = clamp(round(10 * math.sqrt(self.smarts + offset)), 0, 100)
+
+    def get_gender_str(self):
+        return _("Male") if self.gender == Gender.Male else _("Female")
 
     def die(self, message):
         print(message)
@@ -163,7 +158,7 @@ class Player(Person):
                     self.student_loan = randint(20000, 40000)
                     print(_("You now have to start paying back your student loan"))
             else:
-                if self.grades < randint(10, 35):
+                if self.grades < randint(10, 45):
                     display_event(
                         _("You were expelled from university after earning bad grades.")
                     )
@@ -205,11 +200,11 @@ class Player(Person):
         if self.grades is not None:
             self.change_grades(randint(-3, 3))
             base = round(10 * math.sqrt(self.smarts))
-            if self.grades < base:
-                self.change_grades(randint(1, 2))
-            elif self.grades > base:
-                self.change_grades(-randint(1, 2))
-            grade_delta = (self.happiness - 50) / 30
+            if self.grades < base - 2:
+                self.change_grades(randint(1, 3))
+            elif self.grades > base + 2:
+                self.change_grades(-randint(1, 3))
+            grade_delta = (self.happiness - 50) / 10
             if grade_delta > 0:
                 grade_delta /= 2
             self.change_grades(round_stochastic(grade_delta))
