@@ -13,7 +13,6 @@ from src.lifesim_lib.lifesim_lib import (
     round_stochastic,
 )
 from src.people.classes.player import Player
-from src.people.classes.relationship import Relationship
 
 _ = lambda s: s
 
