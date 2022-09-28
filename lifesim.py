@@ -64,6 +64,10 @@ def choice_input(*options, return_text=False):
 	if return_text:
 		return options[val - 1]
 	return val
+	
+def yes_no(message):
+	print(message)
+	return choice_input(_("Yes"), _("No")) == 1
 
 class Person:
 
@@ -84,6 +88,9 @@ class Person:
 		self.change_health(randint(-3, 3))
 		self.change_smarts(randint(-3, 3))
 		self.change_looks(randint(-3, 3))
+		
+	def death_check(self):
+		return self.age > randint(98, 122) or (self.age > randint(80 + self.health//12, 90 + self.health//3) and randint(1, 100) <= 65)
 		
 	def change_happiness(self, amount):
 		self.happiness = clamp(self.happiness + amount, 0, 100)
@@ -188,10 +195,14 @@ class Player(Person):
 				last2 = newlast #Makes it more common to be named after the father's last name
 			else:
 				last1 = newlast
-		self.parents = {
+		self.parents = { #Cache these for performance since we only have one of each
 			"Mother": Parent(last1, min(randint(18, 50) for _ in range(3)), Gender.Female),
 			"Father": Parent(last2, min(randint(18, 60) for _ in range(3)), Gender.Male),
 		}
+		self.relations = [
+			self.parents["Mother"],
+			self.parents["Father"]
+		]
 		self.karma = randint(0, 25) + randint(0, 25) + randint(0, 25) + randint(0, 25)
 		self.total_happiness = 0
 		self.meditated = False
@@ -204,11 +215,7 @@ class Player(Person):
 		self.reset_already_did()
 		self.grades = None
 		self.dropped_out = False
-		
-	@property
-	def relations(self):
-		return list(self.parents.values())
-		
+	
 	def change_grades(self, amount):
 		if self.grades is not None:
 			self.grades = clamp(self.grades + amount, 0, 100)
@@ -227,16 +234,18 @@ class Player(Person):
 		self.total_happiness += self.happiness
 		super().age_up()
 		self.reset_already_did()
-		
 		self.change_karma(randint(-2, 2))
-		for parent in self.parents.values():
-			parent.age_up()
-			if self.age < 18:
-				parent.change_relationship(1)
-			else:
-				parent.change_relationship(random.choice((-1, -1, 0)))
+		
+		for relation in self.relations:
+			relation.age_up()
+			if isinstance(relation, Parent):
+				if self.age < 18:
+					relation.change_relationship(1)
+				else:
+					relation.change_relationship(random.choice((-1, -1, 0)))
+		
 		print(_("Age {age}").format(age=self.age))
-		if self.age > randint(98, 122) or (self.age > randint(80 + self.health//12, 90 + self.health//3) and randint(1, 100) <= 65):
+		if self.death_check():
 			self.die(_("You died of old age."))
 			return
 		if self.age > 50 and self.looks > randint(20, 25):
@@ -247,11 +256,13 @@ class Player(Person):
 			self.depressed = True
 			self.change_happiness(-50)
 			self.change_health(-randint(4, 8))
-		for parent in list(self.parents.values()):
-			if parent.age >= randint(110, 120) or (randint(1, 100) <= 50 and parent.age >= max((randint(72, 90) + randint(0, parent.health//4)) for _ in range(2))):
-				rel_str = parent.name_accusative()
-				display_event(_("Your {relative} died at the age of {age}").format(relative=rel_str, age=parent.age))
-				del self.parents[parent.get_type()]
+		for relation in self.relations[:]:
+			if relation.death_check():
+				rel_str = relation.name_accusative()
+				display_event(_("Your {relative} died at the age of {age} due to old age.").format(relative=rel_str, age=relation.age))
+				if isinstance(relation, Parent):
+					del self.parents[relation.get_type()]
+				self.relations.remove(relation)	
 				self.change_happiness(-randint(40, 55))
 		self.random_events()
 		
@@ -508,6 +519,7 @@ while True:
 				choices.append(_("Have a conversation"))
 			if p.age >= 6:
 				choices.append(_("Compliment"))
+				choices.append(_("Insult"))
 			choice = choice_input(*choices, return_text=True)
 			clear_screen()
 			if choice == _("Spend time"):
@@ -519,8 +531,8 @@ while True:
 					(_("{his_her} Enjoyment").format(his_her=relation.his_her().capitalize()), enjoyment2)
 				)
 				if not relation.spent_time:
-					p.change_happiness(enjoyment1 // 12 + randint(0, 1))
-					relation.change_relationship(enjoyment2 // 12 + randint(0, 1))
+					p.change_happiness(round_stochastic(enjoyment1 / 12))
+					relation.change_relationship(round_stochastic(enjoyment2 / 12))
 					relation.spent_time = True
 			elif choice == _("Have a conversation"):
 				if relation.relationship < 24:
@@ -534,7 +546,7 @@ while True:
 					display_event(_("Agreement") + ": " + draw_bar(agreement, 100, 25))
 					if not relation.had_conversation:
 						p.change_happiness(4)
-						relation.change_relationship(agreement // 16)
+						relation.change_relationship(round_stochastic(agreement / 12))
 						relation.had_conversation = True
 			elif choice == _("Compliment"):
 				appreciation = randint(0, 60) + randint(0, 40)
@@ -544,12 +556,21 @@ while True:
 				display_bar(_("{his_her} Appreciation: ").format(his_her=relation.his_her().capitalize()), appreciation)
 				press_enter()
 				if not relation.was_complimented:
-					p.change_karma(randint(0, 3))
-					relation.change_relationship(round_stochastic(aprreciation / 6))
+					p.change_karma(randint(0, 2))
+					relation.change_relationship(round_stochastic(appreciation / 6))
 					if randint(1, 300) <= round_stochastic(appreciation * relation.relationship/50):
 						display_event(_("Your {relation} complimented you back!").format(relation=relation.name_accusative()))
-						p.change_happiness(randint(5, 9))
+						p.change_happiness(randint(6, 10))
 					relation.was_complimented = True
+			elif choice == _("Insult"):
+				rel = relation.name_accusative()
+				if yes_no(_("Are you sure you want to insult your {relation}?").format(relation=rel)):
+					display_event(_("You insulted your {rel}.").format(rel=rel))
+					relation.change_relationship(-randint(4, 8))
+					p.change_karma(-randint(2, 4))
+					if randint(1, 3) == 1 and relation.relationship < randint(1, 100):
+						display_event(_("Your {rel} insulted you back.").format(rel=rel))
+						p.change_happiness(-randint(4, 9))
 			print()
 	if choice == _("Activities"):
 		print(_("Activities Menu"))
