@@ -545,7 +545,7 @@ while True:
 				press_enter()
 				if not relation.was_complimented:
 					p.change_karma(randint(0, 3))
-					relation.change_relationship(round_stochastic(appreciation / 6))
+					relation.change_relationship(round_stochastic(aprreciation / 6))
 					if randint(1, 300) <= round_stochastic(appreciation * relation.relationship/50):
 						display_event(_("Your {relation} complimented you back!").format(relation=relation.name_accusative()))
 						p.change_happiness(randint(5, 9))
