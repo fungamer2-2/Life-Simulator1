@@ -355,10 +355,10 @@ class Player(Person):
 			self.change_grades(randint(-3, 3))
 			base = round(10 * math.sqrt(self.smarts))
 			if self.grades < base:
-				self.change_grades(randint(1, 2))
+				self.change_grades(randint(1, 3))
 			elif self.grades > base:
-				self.change_grades(-randint(1, 2))
-			grade_delta = (self.happiness - 50)/30
+				self.change_grades(-randint(1, 3))
+			grade_delta = (self.happiness - 50)/20
 			if grade_delta > 0:
 				grade_delta /= 2
 			self.change_grades(round_stochastic(grade_delta))
@@ -634,7 +634,7 @@ while True:
 		if choice == 2:
 			print(_("You began studying harder"))
 			if not p.studied:
-				p.change_grades(randint(2, 3 + (100 - p.grades)//5))
+				p.change_grades(randint(5, 7 + (100 - p.grades)//5))
 				p.change_smarts(randint(0, 2))
 				p.studied = True
 		if choice == 3:
