@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-09-29 20:24-0400\n"
+"POT-Creation-Date: 2022-09-30 09:57-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,7 +87,7 @@ msgstr ""
 msgid "Lifetime Happiness"
 msgstr ""
 
-#: lifesim.py:296 lifesim.py:512 lifesim.py:618
+#: lifesim.py:296 lifesim.py:512 lifesim.py:618 lifesim.py:685
 msgid "Karma"
 msgstr ""
 
@@ -251,7 +251,7 @@ msgstr ""
 msgid "Your name"
 msgstr ""
 
-#: lifesim.py:502 lifesim.py:719
+#: lifesim.py:502 lifesim.py:726
 msgid "Gender"
 msgstr ""
 
@@ -288,7 +288,7 @@ msgid "Relationships: "
 msgstr ""
 
 #: lifesim.py:530 lifesim.py:539 lifesim.py:601 lifesim.py:655 lifesim.py:676
-#: lifesim.py:686 lifesim.py:721
+#: lifesim.py:687 lifesim.py:728
 msgid "Back"
 msgstr ""
 
@@ -448,63 +448,71 @@ msgstr ""
 msgid "Your stats"
 msgstr ""
 
-#: lifesim.py:687
+#: lifesim.py:688
 msgid "Modify Happiness"
 msgstr ""
 
-#: lifesim.py:688
+#: lifesim.py:689
 msgid "Modify Health"
 msgstr ""
 
-#: lifesim.py:689
+#: lifesim.py:690
 msgid "Modify Smarts"
 msgstr ""
 
-#: lifesim.py:690
+#: lifesim.py:691
 msgid "Modify Looks"
 msgstr ""
 
-#: lifesim.py:695
+#: lifesim.py:692
+msgid "Modify Karma"
+msgstr ""
+
+#: lifesim.py:697
 msgid "What would you like to set Happiness to? (0-100)"
 msgstr ""
 
-#: lifesim.py:700
+#: lifesim.py:702
 msgid "What would you like to set Health to? (0-100)"
 msgstr ""
 
-#: lifesim.py:705
+#: lifesim.py:707
 msgid "What would you like to set Smarts to? (0-100)"
 msgstr ""
 
-#: lifesim.py:710
+#: lifesim.py:712
 msgid "What would you like to set Looks to? (0-100)"
 msgstr ""
 
 #: lifesim.py:717
-msgid "First name"
-msgstr ""
-
-#: lifesim.py:718
-msgid "Last name"
-msgstr ""
-
-#: lifesim.py:722
-msgid "Change first name"
-msgstr ""
-
-#: lifesim.py:723
-msgid "Change last name"
+msgid "What would you like to set Karma to? (0-100)"
 msgstr ""
 
 #: lifesim.py:724
-msgid "Change gender"
+msgid "First name"
+msgstr ""
+
+#: lifesim.py:725
+msgid "Last name"
 msgstr ""
 
 #: lifesim.py:729
+msgid "Change first name"
+msgstr ""
+
+#: lifesim.py:730
+msgid "Change last name"
+msgstr ""
+
+#: lifesim.py:731
+msgid "Change gender"
+msgstr ""
+
+#: lifesim.py:736
 msgid "Enter first name: "
 msgstr ""
 
-#: lifesim.py:733
+#: lifesim.py:740
 msgid "Enter last name: "
 msgstr ""
 

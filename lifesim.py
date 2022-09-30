@@ -681,13 +681,15 @@ while True:
 				display_data(_("Happiness"), p.happiness)
 				display_data(_("Health"), p.health)
 				display_data(_("Smarts"), p.smarts)
-				display_data(_("Looks"), p.looks)
+				display_data(_("Looks"), p.looks) #TODO: Display Karma stat here
+				display_data(_("Karma"), p.karma) 
 				choice = choice_input(
 					_("Back"),
 					_("Modify Happiness"),
 					_("Modify Health"),
 					_("Modify Smarts"),
-					_("Modify Looks")
+					_("Modify Looks"),
+					_("Modify Karma")
 				)
 				if choice == 1:
 					break
@@ -711,6 +713,11 @@ while True:
 					val = int_input_range_optional(0, 100)
 					if val is not None:
 						p.looks = val
+				elif choice == 6:
+					print(_("What would you like to set Karma to? (0-100)"))
+					val = int_input_range_optional(0, 100)
+					if val is not None:
+						p.karma = val
 		elif choice == 3:
 			while True:
 				clear_screen()
