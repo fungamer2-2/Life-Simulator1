@@ -57,6 +57,21 @@ def int_input_range(lo, hi):
 		else:
 			print(_("Invalid input; try again."))
 			
+def int_input_range_optional(lo, hi):
+	while True:
+		try:
+			val = input()
+			if val is None:
+				return None
+			val = int(val)
+		except ValueError:
+			print(_("Invalid input; try again."))
+			continue
+		if lo <= val <= hi:
+			return val
+		else:
+			print(_("Invalid input; try again."))
+			
 def choice_input(*options, return_text=False):
 	for i in range(len(options)):
 		print(f"{i+1}. {options[i]}")
@@ -269,6 +284,9 @@ class Player(Person):
 	def calc_grades(self, offset):
 		self.grades = clamp(round(10 * math.sqrt(self.smarts + offset)), 0, 100)
 	
+	def get_gender_str(self):
+		return _("Male") if self.gender == Gender.Male else _("Female")
+		
 	def die(self, message):
 		print(message)
 		avg_happy = round(p.total_happiness / p.age)
@@ -312,7 +330,7 @@ class Player(Person):
 					self.student_loan = randint(20000, 40000)
 					print(_("You now have to start paying back your student loan"))
 			else:
-				if self.grades < randint(10, 35):
+				if self.grades < randint(10, 45):
 					display_event(_("You were expelled from university after earning bad grades."))
 					self.change_happiness(-randint(30, 50))
 		if self.student_loan > 0:
@@ -354,11 +372,11 @@ class Player(Person):
 		if self.grades is not None:
 			self.change_grades(randint(-3, 3))
 			base = round(10 * math.sqrt(self.smarts))
-			if self.grades < base:
+			if self.grades < base - 2:
 				self.change_grades(randint(1, 3))
-			elif self.grades > base:
+			elif self.grades > base + 2:
 				self.change_grades(-randint(1, 3))
-			grade_delta = (self.happiness - 50)/20
+			grade_delta = (self.happiness - 50)/10
 			if grade_delta > 0:
 				grade_delta /= 2
 			self.change_grades(round_stochastic(grade_delta))
@@ -433,7 +451,9 @@ class Player(Person):
 
 def display_bar(stat_name, val):
 	print(stat_name + ": " + draw_bar(val, 100, 25))
-	
+
+def display_data(name, value):
+	print(name + ": " + str(value))
 def print_align_bars(*name_pairs, show_percent=False):
 	l = 0
 	for pair in name_pairs:
@@ -458,6 +478,8 @@ def clear_screen():
 	else:
 		os.system("clear")
 
+DEBUG = False
+
 choice = choice_input(_("Random Life"), _("Custom Life"))
 if choice == 1:
 	p = Player()
@@ -474,11 +496,10 @@ else:
 	print()
 	p = Player(first, last, Gender.Male if choice == 1 else Gender.Female)
 
-gender = _("Male") if p.gender == Gender.Male else _("Female")
 while True:
 	print()
 	print(_("Your name") + f": {p.name}")
-	print(_("Gender") + f": {gender}")
+	print(_("Gender") + f": {p.get_gender_str()}")
 	print(_("Money") + f": ${p.money:,}")
 	p.display_stats()
 	print()
@@ -491,9 +512,11 @@ while True:
 			(_("Karma"), p.karma)
 		)
 		exit()
-	choices = [ _("Age +1"), _("Relationships"), _("Activities") ]
+	choices = [ _("Age +1"), _("Relationships"), _("Activities") ] 
 	if p.grades is not None:
 		choices.append(_("School"))
+	if DEBUG:
+		choices.append(_("Debug Menu"))
 	choice = choice_input(*choices, return_text=True)
 	clear_screen()
 	if choice == _("Age +1"):
@@ -649,3 +672,69 @@ while True:
 			else:
 				p.tried_to_drop_out = True
 				print(_("Your parents won't let you drop out of school."))
+	if choice == _("Debug Menu"): #TODO: When I figure out more things to add to debug than just stats, change this to "Debug Menu"
+		choice = choice_input(_("Back"), _("Stats"), _("Identity"))
+		if choice == 2:
+			while True:
+				clear_screen()
+				print(_("Your stats"))
+				display_data(_("Happiness"), p.happiness)
+				display_data(_("Health"), p.health)
+				display_data(_("Smarts"), p.smarts)
+				display_data(_("Looks"), p.looks)
+				choice = choice_input(
+					_("Back"),
+					_("Modify Happiness"),
+					_("Modify Health"),
+					_("Modify Smarts"),
+					_("Modify Looks")
+				)
+				if choice == 1:
+					break
+				elif choice == 2:
+					print(_("What would you like to set Happiness to? (0-100)"))
+					val = int_input_range_optional(0, 100)
+					if val is not None:
+						p.happiness = val
+				elif choice == 3:
+					print(_("What would you like to set Health to? (0-100)"))
+					val = int_input_range_optional(0, 100)
+					if val is not None:
+						p.health = val
+				elif choice == 4:
+					print(_("What would you like to set Smarts to? (0-100)"))
+					val = int_input_range_optional(0, 100)
+					if val is not None:
+						p.smarts = val
+				elif choice == 5:
+					print(_("What would you like to set Looks to? (0-100)"))
+					val = int_input_range_optional(0, 100)
+					if val is not None:
+						p.looks = val
+		elif choice == 3:
+			while True:
+				clear_screen()
+				display_data(_("First name"), p.firstname)
+				display_data(_("Last name"), p.lastname)
+				display_data(_("Gender"), p.get_gender_str())
+				choice = choice_input(
+					_("Back"),
+					_("Change first name"),
+					_("Change last name"),
+					_("Change gender")
+				)
+				if choice == 1:
+					break
+				elif choice == 2:
+					name = input(_("Enter first name: ")).strip()
+					if name:
+						p.firstname = firstname
+				elif choice == 3:
+					name = input(_("Enter last name: ")).strip()
+					if name:
+						p.lastname = firstname
+				elif choice == 4:
+					if p.gender == Gender.Male:
+						p.gender = Gender.Female
+					else:
+						p.gender = Gender.Male	
