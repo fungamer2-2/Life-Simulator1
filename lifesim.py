@@ -681,7 +681,7 @@ while True:
 				display_data(_("Happiness"), p.happiness)
 				display_data(_("Health"), p.health)
 				display_data(_("Smarts"), p.smarts)
-				display_data(_("Looks"), p.looks) #TODO: Display Karma stat here
+				display_data(_("Looks"), p.looks) 
 				display_data(_("Karma"), p.karma) 
 				choice = choice_input(
 					_("Back"),
