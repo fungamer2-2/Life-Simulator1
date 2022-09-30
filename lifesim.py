@@ -672,7 +672,7 @@ while True:
 			else:
 				p.tried_to_drop_out = True
 				print(_("Your parents won't let you drop out of school."))
-	if choice == _("Debug Menu"): #TODO: When I figure out more things to add to debug than just stats, change this to "Debug Menu"
+	if choice == _("Debug Menu"):
 		choice = choice_input(_("Back"), _("Stats"), _("Identity"))
 		if choice == 2:
 			while True:
