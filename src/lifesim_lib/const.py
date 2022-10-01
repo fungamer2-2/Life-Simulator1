@@ -1,21 +1,15 @@
-import os
+import os as _os
 
+DEBUG = False
 
-class CONST:
-    """Base class for global constants."""
+MALE_NAMES = open("assets/male_names.txt").read().splitlines()
+FEMALE_NAMES = open("assets/female_names.txt").read().splitlines()
+LAST_NAMES = open("assets/last_names.txt").read().splitlines()
 
-    DEBUG = False
+GAME_LANGUAGE = "en"
 
-    MALE_NAMES = open("assets/male_names.txt").read().splitlines()
-    FEMALE_NAMES = open("assets/female_names.txt").read().splitlines()
-    LAST_NAMES = open("assets/last_names.txt").read().splitlines()
-
-    GAME_LANGUAGE = (
-        "en"  # TODO: Add a way to select the language at the start of the game
-    )
-
-    LANGUAGES = [
-        dir
-        for dir in os.listdir("./locale")
-        if os.path.isdir(os.path.abspath("./locale/" + dir))
-    ]
+LANGUAGES = [
+	dir
+	for dir in _os.listdir("./locale")
+	if _os.path.isdir(_os.path.abspath("./locale/" + dir))
+]

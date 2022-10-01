@@ -4,7 +4,7 @@ from src.lifesim_lib.lifesim_lib import clamp
 
 
 class Person:
-    """Base class for persons."""
+    """Base class for any character in the game."""
 
     def __init__(
         self, firstname, lastname, age, gender, happiness, health, smarts, looks
