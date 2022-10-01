@@ -525,7 +525,7 @@ def clear_screen():
 	else:
 		os.system("clear")
 
-DEBUG = True
+DEBUG = False
 
 choice = choice_input(_("Random Life"), _("Custom Life"))
 if choice == 1:
