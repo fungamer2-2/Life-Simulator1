@@ -119,11 +119,13 @@ class Player(Person):
             return
         if self.age == 13:
             val = 0
-            if randint(1, 4) < 4:
-                val = min(randint(0, 10))
-            self.teen_looks_inc = 0
+            if randint(1, 4) == 1:
+                val = randint(0, 1)
+            else:
+                val = min(randint(0, 12) for _ in range(4))
+            self.teen_looks_inc = val
         if self.age >= 13 and self.age < randint(18, 24):
-            pass
+            self.change_looks(self.teen_looks_inc)
         if self.age > 50 and self.looks > randint(20, 25):
             decay = min((self.age - 51) // 5 + 1, 4)
             self.change_looks(-randint(0, decay))
