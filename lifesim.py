@@ -8,6 +8,7 @@ from src.menus.start import start_menu
 _ = lambda s: s
 
 langs = {}
+
 for lang in CONST.LANGUAGES:
     try:
         l = gettext.translation("lifesim", localedir="locale", languages=[lang])
