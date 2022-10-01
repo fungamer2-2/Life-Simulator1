@@ -209,14 +209,14 @@ def main_menu(player):
                     relation.change_relationship(-randint(4, 8))
                     player.change_karma(-randint(2, 4))
                     if isinstance(relation, Sibling):
-                        chance = relation.petulance / 2
+                        chance = 50 * (relation.petulance/100)**1.5
                     else:
                         chance = (100 - relation.relationship) / 4
                     if random.uniform(0, 100) < chance:
                         display_event(
                             _("Your {rel} insulted you back.").format(rel=rel)
                         )
-                        player.change_happiness(-randint(2, 6))
+                        player.change_happiness(-randint(1, 5) if isinstance(relation, Sibling) else -randint(3, 8))
             print()
     if choice == _("Activities"):
         print(_("Activities Menu"))
