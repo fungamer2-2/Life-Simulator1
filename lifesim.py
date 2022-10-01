@@ -252,12 +252,7 @@ class Player(Person):
 			self.parents["Mother"],
 			self.parents["Father"]
 		]
-		if randint(1, 5) < 5: #80% chance of having a sibling
-			whichlast = random.choice((last1, last2))
-			theirsmarts = round_stochastic((randint(0, 100) + self.smarts)/2)
-			theirlooks = round_stochastic((randint(0, 100) + self.looks)/2)
-			sibling = Sibling(whichlast, randint(2, 10), Gender.random(), theirsmarts, theirlooks)
-			self.relations.append(sibling)
+		
 		self.karma = randint(0, 25) + randint(0, 25) + randint(0, 25) + randint(0, 25)
 		self.total_happiness = 0
 		self.meditated = False
@@ -304,13 +299,14 @@ class Player(Person):
 		if self.death_check():
 			self.die(_("You died of old age."))
 			return
-		if self.age == 13:
-			val = 0
-			if randint(1, 4) < 4:
-				val = min(randint(0, 10))
-			self.teen_looks_inc = 0
+		if self.age == 13:	
+			if randint(1, 4) == 1:
+				val = randint(0, 1)
+			else:
+				val = min(randint(0, 12) for _ in range(4))
+			self.teen_looks_inc = val
 		if self.age >= 13 and self.age < randint(18, 24):
-			pass
+			self.change_looks(self.teen_looks_inc)
 		if self.age > 50 and self.looks > randint(20, 25):
 			decay = min((self.age - 51) // 5 + 1, 4)
 			self.change_looks(-randint(0, decay))
@@ -529,7 +525,7 @@ def clear_screen():
 	else:
 		os.system("clear")
 
-DEBUG = False
+DEBUG = True
 
 choice = choice_input(_("Random Life"), _("Custom Life"))
 if choice == 1:
@@ -546,6 +542,18 @@ else:
 	choice = choice_input(_("Male"), _("Female"))
 	print()
 	p = Player(first, last, Gender.Male if choice == 1 else Gender.Female)
+
+clear_screen()
+print(_("Your mother's name is {name}").format(name=p.parents["Mother"].name))
+print(_("Your father's name is {name}").format(name=p.parents["Father"].name))
+
+if randint(1, 5) < 5: #80% chance of having a sibling
+	whichlast = random.choice((p.parents["Mother"].lastname, p.parents["Father"].lastname))
+	theirsmarts = round_stochastic((randint(0, 100) + p.smarts)/2)
+	theirlooks = round_stochastic((randint(0, 100) + p.looks)/2)
+	sibling = Sibling(whichlast, randint(2, 12), Gender.random(), theirsmarts, theirlooks)
+	p.relations.append(sibling)
+	print(_("You have a {siblingtype} named {name}").format(siblingtype=sibling.get_translated_type().lower(), name=sibling.name))
 
 while True:
 	print()
@@ -675,12 +683,12 @@ while True:
 					relation.change_relationship(-randint(4, 8))
 					p.change_karma(-randint(2, 4))
 					if isinstance(relation, Sibling):
-						chance = relation.petulance/2
+						chance = 50 * (relation.petulance/100)**1.5
 					else:
 						chance = (100-relation.relationship)/4
 					if random.uniform(0, 100) < chance:
 						display_event(_("Your {rel} insulted you back.").format(rel=rel))
-						p.change_happiness(-randint(2, 6))
+						p.change_happiness(-randint(1, 5) if isinstance(relation, Sibling) else -randint(3, 8))
 			print()
 	if choice == _("Activities"):
 		print(_("Activities Menu"))
