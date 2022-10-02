@@ -232,14 +232,14 @@ def main_menu(player):
 					_("You had a lot of fun playing with your toys.")
 				]
 				print(random.choice(sayings))
-				happy_gain = randint(5, 10)
+				happy_gain = randint(5, 11)
 			if not player.played:
 				player.played = True
 				player.change_happiness(happy_gain)
 		if choice == _("Arts and Crafts"):
 			if randint(1, 10) == 1:
 				print(_("You thought about doing arts and crafts, but couldn't decide what to make."))
-				player.change_happiness(-randint(1, 2))
+				player.change_happiness(-randint(1, 3))
 			else:
 				if randint(1, 2) == 1 or player.age < 16:
 					print(_("You decided to paint."))

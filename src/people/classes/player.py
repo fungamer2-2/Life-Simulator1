@@ -52,13 +52,13 @@ class Player(Person):
 			if diff > 0:
 				self.parents["Mother"].generosity += randint(0, diff // 2)
 			elif diff < 0:
-				self.parents["Mother"].generosity -= randint(0, abs(diff // 2))
+				self.parents["Mother"].generosity -= randint(0, abs(diff)//2)
 		else:
 			diff = -diff
 			if diff > 0:
 				self.parents["Father"].generosity += randint(0, diff // 2)
 			elif diff < 0:
-				self.parents["Father"].generosity -= randint(0, abs(diff // 2))
+				self.parents["Father"].generosity -= randint(0, abs(diff)//2)
 
 		self.relations = [self.parents["Mother"], self.parents["Father"]]
 		if randint(1, 5) < 5:  # 80% chance of having a sibling
