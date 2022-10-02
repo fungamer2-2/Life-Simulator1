@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-10-01 10:40-0400\n"
+"POT-Creation-Date: 2022-10-01 20:21-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,576 +15,563 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: lifesim.py:53 lifesim.py:58 lifesim.py:68 lifesim.py:73
+#: src/lifesim_lib/lifesim_lib.py:42 src/lifesim_lib/lifesim_lib.py:47
+#: src/lifesim_lib/lifesim_lib.py:57 src/lifesim_lib/lifesim_lib.py:62
 msgid "Invalid input; try again."
 msgstr ""
 
-#: lifesim.py:85 lifesim.py:448
+#: src/lifesim_lib/lifesim_lib.py:74 src/people/classes/player.py:275
 msgid "No"
 msgstr ""
 
-#: lifesim.py:85 lifesim.py:448
+#: src/lifesim_lib/lifesim_lib.py:74 src/people/classes/player.py:275
 msgid "Yes"
 msgstr ""
 
-#: lifesim.py:144
-msgid "his"
-msgstr ""
-
-#: lifesim.py:144 lifesim.py:147
-msgid "her"
-msgstr ""
-
-#: lifesim.py:147
-msgid "him"
-msgstr ""
-
-#: lifesim.py:153
-msgid "relationship"
-msgstr ""
-
-#: lifesim.py:173
-msgid "father"
-msgstr ""
-
-#: lifesim.py:173
-msgid "mother"
-msgstr ""
-
-#: lifesim.py:179
-msgid "Father"
-msgstr ""
-
-#: lifesim.py:179
-msgid "Mother"
-msgstr ""
-
-#: lifesim.py:190
-msgid "brother"
-msgstr ""
-
-#: lifesim.py:190
-msgid "sister"
-msgstr ""
-
-#: lifesim.py:196
-msgid "Brother"
-msgstr ""
-
-#: lifesim.py:196
-msgid "Sister"
-msgstr ""
-
-#: lifesim.py:209
+#: src/lifesim_lib/lifesim_lib.py:83
 msgid "Press Enter to continue..."
 msgstr ""
 
-#: lifesim.py:298
-msgid "Age {age}"
-msgstr ""
-
-#: lifesim.py:300
-msgid "You died of old age."
-msgstr ""
-
-#: lifesim.py:314
-msgid "You are suffering from depression."
-msgstr ""
-
-#: lifesim.py:321
-msgid "Your {relative} died at the age of {age} due to old age."
-msgstr ""
-
-#: lifesim.py:332 lifesim.py:542
-msgid "Female"
-msgstr ""
-
-#: lifesim.py:332 lifesim.py:542
-msgid "Male"
-msgstr ""
-
-#: lifesim.py:339 lifesim.py:570
-msgid "Lifetime Happiness"
-msgstr ""
-
-#: lifesim.py:340 lifesim.py:571 lifesim.py:713 lifesim.py:780
-msgid "Karma"
-msgstr ""
-
-#: lifesim.py:358 lifesim.py:776
-msgid "Happiness"
-msgstr ""
-
-#: lifesim.py:359 lifesim.py:777
-msgid "Health"
-msgstr ""
-
-#: lifesim.py:360 lifesim.py:603 lifesim.py:778
-msgid "Smarts"
-msgstr ""
-
-#: lifesim.py:361 lifesim.py:604 lifesim.py:779
-msgid "Looks"
-msgstr ""
-
-#: lifesim.py:370
-msgid "You graduated from university."
-msgstr ""
-
-#: lifesim.py:375
-msgid "You now have to start paying back your student loan"
-msgstr ""
-
-#: lifesim.py:378
-msgid "You were expelled from university after earning bad grades."
-msgstr ""
-
-#: lifesim.py:386
-msgid "You've fully paid off your student loan"
-msgstr ""
-
-#: lifesim.py:389
-msgid "You are no longer suffering from depression"
-msgstr ""
-
-#: lifesim.py:397
-msgid "Your mother is taking to to the doctor's office to get vaccinated."
-msgstr ""
-
-#: lifesim.py:398
-msgid "How will you behave?"
-msgstr ""
-
-#: lifesim.py:400
-msgid "Cooperate"
-msgstr ""
-
-#: lifesim.py:401
-msgid "Throw a tantrum"
-msgstr ""
-
-#: lifesim.py:402
-msgid "Bite her"
-msgstr ""
-
-#: lifesim.py:407
-msgid "You remained calm"
-msgstr ""
-
-#: lifesim.py:411
-msgid "You threw a tantrum"
-msgstr ""
-
-#: lifesim.py:415
-msgid "You bit your mother"
-msgstr ""
-
-#: lifesim.py:428
-msgid "You are starting elementary school"
-msgstr ""
-
-#: lifesim.py:432
-msgid "You are starting middle school"
-msgstr ""
-
-#: lifesim.py:436
-msgid "You are starting high school"
-msgstr ""
-
-#: lifesim.py:441
-msgid "You graduated from high school."
-msgstr ""
-
-#: lifesim.py:447
-msgid "Would you like to apply to university?"
-msgstr ""
-
-#: lifesim.py:452
-msgid "Your application to university was accepted!"
-msgstr ""
-
-#: lifesim.py:454
-msgid "Scholarship"
-msgstr ""
-
-#: lifesim.py:455
-msgid "Student Loan"
-msgstr ""
-
-#: lifesim.py:456
-msgid "Ask parents to pay"
-msgstr ""
-
-#: lifesim.py:464
-msgid "How would you like to pay for your college tuition?"
-msgstr ""
-
-#: lifesim.py:469
-msgid "Your scholarship application has been awarded!"
-msgstr ""
-
-#: lifesim.py:473
-msgid "Your scholarship application was rejected."
-msgstr ""
-
-#: lifesim.py:481
-msgid "Your parents agreed to pay for your university tuition!"
-msgstr ""
-
-#: lifesim.py:485
-msgid "Your parents refused to pay for your university tuition."
-msgstr ""
-
-#: lifesim.py:489
-msgid "You took out a student loan to pay for your university tuition."
-msgstr ""
-
-#: lifesim.py:492
-msgid "You are now enrolled in university."
-msgstr ""
-
-#: lifesim.py:496
-msgid "Your application to university was rejected."
-msgstr ""
-
-#: lifesim.py:530
-msgid "Custom Life"
-msgstr ""
-
-#: lifesim.py:530
-msgid "Random Life"
-msgstr ""
-
-#: lifesim.py:537
-msgid "Enter your first name: "
-msgstr ""
-
-#: lifesim.py:539
-msgid "Enter your last name: "
-msgstr ""
-
-#: lifesim.py:541
-msgid "Choose your gender:"
-msgstr ""
-
-#: lifesim.py:547
-msgid "Your mother's name is {name}"
-msgstr ""
-
-#: lifesim.py:548
-msgid "Your father's name is {name}"
-msgstr ""
-
-#: lifesim.py:556
-msgid "You have a {siblingtype} named {name}"
-msgstr ""
-
-#: lifesim.py:560
+#: src/menus/main.py:29
 msgid "Your name"
 msgstr ""
 
-#: lifesim.py:561 lifesim.py:821
+#: src/menus/main.py:30 src/menus/main.py:346
 msgid "Gender"
 msgstr ""
 
-#: lifesim.py:562
+#: src/menus/main.py:31
 msgid "Money"
 msgstr ""
 
-#: lifesim.py:566
-msgid "You died."
-msgstr ""
-
-#: lifesim.py:574 lifesim.py:581
+#: src/menus/main.py:34 src/menus/main.py:41
 msgid "Age +1"
 msgstr ""
 
-#: lifesim.py:574 lifesim.py:584
+#: src/menus/main.py:34 src/menus/main.py:44
 msgid "Relationships"
 msgstr ""
 
-#: lifesim.py:574 lifesim.py:693
+#: src/menus/main.py:34 src/menus/main.py:212
 msgid "Activities"
 msgstr ""
 
-#: lifesim.py:576 lifesim.py:746
+#: src/menus/main.py:36 src/menus/main.py:267
 msgid "School"
 msgstr ""
 
-#: lifesim.py:578 lifesim.py:770
+#: src/menus/main.py:38 src/menus/main.py:295
 msgid "Debug Menu"
 msgstr ""
 
-#: lifesim.py:586
+#: src/menus/main.py:46
 msgid "Relationships: "
 msgstr ""
 
-#: lifesim.py:589 lifesim.py:607 lifesim.py:696 lifesim.py:750 lifesim.py:771
-#: lifesim.py:782 lifesim.py:823
+#: src/menus/main.py:49 src/menus/main.py:70 src/menus/main.py:215
+#: src/menus/main.py:271 src/menus/main.py:296 src/menus/main.py:307
+#: src/menus/main.py:348
 msgid "Back"
 msgstr ""
 
-#: lifesim.py:595
+#: src/menus/main.py:56
 msgid "Name"
 msgstr ""
 
-#: lifesim.py:596
+#: src/menus/main.py:61
 msgid "Age"
 msgstr ""
 
-#: lifesim.py:598
+#: src/menus/main.py:62
 msgid "Relationship"
 msgstr ""
 
-#: lifesim.py:601
+#: src/menus/main.py:64
 msgid "Generosity"
 msgstr ""
 
-#: lifesim.py:605
+#: src/menus/main.py:66 src/menus/main.py:303 src/people/classes/player.py:187
+msgid "Smarts"
+msgstr ""
+
+#: src/menus/main.py:67 src/menus/main.py:304 src/people/classes/player.py:188
+msgid "Looks"
+msgstr ""
+
+#: src/menus/main.py:68
 msgid "Petulance"
 msgstr ""
 
-#: lifesim.py:610 lifesim.py:617
+#: src/menus/main.py:73 src/menus/main.py:80
 msgid "Spend time"
 msgstr ""
 
-#: lifesim.py:611 lifesim.py:633
+#: src/menus/main.py:74 src/menus/main.py:105
 msgid "Have a conversation"
 msgstr ""
 
-#: lifesim.py:613 lifesim.py:664
+#: src/menus/main.py:76 src/menus/main.py:162
 msgid "Compliment"
 msgstr ""
 
-#: lifesim.py:614 lifesim.py:679
+#: src/menus/main.py:77 src/menus/main.py:192
 msgid "Insult"
 msgstr ""
 
-#: lifesim.py:619
+#: src/menus/main.py:82
 msgid "Your {relation} refused to see you."
 msgstr ""
 
-#: lifesim.py:622
+#: src/menus/main.py:86
 msgid "You spent time with your {relation}."
 msgstr ""
 
-#: lifesim.py:626
+#: src/menus/main.py:93
 msgid "Your Enjoyment"
 msgstr ""
 
-#: lifesim.py:627
+#: src/menus/main.py:95
 msgid "{his_her} Enjoyment"
 msgstr ""
 
-#: lifesim.py:635
+#: src/menus/main.py:108
 msgid "Your {relation} isn't interested in having a conversation with you."
 msgstr ""
 
-#: lifesim.py:644
+#: src/menus/main.py:123
 msgid "You had a conversation with your {relation}."
 msgstr ""
 
-#: lifesim.py:645
+#: src/menus/main.py:127
 msgid "Agreement"
 msgstr ""
 
-#: lifesim.py:652
+#: src/menus/main.py:135
 msgid "You and your {relation} got into an argument. What will you do?"
 msgstr ""
 
-#: lifesim.py:653
-msgid "Agree to disagree"
-msgstr ""
-
-#: lifesim.py:653
+#: src/menus/main.py:140
 msgid "Apologize"
 msgstr ""
 
-#: lifesim.py:653
+#: src/menus/main.py:141
+msgid "Agree to disagree"
+msgstr ""
+
+#: src/menus/main.py:142
 msgid "Insult {him_her}"
 msgstr ""
 
-#: lifesim.py:656
+#: src/menus/main.py:147
 msgid "You apologized to your {relation}"
 msgstr ""
 
-#: lifesim.py:659
+#: src/menus/main.py:153
 msgid "You agreed to disagree"
 msgstr ""
 
-#: lifesim.py:662
+#: src/menus/main.py:157
 msgid "You insulted your {relation}"
 msgstr ""
 
-#: lifesim.py:669
+#: src/menus/main.py:168
 msgid "You complimented your {relation}."
 msgstr ""
 
-#: lifesim.py:670
+#: src/menus/main.py:173
 msgid "{his_her} Appreciation"
 msgstr ""
 
-#: lifesim.py:676
+#: src/menus/main.py:186
 msgid "Your {relation} complimented you back!"
 msgstr ""
 
-#: lifesim.py:681
+#: src/menus/main.py:195
 msgid "Are you sure you want to insult your {relation}?"
 msgstr ""
 
-#: lifesim.py:682
+#: src/menus/main.py:199
 msgid "You insulted your {rel}."
 msgstr ""
 
-#: lifesim.py:690
+#: src/menus/main.py:208
 msgid "Your {rel} insulted you back."
 msgstr ""
 
-#: lifesim.py:694
+#: src/menus/main.py:213
 msgid "Activities Menu"
 msgstr ""
 
-#: lifesim.py:698 lifesim.py:704
+#: src/menus/main.py:217 src/menus/main.py:223
 msgid "Meditate"
 msgstr ""
 
-#: lifesim.py:699 lifesim.py:715
+#: src/menus/main.py:218 src/menus/main.py:234
 msgid "Library"
 msgstr ""
 
-#: lifesim.py:701 lifesim.py:721
+#: src/menus/main.py:220 src/menus/main.py:240
 msgid "Gym"
 msgstr ""
 
-#: lifesim.py:705
+#: src/menus/main.py:224
 msgid "You practiced meditation."
 msgstr ""
 
-#: lifesim.py:712
+#: src/menus/main.py:231
 msgid "You have achieved a deeper awareness of yourself."
 msgstr ""
 
-#: lifesim.py:716
+#: src/menus/main.py:232 src/menus/main.py:305
+#: src/people/classes/player.py:168
+msgid "Karma"
+msgstr ""
+
+#: src/menus/main.py:235
 msgid "You went to the library."
 msgstr ""
 
-#: lifesim.py:723
+#: src/menus/main.py:242
 msgid "Your health is too weak to visit the gym."
 msgstr ""
 
-#: lifesim.py:737
+#: src/menus/main.py:256
 msgid "You worked out at the gym."
 msgstr ""
 
-#: lifesim.py:738
+#: src/menus/main.py:257
 msgid "Workout"
 msgstr ""
 
-#: lifesim.py:747
+#: src/menus/main.py:268
 msgid "School Menu"
 msgstr ""
 
-#: lifesim.py:749
+#: src/menus/main.py:270
 msgid "Grades"
 msgstr ""
 
-#: lifesim.py:750
+#: src/menus/main.py:271
 msgid "Drop out"
 msgstr ""
 
-#: lifesim.py:750
+#: src/menus/main.py:271
 msgid "Study harder"
 msgstr ""
 
-#: lifesim.py:753
+#: src/menus/main.py:274
 msgid "You began studying harder"
 msgstr ""
 
-#: lifesim.py:764
+#: src/menus/main.py:289
 msgid "You dropped out of school."
 msgstr ""
 
-#: lifesim.py:769
+#: src/menus/main.py:294
 msgid "Your parents won't let you drop out of school."
 msgstr ""
 
-#: lifesim.py:771
+#: src/menus/main.py:296
 msgid "Identity"
 msgstr ""
 
-#: lifesim.py:771
+#: src/menus/main.py:296
 msgid "Stats"
 msgstr ""
 
-#: lifesim.py:775
+#: src/menus/main.py:300
 msgid "Your stats"
 msgstr ""
 
-#: lifesim.py:783
+#: src/menus/main.py:301 src/people/classes/player.py:185
+msgid "Happiness"
+msgstr ""
+
+#: src/menus/main.py:302 src/people/classes/player.py:186
+msgid "Health"
+msgstr ""
+
+#: src/menus/main.py:308
 msgid "Modify Happiness"
 msgstr ""
 
-#: lifesim.py:784
+#: src/menus/main.py:309
 msgid "Modify Health"
 msgstr ""
 
-#: lifesim.py:785
+#: src/menus/main.py:310
 msgid "Modify Smarts"
 msgstr ""
 
-#: lifesim.py:786
+#: src/menus/main.py:311
 msgid "Modify Looks"
 msgstr ""
 
-#: lifesim.py:787
+#: src/menus/main.py:312
 msgid "Modify Karma"
 msgstr ""
 
-#: lifesim.py:792
+#: src/menus/main.py:317
 msgid "What would you like to set Happiness to? (0-100)"
 msgstr ""
 
-#: lifesim.py:797
+#: src/menus/main.py:322
 msgid "What would you like to set Health to? (0-100)"
 msgstr ""
 
-#: lifesim.py:802
+#: src/menus/main.py:327
 msgid "What would you like to set Smarts to? (0-100)"
 msgstr ""
 
-#: lifesim.py:807
+#: src/menus/main.py:332
 msgid "What would you like to set Looks to? (0-100)"
 msgstr ""
 
-#: lifesim.py:812
+#: src/menus/main.py:337
 msgid "What would you like to set Karma to? (0-100)"
 msgstr ""
 
-#: lifesim.py:819
+#: src/menus/main.py:344
 msgid "First name"
 msgstr ""
 
-#: lifesim.py:820
+#: src/menus/main.py:345
 msgid "Last name"
 msgstr ""
 
-#: lifesim.py:824
+#: src/menus/main.py:349
 msgid "Change first name"
 msgstr ""
 
-#: lifesim.py:825
+#: src/menus/main.py:350
 msgid "Change last name"
 msgstr ""
 
-#: lifesim.py:826
+#: src/menus/main.py:351
 msgid "Change gender"
 msgstr ""
 
-#: lifesim.py:831
+#: src/menus/main.py:356
 msgid "Enter first name: "
 msgstr ""
 
-#: lifesim.py:835
+#: src/menus/main.py:360
 msgid "Enter last name: "
+msgstr ""
+
+#: src/menus/start.py:7
+msgid "Custom Life"
+msgstr ""
+
+#: src/menus/start.py:7
+msgid "Random Life"
+msgstr ""
+
+#: src/menus/start.py:13
+msgid "Enter your first name: "
+msgstr ""
+
+#: src/menus/start.py:15
+msgid "Enter your last name: "
+msgstr ""
+
+#: src/menus/start.py:17
+msgid "Choose your gender:"
+msgstr ""
+
+#: src/menus/start.py:18 src/people/classes/player.py:162
+msgid "Female"
+msgstr ""
+
+#: src/menus/start.py:18 src/people/classes/player.py:162
+msgid "Male"
+msgstr ""
+
+#: src/people/classes/parent.py:30
+msgid "father"
+msgstr ""
+
+#: src/people/classes/parent.py:30
+msgid "mother"
+msgstr ""
+
+#: src/people/classes/parent.py:36
+msgid "Father"
+msgstr ""
+
+#: src/people/classes/parent.py:36
+msgid "Mother"
+msgstr ""
+
+#: src/people/classes/player.py:119
+msgid "Age {age}"
+msgstr ""
+
+#: src/people/classes/player.py:121
+msgid "You died of old age."
+msgstr ""
+
+#: src/people/classes/player.py:136
+msgid "You are suffering from depression."
+msgstr ""
+
+#: src/people/classes/player.py:144
+msgid "Your {relative} died at the age of {age} due to old age."
+msgstr ""
+
+#: src/people/classes/player.py:168
+msgid "Lifetime Happiness"
+msgstr ""
+
+#: src/people/classes/player.py:197
+msgid "You graduated from university."
+msgstr ""
+
+#: src/people/classes/player.py:202
+msgid "You now have to start paying back your student loan"
+msgstr ""
+
+#: src/people/classes/player.py:206
+msgid "You were expelled from university after earning bad grades."
+msgstr ""
+
+#: src/people/classes/player.py:215
+msgid "You've fully paid off your student loan"
+msgstr ""
+
+#: src/people/classes/player.py:218
+msgid "You are no longer suffering from depression"
+msgstr ""
+
+#: src/people/classes/player.py:227
+msgid "Your mother is taking to to the doctor's office to get vaccinated."
+msgstr ""
+
+#: src/people/classes/player.py:229
+msgid "How will you behave?"
+msgstr ""
+
+#: src/people/classes/player.py:230
+msgid "Bite her"
+msgstr ""
+
+#: src/people/classes/player.py:230
+msgid "Cooperate"
+msgstr ""
+
+#: src/people/classes/player.py:230
+msgid "Throw a tantrum"
+msgstr ""
+
+#: src/people/classes/player.py:234
+msgid "You remained calm"
+msgstr ""
+
+#: src/people/classes/player.py:238
+msgid "You threw a tantrum"
+msgstr ""
+
+#: src/people/classes/player.py:242
+msgid "You bit your mother"
+msgstr ""
+
+#: src/people/classes/player.py:255
+msgid "You are starting elementary school"
+msgstr ""
+
+#: src/people/classes/player.py:259
+msgid "You are starting middle school"
+msgstr ""
+
+#: src/people/classes/player.py:263
+msgid "You are starting high school"
+msgstr ""
+
+#: src/people/classes/player.py:268
+msgid "You graduated from high school."
+msgstr ""
+
+#: src/people/classes/player.py:274
+msgid "Would you like to apply to university?"
+msgstr ""
+
+#: src/people/classes/player.py:279
+msgid "Your application to university was accepted!"
+msgstr ""
+
+#: src/people/classes/player.py:281
+msgid "Scholarship"
+msgstr ""
+
+#: src/people/classes/player.py:282
+msgid "Student Loan"
+msgstr ""
+
+#: src/people/classes/player.py:283
+msgid "Ask parents to pay"
+msgstr ""
+
+#: src/people/classes/player.py:287
+msgid "How would you like to pay for your college tuition?"
+msgstr ""
+
+#: src/people/classes/player.py:293
+msgid "Your scholarship application has been awarded!"
+msgstr ""
+
+#: src/people/classes/player.py:299
+msgid "Your scholarship application was rejected."
+msgstr ""
+
+#: src/people/classes/player.py:309
+msgid "Your parents agreed to pay for your university tuition!"
+msgstr ""
+
+#: src/people/classes/player.py:317
+msgid "Your parents refused to pay for your university tuition."
+msgstr ""
+
+#: src/people/classes/player.py:325
+msgid "You took out a student loan to pay for your university tuition."
+msgstr ""
+
+#: src/people/classes/player.py:331
+msgid "You are now enrolled in university."
+msgstr ""
+
+#: src/people/classes/player.py:335
+msgid "Your application to university was rejected."
+msgstr ""
+
+#: src/people/classes/relationship.py:40
+msgid "his"
+msgstr ""
+
+#: src/people/classes/relationship.py:40 src/people/classes/relationship.py:43
+msgid "her"
+msgstr ""
+
+#: src/people/classes/relationship.py:43
+msgid "him"
+msgstr ""
+
+#: src/people/classes/relationship.py:49
+msgid "relationship"
+msgstr ""
+
+#: src/people/classes/sibling.py:28
+msgid "brother"
+msgstr ""
+
+#: src/people/classes/sibling.py:28
+msgid "sister"
+msgstr ""
+
+#: src/people/classes/sibling.py:34
+msgid "Brother"
+msgstr ""
+
+#: src/people/classes/sibling.py:34
+msgid "Sister"
 msgstr ""
 
