@@ -86,7 +86,7 @@ class Player(Person):
 		self.teen_looks_inc = 0
 		
 	def is_in_school(self):
-		return self.is_in_school()
+		return self.grades is not None
 
 	def change_grades(self, amount):
 		if self.is_in_school():
