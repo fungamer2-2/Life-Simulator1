@@ -213,6 +213,11 @@ def main_menu(player):
 		print(_("Activities Menu"))
 		print()
 		choices = [_("Back")]
+		if player.age < 10:
+			choices.append(_("Play"))
+			choices.append(_("Arts and Crafts"))
+		if player.age >= 10:
+    		choices.append(_("Arts and Crafts"))
 		if player.age >= 13:
 			choices.append(_("Meditate"))
 			choices.append(_("Library"))
@@ -220,6 +225,26 @@ def main_menu(player):
 			choices.append(_("Gym"))
 		choice = choice_input(*choices, return_text=True)
 		clear_screen()
+		if choice == _("Play"):
+    		if player.depressed:
+    			print(_("You don't feel like playing, but you decide to try."))
+				player.change_happiness(randint(0, 3))
+			else:
+    			print(_("You played with your toys."))
+				player.change_happiness(randint(2, 5))
+		if choice == _("Arts and Crafts"):
+    		arts = randint(0, 10)
+			if arts ==0:
+    			print(_("You changed your mind."))
+				player.change_happiness(-randint(0, 1))
+			elif arts%2 == 1:
+				print(_("You decided to paint."))
+				player.change_happiness(randint(1, 4))
+				player.change_smarts(randint(0, 2))
+			elif arts%2 == 0:
+    			print(_("You decided to bake something tasty!"))
+				player.change_happiness(randint(1, 5))
+				player.change_smarts(randint(1, 3)) 
 		if choice == _("Meditate"):
 			print(_("You practiced meditation."))
 			if not player.meditated:  # You can only get the bonus once per year
