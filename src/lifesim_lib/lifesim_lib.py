@@ -73,13 +73,11 @@ def yes_no(message):
 	print(message)
 	return choice_input(_("Yes"), _("No")) == 1
 
-
 def random_name(gender):
 	if gender == Gender.Male:
 		return random.choice(MALE_NAMES)
 	else:
 		return random.choice(FEMALE_NAMES)
-
 
 def press_enter():
 	input(_("Press Enter to continue..."))
@@ -90,14 +88,11 @@ def display_event(message):
 	press_enter()
 	clear_screen()
 
-
 def display_bar(stat_name, val):
 	print(stat_name + ": " + draw_bar(val, 100, 25))
 
-
 def display_data(name, value):
 	print(name + ": " + str(value))
-
 
 def print_align_bars(*name_pairs, show_percent=False):
 	l = 0
@@ -118,11 +113,9 @@ def print_align_bars(*name_pairs, show_percent=False):
 			+ extra
 		)
 
-
 def draw_bar(val, max_val, width):
 	num = round(width * val / max_val)
-	return "[" + "|" * num + " " * (width - num) + "]"
-
+	return "[" + "|" * num + " " * (width - num) + "]"	
 
 def clear_screen():
 	os.system("cls" if platform == "win32" else "clear")

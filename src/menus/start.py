@@ -3,11 +3,9 @@ from src.people.classes.player import Player
 
 _ = lambda s: s
 
-
 def start_menu():
 	choice = choice_input(_("Random Life"), _("Custom Life"))
-	
-	
+		
 	if choice == 2:
 		first = ""
 		last = ""

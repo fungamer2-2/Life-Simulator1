@@ -31,14 +31,6 @@ def main_menu(player):
 	print(_("Money") + f": ${player.money:,}")
 	player.display_stats()
 	print()
-	if player.alive == False:
-		print(_("You died."))
-		avg_happy = round(player.total_happiness / player.age)
-		score = player.happiness * 0.3 + avg_happy * 0.7
-		print_align_bars(
-			(_("Lifetime Happiness"), avg_happy), (_("Karma"), player.karma)
-		)
-		exit()
 	choices = [_("Age +1"), _("Relationships"), _("Activities")]
 	if player.grades is not None:
 		choices.append(_("School"))

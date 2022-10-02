@@ -16,7 +16,7 @@ for lang in LANGUAGES:
 
 if GAME_LANGUAGE in langs:
 	langs[GAME_LANGUAGE].install()
-
+	
 player = start_menu()
 while True:
 	main_menu(player)

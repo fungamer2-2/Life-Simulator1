@@ -1,4 +1,4 @@
-import os as _os
+:import os as _os
 
 DEBUG = False
 

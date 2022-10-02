@@ -84,9 +84,12 @@ class Player(Person):
 		self.grades = None
 		self.dropped_out = False
 		self.teen_looks_inc = 0
+		
+	def is_in_school(self):
+		return self.is_in_school()
 
 	def change_grades(self, amount):
-		if self.grades is not None:
+		if self.is_in_school():
 			self.grades = clamp(self.grades + amount, 0, 100)
 
 	def change_karma(self, amount):
@@ -142,10 +145,14 @@ class Player(Person):
 						"Your {relative} died at the age of {age} due to old age."
 					).format(relative=rel_str, age=relation.age)
 				)
+				happy_remove = randint(40, 55)
 				if isinstance(relation, Parent):
 					del self.parents[relation.get_type()]
+				elif isinstance(relation, Sibling):
+					happy_remove = randint(25, 40)
+				self.change_happiness(-happy_remove)
 				self.relations.remove(relation)
-				self.change_happiness(-randint(40, 55))
+				
 		self.random_events()
 
 	def calc_grades(self, offset):
@@ -233,7 +240,7 @@ class Player(Person):
 				self.change_happiness(-randint(6, 10))
 				self.parents["Mother"].change_relationship(-randint(25, 35))
 				print(_("You bit your mother"))
-		if self.grades is not None:
+		if self.is_in_school():
 			self.change_grades(randint(-3, 3))
 			base = round(10 * math.sqrt(self.smarts))
 			if self.grades < base - 2:
