@@ -32,7 +32,7 @@ def main_menu(player):
 	player.display_stats()
 	print()
 	choices = [_("Age +1"), _("Relationships"), _("Activities")]
-	if player.grades is not None:
+	if player.is_in_school():
 		choices.append(_("School"))
 	if DEBUG:
 		choices.append(_("Debug Menu"))
