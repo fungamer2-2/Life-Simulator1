@@ -18,10 +18,8 @@ from src.people.classes.parent import Parent
 from src.people.classes.person import Person
 from src.people.classes.sibling import Sibling
 
-
-
 class Player(Person):
-	"""Base class for players."""
+	"""Base class for the player."""
 
 	def __init__(self, first=None, last=None, gender=None):
 		gender = gender or Gender.random()
