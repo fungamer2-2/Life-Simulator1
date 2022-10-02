@@ -99,6 +99,8 @@ class Player(Person):
 		self.visited_library = False
 		self.studied = False
 		self.tried_to_drop_out = False
+		self.played = False
+		self.did_arts_and_crafts = False
 
 	def age_up(self):
 		self.total_happiness += self.happiness

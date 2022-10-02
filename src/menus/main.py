@@ -211,9 +211,10 @@ def main_menu(player):
 		print(_("Activities Menu"))
 		print()
 		choices = [_("Back")]
-		if player.age < 10:
-			choices.append(_("Play"))
-		choices.append(_("Arts and Crafts"))
+		if 3 <= player.age < 13:
+			choices.append(_("Play with your toys"))
+		if player.age >= 5:
+			choices.append(_("Arts and Crafts"))
 		if player.age >= 13:
 			choices.append(_("Meditate"))
 			choices.append(_("Library"))
@@ -221,25 +222,36 @@ def main_menu(player):
 			choices.append(_("Gym"))
 		choice = choice_input(*choices, return_text=True)
 		clear_screen()
-		if choice == _("Play"):
+		if choice == _("Play with your toys"):
 			if player.depressed:
 				print(_("You don't feel like playing, but you decide to try anyway."))
-				player.change_happiness(randint(0, 3))
+				happy_gain = randint(0, 6)
 			else:
-				print(_("You played with your toys."))
-				player.change_happiness(randint(2, 5))
+				sayings = [
+					_("You played with your toys."),
+					_("You had a lot of fun playing with your toys.")
+				]
+				print(random.choice(sayings))
+				happy_gain = randint(5, 10)
+			if not player.played:
+				player.played = True
+				player.change_happiness(happy_gain)
 		if choice == _("Arts and Crafts"):
-			if randint(1, 10) == 1
+			if randint(1, 10) == 1:
 				print(_("You thought about doing arts and crafts, but couldn't decide what to make."))
-				player.change_happiness(-randint(0, 2))
-			elif randint(1, 2) == 1 or p.age < 16:
-				print(_("You decided to paint."))
-				player.change_happiness(randint(1, 4))
-				player.change_smarts(randint(0, 2))
+				player.change_happiness(-randint(1, 2))
 			else:
-				print(_("You decided to bake something tasty!"))
-				player.change_happiness(randint(2, 6))
-				player.change_smarts(randint(1, 3)) 
+				if randint(1, 2) == 1 or player.age < 16:
+					print(_("You decided to paint."))
+					if not player.did_arts_and_crafts:
+						player.change_happiness(randint(1, 4))
+						player.change_smarts(randint(0, 2))
+				else:
+					print(_("You decided to bake something tasty!"))
+					if not player.did_arts_and_crafts:
+						player.change_happiness(randint(2, 6))
+						player.change_smarts(randint(1, 3)) 
+				player.did_arts_and_crafts = True
 		if choice == _("Meditate"):
 			print(_("You practiced meditation."))
 			if not player.meditated:  # You can only get the bonus once per year
