@@ -3,6 +3,7 @@ import random
 from random import randint
 
 from src.lifesim_lib.const import *
+from src.lifesim_lib.translation import _
 from src.lifesim_lib.lifesim_lib import (
 	clamp,
 	clear_screen,
@@ -17,7 +18,6 @@ from src.people.classes.parent import Parent
 from src.people.classes.person import Person
 from src.people.classes.sibling import Sibling
 
-_ = lambda s: s
 
 
 class Player(Person):

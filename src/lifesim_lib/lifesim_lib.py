@@ -5,8 +5,7 @@ import random
 from sys import platform
 
 from src.lifesim_lib.const import *
-
-_ = lambda s: s
+from src.lifesim_lib.translation import _
 
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
@@ -81,7 +80,6 @@ def random_name(gender):
 
 def press_enter():
 	input(_("Press Enter to continue..."))
-
 
 def display_event(message):
 	print(message)

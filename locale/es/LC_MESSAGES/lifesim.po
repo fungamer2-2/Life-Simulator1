@@ -18,7 +18,7 @@ msgstr ""
 #: src/lifesim_lib/lifesim_lib.py:42 src/lifesim_lib/lifesim_lib.py:47
 #: src/lifesim_lib/lifesim_lib.py:57 src/lifesim_lib/lifesim_lib.py:62
 msgid "Invalid input; try again."
-msgstr ""
+msgstr "Entrada inválida; intentar otra vez."
 
 #: src/lifesim_lib/lifesim_lib.py:74 src/people/classes/player.py:275
 msgid "No"
@@ -120,11 +120,11 @@ msgstr "Insultar"
 
 #: src/menus/main.py:82
 msgid "Your {relation} refused to see you."
-msgstr "Tu {relacion} ha rechazado verte."
+msgstr "Tu {relation} ha rechazado verte."
 
 #: src/menus/main.py:86
 msgid "You spent time with your {relation}."
-msgstr "Pasas tiempo con {relacion}."
+msgstr "Pasas tiempo con {relation}."
 
 #: src/menus/main.py:93
 msgid "Your Enjoyment"
@@ -132,15 +132,15 @@ msgstr "Tu Disfrute"
 
 #: src/menus/main.py:95
 msgid "{his_her} Enjoyment"
-msgstr "{su} Disfrute"
+msgstr "{his_her} Disfrute"
 
 #: src/menus/main.py:108
 msgid "Your {relation} isn't interested in having a conversation with you."
-msgstr "Tu {relacion} no esta interesada en tener una conversacion contigo."
+msgstr "Tu {relation} no esta interesada en tener una conversacion contigo."
 
 #: src/menus/main.py:123
 msgid "You had a conversation with your {relation}."
-msgstr "Tuviste una conversacion con tu {relacion}"
+msgstr "Tuviste una conversacion con tu {relation}"
 
 #: src/menus/main.py:127
 msgid "Agreement"
@@ -148,7 +148,7 @@ msgstr "Acuerdo"
 
 #: src/menus/main.py:135
 msgid "You and your {relation} got into an argument. What will you do?"
-msgstr "Tu y tu {relacion} tuvieron una discusion. Que vas a hacer?"
+msgstr "Tu y tu {relation} tuvieron una discusion. Que vas a hacer?"
 
 #: src/menus/main.py:140
 msgid "Apologize"
@@ -164,7 +164,7 @@ msgstr "Insultarle"
 
 #: src/menus/main.py:147
 msgid "You apologized to your {relation}"
-msgstr "Te disculpaste con tu {relacion}"
+msgstr "Te disculpaste con tu {relation}"
 
 #: src/menus/main.py:153
 msgid "You agreed to disagree"
@@ -172,23 +172,23 @@ msgstr "Acordaron estar en desacuerdo"
 
 #: src/menus/main.py:157
 msgid "You insulted your {relation}"
-msgstr "Insultaste a tu {relacion}"
+msgstr "Insultaste a tu {relation}"
 
 #: src/menus/main.py:168
 msgid "You complimented your {relation}."
-msgstr "Le hiciste un cumpliado a tu {relacion}"
+msgstr "Le hiciste un cumpliado a tu {relation}"
 
 #: src/menus/main.py:173
 msgid "{his_her} Appreciation"
-msgstr "{su} Apreciacion"
+msgstr "{his_her} Apreciacion"
 
 #: src/menus/main.py:186
 msgid "Your {relation} complimented you back!"
-msgstr "¡Tu {relacion} te hizo un cumplido de vuelta!"
+msgstr "¡Tu {relation} te hizo un cumplido de vuelta!"
 
 #: src/menus/main.py:195
 msgid "Are you sure you want to insult your {relation}?"
-msgstr "¿Estas seguro que desas insultar a tu {relacion}?"
+msgstr "¿Estas seguro que desas insultar a tu {relation}?"
 
 #: src/menus/main.py:199
 msgid "You insulted your {rel}."
@@ -405,7 +405,7 @@ msgstr "Madre"
 
 #: src/people/classes/player.py:119
 msgid "Age {age}"
-msgstr "Edad {edad}"
+msgstr "Edad {age}"
 
 #: src/people/classes/player.py:121
 msgid "You died of old age."
@@ -417,7 +417,7 @@ msgstr "Estas sufriendo de depresion."
 
 #: src/people/classes/player.py:144
 msgid "Your {relative} died at the age of {age} due to old age."
-msgstr "Tu {pariente} ha fallecido a la edad de {edad} por mayoria de edad."
+msgstr "Tu {relative} ha fallecido a la edad de {age} por mayoria de edad."
 
 #: src/people/classes/player.py:168
 msgid "Lifetime Happiness"

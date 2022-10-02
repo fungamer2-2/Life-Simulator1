@@ -2,6 +2,7 @@ import random
 from random import randint
 
 from src.lifesim_lib.const import *
+from src.lifesim_lib.translation import _
 from src.lifesim_lib.lifesim_lib import (
 	choice_input,
 	clamp,
@@ -21,8 +22,6 @@ from src.lifesim_lib.lifesim_lib import (
 from src.people.classes.parent import Parent
 from src.people.classes.person import Person
 from src.people.classes.sibling import Sibling
-
-_ = lambda s: s
 
 def main_menu(player):
 	print()
@@ -115,7 +114,6 @@ def main_menu(player):
 					agreement += randint(0, max(0, (relation.relationship - 50) // 3))
 					if isinstance(relation, Sibling) and randint(1, 2) == 1:
 						agreement -= randint(0, relation.petulance // 3)
-					# agreement = 0
 					agreement = clamp(
 						round(agreement), randint(0, 10), randint(90, 100)
 					)

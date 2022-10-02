@@ -1,9 +1,8 @@
 from random import randint
 
 from src.lifesim_lib.lifesim_lib import random_name
+from src.lifesim_lib.translation import _
 from src.people.classes.relationship import Relationship
-
-_ = lambda s: s
 
 class Parent(Relationship):
 	"""Base class for relationships."""

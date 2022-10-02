@@ -1,7 +1,6 @@
 from src.lifesim_lib.lifesim_lib import choice_input, Gender
 from src.people.classes.player import Player
-
-_ = lambda s: s
+from src.lifesim_lib.translation import _
 
 def start_menu():
 	choice = choice_input(_("Random Life"), _("Custom Life"))
