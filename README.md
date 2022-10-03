@@ -2,6 +2,8 @@
 
 A life simulator in Python inspired by "Bitlife - Life Simulator"
 
+Discord server: https://discord.gg/xER8FvAnSf
+
 Contributions are welcome! You can contribute by making an issue or pull request.
 
 ## Installation
