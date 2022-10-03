@@ -232,7 +232,7 @@ def main_menu(player):
 					_("You had a lot of fun playing with your toys.")
 				]
 				print(random.choice(sayings))
-				happy_gain = randint(5, 11)
+				happy_gain = randint(5, 10)
 			if not player.played:
 				player.played = True
 				player.change_happiness(happy_gain)
