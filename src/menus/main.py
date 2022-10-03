@@ -244,12 +244,12 @@ def main_menu(player):
 				if randint(1, 2) == 1 or player.age < 16:
 					print(_("You decided to paint."))
 					if not player.did_arts_and_crafts:
-						player.change_happiness(randint(1, 4))
+						player.change_happiness(randint(2, 4))
 						player.change_smarts(randint(0, 2))
 				else:
 					print(_("You decided to bake something tasty!"))
 					if not player.did_arts_and_crafts:
-						player.change_happiness(randint(2, 6))
+						player.change_happiness(randint(3, 6))
 						player.change_smarts(randint(1, 3)) 
 				player.did_arts_and_crafts = True
 		if choice == _("Meditate"):

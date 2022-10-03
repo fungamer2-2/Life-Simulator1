@@ -27,7 +27,7 @@ class Person:
         self.change_looks(randint(-3, 3))
 
     def death_check(self):
-        return self.age > randint(98, 122) or (
+        return (self.age >= randint(95, 122)) or (
             self.age > randint(80 + self.health // 12, 90 + self.health // 3)
             and randint(1, 100) <= 65
         )
