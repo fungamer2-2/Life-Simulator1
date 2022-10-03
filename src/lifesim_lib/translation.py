@@ -4,8 +4,10 @@ import os as _os
 
 _ = lambda s: s
 
+from src.lifesim_lib.lifesim_lib import choice_input
+
 dir = _os.getcwd()
-langs = {}
+langs = {"en": None}
 
 for lang in LANGUAGES:
 	try:
@@ -15,6 +17,22 @@ for lang in LANGUAGES:
 	else:
 		langs[lang] = l
 
-if GAME_LANGUAGE in langs:
-	langs[GAME_LANGUAGE].install()
-	_ = langs[GAME_LANGUAGE].gettext
+lang_map = {
+	"en": "English",
+	"es": "Español",
+	"ko_KR": "한국인",
+	"ja": "日本",
+	"ro": "Română"
+}
+
+names = []
+codes = []
+for lang in langs:
+	codes.append(lang)
+	names.append(lang_map.get(lang, lang))
+
+language = codes[choice_input(*names) - 1]
+
+if language != "en":
+	langs[language].install()
+	_ = langs[language].gettext
