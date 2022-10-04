@@ -1,6 +1,6 @@
 import os as _os
 
-DEBUG = True
+DEBUG = False
 
 MALE_NAMES = open("assets/male_names.txt").read().splitlines()
 FEMALE_NAMES = open("assets/female_names.txt").read().splitlines()
