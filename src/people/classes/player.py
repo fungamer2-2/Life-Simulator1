@@ -182,8 +182,8 @@ class Player(Person):
 		else:
 			symbol = ":|"
 		print_align_bars(
-			(_("Happiness"), self.happiness, " " + symbol),
-			(_("Health"), self.health),
+			(_("Happiness"), self.happiness, symbol),
+			(_("Health"), self.health, "</3" if self.health < 20 else "<3"),
 			(_("Smarts"), self.smarts),
 			(_("Looks"), self.looks),
 			show_percent=True,

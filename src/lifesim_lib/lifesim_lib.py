@@ -101,7 +101,7 @@ def print_align_bars(*name_pairs, show_percent=False):
 	for pair in name_pairs:
 		name, val = pair[:2]
 		if len(pair) >= 3:
-			extra = pair[2]
+			extra = " " + pair[2]
 		else:
 			extra = ""
 		print(

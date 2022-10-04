@@ -68,7 +68,7 @@ def main_menu(player):
 			print_align_bars(*bars)
 			choices = [_("Back")]
 			if relation.age >= 5:
-				if player.age >= 5:
+				if player.age >= 3:
 					choices.append(_("Spend time"))
 					choices.append(_("Have a conversation"))
 				if player.age >= 6:
@@ -218,7 +218,6 @@ def main_menu(player):
 		if player.age >= 13:
 			choices.append(_("Meditate"))
 			choices.append(_("Library"))
-		if player.age >= 18:
 			choices.append(_("Gym"))
 		choice = choice_input(*choices, return_text=True)
 		clear_screen()
@@ -258,15 +257,17 @@ def main_menu(player):
 				player.change_health(randint(2, 5))
 				player.change_happiness(randint(3, 6))
 				player.change_karma(randint(0, 3))
-				if random.randint(1, 12) == 1:
+				if random.randint(1, 10) == 1:
 					player.change_happiness(2)
 					print(_("You have achieved a deeper awareness of yourself."))
 					print(_("Karma") + ": " + draw_bar(player.karma, 100, 25))
 				player.meditated = True
 		elif choice == _("Library"):
 			print(_("You went to the library."))
+			enjoyment = randint(15, 60)
+			display_bar(_("Your Enjoyment"), enjoyment)
 			if not player.visited_library:  # You can only get the bonus once per year
-				player.change_happiness(randint(0, 4))
+				player.change_happiness(round_stochastic(enjoyment/15))
 				player.change_smarts(randint(2, 5))
 				player.visited_library = True
 		elif choice == _("Gym"):
