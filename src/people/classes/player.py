@@ -44,7 +44,7 @@ class Player(Person):
 				Gender.Female,
 			),
 			"Father": Parent(
-				last2, min(randint(randint(18, 24), 60) for _ in range(3)), Gender.Male
+				last2, min(randint(randint(18, 20), 68) for _ in range(3)), Gender.Male
 			),
 		}
 		diff = self.parents["Father"].generosity - self.parents["Mother"].generosity
@@ -181,11 +181,26 @@ class Player(Person):
 				symbol = ":("
 		else:
 			symbol = ":|"
+			
+		if self.looks < 15:
+			looks_symbol = "🌧"
+		elif self.looks < 30:
+			looks_symbol = "☁"
+		elif self.looks < 43:
+			looks_symbol = "🌥"
+		elif self.looks < 55:
+			looks_symbol = "⛅"
+		elif self.looks < 65:
+			looks_symbol = "🌤"
+		elif self.looks < 85:
+			looks_symbol = "☉"
+		else:
+			looks_symbol = "🔥"
 		print_align_bars(
 			(_("Happiness"), self.happiness, symbol),
 			(_("Health"), self.health, "</3" if self.health < 20 else "<3"),
 			(_("Smarts"), self.smarts),
-			(_("Looks"), self.looks),
+			(_("Looks"), self.looks, looks_symbol),
 			show_percent=True,
 		)
 

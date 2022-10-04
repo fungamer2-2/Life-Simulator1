@@ -264,7 +264,7 @@ def main_menu(player):
 				player.meditated = True
 		elif choice == _("Library"):
 			print(_("You went to the library."))
-			enjoyment = randint(15, 60)
+			enjoyment = randint(15, 65)
 			display_bar(_("Your Enjoyment"), enjoyment)
 			if not player.visited_library:  # You can only get the bonus once per year
 				player.change_happiness(round_stochastic(enjoyment/15))
