@@ -9,6 +9,7 @@ from src.lifesim_lib.lifesim_lib import (
 	clear_screen,
 	choice_input,
 	display_event,
+	press_enter,
 	Gender,
 	print_align_bars,
 	random_name,
@@ -205,6 +206,23 @@ class Player(Person):
 		)
 
 	def random_events(self):
+		if self.age >= 5 and randint(1, 5000) == 1:
+			print(_("You were struck by lightning!"))
+			good_or_bad = randint(1, 2) == 1
+			if good_or_bad:
+				self.change_happiness(100)
+				self.change_health(100)
+				self.change_smarts(100)
+				self.change_looks(100)
+			else:
+				self.change_happiness(-100)
+				self.change_health(-100)
+				self.change_smarts(-100)
+				self.change_looks(-100)
+			self.display_stats()
+			press_enter()
+			if not good_or_bad and randint(1, 6) == 1:
+				self.die(_("You died after being struck by lightning."))
 		if self.uv_years > 0:
 			self.uv_years -= 1
 			if self.uv_years == 0:
