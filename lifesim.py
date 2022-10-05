@@ -19,7 +19,7 @@ while True:
 		while True:
 			main_menu(player)
 	except PlayerDied:
-		if yes_no("Would you like to start a new life?"):
+		if yes_no(_("Would you like to start a new life?")):
 			clear_screen()
 		else:
 			break
