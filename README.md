@@ -28,6 +28,8 @@ Copy `lifesim.pot` to a new file, fill in the translations, then upload it as `l
 The `.po` should be placed in the directory path `locale/[language code]/LC_MESSAGES`. <br />
 I will then convert it to a `.mo` file so it can be translated.
 
+NOTE: The text between the `{}` in strings is used for string formatting, and is not to be translated. Their translations are handled separately.
+
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for more details.
