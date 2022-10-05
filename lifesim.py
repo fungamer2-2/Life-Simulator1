@@ -4,6 +4,7 @@ from src.lifesim_lib.const import *
 from src.menus.main import main_menu
 from src.menus.start import start_menu
 from src.lifesim_lib.translation import _
+from src.lifesim_lib.lifesim_lib import PlayerDied, yes_no, clear_screen
 
 """
 TODO List:
@@ -12,6 +13,13 @@ TODO List:
 - Add social media
 """
 
-player = start_menu()
 while True:
-	main_menu(player)
+	try:
+		player = start_menu()
+		while True:
+			main_menu(player)
+	except PlayerDied:
+		if yes_no("Would you like to start a new life?"):
+			clear_screen()
+		else:
+			break

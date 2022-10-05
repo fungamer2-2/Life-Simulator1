@@ -14,7 +14,8 @@ from src.lifesim_lib.lifesim_lib import (
 	print_align_bars,
 	random_name,
 	round_stochastic,
-	randexpo
+	randexpo,
+	PlayerDied
 )
 from src.people.classes.parent import Parent
 from src.people.classes.person import Person
@@ -174,7 +175,8 @@ class Player(Person):
 		avg_happy = round(self.total_happiness / self.age)
 		score = self.happiness * 0.3 + avg_happy * 0.7
 		print_align_bars((_("Lifetime Happiness"), avg_happy), (_("Karma"), self.karma))
-		exit()
+		press_enter()
+		raise PlayerDied
 
 	def display_stats(self):
 		if self.happiness >= 60:

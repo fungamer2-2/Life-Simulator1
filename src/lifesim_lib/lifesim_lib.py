@@ -7,6 +7,9 @@ from sys import platform
 from src.lifesim_lib.const import *
 from src.lifesim_lib.translation import _
 
+class PlayerDied(Exception):
+	pass
+
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
 	
