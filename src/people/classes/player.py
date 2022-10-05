@@ -14,6 +14,7 @@ from src.lifesim_lib.lifesim_lib import (
 	print_align_bars,
 	random_name,
 	round_stochastic,
+	randexpo
 )
 from src.people.classes.parent import Parent
 from src.people.classes.person import Person
@@ -146,14 +147,19 @@ class Player(Person):
 						"Your {relative} died at the age of {age} due to old age."
 					).format(relative=rel_str, age=relation.age)
 				)
+				inheritance = 0
 				happy_remove = randint(40, 55)
 				if isinstance(relation, Parent):
 					del self.parents[relation.get_type()]
+					if randint(1, 2) == 1 and randint(1, 100) <= relation.generosity:
+						inheritance = round_stochastic(randexpo(1, 20000))
 				elif isinstance(relation, Sibling):
 					happy_remove = randint(25, 40)
 				self.change_happiness(-happy_remove)
 				self.relations.remove(relation)
-				
+				if inheritance > 0:
+					display_event(_("You inherited ${amount}").format(amount=inheritance))
+					self.money += inheritance
 		self.random_events()
 
 	def calc_grades(self, offset):

@@ -9,6 +9,11 @@ from src.lifesim_lib.translation import _
 
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))
+	
+def randexpo(lo, avg):
+	"Returns a random number exponentially distributed, with a minimum of 'lo', averaging around 'avg'."
+	assert lo < avg, "lo must be less than avg"
+	return lo + random.expoariate(1/(avg - lo))
 
 def round_stochastic(value):
 	"""Randomly rounds a number up or down, based on its decimal part
