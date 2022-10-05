@@ -160,6 +160,7 @@ class Player(Person):
 				if inheritance > 0:
 					display_event(_("You inherited ${amount}").format(amount=inheritance))
 					self.money += inheritance
+					p.change_happiness(round_stochastic(1.5 * math.log10(inheritance)))
 		self.random_events()
 
 	def calc_grades(self, offset):
