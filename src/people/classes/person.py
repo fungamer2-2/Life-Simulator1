@@ -28,7 +28,7 @@ class Person:
 
     def death_check(self):
         return (self.age >= randint(95, 122)) or (
-            self.age > randint(80 + self.health // 12, 90 + self.health // 3)
+            self.age > randint(70 + self.health // 12, 90 + self.health // 3)
             and randint(1, 100) <= 65
         )
 

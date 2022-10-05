@@ -206,7 +206,7 @@ class Player(Person):
 		)
 
 	def random_events(self):
-		if self.age >= 5 and randint(1, 5000) == 1:
+		if self.age >= 5 and randint(1, 6000) == 1:
 			print(_("You were struck by lightning!"))
 			good_or_bad = randint(1, 2) == 1
 			if good_or_bad:
