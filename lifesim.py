@@ -18,6 +18,7 @@ while True:
 		player = start_menu()
 		while True:
 			main_menu(player)
+			player.save_game()
 	except PlayerDied:
 		if yes_no(_("Would you like to start a new life?")):
 			clear_screen()

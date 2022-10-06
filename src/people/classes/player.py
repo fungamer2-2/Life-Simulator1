@@ -1,5 +1,4 @@
-import math
-import random
+import math, os, random
 from random import randint
 
 from src.lifesim_lib.const import *
@@ -85,6 +84,14 @@ class Player(Person):
 		self.grades = None
 		self.dropped_out = False
 		self.teen_looks_inc = 0
+		
+	def save_game(self):
+		import pickle
+		pickle.dump(self, open(SAVE_PATH, "wb"))
+		
+	def delete_save(self):
+		if os.path.exists(SAVE_PATH):
+			os.remove(SAVE_PATH)
 		
 	def is_in_school(self):
 		return self.grades is not None
@@ -175,6 +182,7 @@ class Player(Person):
 		avg_happy = round(self.total_happiness / self.age)
 		score = self.happiness * 0.3 + avg_happy * 0.7
 		print_align_bars((_("Lifetime Happiness"), avg_happy), (_("Karma"), self.karma))
+		self.delete_save()
 		press_enter()
 		raise PlayerDied
 

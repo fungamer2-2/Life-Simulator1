@@ -25,6 +25,7 @@ from src.people.classes.sibling import Sibling
 
 def main_menu(player):
 	print()
+	print(_("Age {age}").format(player.age))
 	print(_("Your name") + f": {player.name}")
 	print(_("Gender") + f": {player.get_gender_str()}")
 	print(_("Money") + f": ${player.money:,}")
@@ -254,10 +255,10 @@ def main_menu(player):
 		if choice == _("Meditate"):
 			print(_("You practiced meditation."))
 			if not player.meditated:  # You can only get the bonus once per year
-				player.change_health(randint(2, 5))
+				player.change_health(randint(2, 4))
 				player.change_happiness(randint(3, 6))
 				player.change_karma(randint(0, 3))
-				if random.randint(1, 10) == 1:
+				if randint(1, 10) == 1:
 					player.change_happiness(2)
 					print(_("You have achieved a deeper awareness of yourself."))
 					print(_("Karma") + ": " + draw_bar(player.karma, 100, 25))
