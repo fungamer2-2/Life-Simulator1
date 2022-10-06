@@ -16,7 +16,7 @@ def clamp(val, lo, hi):
 def randexpo(lo, avg):
 	"Returns a random number exponentially distributed, with a minimum of 'lo', averaging around 'avg'."
 	assert lo < avg, "lo must be less than avg"
-	return lo + random.expoariate(1/(avg - lo))
+	return lo + random.expovariate(1/(avg - lo))
 
 def round_stochastic(value):
 	"""Randomly rounds a number up or down, based on its decimal part

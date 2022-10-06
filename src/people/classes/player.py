@@ -84,6 +84,7 @@ class Player(Person):
 		self.grades = None
 		self.dropped_out = False
 		self.teen_looks_inc = 0
+		self.times_meditated = 0
 		
 	def save_game(self):
 		import pickle
@@ -142,7 +143,7 @@ class Player(Person):
 		if self.age > 50 and self.looks > randint(20, 25):
 			decay = min((self.age - 51) // 5 + 1, 4)
 			self.change_looks(-randint(0, decay))
-		if self.happiness < 10 and not self.depressed:
+		if self.happiness < randint(1, 10) and not self.depressed:
 			display_event(_("You are suffering from depression."))
 			self.depressed = True
 			self.change_happiness(-50)
@@ -159,7 +160,7 @@ class Player(Person):
 				happy_remove = randint(40, 55)
 				if isinstance(relation, Parent):
 					del self.parents[relation.get_type()]
-					if randint(1, 2) == 1 and randint(1, 100) <= relation.generosity:
+					if randint(1, 100) <= 70 and randint(1, 100) <= relation.generosity:
 						inheritance = round_stochastic(randexpo(1, 20000))
 				elif isinstance(relation, Sibling):
 					happy_remove = randint(25, 40)
@@ -168,7 +169,7 @@ class Player(Person):
 				if inheritance > 0:
 					display_event(_("You inherited ${amount}").format(amount=inheritance))
 					self.money += inheritance
-					p.change_happiness(round_stochastic(1.5 * math.log10(inheritance)))
+					self.change_happiness(round_stochastic(1.5 * math.log10(inheritance)))
 		self.random_events()
 
 	def calc_grades(self, offset):
@@ -277,7 +278,7 @@ class Player(Person):
 				_("Your mother is taking to to the doctor's office to get vaccinated.")
 			)
 			print(_("How will you behave?"))
-			choices = [_("Cooperate"), _("Throw a tantrum"), _("Bite her")]
+			choices = [_("Try to stay calm"), _("Throw a tantrum"), _("Bite her")]
 			choice = choice_input(*choices)
 			clear_screen()
 			if choice == 1:
