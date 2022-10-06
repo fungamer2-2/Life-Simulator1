@@ -25,7 +25,6 @@ from src.people.classes.sibling import Sibling
 
 def main_menu(player):
 	print()
-	print(_("Age {age}").format(player.age))
 	print(_("Your name") + f": {player.name}")
 	print(_("Gender") + f": {player.get_gender_str()}")
 	print(_("Money") + f": ${player.money:,}")
