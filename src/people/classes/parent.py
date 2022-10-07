@@ -24,6 +24,7 @@ class Parent(Relationship):
 			randint(90, 100),
 		)
 		self.generosity = randint(0, 100)
+		self.money = randint(0, 50) + randint(0, 50)
 
 	def name_accusative(self):
 		return self.get_gender_word(_("father"), _("mother"))

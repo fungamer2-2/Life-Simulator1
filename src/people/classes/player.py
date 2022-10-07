@@ -63,14 +63,7 @@ class Player(Person):
 				self.parents["Father"].generosity -= randint(0, abs(diff)//2)
 
 		self.relations = [self.parents["Mother"], self.parents["Father"]]
-		if randint(1, 5) < 5:  # 80% chance of having a sibling
-			whichlast = random.choice((last1, last2))
-			theirsmarts = round_stochastic((randint(0, 100) + self.smarts) / 2)
-			theirlooks = round_stochastic((randint(0, 100) + self.looks) / 2)
-			sibling = Sibling(
-				whichlast, randint(2, 10), Gender.random(), theirsmarts, theirlooks
-			)
-			self.relations.append(sibling)
+		
 		self.karma = randint(0, 25) + randint(0, 25) + randint(0, 25) + randint(0, 25)
 		self.total_happiness = 0
 		self.meditated = False
@@ -160,8 +153,10 @@ class Player(Person):
 				happy_remove = randint(40, 55)
 				if isinstance(relation, Parent):
 					del self.parents[relation.get_type()]
-					if randint(1, 100) <= 70 and randint(1, 100) <= relation.generosity:
-						inheritance = round_stochastic(randexpo(1, 20000))
+					if randint(1, 100) <= 70 	and randint(1, 100) <= relation.generosity:
+						avg = 100000 * (relation.money/100)**2
+						lo = max(avg*relation.generosity*0.5, 1)
+						inheritance = round_stochastic(randexpo(lo, avg))
 				elif isinstance(relation, Sibling):
 					happy_remove = randint(25, 40)
 				self.change_happiness(-happy_remove)

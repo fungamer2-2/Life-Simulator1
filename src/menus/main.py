@@ -256,11 +256,11 @@ def main_menu(player):
 			if not player.meditated:  # You can only get the bonus once per year
 				player.change_health(randint(2, 4))
 				player.change_happiness(randint(3, 6))
-				player.change_karma(randint(0, 3))
+				player.change_karma(randint(1, 3))
 				if player.times_meditated == 0 or randint(1, 20) == 1: #Your first meditation is guaranteed to cause a deeper awareness
 					player.change_happiness(2)
 					print(_("You have achieved a deeper awareness of yourself."))
-					print(_("Karma") + ": " + draw_bar(player.karma, 100, 25))
+					display_bar(_("Karma"), player.karma)
 				player.meditated = True
 				player.times_meditated += 1
 		elif choice == _("Library"):

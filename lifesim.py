@@ -17,6 +17,7 @@ while True:
 	clear_screen()
 	try:
 		player = start_menu()
+		print(_("Age {age}").format(age=player.age))
 		while True:
 			main_menu(player)
 			player.save_game()

@@ -1,8 +1,12 @@
 from src.lifesim_lib.lifesim_lib import choice_input, Gender
 from src.people.classes.player import Player
+from src.people.classes.sibling import Sibling
 from src.lifesim_lib.translation import _
 from src.lifesim_lib.const import SAVE_PATH
 import os
+import random
+from random import randint
+from src.lifesim_lib.lifesim_lib import round_stochastic
 
 def start_menu():
 	if os.path.exists(SAVE_PATH):
@@ -27,5 +31,16 @@ def start_menu():
 		print()
 		player = Player(first, last, Gender.Male if choice == 1 else Gender.Female)
 	else:
-		 player = Player()
+		player = Player()
+	mother = player.parents["Mother"]
+	father = player.parents["Father"]
+	print(_("Your mother is {name}, age {age}.").format(name=mother.name, age=mother.age))
+	print(_("Your father is {name}, age {age}.").format(name=father.name, age=father.age))
+	if randint(1, 5) < 5:  # 80% chance of having a sibling
+		whichlast = random.choice((player.parents["Mother"].lastname, player.parents["Father"].lastname))
+		theirsmarts = round_stochastic((randint(0, 100) + player.smarts) / 2)
+		theirlooks = round_stochastic((randint(0, 100) + player.looks) / 2)
+		sibling = Sibling(whichlast, randint(2, 10), Gender.random(), theirsmarts, theirlooks)
+		player.relations.append(sibling)
+		print(_("You have a {siblingtype} named {name}, age {age}.").format(siblingtype=sibling.get_translated_type().lower(), name=sibling.name, age=sibling.age))
 	return player
