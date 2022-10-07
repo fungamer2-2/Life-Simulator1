@@ -152,11 +152,11 @@ class Player(Person):
 				inheritance = 0
 				happy_remove = randint(40, 55)
 				if isinstance(relation, Parent):
-					del self.parents[relation.get_type()]
-					if randint(1, 100) <= 70 	and randint(1, 100) <= relation.generosity:
+					if randint(1, 100) <= 70 and randint(1, 100) <= relation.generosity:
 						avg = 100000 * (relation.money/100)**2
-						lo = max(avg*relation.generosity*0.5, 1)
+						lo = max(avg*relation.generosity/200, 1)
 						inheritance = round_stochastic(randexpo(lo, avg))
+					del self.parents[relation.get_type()]
 				elif isinstance(relation, Sibling):
 					happy_remove = randint(25, 40)
 				self.change_happiness(-happy_remove)
