@@ -14,7 +14,7 @@ Below you will find the process and workflow used to review and merge your chang
 - Fork this Repository. This will create a Local Copy of this Repository on your Github Profile. Keep a reference to the original project in `upstream` remote.
 ```
 $ git clone https://github.com/<your-username>/<project-name>
-$ cd Webpage-Maker
+$ cd <project-name>
 $ git remote add upstream
 ```
 
