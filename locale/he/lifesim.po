@@ -1,0 +1,576 @@
+# HEBREW TRANSLATION
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR tomgefen22@gmail.com, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2022-10-01 20:21-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: src/lifesim_lib/lifesim_lib.py:42 src/lifesim_lib/lifesim_lib.py:47
+#: src/lifesim_lib/lifesim_lib.py:57 src/lifesim_lib/lifesim_lib.py:62
+msgid "Invalid input; try again."
+msgstr "קלט לא חוקי; נסה שוב."
+#: src/lifesim_lib/lifesim_lib.py:74 src/people/classes/player.py:275
+msgid "No"
+msgstr "לא"
+
+#: src/lifesim_lib/lifesim_lib.py:74 src/people/classes/player.py:275
+msgid "Yes"
+msgstr "כן"
+
+#: src/lifesim_lib/lifesim_lib.py:83
+msgid "Press Enter to continue..."
+msgstr "לחץ אנטר בכדי להמשיך..."
+
+#: src/menus/main.py:29
+msgid "Your name"
+msgstr "השם שלך"
+
+#: src/menus/main.py:30 src/menus/main.py:346
+msgid "Gender"
+msgstr "מגדר"
+
+#: src/menus/main.py:31
+msgid "Money"
+msgstr "כסף"
+
+#: src/menus/main.py:34 src/menus/main.py:41
+msgid "Age +1"
+msgstr "גיל + 1"
+
+#: src/menus/main.py:34 src/menus/main.py:44
+msgid "Relationships"
+msgstr "יחסים"
+
+#: src/menus/main.py:34 src/menus/main.py:212
+msgid "Activities"
+msgstr "פעילויות"
+
+#: src/menus/main.py:36 src/menus/main.py:267
+msgid "School"
+msgstr "בית ספר"
+
+#: src/menus/main.py:38 src/menus/main.py:295
+msgid "Debug Menu"
+msgstr "תפריט ניפוי באגים"
+
+#: src/menus/main.py:46
+msgid "Relationships: "
+msgstr "יחסים: "
+
+#: src/menus/main.py:49 src/menus/main.py:70 src/menus/main.py:215
+#: src/menus/main.py:271 src/menus/main.py:296 src/menus/main.py:307
+#: src/menus/main.py:348
+msgid "Back"
+msgstr "אחורה"
+
+#: src/menus/main.py:56
+msgid "Name"
+msgstr "שם"
+
+#: src/menus/main.py:61
+msgid "Age"
+msgstr "גיל"
+
+#: src/menus/main.py:62
+msgid "Relationship"
+msgstr "יחסים"
+
+#: src/menus/main.py:64
+msgid "Generosity"
+msgstr "נדיבות"
+
+#: src/menus/main.py:66 src/menus/main.py:303 src/people/classes/player.py:187
+msgid "Smarts"
+msgstr "חוכמה"
+
+#: src/menus/main.py:67 src/menus/main.py:304 src/people/classes/player.py:188
+msgid "Looks"
+msgstr "מראה"
+
+#: src/menus/main.py:68
+msgid "Petulance"
+msgstr "רגזנות"
+
+#: src/menus/main.py:73 src/menus/main.py:80
+msgid "Spend time"
+msgstr "לבלות זמן"
+
+#: src/menus/main.py:74 src/menus/main.py:105
+msgid "Have a conversation"
+msgstr "לקיים שיחה"
+
+#: src/menus/main.py:76 src/menus/main.py:162
+msgid "Compliment"
+msgstr "מחמאה"
+
+#: src/menus/main.py:77 src/menus/main.py:192
+msgid "Insult"
+msgstr "העלבה"
+
+#: src/menus/main.py:82
+msgid "Your {relation} refused to see you."
+msgstr ".ה{relation} שלך לא רוצה לראות אותך"
+
+#: src/menus/main.py:86
+msgid "You spent time with your {relation}."
+msgstr "אתה מבלה זמן עם ה {relation} שלך."
+
+#: src/menus/main.py:93
+msgid "Your Enjoyment"
+msgstr "להנאתך"
+
+#: src/menus/main.py:95
+msgid "{his_her} Enjoyment"
+msgstr "{his_her} ההנאה שלהם"
+
+#: src/menus/main.py:108
+msgid "Your {relation} isn't interested in having a conversation with you."
+msgstr "Tu {relation} no esta interesada en tener una conversacion contigo."
+
+#: src/menus/main.py:123
+msgid "You had a conversation with your {relation}."
+msgstr "Tuviste una conversacion con tu {relation}"
+
+#: src/menus/main.py:127
+msgid "Agreement"
+msgstr "Acuerdo"
+
+#: src/menus/main.py:135
+msgid "You and your {relation} got into an argument. What will you do?"
+msgstr "Tu y tu {relation} tuvieron una discusion. Que vas a hacer?"
+
+#: src/menus/main.py:140
+msgid "Apologize"
+msgstr "Disculparse"
+
+#: src/menus/main.py:141
+msgid "Agree to disagree"
+msgstr "Acordar estar en desacuerdo"
+
+#: src/menus/main.py:142
+msgid "Insult {him_her}"
+msgstr "Insultarle"
+
+#: src/menus/main.py:147
+msgid "You apologized to your {relation}"
+msgstr "Te disculpaste con tu {relation}"
+
+#: src/menus/main.py:153
+msgid "You agreed to disagree"
+msgstr "Acordaron estar en desacuerdo"
+
+#: src/menus/main.py:157
+msgid "You insulted your {relation}"
+msgstr "Insultaste a tu {relation}"
+
+#: src/menus/main.py:168
+msgid "You complimented your {relation}."
+msgstr "Le hiciste un cumpliado a tu {relation}"
+
+#: src/menus/main.py:173
+msgid "{his_her} Appreciation"
+msgstr "{his_her} Apreciacion"
+
+#: src/menus/main.py:186
+msgid "Your {relation} complimented you back!"
+msgstr "¡Tu {relation} te hizo un cumplido de vuelta!"
+
+#: src/menus/main.py:195
+msgid "Are you sure you want to insult your {relation}?"
+msgstr "¿Estas seguro que desas insultar a tu {relation}?"
+
+#: src/menus/main.py:199
+msgid "You insulted your {rel}."
+msgstr "Insultaste a tu {rel}."
+
+#: src/menus/main.py:208
+msgid "Your {rel} insulted you back."
+msgstr "Tu {rel} te ha insultado de vuelta."
+
+#: src/menus/main.py:213
+msgid "Activities Menu"
+msgstr "Menu de Actividades"
+
+#: src/menus/main.py:217 src/menus/main.py:223
+msgid "Meditate"
+msgstr "Meditar"
+
+#: src/menus/main.py:218 src/menus/main.py:234
+msgid "Library"
+msgstr "Libreria"
+
+#: src/menus/main.py:220 src/menus/main.py:240
+msgid "Gym"
+msgstr "Gimnasio"
+
+#: src/menus/main.py:224
+msgid "You practiced meditation."
+msgstr "Practicaste meditacion."
+
+#: src/menus/main.py:231
+msgid "You have achieved a deeper awareness of yourself."
+msgstr "Has alcanzado un entendimiento mas profundo de ti mismo."
+
+#: src/menus/main.py:232 src/menus/main.py:305
+#: src/people/classes/player.py:168
+msgid "Karma"
+msgstr "Karma"
+
+#: src/menus/main.py:235
+msgid "You went to the library."
+msgstr "Has ido a la libreria."
+
+#: src/menus/main.py:242
+msgid "Your health is too weak to visit the gym."
+msgstr "Tu salud es muy debil para ir al gimnasio."
+
+#: src/menus/main.py:256
+msgid "You worked out at the gym."
+msgstr "Has entrenado en el gimnasio."
+
+#: src/menus/main.py:257
+msgid "Workout"
+msgstr "Entrenar"
+
+#: src/menus/main.py:268
+msgid "School Menu"
+msgstr "Menu Escolar"
+
+#: src/menus/main.py:270
+msgid "Grades"
+msgstr "Grados"
+
+#: src/menus/main.py:271
+msgid "Drop out"
+msgstr "Abandonar"
+
+#: src/menus/main.py:271
+msgid "Study harder"
+msgstr "Estudiar mas duro"
+
+#: src/menus/main.py:274
+msgid "You began studying harder"
+msgstr "Has empezado a estudiar mas duro"
+
+#: src/menus/main.py:289
+msgid "You dropped out of school."
+msgstr "Has abandonado la escuela."
+
+#: src/menus/main.py:294
+msgid "Your parents won't let you drop out of school."
+msgstr "Tus padres no te permiten dejar la escuela."
+
+#: src/menus/main.py:296
+msgid "Identity"
+msgstr "Identidad"
+
+#: src/menus/main.py:296
+msgid "Stats"
+msgstr "Estadisticas"
+
+#: src/menus/main.py:300
+msgid "Your stats"
+msgstr "Tus estadisticas"
+
+#: src/menus/main.py:301 src/people/classes/player.py:185
+msgid "Happiness"
+msgstr "Felicidad"
+
+#: src/menus/main.py:302 src/people/classes/player.py:186
+msgid "Health"
+msgstr "Salud"
+
+#: src/menus/main.py:308
+msgid "Modify Happiness"
+msgstr "Modificar Felicidad"
+
+#: src/menus/main.py:309
+msgid "Modify Health"
+msgstr "Modificar Salud"
+
+#: src/menus/main.py:310
+msgid "Modify Smarts"
+msgstr "Modificar Inteligencia"
+
+#: src/menus/main.py:311
+msgid "Modify Looks"
+msgstr "Modificar Apariencia"
+
+#: src/menus/main.py:312
+msgid "Modify Karma"
+msgstr "Modificar Karma"
+
+#: src/menus/main.py:317
+msgid "What would you like to set Happiness to? (0-100)"
+msgstr "¿A cuanto te gustaria ajustar la Felicidad? (0-100)"
+
+#: src/menus/main.py:322
+msgid "What would you like to set Health to? (0-100)"
+msgstr "¿A cuanto te gustaria ajustar la Salud? (0-100)"
+
+#: src/menus/main.py:327
+msgid "What would you like to set Smarts to? (0-100)"
+msgstr "¿A cuanto te gustaria ajustar la Inteligencia? (0-100)"
+
+#: src/menus/main.py:332
+msgid "What would you like to set Looks to? (0-100)"
+msgstr "¿A cuanto te gustaria ajustar la Apariencia? (0-100)"
+
+#: src/menus/main.py:337
+msgid "What would you like to set Karma to? (0-100)"
+msgstr "¿A cuanto te gustaria ajustar el Karma? (0-100)"
+
+#: src/menus/main.py:344
+msgid "First name"
+msgstr "Nombre"
+
+#: src/menus/main.py:345
+msgid "Last name"
+msgstr "Apellido"
+
+#: src/menus/main.py:349
+msgid "Change first name"
+msgstr "Cambiar nombre"
+
+#: src/menus/main.py:350
+msgid "Change last name"
+msgstr "Cambiar apellido"
+
+#: src/menus/main.py:351
+msgid "Change gender"
+msgstr "Cambiar genero"
+
+#: src/menus/main.py:356
+msgid "Enter first name: "
+msgstr "Ingresar nombre: "
+
+#: src/menus/main.py:360
+msgid "Enter last name: "
+msgstr "Ingresar apellido: "
+
+#: src/menus/start.py:7
+msgid "Custom Life"
+msgstr "Personalizar Vida"
+
+#: src/menus/start.py:7
+msgid "Random Life"
+msgstr "Vida Aleatoria"
+
+#: src/menus/start.py:13
+msgid "Enter your first name: "
+msgstr "Ingresar tu nombre: "
+
+#: src/menus/start.py:15
+msgid "Enter your last name: "
+msgstr "Ingresar tu apellido: "
+
+#: src/menus/start.py:17
+msgid "Choose your gender:"
+msgstr "Elige tu genero:"
+
+#: src/menus/start.py:18 src/people/classes/player.py:162
+msgid "Female"
+msgstr "Mujer"
+
+#: src/menus/start.py:18 src/people/classes/player.py:162
+msgid "Male"
+msgstr "Hombre"
+
+#: src/people/classes/parent.py:30
+msgid "father"
+msgstr "padre"
+
+#: src/people/classes/parent.py:30
+msgid "mother"
+msgstr "madre"
+
+#: src/people/classes/parent.py:36
+msgid "Father"
+msgstr "Padre"
+
+#: src/people/classes/parent.py:36
+msgid "Mother"
+msgstr "Madre"
+
+#: src/people/classes/player.py:119
+msgid "Age {age}"
+msgstr "Edad {age}"
+
+#: src/people/classes/player.py:121
+msgid "You died of old age."
+msgstr "Has muerto en la vejez."
+
+#: src/people/classes/player.py:136
+msgid "You are suffering from depression."
+msgstr "Estas sufriendo de depresion."
+
+#: src/people/classes/player.py:144
+msgid "Your {relative} died at the age of {age} due to old age."
+msgstr "Tu {relative} ha fallecido a la edad de {age} por mayoria de edad."
+
+#: src/people/classes/player.py:168
+msgid "Lifetime Happiness"
+msgstr "Felicidad de por vida."
+
+#: src/people/classes/player.py:197
+msgid "You graduated from university."
+msgstr "Te has graduado de la universidad."
+
+#: src/people/classes/player.py:202
+msgid "You now have to start paying back your student loan"
+msgstr "Ahora debes empezar a pagar tu deuda estudiantil"
+
+#: src/people/classes/player.py:206
+msgid "You were expelled from university after earning bad grades."
+msgstr "Te han expulsado de la universidad luego de obtener bajas calificaciones."
+
+#: src/people/classes/player.py:215
+msgid "You've fully paid off your student loan"
+msgstr "Has terminado de pagar tu deuda estudiantil"
+
+#: src/people/classes/player.py:218
+msgid "You are no longer suffering from depression"
+msgstr "Ya no sufres de depresion"
+
+#: src/people/classes/player.py:227
+msgid "Your mother is taking you to the doctor's office to get vaccinated."
+msgstr "Tu madre te lleva al doctor para vacunarte."
+
+#: src/people/classes/player.py:229
+msgid "How will you behave?"
+msgstr "¿Como te comportaras?"
+
+#: src/people/classes/player.py:230
+msgid "Bite her"
+msgstr "Morderla"
+
+#: src/people/classes/player.py:230
+msgid "Cooperate"
+msgstr "Cooperar"
+
+#: src/people/classes/player.py:230
+msgid "Throw a tantrum"
+msgstr "Hacer un berrinche"
+
+#: src/people/classes/player.py:234
+msgid "You remained calm"
+msgstr "Permaneciste calmado"
+
+#: src/people/classes/player.py:238
+msgid "You threw a tantrum"
+msgstr "Hiciste un berrinche"
+
+#: src/people/classes/player.py:242
+msgid "You bit your mother"
+msgstr "Mordiste a tu madre"
+
+#: src/people/classes/player.py:255
+msgid "You are starting elementary school"
+msgstr "Empiezas la primaria"
+
+#: src/people/classes/player.py:259
+msgid "You are starting middle school"
+msgstr "Empiezas el pre-secundario"
+
+#: src/people/classes/player.py:263
+msgid "You are starting high school"
+msgstr "Empiezas la secundaria"
+
+#: src/people/classes/player.py:268
+msgid "You graduated from high school."
+msgstr "Te has graduado de la secundaria."
+
+#: src/people/classes/player.py:274
+msgid "Would you like to apply to university?"
+msgstr "¿Te gustaria aplicar a la universidad?"
+
+#: src/people/classes/player.py:279
+msgid "Your application to university was accepted!"
+msgstr "¡Tu aplicacion a la universidad fue aceptada!"
+
+#: src/people/classes/player.py:281
+msgid "Scholarship"
+msgstr "Becas"
+
+#: src/people/classes/player.py:282
+msgid "Student Loan"
+msgstr "Prestamo Estudiantil"
+
+#: src/people/classes/player.py:283
+msgid "Ask parents to pay"
+msgstr "Pedir a tus padres que paguen"
+
+#: src/people/classes/player.py:287
+msgid "How would you like to pay for your college tuition?"
+msgstr "¿Como te gustaria pagar por tus estudios universitarios?"
+
+#: src/people/classes/player.py:293
+msgid "Your scholarship application has been awarded!"
+msgstr "¡Te han otorgado una beca!"
+
+#: src/people/classes/player.py:299
+msgid "Your scholarship application was rejected."
+msgstr "Tu aplicacion a beca ha sido rechazada."
+
+#: src/people/classes/player.py:309
+msgid "Your parents agreed to pay for your university tuition!"
+msgstr "¡Tus padres aceptan pagar por tus estudios universitarios!"
+
+#: src/people/classes/player.py:317
+msgid "Your parents refused to pay for your university tuition."
+msgstr "Tus padres se rehusan a pagar por tus estudios universitarios."
+
+#: src/people/classes/player.py:325
+msgid "You took out a student loan to pay for your university tuition."
+msgstr "Tomas un prestamo estudiantil para pagar por tus estudios universitarios."
+
+#: src/people/classes/player.py:331
+msgid "You are now enrolled in university."
+msgstr "Estas inscripto en la universidad."
+
+#: src/people/classes/player.py:335
+msgid "Your application to university was rejected."
+msgstr "Tu aplicacion a la universidad ha sido rechazada."
+
+#: src/people/classes/relationship.py:40
+msgid "his"
+msgstr "su"
+
+#: src/people/classes/relationship.py:40 src/people/classes/relationship.py:43
+msgid "her"
+msgstr "su"
+
+#: src/people/classes/relationship.py:43
+msgid "him"
+msgstr "el"
+
+#: src/people/classes/relationship.py:49
+msgid "relationship"
+msgstr "relacion"
+
+#: src/people/classes/sibling.py:28
+msgid "brother"
+msgstr "hermano"
+
+#: src/people/classes/sibling.py:28
+msgid "sister"
+msgstr "hermana"
+
+#: src/people/classes/sibling.py:34
+msgid "Brother"
+msgstr "Hermano"
+
+#: src/people/classes/sibling.py:34
+msgid "Sister"
+msgstr "Hermana"
+

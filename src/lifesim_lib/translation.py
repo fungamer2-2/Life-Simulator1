@@ -22,7 +22,8 @@ lang_map = {
 	"es": "Español",
 	"ko": "한국인",
 	"ja": "日本",
-	"ro": "Română"
+	"ro": "Română",
+	"he": "עברית"
 }
 
 names = []
