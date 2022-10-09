@@ -61,6 +61,7 @@ def main_menu(player):
 			bars = [(_("Relationship"), relation.relationship)]
 			if isinstance(relation, Parent):
 				bars.append((_("Generosity"), relation.generosity))
+				bars.append((_("Money"), relation.money))
 			elif isinstance(relation, Sibling):
 				bars.append((_("Smarts"), relation.smarts))
 				bars.append((_("Looks"), relation.looks))
