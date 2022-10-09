@@ -3,19 +3,7 @@ from random import randint
 
 from src.lifesim_lib.const import *
 from src.lifesim_lib.translation import _
-from src.lifesim_lib.lifesim_lib import (
-	clamp,
-	clear_screen,
-	choice_input,
-	display_event,
-	press_enter,
-	Gender,
-	print_align_bars,
-	random_name,
-	round_stochastic,
-	randexpo,
-	PlayerDied
-)
+from src.lifesim_lib.lifesim_lib import *
 from src.people.classes.parent import Parent
 from src.people.classes.person import Person
 from src.people.classes.sibling import Sibling
@@ -78,6 +66,9 @@ class Player(Person):
 		self.dropped_out = False
 		self.teen_looks_inc = 0
 		self.times_meditated = 0
+		self.salary = 0
+		self.years_worked = 0
+		self.has_job = False
 		
 	def save_game(self):
 		import pickle
@@ -217,11 +208,17 @@ class Player(Person):
 			(_("Looks"), self.looks, looks_symbol),
 			show_percent=True,
 		)
-
+		
+	def get_job(self, salary):
+		if not self.has_job:
+			self.has_job = True
+			self.salary = salary
+			self.years_worked = 0
+	
 	def random_events(self):
-		if self.age >= 5 and randint(1, 6000) == 1:
+		if self.age >= 5 and randint(1, 5000) == 1:
 			print(_("You were struck by lightning!"))
-			good_or_bad = randint(1, 2) == 1
+			good_or_bad = randint(1, 2) == 1 #TODO: Maybe I should make the chance for it to be good or bad based on your karma
 			if good_or_bad:
 				self.change_happiness(100)
 				self.change_health(100)
@@ -234,8 +231,13 @@ class Player(Person):
 				self.change_looks(-100)
 			self.display_stats()
 			press_enter()
-			if not good_or_bad and randint(1, 6) == 1:
+			if not good_or_bad and randint(1, 5) == 1:
 				self.die(_("You died after being struck by lightning."))
+		if self.has_job:
+			tax = calculate_tax(self.salary)
+			income = self.salary - tax
+			income *= random.uniform(0.5, 1) #Expenses
+			self.money += round_stochastic(income)
 		if self.uv_years > 0:
 			self.uv_years -= 1
 			if self.uv_years == 0:

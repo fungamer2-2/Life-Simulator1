@@ -18,6 +18,22 @@ def randexpo(lo, avg):
 	assert lo < avg, "lo must be less than avg"
 	return lo + random.expovariate(1/(avg - lo))
 
+def calculate_tax(salary):
+	tax = 0
+	prev = 0
+	brackets = SALARY_TAX_BRACKETS
+	for i in range(len(brackets) - 1):
+		bound, perc = brackets[i]
+		if salary <= bound:
+			tax += (salary - prev)*perc
+			break
+		else:
+			tax += (bound - prev)*perc
+		prev = bound
+	else:
+		tax += (salary - prev)*brackets[-1]
+	return round(tax)
+
 def round_stochastic(value):
 	"""Randomly rounds a number up or down, based on its decimal part
 	For example, 5.3 has a 70% chance to be rounded to 5, 30% chance to be rounded to 6

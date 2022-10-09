@@ -3,36 +3,26 @@ from random import randint
 
 from src.lifesim_lib.const import *
 from src.lifesim_lib.translation import _
-from src.lifesim_lib.lifesim_lib import (
-	choice_input,
-	clamp,
-	clear_screen,
-	display_bar,
-	display_data,
-	display_event,
-	draw_bar,
-	Gender,
-	int_input_range,
-	int_input_range_optional,
-	press_enter,
-	print_align_bars,
-	round_stochastic,
-	yes_no,
-)
+from src.lifesim_lib.lifesim_lib import *
 from src.people.classes.parent import Parent
 from src.people.classes.person import Person
 from src.people.classes.sibling import Sibling
 
 def main_menu(player):
 	print()
-	print(_("Your name") + f": {player.name}")
-	print(_("Gender") + f": {player.get_gender_str()}")
+	display_data(_("Your name"), player.name)
+	display_data(_("Gender"), player.get_gender_str())
 	print(_("Money") + f": ${player.money:,}")
+	if player.salary > 0:
+		print(_("Salary") + f": ${player.salary:,}")
+	
 	player.display_stats()
 	print()
 	choices = [_("Age +1"), _("Relationships"), _("Activities")]
 	if player.is_in_school():
 		choices.append(_("School"))
+	elif player.age >= 18 and not player.has_job:
+		choices.append(_("Find a Job"))
 	if DEBUG:
 		choices.append(_("Debug Menu"))
 	choice = choice_input(*choices, return_text=True)
@@ -400,3 +390,22 @@ def main_menu(player):
 						player.gender = Gender.Female
 					else:
 						player.gender = Gender.Male
+	if choice == _("Find a Job"):
+		salary = round_stochastic(randexpo(30000, 55000)) #TODO: Add a selection of different types of jobs
+		if yes_no(_("You found a job with a salary of ${salary:,}. Would you like to apply?").format(salary=salary)):
+			m = 100 + round_stochastic((salary-30000)/600)
+			mod = 50 - player.smarts #Mod is inverted because we want to roll 100 OR LOWER to get the job
+			roll = randint(1, m)
+			if mod > 0:
+				roll += randint(0, mod)
+			elif mod < 0:
+				roll -= randint(0, abs(mod))
+			if roll <= 100:
+				print(_("You got the job!"))
+				player.change_happiness(4)
+				player.get_job(salary)
+			else:
+				print(_("You didn't get an interview."))
+				player.change_happiness(-randint(1, 4))
+		else:
+			clear_screen()
