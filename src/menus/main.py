@@ -210,6 +210,8 @@ def main_menu(player):
 			choices.append(_("Meditate"))
 			choices.append(_("Library"))
 			choices.append(_("Gym"))
+		if player.age >= 18:
+			choices.append(_("Lottery"))
 		choice = choice_input(*choices, return_text=True)
 		clear_screen()
 		if choice == _("Play with your toys"):
@@ -289,6 +291,69 @@ def main_menu(player):
 						)
 					player.worked_out = True
 				print()
+		elif choice == _("Lottery"):
+			print(_("Play the lottery today!"))
+			print(_("Ticket cost: $4 each"))
+			print(_("Lottery jackpot: ${jackpot}").format(jackpot=player.lottery_jackpot))
+			choice = choice_input(_("Buy a ticket"), _("Buy 10 tickets"), _("Back"))
+			ticket_num = 0
+			if choice == 1:
+				ticket_num = 1
+			elif choice == 2:
+				ticket_num = 10
+			cost = ticket_num * 4
+			if ticket_num > 0:
+				if player.money < cost:
+					print(_("You don't have enough money"))
+				else:
+					player.money -= cost
+					print(_("Guess the 4 winning numbers between 1 and 20. Each number in the line must be separated by a space."))
+					if ticket_num > 1:
+						print(_("The numbers within each line must be unique."))
+					else:
+						print(_("The numbers must be unique."))
+					guessed = []
+					for i in range(ticket_num):
+						valid = False
+						while not valid:
+							valid = True
+							if ticket_num > 1:
+								msg = _("Guess #{num}: ").format(num=i+1)
+							else:
+								msg = _("Guess: ")
+							guess = input(msg)
+							nums = guess.split()
+							try:
+								nums = list(map(int, nums))
+							except ValueError:
+								print(_("The values must all be integers."))
+								valid = False
+								continue
+							if len(nums) != 4:
+								print(_("You must enter exactly 4 numbers"))
+								valid = False
+							elif not all(1 <= val <= 20 for val in nums):
+								print(_("All values must be between 1 and 20"))
+								valid = False
+							elif len(nums) != len(set(nums)):
+								print(_("All values must be unique."))
+								valid = False
+							else:
+								guessed.append(nums)
+					winning = random.sample(range(1, 21), 4)
+					print(_("The winning numbers are {nums}").format(nums=", ".join(map(str, winning))))	
+					won = False
+					for guess in guessed:
+						if set(guess) == set(winning):
+							won = True
+							break
+					if won:
+						print(_("YOU WON THE ${amount} LOTTERY JACKPOT!!!").format(amount=player.lottery_jackpot))
+						player.change_happiness(100)
+						player.money += player.lottery_jackpot
+						player.change_jackpot()
+					else:
+						print(_("You did not win the ${amount} lottery jackpot.").format(amount=player.lottery_jackpot))
 	if choice == _("School"):
 		print(_("School Menu"))
 		print()

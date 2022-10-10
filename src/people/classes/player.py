@@ -69,6 +69,10 @@ class Player(Person):
 		self.salary = 0
 		self.years_worked = 0
 		self.has_job = False
+		self.lottery_jackpot = 0
+		
+	def change_jackpot(self):
+		self.lottery_jackpot = round(randexpo(100000, 1000000))
 		
 	def save_game(self):
 		import pickle
@@ -115,6 +119,7 @@ class Player(Person):
 		if self.death_check():
 			self.die(_("You died of old age."))
 			return
+		self.change_jackpot()
 		if self.age == 13:
 			val = 0
 			if randint(1, 4) == 1:
@@ -236,7 +241,7 @@ class Player(Person):
 		if self.has_job:
 			tax = calculate_tax(self.salary)
 			income = self.salary - tax
-			income *= random.uniform(0.5, 1) #Expenses
+			income *= random.uniform(0.4, 0.8) #Expenses
 			self.money += round_stochastic(income)
 		if self.uv_years > 0:
 			self.uv_years -= 1
