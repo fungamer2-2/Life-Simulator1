@@ -488,9 +488,17 @@ def main_menu(player):
 		print(_("Your job"))
 		print()
 		display_bar(_("Stress"), player.stress)
-		choice = choice_input(_("Back"), _("Quit Job"))
+		can_retire = player.years_worked >= 10 and player.age >= 65
+		choice = choice_input(_("Back"), _("Retire") if can_retire else _("Quit Job"))
 		if choice == 2:
-			if yes_no(_("Are you sure you want to quit your job?")):
+			if can_retire:
+				pension = round(player.salary * min(player.years_worked, 35) * 0.02)
+				if yes_no(_("Do you want to retire? You will receive a yearly pension of ${pension}").format(pension=pension)):
+					player.lose_job()
+					player.salary = pension
+					player.change_happiness(randint(25, 50))
+					print(_("You retired and are now receiving pension of ${pension}.").format(pension=pension))
+			elif yes_no(_("Are you sure ou want to quit your job?")):
 				player.lose_job()
 				print(_("You quit your job."))
-		#TODO: Add ability to quit job or ask for a raise
+		#TODO: Add ability to ask for a raise

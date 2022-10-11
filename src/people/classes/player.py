@@ -270,6 +270,8 @@ class Player(Person):
 			if not good_or_bad and randint(1, 5) == 1:
 				self.die(_("You died after being struck by lightning."))
 		if self.has_job:
+			self.years_worked += 1
+		if self.salary > 0:
 			tax = calculate_tax(self.salary)
 			income = self.salary - tax
 			income *= random.uniform(0.4, 0.8) #Expenses
