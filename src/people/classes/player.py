@@ -301,7 +301,7 @@ class Player(Person):
 				self.change_health(-randint(1, 4))
 		if self.age == 2 and randint(1, 2) == 1:
 			print(
-				_("Your mother is taking to to the doctor's office to get vaccinated.")
+				_("Your mother is taking you to the doctor's office to get vaccinated.")
 			)
 			print(_("How will you behave?"))
 			choices = [_("Try to stay calm"), _("Throw a tantrum"), _("Bite her")]
