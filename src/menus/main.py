@@ -498,7 +498,7 @@ def main_menu(player):
 					player.salary = pension
 					player.change_happiness(randint(25, 50))
 					print(_("You retired and are now receiving pension of ${pension}.").format(pension=pension))
-			elif yes_no(_("Are you sure ou want to quit your job?")):
+			elif yes_no(_("Are you sure you want to quit your job?")):
 				player.lose_job()
 				print(_("You quit your job."))
 		#TODO: Add ability to ask for a raise
