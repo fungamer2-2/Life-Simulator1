@@ -70,6 +70,7 @@ class Player(Person):
 		self.years_worked = 0
 		self.has_job = False
 		self.lottery_jackpot = 0
+		self.stress = 0
 		
 	def change_jackpot(self):
 		self.lottery_jackpot = round(randexpo(100000, 1000000))
@@ -120,6 +121,14 @@ class Player(Person):
 			self.die(_("You died of old age."))
 			return
 		self.change_jackpot()
+		if self.has_job:
+			self.change_stress(randint(-5, 5))
+			base = 70 - self.happiness//2
+			diff = base - self.stress
+			if diff > 0:
+				self.change_stress(randint(1, round_stochastic(diff/4)+1))
+			elif diff < 0:
+				self.change_stress(-randint(1, round_stochastic(abs(diff)/7)+1))
 		if self.age == 13:
 			val = 0
 			if randint(1, 4) == 1:
@@ -162,6 +171,17 @@ class Player(Person):
 					self.money += inheritance
 					self.change_happiness(round_stochastic(1.5 * math.log10(inheritance)))
 		self.random_events()
+		
+	def get_job(self, salary):
+		if not self.has_job:
+			self.has_job = True
+			self.salary = salary
+			self.years_worked = 0
+			self.stress = 35
+			
+	def change_stress(self, amount):
+		if self.has_job:
+			self.stress = clamp(self.stress + amount, 0, 100)
 
 	def calc_grades(self, offset):
 		self.grades = clamp(round(10 * math.sqrt(self.smarts + offset)), 0, 100)
@@ -213,12 +233,6 @@ class Player(Person):
 			(_("Looks"), self.looks, looks_symbol),
 			show_percent=True,
 		)
-		
-	def get_job(self, salary):
-		if not self.has_job:
-			self.has_job = True
-			self.salary = salary
-			self.years_worked = 0
 	
 	def random_events(self):
 		if self.age >= 5 and randint(1, 5000) == 1:
@@ -341,7 +355,7 @@ class Player(Person):
 						choice = choice_input(*choices, return_text=True)
 						clear_screen()
 						if choice == SCHOLARSHIP:
-							if self.smarts >= randint(randint(75, 85), 95):
+							if self.smarts >= randint(randint(75, 85), 100):
 								display_event(
 									_("Your scholarship application has been awarded!")
 								)

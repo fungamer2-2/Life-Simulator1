@@ -21,8 +21,11 @@ def main_menu(player):
 	choices = [_("Age +1"), _("Relationships"), _("Activities")]
 	if player.is_in_school():
 		choices.append(_("School"))
-	elif player.age >= 18 and not player.has_job:
-		choices.append(_("Find a Job"))
+	elif player.age >= 18:
+		if player.has_job:
+			choices.append(_("Job Menu"))
+		else:
+			choices.append(_("Find a Job"))
 	if DEBUG:
 		choices.append(_("Debug Menu"))
 	choice = choice_input(*choices, return_text=True)
@@ -474,3 +477,8 @@ def main_menu(player):
 				player.change_happiness(-randint(1, 4))
 		else:
 			clear_screen()
+	elif choice == _("Job Menu"):
+		print(_("Your job"))
+		print()
+		display_bar(_("Stress"), player.stress)
+		#TODO: Add ability to quit job or ask for a raise

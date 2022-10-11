@@ -8,6 +8,7 @@ from src.lifesim_lib.lifesim_lib import PlayerDied, yes_no, clear_screen
 
 """
 TODO List:
+- Add plastic surgery
 - Add a way to date people
 - Add social media
 """
