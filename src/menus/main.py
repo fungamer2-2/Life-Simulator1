@@ -491,5 +491,6 @@ def main_menu(player):
 		choice = choice_input(_("Back"), _("Quit Job"))
 		if choice == 2:
 			if yes_no(_("Are you sure you want to quit your job?")):
-				pass
+				player.lose_job()
+				print(_("You quit your job."))
 		#TODO: Add ability to quit job or ask for a raise

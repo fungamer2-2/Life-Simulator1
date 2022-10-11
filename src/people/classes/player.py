@@ -189,6 +189,13 @@ class Player(Person):
 			self.years_worked = 0
 			self.stress = 35
 			
+	def lose_job(self):
+		if self.has_job:
+			self.has_job = False
+			self.salary = 0
+			self.years_worked = 0
+			self.stress = 0
+			
 	def change_stress(self, amount):
 		if self.has_job:
 			self.stress = clamp(self.stress + amount, 0, 100)
@@ -301,7 +308,7 @@ class Player(Person):
 				self.change_health(-randint(1, 4))
 		if self.age == 2 and randint(1, 2) == 1:
 			print(
-				_("Your mother is taking you to the doctor's office to get vaccinated.")
+				_("Your mother is taking to to the doctor's office to get vaccinated.")
 			)
 			print(_("How will you behave?"))
 			choices = [_("Try to stay calm"), _("Throw a tantrum"), _("Bite her")]
