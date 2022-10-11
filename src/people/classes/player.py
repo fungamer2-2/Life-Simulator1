@@ -103,6 +103,7 @@ class Player(Person):
 		self.did_arts_and_crafts = False
 
 	def age_up(self):
+		oldhappy = self.happiness
 		self.total_happiness += self.happiness
 		super().age_up()
 		self.reset_already_did()
@@ -123,12 +124,12 @@ class Player(Person):
 		self.change_jackpot()
 		if self.has_job:
 			self.change_stress(randint(-5, 5))
-			base = 70 - self.happiness//2
+			base = 70 - self.happiness*0.4
 			diff = base - self.stress
 			if diff > 0:
-				self.change_stress(randint(1, round_stochastic(diff/4)+1))
+				self.change_stress(randint(1, round_stochastic(diff/5)+1))
 			elif diff < 0:
-				self.change_stress(-randint(1, round_stochastic(abs(diff)/7)+1))
+				self.change_stress(-randint(1, round_stochastic(abs(diff)/8)+1))
 		if self.age == 13:
 			val = 0
 			if randint(1, 4) == 1:
@@ -171,6 +172,15 @@ class Player(Person):
 					self.money += inheritance
 					self.change_happiness(round_stochastic(1.5 * math.log10(inheritance)))
 		self.random_events()
+		if self.has_job:
+			happy_change = self.happiness - oldhappy #Large decreases in happiness can increase stress 
+			if happy_change > 0:
+				diff = max(happy_change - 5, 0)
+				diff /= 2
+			else:
+				diff = min(happy_change + 5, 0)
+			diff = -round_stochastic(diff / 3)
+			self.change_stress(diff)
 		
 	def get_job(self, salary):
 		if not self.has_job:

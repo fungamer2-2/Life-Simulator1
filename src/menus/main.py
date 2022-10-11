@@ -215,6 +215,7 @@ def main_menu(player):
 			choices.append(_("Gym"))
 		if player.age >= 18:
 			choices.append(_("Lottery"))
+		choices.append(_("Surrender"))
 		choice = choice_input(*choices, return_text=True)
 		clear_screen()
 		if choice == _("Play with your toys"):
@@ -251,10 +252,12 @@ def main_menu(player):
 			print(_("You practiced meditation."))
 			if not player.meditated:  # You can only get the bonus once per year
 				player.change_health(randint(2, 4))
-				player.change_happiness(randint(3, 6))
+				player.change_happiness(randint(3, 5))
 				player.change_karma(randint(1, 3))
+				player.change_stress(-randint(3, 8))
 				if player.times_meditated == 0 or randint(1, 20) == 1: #Your first meditation is guaranteed to cause a deeper awareness
 					player.change_happiness(2)
+					player.change_stress(-3)
 					print(_("You have achieved a deeper awareness of yourself."))
 					display_bar(_("Karma"), player.karma)
 				player.meditated = True
@@ -357,6 +360,10 @@ def main_menu(player):
 						player.change_jackpot()
 					else:
 						print(_("You did not win the ${amount} lottery jackpot.").format(amount=player.lottery_jackpot))
+		elif choice == _("Surrender"):
+			if yes_no(_("Are you sure you want to surrender this life?")):
+				if yes_no(_("This will kill your current character. Continue?")):
+					player.die(_("You surrendered."))
 	if choice == _("School"):
 		print(_("School Menu"))
 		print()
@@ -481,4 +488,8 @@ def main_menu(player):
 		print(_("Your job"))
 		print()
 		display_bar(_("Stress"), player.stress)
+		choice = choice_input(_("Back"), _("Quit Job"))
+		if choice == 2:
+			if yes_no(_("Are you sure you want to quit your job?")):
+				pass
 		#TODO: Add ability to quit job or ask for a raise
