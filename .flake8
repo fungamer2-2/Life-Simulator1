@@ -9,6 +9,7 @@ ignore =
     E741,
     F401,
     F403,
-    F405
+    F405,
+    W503
 per-file-ignores =
     src/people/classes/player.py: F841
