@@ -1,10 +1,10 @@
-name: Format Code
+name: Format Run
 
 on: [push, pull_request]
 
 jobs:
   formatter:
-    name: runner / black
+    name: black
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
