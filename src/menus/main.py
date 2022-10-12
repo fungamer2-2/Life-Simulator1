@@ -82,6 +82,8 @@ def main_menu(player):
 						)
 					)
 					enjoyment1 = max(randint(0, 70), randint(0, 70)) + randint(0, 30)
+					if "Cheerful" in player.traits:
+						enjoyment1 = max(enjoyment1, max(randint(0, 70), randint(0, 70)) + randint(0, 30))
 					enjoyment2 = round(random.triangular(0, 100, relation.relationship))
 					print_align_bars(
 						(_("Your Enjoyment"), enjoyment1),
@@ -95,6 +97,8 @@ def main_menu(player):
 					if not relation.spent_time:
 						player.change_happiness(round_stochastic(enjoyment1 / 12))
 						relation.change_relationship(round_stochastic(enjoyment2 / 12))
+						if Trait.CHEERFUL in player.traits:
+							player.change_happiness(3)
 						relation.spent_time = True
 			elif choice == _("Have a conversation"):
 				if relation.relationship < 25:
@@ -119,7 +123,7 @@ def main_menu(player):
 					)
 					display_bar(_("Agreement"), agreement)
 					if not relation.had_conversation:
-						player.change_happiness(4)
+						player.change_happiness(8 if Trait.CHEERFUL in player.traits else 4)
 						relation.change_relationship(round_stochastic(agreement / 12))
 						relation.had_conversation = True
 					if agreement < 15:
@@ -181,6 +185,8 @@ def main_menu(player):
 							)
 						)
 						player.change_happiness(randint(6, 10))
+						if Trait.CHEERFUL in player.traits:
+							player.change_happiness(4)
 					relation.was_complimented = True
 			elif choice == _("Insult"):
 				rel = relation.name_accusative()
@@ -223,6 +229,8 @@ def main_menu(player):
 			if player.depressed:
 				print(_("You don't feel like playing, but you decide to try anyway."))
 				happy_gain = randint(0, 6)
+				if Trait.CHEERFUL in player.traits:
+					happy_gain += 2
 			else:
 				sayings = [
 					_("You played with your toys."),
@@ -230,6 +238,8 @@ def main_menu(player):
 				]
 				print(random.choice(sayings))
 				happy_gain = randint(5, 10)
+				if Trait.CHEERFUL in player.traits:
+					happy_gain += 5
 			if not player.played:
 				player.played = True
 				player.change_happiness(happy_gain)
@@ -242,12 +252,14 @@ def main_menu(player):
 					print(_("You decided to paint."))
 					if not player.did_arts_and_crafts:
 						player.change_happiness(randint(2, 4))
-						player.change_smarts(randint(0, 2))
+						player.change_smarts(randint(1, 2))
 				else:
 					print(_("You decided to bake something tasty!"))
 					if not player.did_arts_and_crafts:
 						player.change_happiness(randint(3, 6))
-						player.change_smarts(randint(1, 3)) 
+						player.change_smarts(randint(0, 3))
+				if not player.did_arts_and_crafts and Trait.CHEERFUL in player.traits:
+					player.change_happiness(3)
 				player.did_arts_and_crafts = True
 		if choice == _("Meditate"):
 			print(_("You practiced meditation."))
@@ -261,14 +273,20 @@ def main_menu(player):
 					player.change_stress(-3)
 					print(_("You have achieved a deeper awareness of yourself."))
 					display_bar(_("Karma"), player.karma)
+				if Trait.CHEERFUL in player.traits:
+					player.change_happiness(4)
 				player.meditated = True
 				player.times_meditated += 1
 		elif choice == _("Library"):
 			print(_("You went to the library."))
 			enjoyment = randint(15, 65)
+			if Trait.CHEERFUL in player.traits:
+				enjoyment = max(enjoyment, randint(15, 65))
 			display_bar(_("Your Enjoyment"), enjoyment)
 			if not player.visited_library:  # You can only get the bonus once per year
 				player.change_happiness(round_stochastic(enjoyment/15))
+				if Trait.CHEERFUL in player.traits:
+					player.change_happiness(3)
 				player.change_smarts(randint(2, 5))
 				player.visited_library = True
 		elif choice == _("Gym"):
@@ -291,6 +309,8 @@ def main_menu(player):
 				print(_("Workout") + ": " + draw_bar(workout, 100, 25))
 				if not player.worked_out:
 					player.change_happiness(round(workout / 12) + randint(0, 1))
+					if Trait.CHEERFUL in player.traits:
+						player.change_happiness(3)
 					player.change_health(round(workout / 14) + randint(1, 2))
 					if player.looks < workout:
 						player.change_looks(

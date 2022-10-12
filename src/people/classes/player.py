@@ -71,6 +71,8 @@ class Player(Person):
 		self.has_job = False
 		self.lottery_jackpot = 0
 		self.stress = 0
+		self.traits = set()
+		
 		self.ID = str(uuid.uuid4())
 		self.save_path = SAVE_PATH + "/" + self.ID + ".pickle"
 	
@@ -79,6 +81,11 @@ class Player(Person):
 		p = cls()
 		p.__dict__.update(d)
 		return p
+		
+	def change_happiness(self, amount):
+		if amount != 0 and Trait.MOODY in self.traits:
+			amount = round_stochastic(amount * 1.5)
+		super().change_happiness(amount)
 		
 	def change_jackpot(self):
 		self.lottery_jackpot = round(randexpo(100000, 1000000))
@@ -115,6 +122,8 @@ class Player(Person):
 		oldhappy = self.happiness
 		self.total_happiness += self.happiness
 		super().age_up()
+		if "Grumpy" in self.traits and self.happiness > 30:
+			self.change_happiness(-randint(0, 6))
 		self.reset_already_did()
 		self.change_karma(randint(-2, 2))
 
@@ -387,7 +396,7 @@ class Player(Person):
 								display_event(
 									_("Your scholarship application has been awarded!")
 								)
-								self.change_happiness(randint(10, 15))
+								self.change_happiness(randint(10, 15) + (10 * (Trait.CHEERFUL in player.traits)))
 								chosen = True
 							else:
 								display_event(
@@ -405,7 +414,7 @@ class Player(Person):
 										"Your parents agreed to pay for your university tuition!"
 									)
 								)
-								self.change_happiness(randint(7, 9))
+								self.change_happiness(randint(7, 9) + (7 * (Trait.CHEERFUL in player.traits)))
 								chosen = True
 							else:
 								display_event(
