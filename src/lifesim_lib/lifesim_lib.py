@@ -1,7 +1,5 @@
 from enum import Enum
-import math
-import os
-import random
+import math, os, random, pickle
 from sys import platform
 
 from src.lifesim_lib.const import *
@@ -9,6 +7,18 @@ from src.lifesim_lib.translation import _
 
 class PlayerDied(Exception):
 	pass
+	
+def get_save_files():
+	return os.listdir(SAVE_PATH)
+
+def get_saves(saves=None):
+	if saves == None:
+		saves = get_save_files()
+	players = []
+	for filename in saves:
+		p = SAVE_PATH + "/" + filename
+		players.append(pickle.load(open(p, "rb")))
+	return players
 
 def clamp(val, lo, hi):
 	return max(lo, min(val, hi))

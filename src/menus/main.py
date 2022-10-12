@@ -26,6 +26,7 @@ def main_menu(player):
 			choices.append(_("Job Menu"))
 		else:
 			choices.append(_("Find a Job"))
+	choices.append(_("View Saved Games"))
 	if DEBUG:
 		choices.append(_("Debug Menu"))
 	choice = choice_input(*choices, return_text=True)
@@ -468,7 +469,7 @@ def main_menu(player):
 	if choice == _("Find a Job"):
 		salary = round_stochastic(randexpo(30000, 55000)) #TODO: Add a selection of different types of jobs
 		if yes_no(_("You found a job with a salary of ${salary:,}. Would you like to apply?").format(salary=salary)):
-			m = 100 + round_stochastic((salary-30000)/600)
+			m = 100 + round_stochastic((salary-40000)/300)
 			mod = 50 - player.smarts #Mod is inverted because we want to roll 100 OR LOWER to get the job
 			roll = randint(1, m)
 			if mod > 0:
@@ -502,3 +503,26 @@ def main_menu(player):
 				player.lose_job()
 				print(_("You quit your job."))
 		#TODO: Add ability to ask for a raise
+	elif choice == _("View Saved Games"):
+		players = list(filter(lambda p: p["ID"] != player.ID, get_saves()))
+		if not players:
+			print(_("No previously saved games"))
+		else:
+			print("Previously saved games:")
+			choices = list(map(lambda p: p["name"], players))
+			choices.append(_("Back"))
+			choice = choice_input(*choices)
+			clear_screen()
+			if choice < len(choices):
+				d = players[choice - 1]
+				print(d["name"] + "\n")
+				choice = choice_input(_("Back"), _("Load Save"), _("Delete Save"))
+				if choice == 2:
+					if yes_no(_("Would you like to load this save?")):
+						player.save_game()
+						player.__init__() #Re-initialize in preparation for loading a save
+						player.__dict__.update(d)
+						clear_screen()
+				elif choice == 3:
+					if yes_no(_("Are you sure you want to delete this save?")):
+						os.remove(d["save_path"])

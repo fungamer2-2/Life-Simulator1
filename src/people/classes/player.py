@@ -1,4 +1,4 @@
-import math, os, random
+import math, os, random, uuid, pickle
 from random import randint
 
 from src.lifesim_lib.const import *
@@ -71,17 +71,26 @@ class Player(Person):
 		self.has_job = False
 		self.lottery_jackpot = 0
 		self.stress = 0
+		self.ID = str(uuid.uuid4())
+		self.save_path = SAVE_PATH + "/" + self.ID + ".pickle"
+	
+	@classmethod
+	def load(cls, d):
+		p = cls()
+		p.__dict__.update(d)
+		return p
 		
 	def change_jackpot(self):
 		self.lottery_jackpot = round(randexpo(100000, 1000000))
 		
 	def save_game(self):
-		import pickle
-		pickle.dump(self, open(SAVE_PATH, "wb"))
+		if not os.path.exists(self.save_path):
+			open(self.save_path, "x")
+		pickle.dump(self.__dict__, open(self.save_path, "wb"))
 		
 	def delete_save(self):
-		if os.path.exists(SAVE_PATH):
-			os.remove(SAVE_PATH)
+		if os.path.exists(self.save_path):
+			os.remove(self.save_path)
 		
 	def is_in_school(self):
 		return self.grades is not None
@@ -123,13 +132,13 @@ class Player(Person):
 			return
 		self.change_jackpot()
 		if self.has_job:
-			self.change_stress(randint(-5, 5))
+			self.change_stress(randint(-4, 4))
 			base = 70 - self.happiness*0.4
 			diff = base - self.stress
 			if diff > 0:
-				self.change_stress(randint(1, round_stochastic(diff/5)+1))
+				self.change_stress(randint(0, round_stochastic(diff/5)+1))
 			elif diff < 0:
-				self.change_stress(-randint(1, round_stochastic(abs(diff)/8)+1))
+				self.change_stress(-randint(0, round_stochastic(abs(diff)/8)+1))
 		if self.age == 13:
 			val = 0
 			if randint(1, 4) == 1:
@@ -254,7 +263,7 @@ class Player(Person):
 	def random_events(self):
 		if self.age >= 5 and randint(1, 5000) == 1:
 			print(_("You were struck by lightning!"))
-			good_or_bad = randint(1, 2) == 1 #TODO: Maybe I should make the chance for it to be good or bad based on your karma
+			good_or_bad = randint(1, 2) == 1 #TODO: Should I make the chance for it to be good or bad based on your karma?
 			if good_or_bad:
 				self.change_happiness(100)
 				self.change_health(100)
