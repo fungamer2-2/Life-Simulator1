@@ -11,9 +11,6 @@ TODO List:
 - Add plastic surgery
 - Add a way to date people
 - Add social media
-
-WIP:
-Multiple saves#
 """
 
 while True:
