@@ -1,6 +1,8 @@
 [flake8]
 max-line-length = 130
-use-flake8-tabs = true
+use-flake8-tabs = True
+use-pycodestyle-indent = False
+continuation-style = hanging
 show-source = true
 ignore = E266,E401,E402,E722,E731,E741,F401,F403,F405,W503
 per-file-ignores =
