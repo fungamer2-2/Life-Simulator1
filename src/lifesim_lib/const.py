@@ -6,7 +6,7 @@ MALE_NAMES = open("assets/male_names.txt").read().splitlines()
 FEMALE_NAMES = open("assets/female_names.txt").read().splitlines()
 LAST_NAMES = open("assets/last_names.txt").read().splitlines()
 
-SAVE_PATH = filename = _os.getcwd() + "/gamedata.pickle"
+SAVE_PATH = filename = _os.getcwd() + "/game_saves" # + "/gamedata.pickle"
 
 LANGUAGES = [
     dir

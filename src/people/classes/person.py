@@ -18,6 +18,7 @@ class Person:
         self.smarts = smarts
         self.looks = looks
         self.alive = True
+        self.name = self.firstname + " " + self.lastname
 
     def age_up(self):
         self.age += 1
@@ -43,7 +44,3 @@ class Person:
 
     def change_looks(self, amount):
         self.looks = clamp(self.looks + amount, 0, 100)
-
-    @property
-    def name(self):
-        return self.firstname + " " + self.lastname
