@@ -20,4 +20,4 @@ jobs:
         run: pip install flake8 flake8-tabs
 
       - name: Run flake8
-        run: flake8 . --show-source --config .flake8
+        run: flake8 . --help --config .flake8
