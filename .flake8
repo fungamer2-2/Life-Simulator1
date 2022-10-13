@@ -1,5 +1,6 @@
 [flake8]
 max-line-length = 130
+use-flake8-tabs = true
 ignore =
     E266,
     E401,
