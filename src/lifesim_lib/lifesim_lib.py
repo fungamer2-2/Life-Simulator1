@@ -1,7 +1,5 @@
 from enum import Enum
-import math
-import os
-import random
+import math, os, random, pickle
 from sys import platform
 
 from src.lifesim_lib.const import *
@@ -10,6 +8,20 @@ from src.lifesim_lib.translation import _
 
 class PlayerDied(Exception):
     pass
+
+
+def get_save_files():
+    return os.listdir(SAVE_PATH)
+
+
+def get_saves(saves=None):
+    if saves is None:
+        saves = get_save_files()
+    players = []
+    for filename in saves:
+        p = SAVE_PATH + "/" + filename
+        players.append(pickle.load(open(p, "rb")))
+    return players
 
 
 def clamp(val, lo, hi):
@@ -62,6 +74,16 @@ class Gender(Enum):
     @staticmethod
     def random():
         return Gender.Male if random.uniform(0, 100) < 51.2 else Gender.Female
+
+
+class Trait(Enum):
+    # Name, description, 1 if positive, -1 if negative, 0 if mixed
+    CHEERFUL = (_("Cheerful"), _("It is easier to increase your happiness by doing activities."), 1)
+    NERD = (_("Nerd"), _("You gain more smarts by going to the library and doing other activities."), 1)
+
+    GRUMPY = (_("Grumpy"), _("It is difficult for you to stay in a good mood."), -1)
+
+    MOODY = (_("Moody"), _("Your mood can change very easily. Your Happiness can both increase and decrease more easily."), 0)
 
 
 def int_input_range(lo, hi):
