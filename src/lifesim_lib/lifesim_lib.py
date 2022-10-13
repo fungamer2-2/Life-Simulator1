@@ -15,7 +15,7 @@ def get_save_files():
 
 
 def get_saves(saves=None):
-    if saves == None:
+    if saves is None:
         saves = get_save_files()
     players = []
     for filename in saves:
