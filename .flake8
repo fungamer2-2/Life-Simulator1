@@ -1,0 +1,16 @@
+[flake8]
+max-line-length = 130
+ignore =
+    E266,
+    E401,
+    E402,
+    E722,
+    E731,
+    E741,
+    F401,
+    F403,
+    F405,
+    W503
+per-file-ignores =
+    src/lifesim_lib/lifesim_lib.py: F811
+    src/people/classes/player.py: F841
