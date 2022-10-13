@@ -1,7 +1,6 @@
 [flake8]
 max-line-length = 130
 use-flake8-tabs = true
-use-pycodestyle-indent = false
 ignore =
     E266,
     E401,
