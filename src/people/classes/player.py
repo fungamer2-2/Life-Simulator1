@@ -122,8 +122,11 @@ class Player(Person):
 		oldhappy = self.happiness
 		self.total_happiness += self.happiness
 		super().age_up()
-		if "Grumpy" in self.traits and self.happiness > 30:
-			self.change_happiness(-randint(0, 6))
+		if Trait.GRUMPY in self.traits and self.happiness > 33:
+			if randint(1, 12) == 1:
+				self.change_happiness(-randint(4, 8))
+			else:
+				self.change_happiness(-randint(0, 4))
 		self.reset_already_did()
 		self.change_karma(randint(-2, 2))
 

@@ -72,9 +72,9 @@ class Trait(Enum):
 	CHEERFUL = (_("Cheerful"), _("It is easier to increase your happiness by doing activities."), 1)
 	NERD = (_("Nerd"), _("You gain more smarts by going to the library and doing other activities."), 1)
 	
-	GRUMPY = (_("Grumpy"), _("It is difficult for you to stay in a good mood."), -1)
+	GRUMPY = (_("Grumpy"), _("It is difficult for you to be in a good mood."), -1)
 	
-	MOODY = (_("Moody"), _("Your mood can change very easily. Your Happiness can both increase and decrease more easily."), 0)
+	MOODY = (_("Moody"), _("Your mood can change very easily. Your Happiness can change more easily."), 0)
 	
 def int_input_range(lo, hi):
 	while True:

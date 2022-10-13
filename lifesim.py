@@ -16,7 +16,6 @@ TODO List:
 while True:
 	clear_screen()
 	try:
-		from src.lifesim_lib.lifesim_lib import Trait
 		player = start_menu()
 		print(_("Age {age}").format(age=player.age))
 		while True:

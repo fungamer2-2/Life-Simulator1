@@ -82,8 +82,10 @@ def main_menu(player):
 						)
 					)
 					enjoyment1 = max(randint(0, 70), randint(0, 70)) + randint(0, 30)
-					if "Cheerful" in player.traits:
-						enjoyment1 = max(enjoyment1, max(randint(0, 70), randint(0, 70)) + randint(0, 30))
+					if Trait.CHEERFUL in player.traits:
+						enjoyment1 = max(enjoyment1, randint(0, 100))
+					elif trait.GRUMPY in player.traits:
+						enjoyment1 = min(enjoyment1, randint(0, 100))
 					enjoyment2 = round(random.triangular(0, 100, relation.relationship))
 					print_align_bars(
 						(_("Your Enjoyment"), enjoyment1),
@@ -184,7 +186,7 @@ def main_menu(player):
 								relation=relation.name_accusative()
 							)
 						)
-						player.change_happiness(randint(6, 10))
+						player.change_happiness(randint(6, 10) - (3*(Trait.GRUMPY in player.traits)))
 						if Trait.CHEERFUL in player.traits:
 							player.change_happiness(4)
 					relation.was_complimented = True
@@ -282,6 +284,8 @@ def main_menu(player):
 			enjoyment = randint(15, 65)
 			if Trait.CHEERFUL in player.traits:
 				enjoyment = max(enjoyment, randint(15, 65))
+			elif Trait.GRUMPY in player.traits:
+				enjoyment = min(enjoyment, randint(15, 65))
 			display_bar(_("Your Enjoyment"), enjoyment)
 			if not player.visited_library:  # You can only get the bonus once per year
 				player.change_happiness(round_stochastic(enjoyment/15))
@@ -528,7 +532,7 @@ def main_menu(player):
 		if not players:
 			print(_("No previously saved games"))
 		else:
-			print("Previously saved games:")
+			print(_("Previously saved games:"))
 			choices = list(map(lambda p: p["name"], players))
 			choices.append(_("Back"))
 			choice = choice_input(*choices)
