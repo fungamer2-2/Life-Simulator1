@@ -520,8 +520,10 @@ def main_menu(player):
 		choice = choice_input(_("Back"), _("Work Harder"), _("Retire") if can_retire else _("Quit Job"))
 		if choice == 2:
 			print("You worked harder.")
-			player.change_performance(randint(1, 10))
-			player.change_stress(5)
+			if not worked_harder:
+				player.change_performance(randint(1, 10))
+				player.change_stress(4)
+				player.worked_harder = True
 		if choice == 3:
 			if can_retire:
 				pension = round(player.salary * min(player.years_worked, 35) * 0.02)
