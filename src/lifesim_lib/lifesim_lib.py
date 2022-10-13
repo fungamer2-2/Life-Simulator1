@@ -78,23 +78,52 @@ class Gender(Enum):
 
 class Trait(Enum):
     # Name, description, 1 if positive, -1 if negative, 0 if mixed
-    CHEERFUL = (_("Cheerful"), _("It is easier to increase your happiness by doing activities."), 1)
-    NERD = (_("Nerd"), _("You gain more smarts by going to the library and doing other activities."), 1)
+    CHEERFUL = (
+        _("Cheerful"),
+        _("It is easier to increase your happiness by doing activities."),
+        1,
+    )
+    NERD = (
+        _("Nerd"),
+        _("You gain more smarts by going to the library and doing other activities."),
+        1,
+    )
 
     GRUMPY = (_("Grumpy"), _("It is difficult for you to stay in a good mood."), -1)
 
-    MOODY = (_("Moody"), _("Your mood can change very easily. Your Happiness can both increase and decrease more easily."), 0)
+    MOODY = (
+        _("Moody"),
+        _(
+            "Your mood can change very easily. Your Happiness can both increase and decrease more easily."
+        ),
+        0,
+    )
 
 
 class Trait(Enum):
-	#Name, description, 1 if positive, -1 if negative, 0 if mixed
-	CHEERFUL = (_("Cheerful"), _("It is easier to increase your happiness by doing activities."), 1)
-	NERD = (_("Nerd"), _("You gain more smarts by going to the library and doing other activities."), 1)
-	
-	GRUMPY = (_("Grumpy"), _("It is difficult for you to stay in a good mood."), -1)
-	
-	MOODY = (_("Moody"), _("Your mood can change very easily. Your Happiness can both increase and decrease more easily."), 0)
-	
+    # Name, description, 1 if positive, -1 if negative, 0 if mixed
+    CHEERFUL = (
+        _("Cheerful"),
+        _("It is easier to increase your happiness by doing activities."),
+        1,
+    )
+    NERD = (
+        _("Nerd"),
+        _("You gain more smarts by going to the library and doing other activities."),
+        1,
+    )
+
+    GRUMPY = (_("Grumpy"), _("It is difficult for you to stay in a good mood."), -1)
+
+    MOODY = (
+        _("Moody"),
+        _(
+            "Your mood can change very easily. Your Happiness can both increase and decrease more easily."
+        ),
+        0,
+    )
+
+
 def int_input_range(lo, hi):
     while True:
         try:
