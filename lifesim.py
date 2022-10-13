@@ -14,13 +14,13 @@ TODO List:
 """
 
 while True:
-    clear_screen()
-    try:
-        player = start_menu()
-        print(_("Age {age}").format(age=player.age))
-        while True:
-            main_menu(player)
-            player.save_game()
-    except PlayerDied:
-        if not yes_no(_("Would you like to start a new life?")):
-            break
+	clear_screen()
+	try:
+		player = start_menu()
+		print(_("Age {age}").format(age=player.age))
+		while True:
+			main_menu(player)
+			player.save_game()
+	except PlayerDied:
+		if not yes_no(_("Would you like to start a new life?")):
+			break
