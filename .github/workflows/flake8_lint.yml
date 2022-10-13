@@ -1,4 +1,4 @@
-name: Lint
+ïname: Lint
 
 on: [push, pull_request]
 
@@ -20,4 +20,4 @@ jobs:
         run: pip install flake8 flake8-tabs
 
       - name: Run flake8
-        run: flake8 --config .flake8
+        run: flake8 . --config .flake8
