@@ -16,11 +16,13 @@
 # for selftesting
 try:
     import fintl
+
     _ = fintl.gettext
 except ImportError:
     _ = lambda s: s
 
-__doc__ = _("""pygettext -- Python equivalent of xgettext(1)
+__doc__ = _(
+    """pygettext -- Python equivalent of xgettext(1)
 
 Many systems (Solaris, Linux, Gnu) provide extensive tools that ease the
 internationalization of C programs. Most of these tools are independent of
@@ -153,7 +155,8 @@ Options:
         conjunction with the -D option above.
 
 If `inputfile' is -, standard input is read.
-""")
+"""
+)
 
 import os
 import importlib.machinery
@@ -166,18 +169,18 @@ import ast
 import token
 import tokenize
 
-__version__ = '1.5'
+__version__ = "1.5"
 
-default_keywords = ['_']
-DEFAULTKEYWORDS = ', '.join(default_keywords)
+default_keywords = ["_"]
+DEFAULTKEYWORDS = ", ".join(default_keywords)
 
-EMPTYSTRING = ''
+EMPTYSTRING = ""
 
 
-
 # The normal pot-file header. msgmerge and Emacs's po-mode work better if it's
 # there.
-pot_header = _('''\
+pot_header = _(
+    """\
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR ORGANIZATION
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -194,17 +197,17 @@ msgstr ""
 "Content-Transfer-Encoding: %(encoding)s\\n"
 "Generated-By: pygettext.py %(version)s\\n"
 
-''')
+"""
+)
 
-
-def usage(code, msg=''):
+
+def usage(code, msg=""):
     print(__doc__ % globals(), file=sys.stderr)
     if msg:
         print(msg, file=sys.stderr)
     sys.exit(code)
 
 
-
 def make_escapes(pass_nonascii):
     global escapes, escape
     if pass_nonascii:
@@ -219,46 +222,47 @@ def make_escapes(pass_nonascii):
     escapes = [r"\%03o" % i for i in range(mod)]
     for i in range(32, 127):
         escapes[i] = chr(i)
-    escapes[ord('\\')] = r'\\'
-    escapes[ord('\t')] = r'\t'
-    escapes[ord('\r')] = r'\r'
-    escapes[ord('\n')] = r'\n'
-    escapes[ord('\"')] = r'\"'
+    escapes[ord("\\")] = r"\\"
+    escapes[ord("\t")] = r"\t"
+    escapes[ord("\r")] = r"\r"
+    escapes[ord("\n")] = r"\n"
+    escapes[ord('"')] = r"\""
 
 
 def escape_ascii(s, encoding):
-    return ''.join(escapes[ord(c)] if ord(c) < 128 else c for c in s)
+    return "".join(escapes[ord(c)] if ord(c) < 128 else c for c in s)
+
 
 def escape_nonascii(s, encoding):
-    return ''.join(escapes[b] for b in s.encode(encoding))
+    return "".join(escapes[b] for b in s.encode(encoding))
 
 
 def is_literal_string(s):
-    return s[0] in '\'"' or (s[0] in 'rRuU' and s[1] in '\'"')
+    return s[0] in "'\"" or (s[0] in "rRuU" and s[1] in "'\"")
 
 
 def safe_eval(s):
     # unwrap quotes, safely
-    return eval(s, {'__builtins__':{}}, {})
+    return eval(s, {"__builtins__": {}}, {})
 
 
 def normalize(s, encoding):
     # This converts the various Python string types into a format that is
     # appropriate for .po files, namely much closer to C style.
-    lines = s.split('\n')
+    lines = s.split("\n")
     if len(lines) == 1:
         s = '"' + escape(s, encoding) + '"'
     else:
         if not lines[-1]:
             del lines[-1]
-            lines[-1] = lines[-1] + '\n'
+            lines[-1] = lines[-1] + "\n"
         for i in range(len(lines)):
             lines[i] = escape(lines[i], encoding)
         lineterm = '\\n"\n"'
         s = '""\n"' + lineterm.join(lines) + '"'
     return s
 
-
+
 def containsAny(str, set):
     """Check whether 'str' contains ANY of the chars in 'set'"""
     return 1 in [c in str for c in set]
@@ -293,13 +297,16 @@ def getFilesForName(name):
         _py_ext = importlib.machinery.SOURCE_SUFFIXES[0]
         for root, dirs, files in os.walk(name):
             # don't recurse into CVS directories
-            if 'CVS' in dirs:
-                dirs.remove('CVS')
+            if "CVS" in dirs:
+                dirs.remove("CVS")
             # add all *.py files to list
             list.extend(
-                [os.path.join(root, file) for file in files
-                 if os.path.splitext(file)[1] == _py_ext]
-                )
+                [
+                    os.path.join(root, file)
+                    for file in files
+                    if os.path.splitext(file)[1] == _py_ext
+                ]
+            )
         return list
     elif os.path.exists(name):
         # a single file
@@ -307,7 +314,7 @@ def getFilesForName(name):
 
     return []
 
-
+
 class TokenEater:
     def __init__(self, options):
         self.__options = options
@@ -321,9 +328,9 @@ class TokenEater:
 
     def __call__(self, ttype, tstring, stup, etup, line):
         # dispatch
-##        import token
-##        print('ttype:', token.tok_name[ttype], 'tstring:', tstring,
-##              file=sys.stderr)
+        ##        import token
+        ##        print('ttype:', token.tok_name[ttype], 'tstring:', tstring,
+        ##              file=sys.stderr)
         self.__state(ttype, tstring, stup[0])
 
     def __waiting(self, ttype, tstring, lineno):
@@ -339,20 +346,22 @@ class TokenEater:
                     self.__freshmodule = 0
                 return
             # class or func/method docstring?
-            if ttype == tokenize.NAME and tstring in ('class', 'def'):
+            if ttype == tokenize.NAME and tstring in ("class", "def"):
                 self.__state = self.__suiteseen
                 return
         if ttype == tokenize.NAME and tstring in opts.keywords:
             self.__state = self.__keywordseen
             return
         if ttype == tokenize.STRING:
-            maybe_fstring = ast.parse(tstring, mode='eval').body
+            maybe_fstring = ast.parse(tstring, mode="eval").body
             if not isinstance(maybe_fstring, ast.JoinedStr):
                 return
-            for value in filter(lambda node: isinstance(node, ast.FormattedValue),
-                                maybe_fstring.values):
-                for call in filter(lambda node: isinstance(node, ast.Call),
-                                   ast.walk(value)):
+            for value in filter(
+                lambda node: isinstance(node, ast.FormattedValue), maybe_fstring.values
+            ):
+                for call in filter(
+                    lambda node: isinstance(node, ast.Call), ast.walk(value)
+                ):
                     func = call.func
                     if isinstance(func, ast.Name):
                         func_name = func.id
@@ -364,35 +373,50 @@ class TokenEater:
                     if func_name not in opts.keywords:
                         continue
                     if len(call.args) != 1:
-                        print(_(
-                            '*** %(file)s:%(lineno)s: Seen unexpected amount of'
-                            ' positional arguments in gettext call: %(source_segment)s'
-                            ) % {
-                            'source_segment': ast.get_source_segment(tstring, call) or tstring,
-                            'file': self.__curfile,
-                            'lineno': lineno
-                            }, file=sys.stderr)
+                        print(
+                            _(
+                                "*** %(file)s:%(lineno)s: Seen unexpected amount of"
+                                " positional arguments in gettext call: %(source_segment)s"
+                            )
+                            % {
+                                "source_segment": ast.get_source_segment(tstring, call)
+                                or tstring,
+                                "file": self.__curfile,
+                                "lineno": lineno,
+                            },
+                            file=sys.stderr,
+                        )
                         continue
                     if call.keywords:
-                        print(_(
-                            '*** %(file)s:%(lineno)s: Seen unexpected keyword arguments'
-                            ' in gettext call: %(source_segment)s'
-                            ) % {
-                            'source_segment': ast.get_source_segment(tstring, call) or tstring,
-                            'file': self.__curfile,
-                            'lineno': lineno
-                            }, file=sys.stderr)
+                        print(
+                            _(
+                                "*** %(file)s:%(lineno)s: Seen unexpected keyword arguments"
+                                " in gettext call: %(source_segment)s"
+                            )
+                            % {
+                                "source_segment": ast.get_source_segment(tstring, call)
+                                or tstring,
+                                "file": self.__curfile,
+                                "lineno": lineno,
+                            },
+                            file=sys.stderr,
+                        )
                         continue
                     arg = call.args[0]
                     if not isinstance(arg, ast.Constant):
-                        print(_(
-                            '*** %(file)s:%(lineno)s: Seen unexpected argument type'
-                            ' in gettext call: %(source_segment)s'
-                            ) % {
-                            'source_segment': ast.get_source_segment(tstring, call) or tstring,
-                            'file': self.__curfile,
-                            'lineno': lineno
-                            }, file=sys.stderr)
+                        print(
+                            _(
+                                "*** %(file)s:%(lineno)s: Seen unexpected argument type"
+                                " in gettext call: %(source_segment)s"
+                            )
+                            % {
+                                "source_segment": ast.get_source_segment(tstring, call)
+                                or tstring,
+                                "file": self.__curfile,
+                                "lineno": lineno,
+                            },
+                            file=sys.stderr,
+                        )
                         continue
                     if isinstance(arg.value, str):
                         self.__addentry(arg.value, lineno)
@@ -400,12 +424,12 @@ class TokenEater:
     def __suiteseen(self, ttype, tstring, lineno):
         # skip over any enclosure pairs until we see the colon
         if ttype == tokenize.OP:
-            if tstring == ':' and self.__enclosurecount == 0:
+            if tstring == ":" and self.__enclosurecount == 0:
                 # we see a colon and we're not in an enclosure: end of def
                 self.__state = self.__suitedocstring
-            elif tstring in '([{':
+            elif tstring in "([{":
                 self.__enclosurecount += 1
-            elif tstring in ')]}':
+            elif tstring in ")]}":
                 self.__enclosurecount -= 1
 
     def __suitedocstring(self, ttype, tstring, lineno):
@@ -413,13 +437,12 @@ class TokenEater:
         if ttype == tokenize.STRING and is_literal_string(tstring):
             self.__addentry(safe_eval(tstring), lineno, isdocstring=1)
             self.__state = self.__waiting
-        elif ttype not in (tokenize.NEWLINE, tokenize.INDENT,
-                           tokenize.COMMENT):
+        elif ttype not in (tokenize.NEWLINE, tokenize.INDENT, tokenize.COMMENT):
             # there was no class docstring
             self.__state = self.__waiting
 
     def __keywordseen(self, ttype, tstring, lineno):
-        if ttype == tokenize.OP and tstring == '(':
+        if ttype == tokenize.OP and tstring == "(":
             self.__data = []
             self.__lineno = lineno
             self.__state = self.__openseen
@@ -427,7 +450,7 @@ class TokenEater:
             self.__state = self.__waiting
 
     def __openseen(self, ttype, tstring, lineno):
-        if ttype == tokenize.OP and tstring == ')':
+        if ttype == tokenize.OP and tstring == ")":
             # We've seen the last of the translatable strings.  Record the
             # line number of the first line of the strings and update the list
             # of messages seen.  Reset state for the next batch.  If there
@@ -437,22 +460,25 @@ class TokenEater:
             self.__state = self.__waiting
         elif ttype == tokenize.STRING and is_literal_string(tstring):
             self.__data.append(safe_eval(tstring))
-        elif ttype not in [tokenize.COMMENT, token.INDENT, token.DEDENT,
-                           token.NEWLINE, tokenize.NL]:
+        elif ttype not in [
+            tokenize.COMMENT,
+            token.INDENT,
+            token.DEDENT,
+            token.NEWLINE,
+            tokenize.NL,
+        ]:
             # warn if we see anything else than STRING or whitespace
-            print(_(
-                '*** %(file)s:%(lineno)s: Seen unexpected token "%(token)s"'
-                ) % {
-                'token': tstring,
-                'file': self.__curfile,
-                'lineno': self.__lineno
-                }, file=sys.stderr)
+            print(
+                _('*** %(file)s:%(lineno)s: Seen unexpected token "%(token)s"')
+                % {"token": tstring, "file": self.__curfile, "lineno": self.__lineno},
+                file=sys.stderr,
+            )
             self.__state = self.__waiting
 
     def __addentry(self, msg, lineno=None, isdocstring=0):
         if lineno is None:
             lineno = self.__lineno
-        if not msg in self.__options.toexclude:
+        if msg not in self.__options.toexclude:
             entry = (self.__curfile, lineno)
             self.__messages.setdefault(msg, {})[entry] = isdocstring
 
@@ -462,11 +488,18 @@ class TokenEater:
 
     def write(self, fp):
         options = self.__options
-        timestamp = time.strftime('%Y-%m-%d %H:%M%z')
-        encoding = fp.encoding if fp.encoding else 'UTF-8'
-        print(pot_header % {'time': timestamp, 'version': __version__,
-                            'charset': encoding,
-                            'encoding': '8bit'}, file=fp)
+        timestamp = time.strftime("%Y-%m-%d %H:%M%z")
+        encoding = fp.encoding if fp.encoding else "UTF-8"
+        print(
+            pot_header
+            % {
+                "time": timestamp,
+                "version": __version__,
+                "charset": encoding,
+                "encoding": "8bit",
+            },
+            file=fp,
+        )
         # Sort the entries.  First sort each particular entry's keys, then
         # sort all the entries by their first item.
         reverse = {}
@@ -491,16 +524,15 @@ class TokenEater:
                 # location comments are different b/w Solaris and GNU:
                 elif options.locationstyle == options.SOLARIS:
                     for filename, lineno in v:
-                        d = {'filename': filename, 'lineno': lineno}
-                        print(_(
-                            '# File: %(filename)s, line: %(lineno)d') % d, file=fp)
+                        d = {"filename": filename, "lineno": lineno}
+                        print(_("# File: %(filename)s, line: %(lineno)d") % d, file=fp)
                 elif options.locationstyle == options.GNU:
                     # fit as many locations on one line, as long as the
                     # resulting line length doesn't exceed 'options.width'
-                    locline = '#:'
+                    locline = "#:"
                     for filename, lineno in v:
-                        d = {'filename': filename, 'lineno': lineno}
-                        s = _(' %(filename)s:%(lineno)d') % d
+                        d = {"filename": filename, "lineno": lineno}
+                        s = _(" %(filename)s:%(lineno)d") % d
                         if len(locline) + len(s) <= options.width:
                             locline = locline + s
                         else:
@@ -509,24 +541,37 @@ class TokenEater:
                     if len(locline) > 2:
                         print(locline, file=fp)
                 if isdocstring:
-                    print('#, docstring', file=fp)
-                print('msgid', normalize(k, encoding), file=fp)
+                    print("#, docstring", file=fp)
+                print("msgid", normalize(k, encoding), file=fp)
                 print('msgstr ""\n', file=fp)
 
 
-
 def main():
     global default_keywords
     try:
         opts, args = getopt.getopt(
             sys.argv[1:],
-            'ad:DEhk:Kno:p:S:Vvw:x:X:',
-            ['extract-all', 'default-domain=', 'escape', 'help',
-             'keyword=', 'no-default-keywords',
-             'add-location', 'no-location', 'output=', 'output-dir=',
-             'style=', 'verbose', 'version', 'width=', 'exclude-file=',
-             'docstrings', 'no-docstrings',
-             ])
+            "ad:DEhk:Kno:p:S:Vvw:x:X:",
+            [
+                "extract-all",
+                "default-domain=",
+                "escape",
+                "help",
+                "keyword=",
+                "no-default-keywords",
+                "add-location",
+                "no-location",
+                "output=",
+                "output-dir=",
+                "style=",
+                "verbose",
+                "version",
+                "width=",
+                "exclude-file=",
+                "docstrings",
+                "no-docstrings",
+            ],
+        )
     except getopt.error as msg:
         usage(1, msg)
 
@@ -536,65 +581,66 @@ def main():
         GNU = 1
         SOLARIS = 2
         # defaults
-        extractall = 0 # FIXME: currently this option has no effect at all.
+        extractall = 0  # FIXME: currently this option has no effect at all.
         escape = 0
         keywords = []
-        outpath = ''
-        outfile = 'messages.pot'
+        outpath = ""
+        outfile = "messages.pot"
         writelocations = 1
         locationstyle = GNU
         verbose = 0
         width = 78
-        excludefilename = ''
+        excludefilename = ""
         docstrings = 0
         nodocstrings = {}
 
     options = Options()
-    locations = {'gnu' : options.GNU,
-                 'solaris' : options.SOLARIS,
-                 }
+    locations = {
+        "gnu": options.GNU,
+        "solaris": options.SOLARIS,
+    }
 
     # parse options
     for opt, arg in opts:
-        if opt in ('-h', '--help'):
+        if opt in ("-h", "--help"):
             usage(0)
-        elif opt in ('-a', '--extract-all'):
+        elif opt in ("-a", "--extract-all"):
             options.extractall = 1
-        elif opt in ('-d', '--default-domain'):
-            options.outfile = arg + '.pot'
-        elif opt in ('-E', '--escape'):
+        elif opt in ("-d", "--default-domain"):
+            options.outfile = arg + ".pot"
+        elif opt in ("-E", "--escape"):
             options.escape = 1
-        elif opt in ('-D', '--docstrings'):
+        elif opt in ("-D", "--docstrings"):
             options.docstrings = 1
-        elif opt in ('-k', '--keyword'):
+        elif opt in ("-k", "--keyword"):
             options.keywords.append(arg)
-        elif opt in ('-K', '--no-default-keywords'):
+        elif opt in ("-K", "--no-default-keywords"):
             default_keywords = []
-        elif opt in ('-n', '--add-location'):
+        elif opt in ("-n", "--add-location"):
             options.writelocations = 1
-        elif opt in ('--no-location',):
+        elif opt in ("--no-location",):
             options.writelocations = 0
-        elif opt in ('-S', '--style'):
+        elif opt in ("-S", "--style"):
             options.locationstyle = locations.get(arg.lower())
             if options.locationstyle is None:
-                usage(1, _('Invalid value for --style: %s') % arg)
-        elif opt in ('-o', '--output'):
+                usage(1, _("Invalid value for --style: %s") % arg)
+        elif opt in ("-o", "--output"):
             options.outfile = arg
-        elif opt in ('-p', '--output-dir'):
+        elif opt in ("-p", "--output-dir"):
             options.outpath = arg
-        elif opt in ('-v', '--verbose'):
+        elif opt in ("-v", "--verbose"):
             options.verbose = 1
-        elif opt in ('-V', '--version'):
-            print(_('pygettext.py (xgettext for Python) %s') % __version__)
+        elif opt in ("-V", "--version"):
+            print(_("pygettext.py (xgettext for Python) %s") % __version__)
             sys.exit(0)
-        elif opt in ('-w', '--width'):
+        elif opt in ("-w", "--width"):
             try:
                 options.width = int(arg)
             except ValueError:
-                usage(1, _('--width argument must be an integer: %s') % arg)
-        elif opt in ('-x', '--exclude-file'):
+                usage(1, _("--width argument must be an integer: %s") % arg)
+        elif opt in ("-x", "--exclude-file"):
             options.excludefilename = arg
-        elif opt in ('-X', '--no-docstrings'):
+        elif opt in ("-X", "--no-docstrings"):
             fp = open(arg)
             try:
                 while 1:
@@ -617,8 +663,10 @@ def main():
             with open(options.excludefilename) as fp:
                 options.toexclude = fp.readlines()
         except IOError:
-            print(_(
-                "Can't read --exclude-file: %s") % options.excludefilename, file=sys.stderr)
+            print(
+                _("Can't read --exclude-file: %s") % options.excludefilename,
+                file=sys.stderr,
+            )
             sys.exit(1)
     else:
         options.toexclude = []
@@ -626,7 +674,7 @@ def main():
     # resolve args to module lists
     expanded = []
     for arg in args:
-        if arg == '-':
+        if arg == "-":
             expanded.append(arg)
         else:
             expanded.extend(getFilesForName(arg))
@@ -635,15 +683,15 @@ def main():
     # slurp through all the files
     eater = TokenEater(options)
     for filename in args:
-        if filename == '-':
+        if filename == "-":
             if options.verbose:
-                print(_('Reading standard input'))
+                print(_("Reading standard input"))
             fp = sys.stdin.buffer
             closep = 0
         else:
             if options.verbose:
-                print(_('Working on %s') % filename)
-            fp = open(filename, 'rb')
+                print(_("Working on %s") % filename)
+            fp = open(filename, "rb")
             closep = 1
         try:
             eater.set_filename(filename)
@@ -652,21 +700,23 @@ def main():
                 for _token in tokens:
                     eater(*_token)
             except tokenize.TokenError as e:
-                print('%s: %s, line %d, column %d' % (
-                    e.args[0], filename, e.args[1][0], e.args[1][1]),
-                    file=sys.stderr)
+                print(
+                    "%s: %s, line %d, column %d"
+                    % (e.args[0], filename, e.args[1][0], e.args[1][1]),
+                    file=sys.stderr,
+                )
         finally:
             if closep:
                 fp.close()
 
     # write the output
-    if options.outfile == '-':
+    if options.outfile == "-":
         fp = sys.stdout
         closep = 0
     else:
         if options.outpath:
             options.outfile = os.path.join(options.outpath, options.outfile)
-        fp = open(options.outfile, 'w')
+        fp = open(options.outfile, "w")
         closep = 1
     try:
         eater.write(fp)
@@ -674,10 +724,10 @@ def main():
         if closep:
             fp.close()
 
-
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
     # some more test strings
     # this one creates a warning
-    _('*** Seen unexpected token "%(token)s"') % {'token': 'test'}
-    _('more' 'than' 'one' 'string')
+    _('*** Seen unexpected token "%(token)s"') % {"token": "test"}
+    _("more" "than" "one" "string")
