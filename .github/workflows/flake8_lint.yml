@@ -20,4 +20,8 @@ jobs:
         run: pip install flake8 flake8-tabs
 
       - name: Run flake8
-        run: flake8 . --help --config .flake8
+        uses: suo/flake8-github-action@releases/v1
+        with:
+          checkName: 'flake8_lint'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
