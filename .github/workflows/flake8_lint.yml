@@ -18,6 +18,8 @@ jobs:
 
       - name: Install flake8
         run: pip install flake8
+
+      - name: Install flake8-tabs
         run: pip install flake8-tabs
 
       - name: Run flake8
