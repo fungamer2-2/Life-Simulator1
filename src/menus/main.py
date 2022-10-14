@@ -222,6 +222,7 @@ def main_menu(player):
 			choices.append(_("Meditate"))
 			choices.append(_("Library"))
 			choices.append(_("Gym"))
+			choices.append(_("Listen to music"))
 		if player.age >= 18:
 			choices.append(_("Lottery"))
 		choices.append(_("Surrender"))
@@ -245,7 +246,7 @@ def main_menu(player):
 			if not player.played:
 				player.played = True
 				player.change_happiness(happy_gain)
-		if choice == _("Arts and Crafts"):
+		elif choice == _("Arts and Crafts"):
 			if randint(1, 10) == 1:
 				print(_("You thought about doing arts and crafts, but couldn't decide what to make."))
 				player.change_happiness(-randint(1, 3))
@@ -263,6 +264,14 @@ def main_menu(player):
 				if not player.did_arts_and_crafts and Trait.CHEERFUL in player.traits:
 					player.change_happiness(3)
 				player.did_arts_and_crafts = True
+		if choice == _("Listen to music"):
+			print(_("You listened to some music."))
+			if not player.listened_to_music:
+				player.change_happiness(randint(4, 8))
+				player.change_health(randint(0, 2))
+				player.change_stress(-randint(1, 7))
+				player.change_smarts(randint(0, 1))
+				player.listened_to_music = True
 		if choice == _("Meditate"):
 			print(_("You practiced meditation."))
 			if not player.meditated:  # You can only get the bonus once per year

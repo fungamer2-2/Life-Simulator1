@@ -119,6 +119,7 @@ class Player(Person):
 		self.played = False
 		self.did_arts_and_crafts = False
 		self.worked_harder = False
+		self.listened_to_music = False
 
 	def age_up(self):
 		oldhappy = self.happiness
