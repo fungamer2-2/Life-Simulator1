@@ -205,11 +205,22 @@ class Player(Person):
 				diff = min(happy_change + 5, 0)
 			diff = -round_stochastic(diff / 3)
 			self.change_stress(diff)
-			self.change_performance(randint(-4, 4) + round_stochastic((50 - self.stress)/25))
+			self.change_performance(randint(-4, 4) + round_stochastic((50 - self.stress)/20))
 			if self.performance < 15 and randint(1, self.performance + 1) == 1:
 				display_event("You have been fired from your job.\nReason: Performance")
 				self.lose_job()
 				self.change_happiness(-randint(20, 35))
+			if self.stress > 65:
+				amount = randint(0, round_stochastic((self.stress - 65)/5))
+				self.change_happiness(-amount)
+				critical_stress = self.stress > 85
+				if critical_stress:
+					self.change_health(round_stochastic((self.stress - 85)/4))
+				if amount > 0 and randint(1, 5 - critical_stress) == 1:
+					if critical_stress:
+						print("You feel like you're on the verge of burnout from so much work!")
+					else:
+						print("You're feeling stressed out from all of this work.")
 				
 	def get_job(self, salary):
 		if not self.has_job:
@@ -413,7 +424,7 @@ class Player(Person):
 								display_event(
 									_("Your scholarship application has been awarded!")
 								)
-								self.change_happiness(randint(10, 15) + (10 * (Trait.CHEERFUL in player.traits)))
+								self.change_happiness(randint(10, 15) + (10 * (Trait.CHEERFUL in self.traits)))
 								chosen = True
 							else:
 								display_event(

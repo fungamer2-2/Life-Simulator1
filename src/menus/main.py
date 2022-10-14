@@ -437,6 +437,11 @@ def main_menu(player):
 				display_data(_("Smarts"), player.smarts)
 				display_data(_("Looks"), player.looks)
 				display_data(_("Karma"), player.karma)
+				print()
+				print(_("The below stats only matter if you have a job:"))
+				display_data(_("Stress"), player.stress)
+				display_data(_("Performance"), player.karma)	
+				print()
 				choice = choice_input(
 					_("Back"),
 					_("Modify Happiness"),
@@ -444,6 +449,8 @@ def main_menu(player):
 					_("Modify Smarts"),
 					_("Modify Looks"),
 					_("Modify Karma"),
+					_("Modify Stress"),
+					_("Modify Performance")
 				)
 				if choice == 1:
 					break
@@ -472,6 +479,16 @@ def main_menu(player):
 					val = int_input_range_optional(0, 100)
 					if val is not None:
 						player.karma = val
+				elif choice == 7:
+					print(_("What would you like to set Stress to? (0-100)"))
+					val = int_input_range_optional(0, 100)
+					if val is not None:
+						player.stress = val
+				elif choice == 8:
+					print(_("What would you like to set Performance to? (0-100)"))
+					val = int_input_range_optional(0, 100)
+					if val is not None:
+						player.performance = val
 		elif choice == 3:
 			while True:
 				clear_screen()
