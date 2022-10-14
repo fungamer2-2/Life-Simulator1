@@ -206,7 +206,11 @@ class Player(Person):
 			diff = -round_stochastic(diff / 3)
 			self.change_stress(diff)
 			self.change_performance(randint(-4, 4) + round_stochastic((50 - self.stress)/25))
-		
+			if self.performance < 15 and randint(1, self.performance + 1) == 1:
+				display_event("You have been fired from your job.\nReason: Performance")
+				self.lose_job()
+				self.change_happiness(-randint(20, 35))
+				
 	def get_job(self, salary):
 		if not self.has_job:
 			self.has_job = True
