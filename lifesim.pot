@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-10-13 15:19-0400\n"
+"POT-Creation-Date: 2022-10-13 20:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: lifesim.py:20 src/people/classes/player.py:142
+#: lifesim.py:20 src/people/classes/player.py:143
 msgid "Age {age}"
 msgstr ""
 
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Find a Job"
 msgstr ""
 
-#: src/menus/main.py:29 src/menus/main.py:530
+#: src/menus/main.py:29 src/menus/main.py:539
 msgid "View Saved Games"
 msgstr ""
 
@@ -126,8 +126,8 @@ msgstr ""
 
 #: src/menus/main.py:42 src/menus/main.py:64 src/menus/main.py:216
 #: src/menus/main.py:329 src/menus/main.py:396 src/menus/main.py:421
-#: src/menus/main.py:432 src/menus/main.py:473 src/menus/main.py:517
-#: src/menus/main.py:537 src/menus/main.py:543
+#: src/menus/main.py:432 src/menus/main.py:473 src/menus/main.py:520
+#: src/menus/main.py:546 src/menus/main.py:552
 msgid "Back"
 msgstr ""
 
@@ -147,11 +147,11 @@ msgstr ""
 msgid "Generosity"
 msgstr ""
 
-#: src/menus/main.py:60 src/menus/main.py:428 src/people/classes/player.py:277
+#: src/menus/main.py:60 src/menus/main.py:428 src/people/classes/player.py:279
 msgid "Smarts"
 msgstr ""
 
-#: src/menus/main.py:61 src/menus/main.py:429 src/people/classes/player.py:278
+#: src/menus/main.py:61 src/menus/main.py:429 src/people/classes/player.py:280
 msgid "Looks"
 msgstr ""
 
@@ -320,7 +320,7 @@ msgid "You have achieved a deeper awareness of yourself."
 msgstr ""
 
 #: src/menus/main.py:277 src/menus/main.py:430
-#: src/people/classes/player.py:241
+#: src/people/classes/player.py:243
 msgid "Karma"
 msgstr ""
 
@@ -464,11 +464,11 @@ msgstr ""
 msgid "Your stats"
 msgstr ""
 
-#: src/menus/main.py:426 src/people/classes/player.py:275
+#: src/menus/main.py:426 src/people/classes/player.py:277
 msgid "Happiness"
 msgstr ""
 
-#: src/menus/main.py:427 src/people/classes/player.py:276
+#: src/menus/main.py:427 src/people/classes/player.py:278
 msgid "Health"
 msgstr ""
 
@@ -556,55 +556,63 @@ msgstr ""
 msgid "Your job"
 msgstr ""
 
-#: src/menus/main.py:515
+#: src/menus/main.py:516
 msgid "Stress"
 msgstr ""
 
 #: src/menus/main.py:517
+msgid "Performance"
+msgstr ""
+
+#: src/menus/main.py:520
 msgid "Quit Job"
 msgstr ""
 
-#: src/menus/main.py:517
+#: src/menus/main.py:520
 msgid "Retire"
 msgstr ""
 
-#: src/menus/main.py:521
+#: src/menus/main.py:520
+msgid "Work Harder"
+msgstr ""
+
+#: src/menus/main.py:530
 msgid "Do you want to retire? You will receive a yearly pension of ${pension}"
 msgstr ""
 
-#: src/menus/main.py:525
+#: src/menus/main.py:534
 msgid "You retired and are now receiving pension of ${pension}."
 msgstr ""
 
-#: src/menus/main.py:526
+#: src/menus/main.py:535
 msgid "Are you sure you want to quit your job?"
 msgstr ""
 
-#: src/menus/main.py:528
+#: src/menus/main.py:537
 msgid "You quit your job."
 msgstr ""
 
-#: src/menus/main.py:533
+#: src/menus/main.py:542
 msgid "No previously saved games"
 msgstr ""
 
-#: src/menus/main.py:535
+#: src/menus/main.py:544
 msgid "Previously saved games:"
 msgstr ""
 
-#: src/menus/main.py:543
+#: src/menus/main.py:552
 msgid "Delete Save"
 msgstr ""
 
-#: src/menus/main.py:543
+#: src/menus/main.py:552
 msgid "Load Save"
 msgstr ""
 
-#: src/menus/main.py:545
+#: src/menus/main.py:554
 msgid "Would you like to load this save?"
 msgstr ""
 
-#: src/menus/main.py:551
+#: src/menus/main.py:560
 msgid "Are you sure you want to delete this save?"
 msgstr ""
 
@@ -636,11 +644,11 @@ msgstr ""
 msgid "Choose your gender:"
 msgstr ""
 
-#: src/menus/start.py:35 src/people/classes/player.py:235
+#: src/menus/start.py:35 src/people/classes/player.py:237
 msgid "Female"
 msgstr ""
 
-#: src/menus/start.py:35 src/people/classes/player.py:235
+#: src/menus/start.py:35 src/people/classes/player.py:237
 msgid "Male"
 msgstr ""
 
@@ -672,15 +680,15 @@ msgstr ""
 msgid "Mother"
 msgstr ""
 
-#: src/people/classes/player.py:144
+#: src/people/classes/player.py:145
 msgid "You died of old age."
 msgstr ""
 
-#: src/people/classes/player.py:168
+#: src/people/classes/player.py:169
 msgid "You are suffering from depression."
 msgstr ""
 
-#: src/people/classes/player.py:176
+#: src/people/classes/player.py:177
 msgid "Your {relative} died at the age of {age} due to old age."
 msgstr ""
 
@@ -688,11 +696,11 @@ msgstr ""
 msgid "You inherited ${amount}"
 msgstr ""
 
-#: src/people/classes/player.py:241
+#: src/people/classes/player.py:243
 msgid "Lifetime Happiness"
 msgstr ""
 
-#: src/people/classes/player.py:284
+#: src/people/classes/player.py:286
 msgid "You were struck by lightning!"
 msgstr ""
 
@@ -796,27 +804,27 @@ msgstr ""
 msgid "Your scholarship application has been awarded!"
 msgstr ""
 
-#: src/people/classes/player.py:418
+#: src/people/classes/player.py:415
 msgid "Your scholarship application was rejected."
 msgstr ""
 
-#: src/people/classes/player.py:428
+#: src/people/classes/player.py:425
 msgid "Your parents agreed to pay for your university tuition!"
 msgstr ""
 
-#: src/people/classes/player.py:439
+#: src/people/classes/player.py:433
 msgid "Your parents refused to pay for your university tuition."
 msgstr ""
 
-#: src/people/classes/player.py:447
+#: src/people/classes/player.py:441
 msgid "You took out a student loan to pay for your university tuition."
 msgstr ""
 
-#: src/people/classes/player.py:453
+#: src/people/classes/player.py:447
 msgid "You are now enrolled in university."
 msgstr ""
 
-#: src/people/classes/player.py:457
+#: src/people/classes/player.py:451
 msgid "Your application to university was rejected."
 msgstr ""
 

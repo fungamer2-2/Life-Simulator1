@@ -520,7 +520,7 @@ def main_menu(player):
 		choice = choice_input(_("Back"), _("Work Harder"), _("Retire") if can_retire else _("Quit Job"))
 		if choice == 2:
 			print("You worked harder.")
-			if not worked_harder:
+			if not player.worked_harder:
 				player.change_performance(randint(1, 10))
 				player.change_stress(4)
 				player.worked_harder = True
