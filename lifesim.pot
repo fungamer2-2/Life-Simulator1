@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-10-15 13:24-0400\n"
+"POT-Creation-Date: 2022-10-15 14:49-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: lifesim.py:22 src/people/classes/player.py:173
+#: lifesim.py:20 src/people/classes/player.py:173
 msgid "Age {age}"
 msgstr ""
 
-#: lifesim.py:27
+#: lifesim.py:25
 msgid "Would you like to start a new life?"
 msgstr ""
 
