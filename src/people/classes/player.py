@@ -73,9 +73,30 @@ class Player(Person):
 		self.stress = 0
 		self.performance = 0
 		self.traits = set()
+		self.illnesses = []
 		
 		self.ID = str(uuid.uuid4())
 		self.save_path = SAVE_PATH + "/" + self.ID + ".pickle"
+	
+	def is_depressed(self):
+		return "Depression" in self.illnesses #TODO: Migrate depression to a list of diseases
+		
+	def randomize_traits(self):
+		self.traits.clear()
+		total_traits = len(Trait.__members__)
+		num_traits = 1
+		while randint(1, 2) == 1 and num_traits < randint(1, total_traits):
+			num_traits += 1
+		all_traits = [t for t in Trait]
+		t = set()
+		for _ in range(num_traits):
+			attempts = 25
+			while attempts > 0:
+				selected = random.choice(all_traits)
+				if len(t) < 1 or not any(selected.conflicts_with(trait) for trait in t):
+					break
+			if attempts > 0:
+				t.add(selected)
 	
 	@classmethod
 	def load(cls, d):
@@ -102,6 +123,14 @@ class Player(Person):
 		
 	def is_in_school(self):
 		return self.grades is not None
+		
+	def add_illness(self, illness):
+		if illness not in self.illnesses:
+			self.illnesses.append(illness)
+		
+	def remove_illness(self, illness):
+		if illness in self.illnesses:
+			self.illnesses.remove(illness)
 
 	def change_grades(self, amount):
 		if self.is_in_school():
@@ -151,9 +180,9 @@ class Player(Person):
 			base = 65 - self.happiness*0.3
 			diff = base - self.stress
 			if diff > 0:
-				self.change_stress(randint(0, round_stochastic(diff/5)+1))
+				self.change_stress(randint(0, round_stochastic(diff/6)))
 			elif diff < 0:
-				self.change_stress(-randint(0, round_stochastic(abs(diff)/8)+1))
+				self.change_stress(-randint(0, round_stochastic(abs(diff)/10)))
 		if self.age == 13:
 			val = 0
 			if randint(1, 4) == 1:
@@ -166,9 +195,9 @@ class Player(Person):
 		if self.age > 50 and self.looks > randint(20, 25):
 			decay = min((self.age - 51) // 5 + 1, 4)
 			self.change_looks(-randint(0, decay))
-		if self.happiness < randint(1, 10) and not self.depressed:
+		if self.happiness < randint(1, 10) and not self.is_depressed():
 			display_event(_("You are suffering from depression."))
-			self.depressed = True
+			self.add_illness("Depression")
 			self.change_happiness(-50)
 			self.change_health(-randint(4, 8))
 		for relation in self.relations[:]:
@@ -207,7 +236,7 @@ class Player(Person):
 			self.change_stress(diff)
 			self.change_performance(randint(-4, 4) + round_stochastic((50 - self.stress)/20))
 			if self.performance < 15 and randint(1, self.performance + 1) == 1:
-				display_event("You have been fired from your job.\nReason: Performance")
+				display_event(_("You have been fired from your job.\nReason: Performance"))
 				self.lose_job()
 				self.change_happiness(-randint(20, 35))
 			if self.stress > 65:
@@ -215,13 +244,16 @@ class Player(Person):
 				self.change_happiness(-amount)
 				critical_stress = self.stress > 85
 				if critical_stress:
-					self.change_health(round_stochastic((self.stress - 85)/4))
+					self.change_health(round_stochastic((self.stress - 80)/4))	
 				if amount > 0 and randint(1, 5 - critical_stress) == 1:
 					if critical_stress:
-						print("You feel like you're on the verge of burnout from so much work!")
+						print(_("You feel like you're on the verge of burnout from so much work!"))
 					else:
-						print("You're feeling stressed out from all of this work.")
-				
+						print(_("You're feeling stressed out from all of this work."))
+				if critical_stress and "High Blood Pressure" not in self.illnesses and randint(1, 7) == 1:
+					display_event(_("You are suffering from high blood pressure."))
+					self.change_health(-randint(4, 8))
+					self.add_illness("High Blood Pressure")
 	def get_job(self, salary):
 		if not self.has_job:
 			self.has_job = True
@@ -345,15 +377,26 @@ class Player(Person):
 			self.student_loan -= amount
 			if self.student_loan == 0:
 				print(_("You've fully paid off your student loan"))
-		if self.depressed:
-			if self.happiness >= randint(20, 35):
-				display_event(_("You are no longer suffering from depression"))
-				self.change_happiness((100 - self.happiness) // 2)
-				self.change_health(randint(4, 8))
-				self.depressed = False
-			else:
-				self.change_happiness(-randint(1, 2))
-				self.change_health(-randint(1, 4))
+		for illness in self.illnesses[:]:
+			if illness == "Depression":
+				if self.happiness >= randint(20, 35):
+					display_event(_("You are no longer suffering from depression"))
+					self.change_happiness((100 - self.happiness) // 2)
+					self.change_health(randint(4, 8))
+					self.remove_illness("Depression")
+				else:
+					self.change_happiness(-randint(1, 2))
+					self.change_health(-randint(1, 4))
+			elif illness == "High Blood Pressure":
+				self.change_health(-randint(1, 5))
+				if self.stress > randint(80, 95) and self.health < randint(1, 10):
+					if randint(1, 3) == 1:
+						self.die(_("You died due to a massive heart attack."))
+				elif self.stress < randint(25, 60) and randint(1, 2) == 1:
+					display_event(_("You are no longer suffering from high blood pressure"))
+					self.change_happiness(randint(4, 8))
+					self.change_health(randint(4, 8))
+					self.remove_illness("High Blood Pressure")
 		if self.age == 2 and randint(1, 2) == 1:
 			print(
 				_("Your mother is taking to to the doctor's office to get vaccinated.")

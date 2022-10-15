@@ -216,6 +216,8 @@ def main_menu(player):
 		choices = [_("Back")]
 		if 3 <= player.age < 13:
 			choices.append(_("Play with your toys"))
+		if player.age >= 4:
+			choices.append(_("Doctor"))
 		if player.age >= 5:
 			choices.append(_("Arts and Crafts"))
 		if player.age >= 13:
@@ -229,7 +231,7 @@ def main_menu(player):
 		choice = choice_input(*choices, return_text=True)
 		clear_screen()
 		if choice == _("Play with your toys"):
-			if player.depressed:
+			if player.is_depressed():
 				print(_("You don't feel like playing, but you decide to try anyway."))
 				happy_gain = randint(0, 6)
 				if Trait.CHEERFUL in player.traits:
@@ -260,19 +262,64 @@ def main_menu(player):
 					print(_("You decided to bake something tasty!"))
 					if not player.did_arts_and_crafts:
 						player.change_happiness(randint(3, 6))
-						player.change_smarts(randint(0, 3))
-				if not player.did_arts_and_crafts and Trait.CHEERFUL in player.traits:
-					player.change_happiness(3)
+						player.change_smarts(randint(0, 3)) 
+				if not player.did_arts_and_crafts:
+					if Trait.CHEERFUL in player.traits:
+						player.change_happiness(3)
+						if Trait.NERD in player.traits:
+							player.change_smarts(randint(0, 2))
 				player.did_arts_and_crafts = True
-		if choice == _("Listen to music"):
+		elif choice == _("Listen to music"):
 			print(_("You listened to some music."))
 			if not player.listened_to_music:
 				player.change_happiness(randint(4, 8))
 				player.change_health(randint(0, 2))
 				player.change_stress(-randint(1, 7))
-				player.change_smarts(randint(0, 1))
+				player.change_smarts(randint(0, 1 + (Trait.NERD in player.traits)))
 				player.listened_to_music = True
-		if choice == _("Meditate"):
+		elif choice == _("Doctor"):
+			has_fee = player.age >= 18
+			if has_fee:
+				visit = yes_no(_("Would you like to visit the doctor? ($100 consultation fee)"))
+			else:
+				visit = yes_no(_("Would you like to visit the doctor?"))
+			if visit:
+				if has_fee and player.money < 100:
+					print(_("You don't have enough money."))
+				else:
+					if has_fee:
+						player.money -= 100
+					if len(player.illnesses) == 0:
+						print(_("The doctor has determined that you are not suffering from any illnesses."))
+					else:
+						print(_("The doctor has determined that you are currently suffering from the following:"))
+						s = [ILLNESSES_TRANSLATIONS.get(name, name) for name in player.illnesses]
+						print(", ".join(s))
+						options = ["Back"]
+						options.extend(_("Treat {illness}").format(illness=n) for n in s)
+						choice = choice_input(*options)
+						if choice > 1:
+							was_cured = False
+							illness = player.illnesses[choice - 2]
+							if illness == "Depression":
+								was_cured = randint(1, 4) == 1 and player.happiness >= randint(20, 35)
+								if was_cured:
+									player.change_health(randint(4, 8))
+									player.change_happiness((100 - player.happiness)//2)
+							elif illness == "High Blood Pressure":
+								was_cured = player.stress < randint(65, 85) and randint(1, 3) == 1
+								if was_cured:
+									player.change_health(randint(4, 8))
+									player.change_happiness(randint(3, 6))
+							print(_("You were treated for your {illness}.").format(illness=illness))
+							if was_cured:
+								display_event(_("You are no longer suffering from {illness}.").format(illness=illness))
+								player.remove_illness(illness)
+							else:
+								player.change_health(randint(3, 5))
+								player.change_happiness(randint(3, 5))
+								display_event(_("You continue to suffer from {illness}.").format(illness=illness))
+		elif choice == _("Meditate"):
 			print(_("You practiced meditation."))
 			if not player.meditated:  # You can only get the bonus once per year
 				player.change_health(randint(2, 4))
@@ -300,7 +347,7 @@ def main_menu(player):
 				player.change_happiness(round_stochastic(enjoyment/15))
 				if Trait.CHEERFUL in player.traits:
 					player.change_happiness(3)
-				player.change_smarts(randint(2, 5))
+				player.change_smarts(randint(2, 5) + (3*(Trait.NERD in player.traits)))
 				player.visited_library = True
 		elif choice == _("Gym"):
 			if player.health < 10:
@@ -408,7 +455,7 @@ def main_menu(player):
 			print(_("You began studying harder"))
 			if not player.studied:
 				player.change_grades(randint(5, 7 + (100 - player.grades) // 5))
-				player.change_smarts(randint(0, 2))
+				player.change_smarts(randint(0, 2) + (Trait.NERD in player.traits))
 				player.studied = True
 		if choice == 3:
 			can_drop_out = player.smarts < randint(8, 12) + randint(0, 13)
@@ -440,7 +487,7 @@ def main_menu(player):
 				print()
 				print(_("The below stats only matter if you have a job:"))
 				display_data(_("Stress"), player.stress)
-				display_data(_("Performance"), player.karma)	
+				display_data(_("Performance"), player.performance)	
 				print()
 				choice = choice_input(
 					_("Back"),

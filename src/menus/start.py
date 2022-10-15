@@ -12,10 +12,9 @@ def start_menu():
     if not os.path.exists(SAVE_PATH):
         os.mkdir(SAVE_PATH)
     saves = get_save_files()
-    if saves:  # TODO: Check for saves
+    if saves:
         choice = choice_input(_("Load Game"), _("New Game"))
         if choice == 1:
-            # TODO: Select from a list of saves
             players = get_saves(saves)
             choices = [p["name"] for p in players]
             choice = choice_input(*choices)

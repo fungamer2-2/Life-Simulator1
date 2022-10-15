@@ -1,6 +1,6 @@
 import os as _os
 
-DEBUG = False
+DEBUG = True
 
 MALE_NAMES = open("assets/male_names.txt").read().splitlines()
 FEMALE_NAMES = open("assets/female_names.txt").read().splitlines()
@@ -23,3 +23,10 @@ SALARY_TAX_BRACKETS = [
     [523600, 0.35],
     0.37,
 ]
+
+from src.lifesim_lib.translation import _
+
+ILLNESSES_TRANSLATIONS = {
+	"Depression": _("Depression"),
+	"High Blood Pressure": _("High Blood Pressure"),
+}
