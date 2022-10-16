@@ -17,6 +17,7 @@ while True:
 	clear_screen()
 	try:
 		player = start_menu()
+		player.print_traits()
 		print(_("Age {age}").format(age=player.age))
 		while True:
 			main_menu(player)

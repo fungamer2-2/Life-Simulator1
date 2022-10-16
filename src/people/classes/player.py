@@ -85,19 +85,29 @@ class Player(Person):
 		self.traits.clear()
 		total_traits = len(Trait.__members__)
 		num_traits = 1
-		while randint(1, 2) == 1 and num_traits < randint(1, total_traits):
+		while randint(1, 100) <= 60 and num_traits < randint(1, total_traits):
 			num_traits += 1
 		all_traits = [t for t in Trait]
 		t = set()
+		
 		for i in range(num_traits):
 			attempts = 50
 			while attempts > 0:
 				selected = random.choice(all_traits)
 				if len(t) < 1 or not any(selected.conflicts_with(trait) for trait in t):
 					break
-				attempts -= 1
+				else:
+					attempts -= 1
 			if attempts > 0:
 				t.add(selected)
+		self.traits = t	
+	
+	def print_traits(self):
+		if self.traits:
+			print()
+			print(_("You have the following traits:"))
+			for trait in self.traits:
+				print_colored(f"{trait.name_}: {trait.desc}", trait.get_color())
 	
 	@classmethod
 	def load(cls, d):
@@ -140,6 +150,9 @@ class Player(Person):
 	def change_karma(self, amount):
 		self.karma = clamp(self.karma + amount, 0, 100)
 
+	def get_traits_str(self):
+		return  ", ".join(map(lambda t: get_colored(t.name_, t.get_color()), self.traits))
+	
 	def reset_already_did(self):
 		self.meditated = False
 		self.worked_out = False
@@ -160,6 +173,13 @@ class Player(Person):
 				self.change_happiness(-randint(4, 8))
 			else:
 				self.change_happiness(-randint(0, 4))
+		if Trait.FAST_WORKER in self.traits:
+			self.change_performance(randint(0, 4))	
+		elif Trait.SLOW_WORKER in self.traits:
+			self.change_performance(-randint(2, 3))
+		if Trait.LAZY in self.traits:
+			self.change_performance(-randint(2, 4))
+			self.change_stress(-randint(2, 5))
 		self.reset_already_did()
 		self.change_karma(randint(-2, 2))
 
@@ -486,7 +506,7 @@ class Player(Person):
 										"Your parents agreed to pay for your university tuition!"
 									)
 								)
-								self.change_happiness(randint(7, 9) + (7 * (Trait.CHEERFUL in player.traits)))
+								self.change_happiness(randint(7, 9) + (7 * (Trait.CHEERFUL in self.traits)))
 								chosen = True
 							else:
 								display_event(

@@ -1,11 +1,10 @@
-from src.lifesim_lib.lifesim_lib import choice_input, Gender, get_saves, get_save_files
 from src.people.classes.player import Player
 from src.people.classes.sibling import Sibling
 from src.lifesim_lib.translation import _
 from src.lifesim_lib.const import SAVE_PATH
 import os, random, pickle
 from random import randint
-from src.lifesim_lib.lifesim_lib import round_stochastic
+from src.lifesim_lib.lifesim_lib import *
 
 
 def start_menu():
@@ -34,6 +33,39 @@ def start_menu():
         choice = choice_input(_("Male"), _("Female"))
         print()
         player = Player(first, last, Gender.Male if choice == 1 else Gender.Female)
+        print(_("Would you like to Randomize or Customize your traits?"))
+        choice = choice_input(_("Randomize"), _("Customize"))
+        if choice == 1:
+            player.randomize_traits()
+        else:
+            player.traits = set()
+            all_traits = [t for t in Trait]
+            while True:
+                clear_screen()
+                print(_("Enter a number to select or deselect a trait"))
+                print()
+                print(_("Traits:"))
+                if player.traits:
+                    print(player.get_traits_str())
+                else:
+                    print(_("None"))
+                print()
+                can_choose = lambda t: not any(t.conflicts_with(other) for other in player.traits)
+                options = [trait for trait in all_traits if can_choose(trait)]
+                choices = list(map(lambda t: get_colored(t.name_, t.get_color()), options))
+                choices.append(_("Done"))
+                choice = choice_input(*choices)
+                if choice == len(choices):
+                    if yes_no(_("Would you like to start with these traits?")):
+                        break
+                else:
+                    trait = options[choice - 1]
+                    if trait in player.traits:
+                        player.traits.remove(trait)
+                    else:
+                        player.traits.add(trait)
+            clear_screen()   
+        return player
     else:
         player = Player()
     mother = player.parents["Mother"]
@@ -66,4 +98,5 @@ def start_menu():
                 age=sibling.age,
             )
         )
+    player.randomize_traits()
     return player
