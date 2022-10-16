@@ -89,12 +89,13 @@ class Player(Person):
 			num_traits += 1
 		all_traits = [t for t in Trait]
 		t = set()
-		for _ in range(num_traits):
-			attempts = 25
+		for i in range(num_traits):
+			attempts = 50
 			while attempts > 0:
 				selected = random.choice(all_traits)
 				if len(t) < 1 or not any(selected.conflicts_with(trait) for trait in t):
 					break
+				attempts -= 1
 			if attempts > 0:
 				t.add(selected)
 	
