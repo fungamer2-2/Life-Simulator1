@@ -17,9 +17,6 @@ while True:
 	clear_screen()
 	try:
 		player = start_menu()
-		if isinstance(player.illnesses, set):
-			player.illnesses = list(player.illnesses
-			)
 		print(_("Age {age}").format(age=player.age))
 		while True:
 			main_menu(player)
