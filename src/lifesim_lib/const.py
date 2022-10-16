@@ -27,6 +27,6 @@ SALARY_TAX_BRACKETS = [
 from src.lifesim_lib.translation import _
 
 ILLNESSES_TRANSLATIONS = {
-	"Depression": _("Depression"),
-	"High Blood Pressure": _("High Blood Pressure"),
+    "Depression": _("Depression"),
+    "High Blood Pressure": _("High Blood Pressure"),
 }
