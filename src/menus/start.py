@@ -43,6 +43,7 @@ def start_menu():
             while True:
                 clear_screen()
                 print(_("Enter a number to select or deselect a trait"))
+                print(_('Select "Done" when finished'))
                 print()
                 print(_("Traits:"))
                 if player.traits:

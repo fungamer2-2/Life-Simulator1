@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-10-16 15:42-0400\n"
+"POT-Creation-Date: 2022-10-16 15:47-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -772,31 +772,35 @@ msgstr ""
 msgid "Enter a number to select or deselect a trait"
 msgstr ""
 
-#: src/menus/start.py:47
+#: src/menus/start.py:46
+msgid "Select \"Done\" when finished"
+msgstr ""
+
+#: src/menus/start.py:48
 msgid "Traits:"
 msgstr ""
 
-#: src/menus/start.py:51
+#: src/menus/start.py:52
 msgid "None"
 msgstr ""
 
-#: src/menus/start.py:56
+#: src/menus/start.py:57
 msgid "Done"
 msgstr ""
 
-#: src/menus/start.py:59
+#: src/menus/start.py:60
 msgid "Would you like to start with these traits?"
 msgstr ""
 
-#: src/menus/start.py:74
+#: src/menus/start.py:75
 msgid "Your mother is {name}, age {age}."
 msgstr ""
 
-#: src/menus/start.py:77
+#: src/menus/start.py:78
 msgid "Your father is {name}, age {age}."
 msgstr ""
 
-#: src/menus/start.py:95
+#: src/menus/start.py:96
 msgid "You have a {siblingtype} named {name}, age {age}."
 msgstr ""
 
