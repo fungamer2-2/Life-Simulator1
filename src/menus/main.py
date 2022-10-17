@@ -162,12 +162,21 @@ def main_menu(player):
 							relation.change_relationship(-randint(4, 7))
 			elif choice == _("Compliment"):
 				appreciation = randint(0, 60) + randint(0, 40)
-				diff = player.smarts - relation.smarts + 50
-				if randint(1, 100) <= diff:
+				relationship = relation.relationship
+				if relationship >= randint(51, 100):
 					appreciation = max(appreciation, randint(0, 60) + randint(0, 40))
+					if relationship >= randint(75, 120):
+						appreciation = max(appreciation, randint(0, 60) + randint(0, 40))
+				elif relationship <= randint(0, 49):
+					appreciation = min(appreciation, randint(0, 60) + randint(0, 40))
+					if relationship <= randint(0, 25):
+						appreciation = min(appreciation, randint(0, 60) + randint(0, 40))
+				compliment = random.choice(COMPLIMENTS)
 				print(
-					_("You complimented your {relation}.").format(
-						relation=relation.name_accusative()
+					_("You told your {relation} that {hes_shes} {compliment}.").format(
+						relation=relation.name_accusative(),
+						hes_shes=relation.hes_shes(),
+						compliment=compliment
 					)
 				)
 				display_bar(
@@ -180,12 +189,12 @@ def main_menu(player):
 				if not relation.was_complimented:
 					player.change_karma(randint(0, 2))
 					relation.change_relationship(round_stochastic(appreciation / 6))
-					if randint(1, 300) <= round_stochastic(
-						appreciation * relation.relationship / 50
-					):
+					if randint(1, 300) <= round_stochastic(appreciation * relation.relationship / 50):
+						compliment = random.choice(COMPLIMENTS)
 						display_event(
-							_("Your {relation} complimented you back!").format(
-								relation=relation.name_accusative()
+							_("Your {relation} told you that you're {compliment}!").format(
+								relation=relation.name_accusative(),
+								compliment=compliment
 							)
 						)
 						player.change_happiness(randint(6, 10) - (3*(Trait.GRUMPY in player.traits)))
