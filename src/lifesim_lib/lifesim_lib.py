@@ -66,7 +66,7 @@ def round_stochastic(value):
             return high
         return low
 
-#This is the order that ANSI colors must be in
+
 COLORS = {
 	"black": 30,
 	"red": 31, 
@@ -78,6 +78,7 @@ COLORS = {
 	"white": 37
 }
 
+
 def get_colored(message, color):
 	if color is None:
 		return str(message)
@@ -85,8 +86,10 @@ def get_colored(message, color):
 		raise ValueError(f"{color!r} is not a valid ANSI color")
 	return f"\u001b[{COLORS[color]}m" + str(message) + "\033[0m"
 	
+	
 def print_colored(message, color):
 	print(get_colored(message, color))
+
 
 class Gender(Enum):
     Male = 0
