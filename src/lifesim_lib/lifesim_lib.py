@@ -68,27 +68,27 @@ def round_stochastic(value):
 
 
 COLORS = {
-	"black": 30,
-	"red": 31, 
-	"green": 32,
-	"yellow": 33, 
-	"blue": 34,
-	"magenta": 35, 
-	"cyan": 36, 
-	"white": 37
+    "black": 30,
+    "red": 31,
+    "green": 32,
+    "yellow": 33,
+    "blue": 34,
+    "magenta": 35,
+    "cyan": 36,
+    "white": 37,
 }
 
 
 def get_colored(message, color):
-	if color is None:
-		return str(message)
-	if color not in COLORS:
-		raise ValueError(f"{color!r} is not a valid ANSI color")
-	return f"\u001b[{COLORS[color]}m" + str(message) + "\033[0m"
-	
-	
+    if color is None:
+        return str(message)
+    if color not in COLORS:
+        raise ValueError(f"{color!r} is not a valid ANSI color")
+    return f"\u001b[{COLORS[color]}m" + str(message) + "\033[0m"
+
+
 def print_colored(message, color):
-	print(get_colored(message, color))
+    print(get_colored(message, color))
 
 
 class Gender(Enum):
@@ -101,7 +101,6 @@ class Gender(Enum):
 
 
 class Trait(Enum):
-    
     def __init__(self, name, desc, val, conflicts=None):
         assert type(val) is int, "Trait value must be an integer"
         self.name_ = name
@@ -111,18 +110,18 @@ class Trait(Enum):
 
     def conflicts_with(self, other):
         return other.name in self.conflicts
-        
+
     def roll_selection(self):
         if self.val == 0:
-        	return True
+            return True
         return random.randint(1, abs(self.val)) == 1
-        
+
     def get_color(self):
-    	if self.val > 0:
-    		return "green"
-    	if self.val < 0:
-    		return "red"
-    	return None
+        if self.val > 0:
+            return "green"
+        if self.val < 0:
+            return "red"
+        return None
 
     # Name, description, value (1 if positive, -1 if negative, 0 if mixed), conflicts
     CHEERFUL = (
@@ -140,7 +139,7 @@ class Trait(Enum):
         _("Fast Worker"),
         _("You tend to work faster, improving your performance over time."),
         1,
-        ["SLOW_WORKER"]
+        ["SLOW_WORKER"],
     )
 
     GRUMPY = (
@@ -153,18 +152,22 @@ class Trait(Enum):
         _("Slow Worker"),
         _("You tend to work slowly, lowering your performance."),
         -1,
-        ["FAST_WORKER"]
+        ["FAST_WORKER"],
     )
     LAZY = (
-    	_("Lazy"),
-    	_("You are often lazy on the job. Your stress and performance decrease over time, and you gain more stress when working harder."),
-    	-1,
-    	["FAST_WORKER"]
+        _("Lazy"),
+        _(
+            "You are often lazy on the job. Your stress and performance decrease over time, and you gain more stress when working harder."
+        ),
+        -1,
+        ["FAST_WORKER"],
     )
 
     MOODY = (
         _("Moody"),
-        _("Your mood can change more easily. All changes to your Happiness are more intense."),
+        _(
+            "Your mood can change more easily. All changes to your Happiness are more intense."
+        ),
         0,
     )
 
