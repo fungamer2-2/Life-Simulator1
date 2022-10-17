@@ -51,9 +51,13 @@ def start_menu():
                 else:
                     print(_("None"))
                 print()
-                can_choose = lambda t: not any(t.conflicts_with(other) for other in player.traits)
+                can_choose = lambda t: not any(
+                    t.conflicts_with(other) for other in player.traits
+                )
                 options = [trait for trait in all_traits if can_choose(trait)]
-                choices = list(map(lambda t: get_colored(t.name_, t.get_color()), options))
+                choices = list(
+                    map(lambda t: get_colored(t.name_, t.get_color()), options)
+                )
                 choices.append(_("Done"))
                 choice = choice_input(*choices)
                 if choice == len(choices):
@@ -65,7 +69,7 @@ def start_menu():
                         player.traits.remove(trait)
                     else:
                         player.traits.add(trait)
-            clear_screen()   
+            clear_screen()
         return player
     else:
         player = Player()
