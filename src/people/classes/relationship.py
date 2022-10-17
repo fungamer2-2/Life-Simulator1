@@ -10,20 +10,9 @@ class Relationship(Person):
     """Base class for relationships."""
 
     def __init__(
-	        self,
-	        first,
-	        last,
-	        age,
-	        gender,
-	        happiness,
-	        health,
-	        smarts,
-	        looks,
-	        relationship
-        ):
-        super().__init__(
-            first, last, age, gender, happiness, health, smarts, looks
-        )
+        self, first, last, age, gender, happiness, health, smarts, looks, relationship
+    ):
+        super().__init__(first, last, age, gender, happiness, health, smarts, looks)
         self.relationship = relationship
         self.spent_time = False
         self.had_conversation = False
@@ -42,13 +31,13 @@ class Relationship(Person):
 
     def him_her(self):
         return self.get_gender_word(_("him"), _("her"))
-	
+
     def hes_shes(self):
         return self.get_gender_word(_("he's"), _("she's"))
 
     def get_type(self):
         return "Unknown Relation"
-        
+
     def name_accusative(self):
         return _("relationship")
 
