@@ -94,6 +94,8 @@ class Player(Person):
 			attempts = 50
 			while attempts > 0:
 				selected = random.choice(all_traits)
+				if not selected.roll_selection():
+					continue
 				if len(t) < 1 or not any(selected.conflicts_with(trait) for trait in t):
 					break
 				else:

@@ -99,6 +99,7 @@ class Gender(Enum):
 class Trait(Enum):
     
     def __init__(self, name, desc, val, conflicts=None):
+        assert type(val) is int, "Trait value must be an integer"
         self.name_ = name
         self.desc = desc
         self.val = val
@@ -106,6 +107,11 @@ class Trait(Enum):
 
     def conflicts_with(self, other):
         return other.name in self.conflicts
+        
+    def roll_selection(self):
+        if self.val == 0:
+        	return True
+        return random.randint(1, abs(self.val)) == 1
         
     def get_color(self):
     	if self.val > 0:

@@ -48,7 +48,7 @@ class Relationship(Person):
 
     def get_type(self):
         return "Unknown Relation"
-
+        
     def name_accusative(self):
         return _("relationship")
 
