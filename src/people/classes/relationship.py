@@ -10,16 +10,16 @@ class Relationship(Person):
     """Base class for relationships."""
 
     def __init__(
-        self,
-        first,
-        last,
-        age,
-        gender,
-        happiness,
-        health,
-        smarts,
-        looks,
-        relationship
+	        self,
+	        first,
+	        last,
+	        age,
+	        gender,
+	        happiness,
+	        health,
+	        smarts,
+	        looks,
+	        relationship
         ):
         super().__init__(
             first, last, age, gender, happiness, health, smarts, looks

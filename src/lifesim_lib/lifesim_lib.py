@@ -79,7 +79,7 @@ COLORS = {
 }
 
 def get_colored(message, color):
-	if color == None:
+	if color is None:
 		return str(message)
 	if color not in COLORS:
 		raise ValueError(f"{color!r} is not a valid ANSI color")
