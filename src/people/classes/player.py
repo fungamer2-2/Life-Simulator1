@@ -253,7 +253,7 @@ class Player(Person):
 				diff /= 2
 			else:
 				diff = min(happy_change + 5, 0)
-			diff = -round_stochastic(diff / 3)
+			diff = -round_stochastic(diff / 4)
 			self.change_stress(diff)
 			self.change_performance(randint(-4, 4) + round_stochastic((50 - self.stress)/20))
 			if self.performance < 15 and randint(1, self.performance + 1) == 1:

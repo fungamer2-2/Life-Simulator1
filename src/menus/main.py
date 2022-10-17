@@ -283,7 +283,7 @@ def main_menu(player):
 		elif choice == _("Listen to music"):
 			print(_("You listened to some music."))
 			if not player.listened_to_music:
-				player.change_happiness(randint(4, 8))
+				player.change_happiness(randint(4, 8) + 3 * (Trait.CHEERFUL in player.traits))
 				player.change_health(randint(0, 2))
 				player.change_stress(-randint(1, 7))
 				player.change_smarts(randint(0, 1 + (Trait.NERD in player.traits)))
