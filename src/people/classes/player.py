@@ -176,10 +176,10 @@ class Player(Person):
 		if Trait.FAST_WORKER in self.traits:
 			self.change_performance(randint(0, 4))	
 		elif Trait.SLOW_WORKER in self.traits:
-			self.change_performance(-randint(2, 3))
+			self.change_performance(-randint(0, 4))
 		if Trait.LAZY in self.traits:
-			self.change_performance(-randint(2, 4))
-			self.change_stress(-randint(2, 5))
+			self.change_performance(-randint(1, 5))
+			self.change_stress(-randint(0, 4))
 		self.reset_already_did()
 		self.change_karma(randint(-2, 2))
 
