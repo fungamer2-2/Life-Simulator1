@@ -99,6 +99,7 @@ class Gender(Enum):
     def random():
         return Gender.Male if random.uniform(0, 100) < 51.2 else Gender.Female
 
+
 class Trait(Enum):
     
     def __init__(self, name, desc, val, conflicts=None):
