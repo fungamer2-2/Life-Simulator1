@@ -47,16 +47,16 @@ COMPLIMENTS = [
 	_("a visionary"),
 	_("adorable"),
 	_("admirable"),
-	_("an OG")
+	_("an OG"),
 	_("brave"),
 	_("bright"),
 	_("brilliant"),
 	_("charming"),
 	_("clever"),
-	_("cool")
+	_("cool"),
 	_("courageous"),
 	_("delightful"),
-	_("dope")
+	_("dope"),
 	_("elite"),
 	_("fascinating"),
 	_("fearless"),
@@ -70,7 +70,7 @@ COMPLIMENTS = [
 	_("motivating"),
 	_("neat"),
 	_("nifty"),
-	_("one-of-a-kind")
+	_("one-of-a-kind"),
 	_("a perfect 10"),
 	_("phenomenal"),
 	_("rad"),
