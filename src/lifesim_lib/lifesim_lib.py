@@ -110,11 +110,16 @@ TRAITS_DICT = {
         _("You gain more smarts by going to the library and doing other activities."),
         1,
     ),
+    "GENIUS": (
+        _("Genius"),
+        _("You tend to very intelligent. Your Smarts increases over time, and you gain more Smarts when going to the library."),
+        2,
+    ),
     "FAST_WORKER": (
         _("Fast Worker"),
         _("You tend to work faster, improving your performance over time."),
         1,
-        ["SLOW_WORKER"]
+        ["SLOW_WORKER", "LAZY"]
     ),
 
     "GRUMPY": (

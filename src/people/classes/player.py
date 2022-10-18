@@ -89,14 +89,21 @@ class Player(Person):
 		trait_names = list(ALL_TRAITS_DICT.keys())
 		total_traits = len(ALL_TRAITS)
 		num_traits = 1
-		while randint(1, 100) <= 60 and num_traits < randint(1, total_traits):
+		while randint(1, 100) <= 40 and num_traits < randint(1, total_traits):
 			num_traits += 1
 		t = {}
 		for i in range(num_traits):
 			attempts = 50
+			good = randint(1, 100) <= 60
 			while attempts > 0:
 				name = random.choice(trait_names)
+				if name in t:
+					attempts -= 1
+					continue
 				selected = ALL_TRAITS_DICT[name]
+				if selected.val != 0 and (selected.val > 0) ^ good:
+					attempts -= 1
+					continue
 				if not selected.roll_selection():
 					continue
 				if len(t) < 1 or not any(selected.conflicts_with(trait) for trait in t):
@@ -453,17 +460,22 @@ class Player(Person):
 			if grade_delta > 0:
 				grade_delta /= 2
 			self.change_grades(round_stochastic(grade_delta))
+		if self.has_trait("GENIUS"):
+			if self.age < randint(18, 25):
+				self.change_smarts(randint(0, 8))
+			else:
+				self.change_smarts(randint(0, 3))
 		if self.age == 6:
 			print(_("You are starting elementary school"))
-			self.change_smarts(randint(1, 2))
+			self.change_smarts(randint(1, 2) + 2*self.has_trait("GENIUS"))
 			self.calc_grades(randint(4, 8))
 		if self.age == 12:
 			print(_("You are starting middle school"))
-			self.change_smarts(randint(1, 3))
+			self.change_smarts(randint(1, 3) + 3*self.has_trait("GENIUS"))
 			self.calc_grades(randint(0, 8))
 		if self.age == 14:
 			print(_("You are starting high school"))
-			self.change_smarts(randint(1, 4))
+			self.change_smarts(randint(1, 4) + 4*self.has_trait("GENIUS"))
 			self.calc_grades(randint(-8, 8))
 		if self.age == 17 and not self.dropped_out:
 			self.grades = None
@@ -494,7 +506,7 @@ class Player(Person):
 								display_event(
 									_("Your scholarship application has been awarded!")
 								)
-								self.change_happiness(randint(10, 15) + (10 * (Trait.CHEERFUL in self.traits)))
+								self.change_happiness(randint(10, 15) + (10 * self.has_trait("CHEERFUL")))
 								chosen = True
 							else:
 								display_event(
@@ -512,7 +524,7 @@ class Player(Person):
 										"Your parents agreed to pay for your university tuition!"
 									)
 								)
-								self.change_happiness(randint(7, 9) + (7 * (Trait.CHEERFUL in self.traits)))
+								self.change_happiness(randint(7, 9) + (7 * self.has_trait("CHEERFUL")))
 								chosen = True
 							else:
 								display_event(

@@ -353,14 +353,20 @@ def main_menu(player):
 				enjoyment = max(enjoyment, randint(15, 65))
 			elif player.has_trait("GRUMPY"):
 				enjoyment = min(enjoyment, randint(15, 65))
-			if player.has_trait("NERD"):
-				enoyment += randint(0, 15)
+			if player.has_trait("GENIUS"):
+				enoyment += randint(5, 20)
+			elif player.has_trait("NERD"):
+				enjoyment += randint(0, 15)
 			display_bar(_("Your Enjoyment"), enjoyment)
 			if not player.visited_library:  # You can only get the bonus once per year
 				player.change_happiness(round_stochastic(enjoyment/15))
 				if player.has_trait("CHEERFUL"):
 					player.change_happiness(3)
-				player.change_smarts(randint(2, 5) + (3*(player.has_trait("NERD"))))
+				player.change_smarts(randint(2, 5))
+				if player.has_trait("GENIUS"):
+					player.change_smarts(5)
+				elif player.has_trait("NERD"):
+					player.change_smarts(3)
 				player.visited_library = True
 		elif choice == _("Gym"):
 			if player.health < 10:
