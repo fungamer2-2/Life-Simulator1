@@ -1,10 +1,13 @@
-from src.lifesim_lib.const import *
 import gettext
 import os as _os
 
-_ = lambda s: s
+LANGUAGES = [
+    dir
+    for dir in _os.listdir("./locale")
+    if _os.path.isdir(_os.path.abspath("./locale/" + dir))
+]
 
-from src.lifesim_lib.lifesim_lib import choice_input
+_ = lambda s: s
 
 dir = _os.getcwd()
 langs = {"en": None}
@@ -25,6 +28,7 @@ lang_map = {
     "ro": "Română",
     "he": "עִברִית",
     "bn": "বাংলা",
+	"id": "bahasa Indonesia"
 }
 
 names = []
@@ -33,7 +37,20 @@ for lang in langs:
     codes.append(lang)
     names.append(lang_map.get(lang, lang))
 
-language = codes[choice_input(*names) - 1]
+#Not using choice_input as we want translation.py to be the first thing loaded
+for i, name in enumerate(names):
+	print(f"{i+1}. {name}")
+valid = False
+while not valid:
+	valid = True
+	try:
+		num = int(input())
+	except ValueError:
+		valid = False
+		continue
+	if not 1 <= num <= len(codes):
+		valid = False
+language = codes[num - 1]
 
 if language != "en":
     langs[language].install()

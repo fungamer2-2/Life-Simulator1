@@ -8,12 +8,6 @@ LAST_NAMES = open("assets/last_names.txt").read().splitlines()
 
 SAVE_PATH = filename = _os.getcwd() + "/game_saves"  # + "/gamedata.pickle"
 
-LANGUAGES = [
-    dir
-    for dir in _os.listdir("./locale")
-    if _os.path.isdir(_os.path.abspath("./locale/" + dir))
-]
-
 SALARY_TAX_BRACKETS = [
     [9950, 0.1],
     [40525, 0.12],
