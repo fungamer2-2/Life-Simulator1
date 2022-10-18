@@ -38,8 +38,8 @@ def start_menu():
         if choice == 1:
             player.randomize_traits()
         else:
-            player.traits = set()
-            all_traits = [t for t in Trait]
+            player.traits = {}
+            all_traits = list(ALL_TRAITS_DICT)
             while True:
                 clear_screen()
                 print(_("Enter a number to select or deselect a trait"))
@@ -51,13 +51,9 @@ def start_menu():
                 else:
                     print(_("None"))
                 print()
-                can_choose = lambda t: not any(
-                    t.conflicts_with(other) for other in player.traits
-                )
+                can_choose = lambda t: not any(ALL_TRAITS_DICT[t].conflicts_with(other) for other in player.traits)
                 options = [trait for trait in all_traits if can_choose(trait)]
-                choices = list(
-                    map(lambda t: get_colored(t.name_, t.get_color()), options)
-                )
+                choices = list(map(lambda t: get_colored(t.name, t.get_color()), map(ALL_TRAITS_DICT.__getitem__, options)))
                 choices.append(_("Done"))
                 choice = choice_input(*choices)
                 if choice == len(choices):
@@ -66,10 +62,10 @@ def start_menu():
                 else:
                     trait = options[choice - 1]
                     if trait in player.traits:
-                        player.traits.remove(trait)
+                        del player.traits[trait]
                     else:
-                        player.traits.add(trait)
-            clear_screen()
+                        player.traits[trait] = ALL_TRAITS_DICT[trait]
+            clear_screen()   
         return player
     else:
         player = Player()

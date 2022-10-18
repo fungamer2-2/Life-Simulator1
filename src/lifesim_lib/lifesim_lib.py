@@ -98,17 +98,62 @@ class Gender(Enum):
     def random():
         return Gender.Male if random.uniform(0, 100) < 51.2 else Gender.Female
 
-class Trait(Enum):
+TRAITS_DICT = {
+	"CHEERFUL": (
+	    _("Cheerful"),
+	    _("It is easier to increase your happiness by doing activities."),
+	    1,
+	    ["GRUMPY"],
+	),
+	"NERD": (
+        _("Nerd"),
+        _("You gain more smarts by going to the library and doing other activities."),
+        1,
+    ),
+    "FAST_WORKER": (
+        _("Fast Worker"),
+        _("You tend to work faster, improving your performance over time."),
+        1,
+        ["SLOW_WORKER"]
+    ),
+
+    "GRUMPY": (
+        _("Grumpy"),
+        _("It is difficult for you to be in a good mood."),
+        -1,
+        ["CHEERFUL"],
+    ),
+    "SLOW_WORKER": (
+        _("Slow Worker"),
+        _("You tend to work slowly, lowering your performance."),
+        -1,
+        ["FAST_WORKER"]
+    ),
+    "LAZY": (
+    	_("Lazy"),
+    	_("You are often lazy on the job. Your stress and performance decrease over time, and you gain more stress when working harder."),
+    	-1,
+    	["FAST_WORKER"]
+    ),
+
+    "MOODY": (
+        _("Moody"),
+        _("Your mood can change more easily. All changes to your Happiness are more intense."),
+        0,
+    )
+}
+
+class Trait:
     
     def __init__(self, name, desc, val, conflicts=None):
         assert type(val) is int, "Trait value must be an integer"
-        self.name_ = name
+        self.name = name
         self.desc = desc
         self.val = val
         self.conflicts = conflicts or []
 
     def conflicts_with(self, other):
-        return other.name in self.conflicts
+        return other in self.conflicts
         
     def roll_selection(self):
         if self.val == 0:
@@ -121,50 +166,17 @@ class Trait(Enum):
     	if self.val < 0:
     		return "red"
     	return None
+    
+    @classmethod	
+    def from_name(cls, name):
+        return cls(*TRAITS_DICT[name])
+        
+    
 
-    # Name, description, value (1 if positive, -1 if negative, 0 if mixed), conflicts
-    CHEERFUL = (
-        _("Cheerful"),
-        _("It is easier to increase your happiness by doing activities."),
-        1,
-        ["GRUMPY"],
-    )
-    NERD = (
-        _("Nerd"),
-        _("You gain more smarts by going to the library and doing other activities."),
-        1,
-    )
-    FAST_WORKER = (
-        _("Fast Worker"),
-        _("You tend to work faster, improving your performance over time."),
-        1,
-        ["SLOW_WORKER"]
-    )
-
-    GRUMPY = (
-        _("Grumpy"),
-        _("It is difficult for you to be in a good mood."),
-        -1,
-        ["CHEERFUL"],
-    )
-    SLOW_WORKER = (
-        _("Slow Worker"),
-        _("You tend to work slowly, lowering your performance."),
-        -1,
-        ["FAST_WORKER"]
-    )
-    LAZY = (
-    	_("Lazy"),
-    	_("You are often lazy on the job. Your stress and performance decrease over time, and you gain more stress when working harder."),
-    	-1,
-    	["FAST_WORKER"]
-    )
-
-    MOODY = (
-        _("Moody"),
-        _("Your mood can change more easily. All changes to your Happiness are more intense."),
-        0,
-    )
+pairs = list(TRAITS_DICT.items())
+names = [pair[0] for pair in pairs]
+ALL_TRAITS = [Trait.from_name(n) for n in names]
+ALL_TRAITS_DICT = {names[i]:ALL_TRAITS[i] for i in range(len(names))}
 
 
 def int_input_range(lo, hi):
