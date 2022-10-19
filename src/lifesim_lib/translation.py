@@ -23,6 +23,7 @@ for lang in LANGUAGES:
 lang_map = {
     "en": "English",
     "es": "Español",
+    "fr": "Français",
     "ko": "한국인",
     "ja": "日本",
     "ro": "Română",
