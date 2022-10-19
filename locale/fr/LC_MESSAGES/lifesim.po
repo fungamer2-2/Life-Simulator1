@@ -2,8 +2,8 @@
 # Copyright (C) YEAR ORGANIZATION
 # ANTOINE BOLLENGIER <gratitude.bitcoin0s@icloud.com>, 2022.
 #
-msgid "en"
-msgstr "fr"
+msgid ""
+msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2022-10-19 11:41+0200\n"
 "PO-Revision-Date: 2022-10-19 11:41+0200\n"
