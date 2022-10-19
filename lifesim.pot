@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-10-18 10:39-0400\n"
+"POT-Creation-Date: 2022-10-19 08:45-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -272,7 +272,7 @@ msgid "Genius"
 msgstr ""
 
 #: src/lifesim_lib/lifesim_lib.py:115
-msgid "You tend to very intelligent. Your Smarts increases over time, and you gain more Smarts when going to the library."
+msgid "You tend to be very intelligent. Your Smarts increases over time, and you gain more Smarts when going to the library."
 msgstr ""
 
 #: src/lifesim_lib/lifesim_lib.py:119

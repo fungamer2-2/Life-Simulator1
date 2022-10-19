@@ -112,7 +112,7 @@ TRAITS_DICT = {
     ),
     "GENIUS": (
         _("Genius"),
-        _("You tend to very intelligent. Your Smarts increases over time, and you gain more Smarts when going to the library."),
+        _("You tend to be very intelligent. Your Smarts increases over time, and you gain more Smarts when going to the library."),
         2,
     ),
     "FAST_WORKER": (
