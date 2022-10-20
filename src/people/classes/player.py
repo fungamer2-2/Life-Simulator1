@@ -182,14 +182,14 @@ class Player(Person):
 		self.total_happiness += self.happiness
 		super().age_up()
 		if self.has_trait("SICKLY"):
-			self.change_health(-randint(0, 3))
+			self.change_health(-randint(0, 4))
 		if self.has_trait("MOODY") and not self.is_depressed():
 			self.change_happiness(randint(-8, 8))
 		if self.has_trait("GRUMPY") and self.happiness > 33:
-			if randint(1, 12) == 1:
-				self.change_happiness(-randint(4, 8))
+			if randint(1, 10) == 1:
+				self.change_happiness(-randint(5, 8))
 			else:
-				self.change_happiness(-randint(0, 4))
+				self.change_happiness(-randint(1, 5))
 		if self.has_trait("FAST_WORKER"):
 			self.change_performance(randint(0, 4))	
 		elif self.has_trait("SLOW_WORKER"):

@@ -25,9 +25,6 @@ lang_map = {
     "es": "Español",
     "fr": "Français",
     "ko": "한국인",
-    "ja": "日本",
-    "ro": "Română",
-    "he": "עִברִית",
     "bn": "বাংলা",
 	"id": "bahasa Indonesia"
 }

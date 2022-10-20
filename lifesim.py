@@ -1,5 +1,5 @@
 import gettext, os
-
+	
 from src.lifesim_lib.translation import _
 from src.lifesim_lib.const import *
 from src.menus.main import main_menu

@@ -231,7 +231,7 @@ def main_menu(player):
 			choices.append(_("Doctor"))
 		if player.age >= 5:
 			choices.append(_("Arts and Crafts"))
-		if player.age >= 13:
+		if player.age >= 12:
 			choices.append(_("Meditate"))
 			choices.append(_("Library"))
 			choices.append(_("Gym"))
@@ -382,8 +382,8 @@ def main_menu(player):
 					if player.has_trait("CHEERFUL"):
 						player.change_happiness(3)
 					player.change_health(randint(3, 6))
-					if player.looks < randint(1, 100) and randint(1, 100) <= 60:
-						player.change_looks(randint(1, 3))
+					if player.looks < randint(1, 100) and randint(1, 100) <= 70:
+						player.change_looks(randint(2, 4))
 					player.worked_out = True
 				print()
 		elif choice == _("Lottery"):
