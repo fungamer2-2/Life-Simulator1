@@ -140,6 +140,11 @@ TRAITS_DICT = {
     	-1,
     	["FAST_WORKER"]
     ),
+    "SICKLY": (
+    	_("Sickly"),
+    	_("You tend to be in poor health, decreasing your Health over time."),
+    	-1
+    ),
 
     "MOODY": (
         _("Moody"),
