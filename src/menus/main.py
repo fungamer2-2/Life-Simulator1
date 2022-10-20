@@ -354,7 +354,7 @@ def main_menu(player):
 			elif player.has_trait("GRUMPY"):
 				enjoyment = min(enjoyment, randint(15, 65))
 			if player.has_trait("GENIUS"):
-				enoyment += randint(5, 20)
+				enjoyment += randint(5, 20)
 			elif player.has_trait("NERD"):
 				enjoyment += randint(0, 15)
 			display_bar(_("Your Enjoyment"), enjoyment)
@@ -372,29 +372,18 @@ def main_menu(player):
 			if player.health < 10:
 				print(_("Your health is too weak to visit the gym."))
 			else:
-				workout = randint(25, 75)
-				if player.health > 50:
-					workout += randint(0, (player.health - 50) // 2)
-				else:
-					workout -= randint(0, (50 - player.health) // 2)
-				lo = -25
-				hi = 25
-				if workout < 25:
-					lo = -workout
-				elif workout > 75:
-					hi = 100 - workout
-				workout += randint(lo, hi)
+				enjoyment = randint(35, 80)
+				if randint(1, 3) == 1:
+					enjoyment += randint(10, 20)
 				print(_("You worked out at the gym."))
-				print(_("Workout") + ": " + draw_bar(workout, 100, 25))
+				display_bar(_("Your Enjoyment"), enjoyment)
 				if not player.worked_out:
-					player.change_happiness(round(workout / 12) + randint(0, 1))
+					player.change_happiness(round_stochastic(enjoyment / 12))
 					if player.has_trait("CHEERFUL"):
 						player.change_happiness(3)
-					player.change_health(round(workout / 14) + randint(1, 2))
-					if player.looks < workout:
-						player.change_looks(
-							randint(1, 3) + randint(0, round(workout / 33))
-						)
+					player.change_health(randint(3, 6))
+					if player.looks < randint(1, 100) and randint(1, 100) <= 60:
+						player.change_looks(randint(1, 3))
 					player.worked_out = True
 				print()
 		elif choice == _("Lottery"):
