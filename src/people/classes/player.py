@@ -7,6 +7,7 @@ from src.lifesim_lib.lifesim_lib import *
 from src.people.classes.parent import Parent
 from src.people.classes.person import Person
 from src.people.classes.sibling import Sibling
+from src.people.classes.partner import Partner
 
 class Player(Person):
 	"""Base class for the player."""
@@ -22,12 +23,12 @@ class Player(Person):
 		super().__init__(first, last, 0, gender, happiness, health, smarts, looks)
 		last1 = last2 = last
 		if randint(1, 100) <= 40:
-			newlast = random.choice(LAST_NAMES)
+			newlast = random_last_name()
 			if random.randint(1, 3) == 1:
 				last2 = newlast  # Makes it more common to be named after the father's last name
 			else:
 				last1 = newlast
-		self.parents = {  # Cache these for performance since we only have one of each
+		self.parents = {  
 			"Mother": Parent(
 				last1,
 				min(randint(randint(18, 20), 50) for _ in range(3)),
@@ -64,7 +65,6 @@ class Player(Person):
 		self.reset_already_did()
 		self.grades = None
 		self.dropped_out = False
-		self.teen_looks_inc = 0
 		self.times_meditated = 0
 		self.salary = 0
 		self.years_worked = 0
@@ -72,6 +72,7 @@ class Player(Person):
 		self.lottery_jackpot = 0
 		self.stress = 0
 		self.performance = 0
+		self.partner = None
 		self.traits = {}
 		self.illnesses = []
 		
@@ -80,6 +81,17 @@ class Player(Person):
 	
 	def is_depressed(self):
 		return "Depression" in self.illnesses #TODO: Migrate depression to a list of diseases
+	
+	def generate_partner(self):
+		m = self.age // 6
+		age = 0
+		while age < 18:
+			age = self.age + randint(-m, m)
+		gender = Gender.Female if self.gender == Gender.Male else Gender.Male 
+		p = Partner(age, gender, randint(0, 50) + randint(0, 50), randint(0, 60) + randint(0, 40), 50, 0)
+		while p.death_check():
+			p.age -= randint(1, 5)
+		return p
 	
 	def has_trait(self, name):
 		return name in self.traits	
@@ -221,18 +233,6 @@ class Player(Person):
 				self.change_stress(randint(0, round_stochastic(diff/6)))
 			elif diff < 0:
 				self.change_stress(-randint(0, round_stochastic(abs(diff)/10)))
-		if self.age == 13:
-			val = 0
-			if randint(1, 4) == 1:
-				val = randint(0, 1)
-			else:
-				val = min(randint(0, 12) for _ in range(4))
-			self.teen_looks_inc = val
-		if self.age >= 13 and self.age < randint(18, 24):
-			self.change_looks(self.teen_looks_inc)
-		if self.age > 50 and self.looks > randint(20, 25):
-			decay = min((self.age - 51) // 5 + 1, 4)
-			self.change_looks(-randint(0, decay))
 		if self.happiness < randint(1, 10) and not self.is_depressed():
 			display_event(_("You are suffering from depression."))
 			self.add_illness("Depression")
@@ -292,6 +292,7 @@ class Player(Person):
 					display_event(_("You are suffering from high blood pressure."))
 					self.change_health(-randint(4, 8))
 					self.add_illness("High Blood Pressure")
+	
 	def get_job(self, salary):
 		if not self.has_job:
 			self.has_job = True
@@ -324,8 +325,11 @@ class Player(Person):
 
 	def die(self, message):
 		print(message)
-		avg_happy = round(self.total_happiness / self.age)
-		score = self.happiness * 0.3 + avg_happy * 0.7
+		if self.age == 0:
+			score = self.happiness
+		else:
+			avg_happy = round(self.total_happiness / self.age)
+			score = self.happiness * 0.3 + avg_happy * 0.7
 		print_align_bars((_("Lifetime Happiness"), avg_happy), (_("Karma"), self.karma))
 		self.delete_save()
 		press_enter()

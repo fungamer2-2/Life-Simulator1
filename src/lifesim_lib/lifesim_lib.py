@@ -12,7 +12,6 @@ class PlayerDied(Exception):
 def get_save_files():
     return os.listdir(SAVE_PATH)
 
-
 def get_saves(saves=None):
     if saves is None:
         saves = get_save_files()
@@ -97,7 +96,7 @@ class Gender(Enum):
     @staticmethod
     def random():
         return Gender.Male if random.uniform(0, 100) < 51.2 else Gender.Female
-
+	
 TRAITS_DICT = {
 	"CHEERFUL": (
 	    _("Cheerful"),
@@ -113,7 +112,7 @@ TRAITS_DICT = {
     "GENIUS": (
         _("Genius"),
         _("You tend to be very intelligent. Your Smarts increases over time, and you gain more Smarts when going to the library."),
-        2,
+        3,
     ),
     "FAST_WORKER": (
         _("Fast Worker"),
@@ -226,11 +225,9 @@ def choice_input(*options, return_text=False):
         return options[val - 1]
     return val
 
-
 def yes_no(message):
     print(message)
     return choice_input(_("Yes"), _("No")) == 1
-
 
 def random_name(gender):
     if gender == Gender.Male:
@@ -238,6 +235,8 @@ def random_name(gender):
     else:
         return random.choice(FEMALE_NAMES)
 
+def random_last_name():
+	return random.choice(LAST_NAMES)
 
 def press_enter():
     input(_("Press Enter to continue..."))

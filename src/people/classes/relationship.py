@@ -2,9 +2,7 @@ from random import randint
 
 from src.lifesim_lib.lifesim_lib import clamp, Gender
 from src.people.classes.person import Person
-
-_ = lambda s: s
-
+from src.lifesim_lib.translation import _
 
 class Relationship(Person):
     """Base class for relationships."""
