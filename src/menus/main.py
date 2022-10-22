@@ -7,6 +7,7 @@ from src.lifesim_lib.lifesim_lib import *
 from src.people.classes.parent import Parent
 from src.people.classes.person import Person
 from src.people.classes.sibling import Sibling
+from src.people.classes.partner import Partner
 
 def main_menu(player):
 	print()
@@ -58,10 +59,11 @@ def main_menu(player):
 			if isinstance(relation, Parent):
 				bars.append((_("Generosity"), relation.generosity))
 				bars.append((_("Money"), relation.money))
-			elif isinstance(relation, Sibling):
+			elif isinstance(relation, (Sibling, Partner)):
 				bars.append((_("Smarts"), relation.smarts))
 				bars.append((_("Looks"), relation.looks))
-				bars.append((_("Petulance"), relation.petulance))
+				if isinstance(relation, Sibling):
+					bars.append((_("Petulance"), relation.petulance))
 			print_align_bars(*bars)
 			choices = [_("Back")]
 			if relation.age >= 5:
@@ -71,6 +73,8 @@ def main_menu(player):
 				if player.age >= 6:
 					choices.append(_("Compliment"))
 					choices.append(_("Insult"))
+				if isinstance(relation, Partner):
+					choices.append(_("Break up"))
 			choice = choice_input(*choices, return_text=True)
 			clear_screen()
 			if choice == _("Spend time"):
@@ -220,6 +224,11 @@ def main_menu(player):
 							_("Your {rel} insulted you back.").format(rel=rel)
 						)
 						player.change_happiness(-randint(1, 5) if isinstance(relation, Sibling) else -randint(3, 8))
+			elif choice == _("Break up"):
+				partner = player.partner.name_accusative()
+				if yes_no(_("Are you sure you want to break up with your {partner}?").format(partner=partner)):
+					print(_("You broke up with your {partner}.").format(partner=partner))
+					player.lose_partner()
 			print()
 	if choice == _("Activities"):
 		print(_("Activities Menu"))
@@ -238,6 +247,8 @@ def main_menu(player):
 			choices.append(_("Listen to music"))
 		if player.age >= 18:
 			choices.append(_("Lottery"))
+			if player.marital_status == 0: 
+				choices.append(_("Find a Partner"))
 		choices.append(_("Surrender"))
 		choice = choice_input(*choices, return_text=True)
 		clear_screen()
@@ -288,6 +299,30 @@ def main_menu(player):
 				player.change_stress(-randint(1, 7))
 				player.change_smarts(randint(0, 1 + player.has_trait("NERD")))
 				player.listened_to_music = True
+		elif choice == _("Find a Partner"):
+			if player.date_options <= 0:
+				print(_("You are unable to find anyone to ask on a date."))
+			else:
+				partner = player.generate_partner()
+				string = _("a male") if partner.gender == Gender.Male else _("a female")
+				print(_("You met {a_male_female} named {name}.").format(a_male_female=string, name=partner.name))
+				partner.print_info()
+				him_her = partner.him_her()
+				hes_shes = partner.hes_shes()
+				choice = choice_input(
+					_("Ask {him_her} out").format(him_her=him_her),
+					_("No, {hes_shes} not my type").format(hes_shes=hes_shes)
+				)
+				if choice == 1:
+					if partner.compatibility_check(player):
+						print(_("You are now dating {name}.").format(name=partner.name))
+						player.change_happiness(randint(15, 20))
+						player.partner = partner
+						player.relations.append(partner)
+					else:
+						print(_("{name} rejected you.").format(name=partner.name))
+						player.change_happiness(-randint(2, 4))
+				player.date_options -= 1
 		elif choice == _("Doctor"):
 			has_fee = player.age >= 18
 			if has_fee:

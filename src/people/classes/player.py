@@ -72,6 +72,7 @@ class Player(Person):
 		self.lottery_jackpot = 0
 		self.stress = 0
 		self.performance = 0
+		self.date_options = 10
 		self.partner = None
 		self.traits = {}
 		self.illnesses = []
@@ -188,6 +189,7 @@ class Player(Person):
 		self.did_arts_and_crafts = False
 		self.worked_harder = False
 		self.listened_to_music = False
+		self.date_options = randint(9, 11)
 
 	def age_up(self):
 		oldhappy = self.happiness
@@ -256,6 +258,9 @@ class Player(Person):
 					del self.parents[relation.get_type()]
 				elif isinstance(relation, Sibling):
 					happy_remove = randint(25, 40)
+				elif isinstance(relation, Partner):
+					happy_remove = randint(60, 100)
+					self.partner = None 
 				self.change_happiness(-happy_remove)
 				self.relations.remove(relation)
 				if inheritance > 0:
@@ -263,6 +268,8 @@ class Player(Person):
 					self.money += inheritance
 					self.change_happiness(round_stochastic(1.5 * math.log10(inheritance)))
 		self.random_events()
+		if self.partner:
+			assert self.partner in self.relations
 		if self.has_job:
 			happy_change = self.happiness - oldhappy #Large decreases in happiness can increase stress 
 			if happy_change > 0:
@@ -370,6 +377,20 @@ class Player(Person):
 			(_("Looks"), self.looks, looks_symbol),
 			show_percent=True,
 		)
+		
+	@property
+	def marital_status(self):
+		if not self.partner:
+			return 0 
+		return self.partner.status + 1
+		
+	def lose_partner(self):
+		if self.partner in self.relations:
+			self.relations.remove(self.partner)
+		self.partner = None 
+		
+	def find_partner_event(self, force=False):
+		pass #!akakakaAJAJSJWJWW
 	
 	def random_events(self):
 		if self.age >= 5 and randint(1, 5000) == 1:
@@ -485,6 +506,43 @@ class Player(Person):
 			print(_("You are starting high school"))
 			self.change_smarts(randint(1, 4) + 4*self.has_trait("GENIUS"))
 			self.calc_grades(randint(-8, 8))
+		if self.marital_status != 0 and self.partner.relationship < randint(25, 35) and randint(1, 3) == 1:
+			name = self.partner.name_accusative()
+			print(_("Your {partner} wants to break up with you.").format(partner=name))
+			print(_("What will you do?"))
+			him_her = self.partner.him_her()
+			choices = choice_input(
+				_("Wish {him_her} well"),
+				_("Beg {him_her} to stay")
+			)
+			self.change_happiness(-randint(15, 20))
+			if choice == 1:
+				print(_("You wished {self.partner.name} the best"))
+				self.lose_partner()
+			elif choice == 2:
+				print(_("You begged {self.partner.name} to stay with you."))
+				he_she = self.partner.he_she().capitalize()
+				if randint(1, 2) == 1:
+					print(_("{he_she} decided to stay with you."))
+				else:
+					print(_("{he_she} dumped you anyway."))
+					self.lose_partner()
+					self.change_happiness(-randint(15, 20))
+		if self.age >= 18 and self.marital_status == 0 and randint(1, 16) == 1:
+			partner = self.generate_partner()
+			if partner.compatibility_check(self):
+				string = _("A male") if partner.gender == Gender.Male else _("A female")
+				print(_("{a_male_female} named {name} has asked you out.").format(a_male_female=string, name=partner.name))
+				partner.print_info()
+				him_her = partner.him_her()
+				option1 = _("Start dating {him_her}").format(him_her=him_her)
+				option2 = _("Reject {him_her}").format(him_her=him_her)
+				choice = choice_input(option1, option2)
+				if choice == 1:
+					self.change_happiness(randint(12, 20))
+					print(_("You are now dating {name}.").format(name=partner.name))
+					self.partner = partner
+					self.relations.append(partner)
 		if self.age == 17 and not self.dropped_out:
 			self.grades = None
 			print(_("You graduated from high school."))
