@@ -125,7 +125,11 @@ class Player(Person):
 					attempts -= 1
 			if attempts > 0:
 				t[name] = selected
-		self.traits = t	
+		self.traits = t
+		
+	def after_trait_select(self):
+		if self.has_trait("GRUMPY"):
+			self.change_happiness(-12)
 	
 	def print_traits(self):
 		if self.traits:
@@ -522,7 +526,7 @@ class Player(Person):
 			elif choice == 2:
 				print(_("You begged {self.partner.name} to stay with you."))
 				he_she = self.partner.he_she().capitalize()
-				if randint(1, 2) == 1:
+				if min(randint(1, 100) for _ in range(2)) > partner.willpower:
 					print(_("{he_she} decided to stay with you."))
 				else:
 					print(_("{he_she} dumped you anyway."))

@@ -12,6 +12,13 @@ class Partner(Relationship):
 		last = random_last_name()
 		super().__init__(random_name(gender), last, age, gender, happiness, health, smarts, looks, relationship)
 		self.status = status
+		self.willpower = randint(0, 60) + randint(0, 40)
+		self.craziness = randint(0, 100)
+		self.years_together = 0
+		
+	def age_up(self):
+		super().age_up()
+		self.years_together += 1
 		
 	def print_info(self):
 		display_data(_("Their Age"), self.looks)

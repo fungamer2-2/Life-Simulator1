@@ -37,6 +37,7 @@ def start_menu():
         choice = choice_input(_("Randomize"), _("Customize"))
         if choice == 1:
             player.randomize_traits()
+            player.after_trait_select()
         else:
             player.traits = {}
             all_traits = list(ALL_TRAITS_DICT)
@@ -66,6 +67,7 @@ def start_menu():
                     else:
                         player.traits[trait] = ALL_TRAITS_DICT[trait]
             clear_screen()   
+            player.after_trait_select()
         return player
     else:
         player = Player()
@@ -100,4 +102,5 @@ def start_menu():
             )
         )
     player.randomize_traits()
+    player.after_trait_select()
     return player
