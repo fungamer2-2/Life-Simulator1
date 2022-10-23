@@ -64,6 +64,8 @@ def main_menu(player):
 				bars.append((_("Looks"), relation.looks))
 				if isinstance(relation, Sibling):
 					bars.append((_("Petulance"), relation.petulance))
+				elif isinstance(relation, Partner):
+					bars.append((_("Craziness"), relation.craziness))
 			print_align_bars(*bars)
 			choices = [_("Back")]
 			if relation.age >= 5:
@@ -74,7 +76,14 @@ def main_menu(player):
 					choices.append(_("Compliment"))
 					choices.append(_("Insult"))
 				if isinstance(relation, Partner):
-					choices.append(_("Break up"))
+					if relation.status < 2:
+						choices.append(_("Break up"))
+					else:
+						choices.append(_("Divorce"))
+					if relation.status == 0:
+						choices.append(_("Propose"))
+					elif relation.status == 1:
+						choices.append(_("Plan the Wedding"))
 			choice = choice_input(*choices, return_text=True)
 			clear_screen()
 			if choice == _("Spend time"):
@@ -204,6 +213,8 @@ def main_menu(player):
 						player.change_happiness(randint(6, 10) - (3*(player.has_trait("GRUMPY"))))
 						if player.has_trait("CHEERFUL"):
 							player.change_happiness(4)
+						if randint(1, 5) == 1:
+							player.change_relationship(randint(5, 25))
 					relation.was_complimented = True
 			elif choice == _("Insult"):
 				rel = relation.name_accusative()
@@ -229,6 +240,21 @@ def main_menu(player):
 				if yes_no(_("Are you sure you want to break up with your {partner}?").format(partner=partner)):
 					print(_("You broke up with your {partner}.").format(partner=partner))
 					player.lose_partner()
+			elif choice == _("Propose"):
+				partner = player.partner
+				name = partner.name_accusative()
+				if partner.years_together >= randint(3, 4) and not partner.was_proposed_to and partner.relationship >= randint(50, 60) + randint(0, 40):
+					print(_("Your {partner} accepted your proposal!").format(partner=name))
+					partner.status = 1
+					partner.change_relationship(randint(20, 50))
+				else:
+					print(_("Your {partner} rejected your proposal.").format(partner=name))
+					if not partner.was_proposed_to:
+						player.change_happiness(-randint(3, 8))
+						partner.change_relationship(-randint(4, 9))
+						partner.was_proposed_to = True
+			elif choice == _("Plan the Wedding"):
+				print(_("Coming soon..."))
 			print()
 	if choice == _("Activities"):
 		print(_("Activities Menu"))

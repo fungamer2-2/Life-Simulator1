@@ -15,16 +15,19 @@ class Partner(Relationship):
 		self.willpower = randint(0, 60) + randint(0, 40)
 		self.craziness = randint(0, 100)
 		self.years_together = 0
+		self.was_proposed_to = False
 		
 	def age_up(self):
 		super().age_up()
 		self.years_together += 1
+		self.was_proposed_to = False
 		
 	def print_info(self):
 		display_data(_("Their Age"), self.looks)
 		print_align_bars(
 			(_("Their Smarts"), self.smarts),
-			(_("Their Looks"), self.looks)
+			(_("Their Looks"), self.looks),
+			(_("Their Craziness"), self.craziness)
 		)
 		
 	def compatibility_check(self, player):

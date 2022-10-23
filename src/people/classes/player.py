@@ -247,7 +247,7 @@ class Player(Person):
 		for relation in self.relations[:]:
 			if relation.death_check():
 				rel_str = relation.name_accusative()
-				display_event(
+				print(
 					_(
 						"Your {relative} died at the age of {age} due to old age."
 					).format(relative=rel_str, age=relation.age)
@@ -266,6 +266,11 @@ class Player(Person):
 					happy_remove = randint(60, 100)
 					self.partner = None 
 				self.change_happiness(-happy_remove)
+				if yes_no(_("Would you like to attend the funeral?")):
+					self.change_happiness(randint(3, 5))
+					self.change_karma(randint(3, 5))
+				else:
+					self.change_karma(-randint(2, 5))
 				self.relations.remove(relation)
 				if inheritance > 0:
 					display_event(_("You inherited ${amount}").format(amount=inheritance))
@@ -382,6 +387,9 @@ class Player(Person):
 			show_percent=True,
 		)
 		
+	def can_retire(self):
+		return self.years_worked >= 10 and player.age >= 65
+		
 	@property
 	def marital_status(self):
 		if not self.partner:
@@ -393,9 +401,6 @@ class Player(Person):
 			self.relations.remove(self.partner)
 		self.partner = None 
 		
-	def find_partner_event(self, force=False):
-		pass #!akakakaAJAJSJWJWW
-	
 	def random_events(self):
 		if self.age >= 5 and randint(1, 5000) == 1:
 			print(_("You were struck by lightning!"))
@@ -519,19 +524,19 @@ class Player(Person):
 				_("Wish {him_her} well"),
 				_("Beg {him_her} to stay")
 			)
-			self.change_happiness(-randint(15, 20))
+			self.change_happiness(-randint(15, 18))
 			if choice == 1:
 				print(_("You wished {self.partner.name} the best"))
 				self.lose_partner()
 			elif choice == 2:
 				print(_("You begged {self.partner.name} to stay with you."))
 				he_she = self.partner.he_she().capitalize()
-				if min(randint(1, 100) for _ in range(2)) > partner.willpower:
+				if randint(1, 100) > partner.willpower:
 					print(_("{he_she} decided to stay with you."))
 				else:
 					print(_("{he_she} dumped you anyway."))
 					self.lose_partner()
-					self.change_happiness(-randint(15, 20))
+					self.change_happiness(-randint(10, 20))
 		if self.age >= 18 and self.marital_status == 0 and randint(1, 16) == 1:
 			partner = self.generate_partner()
 			if partner.compatibility_check(self):
