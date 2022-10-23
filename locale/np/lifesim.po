@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2022-10-17 19:08-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: lifesim.py:21 src/people/classes/player.py:201
+msgid "Age {age}"
+msgstr "उमेर {age}"
+
+#: lifesim.py:26
+msgid "Would you like to start a new life?"
+msgstr "के तपाई नयाँ जीवन सुरु गर्न चाहनुहुन्छ?"
+
+#: src/lifesim_lib/const.py:30
+msgid "Depression"
+msgstr "डिप्रेसन"
+
+#: src/lifesim_lib/const.py:31
+msgid "High Blood Pressure"
+msgstr "उच्च रक्तचाप"
+
+#: src/lifesim_lib/const.py:35
+msgid "a bubbly personality"
+msgstr "एक बुलबुल व्यक्तित्व"
+
+#: src/lifesim_lib/const.py:36
+msgid "a champion"
+msgstr "एक च्याम्पियन"
+
+#: src/lifesim_lib/const.py:37
+msgid "a gem"
+msgstr "एक रत्न"
+
+#: src/lifesim_lib/const.py:38
+msgid "a genius"
+msgstr "एक प्रतिभाशाली"
+
+#: src/lifesim_lib/const.py:39
+msgid "a jewel"
+msgstr "एक गहना"
+
+#: src/lifesim_lib/const.py:40
+msgid "a legend"
+msgstr "महान व्यक्ति"
+
+#: src/lifesim_lib/const.py:41
+msgid "a player"
+msgstr "एक व्यक्ति"
+
+#: src/lifesim_lib/const.py:42
+msgid "a revolutionary"
+msgstr "एक क्रान्तिकारी"
+
+#: src/lifesim_lib/const.py:43
+msgid "a smart cookie"
+msgstr "एक स्मार्ट कुकी"
+
+#: src/lifesim_lib/const.py:44
+msgid "a treasure"
+msgstr "एक खजाना"
+
+#: src/lifesim_lib/const.py:45
+msgid "a winner"
+msgstr "एक विजेता"
+
+#: src/lifesim_lib/const.py:46
+msgid "a wizard"
+msgstr "एक जादूगर"
+
+#: src/lifesim_lib/const.py:47
+msgid "a visionary"
+msgstr "एक दूरदर्शी"
+
+#: src/lifesim_lib/const.py:48
+msgid "adorable"
+msgstr "मनमोहक"
+
+#: src/lifesim_lib/const.py:49
+msgid "admirable"
+msgstr "प्रशंसनीय"
+
+#: src/lifesim_lib/const.py:50
+msgid "an OG"
+msgstr "एक OG"
+
+#: src/lifesim_lib/const.py:51
+msgid "brave"
+msgstr "बहादुर"
+
+#: src/lifesim_lib/const.py:52
+msgid "bright"
+msgstr "उज्यालो"
+
+#: src/lifesim_lib/const.py:53
+msgid "brilliant"
+msgstr "शानदार"
+
+#: src/lifesim_lib/const.py:54
+msgid "charming"
+msgstr "आकर्षक"
+
+#: src/lifesim_lib/const.py:55
+msgid "clever"
+msgstr "चलाख"
+
+#: src/lifesim_lib/const.py:56
+msgid "cool"
+msgstr "चिसो"
+
+#: src/lifesim_lib/const.py:57
+msgid "courageous"
+msgstr "साहसी"
+
+#: src/lifesim_lib/const.py:58
+msgid "delightful"
+msgstr "रमाइलो"
+
+#: src/lifesim_lib/const.py:59
+msgid "dope"
+msgstr "डोप"
+
+#: src/lifesim_lib/const.py:60
+msgid "elite"
+msgstr "कुलीन"
+
+#: src/lifesim_lib/const.py:61
+msgid "fascinating"
+msgstr "आकर्षक"
+
+#: src/lifesim_lib/const.py:62
+msgid "fearless"
+msgstr "निडर"
+
+#: src/lifesim_lib/const.py:63
+msgid "fresh"
+msgstr "ताजा"
+
+#: src/lifesim_lib/const.py:64
+msgid "gorgeous"
+msgstr "भव्य"
+
+#: src/lifesim_lib/const.py:65
+msgid "golden"
+msgstr "सुनौलो"
+
+#: src/lifesim_lib/const.py:66
+msgid "groovy"
+msgstr "ग्रुवी"
+
+#: src/lifesim_lib/const.py:67
+msgid "inspiring"
+msgstr "प्रेरणादायक"
+
+#: src/lifesim_lib/const.py:68
+msgid "intelligent"
+msgstr "बुद्धिमान"
+
+#: src/lifesim_lib/const.py:69
+msgid "magnificent"
+msgstr "भव्य"
+
+#: src/lifesim_lib/const.py:70
+msgid "motivating"
+msgstr "उत्प्रेरक"
+
+#: src/lifesim_lib/const.py:71
+msgid "neat"
+msgstr "सफा"
+
+#: src/lifesim_lib/const.py:72
+msgid "nifty"
+msgstr "निफ्टी"
+
+#: src/lifesim_lib/const.py:73
+msgid "one-of-a-kind"
+msgstr "एक प्रकार को"
+
+#: src/lifesim_lib/const.py:74
+msgid "a perfect 10"
+msgstr "एक उत्तम 10"
+
+#: src/lifesim_lib/const.py:75
+msgid "phenomenal"
+msgstr "अभूतपूर्व"
+
+#: src/lifesim_lib/const.py:76
+msgid "rad"
+msgstr "rad"
+
+#: src/lifesim_lib/const.py:77
+msgid "smart"
+msgstr "स्मार्ट"
+
+#: src/lifesim_lib/const.py:78
+msgid "spectatular"
+msgstr "दर्शनीय"
+
+#: src/lifesim_lib/const.py:79
+msgid "stellar"
+msgstr "तारकीय"
+
+#: src/lifesim_lib/const.py:80
+msgid "strong"
+msgstr "बलियो"
+
+#: src/lifesim_lib/const.py:81
+msgid "stunning"
+msgstr "आश्चर्यजनक"
+
+#: src/lifesim_lib/const.py:82
+msgid "stylish"
+msgstr "स्टाइलिश"
+
+#: src/lifesim_lib/const.py:83
+msgid "swell"
+msgstr "फुल्नु"
+
+#: src/lifesim_lib/const.py:84
+msgid "the best"
+msgstr "सबै भन्दा राम्रो"
+
+#: src/lifesim_lib/const.py:85
+msgid "the greatest"
+msgstr "सबभन्दा ठूलो"
+
+#: src/lifesim_lib/const.py:86
+msgid "the life of the party"
+msgstr "पार्टीको जीवन"
+
+#: src/lifesim_lib/const.py:87
+msgid "unparalled"
+msgstr "अनुपम"
+
+#: src/lifesim_lib/const.py:88
+msgid "wise"
+msgstr "बुद्धिमान्"
+
+#: src/lifesim_lib/const.py:89
+msgid "wonderful"
+msgstr "अद्भुत"
+
+#: src/lifesim_lib/lifesim_lib.py:129
+msgid "Cheerful"
+msgstr "हँसमुख"
+
+#: src/lifesim_lib/lifesim_lib.py:130
+msgid "It is easier to increase your happiness by doing activities."
+msgstr "क ेह ी क्रियाकलाप गरेर आफ्नो खुशी बढाउन सजिलो हुन्छ।"
+
+#: src/lifesim_lib/lifesim_lib.py:135
+msgid "Nerd"
+msgstr "पढन्ते"
+
+#: src/lifesim_lib/lifesim_lib.py:136
+msgid "You gain more smarts by going to the library and doing other activities."
+msgstr "पुस्तकालयमा गएर र अन्य गतिविधिहरू गरेर तपाईं अधिक स्मार्टहरू प्राप्त गर्नुहुन्छ।"
+
+#: src/lifesim_lib/lifesim_lib.py:140
+msgid "Fast Worker"
+msgstr "द्रुत कार्यकर्ता"
+
+#: src/lifesim_lib/lifesim_lib.py:141
+msgid "You tend to work faster, improving your performance over time."
+msgstr "तपाइँ छिटो काम गरेर, समय संग आफ्नो प्रदर्शन सुधार गर्न सक्नुहुन्छ ।"
+
+#: src/lifesim_lib/lifesim_lib.py:147
+msgid "Grumpy"
+msgstr "रिसाएको"
+
+#: src/lifesim_lib/lifesim_lib.py:148
+msgid "It is difficult for you to be in a good mood."
+msgstr "तपाईलाई राम्रो मुडमा रहन गाह्रो छ।"
+
+#: src/lifesim_lib/lifesim_lib.py:153
+msgid "Slow Worker"
+msgstr "सुस्त कार्यकर्ता"
+
+#: src/lifesim_lib/lifesim_lib.py:154
+msgid "You tend to work slowly, lowering your performance."
+msgstr "तपाइँ बिस्तारै काम गरेर, तपाइँको प्रदर्शन पनि काम हुन्छ। "
+
+#: src/lifesim_lib/lifesim_lib.py:159
+msgid "Lazy"
+msgstr "अल्छी"
+
+#: src/lifesim_lib/lifesim_lib.py:160
+msgid "You are often lazy on the job. Your stress and performance decrease over time, and you gain more stress when working harder."
+msgstr "तपाई प्रायः काममा अल्छी हुनुहुन्छ। तपाईंको तनाव र कार्यसम्पादन समयको साथ घट्छ, र कडा परिश्रम गर्दा तपाईंले थप तनाव प्राप्त गर्नुहुन्छ।"
+
+#: src/lifesim_lib/lifesim_lib.py:166
+msgid "Moody"
+msgstr "मूडी"
+
+#: src/lifesim_lib/lifesim_lib.py:167
+msgid "Your mood can change more easily. All changes to your Happiness are more intense."
+msgstr "तपाईको मुड सजिलै परिवर्तन हुन सक्छ। तपाईको खुशीमा आउने सबै परिवर्तनहरू अधिक तीव्र छन्।"
+
+#: src/lifesim_lib/lifesim_lib.py:177 src/lifesim_lib/lifesim_lib.py:182
+#: src/lifesim_lib/lifesim_lib.py:193 src/lifesim_lib/lifesim_lib.py:198
+msgid "Invalid input; try again."
+msgstr "अवैध इनपुट; पुन: प्रयास गर्नुहोस्।"
+
+#: src/lifesim_lib/lifesim_lib.py:212 src/people/classes/player.py:501
+msgid "No"
+msgstr "होइन"
+
+#: src/lifesim_lib/lifesim_lib.py:212 src/people/classes/player.py:501
+msgid "Yes"
+msgstr "हुन्छ "
+
+#: src/lifesim_lib/lifesim_lib.py:223
+msgid "Press Enter to continue..."
+msgstr "अगाडि बढ्न Enter थिच्नुहोस्..."
+
+#: src/menus/main.py:14
+msgid "Your name"
+msgstr "तपाईंको नाम "
+
+#: src/menus/main.py:16
+msgid "Traits"
+msgstr "विशेषताहरू"
+
+#: src/menus/main.py:17 src/menus/main.py:634
+msgid "Gender"
+msgstr "लिङ्ग"
+
+#: src/menus/main.py:18 src/menus/main.py:61
+msgid "Money"
+msgstr "पैसा"
+
+#: src/menus/main.py:20
+msgid "Salary"
+msgstr "तलब"
+
+#: src/menus/main.py:24 src/menus/main.py:37
+msgid "Age +1"
+msgstr "उमेर +१"
+
+#: src/menus/main.py:24 src/menus/main.py:40
+msgid "Relationships"
+msgstr "सम्बन्धहरू"
+
+#: src/menus/main.py:24 src/menus/main.py:241
+msgid "Activities"
+msgstr "गतिविधिहरू"
+
+#: src/menus/main.py:26 src/menus/main.py:538
+msgid "School"
+msgstr "विद्यालय"
+
+#: src/menus/main.py:29 src/menus/main.py:683
+msgid "Job Menu"
+msgstr "कामको सुची "
+
+#: src/menus/main.py:31 src/menus/main.py:656
+msgid "Find a Job"
+msgstr "कामको खोज्नुहोस् "
+
+#: src/menus/main.py:32 src/menus/main.py:721
+msgid "View Saved Games"
+msgstr "सुरक्षित गरेर रखेका खेलहरू हेर्नुहोस्"
+
+#: src/menus/main.py:34 src/menus/main.py:566
+msgid "Debug Menu"
+msgstr "Debug सुची "
+
+#: src/menus/main.py:42
+msgid "Relationships: "
+msgstr "सम्बन्धहरू: "
+
+#: src/menus/main.py:45 src/menus/main.py:67 src/menus/main.py:244
+#: src/menus/main.py:459 src/menus/main.py:542 src/menus/main.py:567
+#: src/menus/main.py:583 src/menus/main.py:636 src/menus/main.py:691
+#: src/menus/main.py:728 src/menus/main.py:734
+msgid "Back"
+msgstr "फिर्ता जानुहोस् "
+
+#: src/menus/main.py:52
+msgid "Name"
+msgstr "नाम "
+
+#: src/menus/main.py:57
+msgid "Age"
+msgstr "उमेर "
+
+#: src/menus/main.py:58
+msgid "Relationship"
+msgstr "सम्बन्धहरु "
+
+#: src/menus/main.py:60
+msgid "Generosity"
+msgstr "उदारता"
+
+#: src/menus/main.py:63 src/menus/main.py:574 src/people/classes/player.py:374
+msgid "Smarts"
+msgstr "स्मार्टहरू"
+
+#: src/menus/main.py:64 src/menus/main.py:575 src/people/classes/player.py:375
+msgid "Looks"
+msgstr "लूक्स "
+
+#: src/menus/main.py:65
+msgid "Petulance"
+msgstr "अधैर्य"
+
+#: src/menus/main.py:70 src/menus/main.py:77
+msgid "Spend time"
+msgstr "समय बिताउनु"
+
+#: src/menus/main.py:71 src/menus/main.py:108
+msgid "Have a conversation"
+msgstr "कुराकानी गर्नुहोस्"
+
+#: src/menus/main.py:73 src/menus/main.py:166
+msgid "Compliment"
+msgstr "प्रशंसा"
+
+#: src/menus/main.py:74 src/menus/main.py:217
+msgid "Insult"
+msgstr "अपमान"
+
+#: src/menus/main.py:79
+msgid "Your {relation} refused to see you."
+msgstr "तपाईंको {relation} ले तपाईंलाई भेट्न अस्वीकार गर्यो।"
+
+#: src/menus/main.py:83
+msgid "You spent time with your {relation}."
+msgstr "तपाईंले आफ्नो {relation} सँग समय बिताउनुभयो।"
+
+#: src/menus/main.py:94 src/menus/main.py:415
+msgid "Your Enjoyment"
+msgstr "तपाईंको आनन्दका पलहरु "
+
+#: src/menus/main.py:96
+msgid "{his_her} Enjoyment"
+msgstr "{his_her}का आनन्दका पलहरु "
+
