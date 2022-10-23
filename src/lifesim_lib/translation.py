@@ -26,7 +26,8 @@ lang_map = {
     "fr": "Français",
     "ko": "한국인",
     "bn": "বাংলা",
-	"id": "bahasa Indonesia"
+	"id": "bahasa Indonesia",
+	"np":"नेपाली "
 }
 
 names = []
