@@ -578,3 +578,136 @@ msgstr "तपाईंले केहि स्वादिष्ट पका
 #: src/menus/main.py:305
 msgid "You listened to some music."
 msgstr "तपाईंले केही संगीत सुन्नुभयो।"
+
+#: src/menus/main.py:318
+msgid "Would you like to visit the doctor? ($100 consultation fee)"
+msgstr "के तपाइँ डाक्टरलाई भेट्न चाहनुहुन्छ? (biaya konsultasi $100)"
+
+#: src/menus/main.py:321
+msgid "Would you like to visit the doctor?"
+msgstr "के तपाई डाक्टरलाई भेट्न चाहनुहुन्छ?"
+
+#: src/menus/main.py:324
+msgid "You don't have enough money."
+msgstr "तपाईसँग पर्याप्त पैसा छैन।"
+
+#: src/menus/main.py:330
+msgid "The doctor has determined that you are not suffering from any illnesses."
+msgstr "डाक्टरले निर्धारण गरेको छ कि तपाई कुनै रोगबाट पीडित हुनुहुन्न।"
+
+#: src/menus/main.py:336
+msgid "The doctor has determined that you are currently suffering from the following:"
+msgstr "डाक्टरले निर्धारण गरेको छ कि तपाई हाल निम्न रोगबाट पीडित हुनुहुन्छ:"
+
+#: src/menus/main.py:347
+msgid "Treat {illness}"
+msgstr "उपचार गर्नुहोस् {illness}"
+
+#: src/menus/main.py:371
+msgid "You were treated for your {illness}."
+msgstr "तपाईँको {illness} को लागी उपचार गरियो।"
+
+#: src/menus/main.py:377
+msgid "You are no longer suffering from {illness}."
+msgstr "तपाईँक अब {illness} बाट पीडित हुनुहुन्न।"
+
+#: src/menus/main.py:386
+msgid "You continue to suffer from {illness}."
+msgstr "तपाईँ {illness} बाट पीडित हुनुहुन्छ।"
+
+#: src/menus/main.py:391
+msgid "You practiced meditation."
+msgstr "तपाईंले ध्यान अभ्यास गर्नुभयो।"
+
+#: src/menus/main.py:402
+msgid "You have achieved a deeper awareness of yourself."
+msgstr "तपाईंले आफ्नो बारेमा गहिरो जागरूकता प्राप्त गर्नुभएको छ।"
+
+#: src/menus/main.py:403 src/menus/main.py:576
+#: src/people/classes/player.py:338
+msgid "Karma"
+msgstr "कर्म"
+
+#: src/menus/main.py:409
+msgid "You went to the library."
+msgstr "तपाईं पुस्तकालयमा जानुभयो।"
+
+#: src/menus/main.py:426
+msgid "Your health is too weak to visit the gym."
+msgstr "तपाईको स्वास्थ्य जिम जानको लागि धेरै कमजोर छ।"
+
+#: src/menus/main.py:440
+msgid "You worked out at the gym."
+msgstr "तपाईंले जिममा कसरत गर्नुभयो।"
+
+#: src/menus/main.py:441
+msgid "Workout"
+msgstr "कसरत"
+
+#: src/menus/main.py:454
+msgid "Play the lottery today!"
+msgstr "आज चिठ्ठा खेल्नुहोस्!"
+
+#: src/menus/main.py:455
+msgid "Ticket cost: $4 each"
+msgstr "टिकट लागत: $ 4 प्रत्येक"
+
+#: src/menus/main.py:457
+msgid "Lottery jackpot: ${jackpot}"
+msgstr "चिठ्ठा ज्याकपोट: ${jackpot}"
+
+#: src/menus/main.py:459
+msgid "Buy 10 tickets"
+msgstr "१० टिकट किन्नुहोस्"
+
+#: src/menus/main.py:459
+msgid "Buy a ticket"
+msgstr "टिकट किन्नुहोस्"
+
+#: src/menus/main.py:468
+msgid "You don't have enough money"
+msgstr "तपाईसँग पर्याप्त पैसा छैन"
+
+#: src/menus/main.py:472
+msgid "Guess the 4 winning numbers between 1 and 20. Each number in the line must be separated by a space."
+msgstr "1 र 20 बीचको 4 विजयी संख्याहरू अनुमान गर्नुहोस्। रेखामा प्रत्येक नम्बरलाई स्पेसद्वारा छुट्याउनुपर्छ।"
+
+#: src/menus/main.py:477
+msgid "The numbers within each line must be unique."
+msgstr "Angka-angka dalam setiap baris harus unik."
+
+#: src/menus/main.py:479
+msgid "The numbers must be unique."
+msgstr "प्रत्येक रेखा भित्रको संख्या अद्वितीय हुनुपर्छ।"
+
+#: src/menus/main.py:486
+msgid "Guess #{num}: "
+msgstr "अनुमान गर्नुहोस् #{num}: "
+
+#: src/menus/main.py:488
+msgid "Guess: "
+msgstr "अनुमान गर्नुहोस्: "
+
+#: src/menus/main.py:494
+msgid "The values must all be integers."
+msgstr "मानहरू सबै पूर्णांक हुनुपर्छ।"
+
+#: src/menus/main.py:498
+msgid "You must enter exactly 4 numbers"
+msgstr "तपाईले ठ्याक्कै 4 नम्बरहरू हालनु गर्नुपर्छ"
+
+#: src/menus/main.py:501
+msgid "All values must be between 1 and 20"
+msgstr "सबै मानहरू 1 र 20 बीचको हुनुपर्छ"
+
+#: src/menus/main.py:504
+msgid "All values must be unique."
+msgstr "सबै मानहरू अद्वितीय हुनुपर्छ।"
+
+#: src/menus/main.py:510
+msgid "The winning numbers are {nums}"
+msgstr "विजेता नम्बरहरू {nums} हुन्"
+
+#: src/menus/main.py:521
+msgid "YOU WON THE ${amount} LOTTERY JACKPOT!!!"
+msgstr "तपाईंले ${amount} चिठ्ठा ज्याकपट जित्नुभयो!!!"
