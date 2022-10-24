@@ -447,3 +447,134 @@ msgstr "तपाईंको आनन्दका पलहरु "
 msgid "{his_her} Enjoyment"
 msgstr "{his_her}का आनन्दका पलहरु "
 
+#: src/menus/main.py:111
+msgid "Your {relation} isn't interested in having a conversation with you."
+msgstr "तपाईंको {relation} तपाईंसँग कुराकानी गर्न इच्छुक छैन।"
+
+#: src/menus/main.py:125
+msgid "You had a conversation with your {relation}."
+msgstr "तपाईंले आफ्नो {relation} सँग कुराकानी गर्नुभयो।"
+
+#: src/menus/main.py:129
+msgid "Agreement"
+msgstr "सम्झौता"
+
+#: src/menus/main.py:139
+msgid "You and your {relation} got into an argument. What will you do?"
+msgstr "तपाईं र तपाईंको {relation} विवादमा पर्नुभयो। अब तपाईं के गर्नुहुन्छ?"
+
+#: src/menus/main.py:144
+msgid "Apologize"
+msgstr "माफी माग्नुहोस्"
+
+#: src/menus/main.py:145
+msgid "Agree to disagree"
+msgstr "असहमत हुन सहमत"
+
+#: src/menus/main.py:146
+msgid "Insult {him_her}"
+msgstr "अपमान {him_her}"
+
+#: src/menus/main.py:151
+msgid "You apologized to your {relation}"
+msgstr "तपाईंले आफ्नो {relation} सँग माफी माग्नुभयो।"
+
+#: src/menus/main.py:157
+msgid "You agreed to disagree"
+msgstr "तपाईं असहमत हुन सहमत हुनुभयो।"
+
+#: src/menus/main.py:161
+msgid "You insulted your {relation}"
+msgstr "तपाईंले आफ्नो {relation} को अपमान गर्नुभयो।"
+
+#: src/menus/main.py:183
+msgid "You told your {relation} that {hes_shes} {compliment}."
+msgstr "तपाईंले आफ्नो {relation} लाई भन्नुभयो कि {hes_shes} {compliment}।"
+
+#: src/menus/main.py:190
+msgid "{his_her} Appreciation"
+msgstr "{his_her} प्रशंसा"
+
+#: src/menus/main.py:204
+msgid "Your {relation} told you that you're {compliment}!"
+msgstr "तपाईँको {relation} ले भन्यो कि तपाई {compliment} हुनुहुन्छ!"
+
+#: src/menus/main.py:220
+msgid "Are you sure you want to insult your {relation}?"
+msgstr "के तपाईं आफ्नो {relation} लाई अपमान गर्न चाहनु हुन्छ?"
+
+#: src/menus/main.py:224
+msgid "You insulted your {rel}."
+msgstr "तपाईंले आफ्नो {rel} को अपमान गर्नुभयो।"
+
+#: src/menus/main.py:233
+msgid "Your {rel} insulted you back."
+msgstr "तपाईंको {rel} ले तपाईंलाई अपमान गरेको छ।"
+
+#: src/menus/main.py:242
+msgid "Activities Menu"
+msgstr "गतिविधी मेनु"
+
+#: src/menus/main.py:246 src/menus/main.py:261
+msgid "Play with your toys"
+msgstr "आफ्नो खेलौना संग खेल्नुहोस्"
+
+#: src/menus/main.py:248 src/menus/main.py:314
+msgid "Doctor"
+msgstr "डाक्टर"
+
+#: src/menus/main.py:250 src/menus/main.py:279
+msgid "Arts and Crafts"
+msgstr "कला र शिल्प"
+
+#: src/menus/main.py:252 src/menus/main.py:390
+msgid "Meditate"
+msgstr "ध्यान"
+
+#: src/menus/main.py:253 src/menus/main.py:408
+msgid "Library"
+msgstr "पुस्तकालय"
+
+#: src/menus/main.py:254 src/menus/main.py:424
+msgid "Gym"
+msgstr "जिम"
+
+#: src/menus/main.py:255 src/menus/main.py:304
+msgid "Listen to music"
+msgstr "संगीतलाई सुन"
+
+#: src/menus/main.py:257 src/menus/main.py:453
+msgid "Lottery"
+msgstr "चिठ्ठा"
+
+#: src/menus/main.py:258 src/menus/main.py:534
+msgid "Surrender"
+msgstr "आत्मसमर्पण"
+
+#: src/menus/main.py:263
+msgid "You don't feel like playing, but you decide to try anyway."
+msgstr "तपाईंलाई खेल्न मन लागेको छैन, तर तपाईंले जे भए पनि प्रयास गर्ने निर्णय गर्नुहुन्छ।"
+
+#: src/menus/main.py:269
+msgid "You played with your toys."
+msgstr "तपाईं आफ्नो खेलौनासंग खेल्नुभयो।"
+
+#: src/menus/main.py:270
+msgid "You had a lot of fun playing with your toys."
+msgstr "तपाईंलाई आफ्नो खेलौनासँग खेल्दा धेरै रमाइलो भयो।"
+
+#: src/menus/main.py:282
+msgid "You thought about doing arts and crafts, but couldn't decide what to make."
+msgstr "तपाईंले कला र शिल्प गर्ने बारे सोच्नुभयो, तर के बनाउने भनेर निर्णय गर्न सक्नुभएन।"
+
+#: src/menus/main.py:289
+msgid "You decided to paint."
+msgstr "तपाईले पेन्ट गर्ने निर्णय गर्नुभयो।"
+
+#: src/menus/main.py:294
+msgid "You decided to bake something tasty!"
+msgstr "तपाईंले केहि स्वादिष्ट पकाउने निर्णय गर्नुभयो!"
+
+#: src/menus/main.py:305
+msgid "You listened to some music."
+msgstr "तपाईंले केही संगीत सुन्नुभयो।"
