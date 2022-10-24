@@ -447,3 +447,392 @@ msgstr "तपाईंको आनन्दका पलहरु "
 msgid "{his_her} Enjoyment"
 msgstr "{his_her}का आनन्दका पलहरु "
 
+#: src/menus/main.py:111
+msgid "Your {relation} isn't interested in having a conversation with you."
+msgstr "तपाईंको {relation} तपाईंसँग कुराकानी गर्न इच्छुक छैन।"
+
+#: src/menus/main.py:125
+msgid "You had a conversation with your {relation}."
+msgstr "तपाईंले आफ्नो {relation} सँग कुराकानी गर्नुभयो।"
+
+#: src/menus/main.py:129
+msgid "Agreement"
+msgstr "सम्झौता"
+
+#: src/menus/main.py:139
+msgid "You and your {relation} got into an argument. What will you do?"
+msgstr "तपाईं र तपाईंको {relation} विवादमा पर्नुभयो। अब तपाईं के गर्नुहुन्छ?"
+
+#: src/menus/main.py:144
+msgid "Apologize"
+msgstr "माफी माग्नुहोस्"
+
+#: src/menus/main.py:145
+msgid "Agree to disagree"
+msgstr "असहमत हुन सहमत"
+
+#: src/menus/main.py:146
+msgid "Insult {him_her}"
+msgstr "अपमान {him_her}"
+
+#: src/menus/main.py:151
+msgid "You apologized to your {relation}"
+msgstr "तपाईंले आफ्नो {relation} सँग माफी माग्नुभयो।"
+
+#: src/menus/main.py:157
+msgid "You agreed to disagree"
+msgstr "तपाईं असहमत हुन सहमत हुनुभयो।"
+
+#: src/menus/main.py:161
+msgid "You insulted your {relation}"
+msgstr "तपाईंले आफ्नो {relation} को अपमान गर्नुभयो।"
+
+#: src/menus/main.py:183
+msgid "You told your {relation} that {hes_shes} {compliment}."
+msgstr "तपाईंले आफ्नो {relation} लाई भन्नुभयो कि {hes_shes} {compliment}।"
+
+#: src/menus/main.py:190
+msgid "{his_her} Appreciation"
+msgstr "{his_her} प्रशंसा"
+
+#: src/menus/main.py:204
+msgid "Your {relation} told you that you're {compliment}!"
+msgstr "तपाईँको {relation} ले भन्यो कि तपाई {compliment} हुनुहुन्छ!"
+
+#: src/menus/main.py:220
+msgid "Are you sure you want to insult your {relation}?"
+msgstr "के तपाईं आफ्नो {relation} लाई अपमान गर्न चाहनु हुन्छ?"
+
+#: src/menus/main.py:224
+msgid "You insulted your {rel}."
+msgstr "तपाईंले आफ्नो {rel} को अपमान गर्नुभयो।"
+
+#: src/menus/main.py:233
+msgid "Your {rel} insulted you back."
+msgstr "तपाईंको {rel} ले तपाईंलाई अपमान गरेको छ।"
+
+#: src/menus/main.py:242
+msgid "Activities Menu"
+msgstr "गतिविधी मेनु"
+
+#: src/menus/main.py:246 src/menus/main.py:261
+msgid "Play with your toys"
+msgstr "आफ्नो खेलौना संग खेल्नुहोस्"
+
+#: src/menus/main.py:248 src/menus/main.py:314
+msgid "Doctor"
+msgstr "डाक्टर"
+
+#: src/menus/main.py:250 src/menus/main.py:279
+msgid "Arts and Crafts"
+msgstr "कला र शिल्प"
+
+#: src/menus/main.py:252 src/menus/main.py:390
+msgid "Meditate"
+msgstr "ध्यान"
+
+#: src/menus/main.py:253 src/menus/main.py:408
+msgid "Library"
+msgstr "पुस्तकालय"
+
+#: src/menus/main.py:254 src/menus/main.py:424
+msgid "Gym"
+msgstr "जिम"
+
+#: src/menus/main.py:255 src/menus/main.py:304
+msgid "Listen to music"
+msgstr "संगीतलाई सुन"
+
+#: src/menus/main.py:257 src/menus/main.py:453
+msgid "Lottery"
+msgstr "चिठ्ठा"
+
+#: src/menus/main.py:258 src/menus/main.py:534
+msgid "Surrender"
+msgstr "आत्मसमर्पण"
+
+#: src/menus/main.py:263
+msgid "You don't feel like playing, but you decide to try anyway."
+msgstr "तपाईंलाई खेल्न मन लागेको छैन, तर तपाईंले जे भए पनि प्रयास गर्ने निर्णय गर्नुहुन्छ।"
+
+#: src/menus/main.py:269
+msgid "You played with your toys."
+msgstr "तपाईं आफ्नो खेलौनासंग खेल्नुभयो।"
+
+#: src/menus/main.py:270
+msgid "You had a lot of fun playing with your toys."
+msgstr "तपाईंलाई आफ्नो खेलौनासँग खेल्दा धेरै रमाइलो भयो।"
+
+#: src/menus/main.py:282
+msgid "You thought about doing arts and crafts, but couldn't decide what to make."
+msgstr "तपाईंले कला र शिल्प गर्ने बारे सोच्नुभयो, तर के बनाउने भनेर निर्णय गर्न सक्नुभएन।"
+
+#: src/menus/main.py:289
+msgid "You decided to paint."
+msgstr "तपाईले पेन्ट गर्ने निर्णय गर्नुभयो।"
+
+#: src/menus/main.py:294
+msgid "You decided to bake something tasty!"
+msgstr "तपाईंले केहि स्वादिष्ट पकाउने निर्णय गर्नुभयो!"
+
+#: src/menus/main.py:305
+msgid "You listened to some music."
+msgstr "तपाईंले केही संगीत सुन्नुभयो।"
+
+#: src/menus/main.py:318
+msgid "Would you like to visit the doctor? ($100 consultation fee)"
+msgstr "के तपाइँ डाक्टरलाई भेट्न चाहनुहुन्छ? (biaya konsultasi $100)"
+
+#: src/menus/main.py:321
+msgid "Would you like to visit the doctor?"
+msgstr "के तपाई डाक्टरलाई भेट्न चाहनुहुन्छ?"
+
+#: src/menus/main.py:324
+msgid "You don't have enough money."
+msgstr "तपाईसँग पर्याप्त पैसा छैन।"
+
+#: src/menus/main.py:330
+msgid "The doctor has determined that you are not suffering from any illnesses."
+msgstr "डाक्टरले निर्धारण गरेको छ कि तपाई कुनै रोगबाट पीडित हुनुहुन्न।"
+
+#: src/menus/main.py:336
+msgid "The doctor has determined that you are currently suffering from the following:"
+msgstr "डाक्टरले निर्धारण गरेको छ कि तपाई हाल निम्न रोगबाट पीडित हुनुहुन्छ:"
+
+#: src/menus/main.py:347
+msgid "Treat {illness}"
+msgstr "उपचार गर्नुहोस् {illness}"
+
+#: src/menus/main.py:371
+msgid "You were treated for your {illness}."
+msgstr "तपाईँको {illness} को लागी उपचार गरियो।"
+
+#: src/menus/main.py:377
+msgid "You are no longer suffering from {illness}."
+msgstr "तपाईँक अब {illness} बाट पीडित हुनुहुन्न।"
+
+#: src/menus/main.py:386
+msgid "You continue to suffer from {illness}."
+msgstr "तपाईँ {illness} बाट पीडित हुनुहुन्छ।"
+
+#: src/menus/main.py:391
+msgid "You practiced meditation."
+msgstr "तपाईंले ध्यान अभ्यास गर्नुभयो।"
+
+#: src/menus/main.py:402
+msgid "You have achieved a deeper awareness of yourself."
+msgstr "तपाईंले आफ्नो बारेमा गहिरो जागरूकता प्राप्त गर्नुभएको छ।"
+
+#: src/menus/main.py:403 src/menus/main.py:576
+#: src/people/classes/player.py:338
+msgid "Karma"
+msgstr "कर्म"
+
+#: src/menus/main.py:409
+msgid "You went to the library."
+msgstr "तपाईं पुस्तकालयमा जानुभयो।"
+
+#: src/menus/main.py:426
+msgid "Your health is too weak to visit the gym."
+msgstr "तपाईको स्वास्थ्य जिम जानको लागि धेरै कमजोर छ।"
+
+#: src/menus/main.py:440
+msgid "You worked out at the gym."
+msgstr "तपाईंले जिममा कसरत गर्नुभयो।"
+
+#: src/menus/main.py:441
+msgid "Workout"
+msgstr "कसरत"
+
+#: src/menus/main.py:454
+msgid "Play the lottery today!"
+msgstr "आज चिठ्ठा खेल्नुहोस्!"
+
+#: src/menus/main.py:455
+msgid "Ticket cost: $4 each"
+msgstr "टिकट लागत: $ 4 प्रत्येक"
+
+#: src/menus/main.py:457
+msgid "Lottery jackpot: ${jackpot}"
+msgstr "चिठ्ठा ज्याकपोट: ${jackpot}"
+
+#: src/menus/main.py:459
+msgid "Buy 10 tickets"
+msgstr "१० टिकट किन्नुहोस्"
+
+#: src/menus/main.py:459
+msgid "Buy a ticket"
+msgstr "टिकट किन्नुहोस्"
+
+#: src/menus/main.py:468
+msgid "You don't have enough money"
+msgstr "तपाईसँग पर्याप्त पैसा छैन"
+
+#: src/menus/main.py:472
+msgid "Guess the 4 winning numbers between 1 and 20. Each number in the line must be separated by a space."
+msgstr "1 र 20 बीचको 4 विजयी संख्याहरू अनुमान गर्नुहोस्। रेखामा प्रत्येक नम्बरलाई स्पेसद्वारा छुट्याउनुपर्छ।"
+
+#: src/menus/main.py:477
+msgid "The numbers within each line must be unique."
+msgstr "Angka-angka dalam setiap baris harus unik."
+
+#: src/menus/main.py:479
+msgid "The numbers must be unique."
+msgstr "प्रत्येक रेखा भित्रको संख्या अद्वितीय हुनुपर्छ।"
+
+#: src/menus/main.py:486
+msgid "Guess #{num}: "
+msgstr "अनुमान गर्नुहोस् #{num}: "
+
+#: src/menus/main.py:488
+msgid "Guess: "
+msgstr "अनुमान गर्नुहोस्: "
+
+#: src/menus/main.py:494
+msgid "The values must all be integers."
+msgstr "मानहरू सबै पूर्णांक हुनुपर्छ।"
+
+#: src/menus/main.py:498
+msgid "You must enter exactly 4 numbers"
+msgstr "तपाईले ठ्याक्कै 4 नम्बरहरू हालनु गर्नुपर्छ"
+
+#: src/menus/main.py:501
+msgid "All values must be between 1 and 20"
+msgstr "सबै मानहरू 1 र 20 बीचको हुनुपर्छ"
+
+#: src/menus/main.py:504
+msgid "All values must be unique."
+msgstr "सबै मानहरू अद्वितीय हुनुपर्छ।"
+
+#: src/menus/main.py:510
+msgid "The winning numbers are {nums}"
+msgstr "विजेता नम्बरहरू हुन्ः {nums} "
+
+#: src/menus/main.py:521
+msgid "YOU WON THE ${amount} LOTTERY JACKPOT!!!"
+msgstr "तपाईंले ${amount} चिठ्ठामा ज्याकपट जित्नुभयो!!!"
+
+#: src/menus/main.py:530
+msgid "You did not win the ${amount} lottery jackpot."
+msgstr "तपाईंले लटरीमा ${amount} को ज्याकपोट जित्नुभएन।"
+
+#: src/menus/main.py:535
+msgid "Are you sure you want to surrender this life?"
+msgstr "के तपाइँ यो जीवन समर्पण गर्न निश्चित हुनुहुन्छ?"
+
+#: src/menus/main.py:536
+msgid "This will kill your current character. Continue?"
+msgstr "यसले तपाईंको हालको चरित्रलाई मार्नेछ। अझै जारी राख्ने?"
+
+#: src/menus/main.py:537
+msgid "You surrendered."
+msgstr "तपाईंले आत्मसमर्पण गर्नुभयो।"
+
+#: src/menus/main.py:539
+msgid "School Menu"
+msgstr "विद्यालय मेनु"
+
+#: src/menus/main.py:541
+msgid "Grades"
+msgstr "ग्रेडहरू"
+
+#: src/menus/main.py:542
+msgid "Drop out"
+msgstr "निक्लिएको"
+
+#: src/menus/main.py:542
+msgid "Study harder"
+msgstr "अझै कडा अध्ययन गर"
+
+#: src/menus/main.py:545
+msgid "You began studying harder"
+msgstr "तपाईंले कडा अध्ययन गर्न थाल्नुभयो"
+
+#: src/menus/main.py:560
+msgid "You dropped out of school."
+msgstr "तपाईंले विद्यालय छोड्नुभयो।"
+
+#: src/menus/main.py:565
+msgid "Your parents won't let you drop out of school."
+msgstr "तपाईंको आमाबाबुले तपाईंलाई स्कूल छोड्न दिनुहुन्न।"
+
+#: src/menus/main.py:567
+msgid "Identity"
+msgstr "पहिचान"
+
+#: src/menus/main.py:567
+msgid "Stats"
+msgstr " तथ्याङ्क "
+
+#: src/menus/main.py:571
+msgid "Your stats"
+msgstr "तपाईको तथ्याङ्क"
+
+#: src/menus/main.py:572 src/people/classes/player.py:372
+msgid "Happiness"
+msgstr "खुशीयालि"
+
+#: src/menus/main.py:573 src/people/classes/player.py:373
+msgid "Health"
+msgstr "स्वास्थ्य"
+
+#: src/menus/main.py:578
+msgid "The below stats only matter if you have a job:"
+msgstr "तपाईँसँग जागिर छ भने मात्रै तलको तथ्याङ्कले फरक पार्छ:"
+
+#: src/menus/main.py:579 src/menus/main.py:687
+msgid "Stress"
+msgstr "तनाव"
+
+#: src/menus/main.py:580 src/menus/main.py:687
+msgid "Performance"
+msgstr "प्रदर्शन"
+
+#: src/menus/main.py:584
+msgid "Modify Happiness"
+msgstr "खुशी परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:585
+msgid "Modify Health"
+msgstr "स्वास्थ्य परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:586
+msgid "Modify Smarts"
+msgstr "स्मार्टहरू परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:587
+msgid "Modify Looks"
+msgstr "दृश्य परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:588
+msgid "Modify Karma"
+msgstr "कर्म परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:589
+msgid "Modify Stress"
+msgstr "तनाव परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:590
+msgid "Modify Performance"
+msgstr "कार्यसम्पादन परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:595
+msgid "What would you like to set Happiness to? (0-100)"
+msgstr "तपाईं खुशीलाई कतिमा सेट गर्न चाहनुहुन्छ? (0-100)"
+
+#: src/menus/main.py:600
+msgid "What would you like to set Health to? (0-100)"
+msgstr "तपाईं स्वास्थ्यलाई कतिमा सेट गर्न चाहनुहुन्छ? (0-100)"
+
+#: src/menus/main.py:605
+msgid "What would you like to set Smarts to? (0-100)"
+msgstr "तपाईं स्मार्टलाई कतिमा सेट गर्न चाहनुहुन्छ? (0-100)"
+
+#: src/menus/main.py:610
+msgid "What would you like to set Looks to? (0-100)"
+msgstr "तपाईं लुक्समा कतिमा सेट गर्न चाहनुहुन्छ? (0-100)"
+
+#: src/menus/main.py:615
+msgid "What would you like to set Karma to? (0-100)"
+msgstr "तपाई कर्म कतिमा सेट गर्न चाहनुहुन्छ? (0-100)"
+
