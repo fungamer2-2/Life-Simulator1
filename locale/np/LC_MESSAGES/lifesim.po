@@ -706,8 +706,133 @@ msgstr "सबै मानहरू अद्वितीय हुनुपर
 
 #: src/menus/main.py:510
 msgid "The winning numbers are {nums}"
-msgstr "विजेता नम्बरहरू {nums} हुन्"
+msgstr "विजेता नम्बरहरू हुन्ः {nums} "
 
 #: src/menus/main.py:521
 msgid "YOU WON THE ${amount} LOTTERY JACKPOT!!!"
-msgstr "तपाईंले ${amount} चिठ्ठा ज्याकपट जित्नुभयो!!!"
+msgstr "तपाईंले ${amount} चिठ्ठामा ज्याकपट जित्नुभयो!!!"
+
+#: src/menus/main.py:530
+msgid "You did not win the ${amount} lottery jackpot."
+msgstr "तपाईंले लटरीमा ${amount} को ज्याकपोट जित्नुभएन।"
+
+#: src/menus/main.py:535
+msgid "Are you sure you want to surrender this life?"
+msgstr "के तपाइँ यो जीवन समर्पण गर्न निश्चित हुनुहुन्छ?"
+
+#: src/menus/main.py:536
+msgid "This will kill your current character. Continue?"
+msgstr "यसले तपाईंको हालको चरित्रलाई मार्नेछ। अझै जारी राख्ने?"
+
+#: src/menus/main.py:537
+msgid "You surrendered."
+msgstr "तपाईंले आत्मसमर्पण गर्नुभयो।"
+
+#: src/menus/main.py:539
+msgid "School Menu"
+msgstr "विद्यालय मेनु"
+
+#: src/menus/main.py:541
+msgid "Grades"
+msgstr "ग्रेडहरू"
+
+#: src/menus/main.py:542
+msgid "Drop out"
+msgstr "निक्लिएको"
+
+#: src/menus/main.py:542
+msgid "Study harder"
+msgstr "अझै कडा अध्ययन गर"
+
+#: src/menus/main.py:545
+msgid "You began studying harder"
+msgstr "तपाईंले कडा अध्ययन गर्न थाल्नुभयो"
+
+#: src/menus/main.py:560
+msgid "You dropped out of school."
+msgstr "तपाईंले विद्यालय छोड्नुभयो।"
+
+#: src/menus/main.py:565
+msgid "Your parents won't let you drop out of school."
+msgstr "तपाईंको आमाबाबुले तपाईंलाई स्कूल छोड्न दिनुहुन्न।"
+
+#: src/menus/main.py:567
+msgid "Identity"
+msgstr "पहिचान"
+
+#: src/menus/main.py:567
+msgid "Stats"
+msgstr " तथ्याङ्क "
+
+#: src/menus/main.py:571
+msgid "Your stats"
+msgstr "तपाईको तथ्याङ्क"
+
+#: src/menus/main.py:572 src/people/classes/player.py:372
+msgid "Happiness"
+msgstr "खुशीयालि"
+
+#: src/menus/main.py:573 src/people/classes/player.py:373
+msgid "Health"
+msgstr "स्वास्थ्य"
+
+#: src/menus/main.py:578
+msgid "The below stats only matter if you have a job:"
+msgstr "तपाईँसँग जागिर छ भने मात्रै तलको तथ्याङ्कले फरक पार्छ:"
+
+#: src/menus/main.py:579 src/menus/main.py:687
+msgid "Stress"
+msgstr "तनाव"
+
+#: src/menus/main.py:580 src/menus/main.py:687
+msgid "Performance"
+msgstr "प्रदर्शन"
+
+#: src/menus/main.py:584
+msgid "Modify Happiness"
+msgstr "खुशी परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:585
+msgid "Modify Health"
+msgstr "स्वास्थ्य परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:586
+msgid "Modify Smarts"
+msgstr "स्मार्टहरू परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:587
+msgid "Modify Looks"
+msgstr "दृश्य परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:588
+msgid "Modify Karma"
+msgstr "कर्म परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:589
+msgid "Modify Stress"
+msgstr "तनाव परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:590
+msgid "Modify Performance"
+msgstr "कार्यसम्पादन परिमार्जन गर्नुहोस्"
+
+#: src/menus/main.py:595
+msgid "What would you like to set Happiness to? (0-100)"
+msgstr "तपाईं खुशीलाई कतिमा सेट गर्न चाहनुहुन्छ? (0-100)"
+
+#: src/menus/main.py:600
+msgid "What would you like to set Health to? (0-100)"
+msgstr "तपाईं स्वास्थ्यलाई कतिमा सेट गर्न चाहनुहुन्छ? (0-100)"
+
+#: src/menus/main.py:605
+msgid "What would you like to set Smarts to? (0-100)"
+msgstr "तपाईं स्मार्टलाई कतिमा सेट गर्न चाहनुहुन्छ? (0-100)"
+
+#: src/menus/main.py:610
+msgid "What would you like to set Looks to? (0-100)"
+msgstr "तपाईं लुक्समा कतिमा सेट गर्न चाहनुहुन्छ? (0-100)"
+
+#: src/menus/main.py:615
+msgid "What would you like to set Karma to? (0-100)"
+msgstr "तपाई कर्म कतिमा सेट गर्न चाहनुहुन्छ? (0-100)"
+
