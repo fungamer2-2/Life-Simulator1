@@ -86,7 +86,7 @@ COMPLIMENTS = [
 # This section is broken into basic conversation depths. It may be useful in future to e.g. not have a heart-to-heart with your {enemy}, {boss}, {whoever}.
 # It might also be useful for age / job dependent topics, or to facilitate 'you spoke to your {relation} about which is better {movie} or {movie}' / 'you spoke with your {relation} about {sport} and how {team} will beat {team} this year'
 
-# Casual chats, small-talk, etc
+# Casual chats, small-talk, etc. (can take words like 'chatted with your {relation} about' or 'talked about' prior to calling)
 CHATS = [
 	_("the hierarchy of licorice"),
 	_("which is better, Star Wars or Star Trek"),
@@ -103,6 +103,12 @@ CHATS_CHILD = [
 	_("which super power you would most like to have"),
 	_("which super power they would most like to have"),
 	_("what they want to be when they grow up"),
+	_("how much you hate vegetables"),
+	_("how scary the toilet is when it gets flushed"),
+	_("why the sky is blue"),
+	_("where water goes when the toilet gets flushed"),
+	_("your favourite movie character"),
+
 ]
 CHATS_TEEN = [
 	_(""),
@@ -124,7 +130,7 @@ CHATS_CO_WORKERS = [
 ]
 
 
-# Academic / debatable topics, topics that are contentious etc.
+# Academic / debatable topics, topics that are contentious etc. (can take words like 'discussed' prior to calling)
 DISCUSSIONS = [
 	_("why cats are better than dogs"),
 	_("why dogs are better than cats"),
@@ -305,6 +311,23 @@ DISCUSSIONS = [
 	_("whether prisoners should be allowed to vote"),
 	_("whether prenuptual agreements make families stronger"),
 	_("whether corporal punishment should be allowed in schools"),
+]
+DISCUSSIONS_INFANT = [
+	_(""),
+]
+DISCUSSIONS_CHILD = [
+	_("if it is better to scrunch or fold"),
+	_("if it is better to squat or sit"),
+	_("if it is better to shower or bath"),
+	_("if it is better to wipe from the front or back"),
+	_("if it is better to "),
+	_("your favourite movie character"),
+	_("your imaginary friend"),
+	
+	_("your most prized posession"),
+]
+DISCUSSIONS_TEEN = [
+	_(""),
 ]
 # Important 'life' talks
 TALKS = [
@@ -1101,6 +1124,7 @@ ATTACK_WORD = [
 	_("spinning back-fisted"),
 	_("spinning back-kicked"),
 	_("sprawled"),
+	_("stormed"),
 	_("stubborn-mule leg-kicked"),
 	_("superkicked"),
 	_("supermanned"),
@@ -1119,5 +1143,386 @@ ATTACK_WORD = [
 	_("triangled"),
 	_("triangle choked"),
 	_("uppercutted"),
+]
 
+
+# Celebrity list
+# For use in situations like '{celebrity} followed you on instagram'; or "you were talking with your {relation} about {adam brody}'s {left ankle}"; "while you were working at {chicken shop} you noticed {seth rogan} stuck in traffic outside. You waved, {he} didn't wave back." etc
+# Rough alphabetical order only so far
+
+CELEBRITY_MALE_ACTOR = [
+	_("Alex Pettyfer"),
+	_("Ashton Kutcher"),
+	_("Adam Brody"),
+	_("Andrew Garfield"),
+	_("Alexander Skarsgård"),
+	_("Austin Nichols"),
+	_("Allan Hyde"),
+	_("Adam Garcia"),
+	_("Arnold Schwarzenegger"),
+	_("Ben McKenzie"),
+	_("Bryan Greenberg"),
+	_("Brad Pitt"),
+	_("Bradley Cooper"),
+	_("Channing Tatum"),
+	_("Clive Owen"),
+	_("Chace Crawford"),
+	_("Cam Gigandet"),
+	_("Chris Brown"),
+	_("Chris Pine"),
+	_("Chad Michael Murray"),
+	_("Columbus Short"),
+	_("Christian Bale"),
+	_("Casey Affleck"),
+	_("Cillian Murphy"),
+	_("Daniel Craig"),
+	_("David Beckham"),
+	_("Ed Westwick"),
+	_("Eric Bana"),
+	_("Emile Hirsch"),
+	_("Eric Dane"),
+	_("Gerard Butler"),
+	_("Garrett Hedlund"),
+	_("Hayden Christensen"),
+	_("Hugh Jackman"),
+	_("Hugh Laurie"),
+	_("Hugh Dancy"),
+	_("Heath Ledger"),
+	_("Ian Somerhalder"),
+	_("James Lafferty"),
+	_("James Marsden"),
+	_("John Mayer"),
+	_("Jude Law"),
+	_("Jensen Ackles"),
+	_("Jake Gyllenhaal"),
+	_("Justin Chambers"),
+	_("Jesse Metcalfe"),
+	_("Justin Timberlake"),
+	_("Javier Bardem"),
+	_("Joe Manganiello"),
+	_("Johnny Depp"),
+	_("James Franco"),
+	_("Jack O'Connell"),
+	_("Kellan Lutz"),
+	_("Josh Hartnett"),
+	_("Jason Segel"),
+	_("Jared Padalecki"),
+	_("Joseph Gordon-Levitt"),
+	_("Liam Hemsworth"),
+	_("Leonardo DiCaprio"),
+	_("Luke Pasqualino"),
+	_("Milo Ventimiglia"),
+	_("Mark Salling"),
+	_("Matthew Goode"),
+	_("Mads Mikkelsen"),
+	_("Marshall Mathers"),
+	_("Mekhi Phifer"),
+	_("Matt Lanter"),
+	_("Mike Vogel"),
+	_("Nick Zano"),
+	_("Orlando Bloom"),
+	_("Patrick Swayze"),
+	_("Penn Badgley"),
+	_("Peter Facinelli"),
+	_("Paul Walker"),
+	_("Ryan Gosling"),
+	_("Ryan Reynolds"),
+	_("Robbie Jones"),
+	_("Robert Pattinson"),
+	_("Rick Malambri"),
+	_("Ryan Kwanten"),
+	_("Ryan Phillippe"),
+	_("Rafi Gavron"),
+	_("Sam Worthington"),
+	_("Sean Faris"),
+	_("Sylvester Stallone"),
+	_("Seth Rogan"),
+	_("Shia LaBeouf"),
+	_("Stephen Colletti"),
+	_("Shane West"),
+	_("Simon Rex"),
+	_("Taylor Lautner"),
+	_("Tom Hardy"),
+	_("Tupac Shakur"),
+	_("Tristan Mack Wilds"),
+	_("Timothy Olyphant"),
+	_("Tom Welling"),
+	_("Travis Barker"),
+	_("Wentworth Miller"),
+	_("Zac Efron"),
+]
+CELEBRITY_MALE_ATHLETE = [
+	_("Arnold Schwarzenegger"),
+	_("David Beckham"),
+]
+CELEBRITY_MALE_AUTHOR = [
+	_("Joe Manganiello"),
+]
+CELEBRITY_MALE_BUSINESS = [
+	_("Elon Musk"),
+]
+CELEBRITY_MALE_DANCER = [
+	_("Justin Timberlake"),
+]
+CELEBRITY_MALE_DIRECTOR = [
+	_("Joe Manganiello"),
+]
+CELEBRITY_MALE_FASHION_DESIGNER = [
+	_("Michael Kors"),
+	_("Tom Ford"),
+]
+CELEBRITY_MALE_MODEL = [
+	_("David Gandy"),
+	_("Sean O'Pry"),
+]
+CELEBRITY_MALE_MUSICIAN = [		
+	_("Eminem"),
+	_("Jared Followill"),
+	_("John Mayer"),
+	_("Justin Timberlake"),
+	_("Tupac Shakur"),
+]
+CELEBRITY_MALE_POLITICIAN = [
+	_("Arnold Schwarzenegger"),
+]
+CELEBRITY_MALE_PORNSTAR = [
+	_("James Deen"),
+]
+CELEBRITY_MALE_PRODUCER = [
+	_("Arnold Schwarzenegger"),
+	_("Brad Pitt"),
+	_("Joe Manganiello"),
+]
+CELEBRITY_MALE_ROYAL = [
+	_("Prince Carl Philip of Sweden, Duke of Värmland"),
+]
+CELBRITY_MALE_SCREENWRITER = [
+	_("Sylvester Stallone"),
+	_("Seth Rogan"),
+]
+CELEBRITY_MALE_SELF = [
+	_("Arnold Schwarzenegger"),
+]
+CELEBRITY_MALE_SOCIAL_MEDIA = [
+	_("Zach King"),
+]
+CELEBRITY_MALE_WRESTLER = [
+	_("Randy Orton"),
+]
+CELEBRITY_MALE_WRITER = [
+	_("Stan Lee"),
+]
+
+CELEBRITY_FEMALE_ACTOR = [
+	_("Adriana Lima"),
+	_("Aishwarya Rai Bachchan"),
+	_("Alessandra Ambrosio"),
+	_("Amber Heard"),
+	_("Ana Beatriz Barros"),
+	_("Anna Paquin"),
+	_("AnnaSophia Robb"),
+	_("Anne Vyalitsyna"),
+	_("Angelina Jolie"),
+	_("Ashley Benson"),
+	_("Ashley Greene"),
+	_("Bar Refaeli"),
+	_("Behati Prinsloo"),
+	_("Beyoncé Knowles"),
+	_("Blake Lively"),
+	_("Brooklyn Decker"),
+	_("Candice Swanepoel"),
+	_("Cassie Ventura"),
+	_("Charlize Theron"),
+	_("Cheryl Cole"),
+	_("Chloë Grace Moretz"),
+	_("Cindy Crawford"),
+	_("Demi Lovato"),
+	_("Denise Richards"),
+	_("Diane Kruger"),
+	_("Doutzen Kroes"),
+	_("Elisha Cuthbert"),
+	_("Emilia Clarke"),
+	_("Emily Blunt"),
+	_("Emma Stone"),
+	_("Emma Watson"),
+	_("Erin Heatherton"),
+	_("Eva Green"),
+	_("Eva Longoria"),
+	_("Eva Mendes"),
+	_("Freida Pinto"),
+	_("Gisele Bündchen"),
+	_("Hilary Duff"),
+	_("Indiana Evans"),
+	_("Irina Shayk"),
+	_("Isabel Lucas"),
+	_("Izabel Goulart"),
+	_("Jenna Dewan"),
+	_("Jennifer Lawrence"),
+	_("Jessica Alba"),
+	_("Jessica Biel"),
+	_("Jordana Brewster"),
+	_("Josie Maran"),
+	_("Karolina Kurkova"),
+	_("Kate Beckinsale"),
+	_("Kate Upton"),
+	_("Katie Holmes"),
+	_("Keira Knightley"),
+	_("Kelly Brook"),
+	_("Kendall Jenner"),
+	_("Kim Kardashian"),
+	_("Kristen Stewart"),
+	_("Kristin Kreuk"),
+	_("Laetitia Casta"),
+	_("Lauren Conrad"),
+	_("Lily Aldridge"),
+	_("Lucy Hale"),
+	_("Marion Cotillard"),
+	_("Nikki Reed"),
+	_("Nina Dobrev"),
+	_("Olivia Wilde"),
+	_("Malin Akerman"),
+	_("Marisa Miller"),
+	_("Megan Fox"),
+	_("Minka Kelly"),
+	_("Mila Kunis"),
+	_("Miranda Kerr"),
+	_("Monica Bellucci"),
+	_("Natalia Vodianova"),
+	_("Natalie Portman"),
+	_("Nicole Scherzinger"),
+	_("Olivia Culpo"),
+	_("Penélope Cruz"),
+	_("Rachel Bilson"),
+	_("Rachel McAdams"),
+	_("Rachael Taylor"),
+	_("Rachel Weisz"),
+	_("Rihanna Fenty"),
+	_("Roselyn Sanchez"),
+	_("Rosie Huntington-Whiteley"),
+	_("Salma Hayek"),
+	_("Sara Carbonero"),
+	_("Scarlett Johansson"),
+	_("Selena Gomez"),
+	_("Shanina Shaik"),
+	_("Shay Mitchell"),
+	_("Sienna Miller"),
+	_("Sofía Vergara"),
+	_("Stacy Keibler"),
+	_("Tyra Banks"),
+	_("Vanessa Hudgens"),
+	_("Ximena Navarrete"),
+	_("Zoe Saldana"),
+]
+CELEBRITY_FEMALE_ATHLETE = [
+	_("Serena Williams"),
+]
+CELEBRITY_FEMALE_BUSINESS = [
+	_("Sofía Vergara"),
+]
+CELEBRITY_FEMALE_CHEERLEADER = [
+	_("Demi Lovato"),
+	_("Stacy Keibler"),
+]
+CELEBRITY_FEMALE_DANCER = [
+	_("Ashley Benson"),
+	_("Cassie Ventura"),
+	_("Jenna Dewan"),
+	_("Roselyn Sanchez"),
+	_("Stacy Keibler"),
+]
+CELEBRITY_FEMALE_FASHION_DESIGNER = [
+	_("Kim Kardashian"),
+	_("Rihanna Fenty"),
+]
+CELEBRITY_FEMALE_MODEL = [
+	_("Adriana Lima"),
+	_("Aishwarya Rai Bachchan"),
+	_("Alessandra Ambrosio"),
+	_("Ana Beatriz Barros"),
+	_("Anne Vyalitsyna"),
+	_("Bar Refaeli"),
+	_("Behati Prinsloo"),
+	_("Brooklyn Decker"),
+	_("Candice Swanepoel"),
+	_("Cassie Ventura"),
+	_("Cindy Crawford"),
+	_("Denise Richards"),
+	_("Doutzen Kroes"),
+	_("Elisha Cuthbert"),
+	_("Eva Green"),
+	_("Gisele Bündchen"),
+	_("Irina Shayk"),
+	_("Izabel Goulart"),
+	_("Jenna Dewan"),
+	_("Josie Maran"),
+	_("Karolina Kurkova"),
+	_("Kate Upton"),
+	_("Kelly Brook"),
+	_("Kendall Jenner"),
+	_("Laetitia Casta"),
+	_("Lily Aldridge"),
+	_("Malin Akerman"),
+	_("Marisa Miller"),
+	_("Miranda Kerr"),
+	_("Monica Bellucci"),
+	_("Natalia Vodianova"),
+	_("Olivia Culpo"),
+	_("Rachael Taylor"),
+	_("Roselyn Sanchez"),
+	_("Rosie Huntington-Whiteley"),
+	_("Shay Mitchell"),
+	_("Sienna Miller"),
+	_("Sofía Vergara"),
+	_("Stacy Keibler"),
+	_("Tyra Banks"),
+	_("Ximena Navarrete"),
+]
+CELEBRITY_FEMALE_MUSICIAN = [
+	_("Ashley Benson"),
+	_("Beyoncé Knowles"),
+	_("Cassie Ventura"),
+	_("Cheryl Cole"),
+	_("Demi Lovato"),
+	_("Indiana Evans"),
+	_("Minka Kelly"),
+	_("Rihanna Fenty"),
+	_("Roselyn Sanchez"),
+	_("Selena Gomez"),
+]
+CELEBRITY_FEMALE_POLITICIAN = [
+	_("Hillary Clinton"),
+]
+CELEBRITY_FEMALE_PORNSTAR = [
+	_("Jenna Jameson"),
+]
+CELEBRITY_FEMALE_PRODUCER = [
+	_("Charlize Theron"),
+	_("Cindy Crawford"),
+	_("Marion Cotillard"),
+	_("Roselyn Sanchez"),
+	_("Selena Gomez"),
+	_("Tyra Banks"),
+]
+CELEBRITY_FEMALE_ROYAL = [
+	_("Catherine Middleton, Princess of Wales"),
+]
+CELBRITY_FEMALE_SCREENWRITER = [
+	_("Nikki Reed"),
+]
+CELEBRITY_FEMALE_SELF = [
+	_("Catherine Middleton, Princess of Wales"),
+	_("Natalia Vodianova"),
+	_("Pippa Middleton"),
+]
+CELEBRITY_FEMALE_SOCIAL_MEDIA = [
+	_("Olivia Culpo"),
+]
+CELEBRITY_FEMALE_WRESTLER = [
+	_("Stacy Keibler"),
+]
+CELEBRITY_FEMALE_WRITER = [
+	_("Kim Kardashian"),
+	_("Roselyn Sanchez"),
+	_("Shay Mitchell"),
+	_("Tyra Banks"),
 ]
