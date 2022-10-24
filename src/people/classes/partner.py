@@ -33,8 +33,8 @@ class Partner(Relationship):
 	def compatibility_check(self, player):
 		if randint(1, 6) == 1:
 			return randint(1, 2) == 1
-		c1 = player.smarts - self.smarts + 50
-		c2 = player.looks - self.looks + 50
+		c1 = player.looks - self.looks + 50
+		c2 = player.smarts - self.smarts + 50
 		return randint(1, 50) + randint(0, 50) <= round_stochastic(c1 + (c2 - c1) / 3)
 		
 	def get_translated_type(self):

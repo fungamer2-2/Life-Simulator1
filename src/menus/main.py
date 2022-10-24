@@ -213,8 +213,8 @@ def main_menu(player):
 						player.change_happiness(randint(6, 10) - (3*(player.has_trait("GRUMPY"))))
 						if player.has_trait("CHEERFUL"):
 							player.change_happiness(4)
-						if randint(1, 5) == 1:
-							player.change_relationship(randint(5, 25))
+						if randint(1, 6) == 1:
+							relation.change_relationship(randint(5, 25))
 					relation.was_complimented = True
 			elif choice == _("Insult"):
 				rel = relation.name_accusative()
