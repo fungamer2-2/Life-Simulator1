@@ -157,11 +157,31 @@ def main_menu(player):
 					agreement = clamp(
 						round(agreement), randint(0, 10), randint(90, 100)
 					)
-					print(
-						_("You had a conversation with your {relation}.").format(
-							relation=relation.name_accusative()
-						)
-					)
+					chats = random.choice(CHATS)
+					discussions = random.choice(DISCUSSIONS)
+					talks = random.choice(TALKS)
+					heart_to_hearts = (HEART_TO_HEARTS)
+					if player.age >= 3:
+						sayings = [
+							_("You and your {relation} had a chat about the hierarchy of licorice.").format(relation=relation.name_accusative()),
+							_("You and your {relation} had a chat about {chats}.").format(relation=relation.name_accusative()),
+							_("You and your {relation} had a chat about which is better, Star Wars or Star Trek.").format(relation=relation.name_accusative()),
+							_("You and your {relation} had a chat about which is better, Coke or Pepsi.").format(relation=relation.name_accusative()),
+							_("You and your {relation} had a chat about which is better, Lord of the Rings or Harry Potter.").format(relation=relation.name_accusative()),
+							_("You and your {relation} had a chat about who is better, the Red Sox or Yankees.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed Frida Kahlo's moustache.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed {discussions}.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed which is the best breed of dog.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed which is the best breed of cat.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed why dogs are better than cats.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed why cats are better than dogs.").format(relation=relation.name_accusative()),
+							_("You and your {relation} talked about whether you would rather have overly large hands or small feet.").format(relation=relation.name_accusative()),
+							_("You and your {relation} talked about {talks}.").format(relation=relation.name_accusative()),
+							_("You and your {relation} talked about who will win the Monaco Grand Prix.").format(relation=relation.name_accusative()),
+							_("You and your {relation} Had a heart-to-heart about the best gift you ever received.").format(relation=relation.name_accusative()),
+							_("You and your {relation} Had a heart-to-heart about {heart_to_hearts}.").format(relation=relation.name_accusative()),
+						]
+						print(random.choice(sayings))
 					display_bar(_("Agreement"), agreement)
 					if not relation.had_conversation:
 						player.change_happiness(8 if player.has_trait("CHEERFUL") else 4)
