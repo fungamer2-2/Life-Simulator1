@@ -26,8 +26,8 @@ lang_map = {
     "fr": "Français",
     "ko": "한국인",
     "bn": "বাংলা",
-	"id": "bahasa Indonesia",
-	"np": "नेपाली "
+    "id": "bahasa Indonesia",
+    "np": "नेपाली ",
 }
 
 names = []
@@ -36,19 +36,19 @@ for lang in langs:
     codes.append(lang)
     names.append(lang_map.get(lang, lang))
 
-#Not using choice_input as we want translation.py to be the first thing loaded
+# Not using choice_input as we want translation.py to be the first thing loaded
 for i, name in enumerate(names):
-	print(f"{i+1}. {name}")
+    print(f"{i+1}. {name}")
 valid = False
 while not valid:
-	valid = True
-	try:
-		num = int(input())
-	except ValueError:
-		valid = False
-		continue
-	if not 1 <= num <= len(codes):
-		valid = False
+    valid = True
+    try:
+        num = int(input())
+    except ValueError:
+        valid = False
+        continue
+    if not 1 <= num <= len(codes):
+        valid = False
 language = codes[num - 1]
 
 if language != "en":
