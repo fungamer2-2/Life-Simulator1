@@ -163,8 +163,8 @@ def main_menu(player):
 					agreement += randint(0, max(0, (relation.relationship - 50) // 3))
 					if isinstance(relation, Sibling) and randint(1, 2) == 1:
 						agreement -= randint(0, relation.petulance // 3)
-					if self.age < 6:
-						v = (6 - self.age)*8
+					if player.age < 6:
+						v = (6 - player.age)*8
 						agreement += randint(v//4, v)
 					agreement = clamp(
 						round(agreement), randint(0, 10), randint(90, 100)
@@ -577,7 +577,7 @@ def main_menu(player):
 					player.played = True
 					player.change_happiness(happy_gain)
 		elif choice == _("Arts and Crafts"):
-			if self.age >= randint(5, 10) and randint(1, 10) == 1:
+			if player.age >= randint(5, 10) and randint(1, 10) == 1:
 				sayings = [
 					_("You thought about doing arts and crafts, but couldn't decide what to make."),
 					_("For some reason, you couldn't think of any ideas."),
@@ -1000,6 +1000,8 @@ def main_menu(player):
 		if yes_no(_("You found a job with a salary of ${salary:,}. Would you like to apply?").format(salary=salary)):
 			m = 100 + round_stochastic((salary-40000)/300)
 			mod = 50 - player.smarts #Mod is inverted because we want to roll 100 OR LOWER to get the job
+			if randint(1, 3) == 1:
+				mod += round((50 - player.karma)/2)
 			roll = randint(1, m)
 			if mod > 0:
 				roll += randint(0, mod)
@@ -1021,8 +1023,9 @@ def main_menu(player):
 			(_("Stress"), player.stress),
 			(_("Performance"), player.performance)
 		)
+		display_data(_("Hours"), player.job_hours)
 		can_retire = player.years_worked >= 10 and player.age >= 65
-		choice = choice_input(_("Back"), _("Work Harder"), _("Retire") if can_retire else _("Quit Job"))
+		choice = choice_input(_("Back"), _("Work Harder"), _("Retire") if can_retire else _("Quit Job"), _("Adjust Hours"))
 		if choice == 2:
 			print("You worked harder.")
 			if not player.worked_harder:
@@ -1031,7 +1034,7 @@ def main_menu(player):
 				if player.has_trait("LAZY"):
 					player.change_stress(6)
 				player.worked_harder = True
-		if choice == 3:
+		elif choice == 3:
 			if can_retire:
 				pension = round(player.salary * min(player.years_worked, 35) * 0.02)
 				if yes_no(_("Do you want to retire? You will receive a yearly pension of ${pension}").format(pension=pension)):
@@ -1042,6 +1045,10 @@ def main_menu(player):
 			elif yes_no(_("Are you sure you want to quit your job?")):
 				player.lose_job()
 				print(_("You quit your job."))
+		elif choice == 4:
+			print(_("What would you like to set your hours to? (38 - 70)"))
+			player.update_hours(int_input_range(38, 70))
+			
 		#TODO: Add ability to ask for a raise
 	elif choice == _("View Saved Games"):
 		players = list(filter(lambda p: p["ID"] != player.ID, get_saves()))

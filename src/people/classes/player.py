@@ -72,7 +72,7 @@ class Player(Person):
 		self.lottery_jackpot = 0
 		self.stress = 0
 		self.performance = 0
-		self.job_hours = 0
+		self.job_hours = 40
 		self.date_options = 10
 		self.partner = None
 		self.traits = {}
@@ -234,12 +234,13 @@ class Player(Person):
 		self.change_jackpot()
 		if self.has_job:
 			self.change_stress(randint(-4, 4))
-			base = 65 - self.happiness*0.3
+			base = 60 - self.happiness*0.3 + (self.job_hours - 40)
 			diff = base - self.stress
 			if diff > 0:
 				self.change_stress(randint(0, round_stochastic(diff/6)))
 			elif diff < 0:
-				self.change_stress(-randint(0, round_stochastic(abs(diff)/10)))
+				factor = self.happiness/25 + 0.5
+				self.change_stress(-randint(0, round_stochastic(abs(diff)/9 * factor)))
 		if self.happiness < randint(1, 10) and not self.is_depressed():
 			display_event(_("You are suffering from depression."))
 			self.add_illness("Depression")
@@ -317,6 +318,7 @@ class Player(Person):
 			self.years_worked = 0
 			self.stress = 45
 			self.performance = 50
+			self.job_hours = 40
 			
 	def lose_job(self):
 		if self.has_job:
@@ -325,6 +327,7 @@ class Player(Person):
 			self.years_worked = 0
 			self.stress = 0
 			self.performance = 0
+			self.job_hours = 0
 			
 	def change_stress(self, amount):
 		if self.has_job:
@@ -388,6 +391,8 @@ class Player(Person):
 			show_percent=True,
 		)
 		
+	
+		
 	def can_retire(self):
 		return self.years_worked >= 10 and player.age >= 65
 		
@@ -401,6 +406,11 @@ class Player(Person):
 		if self.partner in self.relations:
 			self.relations.remove(self.partner)
 		self.partner = None 
+		
+	def update_hours(self, hours):
+		prev = self.job_hours
+		self.job_hours = hours
+		self.change_stress(round((self.job_hours - prev)*0.75))
 		
 	def random_events(self):
 		if self.age >= 5 and randint(1, 5000) == 1:
@@ -423,6 +433,7 @@ class Player(Person):
 		if self.has_job:
 			self.years_worked += 1
 		if self.salary > 0:
+			money = self.salary * self.job_hours / 40
 			tax = calculate_tax(self.salary)
 			income = self.salary - tax
 			income *= random.uniform(0.4, 0.8) #Expenses
