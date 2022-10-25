@@ -69,7 +69,7 @@ def main_menu(player):
 			print_align_bars(*bars)
 			choices = [_("Back")]
 			if relation.age >= 5:
-				if player.age >= 3:
+				if player.age >= 1:
 					choices.append(_("Spend time"))
 					choices.append(_("Have a conversation"))
 				if player.age >= 6:
@@ -91,16 +91,49 @@ def main_menu(player):
 					print(_("Your {relation} refused to see you."))
 					player.change_happiness(-4)
 				else:
-					print(
-						_("You spent time with your {relation}.").format(
-							relation=relation.name_accusative()
-						)
-					)
 					enjoyment1 = max(randint(0, 70), randint(0, 70)) + randint(0, 30)
 					if player.has_trait("CHEERFUL"):
 						enjoyment1 = max(enjoyment1, randint(0, 100))
 					elif player.has_trait("GRUMPY"):
 						enjoyment1 = min(enjoyment1, randint(0, 100))
+					if player.age >= 1 and player.age < 3:
+						sayings = [
+							_("You did some finger-painting with your {relation}.").format(relation=relation.name_accusative()),
+							_("You played in the mud with your {relation}.").format(relation=relation.name_accusative()),
+							_("You and your {relation} drew in your colouring book together").format(relation=relation.name_accusative()),
+							_("You and your {relation} squished clay between your fingers.").format(relation=relation.name_accusative()),
+							_("You and your {relation} drew with your large crayons.").format(relation=relation.name_accusative()),
+							_("You and your {relation} played with your toys together.").format(relation=relation.name_accusative()),
+							_("You and your {relation} played with your blocks.").format(relation=relation.name_accusative()),
+							_("You and your {relation} played in your sandbox.").format(relation=relation.name_accusative()),
+							_("You and your {relation} played with your stuffed animals.").format(relation=relation.name_accusative()),
+							_("Your {relation} pushed you on your toddler swing.").format(relation=relation.name_accusative()),
+							_("Your {relation} played with you and your toys.").format(relation=relation.name_accusative()),
+							_("Your {relation} played with you.").format(relation=relation.name_accusative()),
+							_("Your {relation} raced you around the house.").format(relation=relation.name_accusative()),
+							_("Your {relation} tickled you until you giggled.").format(relation=relation.name_accusative()),
+							_("You and your {relation} went to the park.").format(relation=relation.name_accusative()),
+							_("You and your {relation} went to the shops.").format(relation=relation.name_accusative()),
+							
+						]
+						print(random.choice(sayings))
+					if player.age >= 3:
+						sayings = [
+							_("You took your {relation} shopping a flea market.").format(relation=relation.name_accusative()),
+							_("You took your {relation} bowling.").format(relation=relation.name_accusative()),
+							_("You took your {relation} to the beach.").format(relation=relation.name_accusative()),
+							_("You took your {relation} to play golf.").format(relation=relation.name_accusative()),
+							_("You took your {relation} to get cornrow braids.").format(relation=relation.name_accusative()),
+							_("You took your {relation} to do some gardening.").format(relation=relation.name_accusative()),
+							_("You took your {relation} to a pilates class.").format(relation=relation.name_accusative()),
+							_("You took your {relation} to play catch.").format(relation=relation.name_accusative()),
+							_("You took your {relation} to make homemade mini pizzas.").format(relation=relation.name_accusative()),
+							_("You took your {relation} to perform in a flashmob at the courthouse.").format(relation=relation.name_accusative()),
+							_("You took your {relation} to do a puzzle at the library.").format(relation=relation.name_accusative()),
+							_("You took your {relation} to relax while floating in a natural hot spring.").format(relation=relation.name_accusative()),
+							_("You took your {relation} crocheting.").format(relation=relation.name_accusative()),
+						]
+						print(random.choice(sayings))
 					enjoyment2 = round(random.triangular(0, 100, relation.relationship))
 					print_align_bars(
 						(_("Your Enjoyment"), enjoyment1),
@@ -133,11 +166,31 @@ def main_menu(player):
 					agreement = clamp(
 						round(agreement), randint(0, 10), randint(90, 100)
 					)
-					print(
-						_("You had a conversation with your {relation}.").format(
-							relation=relation.name_accusative()
-						)
-					)
+					chats = random.choice(CHATS)
+					discussions = random.choice(DISCUSSIONS)
+					talks = random.choice(TALKS)
+					heart_to_hearts = (HEART_TO_HEARTS)
+					if player.age >= 3:
+						sayings = [
+							_("You and your {relation} had a chat about the hierarchy of licorice.").format(relation=relation.name_accusative()),
+							_("You and your {relation} had a chat about {chats}.").format(relation=relation.name_accusative()),
+							_("You and your {relation} had a chat about which is better, Star Wars or Star Trek.").format(relation=relation.name_accusative()),
+							_("You and your {relation} had a chat about which is better, Coke or Pepsi.").format(relation=relation.name_accusative()),
+							_("You and your {relation} had a chat about which is better, Lord of the Rings or Harry Potter.").format(relation=relation.name_accusative()),
+							_("You and your {relation} had a chat about who is better, the Red Sox or Yankees.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed Frida Kahlo's moustache.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed {discussions}.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed which is the best breed of dog.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed which is the best breed of cat.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed why dogs are better than cats.").format(relation=relation.name_accusative()),
+							_("You and your {relation} discussed why cats are better than dogs.").format(relation=relation.name_accusative()),
+							_("You and your {relation} talked about whether you would rather have overly large hands or small feet.").format(relation=relation.name_accusative()),
+							_("You and your {relation} talked about {talks}.").format(relation=relation.name_accusative()),
+							_("You and your {relation} talked about who will win the Monaco Grand Prix.").format(relation=relation.name_accusative()),
+							_("You and your {relation} Had a heart-to-heart about the best gift you ever received.").format(relation=relation.name_accusative()),
+							_("You and your {relation} Had a heart-to-heart about {heart_to_hearts}.").format(relation=relation.name_accusative()),
+						]
+						print(random.choice(sayings))
 					display_bar(_("Agreement"), agreement)
 					if not relation.had_conversation:
 						player.change_happiness(8 if player.has_trait("CHEERFUL") else 4)
@@ -260,11 +313,11 @@ def main_menu(player):
 		print(_("Activities Menu"))
 		print()
 		choices = [_("Back")]
-		if 3 <= player.age < 13:
+		if 1 <= player.age < 13:
 			choices.append(_("Play with your toys"))
 		if player.age >= 4:
 			choices.append(_("Doctor"))
-		if player.age >= 5:
+		if player.age >= 1:
 			choices.append(_("Arts and Crafts"))
 		if player.age >= 12:
 			choices.append(_("Meditate"))
@@ -285,29 +338,336 @@ def main_menu(player):
 				if player.has_trait("CHEERFUL"):
 					happy_gain += 2
 			else:
-				sayings = [
-					_("You played with your toys."),
-					_("You had a lot of fun playing with your toys.")
-				]
-				print(random.choice(sayings))
 				happy_gain = randint(5, 10)
 				if player.has_trait("CHEERFUL"):
 					happy_gain += 5
-			if not player.played:
-				player.played = True
-				player.change_happiness(happy_gain)
+				if player.age < 3:
+					sayings = [
+						_("You played with your toys."),
+						_("You had a lot of fun playing with your toys."),
+						_("You played with your toy wagon."),
+						_("You played with some of your balls."),
+						_("You raced around on your foot propelled bike."),
+						_("You played with your push-pull toy."),
+						_("You put toys in your wagon and pulled them around the living room."),
+						_("You swung on your toddler swing."),
+						_("You slid on your toddler slide."),
+						_("You played with your stacking toys."),
+						_("You played with your nesting toys."),
+						_("You played with your shape sorter."),
+						_("You played with your pop-up toys."),
+						_("You played with your puzzle with knobs."),
+						_("You played with your blocks."),
+						_("You played in your sandbox."),
+						_("You played with your sandbox toys."),
+						_("You played in your wading pool."),
+						_("You played with your wading pool toys"),
+						_("You played with your bath toys."),
+						_("Your mum gave you a bath and you played with your bath toys."),
+						_("Your dad gave you a bath and you played with your bath toys."),
+						_("You played with your stuffed animals."),
+						_("You played with your dolls."),
+						_("You played with your play vehicles."),
+						_("You played with your toy kitchen equipment."),
+						_("You played with your toy kitchen gadgets."),
+						_("You played with your toy telephone."),
+						_("You played with your toy lawn mower."),
+						_("You played with your toy shopping cart."),
+						_("You played with your toy workbench."),
+						_("You played in your playhouse."),
+						_("You pretended to hold a meeting at your toy table and chairs with your stuffed animals."),
+						_("You made a sausage out of clay."),
+						_("You made a a ball out of clay."),
+						_("You played with your playdough."),
+						_("You played with your toy guitar."),
+						_("You played with your toy piano."),
+					]
+					print(random.choice(sayings))
+				if player.age >= 3 and player.age < 6:
+					sayings = [
+						_("You played with your toys."),
+						_("You had a lot of fun playing with your toys."),
+						_("You played with your toy wagon."),
+						_("You played with some of your balls."),
+						_("You played with your push-pull toy."),
+						_("You put toys in your wagon and pulled them around the living room."),
+						_("You swung on your toddler swing."),
+						_("You slid on your toddler slide."),
+						_("You played with your stacking toys."),
+						_("You played with your nesting toys."),
+						_("You played with your shape sorter."),
+						_("You played with your pop-up toys."),
+						_("You played with your puzzle with knobs."),
+						_("You played with your blocks."),
+						_("You played in your sandbox."),
+						_("You played with your sandbox toys."),
+						_("You played in your wading pool."),
+						_("You played with your wading pool toys"),
+						_("You played with your bath toys."),
+						_("Your mum gave you a bath and you played with your bath toys."),
+						_("Your dad gave you a bath and you played with your bath toys."),
+						_("You played with your stuffed animals."),
+						_("You played with your dolls."),
+						_("You played with your play vehicles."),
+						_("You played with your toy kitchen equipment."),
+						_("You played with your toy kitchen gadgets."),
+						_("You played with your toy telephone."),
+						_("You played with your toy lawn mower."),
+						_("You played with your toy shopping cart."),
+						_("You played with your toy workbench."),
+						_("You played in your playhouse."),
+						_("You pretended to hold a meeting at your toy table and chairs with your stuffed animals."),
+						_("You made a rough pot of clay."),
+						_("You made a rough bowl out of clay."),
+						_("You played with your playdough."),
+						_("You played with your toy guitar."),
+						_("You played with your toy piano."),
+						_("You kicked a ball in your yard."),
+						_("You fed your baby doll."),
+						_("You changed the daiper on your baby doll."),
+						_("You bathed your baby doll."),
+						_("You put your mum's clothes on and dressed up as her."),
+						_("You put your dad's clothes on and dressed up as him."),
+						_("You climbed on your climbing gym."),
+						_("You dressed up your stuffed animals."),
+						_("You changed your doll's clothes."),
+						_("You played with your chalk."),
+						_("You rode your tricycle."),
+						_("You read a storybook."),
+						_("You played with your finger puppets."),
+						_("You played with your hand puppet."),
+						_("You played a simple board game."),
+						_("You played a word matching game."),
+						_("You played a picture matching game."),
+						_("You played make believe with a cardboard box."),
+						_("You made a fort using bed sheets and cushions."),
+					]
+					print(random.choice(sayings))
+				if player.age >= 6 and player.age < 10:
+					sayings = [
+						_("You played with your toys."),
+						_("You had a lot of fun playing with your toys."),
+						_("You played with some of your balls."),
+						_("You played with your Lego."),
+						_("You played with your stuffed animals."),
+						_("You played with your dolls."),
+						_("You played with your toy cars."),
+						_("You kicked a ball in your yard."),
+						_("You fed your baby doll."),
+						_("You changed the daiper on your baby doll."),
+						_("You bathed your baby doll."),
+						_("You put your mum's clothes on and dressed up as her."),
+						_("You put your dad's clothes on and dressed up as him."),
+						_("You climbed on your climbing gym."),
+						_("You dressed up your stuffed animals."),
+						_("You changed your doll's clothes."),
+						_("You played with your chalk and drew on the sidewalk."),
+						_("You rode your tricycle."),
+						_("You read a storybook."),
+						_("You played with your finger puppets."),
+						_("You played with your hand puppet."),
+						_("You played a board game."),
+						_("You played a word game."),
+						_("You played a video game."),
+						_("You made a costume out of a cardboard box."),
+						_("You made a fort using bed sheets and cushions."),
+						_("You rode your bicycle."),
+						_("You played with some gym equipment."),
+						_("You played with your baseball glove."),
+						_("You played with your hockey stick."),
+						_("You played with your tennis racquet."),
+						_("You played tennis with your family."),
+						_("You played football with your friends."),
+						_("You walked on your stilts."),
+						_("You skated on your ice skates."),
+						_("You skated on your roller blades."),
+						_("You skated on your skateboard."),
+						_("You rode your scooter."),
+						_("You rode your pogo stick."),
+						_("You played with your jump rope."),
+						_("You made a paper aeroplane."),
+						_("You played with your action figures."),
+						_("You played with your train set."),
+						_("You played with your magic set."),
+						_("You played with your craft kit."),
+						_("You played with your science set."),
+						_("You painted a basic picture."),
+						_("You played tabletop sports."),
+						_("You played with a jigsaw puzzle."),
+						_("You played with your fashion dolls."),
+						_("You played with your career dolls."),
+						_("You played with your dollhouse."),
+						_("You played with your puppets."),
+						_("You played with your toy theatre."),
+						_("You played with your marionettes."),
+						_("You read a fairytale and imagined you were in it."),
+					]
+					print(random.choice(sayings))
+				if player.age >= 10 and player.age < 13:
+					sayings = [
+						_("You played with your toys."),
+						_("You had a lot of fun playing with your toys."),
+						_("You played with some of your balls."),
+						_("You played with your Lego."),
+						_("You played with your stuffed animals."),
+						_("You played with your dolls."),
+						_("You played with your toy cars."),
+						_("You kicked a ball in your yard."),
+						_("You dressed up your stuffed toys."),
+						_("You played with your chalk and drew on the sidewalk."),
+						_("You read a storybook."),
+						_("You played with your finger puppets."),
+						_("You played with your hand puppet."),
+						_("You played a board game."),
+						_("You played a word game."),
+						_("You played a video game."),
+						_("You made a fort using bed sheets and cushions, and slept in it."),
+						_("You rode your bicycle."),
+						_("You played with some gym equipment."),
+						_("You played baseball with your friends."),
+						_("You played hockey with your friends."),
+						_("You played tennis with your friends."),
+						_("You played tennis with your family."),
+						_("You played with your football."),
+						_("You played football with your friends."),
+						_("You walked on your stilts."),
+						_("You skated on your ice skates."),
+						_("You went ice skating with your friends."),
+						_("You skated on your roller blades."),
+						_("You went roller blading with your friends."),
+						_("You skated on your skateboard."),
+						_("You went skateboarding with your friends."),
+						_("You rode your scooter."),
+						_("You rode your pogo stick."),
+						_("You played with your jump rope."),
+						_("You played jump rope with your friends."),
+						_("You played with your basketball."),
+						_("You played basketball with your friends."),
+						_("You played with your netball."),
+						_("You played netball with your friends."),
+						_("You made a paper aeroplane."),
+						_("You played with your action figures."),
+						_("You played with your train set."),
+						_("You played with your magic set."),
+						_("You played with your craft kit."),
+						_("You played with your science set."),
+						_("You painted a picture."),
+						_("You played tabletop sports."),
+						_("You completed a jigsaw puzzle."),
+						_("You played with your fashion dolls."),
+						_("You played with your career dolls."),
+						_("You played with your puppets."),
+						_("You played with your toy theatre."),
+						_("You played with your marionettes."),
+						_("You read a story and imagined you were in it."),
+						_("You played chess with a friend."),
+						_("You played foosball with a friend."),
+						_("You played darts with a friend."),
+						_("You played with your RC car."),
+						_("You played with your drone."),
+						_("You read a mystery book."),
+						_("You read an adventure book."),
+						_("You played checkers with a friend."),
+						_("You played solitaire with a pack of cards."),
+						_("You played dominoes with some friends."),
+						_("You made a robot with Meccano"),
+					]
+					print(random.choice(sayings))
+				if not player.played:
+					player.played = True
+					player.change_happiness(happy_gain)
 		elif choice == _("Arts and Crafts"):
 			if randint(1, 10) == 1:
 				print(_("You thought about doing arts and crafts, but couldn't decide what to make."))
 				player.change_happiness(-randint(1, 3))
 			else:
-				if randint(1, 2) == 1 or player.age < 16:
-					print(_("You decided to paint."))
+				happy_gain = randint(2, 6)
+				if player.has_trait("CHEERFUL"):
+						player.change_happiness(randint(1, 3))
+				if player.has_trait("NERD"):
+						player.change_smarts(randint(2, 3))
+				if player.has_trait("GENIUS"):
+						player.change_smarts(randint(3, 4))
+				if player.age >= 1 and player.age < 3:
+					sayings = [
+						_("You decided to finger-paint."),
+						_("You decided to make something from mud!"),
+						_("You drew in your colouring book"),
+						_("You squished clay between your fingers."),
+						_("You drew with your large crayons."),
+					]
+					print(random.choice(sayings))
+				if player.age >= 3 and player.age < 6:
+					sayings = [
+						_("You decided to draw."),
+						_("You decided to make something from clay!"),
+						_("You decided to finger-paint."),
+						_("You played with your crayons."),
+						_("You drew in your colouring book."),
+						_("You drew a house that looked like a triangle on top of a square."),
+						_("You drew a stick figure picture of your family."),
+					]
+					print(random.choice(sayings))
+				if player.age >= 6 and player.age < 10:
+					sayings = [
+						_("You decided to draw."),
+						_("You decided to make something from clay!"),
+						_("You decided to finger-paint."),
+						_("You drew with your crayons."),
+						_("You drew in your colouring book."),
+						_("You tried to draw a picture of your house."),
+						_("You tried to draw a picture of your family."),
+						_("You tried to draw a picture of a landscape."),
+						_("You tried to draw a picture of a cat."),
+						_("You tried to draw a picture of a bowl of fruit."),
+						_("You tried to draw your favourite cartoon character."),
+					]
+					print(random.choice(sayings))	
+				if player.age >= 10 and player.age < 13:
+					sayings = [
+						_("You decided to draw."),
+						_("You decided to make something from clay!"),
+						_("You decided to finger-paint."),
+						_("You drew with your crayons."),
+						_("You drew in your colouring book."),
+						_("You drew a picture of your house."),
+						_("You drew a picture of your family."),
+						_("You drew a picture of a landscape."),
+						_("You drew a picture of a cat."),
+						_("You drew a picture of a bowl of fruit."),
+						_("You drew your favourite cartoon character."),
+						_("You tried to paint a picture of your house."),
+						_("You tried to paint a picture of your family."),
+						_("You tried to paint a picture of a landscape."),
+						_("You tried to paint a picture of a cat."),
+						_("You tried to paint a picture of a bowl of fruit."),
+					]
+					print(random.choice(sayings))
+				if player.age >= 13 and player.age < 16:
+					sayings = [
+						_("You decided to draw."),
+						_("You decided to make something from clay!"),
+						_("You decided to finger-paint."),
+						_("You drew with charcoal."),
+						_("You drew a picture of your house."),
+						_("You drew a picture of your family."),
+						_("You drew a picture of a landscape."),
+						_("You drew a picture of a cat."),
+						_("You drew a picture of a bowl of fruit."),
+						_("You drew your favourite cartoon character."),
+						_("You painted a picture of your house."),
+						_("You painted a picture of your family."),
+						_("You painted a picture of a landscape."),
+						_("You painted a picture of a cat."),
+						_("You painted a picture of a bowl of fruit."),
+					]
+					print(random.choice(sayings))
+
 					if not player.did_arts_and_crafts:
 						player.change_happiness(randint(2, 4))
 						player.change_smarts(randint(1, 2))
-				else:
-					print(_("You decided to bake something tasty!"))
+					else:
+						print(_("You decided to bake something tasty!"))
 					if not player.did_arts_and_crafts:
 						player.change_happiness(randint(3, 6))
 						player.change_smarts(randint(0, 3)) 
