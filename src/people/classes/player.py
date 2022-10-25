@@ -72,6 +72,7 @@ class Player(Person):
 		self.lottery_jackpot = 0
 		self.stress = 0
 		self.performance = 0
+		self.job_hours = 0
 		self.date_options = 10
 		self.partner = None
 		self.traits = {}
