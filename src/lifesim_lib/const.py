@@ -26,6 +26,7 @@ ILLNESSES_TRANSLATIONS = {
 }
 
 COMPLIMENTS = [
+    _("a boss"),
     _("a bubbly personality"),
     _("a brilliant mind"),
     _("a champion"),
@@ -44,6 +45,8 @@ COMPLIMENTS = [
     _("adorable"),
     _("admirable"),
     _("an OG"),
+    _("an eager beaver"),
+    _("beautiful"),
     _("brave"),
     _("bright"),
     _("brilliant"),
@@ -52,6 +55,7 @@ COMPLIMENTS = [
     _("cool"),
     _("courageous"),
     _("cute"),
+    _("dashing"),
     _("delightful"),
     _("dope"),
     _("elite"),
@@ -64,6 +68,7 @@ COMPLIMENTS = [
     _("groovy"),
     _("inspiring"),
     _("intelligent"),
+    _("legendary"),
     _("lionhearted"),
     _("magnetic"),
     _("magnificent"),
@@ -94,17 +99,21 @@ COMPLIMENTS = [
 
 # Insults moved to the bottom
 
+#------------------------------------------------------------------
 # Flirts
-# School flirts:
-#   You followed your classmate, {name}, around school trying to get him to notice you.
-#   You teased your classmate, {name}, just to get her attention.
-#   You sat next to your classmate, {name}, at lunch just to get their attention.
+# Primary School flirts:
+#   You complimented your classmate, {name}, on {his_her} haircut.
+#   You followed your classmate, {name}, around school trying to get {him_her} to notice you.
+#   You teased your classmate, {name}, just to get {his_her} attention.
+#   You sat next to your classmate, {name}, at lunch just to get {his_her} attention.
+#   You passed a charmingly funny note to your classmate, {name}, in class.
 #   You passed a note to your classmate, {name}, in class.
 #   You gave your classmate, {name}, a shy smirk and a wink from across the room.
 #   You gave your classmate, {name}, an enamouring smirk and wink from across the room.
 #   You gave your classmate, {name}, a confident smirk and wink from across the room.
 #   You did the Lean dance move to try to impress your classmate, {name}.
 #   You did the Carlton dance move to try to impress your classmate, {name}.
+#   You did the Dejo dance move to try to impress your classmate, {name}.
 #   You did the Moonwalk dance move to try to impress your classmate, {name}.
 #   You did the Robot dance move to try to impress your classmate, {name}.
 #   You did the Soulja Boy dance move to try to impress your classmate, {name}.
@@ -112,6 +121,7 @@ COMPLIMENTS = [
 
 DANCE_MOVE = [
     _("Carlton"),
+    _("Dejo"),
     _("Lean"),
     _("Moonwalk"),
     _("Robot"),
@@ -119,11 +129,35 @@ DANCE_MOVE = [
     _("Soulja Boy"),
     _("Shoot"),
 ]
-FLIRT_VERB = [
+FLIRT_VERB_SMIRK = [
+    _("an awkward"),
     _("a confident"),
     _("an enamouring"),
     _("a shy"),
+    _("a smooth"),
 ]
+FLIRT_VERB_NOTE = [
+    _("a charmingly funny note"),
+    _("a note"),
+]
+
+# Middle School flirts:
+#   You awkwardly bumped into your classmate, {name}, so that {he_she} had to talk to you.
+#   You stared at your classmate, {name}, for 22 straight minutes today during science class, just so she would notice that you are interested in {him_her}.
+#   You stared at your classmate, {name}, for 55 straight minutes today during an assembly, just so she would notice that you are interested in {him_her}.
+#   You passed an awkward note to your classmate, {name}, in class.
+#   You said "Why, hello there!" Every time you saw your classmate, {name}, at school today.
+
+#------------------------------------------------------------------
+# Suck-ups
+# School suck-ups:
+#   You let your teacher, {teacher_name}, know how much you enjoy being {his_her} pet.
+#   You passed out papers for your teacher, {teacher_name}.
+#   You volunteered to stay after school to clean your {teacher_job (history teacher etc)}, {teacher name}'s, classroom.
+#   You told {teacher_job}, {teacher_name}, that you truly hope {he_she} has an amazing weekend.
+#   You added your {teacher_job}, {teacher_name}, on Snapchat.
+#   You drew a portrait of your {teacher_job}, {teacher_name}, and gave it to {him_her}.
+
 
 #------------------------------------------------------------------
 # Identity Genders
@@ -169,6 +203,52 @@ IDENTITY_GENDER_MALE = [
 # Tuba
 # Violin
 
+#------------------------------------------------------------------
+# Middle School cliques:
+
+# Artsy Kids
+# Band Geeks
+# Brainy Kids
+# Drama Kids
+# Gamers
+# Goths
+# Hipsters
+# Loners
+# Mean Girls
+# Nerds
+# Normals
+# Popular Kids
+# Skaters
+# Social Floaters
+# Talented Kids
+# Troublemakers
+# Weebs
+
+#------------------------------------------------------------------
+# Middle School activities:
+
+# Animal Rights Club
+# Basketball Team
+# Cheerleading Team
+# Choir
+# Creative Writing Club
+# Cross Country Team
+# Diving Team
+# Drama Club
+# Field Hockey Team
+# Gymnastics Team
+# History Club
+# Lacrosse Team
+# Math Club
+# Recycling Club
+# Science Club
+# Soccer Team
+# Swim Team
+# Tennis Team
+# Track Team
+# Video Games Club
+# Volleyball Team
+# Yearbook Club
 
 #------------------------------------------------------------------
 
@@ -517,26 +597,80 @@ HEART_TO_HEARTS_TEEN = [
 SPEND_TIME = [
     _(""),
 ]
-# For use in situations like 'Your {relation} took you to build a sandcastle in a sandbox at the park 
+# For use in situations like 'Your {relation} took you {to build a sandcastle in a sandbox at the park} 
+# If you are the parent/older sibling then 'You took your {relation} {spend_time_child}
 SPEND_TIME_CHILD = [
-    _("took you birdwatching"),
-    _("took you to a cake baking class"),
-    _("took you to attend a juggling class"),
-    _("took you to build a sandcastle in a sandbox at the park"),
-    _("took you to get cornrow braids"),
-    _("took you to get henna tattoos"),
-    _("took you to listen to a punk band"),
-    _("took you to participate in a neighbourhood cleanup"),
-    _("went with you to the park to feed the ducks"),
+    _("birdwatching"),
+    _("to a cake baking class"),
+    _("to a comic book store"),
+    _("to a music festival"),
+    _("to a yoga class"),
+    _("to attend a juggling class"),
+    _("to bring donuts to the police station"),
+    _("to build a sandcastle in a sandbox at the park"),
+    _("to get cornrow braids"),
+    _("to get henna tattoos"),
+    _("to listen to a punk band"),
+    _("to participate in a neighbourhood cleanup"),
+    _("to the park to feed the ducks"),
 ]
 SPEND_TIME_TEEN = [
-    _(""),
+    _("to practice sumo wrestling"),
+    _("to play in the rain"),
+    _("to toilet paper the neighbour's house"),
+    _("to scare random people by jumping out of the bushes at a local park"),
+    _("to make a wish while throwing a coing in a fountain"),
+    _("to watch toy unboxing videos"),
+    _("to a café to play cards"),
+    _("to watch a movie under the stars in the park"),
+    _("to perform in a flash mob at the grocery store"),
+    _("to fly a kite"),
+    _("to a rugby game"),
+    _("to the circus"),
+    _("longboarding"),
+    _("to a Hindu temple"),
+    _("to build a sandcastle in a sandbox at the park"),
+    _("to an escape room"),
+    _("antiquing"),
+    _("to write haikus"),
+    _("to play in the sprinklers at the local park"),
+    _("to play bingo at the community centre"),
+    _("to an arcade"),
+    _("to throw paper aeroplanes off the bleachers at the local high school"),
+    _("to the water park"),
+    _("to the aquarium to look at sharks"),
+    _("to sing P!nk songs at karaoke night"),
+    _("to the movies"),
+    _("axe throwing"),
+    _("to make home made mini pizzas"),
+    _("to a painting class"),
+    _("to have a random dance party in a public plaza"),
+    _("to plant trees in the forest"),
+    _("whale watching"),
+    _("to make and pass out balloon animals at the park"),
+    _("snowboarding"),
+    _("to the park"),
+    _("to graffiti train cars"),
+    _("to learn origami at the community centre"),
+    _("birdwatching"),
+    _("to the shooting range"),
+    _("to do caricature drawings of random people in a public place"),
+    _("yodelling"),
+    _("deep sea fishing"),
+    _("to a carnival"),
 ]
 
-# E.g. You {spend_time_pet} {pet_type}, {pet_name} = You listened to music with your cat, Pip.
-SPEND_TIME_PET = [
+# E.g. You {spend_time_pet_x)} {pet_type}, {pet_name} = You listened to music with your cat, Pip.
+SPEND_TIME_PET_CAT = [
     _("listened to hip-hop music with your"),
+    _("listened to classical music with your"),
+    _("made an obstacle course for your"),
     _("played with your"),
+    _("used a laser pointer to play with your"),
+    _("rolled a ball or yarn across the floor for your"),
+]
+SPEND_TIME_PET_DOG = [
+
 ]
 
 # Events section:
@@ -557,11 +691,17 @@ CHILD_EVENT_NEUTRAL = [
     _(""),
 ]
 # E.g. 'Your {Mother_Father} wants to buy you {and your siblings_if any} a pet {cat} named {names}. (cat age, gender, colour, health, happiness, smarts, looks, craziness): 
-# choice = "Yes, I want {him_her}!" > "I don't want {name}" > "Surprise me!"
+# choice = "Yes, I want {him_her}!" > "I don't want {name}" > "Surprise me!"'
+# Or, 'While trick-or-treating in your neighbourhood, you come upon a bowl full of candy with an attached sign that reads, "Please help yourself to one piece."
+# What will you do? = "Grab a handful" > "Empty the bowl" > "Take one piece and move on" > "Surprise me!"'
 CHILD_EVENT_CHOICE = [
     _(""),
 ]
-
+# E.g. 'While in your teacher, {teacher_name}'s class, your classmate, {classmate_name}, all of a sudden begins ripping pages out of the class textbook one-at-a-time, yelling "Toodle-oo!" with each new page tear.
+# What will you do? = "Attack {him_her}" > "Ignore {his_her} antics" > "Laugh at {him_her}" > "Report {him_her} to the principal" > "Surprise me!"
+CHILD_EVENT_CHOICE_SCHOOL = [
+    _(""),
+]
 
 # Pet types:
 PET_TYPE = [
