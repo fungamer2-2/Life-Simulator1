@@ -584,7 +584,7 @@ class Player(Person):
                     print(_("{he_she} dumped you anyway."))
                     self.lose_partner()
                     self.change_happiness(-randint(10, 20))
-        if self.age >= 18 and self.marital_status == 0 and randint(1, 16) == 1:
+        if self.age >= 18 and self.age < randint(42, 70) and self.marital_status == 0 and randint(1, 16) == 1:
             partner = self.generate_partner()
             if partner.compatibility_check(self):
                 string = _("A male") if partner.gender == Gender.Male else _("A female")

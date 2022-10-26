@@ -52,5 +52,8 @@ while not valid:
 language = codes[num - 1]
 
 if language != "en":
-    langs[language].install()
-    _ = langs[language].gettext
+    lang = langs[language]
+    lang.install()
+    _ = lang.gettext
+else:
+	lang = None
