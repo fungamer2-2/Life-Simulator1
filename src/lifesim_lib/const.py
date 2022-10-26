@@ -26,7 +26,9 @@ ILLNESSES_TRANSLATIONS = {
 }
 
 COMPLIMENTS = [
+    _("a boss"),
     _("a bubbly personality"),
+    _("a brilliant mind"),
     _("a champion"),
     _("a gem"),
     _("a genius"),
@@ -38,10 +40,13 @@ COMPLIMENTS = [
     _("a treasure"),
     _("a winner"),
     _("a wizard"),
+    _("a VIP"),
     _("a visionary"),
     _("adorable"),
     _("admirable"),
     _("an OG"),
+    _("an eager beaver"),
+    _("beautiful"),
     _("brave"),
     _("bright"),
     _("brilliant"),
@@ -49,17 +54,23 @@ COMPLIMENTS = [
     _("clever"),
     _("cool"),
     _("courageous"),
+    _("cute"),
+    _("dashing"),
     _("delightful"),
     _("dope"),
     _("elite"),
     _("fascinating"),
     _("fearless"),
+    _("fine"),
     _("fresh"),
     _("gorgeous"),
     _("golden"),
     _("groovy"),
     _("inspiring"),
     _("intelligent"),
+    _("legendary"),
+    _("lionhearted"),
+    _("magnetic"),
     _("magnificent"),
     _("motivating"),
     _("neat"),
@@ -68,6 +79,7 @@ COMPLIMENTS = [
     _("a perfect 10"),
     _("phenomenal"),
     _("rad"),
+    _("savage"),
     _("smart"),
     _("spectatular"),
     _("stellar"),
@@ -76,16 +88,205 @@ COMPLIMENTS = [
     _("stylish"),
     _("swell"),
     _("the best"),
+    _("the GOAT"),
     _("the greatest"),
     _("the life of the party"),
     _("unparalled"),
     _("wise"),
     _("wonderful"),
+    _("world-class"),
 ]
 
 # Insults moved to the bottom
 
+#------------------------------------------------------------------
+# Flirts
+# Primary School flirts:
+#   You complimented your classmate, {name}, on {his_her} haircut.
+#   You followed your classmate, {name}, around school trying to get {him_her} to notice you.
+#   You teased your classmate, {name}, just to get {his_her} attention.
+#   You sat next to your classmate, {name}, at lunch just to get {his_her} attention.
+#   You passed a charmingly funny note to your classmate, {name}, in class.
+#   You passed a note to your classmate, {name}, in class.
+#   You gave your classmate, {name}, a shy smirk and a wink from across the room.
+#   You gave your classmate, {name}, an enamouring smirk and wink from across the room.
+#   You gave your classmate, {name}, a confident smirk and wink from across the room.
+#   You did the Lean dance move to try to impress your classmate, {name}.
+#   You did the Carlton dance move to try to impress your classmate, {name}.
+#   You did the Dejo dance move to try to impress your classmate, {name}.
+#   You did the Moonwalk dance move to try to impress your classmate, {name}.
+#   You did the Robot dance move to try to impress your classmate, {name}.
+#   You did the Soulja Boy dance move to try to impress your classmate, {name}.
+#   You did the Single Ladies dance move to try to impress your classmate, {name}.
 
+DANCE_MOVE = [
+    _("Carlton"),
+    _("Dejo"),
+    _("Lean"),
+    _("Moonwalk"),
+    _("Robot"),
+    _("Single Ladies"),
+    _("Soulja Boy"),
+    _("Shoot"),
+]
+FLIRT_VERB_SMIRK = [
+    _("an awkward"),
+    _("a confident"),
+    _("an enamouring"),
+    _("a shy"),
+    _("a smooth"),
+]
+FLIRT_VERB_NOTE = [
+    _("a charmingly funny note"),
+    _("a note"),
+]
+
+# Middle School flirts:
+#   You awkwardly bumped into your classmate, {name}, so that {he_she} had to talk to you.
+#   You stared at your classmate, {name}, for 22 straight minutes today during science class, just so she would notice that you are interested in {him_her}.
+#   You stared at your classmate, {name}, for 55 straight minutes today during an assembly, just so she would notice that you are interested in {him_her}.
+#   You passed an awkward note to your classmate, {name}, in class.
+#   You said "Why, hello there!" Every time you saw your classmate, {name}, at school today.
+
+#------------------------------------------------------------------
+# Suck-ups
+# School suck-ups:
+#   You let your teacher, {teacher_name}, know how much you enjoy being {his_her} pet.
+#   You passed out papers for your teacher, {teacher_name}.
+#   You volunteered to stay after school to clean your {teacher_job (history teacher etc)}, {teacher name}'s, classroom.
+#   You told {teacher_job}, {teacher_name}, that you truly hope {he_she} has an amazing weekend.
+#   You added your {teacher_job}, {teacher_name}, on Snapchat.
+#   You drew a portrait of your {teacher_job}, {teacher_name}, and gave it to {him_her}.
+
+
+#------------------------------------------------------------------
+# Identity Genders
+IDENTITY_GENDER_FEMALE = [
+    _("Cisgender"),
+    _("Genderqueer"),
+    _("Non-Binary"),
+    _("Transgender Male"),
+]
+IDENTITY_GENDER_MALE = [
+    _("Cisgender"),
+    _("Genderqueer"),
+    _("Non-Binary"),
+    _("Transgender Female"),
+]
+
+
+#------------------------------------------------------------------
+# Instruments
+
+# Accordian
+# Banjo
+# Bass Guitar
+# Cello
+# Didgeridoo
+# Drums
+# Flute
+# Guitar
+# Harmonica
+# Harp
+# Kazoo
+# Keyboard
+# Organ
+# Pan Flute
+# Piano
+# Recorder
+# Saxophone
+# Steel Drum
+# Tambourine
+# Triangle
+# Trombone
+# Trumpet
+# Tuba
+# Violin
+
+#------------------------------------------------------------------
+# Middle School cliques:
+
+# Artsy Kids
+# Band Geeks
+# Brainy Kids
+# Drama Kids
+# Gamers
+# Goths
+# Hipsters
+# Loners
+# Mean Girls
+# Nerds
+# Normals
+# Popular Kids
+# Skaters
+# Social Floaters
+# Talented Kids
+# Troublemakers
+# Weebs
+
+#------------------------------------------------------------------
+# Middle School activities:
+
+# Animal Rights Club
+# Basketball Team
+# Cheerleading Team
+# Choir
+# Creative Writing Club
+# Cross Country Team
+# Diving Team
+# Drama Club
+# Field Hockey Team
+# Gymnastics Team
+# History Club
+# Lacrosse Team
+# Math Club
+# Recycling Club
+# Science Club
+# Soccer Team
+# Swim Team
+# Tennis Team
+# Track Team
+# Video Games Club
+# Volleyball Team
+# Yearbook Club
+
+#------------------------------------------------------------------
+
+# Books
+BOOKS = [
+    _("The Dictionary"),
+]
+BOOKS_CHILD = [
+    _("Where the Wild Things Are"),
+    _("Goodnight Moon"),
+    _("Brown Bear, Brown Bear, What Do You See?"),
+    _("The Snowy Day"),
+    _("If You Give A Mouse A Cookie"),
+    _("Stellaluna"),
+    _("The Very Hungry Caterpillar"),
+]
+BOOKS_TEEN = [
+    _(""),
+]
+
+#------------------------------------------------------------------
+
+# Movies
+
+MOVIES = [
+
+]
+MOVIES_CHILD = [
+    _("Big Boy's Little Adventure"),
+]
+
+MOVIES_TEEN = [
+    _(""),
+]
+
+
+
+#------------------------------------------------------------------
 # Conversations section:
 # This section is broken into basic conversation depths. It may be useful in future to e.g. not have a heart-to-heart with your {enemy}, {boss}, {whoever}.
 # It might also be useful for age / job dependent topics, or to facilitate 'you spoke to your {relation} about which is better {movie} or {movie}' / 'you spoke with your {relation} about {sport} and how {team} will beat {team} this year'
@@ -103,15 +304,31 @@ CHATS = [
     _("why mannequins have erect nipples"),
     _("Angleina Jolie's lips"),
 ]
+CHATS_INFANT = [
+	_("choo-choo trains, and then both made baby noises at each other"),
+	_("why 'A' is for 'Apple'"),
+	_("the fluffy pussy cat"),
+	_("Thomas the Tank Engine"),
+	_("Dinosaur Train"),
+	_("Alphablocks"),
+	_("Sesame street"),
+	_("Mickey Mouse"),
+	_("'O' is for 'Owl'"),
+	_("'O' is for 'Octopus'"),
+	_("'O' is for 'Orange'"),
+    _("three blind mice"),
+]
 CHATS_CHILD = [
+    _("how much you hate vegetables"),
+    _("how scary the toilet is when it gets flushed"),
+    _("the meaning of life"),
     _("which super power you would most like to have"),
     _("which super power they would most like to have"),
     _("what they want to be when they grow up"),
-    _("how much you hate vegetables"),
-    _("how scary the toilet is when it gets flushed"),
-    _("why the sky is blue"),
     _("where water goes when the toilet gets flushed"),
+    _("why the sky is blue"),
     _("your favourite movie character"),
+    _("your least favourite chore"),
 ]
 CHATS_TEEN = [
     _(""),
@@ -168,12 +385,8 @@ DISCUSSIONS = [
     _("how to make money with recycling"),
     _("the decreasing productivity of the Japanese workforce"),
     _("a business model to help health-conscious customers"),
-    _(
-        "what the best technologies are to safeguard the right of free speech on the internet"
-    ),
-    _(
-        "what the best technologies are to safeguard the right of privacy on the internet"
-    ),
+    _("what the best technologies are to safeguard the right of free speech on the internet"),
+    _("what the best technologies are to safeguard the right of privacy on the internet"),
     _("how to check for the signs of burnout"),
     _("how to overcome the coal crisis in India"),
     _("the causes of bullying in schools"),
@@ -193,20 +406,14 @@ DISCUSSIONS = [
     _("whether the wealthy should be taxed more"),
     _("whether the poor should be given more assistance"),
     _("whether it is possible to maintain a work-life balance"),
-    _(
-        "whether saying 'women make good managers' is sexist like saying 'asians are good at maths' is racist"
-    ),
+    _("whether saying 'women make good managers' is sexist like saying 'asians are good at maths' is racist"),
     _("whether job creators are needed more than job seekers"),
     _("whether a borderless world is a myth or a reality"),
     _("what would happen if Bitcoin crashed to zero and whether it is possible"),
-    _(
-        "business ethics in today's market compared with the past and the potential future"
-    ),
+    _("business ethics in today's market compared with the past and the potential future"),
     _("whether patience is important in business and management"),
     _("whether the family-run business is relevant in today's market"),
-    _(
-        "whether E-commerce discounts are harmful in the long run and is it the business or customer being harmed"
-    ),
+    _("whether E-commerce discounts are harmful in the long run and is it the business or customer being harmed"),
     _("whether globalisation is an opportunity or a threat"),
     _("how markets are found and not created"),
     _("whether the world is ready for a cashless society"),
@@ -245,18 +452,12 @@ DISCUSSIONS = [
     _("whether war is the best option to solve international disputes"),
     _("whether primary school children should be allowed to own mobile phones"),
     _("whether using animals for medical research should be allowed"),
-    _(
-        "whether men and women will ever be equal, if they already are, and whether equality will last"
-    ),
-    _(
-        "whether you can have a happy family life and a successful career at the same time"
-    ),
+    _("whether men and women will ever be equal, if they already are, and whether equality will last"),
+    _("whether you can have a happy family life and a successful career at the same time"),
     _("whether marriage is an outdated institution"),
     _("whether citizens should be allowed to carry guns and other weapons"),
     _("whether the death penalty is acceptable for any reasons"),
-    _(
-        "whether non-citizens and tourists should be allowed to vote in their country of residence"
-    ),
+    _("whether non-citizens and tourists should be allowed to vote in their country of residence"),
     _("whether sex education should be taught to children under 12"),
     _("whether or not women are paid the same as men"),
     _("whether bribery and corruption is acceptable in government"),
@@ -271,38 +472,24 @@ DISCUSSIONS = [
     _("our views on whether or not abortions are okay"),
     _("our views on whether or not social deprivation causes crime"),
     _("our views on whether or not military service should be compulsory"),
-    _(
-        "our views on whether or not war is ever an option for solving international disputes"
-    ),
+    _("our views on whether or not war is ever an option for solving international disputes"),
     _("our views on whether or not torture can be acceptable in some cases"),
     _("our views on whether or not curfews keep teens out of trouble"),
     _("our views on whether or not we're becoming too dependent on computers"),
     _("our views on whether or not smoking should be banned worldwide"),
-    _(
-        "our views on whether or not it should be illegal to ride a bicycle without a helmet"
-    ),
-    _(
-        "our views on whether or not single sex schools are bad for childhood development and lead to unhealthy views of the opposite sex"
-    ),
+    _("our views on whether or not it should be illegal to ride a bicycle without a helmet"),
+    _("our views on whether or not single sex schools are bad for childhood development and lead to unhealthy views of the opposite sex"),
     _("our views on whether or not homework is harmful"),
     _("our views on whether or not the United Nations is a failed organisation"),
-    _(
-        "our views on whether or not intelligence tests should be given before couples can have children"
-    ),
+    _("our views on whether or not intelligence tests should be given before couples can have children"),
     _("our views on whether or not a woman's place is in the home"),
     _("our views on whether or not it's a man's world"),
     _("our views on whether or not money makes you happy"),
     _("our views on whether or not money can buy you happiness"),
     _("our views on whether or not the internet must be censored to protect society"),
-    _(
-        "our views on whether or not genetically modified foods have no ill health effects"
-    ),
-    _(
-        "our views on whether a man should have a wife for the family and a paramour for pleasure"
-    ),
-    _(
-        "our views on whether a woman should have a husband for the family and a paramour for pleasure"
-    ),
+    _("our views on whether or not genetically modified foods have no ill health effects"),
+    _("our views on whether a man should have a wife for the family and a paramour for pleasure"),
+    _("our views on whether a woman should have a husband for the family and a paramour for pleasure"),
     _("our views on whether soft drugs should be legalised"),
     _("our views on whether or not electric cars help the environment"),
     _("our views on whether or not staying unmarried leads to a happier life"),
@@ -314,9 +501,7 @@ DISCUSSIONS = [
     _("our views on whether the war in Iraq was justified"),
     _("our views on whether your race affects your intelligence"),
     _("our views on whether your race affects your sporting ability"),
-    _(
-        "our views on whether the world is over populated and steps must be taken to reduce births"
-    ),
+    _("our views on whether the world is over populated and steps must be taken to reduce births"),
     _("whether or not euthanasia should be illegal"),
     _("whether or not cloning is a valuable scientific pursuit"),
     _("whether obesity is a disease and not a lifestyle choice"),
@@ -406,6 +591,572 @@ HEART_TO_HEARTS_TEEN = [
     _("what happens when we die"),
 ]
 
+#------------------------------------------------------------------
+# Spending time together section:
+
+SPEND_TIME = [
+    _(""),
+]
+# For use in situations like 'Your {relation} took you {to build a sandcastle in a sandbox at the park} 
+# If you are the parent/older sibling then 'You took your {relation} {spend_time_child}
+SPEND_TIME_CHILD = [
+    _("birdwatching"),
+    _("to a cake baking class"),
+    _("to a comic book store"),
+    _("to a music festival"),
+    _("to a yoga class"),
+    _("to attend a juggling class"),
+    _("to bring donuts to the police station"),
+    _("to build a sandcastle in a sandbox at the park"),
+    _("to get cornrow braids"),
+    _("to get henna tattoos"),
+    _("to listen to a punk band"),
+    _("to participate in a neighbourhood cleanup"),
+    _("to the park to feed the ducks"),
+]
+SPEND_TIME_TEEN = [
+    _("to practice sumo wrestling"),
+    _("to play in the rain"),
+    _("to toilet paper the neighbour's house"),
+    _("to scare random people by jumping out of the bushes at a local park"),
+    _("to make a wish while throwing a coing in a fountain"),
+    _("to watch toy unboxing videos"),
+    _("to a café to play cards"),
+    _("to watch a movie under the stars in the park"),
+    _("to perform in a flash mob at the grocery store"),
+    _("to fly a kite"),
+    _("to a rugby game"),
+    _("to the circus"),
+    _("longboarding"),
+    _("to a Hindu temple"),
+    _("to build a sandcastle in a sandbox at the park"),
+    _("to an escape room"),
+    _("antiquing"),
+    _("to write haikus"),
+    _("to play in the sprinklers at the local park"),
+    _("to play bingo at the community centre"),
+    _("to an arcade"),
+    _("to throw paper aeroplanes off the bleachers at the local high school"),
+    _("to the water park"),
+    _("to the aquarium to look at sharks"),
+    _("to sing P!nk songs at karaoke night"),
+    _("to the movies"),
+    _("axe throwing"),
+    _("to make home made mini pizzas"),
+    _("to a painting class"),
+    _("to have a random dance party in a public plaza"),
+    _("to plant trees in the forest"),
+    _("whale watching"),
+    _("to make and pass out balloon animals at the park"),
+    _("snowboarding"),
+    _("to the park"),
+    _("to graffiti train cars"),
+    _("to learn origami at the community centre"),
+    _("birdwatching"),
+    _("to the shooting range"),
+    _("to do caricature drawings of random people in a public place"),
+    _("yodelling"),
+    _("deep sea fishing"),
+    _("to a carnival"),
+]
+
+# E.g. You {spend_time_pet_x)} {pet_type}, {pet_name} = You listened to music with your cat, Pip.
+SPEND_TIME_PET_CAT = [
+    _("listened to hip-hop music with your"),
+    _("listened to classical music with your"),
+    _("made an obstacle course for your"),
+    _("played with your"),
+    _("used a laser pointer to play with your"),
+    _("rolled a ball or yarn across the floor for your"),
+]
+SPEND_TIME_PET_DOG = [
+
+]
+
+# Events section:
+# Random year events. positive events in _POSITIVE. negative, neutral, and choice based to separate lists 
+
+NEWS_EVENT = [
+    _("The Dominican Republic's forces have been withdrawn from Haiti, indicating an end to the war. In total, there were more than 10,000 casualties as a result of the conflict"),
+]
+
+# Age 3 to end of primary
+CHILD_EVENT_POSITIVE = [
+    _("You weren't doing anything fun, but then your friend came over wanting to go out and play. You both had a blast!"),
+]
+CHILD_EVENT_NEGATIVE = [
+    _(""),
+]
+CHILD_EVENT_NEUTRAL = [
+    _(""),
+]
+# E.g. 'Your {Mother_Father} wants to buy you {and your siblings_if any} a pet {cat} named {names}. (cat age, gender, colour, health, happiness, smarts, looks, craziness): 
+# choice = "Yes, I want {him_her}!" > "I don't want {name}" > "Surprise me!"'
+# Or, 'While trick-or-treating in your neighbourhood, you come upon a bowl full of candy with an attached sign that reads, "Please help yourself to one piece."
+# What will you do? = "Grab a handful" > "Empty the bowl" > "Take one piece and move on" > "Surprise me!"'
+CHILD_EVENT_CHOICE = [
+    _(""),
+]
+# E.g. 'While in your teacher, {teacher_name}'s class, your classmate, {classmate_name}, all of a sudden begins ripping pages out of the class textbook one-at-a-time, yelling "Toodle-oo!" with each new page tear.
+# What will you do? = "Attack {him_her}" > "Ignore {his_her} antics" > "Laugh at {him_her}" > "Report {him_her} to the principal" > "Surprise me!"
+CHILD_EVENT_CHOICE_SCHOOL = [
+    _(""),
+]
+
+# Pet types:
+PET_TYPE = [
+    _("cat"),
+    _("dog"),
+    _("fish"),    
+]
+# Pet breeds: (for use in the pet shop)
+PET_BREEDS_CAT = [
+    _("Abyssinian Cat"),
+    _("America Shorthair Cat"),
+    _("House Cat"),
+    _("Tabby Cat"),
+]
+PET_BREEDS_DOG = [
+    _("Cairn Terrier"),
+    _("German Shepherd"),
+    _("Mutt"),
+]
+PET_BREEDS_FISH = [
+    _("Betta Fish"),
+]
+#Pet names:
+PET_NAMES_CAT_MALE = [
+    _("Oliver"),
+    _("Leo"),
+    _("Milo"),
+    _("Charlie"),
+    _("Max"),
+    _("Simba"),
+    _("Jack"),
+    _("Loki"),
+    _("Ollie"),
+    _("Jasper"),
+    _("Buddy"),
+    _("Smokey"),
+    _("Oscar"),
+    _("Toby"),
+    _("Tiger"),
+    _("Finn"),
+    _("Simon"),
+    _("Binx"),
+    _("Louie"),
+    _("Henry"),
+    _("Oreo"),
+    _("Winston"),
+    _("Salem"),
+    _("Gus"),
+    _("Felix"),
+    _("Tigger"),
+    _("Rocky"),
+    _("Kitty"),
+    _("Sam"),
+    _("Teddy"),
+    _("Apollo"),
+    _("Blu"),
+    _("Gizmo"),
+    _("Archie"),
+    _("Jax"),
+    _("Bear"),
+    _("Boots"),
+    _("Frankie"),
+    _("Chester"),
+    _("Bandit"),
+    _("Beau"),
+    _("Pumpkin"),
+    _("Cosmo"),
+    _("Lucky"),
+    _("Thor"),
+    _("Frank"),
+    _("Midnight"),
+    _("Benny"),
+    _("Tom"),
+    _("Boo"),
+    _("Ash"),
+    _("Romeo"),
+    _("Goose"),
+    _("Joey"),
+    _("Mochi"),
+    _("Ozzy"),
+    _("Merlin"),
+    _("Prince"),
+    _("Pepper"),
+    _("Bruce"),
+    _("Otis"),
+    _("Harry"),
+    _("Percy"),
+    _("Peanut"),
+    _("Bean"),
+    _("Tucker"),
+    _("Murphy"),
+    _("Moose"),
+    _("Mac"),
+    _("Kevin"),
+    _("Casper"),
+    _("Buster"),
+    _("Bob"),
+    _("Thomas"),
+    _("Jackson"),
+    _("Sylvester"),
+    _("Jake"),
+    _("Fred"),
+    _("Mango"),
+    _("Sunny"),
+    _("Hank"),
+    _("Bubba"),
+    _("Calvin"),
+    _("Marley"),
+    _("Coco"),
+    _("Louis"),
+    _("Tony"),
+    _("Bagheera"),
+    _("Duke"),
+    _("Clyde"),
+    _("Hunter"),
+    _("Mittens"),
+    _("Luke"),
+    _("Nugget"),
+    _("Ace"),
+    _("Scout"),
+    _("Tito"),
+    _("Monty"),
+    _("Wally"),
+    _("Alex"),
+]
+PET_NAMES_CAT_FEMALE = [
+    _("Luna"),
+    _("Bella"),
+    _("Lily"),
+    _("Lucy"),
+    _("Nala"),
+    _("Kitty"),
+    _("Chloe"),
+    _("Stella"),
+    _("Zoe"),
+    _("Lola"),
+    _("Cleo"),
+    _("Daisy"),
+    _("Sophie"),
+    _("Willow"),
+    _("Olive"),
+    _("Penny"),
+    _("Pepper"),
+    _("Rosie"),
+    _("Molly"),
+    _("Kiki"),
+    _("Ellie"),
+    _("Phoebe"),
+    _("Coco"),
+    _("Lulu"),
+    _("Princess"),
+    _("Maggie"),
+    _("Piper"),
+    _("Millie"),
+    _("Ginger"),
+    _("Nova"),
+    _("Hazel"),
+    _("Pumpkin"),
+    _("Ruby"),
+    _("Penelope"),
+    _("Fiona"),
+    _("Oreo"),
+    _("Baby"),
+    _("Charlie"),
+    _("Winnie"),
+    _("Minnie"),
+    _("Abby"),
+    _("Mittens"),
+    _("Poppy"),
+    _("Cookie"),
+    _("Ivy"),
+    _("Boo"),
+    _("Roxy"),
+    _("Belle"),
+    _("Ella"),
+    _("Zelda"),
+    _("Mochi"),
+    _("Alice"),
+    _("Angel"),
+    _("Emma"),
+    _("Salem"),
+    _("Bean"),
+    _("Freya"),
+    _("Bailey"),
+    _("Midnight"),
+    _("Peanut"),
+    _("Leia"),
+    _("Peaches"),
+    _("Gigi"),
+    _("Frankie"),
+    _("Honey"),
+    _("Violet"),
+    _("Charlotte"),
+    _("Olivia"),
+    _("Sage"),
+    _("Stormy"),
+    _("Kiwi"),
+    _("Bonnie"),
+    _("Smokey"),
+    _("Scout"),
+    _("Arya"),
+    _("Sushi"),
+    _("Sugar"),
+    _("Blu"),
+    _("Josie"),
+    _("Gypsy"),
+    _("Mocha"),
+    _("Binx"),
+    _("Trixie"),
+    _("Snickers"),
+    _("Boots"),
+    _("Iris"),
+    _("Lucky"),
+    _("Lady"),
+    _("Elsa"),
+    _("Pixie"),
+    _("Tiger"),
+    _("Ava"),
+    _("Holly"),
+    _("Tilly"),
+    _("Grace"),
+    _("Opal"),
+    _("Peach"),
+    _("Muffin"),
+    _("Maple"),
+    _("Sally"),
+]
+PET_NAMES_DOG_MALE = [
+   _("Max"),
+   _("Charlie"),
+   _("Milo"),
+   _("Buddy"),
+   _("Rocky"),
+   _("Bear"),
+   _("Leo"),
+   _("Duke"),
+   _("Teddy"),
+   _("Tucker"),
+   _("Beau"),
+   _("Oliver"),
+   _("Jack"),
+   _("Winston"),
+   _("Ollie"),
+   _("Toby"),
+   _("Jax"),
+   _("Blue"),
+   _("Finn"),
+   _("Louie"),
+   _("Murphy"),
+   _("Loki"),
+   _("Moose"),
+   _("Gus"),
+   _("Bruno"),
+   _("Ace"),
+   _("Apollo"),
+   _("Hank"),
+   _("Archie"),
+   _("Kobe"),
+   _("Henry"),
+   _("Thor"),
+   _("Simba"),
+   _("Bailey"),
+   _("Scout"),
+   _("Diesel"),
+   _("Jake"),
+   _("Lucky"),
+   _("Buster"),
+   _("Otis"),
+   _("Jackson"),
+   _("Benny"),
+   _("Chewy"),
+   _("Jasper"),
+   _("Oscar"),
+   _("Bandit"),
+   _("Rex"),
+   _("Oreo"),
+   _("Riley"),
+   _("Baxter"),
+   _("Cody"),
+   _("Coco"),
+   _("Rocco"),
+   _("Tank"),
+   _("Prince"),
+   _("Ranger"),
+   _("King"),
+   _("Marley"),
+   _("Roscoe"),
+   _("Sam"),
+   _("Oakley"),
+   _("Copper"),
+   _("Gizmo"),
+   _("Chase"),
+   _("Luke"),
+   _("Boomer"),
+   _("Bruce"),
+   _("Frankie"),
+   _("Chance"),
+   _("Rusty"),
+   _("Hunter"),
+   _("Ozzy"),
+   _("Tyson"),
+   _("Romeo"),
+   _("Rudy"),
+   _("Mac"),
+   _("Bubba"),
+   _("Peanut"),
+   _("Kai"),
+   _("Chico"),
+   _("Joey"),
+   _("Atlas"),
+   _("Goose"),
+   _("Samson"),
+   _("Chief"),
+   _("Levi"),
+   _("Titan"),
+   _("Frank"),
+   _("Axel"),
+   _("Brutus"),
+   _("Ghost"),
+   _("Brady"),
+   _("Cosmo"),
+   _("Scooby"),
+   _("Chip"),
+   _("Chester"),
+   _("Wally"),
+   _("Rufus"),
+   _("Dash"),
+   _("Louis"),
+]
+PET_NAMES_DOG_FEMALE = [
+   _("Bella"),
+   _("Luna"),
+   _("Lucy"),
+   _("Daisy"),
+   _("Lola"),
+   _("Sadie"),
+   _("Molly"),
+   _("Bailey"),
+   _("Stella"),
+   _("Maggie"),
+   _("Chloe"),
+   _("Penny"),
+   _("Nala"),
+   _("Zoey"),
+   _("Lily"),
+   _("Coco"),
+   _("Sophie"),
+   _("Rosie"),
+   _("Ellie"),
+   _("Ruby"),
+   _("Piper"),
+   _("Mia"),
+   _("Roxy"),
+   _("Gracie"),
+   _("Millie"),
+   _("Willow"),
+   _("Lulu"),
+   _("Pepper"),
+   _("Ginger"),
+   _("Harley"),
+   _("Abby"),
+   _("Winnie"),
+   _("Nova"),
+   _("Kona"),
+   _("Riley"),
+   _("Zoe"),
+   _("Lilly"),
+   _("Dixie"),
+   _("Lady"),
+   _("Izzy"),
+   _("Hazel"),
+   _("Layla"),
+   _("Olive"),
+   _("Charlie"),
+   _("Sasha"),
+   _("Maya"),
+   _("Honey"),
+   _("Athena"),
+   _("Lexi"),
+   _("Cali"),
+   _("Annie"),
+   _("Belle"),
+   _("Princess"),
+   _("Phoebe"),
+   _("Emma"),
+   _("Ella"),
+   _("Cookie"),
+   _("Marley"),
+   _("Callie"),
+   _("Scout"),
+   _("Roxie"),
+   _("Remi"),
+   _("Minnie"),
+   _("Maddie"),
+   _("Dakota"),
+   _("Leia"),
+   _("Poppy"),
+   _("Josie"),
+   _("Harper"),
+   _("Mila"),
+   _("Angel"),
+   _("Holly"),
+   _("Ava"),
+   _("Ivy"),
+   _("Mocha"),
+   _("Gigi"),
+   _("Paisley"),
+   _("Koda"),
+   _("Cleo"),
+   _("Penelope"),
+   _("Bonnie"),
+   _("Missy"),
+   _("Frankie"),
+   _("Sugar"),
+   _("Aspen"),
+   _("Xena"),
+   _("Shelby"),
+   _("Fiona"),
+   _("Dolly"),
+   _("Georgia"),
+   _("Shadow"),
+   _("Delilah"),
+   _("Peanut"),
+   _("Grace"),
+   _("Rose"),
+   _("Skye"),
+   _("Pearl"),
+   _("Jasmine"),
+   _("Juno"),
+   _("Trixie"),
+]
+PET_NAMES_FISH = [
+   _("Finneaus"),
+   _("Fishy McFish"),
+   _("Swimster"),
+   _("Chips"),
+   _("Caspian"),
+   _("Ripley"),
+   _("Bob"),
+   _("Bubbles"),
+   _("Bigmouth"),
+   _("Swimzell"),
+   _("Swim Shady"),
+   _("Bigmouth Billy"),
+   _("Squirtle"),
+   _("Long John Silver"),
+   _("Mr. Ray"),
+   _("Captain Morgan"),
+   _("Betta White"),
+   _("Small Fry"),
+   _("Tuna Piano"),
+   _("Harvey"),
+]
+
+#------------------------------------------------------------------
 # Celebrity list
 # For use in situations like '{celebrity} followed you on instagram'; or "you were talking with your {relation} about {adam brody}'s {left ankle}"; "while you were working at {chicken shop} you noticed {seth rogan} stuck in traffic outside. You waved, {he} didn't wave back." etc
 # Rough alphabetical order only so far
@@ -788,167 +1539,426 @@ CELEBRITY_FEMALE_WRITER = [
 ]
 
 
-# List of Urban locations (a park, a bank etc.)
+# List of Urban locations (a park, a bank etc.) called after 'to' or 'at' "we went to {urban_location}", "we spent time at {urban_location}"
+# terms like 'downtown' arent in this list. you cant write 'spent time at downtown' over 'spent time downtown', or 'went to downtown' over 'went downtown'
+# 'downtown' and other similar terms are in URBAN_DIRECTIONAL below
 
 URBAN_LOCATION = [
-    _("an airport"),
-    _("an airfield"),
-    _("an alleyway"),
-    _("an ambulance station"),
-    _("an apartment building"),
-    _("an aquarium"),
-    _("an arcade"),
-    _("an art gallery"),
-    _("an avenue"),
-    _("a bakery"),
-    _("a bank"),
-    _("a bar"),
-    _("a barber shop"),
-    _("a beauty salon"),
-    _("a bed & breakfast"),
-    _("a bicycle rental stand"),
-    _("a billboard"),
-    _("a bookstore"),
-    _("a boulevard"),
-    _("a bowling alley"),
-    _("a bridge"),
-    _("a bus stop"),
-    _("a butcher's shop"),
-    _("a cafe"),
-    _("a canal"),
-    _("a church"),
-    _("City Hall"),
-    _("a clinic"),
-    _("a coffee shop"),
-    _("a college"),
-    _("a community centre"),
-    _("a community gardens"),
-    _("a concert hall"),
-    _("a condominium"),
-    _("a construction site"),
-    _("a convenience store"),
-    _("a court"),
-    _("a cycle highway"),
-    _("a daycare centre"),
-    _("a dentist"),
-    _("a department store"),
-    _("a dock"),
-    _("the docks"),
-    _("a doctor's office"),
-    _("some drainage infrastructure"),
-    _("a dry cleaner"),
-    _("an embassy"),
-    _("a factory"),
-    _("a fire hydrant"),
-    _("a fire station"),
-    _("a flower shop"),
-    _("a garbage facility"),
-    _("a garden"),
-    _("a gardens"),
-    _("a government building"),
-    _("a green-roof"),
-    _("a grocery store"),
-    _("a greengrocer"),
-    _("a gym"),
-    _("a gymnasium"),
-    _("a harbour"),
-    _("the harbour"),
-    _("a highway"),
-    _("a historical building"),
-    _("a historical site"),
-    _("a hospital"),
-    _("a hotel"),
-    _("a house"),
-    _("a jail"),
-    _("a karaoke bar"),
-    _("a karaoke lounge"),
-    _("a landmark"),
-    _("a laundromat"),
-    _("a library"),
-    _("a linear park"),
-    _("a market"),
-    _("the markets"),
-    _("a mixed-use building"),
-    _("a mixed-use street"),
-    _("a monument"),
-    _("a movie theatre"),
-    _("a museum"),
-    _("a nature reserve"),
-    _("a newspaper office"),
-    _("some night architecture"),
-    _("a nightclub"),
-    _("a nursery school"),
-    _("a nursing home"),
-    _("an observatory"),
-    _("an office building"),
-    _("an opera house"),
-    _("some outdoor seating"),
-    _("a park"),
-    _("a patisserie"),
-    _("some pedestrian infrastructure"),
-    _("a performance theatre"),
-    _("a pharmacist"),
-    _("a place of worship"),
-    _("a play street"),
-    _("a playground"),
-    _("a police station"),
-    _("a port"),
-    _("the port"),
-    _("a post office"),
-    _("a prison"),
-    _("a product showroom"),
-    _("a pub"),
-    _("a public bath"),
-    _("a public pool"),
-    _("a public square"),
-    _("a public toilet"),
-    _("a radio station"),
-    _("a recreation centre"),
-    _("a recreation facility"),
-    _("some remarkable architecture"),
-    _("a restaurant"),
-    _("a river"),
-    _("a school"),
-    _("the sewers"),
-    _("a shopping centre"),
-    _("a shopping mall"),
-    _("a shop"),
-    _("a skating rink"),
-    _("a skyscraper"),
-    _("a spa"),
-    _("a sports facility"),
-    _("a sports shop"),
-    _("a sports stadium"),
-    _("a sports store"),
-    _("a stadium"),
-    _("a stream"),
-    _("a street"),
-    _("some street art"),
-    _("a street food vendor"),
-    _("a street vendor"),
-    _("a street light"),
-    _("some street lights"),
-    _("a strip of shops"),
-    _("a subway station"),
-    _("a swimming pool"),
-    _("a taxi stand"),
-    _("a technology centre"),
-    _("some tech infrastructure"),
-    _("a television station"),
-    _("a tennis court"),
-    _("a temple"),
-    _("a synagogue"),
-    _(""),
+	_("an abandoned building"),
+	_("an abandoned factory"),
+	_("an abandoned house"),
+	_("an abandoned office building"),
+	_("an abandoned school"),
+	_("an airport"),
+	_("an airfield"),
+	_("an alleyway"),
+	_("an ambulance station"),
+	_("an apartment building"),
+	_("an aquarium"),
+	_("an arcade"),
+	_("an art gallery"),
+	_("an avenue"),
+	_("a bakery"),
+	_("a bank"),
+	_("a bar"),
+	_("a barber shop"),
+	_("a beauty salon"),
+	_("a bed & breakfast"),
+	_("a bicycle rental stand"),
+	_("a billboard"),
+	_("a bookstore"),
+	_("a boulevard"),
+	_("a bowling alley"),
+	_("a bridge"),
+	_("a bus stop"),
+	_("a butcher's shop"),
+	_("a cafe"),
+	_("a canal"),
+	_("the central business district"),
+	_("a church"),
+	_("City Hall"),
+	_("a clinic"),
+	_("a coffee shop"),
+	_("a college"),
+	_("a community centre"),
+	_("a community gardens"),
+	_("a concert hall"),
+	_("a condominium"),
+	_("a construction site"),
+	_("a convenience store"),
+	_("a court"),
+	_("a cycle highway"),
+	_("a daycare centre"),
+	_("a dentist"),
+	_("a department store"),
+	_("a dock"),
+	_("the docks"),
+	_("a doctor's office"),
+	_("some drainage infrastructure"),
+	_("a dry cleaner"),
+	_("an embassy"),
+	_("a factory"),
+	_("a fire hydrant"),
+	_("a fire station"),
+	_("a flower shop"),
+	_("a garbage facility"),
+	_("a garden"),
+	_("a gardens"),
+	_("a government building"),
+	_("a green-roof"),
+	_("a grocery store"),
+	_("a greengrocer"),
+	_("a gym"),
+	_("a gymnasium"),
+	_("a harbour"),
+	_("the harbour"),
+	_("a highway"),
+	_("a historical building"),
+	_("a historical site"),
+	_("a hospital"),
+	_("a hotel"),
+	_("a house"),
+	_("a jail"),
+	_("a karaoke bar"),
+	_("a karaoke lounge"),
+	_("a landmark"),
+	_("a laundromat"),
+	_("a library"),
+	_("a linear park"),
+	_("a market"),
+	_("the markets"),
+	_("a mixed-use building"),
+	_("a mixed-use street"),
+	_("a monument"),
+	_("a movie theatre"),
+	_("a museum"),
+	_("a nature reserve"),
+	_("a newspaper office"),
+	_("some night architecture"),
+	_("a nightclub"),
+	_("a nursery school"),
+	_("a nursing home"),
+	_("an observatory"),
+	_("an office building"),
+	_("an opera house"),
+	_("some outdoor seating"),
+	_("an overpass"),
+	_("a park"),
+	_("a patisserie"),
+	_("some pedestrian infrastructure"),
+	_("a performance theatre"),
+	_("a pharmacist"),
+	_("a place of worship"),
+	_("a play street"),
+	_("a playground"),
+	_("a police station"),
+	_("a pond"),
+	_("a port"),
+	_("the port"),
+	_("a post office"),
+	_("a prison"),
+	_("a product showroom"),
+	_("a pub"),
+	_("a public bath"),
+	_("a public pool"),
+	_("a public square"),
+	_("a public toilet"),
+	_("a radio station"),
+	_("a railway line"),
+	_("a railway station"),
+	_("a recreation centre"),
+	_("a recreation facility"),
+	_("some remarkable architecture"),
+	_("a restaurant"),
+	_("a river"),
+	_("a school"),
+	_("the sewers"),
+	_("a shopping centre"),
+	_("a shopping mall"),
+	_("a shop"),
+	_("a skating rink"),
+	_("a skyscraper"),
+	_("a spa"),
+	_("a sports facility"),
+	_("a sports shop"),
+	_("a sports stadium"),
+	_("a sports store"),
+	_("a stadium"),
+	_("a stream"),
+	_("a street"),
+	_("some street art"),
+	_("a street food vendor"),
+	_("a street vendor"),
+	_("a street light"),
+	_("some street lights"),
+	_("a strip of shops"),
+	_("a subway station"),
+	_("a swimming pool"),
+	_("a synagogue"),
+	_("a taxi stand"),
+	_("a technology centre"),
+	_("some tech infrastructure"),
+	_("a television station"),
+	_("a tennis court"),
+	_("a temple"),
+	_("a temple complex"),
+	_("a theme park"),
+	_("a tower"),
+	_("a traffic light"),
+	_("some traffic lights"),
+	_("a train line"),
+	_("a train station"),
+	_("a tree"),
+	_("some trees"),
+	_("the underground"),
+	_("an underpass"),
+	_("a university"),
+	_("an urban farm"),
+	_("an urban forest"),
+	_("a vending machine"),
+	_("some vending machines"),
+	_("a vertical park"),
+	_("a visitor centre"),
+	_("a void deck"),
+	_("a water pipe"),
+	_("some water pipes"),
+	_("a water tower"),
+	_("a waterfront"),
+	_("the waterfront"),
+	_("a waterfront tower"),
+	_(""),
+	_(""),
+]
+
+# List of urban story building directional movement terms.
+# E.g. for 'we went {downtown} to {an urban forest}', or 'we spent time {across town} at {a void deck}
+
+URBAN_DIRECTIONAL = [
+	_("across the river"),
+	_("across town"),
+	_("downtown"),
+	_("down the road"),
+	_("over the road"),
+	_("up the road"),
+	_("up the street"),
+	_(""),
+]
+
+# List of past tense urban movement terms
+# Use for 'We {took the train} {downtown} to {an urban forest}
+
+URBAN_MOVEMENT = [
+	_("caught the bus"),
+	_("hiked"),
+	_("hitch-hiked"),
+	_("jogged"),
+	_("knocked about"),
+	_("legged it"),
+	_("meandered"),
+	_("ran"),
+	_("rode"),
+	_("rowed a boat"),
+	_("skated"),
+	_("took a bus"),
+	_("took a cab"),
+	_("took a taxi"),
+	_("took the train"),
+	_("took a water taxi"),
+	_("walked"),
+	_("went jogging"),
+]
+
+# List of rural locations
+
+RURAL_LOCATION = [
+	_("a barn"),
+	_("a country lane"),
+	_("a dam"),
+	_("a farm"),
+	_("a field"),
+	_("a fish farm"),
+	_("a paddock"),
+	_("a hay shed"),
+	_("a windmill"),
 ]
 
 # List of Natural locations (a mountain, a forest etc.)
 
-NATURAL_LOCATION = []
+NATURAL_LOCATION = [
+	_("an alluvial fan"),
+	_("an archipelago"),
+	_("the archipelago"),
+	_("an atoll"),
+	_("a sand bar"),
+	_("a barchan"),
+	_("a basin"),
+	_("the bay"),
+	_("a coastal bay"),
+	_("the bayside"),
+	_("a beach"),
+	_("the beach"),
+	_("a butte"),
+	_("the buttes"),
+	_("a cape"),
+	_("a canyon"),
+	_("the canyon"),
+	_("a cave"),
+	_("the caves"),
+	_("a channel"),
+	_("a cliff"),
+	_("the cliffs"),
+	_("the coast"),
+	_("a desert"),
+	_("the desert"),
+	_("a divide"),
+	_("a dune"),
+	_("a crescent dune"),
+	_("a sand dune"),
+	_("a geyser"),
+	_("the geysers"),
+	_("a glacier"),
+	_("a gorge"),
+	_("the gorge"),
+	_("the grasslands"),
+	_("the gulf"),
+	_("a gully"),
+	_("a dry gully"),
+	_("a hill"),
+	_("the hills"),
+	_("an iceberg"),
+	_("an ice sheet"),
+	_("an inselberg"),
+	_("an island"),
+	_("the islands"),
+	_("an isthmus"),
+	_("a jungle"),
+	_("the jungle"),
+	_("a lagoon"),
+	_("a moraine"),
+	_("a mountain"),
+	_("the mountains"),
+	_("the base of a mountain"),
+	_("the foot of a mountain"),
+	_("a mountain peak"),
+	_("a mountain range"),
+	_("the mountain range"),
+	_("the top of a mountain"),
+	_("a fjord"),
+	_("a forest"),
+	_("the forest"),
+	_("a deciduous forest"),
+	_("a temperate forest"),
+	_("a lake"),
+	_("the lake"),
+	_("the edge of a lake"),
+	_("a salt lake"),
+	_("the salt lakes"),
+	_("a marsh"),
+	_("the marshes"),
+	_("a mesa"),
+	_("the mouth of the river"),
+	_("an oasis"),
+	_("the ocean"),
+	_("a salt pan"),
+	_("a peninsula"),
+	_("the peninsula"),
+	_("a plain"),
+	_("the plains"),
+	_("a flood plain"),
+	_("the flood plains"),
+	_("a pediment"),
+	_("the plateau"),
+	_("a pond"),
+	_("a prairie"),
+	_("the quays"),
+	_("a rainforest"),
+	_("a subtropical rainforest"),
+	_("a tropical rainforest"),
+	_("a ravine"),
+	_("the ravine"),
+	_("a reef"),
+	_("a coral reef"),
+	_("the coral reef"),
+	_("a river"),
+	_("the river"),
+	_("a river basin"),
+	_("the river basin"),
+	_("a river delta"),
+	_("the river delta"),
+	_("the source of a river"),
+	_("a savanna"),
+	_("the sea"),
+	_("the seaside"),
+	_("the shrublands"),
+	_("the sound"),
+	_("a coastal sound"),
+	_("a steppe"),
+	_("the steppes"),
+	_("a strait"),
+	_("a stream"),
+	_("a swamp"),
+	_("the swamp"),
+	_("a tributary"),
+	_("a tundra"),
+	_("the tundra"),
+	_("a valley"),
+	_("a river valley"),
+	_("a volcano"),
+	_("an active volcano"),
+	_("a dormant volcano"),
+	_("an extinct volcano"),
+	_("a wadi"),
+	_("some wadis"),
+	_("a waterfall"),
+	_("the waterfalls"),
+	_("a wetland"),
+	_("the wetlands"),
+	_("some yardangs"),
+	_("some zeugens"),
+]
 
 # List of Environmental locations. E.g. 'You practiced writing a story, you chose comic sans and began with "It was {a dark and stormy night}', or "You {beat the meat} while thinking of {margaret thatcher} on {a hot sunny day}"
 
-ENVIRONMENTAL_LOCATION = []
+ENVIRONMENTAL_LOCATION = [
+    _("a hot night"),
+    _("a cold night"),
+    _("a dark and stormy night"),
+    _("a windy night"),
+    _("a clear and starry night"),
+    _("a hot sunny day"),
+    _("a hot day"),
+    _("a cold day"),
+    _("a wet and windy day"),
+    _("a windy day"),
+    _("a cool, overcast evening"),
+    _("a wet windy evening"),
+    _("a hot sweaty evening"),
+    _("a brisk early morning"),
+    _("a warm overcast morning"),
+    _(""),
+]
 
+# Body parts for squabbles, fights etc.
+# E.g. 'you squabbled with your {sibling} for not sharing {his_her} candy.' -> 'your {sibling} stormed you! {he_she} ripped your nipple.' 
+
+BODYPART = [
+    _("arm"),
+    _("head"),
+    _("leg"),
+    _("foot"),
+    _("knee"),
+]
+
+# Fighting words
+# Same gist as above, e.g. for when you get attacked in a park and someone gouges your belly button or bites your pinky toe
+
+ATTACK_WORD = [
+	_("punched"),
+	_("hit"),
+	_("kicked"),
+	_("attacked"),
+	_("bit"),
+]
 
 # Insults: does what it says on the box. opposite list of compliments. (can be premised with 'called you {insults}')
 INSULTS = [
