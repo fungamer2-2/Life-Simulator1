@@ -27,6 +27,7 @@ ILLNESSES_TRANSLATIONS = {
 
 COMPLIMENTS = [
     _("a bubbly personality"),
+    _("a brilliant mind"),
     _("a champion"),
     _("a gem"),
     _("a genius"),
@@ -38,6 +39,7 @@ COMPLIMENTS = [
     _("a treasure"),
     _("a winner"),
     _("a wizard"),
+    _("a VIP"),
     _("a visionary"),
     _("adorable"),
     _("admirable"),
@@ -49,17 +51,21 @@ COMPLIMENTS = [
     _("clever"),
     _("cool"),
     _("courageous"),
+    _("cute"),
     _("delightful"),
     _("dope"),
     _("elite"),
     _("fascinating"),
     _("fearless"),
+    _("fine"),
     _("fresh"),
     _("gorgeous"),
     _("golden"),
     _("groovy"),
     _("inspiring"),
     _("intelligent"),
+    _("lionhearted"),
+    _("magnetic"),
     _("magnificent"),
     _("motivating"),
     _("neat"),
@@ -68,6 +74,7 @@ COMPLIMENTS = [
     _("a perfect 10"),
     _("phenomenal"),
     _("rad"),
+    _("savage"),
     _("smart"),
     _("spectatular"),
     _("stellar"),
@@ -76,16 +83,63 @@ COMPLIMENTS = [
     _("stylish"),
     _("swell"),
     _("the best"),
+    _("the GOAT"),
     _("the greatest"),
     _("the life of the party"),
     _("unparalled"),
     _("wise"),
     _("wonderful"),
+    _("world-class"),
 ]
 
 # Insults moved to the bottom
 
+# Flirts
+# School flirts:
+#   You followed your classmate, {name}, around school trying to get him to notice you.
+#   You teased your classmate, {name}, just to get her attention.
+#   You sat next to your classmate, {name}, at lunch just to get their attention.
+#   You passed a note to your classmate, {name}, in class.
+#   You gave your classmate, {name}, a shy smirk and a wink from across the room.
+#   You gave your classmate, {name}, an enamouring smirk and wink from across the room.
+#   You gave your classmate, {name}, a confident smirk and wink from across the room.
+#   You did the Lean dance move to try to impress your classmate, {name}.
+#   You did the Carlton dance move to try to impress your classmate, {name}.
+#   You did the Moonwalk dance move to try to impress your classmate, {name}.
+#   You did the Robot dance move to try to impress your classmate, {name}.
+#   You did the Soulja Boy dance move to try to impress your classmate, {name}.
+#   You did the Single Ladies dance move to try to impress your classmate, {name}.
 
+DANCE_MOVE = [
+    _("Carlton"),
+    _("Lean"),
+    _("Moonwalk"),
+    _("Robot"),
+    _("Single Ladies"),
+    _("Soulja Boy"),
+]
+FLIRT_VERB = [
+    _("a confident"),
+    _("an enamouring"),
+    _("a shy"),
+]
+
+#------------------------------------------------------------------
+# Identity Genders
+IDENTITY_GENDER_FEMALE = [
+    _("Cisgender"),
+    _("Genderqueer"),
+    _("Non-Binary"),
+    _("Transgender Male"),
+]
+IDENTITY_GENDER_MALE = [
+    _("Cisgender"),
+    _("Genderqueer"),
+    _("Non-Binary"),
+    _("Transgender Female"),
+]
+
+#------------------------------------------------------------------
 # Conversations section:
 # This section is broken into basic conversation depths. It may be useful in future to e.g. not have a heart-to-heart with your {enemy}, {boss}, {whoever}.
 # It might also be useful for age / job dependent topics, or to facilitate 'you spoke to your {relation} about which is better {movie} or {movie}' / 'you spoke with your {relation} about {sport} and how {team} will beat {team} this year'
@@ -391,6 +445,26 @@ HEART_TO_HEARTS_TEEN = [
 #------------------------------------------------------------------
 # Spending time together section:
 
+SPEND_TIME = [
+    _(""),
+]
+# For use in situations like 'Your {relation} took you to build a sandcastle in a sandbox at the park 
+SPEND_TIME_CHILD = [
+    _("took you to attend a juggling class"),
+    _("took you to build a sandcastle in a sandbox at the park"),
+    _("took you to get cornrow braids"),
+    _("took you to get henna tattoos"),
+    _("took you to participate in a neighbourhood cleanup"),
+    _("went with you to the park to feed the ducks"),
+]
+SPEND_TIME_TEEN = [
+    _(""),
+]
+
+# E.g. You {spend_time_pet} {pet_type}, {pet_name} = You listened to music with your cat, Pip.
+SPEND_TIME_PET = [
+    _("listened to hip-hop music with your"),
+]
 
 # Events section:
 # Random year events. positive events in _POSITIVE. negative, neutral, and choice based to separate lists 
