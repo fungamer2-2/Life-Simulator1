@@ -4,6 +4,7 @@ from src.lifesim_lib.lifesim_lib import clamp, Gender
 from src.people.classes.person import Person
 from src.lifesim_lib.translation import _
 
+
 class Relationship(Person):
     """Base class for relationships."""
 

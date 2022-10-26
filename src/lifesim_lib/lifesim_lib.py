@@ -5,12 +5,14 @@ from sys import platform
 from src.lifesim_lib.const import *
 from src.lifesim_lib.translation import _
 
+
 class PlayerDied(Exception):
     pass
 
 
 def get_save_files():
     return os.listdir(SAVE_PATH)
+
 
 def get_saves(saves=None):
     if saves is None:
@@ -66,27 +68,27 @@ def round_stochastic(value):
 
 
 COLORS = {
-	"black": 30,
-	"red": 31, 
-	"green": 32,
-	"yellow": 33, 
-	"blue": 34,
-	"magenta": 35, 
-	"cyan": 36, 
-	"white": 37
+    "black": 30,
+    "red": 31,
+    "green": 32,
+    "yellow": 33,
+    "blue": 34,
+    "magenta": 35,
+    "cyan": 36,
+    "white": 37,
 }
 
 
 def get_colored(message, color):
-	if color is None:
-		return str(message)
-	if color not in COLORS:
-		raise ValueError(f"{color!r} is not a valid ANSI color")
-	return f"\u001b[{COLORS[color]}m" + str(message) + "\033[0m"
-	
-	
+    if color is None:
+        return str(message)
+    if color not in COLORS:
+        raise ValueError(f"{color!r} is not a valid ANSI color")
+    return f"\u001b[{COLORS[color]}m" + str(message) + "\033[0m"
+
+
 def print_colored(message, color):
-	print(get_colored(message, color))
+    print(get_colored(message, color))
 
 
 class Gender(Enum):
@@ -96,31 +98,33 @@ class Gender(Enum):
     @staticmethod
     def random():
         return Gender.Male if random.uniform(0, 100) < 51.2 else Gender.Female
-	
+
+
 TRAITS_DICT = {
-	"CHEERFUL": (
-	    _("Cheerful"),
-	    _("It is easier to increase your happiness by doing activities."),
-	    1,
-	    ["GRUMPY"],
-	),
-	"NERD": (
+    "CHEERFUL": (
+        _("Cheerful"),
+        _("It is easier to increase your happiness by doing activities."),
+        1,
+        ["GRUMPY"],
+    ),
+    "NERD": (
         _("Nerd"),
         _("You gain more smarts by going to the library and doing other activities."),
         1,
     ),
     "GENIUS": (
         _("Genius"),
-        _("You tend to be very intelligent. Your Smarts increases over time, and you gain more Smarts when going to the library."),
+        _(
+            "You tend to be very intelligent. Your Smarts increases over time, and you gain more Smarts when going to the library."
+        ),
         3,
     ),
     "FAST_WORKER": (
         _("Fast Worker"),
         _("You tend to work faster, improving your performance over time."),
         1,
-        ["SLOW_WORKER", "LAZY"]
+        ["SLOW_WORKER", "LAZY"],
     ),
-
     "GRUMPY": (
         _("Grumpy"),
         _("It is difficult for you to be in a good mood."),
@@ -131,29 +135,32 @@ TRAITS_DICT = {
         _("Slow Worker"),
         _("You tend to work slowly, lowering your performance."),
         -1,
-        ["FAST_WORKER"]
+        ["FAST_WORKER"],
     ),
     "LAZY": (
-    	_("Lazy"),
-    	_("You are often lazy on the job. Your stress and performance decrease over time, and you gain more stress when working harder."),
-    	-1,
-    	["FAST_WORKER"]
+        _("Lazy"),
+        _(
+            "You are often lazy on the job. Your stress and performance decrease over time, and you gain more stress when working harder."
+        ),
+        -1,
+        ["FAST_WORKER"],
     ),
     "SICKLY": (
-    	_("Sickly"),
-    	_("You tend to be in poor health, decreasing your Health over time."),
-    	-1
+        _("Sickly"),
+        _("You tend to be in poor health, decreasing your Health over time."),
+        -1,
     ),
-
     "MOODY": (
         _("Moody"),
-        _("Your mood can change more easily. All changes to your Happiness are more intense."),
+        _(
+            "Your mood can change more easily. All changes to your Happiness are more intense."
+        ),
         0,
-    )
+    ),
 }
 
+
 class Trait:
-    
     def __init__(self, name, desc, val, conflicts=None):
         assert type(val) is int, "Trait value must be an integer"
         self.name = name
@@ -163,29 +170,28 @@ class Trait:
 
     def conflicts_with(self, other):
         return other in self.conflicts
-        
+
     def roll_selection(self):
         if self.val == 0:
-        	return True
+            return True
         return random.randint(1, abs(self.val)) == 1
-        
+
     def get_color(self):
-    	if self.val > 0:
-    		return "green"
-    	if self.val < 0:
-    		return "red"
-    	return None
-    
-    @classmethod	
+        if self.val > 0:
+            return "green"
+        if self.val < 0:
+            return "red"
+        return None
+
+    @classmethod
     def from_name(cls, name):
         return cls(*TRAITS_DICT[name])
-        
-    
+
 
 pairs = list(TRAITS_DICT.items())
 names = [pair[0] for pair in pairs]
 ALL_TRAITS = [Trait.from_name(n) for n in names]
-ALL_TRAITS_DICT = {names[i]:ALL_TRAITS[i] for i in range(len(names))}
+ALL_TRAITS_DICT = {names[i]: ALL_TRAITS[i] for i in range(len(names))}
 
 
 def int_input_range(lo, hi):
@@ -225,9 +231,11 @@ def choice_input(*options, return_text=False):
         return options[val - 1]
     return val
 
+
 def yes_no(message):
     print(message)
     return choice_input(_("Yes"), _("No")) == 1
+
 
 def random_name(gender):
     if gender == Gender.Male:
@@ -235,8 +243,10 @@ def random_name(gender):
     else:
         return random.choice(FEMALE_NAMES)
 
+
 def random_last_name():
-	return random.choice(LAST_NAMES)
+    return random.choice(LAST_NAMES)
+
 
 def press_enter():
     input(_("Press Enter to continue..."))
