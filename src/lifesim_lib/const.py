@@ -117,6 +117,7 @@ DANCE_MOVE = [
     _("Robot"),
     _("Single Ladies"),
     _("Soulja Boy"),
+    _("Shoot"),
 ]
 FLIRT_VERB = [
     _("a confident"),
@@ -138,6 +139,72 @@ IDENTITY_GENDER_MALE = [
     _("Non-Binary"),
     _("Transgender Female"),
 ]
+
+
+#------------------------------------------------------------------
+# Instruments
+
+# Accordian
+# Banjo
+# Bass Guitar
+# Cello
+# Didgeridoo
+# Drums
+# Flute
+# Guitar
+# Harmonica
+# Harp
+# Kazoo
+# Keyboard
+# Organ
+# Pan Flute
+# Piano
+# Recorder
+# Saxophone
+# Steel Drum
+# Tambourine
+# Triangle
+# Trombone
+# Trumpet
+# Tuba
+# Violin
+
+
+#------------------------------------------------------------------
+
+# Books
+BOOKS = [
+    _("The Dictionary"),
+]
+BOOKS_CHILD = [
+    _("Where the Wild Things Are"),
+    _("Goodnight Moon"),
+    _("Brown Bear, Brown Bear, What Do You See?"),
+    _("The Snowy Day"),
+    _("If You Give A Mouse A Cookie"),
+    _("Stellaluna"),
+    _("The Very Hungry Caterpillar"),
+]
+BOOKS_TEEN = [
+    _(""),
+]
+
+#------------------------------------------------------------------
+
+# Movies
+
+MOVIES = [
+
+]
+MOVIES_CHILD = [
+    _("Big Boy's Little Adventure"),
+]
+
+MOVIES_TEEN = [
+    _(""),
+]
+
+
 
 #------------------------------------------------------------------
 # Conversations section:
@@ -172,14 +239,16 @@ CHATS_INFANT = [
     _("three blind mice"),
 ]
 CHATS_CHILD = [
+    _("how much you hate vegetables"),
+    _("how scary the toilet is when it gets flushed"),
+    _("the meaning of life"),
     _("which super power you would most like to have"),
     _("which super power they would most like to have"),
     _("what they want to be when they grow up"),
-    _("how much you hate vegetables"),
-    _("how scary the toilet is when it gets flushed"),
-    _("why the sky is blue"),
     _("where water goes when the toilet gets flushed"),
+    _("why the sky is blue"),
     _("your favourite movie character"),
+    _("your least favourite chore"),
 ]
 CHATS_TEEN = [
     _(""),
@@ -338,7 +407,7 @@ DISCUSSIONS = [
     _("our views on whether or not money makes you happy"),
     _("our views on whether or not money can buy you happiness"),
     _("our views on whether or not the internet must be censored to protect society"),
-    _( "our views on whether or not genetically modified foods have no ill health effects"),
+    _("our views on whether or not genetically modified foods have no ill health effects"),
     _("our views on whether a man should have a wife for the family and a paramour for pleasure"),
     _("our views on whether a woman should have a husband for the family and a paramour for pleasure"),
     _("our views on whether soft drugs should be legalised"),
@@ -450,10 +519,13 @@ SPEND_TIME = [
 ]
 # For use in situations like 'Your {relation} took you to build a sandcastle in a sandbox at the park 
 SPEND_TIME_CHILD = [
+    _("took you birdwatching"),
+    _("took you to a cake baking class"),
     _("took you to attend a juggling class"),
     _("took you to build a sandcastle in a sandbox at the park"),
     _("took you to get cornrow braids"),
     _("took you to get henna tattoos"),
+    _("took you to listen to a punk band"),
     _("took you to participate in a neighbourhood cleanup"),
     _("went with you to the park to feed the ducks"),
 ]
@@ -464,6 +536,7 @@ SPEND_TIME_TEEN = [
 # E.g. You {spend_time_pet} {pet_type}, {pet_name} = You listened to music with your cat, Pip.
 SPEND_TIME_PET = [
     _("listened to hip-hop music with your"),
+    _("played with your"),
 ]
 
 # Events section:
@@ -494,7 +567,22 @@ CHILD_EVENT_CHOICE = [
 PET_TYPE = [
     _("cat"),
     _("dog"),
-    _("fish"),
+    _("fish"),    
+]
+# Pet breeds: (for use in the pet shop)
+PET_BREEDS_CAT = [
+    _("Abyssinian Cat"),
+    _("America Shorthair Cat"),
+    _("House Cat"),
+    _("Tabby Cat"),
+]
+PET_BREEDS_DOG = [
+    _("Cairn Terrier"),
+    _("German Shepherd"),
+    _("Mutt"),
+]
+PET_BREEDS_FISH = [
+    _("Betta Fish"),
 ]
 #Pet names:
 PET_NAMES_CAT_MALE = [
