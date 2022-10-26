@@ -217,7 +217,7 @@ def main_menu(player):
                     )
                     player.change_happiness(-4)
                 else:
-                    agreement = random.triangular(0, 100, 65)
+                    agreement = random.triangular(0, 100, 70)
                     agreement += randint(0, max(0, (relation.relationship - 50) // 3))
                     if isinstance(relation, Sibling) and randint(1, 2) == 1:
                         agreement -= randint(0, relation.petulance // 3)
@@ -227,16 +227,17 @@ def main_menu(player):
                     agreement = clamp(
                         round(agreement), randint(0, 10), randint(90, 100)
                     )
-                    chats = random.choice(CHATS)
-                    discussions = random.choice(DISCUSSIONS)
-                    talks = random.choice(TALKS)
-                    heart_to_hearts = HEART_TO_HEARTS
+                    chat = random.choice(CHATS)
+                    discussion = random.choice(DISCUSSIONS)
+                    talk = random.choice(TALKS)
+                    heart_to_heart = random.choice(HEART_TO_HEARTS)
                     sayings = [
                         _(
                             "You and your {relation} had a chat about the hierarchy of licorice."
                         ).format(relation=relation.name_accusative()),
-                        _("You and your {relation} had a chat about {chats}.").format(
-                            relation=relation.name_accusative()
+                        _("You and your {relation} had a chat about {chat}.").format(
+                            relation=relation.name_accusative(),
+                            chat=chat
                         ),
                         _(
                             "You and your {relation} had a chat about which is better, Star Wars or Star Trek."
@@ -253,8 +254,9 @@ def main_menu(player):
                         _(
                             "You and your {relation} discussed Frida Kahlo's moustache."
                         ).format(relation=relation.name_accusative()),
-                        _("You and your {relation} discussed {discussions}.").format(
-                            relation=relation.name_accusative()
+                        _("You and your {relation} discussed {discussion}.").format(
+                            relation=relation.name_accusative(),
+                            discussion=discussion
                         ),
                         _(
                             "You and your {relation} discussed which is the best breed of dog."
@@ -271,8 +273,9 @@ def main_menu(player):
                         _(
                             "You and your {relation} talked about whether you would rather have overly large hands or small feet."
                         ).format(relation=relation.name_accusative()),
-                        _("You and your {relation} talked about {talks}.").format(
-                            relation=relation.name_accusative()
+                        _("You and your {relation} talked about {talk}.").format(
+                            relation=relation.name_accusative(),
+                            talk=talk
                         ),
                         _(
                             "You and your {relation} talked about who will win the Monaco Grand Prix."
@@ -281,8 +284,8 @@ def main_menu(player):
                             "You and your {relation} had a heart-to-heart about the best gift you ever received."
                         ).format(relation=relation.name_accusative()),
                         _(
-                            "You and your {relation} had a heart-to-heart about {heart_to_hearts}."
-                        ).format(relation=relation.name_accusative()),
+                            "You and your {relation} had a heart-to-heart about {heart_to_heart}."
+                        ).format(relation=relation.name_accusative(), heart_to_heart=heart_to_heart),
                     ]
                     print(random.choice(sayings))
                     display_bar(_("Agreement"), agreement)
