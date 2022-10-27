@@ -101,34 +101,40 @@ COMPLIMENTS = [
 
 #------------------------------------------------------------------
 # Flirts
+
+# School flirts
+# Suggest that Primary school = primary school flirts; Middle school = Middle school & primary school flirts; High school = High school, middle school & primary school flirts
 # Primary School flirts:
 #   You complimented your classmate, {name}, on {his_her} haircut.
 #   You followed your classmate, {name}, around school trying to get {him_her} to notice you.
 #   You teased your classmate, {name}, just to get {his_her} attention.
-#   You sat next to your classmate, {name}, at lunch just to get {his_her} attention.
-#   You passed a charmingly funny note to your classmate, {name}, in class.
-#   You passed a note to your classmate, {name}, in class.
-#   You gave your classmate, {name}, a shy smirk and a wink from across the room.
-#   You gave your classmate, {name}, an enamouring smirk and wink from across the room.
-#   You gave your classmate, {name}, a confident smirk and wink from across the room.
-#   You did the Lean dance move to try to impress your classmate, {name}.
-#   You did the Carlton dance move to try to impress your classmate, {name}.
-#   You did the Dejo dance move to try to impress your classmate, {name}.
-#   You did the Moonwalk dance move to try to impress your classmate, {name}.
-#   You did the Robot dance move to try to impress your classmate, {name}.
-#   You did the Soulja Boy dance move to try to impress your classmate, {name}.
-#   You did the Single Ladies dance move to try to impress your classmate, {name}.
+#-   You sat next to your classmate, {name}, at lunch just to get {his_her} attention.
+#-   You passed a charmingly funny note to your classmate, {name}, in class.
+#-   You passed a note to your classmate, {name}, in class.
+#-   You gave your classmate, {name}, a shy smirk and a wink from across the room.
+#-   You gave your classmate, {name}, an enamouring smirk and wink from across the room.
+#-   You gave your classmate, {name}, a confident smirk and wink from across the room.
+#-   You did the Lean dance move to try to impress your classmate, {name}.
+#-   You did the Carlton dance move to try to impress your classmate, {name}.
+#-   You did the Dejo dance move to try to impress your classmate, {name}.
+#-   You did the Moonwalk dance move to try to impress your classmate, {name}.
+#-   You did the Robot dance move to try to impress your classmate, {name}.
+#-   You did the Soulja Boy dance move to try to impress your classmate, {name}.
+#-   You did the Single Ladies dance move to try to impress your classmate, {name}.
 
+#   You did the {DANCE_MOVE} dance move to try to impress your classmate, {name}.
 DANCE_MOVE = [
     _("Carlton"),
     _("Dejo"),
     _("Lean"),
     _("Moonwalk"),
     _("Robot"),
+    _("Running Man"),
     _("Single Ladies"),
     _("Soulja Boy"),
     _("Shoot"),
 ]
+#   You gave your classmate, {name}, {FLIRT_VERB_SMIRK} smirk and a wink from across the room.
 FLIRT_VERB_SMIRK = [
     _("an awkward"),
     _("a confident"),
@@ -136,28 +142,393 @@ FLIRT_VERB_SMIRK = [
     _("a shy"),
     _("a smooth"),
 ]
+#   You sat next to your classmate, {name}, {FLIRT_LOCATION_SAT} just to get {his_her} attention.
+FLIRT_LOCATION_SAT = [
+    _("at lunch"),
+    _("by the pool"),
+    _("by the sports fields"),
+    _("during assembly"),
+    _("in the gym"),
+    _("in the library"),
+    _("in english class"),
+    _("in math class"),
+    _("in science class"),
+    _("on the way home from school"),
+    _("on the way to school"),
+]
+#   You passed {FLIRT_VERB_NOTE} note to your classmate, {name}, in class.
 FLIRT_VERB_NOTE = [
-    _("a charmingly funny note"),
-    _("a note"),
+    _("a"),
+    _("an awkward"),
+    _("a charmingly funny"),
+    _("a flirtatious"),
 ]
 
 # Middle School flirts:
 #   You awkwardly bumped into your classmate, {name}, so that {he_she} had to talk to you.
-#   You stared at your classmate, {name}, for 22 straight minutes today during science class, just so she would notice that you are interested in {him_her}.
-#   You stared at your classmate, {name}, for 55 straight minutes today during an assembly, just so she would notice that you are interested in {him_her}.
+#   You stared at your classmate, {name}, for 22 straight minutes today during an assembly, just so she would notice that you are interested in {him_her}.
 #   You passed an awkward note to your classmate, {name}, in class.
-#   You said "Why, hello there!" Every time you saw your classmate, {name}, at school today.
+#-   You said "Why, hello there!" Every time you saw your classmate, {name}, at school today.
+#   You winked confidently at your classmate, {name}, while the teacher was discussing the sexual reproductive system.
+#   You laughed at everything your classmate, {name}, said, with the hope that {he_she} would embrace the attention from you.
+
+
+# You stared at your classmate, {name}, for {FLIRT_STARE_TIME_MIDDLE_SCHOOL} straight minutes today during {FLIRT_STARE_CLASSES_MIDDLE_SCHOOL} class, just so she would notice that you are interested in {him_her}.
+FLIRT_STARE_TIME_MIDDLE_SCHOOL = randint(5, 25)
+# LIST ORDERED: Alphabetical
+FLIRT_STARE_CLASSES_MIDDLE_SCHOOL = [
+    _("Art"),
+    _("Careers"),
+    _("Computer Science"),
+    _("Drama"),
+    _("English"),
+    _("Geography"),
+    _("History"),
+    _("Math"),
+    _("Music"),
+    _("Physical Eduacation"),
+    _("Science"),
+    _("Social Studies"),
+]
+
+
+# High School flirts:
+#-   You stared at your classmate, {name}, for 55 straight minutes today during science class, just so she would notice that you are interested in {him_her}.
+#-   You said "Why, hello there!" Every time you saw your classmate, {name}, at school today.
+#   You clumsily blew a kiss to your classmate, {name}, while the teacher wasn't looking.
+#   You meekly blew a kiss to your classmate, {name}, while the teacher wasn't looking.
+#   You ran your fingers through your hair as you takled with your classmate, {name}, so that {he_she} would realise you have a crush on her.
+#   You proudly showed your classmate, {name}, how hard you've been working on your twerking form.
+#   You mimicked your classmate, {name}'s, body language so that she would feel like she relates to you.
+
+
+# You stared at your classmate, {name}, for {FLIRT_STARE_TIME_HIGH_SCHOOL} straight minutes today during {FLIRT_STARE_CLASSES_HIGH_SCHOOL} class, just so she would notice that you are interested in {him_her}.
+FLIRT_STARE_TIME_HIGH_SCHOOL = randint(10, 55)
+# LIST ORDERED: Business > CompSci/IT > English > Family/Consumer Science > Languages > Math > Performing Arts > Physical Ed > Science > Social Studies > Visual Arts > Vocational Ed
+FLIRT_STARE_CLASSES_HIGH_SCHOOL = [
+    _("Accounting"),
+    _("Business law"),
+    _("Business management"),
+    _("Consumer education"),
+    _("Entrepreneurial skills"),
+    _("Introduction to business"),
+    _("Marketing"),
+    _("Personal finance"),
+    _("Animation"),
+    _("App development"),
+    _("Audio production"),
+    _("Computer programming"),
+    _("Computer repair"),
+    _("Film production"),
+    _("Graphic design"),
+    _("Media technology"),
+    _("Music production"),
+    _("Typing"),
+    _("Video game development"),
+    _("Web design"),
+    _("Web programming"),
+    _("Word processing"),
+    _("American literature"),
+    _("British literature"),
+    _("Contemporary literature"),
+    _("Creative writing"),
+    _("Communication skills"),
+    _("Debate"),
+    _("English language and composition"),
+    _("English literature and composition"),
+    _("Humanities"),
+    _("Journalism"),
+    _("Literary analysis"),
+    _("Modern literature"),
+    _("Poetry"),
+    _("Popular literature"),
+    _("Rhetoric"),
+    _("Technical writing"),
+    _("Works of Shakespeare"),
+    _("World literature"),
+    _("Written and oral communication"),
+    _("Chemistry of foods"),
+    _("CPR training"),
+    _("Culinary arts"),
+    _("Early childhood development"),
+    _("Early childhood education"),
+    _("Family studies"),
+    _("Fashion and retail merchandising"),
+    _("Fashion construction"),
+    _("Home economics"),
+    _("Interior design"),
+    _("Nutrition"),
+    _("American Sign Language"),
+    _("Ancient Greek Language"),
+    _("Arabic Language"),
+    _("Chinese Language"),
+    _("French Language"),
+    _("German Language"),
+    _("Hebrew Language"),
+    _("Italian Language"),
+    _("Japanese Language"),
+    _("Korean Language"),
+    _("Latin Language"),
+    _("Portuguese Language"),
+    _("Russian Language"),
+    _("Spanish Language"),
+    _("Algebra 1"),
+    _("Algebra 2"),
+    _("Calculus"),
+    _("Computer math"),
+    _("Consumer math"),
+    _("Fundamentals of math"),
+    _("Geometry"),
+    _("Integrated math"),
+    _("Math applications"),
+    _("Multivariable calculus"),
+    _("Practical math"),
+    _("Pre-algebra"),
+    _("Pre-calculus"),
+    _("Probability"),
+    _("Quantitative literacy"),
+    _("Statistics"),
+    _("Trigonometry"),
+    _("Choir"),
+    _("Concert band"),
+    _("Dance"),
+    _("Drama"),
+    _("Guitar"),
+    _("Jazz band"),
+    _("Marching band"),
+    _("Music theory"),
+    _("Orchestra"),
+    _("Percussion"),
+    _("Piano"),
+    _("Theater technology"),
+    _("World music"),
+    _("Aerobics"),
+    _("Dance"),
+    _("Gymnastics"),
+    _("Health"),
+    _("Lifeguard training"),
+    _("Pilates"),
+    _("Racket sports"),
+    _("Specialized sports"),
+    _("Swimming"),
+    _("Weight training"),
+    _("Yoga"),
+    _("Agriculture"),
+    _("Astronomy"),
+    _("Biology"),
+    _("Botany"),
+    _("Chemistry"),
+    _("Earth science"),
+    _("Electronics"),
+    _("Environmental science"),
+    _("Environmental studies"),
+    _("Forensic science"),
+    _("Geology"),
+    _("Marine biology"),
+    _("Oceanography"),
+    _("Physical science"),
+    _("Physics"),
+    _("Zoology"),
+    _("Cultural anthropology"),
+    _("Current events"),
+    _("European history"),
+    _("Geography"),
+    _("Global studies"),
+    _("Human geography"),
+    _("International relations"),
+    _("Law"),
+    _("Macroeconomics"),
+    _("Microeconomics"),
+    _("Modern world studies"),
+    _("Physical anthropology"),
+    _("Political studies"),
+    _("Psychology"),
+    _("Religious studies"),
+    _("Sociology"),
+    _("National government"),
+    _("National history"),
+    _("Women's studies"),
+    _("World history"),
+    _("World politics"),
+    _("World religions"),
+    _("3-D art"),
+    _("Art history"),
+    _("Ceramics"),
+    _("Digital media"),
+    _("Drawing"),
+    _("Film production"),
+    _("Jewelry design"),
+    _("Painting"),
+    _("Photography"),
+    _("Printmaking"),
+    _("Sculpture"),
+    _("Auto body repair"),
+    _("Auto mechanics"),
+    _("Building construction"),
+    _("Computer-aided drafting"),
+    _("Cosmetology"),
+    _("Criminal justice"),
+    _("Driver education"),
+    _("Electronics"),
+    _("FFA (Future Farmers of America)"),
+    _("Fire science"),
+    _("Heating and cooling systems"),
+    _("Hospitality and tourism"),
+    _("JROTC (Junior Reserve Officers' Training Corps)"),
+    _("Metalworking"),
+    _("Networking"),
+    _("Plumbing"),
+    _("Production technology"),
+    _("Refrigeration fundamentals"),
+    _("Robotics"),
+    _("Woodworking"),
+]
+#   You said "{FLIRT_SAID_SAW}" Every time you saw your classmate, {name}, at school today.
+FLIRT_SAID_SAW = [
+    _("Ooh La La!"),
+    _("Why, hello there!"),
+]
+
+
+# Tertiary (University/Community College etc) Flirts:
+
+
+# Adult flirts
+# General
+# Workplace
+
+
+#------------------------------------------------------------------
+# Jobs lists for NPC
+
+# Teacher Jobs (for school faculty):
+
+# Primary School Teachers
+TEACHER_JOBS_PRIMARY = [
+
+]
+# Middle School Teachers
+TEACHER_JOBS_MIDDLE = [
+    _("Principal"),
+    _("Art Teacher"),
+    _("Careers Teacher"),
+    _("IT Teacher"),
+    _("Drama Teacher"),
+    _("English Teacher"),
+    _("Geography Teacher"),
+    _("History Teacher"),
+    _("Math Teacher"),
+    _("Music Teacher"),
+    _("P.E. Teacher"),
+    _("Science Teacher"),
+    _("Social Studies Teacher"),
+]
+# High School / Secondary Teachers
+TEACHER_JOBS_SECONDARY = [
+    _("Principal"),
+    _("Art Teacher"),
+    _("Careers Counsellor"),
+    _("Chemistry Teacher"),
+    _("Computer Science Teacher"),
+    _("Drama Teacher"),
+    _("Economics Teacher"),
+    _("English Teacher"),
+    _("Foreign Language"),
+    _("Math Teacher"),
+    _("Music Teacher"),
+    _("P.E. Teacher"),
+    _("Physics Teacher"),
+]
+# University teachers (for each degree)
+
+
+
+# World NPC Jobs (For dating app, love interest/find a date, parent's jobs, other {relation}'s jobs):
+# School Love Interest (ages under 18)
+JOBS_HIGH_SCHOOL = [
+    _("High School Dropout"),
+    _("High School Student"),
+    _("High School Student, Part-time Arcade Assistant"),
+    _("High School Student, Part-time Armpit Sniffer"),
+    _("High School Student, Part-time Barista"),
+    _("High School Student, Part-time Bike Shop Mechanic"),
+    _("High School Student, Part-time Boutique Associate"),
+    _("High School Student, Part-time Bowling Alley Assistant"),
+    _("High School Student, Part-time Camp Counsellor"),
+    _("High School Student, Part-time Car Wash Attendant"),
+    _("High School Student, Part-time Dance Instructor"),
+    _("High School Student, Part-time Doorman"),
+    _("High School Student, Part-time Fitness Instructor"),
+    _("High School Student, Part-time Gym Receptionist"),
+    _("High School Student, Part-time Hotel Concierge"),
+    _("High School Student, Part-time Ice Cream Scooper"),
+    _("High School Student, Part-time Lifeguard"),
+    _("High School Student, Part-time Mall Kiosk Worker"),
+    _("High School Student, Part-time Personal Trainer"),
+    _("High School Student, Part-time Usher"),
+    _("High School Student, Part-time Valet"),
+    _("High School Student, Part-time Window Cleaner"),
+]
+
+JOBS_NPC = [
+
+]
+#------------------------------------------------------------------
+# Jobs
+JOBS_FREELANCE_GIGS = [
+    _("Handyman"),
+    _("Tutor"),
+    _("Caretaker"),
+    _("Lawn Mower"),
+    _("Babysitter"),
+    _("Dog Walker"),
+    _("Pet Sitter"),
+]
+JOBS_PART_TIME = [
+    _("Arcade Assistant"),
+    _("Armpit Sniffer"),
+    _("Barista"),
+    _("Bike Shop Mechanic"),
+    _("Boutique Associate"),
+    _("Bowling Alley Assistant"),
+    _("Camp Counsellor"),
+    _("Car Wash Attendant"),
+    _("Dance Instructor"),
+    _("Doorman"),
+    _("Fitness Instructor"),
+    _("Gym Receptionist"),
+    _("Hotel Concierge"),
+    _("Ice Cream Scooper"),
+    _("Lifeguard"),
+    _("Mall Kiosk Worker"),
+    _("Personal Trainer"),
+    _("Usher"),
+    _("Valet"),
+    _("Window Cleaner"),
+]
+
+
 
 #------------------------------------------------------------------
 # Suck-ups
 # School suck-ups:
+#   You left a gift card for Massage Envy on your {teacher_job}, {teacher_name}'s desk.
 #   You let your teacher, {teacher_name}, know how much you enjoy being {his_her} pet.
 #   You passed out papers for your teacher, {teacher_name}.
 #   You volunteered to stay after school to clean your {teacher_job (history teacher etc)}, {teacher name}'s, classroom.
-#   You told {teacher_job}, {teacher_name}, that you truly hope {he_she} has an amazing weekend.
+#   You told your {teacher_job}, {teacher_name}, about some classmates who you know cheated on their homework
+#   You told your {teacher_job}, {teacher_name}, that you truly hope {he_she} has an amazing weekend.
 #   You added your {teacher_job}, {teacher_name}, on Snapchat.
 #   You drew a portrait of your {teacher_job}, {teacher_name}, and gave it to {him_her}.
 
+#------------------------------------------------------------------
+# Sexualities
+
+SEXUALITY = [
+    _("Straight"),
+    _("Bi"),
+    _("Gay"),
+]
 
 #------------------------------------------------------------------
 # Identity Genders
@@ -173,6 +544,239 @@ IDENTITY_GENDER_MALE = [
     _("Non-Binary"),
     _("Transgender Female"),
 ]
+
+#------------------------------------------------------------------
+# Social media
+
+# Social media posts:
+
+# Instagram
+# Challenges = 'You recorded a video of yourself doing the '{challenges}' and posted it on Instagram. 
+CHALLENGES = [
+    _("Ice Bucket Challenge"),
+    _(""),
+]
+# Dance videos = 'You recorded a video of yourself {dance_video_dances} to {dance_video_songs} and posted it to Instagram.
+DANCE_VIDEO_DANCES = [
+    _("tap dancing"),
+]
+DANCE_VIDEO_SONGS = [
+    _("a P!nk song"),
+]
+# Family photos = 'You posted {family_photos} family photo on Instagram.
+FAMILY_PHOTOS = [
+    _("a cute"),
+    _("an embarrasing"),
+]
+# Food photos = 'You posted a picture of {food_photos} on Instagram.
+FOOD_PHOTOS = [
+    _("a photo of a cake you found on the internet"),
+    _("your nasty snack"),
+]
+# Memes = 'You shared {memes} meme on Instagram.
+MEMES = [
+    _("a ridiculous"),
+]
+# Motivational Quotes = 'You posted {quotes_adjective} quote about {quotes_topic}
+QUOTES_ADJECTIVE = [
+    _("an inspirational"),
+]
+QUOTES_TOPIC = [
+    _("relationships"),
+]
+# Political Video = 'You posted on Instagram {political_videos}.
+POLITICAL_VIDEOS = [
+    _("promoting your political ideology"),
+    _("campaigning for your political ideology"),
+    _("supporting your favourite political candidate"),
+]
+# Poll = 'You posted a poll on Instagram asking your followers "{polls}".
+POLLS = [
+    _("Which social media platform is the best?"),
+    _("What is the best song?"),
+]
+# Random Video = 'You recorded {random_video_adjectives} video of {random_video_topics} and posted it on Instagram.
+RANDOM_VIDEO_ADJECTIVES = [
+    _("an outlandish"),
+]
+RANDOM_VIDEO_TOPICS = [
+    _("yourself talking with accents"),
+]
+# Reshare Celebrity = 'You shared {reshare_celebrity_media} that {celebrity} posted on Instagram. Use a random choice between all the celebrity name lists in place of {celebrity}
+RESHARE_CELEBRITY_MEDIA = [
+    _("a meme"),
+    _("a photo"),
+    _("a picture"),
+    _("a reel"),
+    _("a story"),
+    _("a video"),
+]
+# Reshare Friend = 'You shared {reshare_friend_media} that your friend posted on Instagram. 
+RESHARE_FRIEND_MEDIA = [
+    _("a meme"),
+    _("a photo"),
+    _("a picture"),
+    _("a reel"),
+    _("a story"),
+    _("a video"),
+]
+# Reshare Celebrity = 'You shared {reshare_musician_media} that {celebrity_musician} posted on Instagram. Use a random choice between the {celebrity_musician_male}, {celebrity_musician_female}, and {celebrity_band} lists in the celebrity section
+RESHARE_MUSICIAN_MEDIA = [
+    _("a meme"),
+    _("a photo"),
+    _("a picture"),
+    _("a recording session"),
+    _("a reel"),
+    _("a song"),
+    _("a story"),
+    _("a video"),
+    _("their latest album cover"),  
+]
+# Selfies = 'You posted {selfies} on Instagram.
+SELFIES = [
+    _("a duck face selfie"),
+    _("a selfie pulling a funny face"),
+    _("a professional looking selfie"),
+]
+# Sexy Pics = 'You posted {sexy_pics_male} on Instagram.
+SEXY_PICS_MALE = [
+    _("a risqué selfie of yourself"),
+    _("a photo of yourself clearly showing your muscles"),
+    _("a selfie gazing through the lens dreamily"),
+    _("a gym selfie while working out"),
+]
+# Sexy Pics = 'You posted {sexy_pics_female} on Instagram.
+SEXY_PICS_FEMALE = [
+    _("a risqué selfie of yourself"),
+    _("a side-on mirror selfie emphasising your tight dress"),
+    _("an over-the-shoulder bikini selfie showing your bum in the background"),
+    _("a gym selfie while working out"),
+]
+# Skit Video = 'You {and your friend made a slapstick skit} video and posted it on Instagram.
+SKIT_VIDEOS = [
+    _("and your friend made a slapstick skit"),
+]
+# Social Justice Video = 'You posted on Instagram {social_justice_videos}.
+SOCIAL_JUSTICE_VIDEOS = [
+    _("supporting social justice"),
+]
+# Stories = 'You posted a story {social_stories} on Instagram.
+SOCIAL_STORIES = [
+    _("about your weird day"),
+]
+# Thirst Traps = 'You posted a photo on Instagram of yourself {thirst_traps}.
+THIRST_TRAPS = [
+    _("wearing just a t-shirt while eating a cucumber"),
+    _("wearing a thong while eating a cucumber"),
+]
+# Your Travels = 'You posted {social_travel_media} {social_travel} on Instagram
+SOCIAL_TRAVEL_MEDIA = [
+    _("some magnificent art photos"),
+    _("a stunning night video"),
+    _("a video of yourself walking through markets"),
+]
+SOCIAL_TRAVEL = [
+    _("from your last vacation"),
+    _("from your trip to Paris"),
+    _("you took on your Hawaiian trip"),
+]
+# Vlog = 'You recorded {vlog} and posted it on Instagram.
+VLOG_POSTS = [
+    _("your daily life shenanigans as a vlog"), 
+    _("a vlog of your morning routine"),
+]
+
+# Social media handles: (for when 'someone called {@offensivebeavis} replied to your post, saying {you look sinister})
+
+SOCIAL_HANDLES = [
+   _("@2OldForThis"),
+   _("@TheTroubleMakers"),
+   _("@joe_not_exotic"),
+   _("@shaquille.oatmeal"),
+   _("@RenegadeMaster"),
+   _("@viewer_discretion_advised"),
+   _("@FunnyCatVidz"),
+   _("@CharliDamelioForPresident"),
+   _("@everythingbagelwithvegancreamcheese"),
+   _("@name_is_in_use"),
+   _("@i_dont_dance"),
+   _("@builtdifferent"),
+   _("@shadowbanned"),
+   _("@not_my_idea"),
+   _("@down_with_the_kids"),
+   _("@amicoolyet"),
+   _("@Addison_Rae_Of_Sunshine"),
+   _("@im_an_accountant"),
+   _("@IYELLALOT"),
+   _("@FrostedCupcake"),
+   _("@Avocadorable"),
+   _("@MrsDracoMalfoy"),
+   _("@MrsChalamet"),
+   _("@MrsStyles"),
+   _("@CourtesyFlush"),
+   _("@MomsSpaghetti"),
+   _("@just_a_teen"),
+   _("@GenZWarrior"),
+   _("@what_does_this_button_do"),
+   _("@not_funny"),
+   _("@DestinysGrandchild"),
+   _("@champain"),
+   _("@AspiringInfluencer"),
+   _("@ClassyBadassy"),
+   _("@severusvape"),
+   _("@RuleFollower"),
+   _("@Lizzos_Flute"),
+   _("@urcutejeans"),
+   _("@guess_who"),
+   _("@insert_name_here"),
+   _("@InstagramM0del"),
+   _("@baeconandeggz"),
+   _("@look_mom"),
+   _("@botaccount"),
+   _("@QuarQueen"),
+   _("@Reese_Withoutaspoon"),
+   _("@ReeseWithafork"),
+   _("@ImageNotUploaded"),
+   _("@No_Feet_Pics"),
+   _("@wherearethetomatoes"),
+   _("@TequilaMockingbird"),
+   _("@the_other_name_were_taken"),
+   _("@not_my_first_choice"),
+   _("@PaintMeLikeOneOfYourFrenchGirls"),
+   _("@Hot_Name_Here"),
+   _("@InstagramHubby"),
+   _("@BasicBeach"),
+   _("@thot_patrol"),
+   _("@my_anaconda_does"),
+   _("@kim_chi"),
+   _("@username_copied"),
+   _("@Ariana_Grandes_Ponytail"),
+   _("@definitely_not_an_athlete"),
+   _("@will_pay_extra_for_guac"),
+   _("@not_my_1st_rodeo"),
+   _("@coolshirtbra"),
+   _("@DMmeforcompliments"),
+   _("@baecon"),
+   _("@boneappleteeth"),
+   _("@valid8me"),
+   _("@personallyvictimizedbyreginageorge"),
+   _("@been_there_done_that"),
+   _("@hi_future_employers"),
+   _("@chalametbmybae"),
+   _("@NorthWestsAssistant"),
+   _("@hotgirlbummer"),
+]
+
+# Negative social responses: (E.g. 'someone called {@offensivebeavis} replied to your post, saying {you look sinister})
+NEGATIVE_SOCIAL_RESPONSES = [
+    _("you look sinister"),
+    _("your thoughts are absurd"),
+]
+
+# If you choose to meet someone from social media and they agree
+# E.g. {@offensivebeavis} has agreed to meet you at {a campsite}; use random choice {urban_locations}, {rural_locations}, {natural_locations} lists in place of {a campsite}
+
+
 
 
 #------------------------------------------------------------------
@@ -248,6 +852,32 @@ IDENTITY_GENDER_MALE = [
 # Track Team
 # Video Games Club
 # Volleyball Team
+# Yearbook Club
+
+
+# High School activities:
+
+# Baking Club
+# Basketball Team
+# Cheerleading Team
+# Computer Science Club
+# Concert Band
+# Cross Country Team
+# Diving Team
+# Drama Club
+# Golf Team
+# Gymnastics Team
+# Handball Team
+# Skateboarding Club
+# Soccer Team
+# Student Council
+# Swim Team
+# Tennis Team
+# Track Team
+# Tutoring Club
+# Video Games Club
+# Volleyball Team
+# Woodworkers Club
 # Yearbook Club
 
 #------------------------------------------------------------------
@@ -658,6 +1288,20 @@ SPEND_TIME_TEEN = [
     _("yodelling"),
     _("deep sea fishing"),
     _("to a carnival"),
+    _("to ding dong ditch the neighbours"),
+    _("to parkour hardcore"),
+    _("to watch a random trial at the municipal court"),
+    _("to a rugby game"),
+    _("to make selfies for Instagram"),
+    _("to the museum"),
+    _("to walk along a scenic vista"),
+    _("to watch toy unboxing videos"),
+    _("to fly a drone"),
+    _("to make a safety evacuation map"),
+    _("horseback riding in the countryside"),
+    _("to dinner"),
+    _("to a puppet-making seminar"),
+    _("to the symphony"),
 ]
 
 # E.g. You {spend_time_pet_x)} {pet_type}, {pet_name} = You listened to music with your cat, Pip.
@@ -1537,7 +2181,9 @@ CELEBRITY_FEMALE_WRITER = [
     _("Shay Mitchell"),
     _("Tyra Banks"),
 ]
-
+CELEBRITY_BAND = [
+    _("The Backstreet Boys"),
+]
 
 # List of Urban locations (a park, a bank etc.) called after 'to' or 'at' "we went to {urban_location}", "we spent time at {urban_location}"
 # terms like 'downtown' arent in this list. you cant write 'spent time at downtown' over 'spent time downtown', or 'went to downtown' over 'went downtown'
@@ -1673,6 +2319,7 @@ URBAN_LOCATION = [
 	_("a river"),
 	_("a school"),
 	_("the sewers"),
+    _("a shoe store"),
 	_("a shopping centre"),
 	_("a shopping mall"),
 	_("a shop"),
@@ -1772,6 +2419,7 @@ URBAN_MOVEMENT = [
 
 RURAL_LOCATION = [
 	_("a barn"),
+    _("a campsite"),
 	_("a country lane"),
 	_("a dam"),
 	_("a farm"),
@@ -1779,6 +2427,7 @@ RURAL_LOCATION = [
 	_("a fish farm"),
 	_("a paddock"),
 	_("a hay shed"),
+    _("a wildlife preserve"),
 	_("a windmill"),
 ]
 
