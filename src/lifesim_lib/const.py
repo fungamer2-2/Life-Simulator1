@@ -174,7 +174,9 @@ FLIRT_VERB_NOTE = [
 
 
 # You stared at your classmate, {name}, for {FLIRT_STARE_TIME_MIDDLE_SCHOOL} straight minutes today during {FLIRT_STARE_CLASSES_MIDDLE_SCHOOL} class, just so she would notice that you are interested in {him_her}.
-FLIRT_STARE_TIME_MIDDLE_SCHOOL = randint(5, 25)
+#FLIRT_STARE_TIME_MIDDLE_SCHOOL = randint(5, 25)
+# ^ TODO: Move this ^ out of const.py into the string format itself so the number isn't the same if generated multiple times while the game is open
+
 # LIST ORDERED: Alphabetical
 FLIRT_STARE_CLASSES_MIDDLE_SCHOOL = [
     _("Art"),
@@ -203,7 +205,7 @@ FLIRT_STARE_CLASSES_MIDDLE_SCHOOL = [
 
 
 # You stared at your classmate, {name}, for {FLIRT_STARE_TIME_HIGH_SCHOOL} straight minutes today during {FLIRT_STARE_CLASSES_HIGH_SCHOOL} class, just so she would notice that you are interested in {him_her}.
-FLIRT_STARE_TIME_HIGH_SCHOOL = randint(10, 55)
+#FLIRT_STARE_TIME_HIGH_SCHOOL = randint(10, 55)
 # LIST ORDERED: Business > CompSci/IT > English > Family/Consumer Science > Languages > Math > Performing Arts > Physical Ed > Science > Social Studies > Visual Arts > Vocational Ed
 FLIRT_STARE_CLASSES_HIGH_SCHOOL = [
     _("Accounting"),

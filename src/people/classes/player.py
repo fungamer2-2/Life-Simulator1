@@ -589,49 +589,46 @@ class Player(Person):
 			print(_("You are starting high school"))
 			self.change_smarts(randint(1, 4) + 4 * self.has_trait("GENIUS"))
 			self.calc_grades(randint(-8, 8))
-		if (
-			1 <= self.marital_status <= 2:
-			and self.partner.relationship < randint(25, 35)
-			and randint(1, 3) == 1
-		):
-			name = self.partner.name_accusative()
-			print(_("Your {partner} wants to break up with you.").format(partner=name))
-			print(_("What will you do?"))
-			him_her = self.partner.him_her()
-			choices = choice_input(_("Wish {him_her} well"), _("Beg {him_her} to stay"))
-			self.change_happiness(-randint(15, 18))
-			if choice == 1:
-				print(_("You wished {self.partner.name} the best"))
-				self.lose_partner()
-			elif choice == 2:
-				print(_("You begged {self.partner.name} to stay with you."))
-				he_she = self.partner.he_she().capitalize()
-				if randint(1, 100) > partner.willpower:
-					print(_("{he_she} decided to stay with you."))
-				else:
-					print(_("{he_she} dumped you anyway."))
+		if 1 <= self.marital_status <= 2:
+			if self.partner.relationship < randint(25, 35) and randint(1, 3) == 1:
+				name = self.partner.name_accusative()
+				print(_("Your {partner} wants to break up with you.").format(partner=name))
+				print(_("What will you do?"))
+				him_her = self.partner.him_her()
+				choices = choice_input(_("Wish {him_her} well"), _("Beg {him_her} to stay"))
+				self.change_happiness(-randint(15, 18))
+				if choice == 1:
+					print(_("You wished {self.partner.name} the best"))
 					self.lose_partner()
-					self.change_happiness(-randint(10, 20))
+				elif choice == 2:
+					print(_("You begged {self.partner.name} to stay with you."))
+					he_she = self.partner.he_she().capitalize()
+					if randint(1, 100) > partner.willpower:
+						display_event(_("{he_she} decided to stay with you."))
+					else:
+						display_event(_("{he_she} dumped you anyway."))
+						self.lose_partner()
+						self.change_happiness(-randint(10, 20))
 		elif self.marital_status == 3:
 			if self.partner.relationship <= randint(15, 30) and randint(1, 7) == 1:
 				name = self.partner.name_accusative()
-			print(_("Your {partner} wants a divorce.").format(partner=name))
-			print(_("What will you do?"))
-			him_her = self.partner.him_her()
-			choices = choice_input(_("Wish {him_her} well"), _("Beg {him_her} to stay"))
-			self.change_happiness(-randint(15, 18))
-			if choice == 1:
-				print(_("You honored {self.partner.name}'s request for a divorce."))
-				self.divorce()
-			elif choice == 2:
-				print(_("You begged {self.partner.name} to stay with you."))
-				he_she = self.partner.he_she().capitalize()
-				if min(randint(1, 100) for _ in range(2)) > partner.willpower:
-					print(_("{he_she} decided to stay with you."))
-				else:
-					display_event(_("{he_she} insisted on getting a divorce."))
-					self.change_happiness(-randint(15, 22))
+				print(_("Your {partner} wants a divorce.").format(partner=name))
+				print(_("What will you do?"))
+				him_her = self.partner.him_her()
+				choices = choice_input(_("Wish {him_her} well"), _("Beg {him_her} to stay"))
+				self.change_happiness(-randint(15, 18))
+				if choice == 1:
+					print(_("You honored {self.partner.name}'s request for a divorce."))
 					self.divorce()
+				elif choice == 2:
+					print(_("You begged {self.partner.name} to stay with you."))
+					he_she = self.partner.he_she().capitalize()
+					if min(randint(1, 100) for _ in range(2)) > partner.willpower:
+						print(_("{he_she} decided to stay with you."))
+					else:
+						display_event(_("{he_she} insisted on getting a divorce."))
+						self.change_happiness(-randint(15, 22))
+						self.divorce()
 		if self.age >= 18 and self.age < randint(42, 70) and self.marital_status == 0 and randint(1, 16) == 1:
 			partner = self.generate_partner()
 			if partner.compatibility_check(self):
