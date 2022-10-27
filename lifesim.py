@@ -16,8 +16,6 @@ while True:
 	clear_screen()
 	try:
 		player = start_menu()
-		from src.lifesim_lib.lifesim_lib import *
-		player.print_traits()
 		print(_("Age {age}").format(age=player.age))
 		while True:
 			main_menu(player)
