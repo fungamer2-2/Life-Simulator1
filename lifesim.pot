@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-10-26 14:58-0400\n"
+"POT-Creation-Date: 2022-10-27 15:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: lifesim.py:21 src/people/classes/player.py:242
+#: lifesim.py:19 src/people/classes/player.py:262
 msgid "Age {age}"
 msgstr ""
 
-#: lifesim.py:26
+#: lifesim.py:24
 msgid "Would you like to start a new life?"
 msgstr ""
 
@@ -32,2815 +32,6977 @@ msgid "High Blood Pressure"
 msgstr ""
 
 #: src/lifesim_lib/const.py:29
-msgid "a bubbly personality"
+msgid "a boss"
 msgstr ""
 
 #: src/lifesim_lib/const.py:30
-msgid "a champion"
+msgid "a bubbly personality"
 msgstr ""
 
 #: src/lifesim_lib/const.py:31
-msgid "a gem"
+msgid "a brilliant mind"
 msgstr ""
 
 #: src/lifesim_lib/const.py:32
-msgid "a genius"
+msgid "a champion"
 msgstr ""
 
 #: src/lifesim_lib/const.py:33
-msgid "a jewel"
+msgid "a gem"
 msgstr ""
 
 #: src/lifesim_lib/const.py:34
-msgid "a legend"
+msgid "a genius"
 msgstr ""
 
 #: src/lifesim_lib/const.py:35
-msgid "a player"
+msgid "a jewel"
 msgstr ""
 
 #: src/lifesim_lib/const.py:36
-msgid "a revolutionary"
+msgid "a legend"
 msgstr ""
 
 #: src/lifesim_lib/const.py:37
-msgid "a smart cookie"
+msgid "a player"
 msgstr ""
 
 #: src/lifesim_lib/const.py:38
-msgid "a treasure"
+msgid "a revolutionary"
 msgstr ""
 
 #: src/lifesim_lib/const.py:39
-msgid "a winner"
+msgid "a smart cookie"
 msgstr ""
 
 #: src/lifesim_lib/const.py:40
-msgid "a wizard"
+msgid "a treasure"
 msgstr ""
 
 #: src/lifesim_lib/const.py:41
-msgid "a visionary"
+msgid "a winner"
 msgstr ""
 
 #: src/lifesim_lib/const.py:42
-msgid "adorable"
+msgid "a wizard"
 msgstr ""
 
 #: src/lifesim_lib/const.py:43
-msgid "admirable"
+msgid "a VIP"
 msgstr ""
 
 #: src/lifesim_lib/const.py:44
-msgid "an OG"
+msgid "a visionary"
 msgstr ""
 
 #: src/lifesim_lib/const.py:45
-msgid "brave"
+msgid "adorable"
 msgstr ""
 
 #: src/lifesim_lib/const.py:46
-msgid "bright"
+msgid "admirable"
 msgstr ""
 
 #: src/lifesim_lib/const.py:47
-msgid "brilliant"
+msgid "an OG"
 msgstr ""
 
 #: src/lifesim_lib/const.py:48
-msgid "charming"
+msgid "an eager beaver"
 msgstr ""
 
 #: src/lifesim_lib/const.py:49
-msgid "clever"
+msgid "beautiful"
 msgstr ""
 
 #: src/lifesim_lib/const.py:50
-msgid "cool"
+msgid "brave"
 msgstr ""
 
 #: src/lifesim_lib/const.py:51
-msgid "courageous"
+msgid "bright"
 msgstr ""
 
 #: src/lifesim_lib/const.py:52
-msgid "delightful"
+msgid "brilliant"
 msgstr ""
 
 #: src/lifesim_lib/const.py:53
-msgid "dope"
+msgid "charming"
 msgstr ""
 
 #: src/lifesim_lib/const.py:54
-msgid "elite"
+msgid "clever"
 msgstr ""
 
 #: src/lifesim_lib/const.py:55
-msgid "fascinating"
+msgid "cool"
 msgstr ""
 
 #: src/lifesim_lib/const.py:56
-msgid "fearless"
+msgid "courageous"
 msgstr ""
 
 #: src/lifesim_lib/const.py:57
-msgid "fresh"
+msgid "cute"
 msgstr ""
 
 #: src/lifesim_lib/const.py:58
-msgid "gorgeous"
+msgid "dashing"
 msgstr ""
 
 #: src/lifesim_lib/const.py:59
-msgid "golden"
+msgid "delightful"
 msgstr ""
 
 #: src/lifesim_lib/const.py:60
-msgid "groovy"
+msgid "dope"
 msgstr ""
 
 #: src/lifesim_lib/const.py:61
-msgid "inspiring"
+msgid "elite"
 msgstr ""
 
 #: src/lifesim_lib/const.py:62
-msgid "intelligent"
+msgid "fascinating"
 msgstr ""
 
 #: src/lifesim_lib/const.py:63
-msgid "magnificent"
+msgid "fearless"
 msgstr ""
 
 #: src/lifesim_lib/const.py:64
-msgid "motivating"
+msgid "fine"
 msgstr ""
 
 #: src/lifesim_lib/const.py:65
-msgid "neat"
+msgid "fresh"
 msgstr ""
 
 #: src/lifesim_lib/const.py:66
-msgid "nifty"
+msgid "gorgeous"
 msgstr ""
 
 #: src/lifesim_lib/const.py:67
-msgid "one-of-a-kind"
+msgid "golden"
 msgstr ""
 
 #: src/lifesim_lib/const.py:68
-msgid "a perfect 10"
+msgid "groovy"
 msgstr ""
 
 #: src/lifesim_lib/const.py:69
-msgid "phenomenal"
+msgid "inspiring"
 msgstr ""
 
 #: src/lifesim_lib/const.py:70
-msgid "rad"
+msgid "intelligent"
 msgstr ""
 
 #: src/lifesim_lib/const.py:71
-msgid "smart"
+msgid "legendary"
 msgstr ""
 
 #: src/lifesim_lib/const.py:72
-msgid "spectatular"
+msgid "lionhearted"
 msgstr ""
 
 #: src/lifesim_lib/const.py:73
-msgid "stellar"
+msgid "magnetic"
 msgstr ""
 
 #: src/lifesim_lib/const.py:74
-msgid "strong"
+msgid "magnificent"
 msgstr ""
 
 #: src/lifesim_lib/const.py:75
-msgid "stunning"
+msgid "motivating"
 msgstr ""
 
 #: src/lifesim_lib/const.py:76
-msgid "stylish"
+msgid "neat"
 msgstr ""
 
 #: src/lifesim_lib/const.py:77
-msgid "swell"
+msgid "nifty"
 msgstr ""
 
 #: src/lifesim_lib/const.py:78
-msgid "the best"
+msgid "one-of-a-kind"
 msgstr ""
 
 #: src/lifesim_lib/const.py:79
-msgid "the greatest"
+msgid "a perfect 10"
 msgstr ""
 
 #: src/lifesim_lib/const.py:80
-msgid "the life of the party"
+msgid "phenomenal"
 msgstr ""
 
 #: src/lifesim_lib/const.py:81
-msgid "unparalled"
+msgid "rad"
 msgstr ""
 
 #: src/lifesim_lib/const.py:82
-msgid "wise"
+msgid "savage"
 msgstr ""
 
 #: src/lifesim_lib/const.py:83
-msgid "wonderful"
+msgid "smart"
+msgstr ""
+
+#: src/lifesim_lib/const.py:84
+msgid "spectatular"
+msgstr ""
+
+#: src/lifesim_lib/const.py:85
+msgid "stellar"
+msgstr ""
+
+#: src/lifesim_lib/const.py:86
+msgid "strong"
+msgstr ""
+
+#: src/lifesim_lib/const.py:87
+msgid "stunning"
+msgstr ""
+
+#: src/lifesim_lib/const.py:88
+msgid "stylish"
+msgstr ""
+
+#: src/lifesim_lib/const.py:89
+msgid "swell"
+msgstr ""
+
+#: src/lifesim_lib/const.py:90
+msgid "the best"
+msgstr ""
+
+#: src/lifesim_lib/const.py:91
+msgid "the GOAT"
+msgstr ""
+
+#: src/lifesim_lib/const.py:92
+msgid "the greatest"
+msgstr ""
+
+#: src/lifesim_lib/const.py:93
+msgid "the life of the party"
+msgstr ""
+
+#: src/lifesim_lib/const.py:94
+msgid "unparalled"
 msgstr ""
 
 #: src/lifesim_lib/const.py:95
-msgid "the hierarchy of licorice"
+msgid "wise"
 msgstr ""
 
 #: src/lifesim_lib/const.py:96
-msgid "which is better, Star Wars or Star Trek"
+msgid "wonderful"
 msgstr ""
 
 #: src/lifesim_lib/const.py:97
-msgid "which is better, Coke or Pepsi"
+msgid "world-class"
 msgstr ""
 
-#: src/lifesim_lib/const.py:98
-msgid "which is better, Lord of the Rings or Harry Potter"
+#: src/lifesim_lib/const.py:127
+msgid "Carlton"
 msgstr ""
 
-#: src/lifesim_lib/const.py:99
-msgid "who is better, the Red Sox or Yankees"
+#: src/lifesim_lib/const.py:128
+msgid "Dejo"
 msgstr ""
 
-#: src/lifesim_lib/const.py:100
-msgid "who will win the Monaco Grand Prix"
+#: src/lifesim_lib/const.py:129
+msgid "Lean"
 msgstr ""
 
-#: src/lifesim_lib/const.py:101
-msgid "how it's illegal to masturbate in Indonesia"
+#: src/lifesim_lib/const.py:130
+msgid "Moonwalk"
 msgstr ""
 
-#: src/lifesim_lib/const.py:102
-msgid "whether you would rather live without music or television"
+#: src/lifesim_lib/const.py:131
+msgid "Robot"
 msgstr ""
 
-#: src/lifesim_lib/const.py:103
-msgid "why mannequins have erect nipples"
+#: src/lifesim_lib/const.py:132
+msgid "Running Man"
 msgstr ""
 
-#: src/lifesim_lib/const.py:104
-msgid "Angleina Jolie's lips"
+#: src/lifesim_lib/const.py:133
+msgid "Single Ladies"
 msgstr ""
 
-#: src/lifesim_lib/const.py:107
-msgid "which super power you would most like to have"
+#: src/lifesim_lib/const.py:134
+msgid "Soulja Boy"
 msgstr ""
 
-#: src/lifesim_lib/const.py:108
-msgid "which super power they would most like to have"
+#: src/lifesim_lib/const.py:135
+msgid "Shoot"
 msgstr ""
 
-#: src/lifesim_lib/const.py:109
-msgid "what they want to be when they grow up"
-msgstr ""
-
-#: src/lifesim_lib/const.py:110
-msgid "how much you hate vegetables"
-msgstr ""
-
-#: src/lifesim_lib/const.py:111
-msgid "how scary the toilet is when it gets flushed"
-msgstr ""
-
-#: src/lifesim_lib/const.py:112
-msgid "why the sky is blue"
-msgstr ""
-
-#: src/lifesim_lib/const.py:113
-msgid "where water goes when the toilet gets flushed"
-msgstr ""
-
-#: src/lifesim_lib/const.py:114 src/lifesim_lib/const.py:359
-msgid "your favourite movie character"
-msgstr ""
-
-#: src/lifesim_lib/const.py:117 src/lifesim_lib/const.py:120
-#: src/lifesim_lib/const.py:123 src/lifesim_lib/const.py:126
-#: src/lifesim_lib/const.py:129 src/lifesim_lib/const.py:132
-#: src/lifesim_lib/const.py:351 src/lifesim_lib/const.py:364
-#: src/lifesim_lib/const.py:941
-msgid ""
-msgstr ""
-
-#: src/lifesim_lib/const.py:138
-msgid "why cats are better than dogs"
-msgstr ""
-
-#: src/lifesim_lib/const.py:139
-msgid "why dogs are better than cats"
+#: src/lifesim_lib/const.py:139 src/lifesim_lib/const.py:162
+msgid "an awkward"
 msgstr ""
 
 #: src/lifesim_lib/const.py:140
-msgid "the Russia-Ukraine War"
+msgid "a confident"
 msgstr ""
 
 #: src/lifesim_lib/const.py:141
-msgid "High Fuel Prices"
+msgid "an enamouring"
 msgstr ""
 
 #: src/lifesim_lib/const.py:142
-msgid "the Metaverse"
+msgid "a shy"
 msgstr ""
 
 #: src/lifesim_lib/const.py:143
-msgid "the Economic crisis of Sri Lanka"
-msgstr ""
-
-#: src/lifesim_lib/const.py:144
-msgid "Moonlighting"
-msgstr ""
-
-#: src/lifesim_lib/const.py:145
-msgid "the Pros and Cons of working from home"
-msgstr ""
-
-#: src/lifesim_lib/const.py:146
-msgid "whether people should invest in cryptocurrency"
+msgid "a smooth"
 msgstr ""
 
 #: src/lifesim_lib/const.py:147
-msgid "the Biomedical waste crisis"
+msgid "at lunch"
 msgstr ""
 
 #: src/lifesim_lib/const.py:148
-msgid "the impact of 5G on the global economy"
+msgid "by the pool"
 msgstr ""
 
 #: src/lifesim_lib/const.py:149
-msgid "how to prevent the next pandemic"
+msgid "by the sports fields"
 msgstr ""
 
 #: src/lifesim_lib/const.py:150
-msgid "the impact of COVID-19 on the global economy"
+msgid "during assembly"
 msgstr ""
 
 #: src/lifesim_lib/const.py:151
-msgid "the pros and cons of block chain technology"
+msgid "in the gym"
 msgstr ""
 
 #: src/lifesim_lib/const.py:152
-msgid "the role of social media in international politics"
+msgid "in the library"
 msgstr ""
 
 #: src/lifesim_lib/const.py:153
-msgid "how to end the threat of nuclear war"
+msgid "in english class"
 msgstr ""
 
 #: src/lifesim_lib/const.py:154
-msgid "the impact of COVID-19 on the education sector"
+msgid "in math class"
 msgstr ""
 
 #: src/lifesim_lib/const.py:155
-msgid "Taliban rule in Afghanistan"
+msgid "in science class"
 msgstr ""
 
 #: src/lifesim_lib/const.py:156
-msgid "the rise of the gig economy"
+msgid "on the way home from school"
 msgstr ""
 
 #: src/lifesim_lib/const.py:157
-msgid "the harms of passive smoking"
-msgstr ""
-
-#: src/lifesim_lib/const.py:158
-msgid "the advantages and disadvantages of having a credit card"
-msgstr ""
-
-#: src/lifesim_lib/const.py:159
-msgid "whether software should be free for everyone"
-msgstr ""
-
-#: src/lifesim_lib/const.py:160
-msgid "whether gambling should be allowed from the age of 16"
+msgid "on the way to school"
 msgstr ""
 
 #: src/lifesim_lib/const.py:161
-msgid "problems caused by the economic boycott in Cuba"
-msgstr ""
-
-#: src/lifesim_lib/const.py:162
-msgid "how international trade barriers work"
+msgid "a"
 msgstr ""
 
 #: src/lifesim_lib/const.py:163
-msgid "how the United Nations is based on diplomacy and strengthening relationships"
+msgid "a charmingly funny"
 msgstr ""
 
 #: src/lifesim_lib/const.py:164
-msgid "whether or not public schools are safe enough"
-msgstr ""
-
-#: src/lifesim_lib/const.py:165
-msgid "whether it is necessary to hold value in what you argue"
-msgstr ""
-
-#: src/lifesim_lib/const.py:166
-msgid "why drink driving is dangerous"
-msgstr ""
-
-#: src/lifesim_lib/const.py:167
-msgid "how India became such a large milk producer"
-msgstr ""
-
-#: src/lifesim_lib/const.py:168
-msgid "how to make money with recycling"
-msgstr ""
-
-#: src/lifesim_lib/const.py:169
-msgid "the decreasing productivity of the Japanese workforce"
-msgstr ""
-
-#: src/lifesim_lib/const.py:170
-msgid "a business model to help health-conscious customers"
-msgstr ""
-
-#: src/lifesim_lib/const.py:171
-msgid "what the best technologies are to safeguard the right of free speech on the internet"
-msgstr ""
-
-#: src/lifesim_lib/const.py:174
-msgid "what the best technologies are to safeguard the right of privacy on the internet"
-msgstr ""
-
-#: src/lifesim_lib/const.py:177
-msgid "how to check for the signs of burnout"
-msgstr ""
-
-#: src/lifesim_lib/const.py:178
-msgid "how to overcome the coal crisis in India"
-msgstr ""
-
-#: src/lifesim_lib/const.py:179
-msgid "the causes of bullying in schools"
-msgstr ""
-
-#: src/lifesim_lib/const.py:180
-msgid "why we should have a minimum wage"
-msgstr ""
-
-#: src/lifesim_lib/const.py:181
-msgid "whether universal basic income is a good idea"
+msgid "a flirtatious"
 msgstr ""
 
 #: src/lifesim_lib/const.py:182
-msgid "the leadership changes needed in our country"
+msgid "Art"
 msgstr ""
 
 #: src/lifesim_lib/const.py:183
-msgid "whether empowering women is the solution to violence against women"
+msgid "Careers"
 msgstr ""
 
 #: src/lifesim_lib/const.py:184
-msgid "the effects of communalism on social cohesion"
+msgid "Computer Science"
 msgstr ""
 
-#: src/lifesim_lib/const.py:185
-msgid "whether we're becoming too sensitive in society"
+#: src/lifesim_lib/const.py:185 src/lifesim_lib/const.py:297
+msgid "Drama"
 msgstr ""
 
 #: src/lifesim_lib/const.py:186
-msgid "lessons for the world from the COVID-19 pandemic"
+msgid "English"
 msgstr ""
 
-#: src/lifesim_lib/const.py:187
-msgid "whether crime rates increase because of unemployment"
+#: src/lifesim_lib/const.py:187 src/lifesim_lib/const.py:337
+msgid "Geography"
 msgstr ""
 
 #: src/lifesim_lib/const.py:188
-msgid "causes of poverty around the world"
+msgid "History"
 msgstr ""
 
 #: src/lifesim_lib/const.py:189
-msgid "the effects of the Internet of Things on our lives"
+msgid "Math"
 msgstr ""
 
 #: src/lifesim_lib/const.py:190
-msgid "whether drug abuse is rampant among teenagers"
+msgid "Music"
 msgstr ""
 
 #: src/lifesim_lib/const.py:191
-msgid "whether anemia effects urban society"
+msgid "Physical Eduacation"
 msgstr ""
 
 #: src/lifesim_lib/const.py:192
-msgid "gender equality in the workplace"
+msgid "Science"
 msgstr ""
 
 #: src/lifesim_lib/const.py:193
-msgid "whether the wealthy should be taxed more"
-msgstr ""
-
-#: src/lifesim_lib/const.py:194
-msgid "whether the poor should be given more assistance"
-msgstr ""
-
-#: src/lifesim_lib/const.py:195
-msgid "whether it is possible to maintain a work-life balance"
-msgstr ""
-
-#: src/lifesim_lib/const.py:196
-msgid "whether saying 'women make good managers' is sexist like saying 'asians are good at maths' is racist"
-msgstr ""
-
-#: src/lifesim_lib/const.py:199
-msgid "whether job creators are needed more than job seekers"
-msgstr ""
-
-#: src/lifesim_lib/const.py:200
-msgid "whether a borderless world is a myth or a reality"
-msgstr ""
-
-#: src/lifesim_lib/const.py:201
-msgid "what would happen if Bitcoin crashed to zero and whether it is possible"
-msgstr ""
-
-#: src/lifesim_lib/const.py:202
-msgid "business ethics in today's market compared with the past and the potential future"
-msgstr ""
-
-#: src/lifesim_lib/const.py:205
-msgid "whether patience is important in business and management"
-msgstr ""
-
-#: src/lifesim_lib/const.py:206
-msgid "whether the family-run business is relevant in today's market"
-msgstr ""
-
-#: src/lifesim_lib/const.py:207
-msgid "whether E-commerce discounts are harmful in the long run and is it the business or customer being harmed"
-msgstr ""
-
-#: src/lifesim_lib/const.py:210
-msgid "whether globalisation is an opportunity or a threat"
+msgid "Social Studies"
 msgstr ""
 
 #: src/lifesim_lib/const.py:211
-msgid "how markets are found and not created"
+msgid "Accounting"
 msgstr ""
 
 #: src/lifesim_lib/const.py:212
-msgid "whether the world is ready for a cashless society"
+msgid "Business law"
 msgstr ""
 
 #: src/lifesim_lib/const.py:213
-msgid "whether physical infrastructure is the answer to social equality"
+msgid "Business management"
 msgstr ""
 
 #: src/lifesim_lib/const.py:214
-msgid "whether the public sector being a guarantor of job security is a myth"
+msgid "Consumer education"
 msgstr ""
 
 #: src/lifesim_lib/const.py:215
-msgid "whether a circular economy is key to sustainable development"
+msgid "Entrepreneurial skills"
 msgstr ""
 
 #: src/lifesim_lib/const.py:216
-msgid "the contribution of the Indian IT industry to the US and global economy"
+msgid "Introduction to business"
 msgstr ""
 
 #: src/lifesim_lib/const.py:217
-msgid "whether democracy is a hindrance to economic reforms in India"
+msgid "Marketing"
 msgstr ""
 
 #: src/lifesim_lib/const.py:218
-msgid "the technology behind Zero Budget Natural Farming"
+msgid "Personal finance"
 msgstr ""
 
 #: src/lifesim_lib/const.py:219
-msgid "the effects of technological change on jobs"
+msgid "Animation"
 msgstr ""
 
 #: src/lifesim_lib/const.py:220
-msgid "whether pervasive technology is creating a generation of cyber zombies"
+msgid "App development"
 msgstr ""
 
 #: src/lifesim_lib/const.py:221
-msgid "whether the IT industry will create more or less jobs in the future"
+msgid "Audio production"
 msgstr ""
 
 #: src/lifesim_lib/const.py:222
-msgid "whether artificial intelligence can replace human intelligence"
+msgid "Computer programming"
 msgstr ""
 
 #: src/lifesim_lib/const.py:223
-msgid "the effects of big data on information privacy"
+msgid "Computer repair"
 msgstr ""
 
-#: src/lifesim_lib/const.py:224
-msgid "whether automation will create more or less jobs"
+#: src/lifesim_lib/const.py:224 src/lifesim_lib/const.py:361
+msgid "Film production"
 msgstr ""
 
 #: src/lifesim_lib/const.py:225
-msgid "the benefits and challenges of data localisation"
+msgid "Graphic design"
 msgstr ""
 
 #: src/lifesim_lib/const.py:226
-msgid "whether artifical intelligence will change the future"
+msgid "Media technology"
 msgstr ""
 
 #: src/lifesim_lib/const.py:227
-msgid "how technology can be used to tackle financial crimes"
+msgid "Music production"
 msgstr ""
 
 #: src/lifesim_lib/const.py:228
-msgid "whether polythene bags should be completely banned"
+msgid "Typing"
 msgstr ""
 
 #: src/lifesim_lib/const.py:229
-msgid "how to control air pollution levels"
+msgid "Video game development"
 msgstr ""
 
 #: src/lifesim_lib/const.py:230
-msgid "whether green jobs are essential for sustainable development"
+msgid "Web design"
 msgstr ""
 
 #: src/lifesim_lib/const.py:231
-msgid "how to manage natural disasters"
+msgid "Web programming"
 msgstr ""
 
 #: src/lifesim_lib/const.py:232
-msgid "how to manage financial disasters"
+msgid "Word processing"
 msgstr ""
 
 #: src/lifesim_lib/const.py:233
-msgid "methods of disaster recovery"
+msgid "American literature"
 msgstr ""
 
 #: src/lifesim_lib/const.py:234
-msgid "the effects of Coronaviruses on the environment"
+msgid "British literature"
 msgstr ""
 
 #: src/lifesim_lib/const.py:235
-msgid "whether smart farming is the future of agriculture"
+msgid "Contemporary literature"
 msgstr ""
 
 #: src/lifesim_lib/const.py:236
-msgid "whether genetic engineering in agriculture is good or bad"
+msgid "Creative writing"
 msgstr ""
 
 #: src/lifesim_lib/const.py:237
-msgid "the effects of climate on the farming system and food supply"
+msgid "Communication skills"
 msgstr ""
 
 #: src/lifesim_lib/const.py:238
-msgid "whether automation in farming is good"
+msgid "Debate"
 msgstr ""
 
 #: src/lifesim_lib/const.py:239
-msgid "whether collective farming is a boon or a bane"
+msgid "English language and composition"
 msgstr ""
 
 #: src/lifesim_lib/const.py:240
-msgid "our views on natural versus factory farming"
+msgid "English literature and composition"
 msgstr ""
 
 #: src/lifesim_lib/const.py:241
-msgid "our views on conventional farming and organic farming"
+msgid "Humanities"
 msgstr ""
 
 #: src/lifesim_lib/const.py:242
-msgid "the role of women in agriculture"
+msgid "Journalism"
 msgstr ""
 
 #: src/lifesim_lib/const.py:243
-msgid "whether agroforestry destroys the environment"
+msgid "Literary analysis"
 msgstr ""
 
 #: src/lifesim_lib/const.py:244
-msgid "gay marriage and your views on it"
+msgid "Modern literature"
 msgstr ""
 
 #: src/lifesim_lib/const.py:245
-msgid "whether war is the best option to solve international disputes"
+msgid "Poetry"
 msgstr ""
 
 #: src/lifesim_lib/const.py:246
-msgid "whether primary school children should be allowed to own mobile phones"
+msgid "Popular literature"
 msgstr ""
 
 #: src/lifesim_lib/const.py:247
-msgid "whether using animals for medical research should be allowed"
+msgid "Rhetoric"
 msgstr ""
 
 #: src/lifesim_lib/const.py:248
-msgid "whether men and women will ever be equal, if they already are, and whether equality will last"
+msgid "Technical writing"
+msgstr ""
+
+#: src/lifesim_lib/const.py:249
+msgid "Works of Shakespeare"
+msgstr ""
+
+#: src/lifesim_lib/const.py:250
+msgid "World literature"
 msgstr ""
 
 #: src/lifesim_lib/const.py:251
-msgid "whether you can have a happy family life and a successful career at the same time"
+msgid "Written and oral communication"
+msgstr ""
+
+#: src/lifesim_lib/const.py:252
+msgid "Chemistry of foods"
+msgstr ""
+
+#: src/lifesim_lib/const.py:253
+msgid "CPR training"
 msgstr ""
 
 #: src/lifesim_lib/const.py:254
-msgid "whether marriage is an outdated institution"
+msgid "Culinary arts"
 msgstr ""
 
 #: src/lifesim_lib/const.py:255
-msgid "whether citizens should be allowed to carry guns and other weapons"
+msgid "Early childhood development"
 msgstr ""
 
 #: src/lifesim_lib/const.py:256
-msgid "whether the death penalty is acceptable for any reasons"
+msgid "Early childhood education"
 msgstr ""
 
 #: src/lifesim_lib/const.py:257
-msgid "whether non-citizens and tourists should be allowed to vote in their country of residence"
+msgid "Family studies"
+msgstr ""
+
+#: src/lifesim_lib/const.py:258
+msgid "Fashion and retail merchandising"
+msgstr ""
+
+#: src/lifesim_lib/const.py:259
+msgid "Fashion construction"
 msgstr ""
 
 #: src/lifesim_lib/const.py:260
-msgid "whether sex education should be taught to children under 12"
+msgid "Home economics"
 msgstr ""
 
 #: src/lifesim_lib/const.py:261
-msgid "whether or not women are paid the same as men"
+msgid "Interior design"
 msgstr ""
 
 #: src/lifesim_lib/const.py:262
-msgid "whether bribery and corruption is acceptable in government"
+msgid "Nutrition"
 msgstr ""
 
 #: src/lifesim_lib/const.py:263
-msgid "whether bribery and corruption is acceptable in private business"
+msgid "American Sign Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:264
-msgid "whether music that glorifies violence should be banned"
+msgid "Ancient Greek Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:265
-msgid "whether condoms should be distributed for free in primary schools"
+msgid "Arabic Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:266
-msgid "whether nuclear weapons are necessary weapons"
+msgid "Chinese Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:267
-msgid "whether teachers should be allowed to carry guns"
+msgid "French Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:268
-msgid "whether professional sports people earn too much money"
+msgid "German Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:269
-msgid "our views on whether or not beauty contests should be banned"
+msgid "Hebrew Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:270
-msgid "our views on whether or not cosmetic surgery should be outlawed"
+msgid "Italian Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:271
-msgid "our views on whether or not abortions are okay"
+msgid "Japanese Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:272
-msgid "our views on whether or not social deprivation causes crime"
+msgid "Korean Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:273
-msgid "our views on whether or not military service should be compulsory"
+msgid "Latin Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:274
-msgid "our views on whether or not war is ever an option for solving international disputes"
+msgid "Portuguese Language"
+msgstr ""
+
+#: src/lifesim_lib/const.py:275
+msgid "Russian Language"
+msgstr ""
+
+#: src/lifesim_lib/const.py:276
+msgid "Spanish Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:277
-msgid "our views on whether or not torture can be acceptable in some cases"
+msgid "Algebra 1"
 msgstr ""
 
 #: src/lifesim_lib/const.py:278
-msgid "our views on whether or not curfews keep teens out of trouble"
+msgid "Algebra 2"
 msgstr ""
 
 #: src/lifesim_lib/const.py:279
-msgid "our views on whether or not we're becoming too dependent on computers"
+msgid "Calculus"
 msgstr ""
 
 #: src/lifesim_lib/const.py:280
-msgid "our views on whether or not smoking should be banned worldwide"
+msgid "Computer math"
 msgstr ""
 
 #: src/lifesim_lib/const.py:281
-msgid "our views on whether or not it should be illegal to ride a bicycle without a helmet"
+msgid "Consumer math"
+msgstr ""
+
+#: src/lifesim_lib/const.py:282
+msgid "Fundamentals of math"
+msgstr ""
+
+#: src/lifesim_lib/const.py:283
+msgid "Geometry"
 msgstr ""
 
 #: src/lifesim_lib/const.py:284
-msgid "our views on whether or not single sex schools are bad for childhood development and lead to unhealthy views of the opposite sex"
+msgid "Integrated math"
+msgstr ""
+
+#: src/lifesim_lib/const.py:285
+msgid "Math applications"
+msgstr ""
+
+#: src/lifesim_lib/const.py:286
+msgid "Multivariable calculus"
 msgstr ""
 
 #: src/lifesim_lib/const.py:287
-msgid "our views on whether or not homework is harmful"
+msgid "Practical math"
 msgstr ""
 
 #: src/lifesim_lib/const.py:288
-msgid "our views on whether or not the United Nations is a failed organisation"
+msgid "Pre-algebra"
 msgstr ""
 
 #: src/lifesim_lib/const.py:289
-msgid "our views on whether or not intelligence tests should be given before couples can have children"
+msgid "Pre-calculus"
+msgstr ""
+
+#: src/lifesim_lib/const.py:290
+msgid "Probability"
+msgstr ""
+
+#: src/lifesim_lib/const.py:291
+msgid "Quantitative literacy"
 msgstr ""
 
 #: src/lifesim_lib/const.py:292
-msgid "our views on whether or not a woman's place is in the home"
+msgid "Statistics"
 msgstr ""
 
 #: src/lifesim_lib/const.py:293
-msgid "our views on whether or not it's a man's world"
+msgid "Trigonometry"
 msgstr ""
 
 #: src/lifesim_lib/const.py:294
-msgid "our views on whether or not money makes you happy"
+msgid "Choir"
 msgstr ""
 
 #: src/lifesim_lib/const.py:295
-msgid "our views on whether or not money can buy you happiness"
+msgid "Concert band"
 msgstr ""
 
-#: src/lifesim_lib/const.py:296
-msgid "our views on whether or not the internet must be censored to protect society"
+#: src/lifesim_lib/const.py:296 src/lifesim_lib/const.py:308
+msgid "Dance"
 msgstr ""
 
-#: src/lifesim_lib/const.py:297
-msgid "our views on whether or not genetically modified foods have no ill health effects"
+#: src/lifesim_lib/const.py:298
+msgid "Guitar"
+msgstr ""
+
+#: src/lifesim_lib/const.py:299
+msgid "Jazz band"
 msgstr ""
 
 #: src/lifesim_lib/const.py:300
-msgid "our views on whether a man should have a wife for the family and a paramour for pleasure"
+msgid "Marching band"
+msgstr ""
+
+#: src/lifesim_lib/const.py:301
+msgid "Music theory"
+msgstr ""
+
+#: src/lifesim_lib/const.py:302
+msgid "Orchestra"
 msgstr ""
 
 #: src/lifesim_lib/const.py:303
-msgid "our views on whether a woman should have a husband for the family and a paramour for pleasure"
+msgid "Percussion"
+msgstr ""
+
+#: src/lifesim_lib/const.py:304
+msgid "Piano"
+msgstr ""
+
+#: src/lifesim_lib/const.py:305
+msgid "Theater technology"
 msgstr ""
 
 #: src/lifesim_lib/const.py:306
-msgid "our views on whether soft drugs should be legalised"
+msgid "World music"
 msgstr ""
 
 #: src/lifesim_lib/const.py:307
-msgid "our views on whether or not electric cars help the environment"
-msgstr ""
-
-#: src/lifesim_lib/const.py:308
-msgid "our views on whether or not staying unmarried leads to a happier life"
+msgid "Aerobics"
 msgstr ""
 
 #: src/lifesim_lib/const.py:309
-msgid "our views on whether or not software piracy is a real crime"
+msgid "Gymnastics"
 msgstr ""
 
-#: src/lifesim_lib/const.py:310
-msgid "our views on whether or not religion is needed"
+#: src/lifesim_lib/const.py:310 src/menus/main.py:1178
+#: src/people/classes/player.py:440
+msgid "Health"
 msgstr ""
 
 #: src/lifesim_lib/const.py:311
-msgid "our views on whether veganism is the key to solving climate change"
+msgid "Lifeguard training"
 msgstr ""
 
 #: src/lifesim_lib/const.py:312
-msgid "our views on whether the police force is institutionally racist"
+msgid "Pilates"
 msgstr ""
 
 #: src/lifesim_lib/const.py:313
-msgid "our views on whether democracy must be imposed on nations"
+msgid "Racket sports"
 msgstr ""
 
 #: src/lifesim_lib/const.py:314
-msgid "our views on whether the war in Iraq was justified"
+msgid "Specialized sports"
 msgstr ""
 
 #: src/lifesim_lib/const.py:315
-msgid "our views on whether your race affects your intelligence"
+msgid "Swimming"
 msgstr ""
 
 #: src/lifesim_lib/const.py:316
-msgid "our views on whether your race affects your sporting ability"
+msgid "Weight training"
 msgstr ""
 
 #: src/lifesim_lib/const.py:317
-msgid "our views on whether the world is over populated and steps must be taken to reduce births"
+msgid "Yoga"
+msgstr ""
+
+#: src/lifesim_lib/const.py:318
+msgid "Agriculture"
+msgstr ""
+
+#: src/lifesim_lib/const.py:319
+msgid "Astronomy"
 msgstr ""
 
 #: src/lifesim_lib/const.py:320
-msgid "whether or not euthanasia should be illegal"
+msgid "Biology"
 msgstr ""
 
 #: src/lifesim_lib/const.py:321
-msgid "whether or not cloning is a valuable scientific pursuit"
+msgid "Botany"
 msgstr ""
 
 #: src/lifesim_lib/const.py:322
-msgid "whether obesity is a disease and not a lifestyle choice"
+msgid "Chemistry"
 msgstr ""
 
 #: src/lifesim_lib/const.py:323
-msgid "whether or not video games contribute to youth violence"
+msgid "Earth science"
 msgstr ""
 
-#: src/lifesim_lib/const.py:324
-msgid "whether the drinking age should be lowered"
+#: src/lifesim_lib/const.py:324 src/lifesim_lib/const.py:374
+msgid "Electronics"
 msgstr ""
 
 #: src/lifesim_lib/const.py:325
-msgid "whether the drinking age should be raised"
+msgid "Environmental science"
 msgstr ""
 
 #: src/lifesim_lib/const.py:326
-msgid "whether the smoking age should be lowered"
+msgid "Environmental studies"
 msgstr ""
 
 #: src/lifesim_lib/const.py:327
-msgid "whether the smoking age should be raised"
+msgid "Forensic science"
 msgstr ""
 
 #: src/lifesim_lib/const.py:328
-msgid "whether the age of consent should be lowered"
+msgid "Geology"
 msgstr ""
 
 #: src/lifesim_lib/const.py:329
-msgid "whether the age of consent should be raised"
+msgid "Marine biology"
 msgstr ""
 
 #: src/lifesim_lib/const.py:330
-msgid "whether the voting age should be lowered"
+msgid "Oceanography"
 msgstr ""
 
 #: src/lifesim_lib/const.py:331
-msgid "whether the voting age should be raised"
+msgid "Physical science"
 msgstr ""
 
 #: src/lifesim_lib/const.py:332
-msgid "whether the driving age should be lowered"
+msgid "Physics"
 msgstr ""
 
 #: src/lifesim_lib/const.py:333
-msgid "whether the driving age should be raised"
+msgid "Zoology"
 msgstr ""
 
 #: src/lifesim_lib/const.py:334
-msgid "whether the gambling age should be lowered"
+msgid "Cultural anthropology"
 msgstr ""
 
 #: src/lifesim_lib/const.py:335
-msgid "whether the gambling age should be raised"
+msgid "Current events"
 msgstr ""
 
 #: src/lifesim_lib/const.py:336
-msgid "whether the military service age should be lowered"
-msgstr ""
-
-#: src/lifesim_lib/const.py:337
-msgid "whether the military service age should be raised"
+msgid "European history"
 msgstr ""
 
 #: src/lifesim_lib/const.py:338
-msgid "whether drugs should be accepted in sports"
+msgid "Global studies"
 msgstr ""
 
 #: src/lifesim_lib/const.py:339
-msgid "whether self driving cars are going to make our lives easier"
+msgid "Human geography"
 msgstr ""
 
 #: src/lifesim_lib/const.py:340
-msgid "whether climate change exists"
+msgid "International relations"
 msgstr ""
 
 #: src/lifesim_lib/const.py:341
-msgid "whether carbohydrates are more damaging than fats"
+msgid "Law"
 msgstr ""
 
 #: src/lifesim_lib/const.py:342
-msgid "whether terrorism can be justifed"
+msgid "Macroeconomics"
 msgstr ""
 
 #: src/lifesim_lib/const.py:343
-msgid "whether or not street prostitution should be illegal"
+msgid "Microeconomics"
 msgstr ""
 
 #: src/lifesim_lib/const.py:344
-msgid "whether or not prostitution in a brothel should be illegal"
+msgid "Modern world studies"
 msgstr ""
 
 #: src/lifesim_lib/const.py:345
-msgid "whether or not prostituting yourself in your own home should be illegal"
+msgid "Physical anthropology"
 msgstr ""
 
 #: src/lifesim_lib/const.py:346
-msgid "whether prisoners should be allowed to vote"
+msgid "Political studies"
 msgstr ""
 
 #: src/lifesim_lib/const.py:347
-msgid "whether prenuptual agreements make families stronger"
+msgid "Psychology"
 msgstr ""
 
 #: src/lifesim_lib/const.py:348
-msgid "whether corporal punishment should be allowed in schools"
+msgid "Religious studies"
+msgstr ""
+
+#: src/lifesim_lib/const.py:349
+msgid "Sociology"
+msgstr ""
+
+#: src/lifesim_lib/const.py:350
+msgid "National government"
+msgstr ""
+
+#: src/lifesim_lib/const.py:351
+msgid "National history"
+msgstr ""
+
+#: src/lifesim_lib/const.py:352
+msgid "Women's studies"
+msgstr ""
+
+#: src/lifesim_lib/const.py:353
+msgid "World history"
 msgstr ""
 
 #: src/lifesim_lib/const.py:354
-msgid "if it is better to scrunch or fold"
+msgid "World politics"
 msgstr ""
 
 #: src/lifesim_lib/const.py:355
-msgid "if it is better to squat or sit"
+msgid "World religions"
 msgstr ""
 
 #: src/lifesim_lib/const.py:356
-msgid "if it is better to shower or bath"
+msgid "3-D art"
 msgstr ""
 
 #: src/lifesim_lib/const.py:357
-msgid "if it is better to wipe from the front or back"
+msgid "Art history"
 msgstr ""
 
 #: src/lifesim_lib/const.py:358
-msgid "if it is better to "
+msgid "Ceramics"
+msgstr ""
+
+#: src/lifesim_lib/const.py:359
+msgid "Digital media"
 msgstr ""
 
 #: src/lifesim_lib/const.py:360
-msgid "your imaginary friend"
+msgid "Drawing"
 msgstr ""
 
-#: src/lifesim_lib/const.py:361
-msgid "your most prized posession"
+#: src/lifesim_lib/const.py:362
+msgid "Jewelry design"
+msgstr ""
+
+#: src/lifesim_lib/const.py:363
+msgid "Painting"
+msgstr ""
+
+#: src/lifesim_lib/const.py:364
+msgid "Photography"
+msgstr ""
+
+#: src/lifesim_lib/const.py:365
+msgid "Printmaking"
+msgstr ""
+
+#: src/lifesim_lib/const.py:366
+msgid "Sculpture"
+msgstr ""
+
+#: src/lifesim_lib/const.py:367
+msgid "Auto body repair"
 msgstr ""
 
 #: src/lifesim_lib/const.py:368
-msgid "not spending enough time with your family"
+msgid "Auto mechanics"
+msgstr ""
+
+#: src/lifesim_lib/const.py:369
+msgid "Building construction"
+msgstr ""
+
+#: src/lifesim_lib/const.py:370
+msgid "Computer-aided drafting"
 msgstr ""
 
 #: src/lifesim_lib/const.py:371
-msgid "the importance of not sucking your thumb"
+msgid "Cosmetology"
 msgstr ""
 
-#: src/lifesim_lib/const.py:374
-msgid "not drawing on the kitchen table"
+#: src/lifesim_lib/const.py:372
+msgid "Criminal justice"
+msgstr ""
+
+#: src/lifesim_lib/const.py:373
+msgid "Driver education"
+msgstr ""
+
+#: src/lifesim_lib/const.py:375
+msgid "FFA (Future Farmers of America)"
+msgstr ""
+
+#: src/lifesim_lib/const.py:376
+msgid "Fire science"
 msgstr ""
 
 #: src/lifesim_lib/const.py:377
-msgid "the importance of cleaning up after yourself"
+msgid "Heating and cooling systems"
+msgstr ""
+
+#: src/lifesim_lib/const.py:378
+msgid "Hospitality and tourism"
 msgstr ""
 
 #: src/lifesim_lib/const.py:379
-msgid "the importance of saving for retirement"
+msgid "JROTC (Junior Reserve Officers' Training Corps)"
+msgstr ""
+
+#: src/lifesim_lib/const.py:380
+msgid "Metalworking"
+msgstr ""
+
+#: src/lifesim_lib/const.py:381
+msgid "Networking"
+msgstr ""
+
+#: src/lifesim_lib/const.py:382
+msgid "Plumbing"
 msgstr ""
 
 #: src/lifesim_lib/const.py:383
-msgid "the best gift you ever received"
+msgid "Production technology"
 msgstr ""
 
 #: src/lifesim_lib/const.py:384
-msgid "your most bizarre pet peeves"
+msgid "Refrigeration fundamentals"
 msgstr ""
 
 #: src/lifesim_lib/const.py:385
-msgid "why you love your closest friends"
+msgid "Robotics"
 msgstr ""
 
 #: src/lifesim_lib/const.py:386
-msgid "your favourite books to read at the beach"
-msgstr ""
-
-#: src/lifesim_lib/const.py:387
-msgid "your favourite foods to eat on a cold night"
-msgstr ""
-
-#: src/lifesim_lib/const.py:388
-msgid "your biggest turn offs in other people"
-msgstr ""
-
-#: src/lifesim_lib/const.py:389
-msgid "remembering the times when you've felt closest together"
+msgid "Woodworking"
 msgstr ""
 
 #: src/lifesim_lib/const.py:390
-msgid "what you would do if you knew you couldn't fail"
+msgid "Ooh La La!"
 msgstr ""
 
 #: src/lifesim_lib/const.py:391
-msgid "your favourite summertime memory"
+msgid "Why, hello there!"
 msgstr ""
 
-#: src/lifesim_lib/const.py:392
-msgid "something you've always wanted to try"
+#: src/lifesim_lib/const.py:414 src/lifesim_lib/const.py:430
+msgid "Principal"
 msgstr ""
 
-#: src/lifesim_lib/const.py:393
-msgid "things you've always wanted to try"
-msgstr ""
-
-#: src/lifesim_lib/const.py:394
-msgid "a moment in history you would have liked to have been a part of"
-msgstr ""
-
-#: src/lifesim_lib/const.py:395
-msgid "how to manage money better"
-msgstr ""
-
-#: src/lifesim_lib/const.py:396
-msgid "where you would go if you could time travel"
-msgstr ""
-
-#: src/lifesim_lib/const.py:397
-msgid "what superpower you would have if you could have one"
-msgstr ""
-
-#: src/lifesim_lib/const.py:398
-msgid "what you're feeling thankful for today"
-msgstr ""
-
-#: src/lifesim_lib/const.py:399
-msgid "how much they mean to you"
-msgstr ""
-
-#: src/lifesim_lib/const.py:400
-msgid "something that you know you don't need but you're really grateful you have"
-msgstr ""
-
-#: src/lifesim_lib/const.py:401
-msgid "your fears of not accomplishing your New Year resolutions"
-msgstr ""
-
-#: src/lifesim_lib/const.py:402
-msgid "how silly New Year's resolutions are"
-msgstr ""
-
-#: src/lifesim_lib/const.py:403
-msgid "the best part of your day"
-msgstr ""
-
-#: src/lifesim_lib/const.py:406
-msgid "what happens when we die"
-msgstr ""
-
-#: src/lifesim_lib/const.py:414
-msgid "Alex Pettyfer"
-msgstr ""
-
-#: src/lifesim_lib/const.py:415
-msgid "Ashton Kutcher"
+#: src/lifesim_lib/const.py:415 src/lifesim_lib/const.py:431
+msgid "Art Teacher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:416
-msgid "Adam Brody"
+msgid "Careers Teacher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:417
-msgid "Andrew Garfield"
+msgid "IT Teacher"
 msgstr ""
 
-#: src/lifesim_lib/const.py:418
-msgid "Alexander Skarsgård"
+#: src/lifesim_lib/const.py:418 src/lifesim_lib/const.py:435
+msgid "Drama Teacher"
 msgstr ""
 
-#: src/lifesim_lib/const.py:419
-msgid "Austin Nichols"
+#: src/lifesim_lib/const.py:419 src/lifesim_lib/const.py:437
+msgid "English Teacher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:420
-msgid "Allan Hyde"
+msgid "Geography Teacher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:421
-msgid "Adam Garcia"
+msgid "History Teacher"
 msgstr ""
 
-#: src/lifesim_lib/const.py:422 src/lifesim_lib/const.py:515
-#: src/lifesim_lib/const.py:546 src/lifesim_lib/const.py:552
-#: src/lifesim_lib/const.py:564
-msgid "Arnold Schwarzenegger"
+#: src/lifesim_lib/const.py:422 src/lifesim_lib/const.py:439
+msgid "Math Teacher"
 msgstr ""
 
-#: src/lifesim_lib/const.py:423
-msgid "Ben McKenzie"
+#: src/lifesim_lib/const.py:423 src/lifesim_lib/const.py:440
+msgid "Music Teacher"
 msgstr ""
 
-#: src/lifesim_lib/const.py:424
-msgid "Bryan Greenberg"
+#: src/lifesim_lib/const.py:424 src/lifesim_lib/const.py:441
+msgid "P.E. Teacher"
 msgstr ""
 
-#: src/lifesim_lib/const.py:425 src/lifesim_lib/const.py:553
-msgid "Brad Pitt"
+#: src/lifesim_lib/const.py:425
+msgid "Science Teacher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:426
-msgid "Bradley Cooper"
-msgstr ""
-
-#: src/lifesim_lib/const.py:427
-msgid "Channing Tatum"
-msgstr ""
-
-#: src/lifesim_lib/const.py:428
-msgid "Clive Owen"
-msgstr ""
-
-#: src/lifesim_lib/const.py:429
-msgid "Chace Crawford"
-msgstr ""
-
-#: src/lifesim_lib/const.py:430
-msgid "Cam Gigandet"
-msgstr ""
-
-#: src/lifesim_lib/const.py:431
-msgid "Chris Brown"
+msgid "Social Studies Teacher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:432
-msgid "Chris Pine"
+msgid "Careers Counsellor"
 msgstr ""
 
 #: src/lifesim_lib/const.py:433
-msgid "Chad Michael Murray"
+msgid "Chemistry Teacher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:434
-msgid "Columbus Short"
-msgstr ""
-
-#: src/lifesim_lib/const.py:435
-msgid "Christian Bale"
+msgid "Computer Science Teacher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:436
-msgid "Casey Affleck"
-msgstr ""
-
-#: src/lifesim_lib/const.py:437
-msgid "Cillian Murphy"
+msgid "Economics Teacher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:438
-msgid "Daniel Craig"
-msgstr ""
-
-#: src/lifesim_lib/const.py:439 src/lifesim_lib/const.py:516
-msgid "David Beckham"
-msgstr ""
-
-#: src/lifesim_lib/const.py:440
-msgid "Ed Westwick"
-msgstr ""
-
-#: src/lifesim_lib/const.py:441
-msgid "Eric Bana"
+msgid "Foreign Language"
 msgstr ""
 
 #: src/lifesim_lib/const.py:442
-msgid "Emile Hirsch"
-msgstr ""
-
-#: src/lifesim_lib/const.py:443
-msgid "Eric Dane"
-msgstr ""
-
-#: src/lifesim_lib/const.py:444
-msgid "Gerard Butler"
-msgstr ""
-
-#: src/lifesim_lib/const.py:445
-msgid "Garrett Hedlund"
-msgstr ""
-
-#: src/lifesim_lib/const.py:446
-msgid "Hayden Christensen"
-msgstr ""
-
-#: src/lifesim_lib/const.py:447
-msgid "Hugh Jackman"
-msgstr ""
-
-#: src/lifesim_lib/const.py:448
-msgid "Hugh Laurie"
-msgstr ""
-
-#: src/lifesim_lib/const.py:449
-msgid "Hugh Dancy"
-msgstr ""
-
-#: src/lifesim_lib/const.py:450
-msgid "Heath Ledger"
+msgid "Physics Teacher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:451
-msgid "Ian Somerhalder"
+msgid "High School Dropout"
 msgstr ""
 
 #: src/lifesim_lib/const.py:452
-msgid "James Lafferty"
+msgid "High School Student"
 msgstr ""
 
 #: src/lifesim_lib/const.py:453
-msgid "James Marsden"
+msgid "High School Student, Part-time Arcade Assistant"
 msgstr ""
 
-#: src/lifesim_lib/const.py:454 src/lifesim_lib/const.py:541
-msgid "John Mayer"
+#: src/lifesim_lib/const.py:454
+msgid "High School Student, Part-time Armpit Sniffer"
 msgstr ""
 
 #: src/lifesim_lib/const.py:455
-msgid "Jude Law"
+msgid "High School Student, Part-time Barista"
 msgstr ""
 
 #: src/lifesim_lib/const.py:456
-msgid "Jensen Ackles"
+msgid "High School Student, Part-time Bike Shop Mechanic"
 msgstr ""
 
 #: src/lifesim_lib/const.py:457
-msgid "Jake Gyllenhaal"
+msgid "High School Student, Part-time Boutique Associate"
 msgstr ""
 
 #: src/lifesim_lib/const.py:458
-msgid "Justin Chambers"
+msgid "High School Student, Part-time Bowling Alley Assistant"
 msgstr ""
 
 #: src/lifesim_lib/const.py:459
-msgid "Jesse Metcalfe"
+msgid "High School Student, Part-time Camp Counsellor"
 msgstr ""
 
-#: src/lifesim_lib/const.py:460 src/lifesim_lib/const.py:525
-#: src/lifesim_lib/const.py:542
-msgid "Justin Timberlake"
+#: src/lifesim_lib/const.py:460
+msgid "High School Student, Part-time Car Wash Attendant"
 msgstr ""
 
 #: src/lifesim_lib/const.py:461
-msgid "Javier Bardem"
+msgid "High School Student, Part-time Dance Instructor"
 msgstr ""
 
-#: src/lifesim_lib/const.py:462 src/lifesim_lib/const.py:519
-#: src/lifesim_lib/const.py:528 src/lifesim_lib/const.py:554
-msgid "Joe Manganiello"
+#: src/lifesim_lib/const.py:462
+msgid "High School Student, Part-time Doorman"
 msgstr ""
 
 #: src/lifesim_lib/const.py:463
-msgid "Johnny Depp"
+msgid "High School Student, Part-time Fitness Instructor"
 msgstr ""
 
 #: src/lifesim_lib/const.py:464
-msgid "James Franco"
+msgid "High School Student, Part-time Gym Receptionist"
 msgstr ""
 
 #: src/lifesim_lib/const.py:465
-msgid "Jack O'Connell"
+msgid "High School Student, Part-time Hotel Concierge"
 msgstr ""
 
 #: src/lifesim_lib/const.py:466
-msgid "Kellan Lutz"
+msgid "High School Student, Part-time Ice Cream Scooper"
 msgstr ""
 
 #: src/lifesim_lib/const.py:467
-msgid "Josh Hartnett"
+msgid "High School Student, Part-time Lifeguard"
 msgstr ""
 
 #: src/lifesim_lib/const.py:468
-msgid "Jason Segel"
+msgid "High School Student, Part-time Mall Kiosk Worker"
 msgstr ""
 
 #: src/lifesim_lib/const.py:469
-msgid "Jared Padalecki"
+msgid "High School Student, Part-time Personal Trainer"
 msgstr ""
 
 #: src/lifesim_lib/const.py:470
-msgid "Joseph Gordon-Levitt"
+msgid "High School Student, Part-time Usher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:471
-msgid "Liam Hemsworth"
+msgid "High School Student, Part-time Valet"
 msgstr ""
 
 #: src/lifesim_lib/const.py:472
-msgid "Leonardo DiCaprio"
-msgstr ""
-
-#: src/lifesim_lib/const.py:473
-msgid "Luke Pasqualino"
-msgstr ""
-
-#: src/lifesim_lib/const.py:474
-msgid "Milo Ventimiglia"
-msgstr ""
-
-#: src/lifesim_lib/const.py:475
-msgid "Mark Salling"
-msgstr ""
-
-#: src/lifesim_lib/const.py:476
-msgid "Matthew Goode"
-msgstr ""
-
-#: src/lifesim_lib/const.py:477
-msgid "Mads Mikkelsen"
-msgstr ""
-
-#: src/lifesim_lib/const.py:478
-msgid "Marshall Mathers"
-msgstr ""
-
-#: src/lifesim_lib/const.py:479
-msgid "Mekhi Phifer"
-msgstr ""
-
-#: src/lifesim_lib/const.py:480
-msgid "Matt Lanter"
+msgid "High School Student, Part-time Window Cleaner"
 msgstr ""
 
 #: src/lifesim_lib/const.py:481
-msgid "Mike Vogel"
+msgid "Handyman"
 msgstr ""
 
 #: src/lifesim_lib/const.py:482
-msgid "Nick Zano"
+msgid "Tutor"
 msgstr ""
 
 #: src/lifesim_lib/const.py:483
-msgid "Orlando Bloom"
+msgid "Caretaker"
 msgstr ""
 
 #: src/lifesim_lib/const.py:484
-msgid "Patrick Swayze"
+msgid "Lawn Mower"
 msgstr ""
 
 #: src/lifesim_lib/const.py:485
-msgid "Penn Badgley"
+msgid "Babysitter"
 msgstr ""
 
 #: src/lifesim_lib/const.py:486
-msgid "Peter Facinelli"
+msgid "Dog Walker"
 msgstr ""
 
 #: src/lifesim_lib/const.py:487
-msgid "Paul Walker"
-msgstr ""
-
-#: src/lifesim_lib/const.py:488
-msgid "Ryan Gosling"
-msgstr ""
-
-#: src/lifesim_lib/const.py:489
-msgid "Ryan Reynolds"
+msgid "Pet Sitter"
 msgstr ""
 
 #: src/lifesim_lib/const.py:490
-msgid "Robbie Jones"
+msgid "Arcade Assistant"
 msgstr ""
 
 #: src/lifesim_lib/const.py:491
-msgid "Robert Pattinson"
+msgid "Armpit Sniffer"
 msgstr ""
 
 #: src/lifesim_lib/const.py:492
-msgid "Rick Malambri"
+msgid "Barista"
 msgstr ""
 
 #: src/lifesim_lib/const.py:493
-msgid "Ryan Kwanten"
+msgid "Bike Shop Mechanic"
 msgstr ""
 
 #: src/lifesim_lib/const.py:494
-msgid "Ryan Phillippe"
+msgid "Boutique Associate"
 msgstr ""
 
 #: src/lifesim_lib/const.py:495
-msgid "Rafi Gavron"
+msgid "Bowling Alley Assistant"
 msgstr ""
 
 #: src/lifesim_lib/const.py:496
-msgid "Sam Worthington"
+msgid "Camp Counsellor"
 msgstr ""
 
 #: src/lifesim_lib/const.py:497
-msgid "Sean Faris"
+msgid "Car Wash Attendant"
 msgstr ""
 
-#: src/lifesim_lib/const.py:498 src/lifesim_lib/const.py:560
-msgid "Sylvester Stallone"
+#: src/lifesim_lib/const.py:498
+msgid "Dance Instructor"
 msgstr ""
 
-#: src/lifesim_lib/const.py:499 src/lifesim_lib/const.py:561
-msgid "Seth Rogan"
+#: src/lifesim_lib/const.py:499
+msgid "Doorman"
 msgstr ""
 
 #: src/lifesim_lib/const.py:500
-msgid "Shia LaBeouf"
+msgid "Fitness Instructor"
 msgstr ""
 
 #: src/lifesim_lib/const.py:501
-msgid "Stephen Colletti"
+msgid "Gym Receptionist"
 msgstr ""
 
 #: src/lifesim_lib/const.py:502
-msgid "Shane West"
+msgid "Hotel Concierge"
 msgstr ""
 
 #: src/lifesim_lib/const.py:503
-msgid "Simon Rex"
+msgid "Ice Cream Scooper"
 msgstr ""
 
 #: src/lifesim_lib/const.py:504
-msgid "Taylor Lautner"
+msgid "Lifeguard"
 msgstr ""
 
 #: src/lifesim_lib/const.py:505
-msgid "Tom Hardy"
+msgid "Mall Kiosk Worker"
 msgstr ""
 
-#: src/lifesim_lib/const.py:506 src/lifesim_lib/const.py:543
-msgid "Tupac Shakur"
+#: src/lifesim_lib/const.py:506
+msgid "Personal Trainer"
 msgstr ""
 
 #: src/lifesim_lib/const.py:507
-msgid "Tristan Mack Wilds"
+msgid "Usher"
 msgstr ""
 
 #: src/lifesim_lib/const.py:508
-msgid "Timothy Olyphant"
+msgid "Valet"
 msgstr ""
 
 #: src/lifesim_lib/const.py:509
-msgid "Tom Welling"
+msgid "Window Cleaner"
 msgstr ""
 
-#: src/lifesim_lib/const.py:510
-msgid "Travis Barker"
-msgstr ""
-
-#: src/lifesim_lib/const.py:511
-msgid "Wentworth Miller"
-msgstr ""
-
-#: src/lifesim_lib/const.py:512
-msgid "Zac Efron"
-msgstr ""
-
-#: src/lifesim_lib/const.py:522
-msgid "Elon Musk"
+#: src/lifesim_lib/const.py:530
+msgid "Straight"
 msgstr ""
 
 #: src/lifesim_lib/const.py:531
-msgid "Michael Kors"
+msgid "Bi"
 msgstr ""
 
 #: src/lifesim_lib/const.py:532
-msgid "Tom Ford"
+msgid "Gay"
 msgstr ""
 
-#: src/lifesim_lib/const.py:535
-msgid "David Gandy"
+#: src/lifesim_lib/const.py:538 src/lifesim_lib/const.py:544
+msgid "Cisgender"
 msgstr ""
 
-#: src/lifesim_lib/const.py:536
-msgid "Sean O'Pry"
+#: src/lifesim_lib/const.py:539 src/lifesim_lib/const.py:545
+msgid "Genderqueer"
 msgstr ""
 
-#: src/lifesim_lib/const.py:539
-msgid "Eminem"
+#: src/lifesim_lib/const.py:540 src/lifesim_lib/const.py:546
+msgid "Non-Binary"
 msgstr ""
 
-#: src/lifesim_lib/const.py:540
-msgid "Jared Followill"
+#: src/lifesim_lib/const.py:541
+msgid "Transgender Male"
 msgstr ""
 
-#: src/lifesim_lib/const.py:549
-msgid "James Deen"
+#: src/lifesim_lib/const.py:547
+msgid "Transgender Female"
 msgstr ""
 
-#: src/lifesim_lib/const.py:557
-msgid "Prince Carl Philip of Sweden, Duke of Värmland"
+#: src/lifesim_lib/const.py:558
+msgid "Ice Bucket Challenge"
 msgstr ""
 
-#: src/lifesim_lib/const.py:567
-msgid "Zach King"
+#: src/lifesim_lib/const.py:559 src/lifesim_lib/const.py:901
+#: src/lifesim_lib/const.py:916 src/lifesim_lib/const.py:966
+#: src/lifesim_lib/const.py:969 src/lifesim_lib/const.py:972
+#: src/lifesim_lib/const.py:975 src/lifesim_lib/const.py:978
+#: src/lifesim_lib/const.py:981 src/lifesim_lib/const.py:1168
+#: src/lifesim_lib/const.py:1181 src/lifesim_lib/const.py:1230
+#: src/lifesim_lib/const.py:1334 src/lifesim_lib/const.py:1337
+#: src/lifesim_lib/const.py:1344 src/lifesim_lib/const.py:1349
+#: src/lifesim_lib/const.py:2378 src/lifesim_lib/const.py:2379
+#: src/lifesim_lib/const.py:2393 src/lifesim_lib/const.py:2589
+msgid ""
+msgstr ""
+
+#: src/lifesim_lib/const.py:563
+msgid "tap dancing"
+msgstr ""
+
+#: src/lifesim_lib/const.py:566
+msgid "a P!nk song"
 msgstr ""
 
 #: src/lifesim_lib/const.py:570
-msgid "Randy Orton"
+msgid "a cute"
 msgstr ""
 
-#: src/lifesim_lib/const.py:573
-msgid "Stan Lee"
+#: src/lifesim_lib/const.py:571
+msgid "an embarrasing"
 msgstr ""
 
-#: src/lifesim_lib/const.py:577 src/lifesim_lib/const.py:698
-msgid "Adriana Lima"
+#: src/lifesim_lib/const.py:575
+msgid "a photo of a cake you found on the internet"
 msgstr ""
 
-#: src/lifesim_lib/const.py:578 src/lifesim_lib/const.py:699
-msgid "Aishwarya Rai Bachchan"
-msgstr ""
-
-#: src/lifesim_lib/const.py:579 src/lifesim_lib/const.py:700
-msgid "Alessandra Ambrosio"
+#: src/lifesim_lib/const.py:576
+msgid "your nasty snack"
 msgstr ""
 
 #: src/lifesim_lib/const.py:580
-msgid "Amber Heard"
+msgid "a ridiculous"
 msgstr ""
 
-#: src/lifesim_lib/const.py:581 src/lifesim_lib/const.py:701
-msgid "Ana Beatriz Barros"
-msgstr ""
-
-#: src/lifesim_lib/const.py:582
-msgid "Anna Paquin"
-msgstr ""
-
-#: src/lifesim_lib/const.py:583
-msgid "AnnaSophia Robb"
-msgstr ""
-
-#: src/lifesim_lib/const.py:584 src/lifesim_lib/const.py:702
-msgid "Anne Vyalitsyna"
-msgstr ""
-
-#: src/lifesim_lib/const.py:585
-msgid "Angelina Jolie"
-msgstr ""
-
-#: src/lifesim_lib/const.py:586 src/lifesim_lib/const.py:687
-#: src/lifesim_lib/const.py:741
-msgid "Ashley Benson"
+#: src/lifesim_lib/const.py:584
+msgid "an inspirational"
 msgstr ""
 
 #: src/lifesim_lib/const.py:587
-msgid "Ashley Greene"
-msgstr ""
-
-#: src/lifesim_lib/const.py:588 src/lifesim_lib/const.py:703
-msgid "Bar Refaeli"
-msgstr ""
-
-#: src/lifesim_lib/const.py:589 src/lifesim_lib/const.py:704
-msgid "Behati Prinsloo"
-msgstr ""
-
-#: src/lifesim_lib/const.py:590 src/lifesim_lib/const.py:742
-msgid "Beyoncé Knowles"
+msgid "relationships"
 msgstr ""
 
 #: src/lifesim_lib/const.py:591
-msgid "Blake Lively"
+msgid "promoting your political ideology"
 msgstr ""
 
-#: src/lifesim_lib/const.py:592 src/lifesim_lib/const.py:705
-msgid "Brooklyn Decker"
+#: src/lifesim_lib/const.py:592
+msgid "campaigning for your political ideology"
 msgstr ""
 
-#: src/lifesim_lib/const.py:593 src/lifesim_lib/const.py:706
-msgid "Candice Swanepoel"
-msgstr ""
-
-#: src/lifesim_lib/const.py:594 src/lifesim_lib/const.py:688
-#: src/lifesim_lib/const.py:707 src/lifesim_lib/const.py:743
-msgid "Cassie Ventura"
-msgstr ""
-
-#: src/lifesim_lib/const.py:595 src/lifesim_lib/const.py:759
-msgid "Charlize Theron"
-msgstr ""
-
-#: src/lifesim_lib/const.py:596 src/lifesim_lib/const.py:744
-msgid "Cheryl Cole"
+#: src/lifesim_lib/const.py:593
+msgid "supporting your favourite political candidate"
 msgstr ""
 
 #: src/lifesim_lib/const.py:597
-msgid "Chloë Grace Moretz"
+msgid "Which social media platform is the best?"
 msgstr ""
 
-#: src/lifesim_lib/const.py:598 src/lifesim_lib/const.py:708
-#: src/lifesim_lib/const.py:760
-msgid "Cindy Crawford"
+#: src/lifesim_lib/const.py:598
+msgid "What is the best song?"
 msgstr ""
 
-#: src/lifesim_lib/const.py:599 src/lifesim_lib/const.py:683
-#: src/lifesim_lib/const.py:745
-msgid "Demi Lovato"
-msgstr ""
-
-#: src/lifesim_lib/const.py:600 src/lifesim_lib/const.py:709
-msgid "Denise Richards"
-msgstr ""
-
-#: src/lifesim_lib/const.py:601
-msgid "Diane Kruger"
-msgstr ""
-
-#: src/lifesim_lib/const.py:602 src/lifesim_lib/const.py:710
-msgid "Doutzen Kroes"
-msgstr ""
-
-#: src/lifesim_lib/const.py:603 src/lifesim_lib/const.py:711
-msgid "Elisha Cuthbert"
-msgstr ""
-
-#: src/lifesim_lib/const.py:604
-msgid "Emilia Clarke"
+#: src/lifesim_lib/const.py:602
+msgid "an outlandish"
 msgstr ""
 
 #: src/lifesim_lib/const.py:605
-msgid "Emily Blunt"
+msgid "yourself talking with accents"
 msgstr ""
 
-#: src/lifesim_lib/const.py:606
-msgid "Emma Stone"
+#: src/lifesim_lib/const.py:609 src/lifesim_lib/const.py:618
+#: src/lifesim_lib/const.py:627
+msgid "a meme"
 msgstr ""
 
-#: src/lifesim_lib/const.py:607
-msgid "Emma Watson"
-msgstr ""
-
-#: src/lifesim_lib/const.py:608
-msgid "Erin Heatherton"
-msgstr ""
-
-#: src/lifesim_lib/const.py:609 src/lifesim_lib/const.py:712
-msgid "Eva Green"
-msgstr ""
-
-#: src/lifesim_lib/const.py:610
-msgid "Eva Longoria"
-msgstr ""
-
-#: src/lifesim_lib/const.py:611
-msgid "Eva Mendes"
-msgstr ""
-
-#: src/lifesim_lib/const.py:612
-msgid "Freida Pinto"
-msgstr ""
-
-#: src/lifesim_lib/const.py:613 src/lifesim_lib/const.py:713
-msgid "Gisele Bündchen"
-msgstr ""
-
-#: src/lifesim_lib/const.py:614
-msgid "Hilary Duff"
-msgstr ""
-
-#: src/lifesim_lib/const.py:615 src/lifesim_lib/const.py:746
-msgid "Indiana Evans"
-msgstr ""
-
-#: src/lifesim_lib/const.py:616 src/lifesim_lib/const.py:714
-msgid "Irina Shayk"
-msgstr ""
-
-#: src/lifesim_lib/const.py:617
-msgid "Isabel Lucas"
-msgstr ""
-
-#: src/lifesim_lib/const.py:618 src/lifesim_lib/const.py:715
-msgid "Izabel Goulart"
-msgstr ""
-
-#: src/lifesim_lib/const.py:619 src/lifesim_lib/const.py:689
-#: src/lifesim_lib/const.py:716
-msgid "Jenna Dewan"
-msgstr ""
-
-#: src/lifesim_lib/const.py:620
-msgid "Jennifer Lawrence"
-msgstr ""
-
-#: src/lifesim_lib/const.py:621
-msgid "Jessica Alba"
-msgstr ""
-
-#: src/lifesim_lib/const.py:622
-msgid "Jessica Biel"
-msgstr ""
-
-#: src/lifesim_lib/const.py:623
-msgid "Jordana Brewster"
-msgstr ""
-
-#: src/lifesim_lib/const.py:624 src/lifesim_lib/const.py:717
-msgid "Josie Maran"
-msgstr ""
-
-#: src/lifesim_lib/const.py:625 src/lifesim_lib/const.py:718
-msgid "Karolina Kurkova"
-msgstr ""
-
-#: src/lifesim_lib/const.py:626
-msgid "Kate Beckinsale"
-msgstr ""
-
-#: src/lifesim_lib/const.py:627 src/lifesim_lib/const.py:719
-msgid "Kate Upton"
-msgstr ""
-
+#: src/lifesim_lib/const.py:610 src/lifesim_lib/const.py:619
 #: src/lifesim_lib/const.py:628
-msgid "Katie Holmes"
+msgid "a photo"
 msgstr ""
 
+#: src/lifesim_lib/const.py:611 src/lifesim_lib/const.py:620
 #: src/lifesim_lib/const.py:629
-msgid "Keira Knightley"
+msgid "a picture"
 msgstr ""
 
-#: src/lifesim_lib/const.py:630 src/lifesim_lib/const.py:720
-msgid "Kelly Brook"
+#: src/lifesim_lib/const.py:612 src/lifesim_lib/const.py:621
+#: src/lifesim_lib/const.py:631
+msgid "a reel"
 msgstr ""
 
-#: src/lifesim_lib/const.py:631 src/lifesim_lib/const.py:721
-msgid "Kendall Jenner"
-msgstr ""
-
-#: src/lifesim_lib/const.py:632 src/lifesim_lib/const.py:694
-#: src/lifesim_lib/const.py:784
-msgid "Kim Kardashian"
-msgstr ""
-
+#: src/lifesim_lib/const.py:613 src/lifesim_lib/const.py:622
 #: src/lifesim_lib/const.py:633
-msgid "Kristen Stewart"
+msgid "a story"
 msgstr ""
 
+#: src/lifesim_lib/const.py:614 src/lifesim_lib/const.py:623
 #: src/lifesim_lib/const.py:634
-msgid "Kristin Kreuk"
+msgid "a video"
 msgstr ""
 
-#: src/lifesim_lib/const.py:635 src/lifesim_lib/const.py:722
-msgid "Laetitia Casta"
+#: src/lifesim_lib/const.py:630
+msgid "a recording session"
 msgstr ""
 
-#: src/lifesim_lib/const.py:636
-msgid "Lauren Conrad"
+#: src/lifesim_lib/const.py:632
+msgid "a song"
 msgstr ""
 
-#: src/lifesim_lib/const.py:637 src/lifesim_lib/const.py:723
-msgid "Lily Aldridge"
+#: src/lifesim_lib/const.py:635
+msgid "their latest album cover"
 msgstr ""
 
-#: src/lifesim_lib/const.py:638
-msgid "Lucy Hale"
+#: src/lifesim_lib/const.py:639
+msgid "a duck face selfie"
 msgstr ""
 
-#: src/lifesim_lib/const.py:639 src/lifesim_lib/const.py:761
-msgid "Marion Cotillard"
-msgstr ""
-
-#: src/lifesim_lib/const.py:640 src/lifesim_lib/const.py:770
-msgid "Nikki Reed"
+#: src/lifesim_lib/const.py:640
+msgid "a selfie pulling a funny face"
 msgstr ""
 
 #: src/lifesim_lib/const.py:641
-msgid "Nina Dobrev"
+msgid "a professional looking selfie"
 msgstr ""
 
-#: src/lifesim_lib/const.py:642
-msgid "Olivia Wilde"
+#: src/lifesim_lib/const.py:645 src/lifesim_lib/const.py:652
+msgid "a risqué selfie of yourself"
 msgstr ""
 
-#: src/lifesim_lib/const.py:643 src/lifesim_lib/const.py:724
-msgid "Malin Akerman"
-msgstr ""
-
-#: src/lifesim_lib/const.py:644 src/lifesim_lib/const.py:725
-msgid "Marisa Miller"
-msgstr ""
-
-#: src/lifesim_lib/const.py:645
-msgid "Megan Fox"
-msgstr ""
-
-#: src/lifesim_lib/const.py:646 src/lifesim_lib/const.py:747
-msgid "Minka Kelly"
+#: src/lifesim_lib/const.py:646
+msgid "a photo of yourself clearly showing your muscles"
 msgstr ""
 
 #: src/lifesim_lib/const.py:647
-msgid "Mila Kunis"
+msgid "a selfie gazing through the lens dreamily"
 msgstr ""
 
-#: src/lifesim_lib/const.py:648 src/lifesim_lib/const.py:726
-msgid "Miranda Kerr"
+#: src/lifesim_lib/const.py:648 src/lifesim_lib/const.py:655
+msgid "a gym selfie while working out"
 msgstr ""
 
-#: src/lifesim_lib/const.py:649 src/lifesim_lib/const.py:727
-msgid "Monica Bellucci"
-msgstr ""
-
-#: src/lifesim_lib/const.py:650 src/lifesim_lib/const.py:728
-#: src/lifesim_lib/const.py:774
-msgid "Natalia Vodianova"
-msgstr ""
-
-#: src/lifesim_lib/const.py:651
-msgid "Natalie Portman"
-msgstr ""
-
-#: src/lifesim_lib/const.py:652
-msgid "Nicole Scherzinger"
-msgstr ""
-
-#: src/lifesim_lib/const.py:653 src/lifesim_lib/const.py:729
-#: src/lifesim_lib/const.py:778
-msgid "Olivia Culpo"
+#: src/lifesim_lib/const.py:653
+msgid "a side-on mirror selfie emphasising your tight dress"
 msgstr ""
 
 #: src/lifesim_lib/const.py:654
-msgid "Penélope Cruz"
+msgid "an over-the-shoulder bikini selfie showing your bum in the background"
 msgstr ""
 
-#: src/lifesim_lib/const.py:655
-msgid "Rachel Bilson"
-msgstr ""
-
-#: src/lifesim_lib/const.py:656
-msgid "Rachel McAdams"
-msgstr ""
-
-#: src/lifesim_lib/const.py:657 src/lifesim_lib/const.py:730
-msgid "Rachael Taylor"
-msgstr ""
-
-#: src/lifesim_lib/const.py:658
-msgid "Rachel Weisz"
-msgstr ""
-
-#: src/lifesim_lib/const.py:659 src/lifesim_lib/const.py:695
-#: src/lifesim_lib/const.py:748
-msgid "Rihanna Fenty"
-msgstr ""
-
-#: src/lifesim_lib/const.py:660 src/lifesim_lib/const.py:690
-#: src/lifesim_lib/const.py:731 src/lifesim_lib/const.py:749
-#: src/lifesim_lib/const.py:762 src/lifesim_lib/const.py:785
-msgid "Roselyn Sanchez"
-msgstr ""
-
-#: src/lifesim_lib/const.py:661 src/lifesim_lib/const.py:732
-msgid "Rosie Huntington-Whiteley"
-msgstr ""
-
-#: src/lifesim_lib/const.py:662
-msgid "Salma Hayek"
+#: src/lifesim_lib/const.py:659
+msgid "and your friend made a slapstick skit"
 msgstr ""
 
 #: src/lifesim_lib/const.py:663
-msgid "Sara Carbonero"
+msgid "supporting social justice"
 msgstr ""
 
-#: src/lifesim_lib/const.py:664
-msgid "Scarlett Johansson"
+#: src/lifesim_lib/const.py:667
+msgid "about your weird day"
 msgstr ""
 
-#: src/lifesim_lib/const.py:665 src/lifesim_lib/const.py:750
-#: src/lifesim_lib/const.py:763
-msgid "Selena Gomez"
-msgstr ""
-
-#: src/lifesim_lib/const.py:666
-msgid "Shanina Shaik"
-msgstr ""
-
-#: src/lifesim_lib/const.py:667 src/lifesim_lib/const.py:733
-#: src/lifesim_lib/const.py:786
-msgid "Shay Mitchell"
-msgstr ""
-
-#: src/lifesim_lib/const.py:668 src/lifesim_lib/const.py:734
-msgid "Sienna Miller"
-msgstr ""
-
-#: src/lifesim_lib/const.py:669 src/lifesim_lib/const.py:680
-#: src/lifesim_lib/const.py:735
-msgid "Sofía Vergara"
-msgstr ""
-
-#: src/lifesim_lib/const.py:670 src/lifesim_lib/const.py:684
-#: src/lifesim_lib/const.py:691 src/lifesim_lib/const.py:736
-#: src/lifesim_lib/const.py:781
-msgid "Stacy Keibler"
-msgstr ""
-
-#: src/lifesim_lib/const.py:671 src/lifesim_lib/const.py:737
-#: src/lifesim_lib/const.py:764 src/lifesim_lib/const.py:787
-msgid "Tyra Banks"
+#: src/lifesim_lib/const.py:671
+msgid "wearing just a t-shirt while eating a cucumber"
 msgstr ""
 
 #: src/lifesim_lib/const.py:672
-msgid "Vanessa Hudgens"
+msgid "wearing a thong while eating a cucumber"
 msgstr ""
 
-#: src/lifesim_lib/const.py:673 src/lifesim_lib/const.py:738
-msgid "Ximena Navarrete"
-msgstr ""
-
-#: src/lifesim_lib/const.py:674
-msgid "Zoe Saldana"
+#: src/lifesim_lib/const.py:676
+msgid "some magnificent art photos"
 msgstr ""
 
 #: src/lifesim_lib/const.py:677
-msgid "Serena Williams"
+msgid "a stunning night video"
+msgstr ""
+
+#: src/lifesim_lib/const.py:678
+msgid "a video of yourself walking through markets"
+msgstr ""
+
+#: src/lifesim_lib/const.py:681
+msgid "from your last vacation"
+msgstr ""
+
+#: src/lifesim_lib/const.py:682
+msgid "from your trip to Paris"
+msgstr ""
+
+#: src/lifesim_lib/const.py:683
+msgid "you took on your Hawaiian trip"
+msgstr ""
+
+#: src/lifesim_lib/const.py:687
+msgid "your daily life shenanigans as a vlog"
+msgstr ""
+
+#: src/lifesim_lib/const.py:688
+msgid "a vlog of your morning routine"
+msgstr ""
+
+#: src/lifesim_lib/const.py:694
+msgid "@2OldForThis"
+msgstr ""
+
+#: src/lifesim_lib/const.py:695
+msgid "@TheTroubleMakers"
+msgstr ""
+
+#: src/lifesim_lib/const.py:696
+msgid "@joe_not_exotic"
+msgstr ""
+
+#: src/lifesim_lib/const.py:697
+msgid "@shaquille.oatmeal"
+msgstr ""
+
+#: src/lifesim_lib/const.py:698
+msgid "@RenegadeMaster"
+msgstr ""
+
+#: src/lifesim_lib/const.py:699
+msgid "@viewer_discretion_advised"
+msgstr ""
+
+#: src/lifesim_lib/const.py:700
+msgid "@FunnyCatVidz"
+msgstr ""
+
+#: src/lifesim_lib/const.py:701
+msgid "@CharliDamelioForPresident"
+msgstr ""
+
+#: src/lifesim_lib/const.py:702
+msgid "@everythingbagelwithvegancreamcheese"
+msgstr ""
+
+#: src/lifesim_lib/const.py:703
+msgid "@name_is_in_use"
+msgstr ""
+
+#: src/lifesim_lib/const.py:704
+msgid "@i_dont_dance"
+msgstr ""
+
+#: src/lifesim_lib/const.py:705
+msgid "@builtdifferent"
+msgstr ""
+
+#: src/lifesim_lib/const.py:706
+msgid "@shadowbanned"
+msgstr ""
+
+#: src/lifesim_lib/const.py:707
+msgid "@not_my_idea"
+msgstr ""
+
+#: src/lifesim_lib/const.py:708
+msgid "@down_with_the_kids"
+msgstr ""
+
+#: src/lifesim_lib/const.py:709
+msgid "@amicoolyet"
+msgstr ""
+
+#: src/lifesim_lib/const.py:710
+msgid "@Addison_Rae_Of_Sunshine"
+msgstr ""
+
+#: src/lifesim_lib/const.py:711
+msgid "@im_an_accountant"
+msgstr ""
+
+#: src/lifesim_lib/const.py:712
+msgid "@IYELLALOT"
+msgstr ""
+
+#: src/lifesim_lib/const.py:713
+msgid "@FrostedCupcake"
+msgstr ""
+
+#: src/lifesim_lib/const.py:714
+msgid "@Avocadorable"
+msgstr ""
+
+#: src/lifesim_lib/const.py:715
+msgid "@MrsDracoMalfoy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:716
+msgid "@MrsChalamet"
+msgstr ""
+
+#: src/lifesim_lib/const.py:717
+msgid "@MrsStyles"
+msgstr ""
+
+#: src/lifesim_lib/const.py:718
+msgid "@CourtesyFlush"
+msgstr ""
+
+#: src/lifesim_lib/const.py:719
+msgid "@MomsSpaghetti"
+msgstr ""
+
+#: src/lifesim_lib/const.py:720
+msgid "@just_a_teen"
+msgstr ""
+
+#: src/lifesim_lib/const.py:721
+msgid "@GenZWarrior"
+msgstr ""
+
+#: src/lifesim_lib/const.py:722
+msgid "@what_does_this_button_do"
+msgstr ""
+
+#: src/lifesim_lib/const.py:723
+msgid "@not_funny"
+msgstr ""
+
+#: src/lifesim_lib/const.py:724
+msgid "@DestinysGrandchild"
+msgstr ""
+
+#: src/lifesim_lib/const.py:725
+msgid "@champain"
+msgstr ""
+
+#: src/lifesim_lib/const.py:726
+msgid "@AspiringInfluencer"
+msgstr ""
+
+#: src/lifesim_lib/const.py:727
+msgid "@ClassyBadassy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:728
+msgid "@severusvape"
+msgstr ""
+
+#: src/lifesim_lib/const.py:729
+msgid "@RuleFollower"
+msgstr ""
+
+#: src/lifesim_lib/const.py:730
+msgid "@Lizzos_Flute"
+msgstr ""
+
+#: src/lifesim_lib/const.py:731
+msgid "@urcutejeans"
+msgstr ""
+
+#: src/lifesim_lib/const.py:732
+msgid "@guess_who"
+msgstr ""
+
+#: src/lifesim_lib/const.py:733
+msgid "@insert_name_here"
+msgstr ""
+
+#: src/lifesim_lib/const.py:734
+msgid "@InstagramM0del"
+msgstr ""
+
+#: src/lifesim_lib/const.py:735
+msgid "@baeconandeggz"
+msgstr ""
+
+#: src/lifesim_lib/const.py:736
+msgid "@look_mom"
+msgstr ""
+
+#: src/lifesim_lib/const.py:737
+msgid "@botaccount"
+msgstr ""
+
+#: src/lifesim_lib/const.py:738
+msgid "@QuarQueen"
+msgstr ""
+
+#: src/lifesim_lib/const.py:739
+msgid "@Reese_Withoutaspoon"
+msgstr ""
+
+#: src/lifesim_lib/const.py:740
+msgid "@ReeseWithafork"
+msgstr ""
+
+#: src/lifesim_lib/const.py:741
+msgid "@ImageNotUploaded"
+msgstr ""
+
+#: src/lifesim_lib/const.py:742
+msgid "@No_Feet_Pics"
+msgstr ""
+
+#: src/lifesim_lib/const.py:743
+msgid "@wherearethetomatoes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:744
+msgid "@TequilaMockingbird"
+msgstr ""
+
+#: src/lifesim_lib/const.py:745
+msgid "@the_other_name_were_taken"
+msgstr ""
+
+#: src/lifesim_lib/const.py:746
+msgid "@not_my_first_choice"
+msgstr ""
+
+#: src/lifesim_lib/const.py:747
+msgid "@PaintMeLikeOneOfYourFrenchGirls"
+msgstr ""
+
+#: src/lifesim_lib/const.py:748
+msgid "@Hot_Name_Here"
+msgstr ""
+
+#: src/lifesim_lib/const.py:749
+msgid "@InstagramHubby"
+msgstr ""
+
+#: src/lifesim_lib/const.py:750
+msgid "@BasicBeach"
+msgstr ""
+
+#: src/lifesim_lib/const.py:751
+msgid "@thot_patrol"
+msgstr ""
+
+#: src/lifesim_lib/const.py:752
+msgid "@my_anaconda_does"
 msgstr ""
 
 #: src/lifesim_lib/const.py:753
-msgid "Hillary Clinton"
+msgid "@kim_chi"
+msgstr ""
+
+#: src/lifesim_lib/const.py:754
+msgid "@username_copied"
+msgstr ""
+
+#: src/lifesim_lib/const.py:755
+msgid "@Ariana_Grandes_Ponytail"
 msgstr ""
 
 #: src/lifesim_lib/const.py:756
-msgid "Jenna Jameson"
+msgid "@definitely_not_an_athlete"
 msgstr ""
 
-#: src/lifesim_lib/const.py:767 src/lifesim_lib/const.py:773
-msgid "Catherine Middleton, Princess of Wales"
+#: src/lifesim_lib/const.py:757
+msgid "@will_pay_extra_for_guac"
+msgstr ""
+
+#: src/lifesim_lib/const.py:758
+msgid "@not_my_1st_rodeo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:759
+msgid "@coolshirtbra"
+msgstr ""
+
+#: src/lifesim_lib/const.py:760
+msgid "@DMmeforcompliments"
+msgstr ""
+
+#: src/lifesim_lib/const.py:761
+msgid "@baecon"
+msgstr ""
+
+#: src/lifesim_lib/const.py:762
+msgid "@boneappleteeth"
+msgstr ""
+
+#: src/lifesim_lib/const.py:763
+msgid "@valid8me"
+msgstr ""
+
+#: src/lifesim_lib/const.py:764
+msgid "@personallyvictimizedbyreginageorge"
+msgstr ""
+
+#: src/lifesim_lib/const.py:765
+msgid "@been_there_done_that"
+msgstr ""
+
+#: src/lifesim_lib/const.py:766
+msgid "@hi_future_employers"
+msgstr ""
+
+#: src/lifesim_lib/const.py:767
+msgid "@chalametbmybae"
+msgstr ""
+
+#: src/lifesim_lib/const.py:768
+msgid "@NorthWestsAssistant"
+msgstr ""
+
+#: src/lifesim_lib/const.py:769
+msgid "@hotgirlbummer"
+msgstr ""
+
+#: src/lifesim_lib/const.py:774
+msgid "you look sinister"
 msgstr ""
 
 #: src/lifesim_lib/const.py:775
-msgid "Pippa Middleton"
-msgstr ""
-
-#: src/lifesim_lib/const.py:794
-msgid "an airport"
-msgstr ""
-
-#: src/lifesim_lib/const.py:795
-msgid "an airfield"
-msgstr ""
-
-#: src/lifesim_lib/const.py:796
-msgid "an alleyway"
-msgstr ""
-
-#: src/lifesim_lib/const.py:797
-msgid "an ambulance station"
-msgstr ""
-
-#: src/lifesim_lib/const.py:798
-msgid "an apartment building"
-msgstr ""
-
-#: src/lifesim_lib/const.py:799
-msgid "an aquarium"
-msgstr ""
-
-#: src/lifesim_lib/const.py:800
-msgid "an arcade"
-msgstr ""
-
-#: src/lifesim_lib/const.py:801
-msgid "an art gallery"
-msgstr ""
-
-#: src/lifesim_lib/const.py:802
-msgid "an avenue"
-msgstr ""
-
-#: src/lifesim_lib/const.py:803
-msgid "a bakery"
-msgstr ""
-
-#: src/lifesim_lib/const.py:804
-msgid "a bank"
-msgstr ""
-
-#: src/lifesim_lib/const.py:805
-msgid "a bar"
-msgstr ""
-
-#: src/lifesim_lib/const.py:806
-msgid "a barber shop"
-msgstr ""
-
-#: src/lifesim_lib/const.py:807
-msgid "a beauty salon"
-msgstr ""
-
-#: src/lifesim_lib/const.py:808
-msgid "a bed & breakfast"
-msgstr ""
-
-#: src/lifesim_lib/const.py:809
-msgid "a bicycle rental stand"
-msgstr ""
-
-#: src/lifesim_lib/const.py:810
-msgid "a billboard"
-msgstr ""
-
-#: src/lifesim_lib/const.py:811
-msgid "a bookstore"
-msgstr ""
-
-#: src/lifesim_lib/const.py:812
-msgid "a boulevard"
-msgstr ""
-
-#: src/lifesim_lib/const.py:813
-msgid "a bowling alley"
-msgstr ""
-
-#: src/lifesim_lib/const.py:814
-msgid "a bridge"
-msgstr ""
-
-#: src/lifesim_lib/const.py:815
-msgid "a bus stop"
-msgstr ""
-
-#: src/lifesim_lib/const.py:816
-msgid "a butcher's shop"
-msgstr ""
-
-#: src/lifesim_lib/const.py:817
-msgid "a cafe"
-msgstr ""
-
-#: src/lifesim_lib/const.py:818
-msgid "a canal"
-msgstr ""
-
-#: src/lifesim_lib/const.py:819
-msgid "a church"
-msgstr ""
-
-#: src/lifesim_lib/const.py:820
-msgid "City Hall"
-msgstr ""
-
-#: src/lifesim_lib/const.py:821
-msgid "a clinic"
-msgstr ""
-
-#: src/lifesim_lib/const.py:822
-msgid "a coffee shop"
-msgstr ""
-
-#: src/lifesim_lib/const.py:823
-msgid "a college"
-msgstr ""
-
-#: src/lifesim_lib/const.py:824
-msgid "a community centre"
-msgstr ""
-
-#: src/lifesim_lib/const.py:825
-msgid "a community gardens"
-msgstr ""
-
-#: src/lifesim_lib/const.py:826
-msgid "a concert hall"
-msgstr ""
-
-#: src/lifesim_lib/const.py:827
-msgid "a condominium"
-msgstr ""
-
-#: src/lifesim_lib/const.py:828
-msgid "a construction site"
-msgstr ""
-
-#: src/lifesim_lib/const.py:829
-msgid "a convenience store"
-msgstr ""
-
-#: src/lifesim_lib/const.py:830
-msgid "a court"
-msgstr ""
-
-#: src/lifesim_lib/const.py:831
-msgid "a cycle highway"
-msgstr ""
-
-#: src/lifesim_lib/const.py:832
-msgid "a daycare centre"
-msgstr ""
-
-#: src/lifesim_lib/const.py:833
-msgid "a dentist"
-msgstr ""
-
-#: src/lifesim_lib/const.py:834
-msgid "a department store"
-msgstr ""
-
-#: src/lifesim_lib/const.py:835
-msgid "a dock"
-msgstr ""
-
-#: src/lifesim_lib/const.py:836
-msgid "the docks"
-msgstr ""
-
-#: src/lifesim_lib/const.py:837
-msgid "a doctor's office"
-msgstr ""
-
-#: src/lifesim_lib/const.py:838
-msgid "some drainage infrastructure"
-msgstr ""
-
-#: src/lifesim_lib/const.py:839
-msgid "a dry cleaner"
-msgstr ""
-
-#: src/lifesim_lib/const.py:840
-msgid "an embassy"
-msgstr ""
-
-#: src/lifesim_lib/const.py:841
-msgid "a factory"
-msgstr ""
-
-#: src/lifesim_lib/const.py:842
-msgid "a fire hydrant"
-msgstr ""
-
-#: src/lifesim_lib/const.py:843
-msgid "a fire station"
-msgstr ""
-
-#: src/lifesim_lib/const.py:844
-msgid "a flower shop"
-msgstr ""
-
-#: src/lifesim_lib/const.py:845
-msgid "a garbage facility"
-msgstr ""
-
-#: src/lifesim_lib/const.py:846
-msgid "a garden"
-msgstr ""
-
-#: src/lifesim_lib/const.py:847
-msgid "a gardens"
-msgstr ""
-
-#: src/lifesim_lib/const.py:848
-msgid "a government building"
-msgstr ""
-
-#: src/lifesim_lib/const.py:849
-msgid "a green-roof"
-msgstr ""
-
-#: src/lifesim_lib/const.py:850
-msgid "a grocery store"
-msgstr ""
-
-#: src/lifesim_lib/const.py:851
-msgid "a greengrocer"
-msgstr ""
-
-#: src/lifesim_lib/const.py:852
-msgid "a gym"
-msgstr ""
-
-#: src/lifesim_lib/const.py:853
-msgid "a gymnasium"
-msgstr ""
-
-#: src/lifesim_lib/const.py:854
-msgid "a harbour"
-msgstr ""
-
-#: src/lifesim_lib/const.py:855
-msgid "the harbour"
-msgstr ""
-
-#: src/lifesim_lib/const.py:856
-msgid "a highway"
-msgstr ""
-
-#: src/lifesim_lib/const.py:857
-msgid "a historical building"
-msgstr ""
-
-#: src/lifesim_lib/const.py:858
-msgid "a historical site"
-msgstr ""
-
-#: src/lifesim_lib/const.py:859
-msgid "a hospital"
-msgstr ""
-
-#: src/lifesim_lib/const.py:860
-msgid "a hotel"
-msgstr ""
-
-#: src/lifesim_lib/const.py:861
-msgid "a house"
-msgstr ""
-
-#: src/lifesim_lib/const.py:862
-msgid "a jail"
-msgstr ""
-
-#: src/lifesim_lib/const.py:863
-msgid "a karaoke bar"
-msgstr ""
-
-#: src/lifesim_lib/const.py:864
-msgid "a karaoke lounge"
-msgstr ""
-
-#: src/lifesim_lib/const.py:865
-msgid "a landmark"
-msgstr ""
-
-#: src/lifesim_lib/const.py:866
-msgid "a laundromat"
-msgstr ""
-
-#: src/lifesim_lib/const.py:867
-msgid "a library"
-msgstr ""
-
-#: src/lifesim_lib/const.py:868
-msgid "a linear park"
-msgstr ""
-
-#: src/lifesim_lib/const.py:869
-msgid "a market"
-msgstr ""
-
-#: src/lifesim_lib/const.py:870
-msgid "the markets"
-msgstr ""
-
-#: src/lifesim_lib/const.py:871
-msgid "a mixed-use building"
-msgstr ""
-
-#: src/lifesim_lib/const.py:872
-msgid "a mixed-use street"
-msgstr ""
-
-#: src/lifesim_lib/const.py:873
-msgid "a monument"
-msgstr ""
-
-#: src/lifesim_lib/const.py:874
-msgid "a movie theatre"
-msgstr ""
-
-#: src/lifesim_lib/const.py:875
-msgid "a museum"
-msgstr ""
-
-#: src/lifesim_lib/const.py:876
-msgid "a nature reserve"
-msgstr ""
-
-#: src/lifesim_lib/const.py:877
-msgid "a newspaper office"
-msgstr ""
-
-#: src/lifesim_lib/const.py:878
-msgid "some night architecture"
-msgstr ""
-
-#: src/lifesim_lib/const.py:879
-msgid "a nightclub"
-msgstr ""
-
-#: src/lifesim_lib/const.py:880
-msgid "a nursery school"
-msgstr ""
-
-#: src/lifesim_lib/const.py:881
-msgid "a nursing home"
-msgstr ""
-
-#: src/lifesim_lib/const.py:882
-msgid "an observatory"
-msgstr ""
-
-#: src/lifesim_lib/const.py:883
-msgid "an office building"
-msgstr ""
-
-#: src/lifesim_lib/const.py:884
-msgid "an opera house"
-msgstr ""
-
-#: src/lifesim_lib/const.py:885
-msgid "some outdoor seating"
-msgstr ""
-
-#: src/lifesim_lib/const.py:886
-msgid "a park"
-msgstr ""
-
-#: src/lifesim_lib/const.py:887
-msgid "a patisserie"
-msgstr ""
-
-#: src/lifesim_lib/const.py:888
-msgid "some pedestrian infrastructure"
+msgid "your thoughts are absurd"
 msgstr ""
 
 #: src/lifesim_lib/const.py:889
-msgid "a performance theatre"
-msgstr ""
-
-#: src/lifesim_lib/const.py:890
-msgid "a pharmacist"
-msgstr ""
-
-#: src/lifesim_lib/const.py:891
-msgid "a place of worship"
+msgid "The Dictionary"
 msgstr ""
 
 #: src/lifesim_lib/const.py:892
-msgid "a play street"
+msgid "Where the Wild Things Are"
 msgstr ""
 
 #: src/lifesim_lib/const.py:893
-msgid "a playground"
+msgid "Goodnight Moon"
 msgstr ""
 
 #: src/lifesim_lib/const.py:894
-msgid "a police station"
+msgid "Brown Bear, Brown Bear, What Do You See?"
 msgstr ""
 
 #: src/lifesim_lib/const.py:895
-msgid "a port"
+msgid "The Snowy Day"
 msgstr ""
 
 #: src/lifesim_lib/const.py:896
-msgid "the port"
+msgid "If You Give A Mouse A Cookie"
 msgstr ""
 
 #: src/lifesim_lib/const.py:897
-msgid "a post office"
+msgid "Stellaluna"
 msgstr ""
 
 #: src/lifesim_lib/const.py:898
-msgid "a prison"
-msgstr ""
-
-#: src/lifesim_lib/const.py:899
-msgid "a product showroom"
-msgstr ""
-
-#: src/lifesim_lib/const.py:900
-msgid "a pub"
-msgstr ""
-
-#: src/lifesim_lib/const.py:901
-msgid "a public bath"
-msgstr ""
-
-#: src/lifesim_lib/const.py:902
-msgid "a public pool"
-msgstr ""
-
-#: src/lifesim_lib/const.py:903
-msgid "a public square"
-msgstr ""
-
-#: src/lifesim_lib/const.py:904
-msgid "a public toilet"
-msgstr ""
-
-#: src/lifesim_lib/const.py:905
-msgid "a radio station"
-msgstr ""
-
-#: src/lifesim_lib/const.py:906
-msgid "a recreation centre"
-msgstr ""
-
-#: src/lifesim_lib/const.py:907
-msgid "a recreation facility"
-msgstr ""
-
-#: src/lifesim_lib/const.py:908
-msgid "some remarkable architecture"
-msgstr ""
-
-#: src/lifesim_lib/const.py:909
-msgid "a restaurant"
-msgstr ""
-
-#: src/lifesim_lib/const.py:910
-msgid "a river"
-msgstr ""
-
-#: src/lifesim_lib/const.py:911
-msgid "a school"
+msgid "The Very Hungry Caterpillar"
 msgstr ""
 
 #: src/lifesim_lib/const.py:912
-msgid "the sewers"
-msgstr ""
-
-#: src/lifesim_lib/const.py:913
-msgid "a shopping centre"
-msgstr ""
-
-#: src/lifesim_lib/const.py:914
-msgid "a shopping mall"
-msgstr ""
-
-#: src/lifesim_lib/const.py:915
-msgid "a shop"
-msgstr ""
-
-#: src/lifesim_lib/const.py:916
-msgid "a skating rink"
-msgstr ""
-
-#: src/lifesim_lib/const.py:917
-msgid "a skyscraper"
-msgstr ""
-
-#: src/lifesim_lib/const.py:918
-msgid "a spa"
-msgstr ""
-
-#: src/lifesim_lib/const.py:919
-msgid "a sports facility"
-msgstr ""
-
-#: src/lifesim_lib/const.py:920
-msgid "a sports shop"
-msgstr ""
-
-#: src/lifesim_lib/const.py:921
-msgid "a sports stadium"
-msgstr ""
-
-#: src/lifesim_lib/const.py:922
-msgid "a sports store"
-msgstr ""
-
-#: src/lifesim_lib/const.py:923
-msgid "a stadium"
-msgstr ""
-
-#: src/lifesim_lib/const.py:924
-msgid "a stream"
-msgstr ""
-
-#: src/lifesim_lib/const.py:925
-msgid "a street"
-msgstr ""
-
-#: src/lifesim_lib/const.py:926
-msgid "some street art"
-msgstr ""
-
-#: src/lifesim_lib/const.py:927
-msgid "a street food vendor"
+msgid "Big Boy's Little Adventure"
 msgstr ""
 
 #: src/lifesim_lib/const.py:928
-msgid "a street vendor"
+msgid "the hierarchy of licorice"
 msgstr ""
 
 #: src/lifesim_lib/const.py:929
-msgid "a street light"
+msgid "which is better, Star Wars or Star Trek"
 msgstr ""
 
 #: src/lifesim_lib/const.py:930
-msgid "some street lights"
+msgid "which is better, Coke or Pepsi"
 msgstr ""
 
 #: src/lifesim_lib/const.py:931
-msgid "a strip of shops"
+msgid "which is better, Lord of the Rings or Harry Potter"
 msgstr ""
 
 #: src/lifesim_lib/const.py:932
-msgid "a subway station"
+msgid "who is better, the Red Sox or Yankees"
 msgstr ""
 
 #: src/lifesim_lib/const.py:933
-msgid "a swimming pool"
+msgid "who will win the Monaco Grand Prix"
 msgstr ""
 
 #: src/lifesim_lib/const.py:934
-msgid "a taxi stand"
+msgid "how it's illegal to masturbate in Indonesia"
 msgstr ""
 
 #: src/lifesim_lib/const.py:935
-msgid "a technology centre"
+msgid "whether you would rather live without music or television"
 msgstr ""
 
 #: src/lifesim_lib/const.py:936
-msgid "some tech infrastructure"
+msgid "why mannequins have erect nipples"
 msgstr ""
 
 #: src/lifesim_lib/const.py:937
-msgid "a television station"
-msgstr ""
-
-#: src/lifesim_lib/const.py:938
-msgid "a tennis court"
-msgstr ""
-
-#: src/lifesim_lib/const.py:939
-msgid "a temple"
+msgid "Angleina Jolie's lips"
 msgstr ""
 
 #: src/lifesim_lib/const.py:940
-msgid "a synagogue"
+msgid "choo-choo trains, and then both made baby noises at each other"
+msgstr ""
+
+#: src/lifesim_lib/const.py:941
+msgid "why 'A' is for 'Apple'"
+msgstr ""
+
+#: src/lifesim_lib/const.py:942
+msgid "the fluffy pussy cat"
+msgstr ""
+
+#: src/lifesim_lib/const.py:943
+msgid "Thomas the Tank Engine"
+msgstr ""
+
+#: src/lifesim_lib/const.py:944
+msgid "Dinosaur Train"
+msgstr ""
+
+#: src/lifesim_lib/const.py:945
+msgid "Alphablocks"
+msgstr ""
+
+#: src/lifesim_lib/const.py:946
+msgid "Sesame street"
+msgstr ""
+
+#: src/lifesim_lib/const.py:947
+msgid "Mickey Mouse"
+msgstr ""
+
+#: src/lifesim_lib/const.py:948
+msgid "'O' is for 'Owl'"
+msgstr ""
+
+#: src/lifesim_lib/const.py:949
+msgid "'O' is for 'Octopus'"
+msgstr ""
+
+#: src/lifesim_lib/const.py:950
+msgid "'O' is for 'Orange'"
+msgstr ""
+
+#: src/lifesim_lib/const.py:951
+msgid "three blind mice"
+msgstr ""
+
+#: src/lifesim_lib/const.py:954
+msgid "how much you hate vegetables"
 msgstr ""
 
 #: src/lifesim_lib/const.py:955
-msgid "a dimwit"
+msgid "how scary the toilet is when it gets flushed"
 msgstr ""
 
 #: src/lifesim_lib/const.py:956
-msgid "a dork"
+msgid "the meaning of life"
 msgstr ""
 
 #: src/lifesim_lib/const.py:957
-msgid "a douchebag"
+msgid "which super power you would most like to have"
 msgstr ""
 
 #: src/lifesim_lib/const.py:958
-msgid "a dummy"
+msgid "which super power they would most like to have"
 msgstr ""
 
 #: src/lifesim_lib/const.py:959
-msgid "a dunce"
+msgid "what they want to be when they grow up"
 msgstr ""
 
 #: src/lifesim_lib/const.py:960
-msgid "a fatty"
+msgid "where water goes when the toilet gets flushed"
 msgstr ""
 
 #: src/lifesim_lib/const.py:961
-msgid "a freak"
+msgid "why the sky is blue"
 msgstr ""
 
-#: src/lifesim_lib/const.py:962
-msgid "a goblin"
+#: src/lifesim_lib/const.py:962 src/lifesim_lib/const.py:1176
+msgid "your favourite movie character"
 msgstr ""
 
 #: src/lifesim_lib/const.py:963
-msgid "a jerk"
-msgstr ""
-
-#: src/lifesim_lib/const.py:964
-msgid "a jumpoff"
-msgstr ""
-
-#: src/lifesim_lib/const.py:965
-msgid "a lamebrain"
-msgstr ""
-
-#: src/lifesim_lib/const.py:966
-msgid "a loser"
-msgstr ""
-
-#: src/lifesim_lib/const.py:967
-msgid "a maniac"
-msgstr ""
-
-#: src/lifesim_lib/const.py:968
-msgid "a mouth-breather"
-msgstr ""
-
-#: src/lifesim_lib/const.py:969
-msgid "a pig"
-msgstr ""
-
-#: src/lifesim_lib/const.py:970
-msgid "a pumpkinhead"
-msgstr ""
-
-#: src/lifesim_lib/const.py:971
-msgid "a punk"
-msgstr ""
-
-#: src/lifesim_lib/const.py:972
-msgid "a scallywag"
-msgstr ""
-
-#: src/lifesim_lib/const.py:973
-msgid "a simpleton"
-msgstr ""
-
-#: src/lifesim_lib/const.py:974
-msgid "a snake"
-msgstr ""
-
-#: src/lifesim_lib/const.py:975
-msgid "a tool"
-msgstr ""
-
-#: src/lifesim_lib/const.py:976
-msgid "a tramp"
-msgstr ""
-
-#: src/lifesim_lib/const.py:977
-msgid "a triple-chin"
-msgstr ""
-
-#: src/lifesim_lib/const.py:978
-msgid "a twat"
-msgstr ""
-
-#: src/lifesim_lib/const.py:979
-msgid "a twit"
-msgstr ""
-
-#: src/lifesim_lib/const.py:980
-msgid "a villain"
-msgstr ""
-
-#: src/lifesim_lib/const.py:981
-msgid "a vulture"
-msgstr ""
-
-#: src/lifesim_lib/const.py:982
-msgid "a weasel"
-msgstr ""
-
-#: src/lifesim_lib/const.py:983
-msgid "an abomination to mankind"
-msgstr ""
-
-#: src/lifesim_lib/const.py:984
-msgid "an airhead"
-msgstr ""
-
-#: src/lifesim_lib/const.py:985
-msgid "an idiot"
-msgstr ""
-
-#: src/lifesim_lib/const.py:986
-msgid "an imbecile"
+msgid "your least favourite chore"
 msgstr ""
 
 #: src/lifesim_lib/const.py:987
-msgid "awful"
+msgid "why cats are better than dogs"
 msgstr ""
 
 #: src/lifesim_lib/const.py:988
-msgid "brainless"
+msgid "why dogs are better than cats"
 msgstr ""
 
 #: src/lifesim_lib/const.py:989
-msgid "careless"
+msgid "the Russia-Ukraine War"
 msgstr ""
 
 #: src/lifesim_lib/const.py:990
-msgid "dumb"
+msgid "High Fuel Prices"
 msgstr ""
 
 #: src/lifesim_lib/const.py:991
-msgid "evil"
+msgid "the Metaverse"
 msgstr ""
 
 #: src/lifesim_lib/const.py:992
-msgid "foolhardy"
+msgid "the Economic crisis of Sri Lanka"
 msgstr ""
 
 #: src/lifesim_lib/const.py:993
-msgid "mediocre at best"
+msgid "Moonlighting"
 msgstr ""
 
 #: src/lifesim_lib/const.py:994
-msgid "mentally defective"
+msgid "the Pros and Cons of working from home"
 msgstr ""
 
 #: src/lifesim_lib/const.py:995
-msgid "nasty"
+msgid "whether people should invest in cryptocurrency"
 msgstr ""
 
 #: src/lifesim_lib/const.py:996
-msgid "obtuse"
+msgid "the Biomedical waste crisis"
 msgstr ""
 
 #: src/lifesim_lib/const.py:997
-msgid "psycho"
+msgid "the impact of 5G on the global economy"
 msgstr ""
 
 #: src/lifesim_lib/const.py:998
-msgid "putrid"
+msgid "how to prevent the next pandemic"
 msgstr ""
 
 #: src/lifesim_lib/const.py:999
-msgid "skeezy"
+msgid "the impact of COVID-19 on the global economy"
 msgstr ""
 
 #: src/lifesim_lib/const.py:1000
-msgid "stupid"
+msgid "the pros and cons of block chain technology"
 msgstr ""
 
 #: src/lifesim_lib/const.py:1001
-msgid "trashy"
+msgid "the role of social media in international politics"
 msgstr ""
 
 #: src/lifesim_lib/const.py:1002
-msgid "weak"
+msgid "how to end the threat of nuclear war"
 msgstr ""
 
 #: src/lifesim_lib/const.py:1003
+msgid "the impact of COVID-19 on the education sector"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1004
+msgid "Taliban rule in Afghanistan"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1005
+msgid "the rise of the gig economy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1006
+msgid "the harms of passive smoking"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1007
+msgid "the advantages and disadvantages of having a credit card"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1008
+msgid "whether software should be free for everyone"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1009
+msgid "whether gambling should be allowed from the age of 16"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1010
+msgid "problems caused by the economic boycott in Cuba"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1011
+msgid "how international trade barriers work"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1012
+msgid "how the United Nations is based on diplomacy and strengthening relationships"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1013
+msgid "whether or not public schools are safe enough"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1014
+msgid "whether it is necessary to hold value in what you argue"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1015
+msgid "why drink driving is dangerous"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1016
+msgid "how India became such a large milk producer"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1017
+msgid "how to make money with recycling"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1018
+msgid "the decreasing productivity of the Japanese workforce"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1019
+msgid "a business model to help health-conscious customers"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1020
+msgid "what the best technologies are to safeguard the right of free speech on the internet"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1021
+msgid "what the best technologies are to safeguard the right of privacy on the internet"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1022
+msgid "how to check for the signs of burnout"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1023
+msgid "how to overcome the coal crisis in India"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1024
+msgid "the causes of bullying in schools"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1025
+msgid "why we should have a minimum wage"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1026
+msgid "whether universal basic income is a good idea"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1027
+msgid "the leadership changes needed in our country"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1028
+msgid "whether empowering women is the solution to violence against women"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1029
+msgid "the effects of communalism on social cohesion"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1030
+msgid "whether we're becoming too sensitive in society"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1031
+msgid "lessons for the world from the COVID-19 pandemic"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1032
+msgid "whether crime rates increase because of unemployment"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1033
+msgid "causes of poverty around the world"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1034
+msgid "the effects of the Internet of Things on our lives"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1035
+msgid "whether drug abuse is rampant among teenagers"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1036
+msgid "whether anemia effects urban society"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1037
+msgid "gender equality in the workplace"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1038
+msgid "whether the wealthy should be taxed more"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1039
+msgid "whether the poor should be given more assistance"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1040
+msgid "whether it is possible to maintain a work-life balance"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1041
+msgid "whether saying 'women make good managers' is sexist like saying 'asians are good at maths' is racist"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1042
+msgid "whether job creators are needed more than job seekers"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1043
+msgid "whether a borderless world is a myth or a reality"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1044
+msgid "what would happen if Bitcoin crashed to zero and whether it is possible"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1045
+msgid "business ethics in today's market compared with the past and the potential future"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1046
+msgid "whether patience is important in business and management"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1047
+msgid "whether the family-run business is relevant in today's market"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1048
+msgid "whether E-commerce discounts are harmful in the long run and is it the business or customer being harmed"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1049
+msgid "whether globalisation is an opportunity or a threat"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1050
+msgid "how markets are found and not created"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1051
+msgid "whether the world is ready for a cashless society"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1052
+msgid "whether physical infrastructure is the answer to social equality"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1053
+msgid "whether the public sector being a guarantor of job security is a myth"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1054
+msgid "whether a circular economy is key to sustainable development"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1055
+msgid "the contribution of the Indian IT industry to the US and global economy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1056
+msgid "whether democracy is a hindrance to economic reforms in India"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1057
+msgid "the technology behind Zero Budget Natural Farming"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1058
+msgid "the effects of technological change on jobs"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1059
+msgid "whether pervasive technology is creating a generation of cyber zombies"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1060
+msgid "whether the IT industry will create more or less jobs in the future"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1061
+msgid "whether artificial intelligence can replace human intelligence"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1062
+msgid "the effects of big data on information privacy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1063
+msgid "whether automation will create more or less jobs"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1064
+msgid "the benefits and challenges of data localisation"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1065
+msgid "whether artifical intelligence will change the future"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1066
+msgid "how technology can be used to tackle financial crimes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1067
+msgid "whether polythene bags should be completely banned"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1068
+msgid "how to control air pollution levels"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1069
+msgid "whether green jobs are essential for sustainable development"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1070
+msgid "how to manage natural disasters"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1071
+msgid "how to manage financial disasters"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1072
+msgid "methods of disaster recovery"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1073
+msgid "the effects of Coronaviruses on the environment"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1074
+msgid "whether smart farming is the future of agriculture"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1075
+msgid "whether genetic engineering in agriculture is good or bad"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1076
+msgid "the effects of climate on the farming system and food supply"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1077
+msgid "whether automation in farming is good"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1078
+msgid "whether collective farming is a boon or a bane"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1079
+msgid "our views on natural versus factory farming"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1080
+msgid "our views on conventional farming and organic farming"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1081
+msgid "the role of women in agriculture"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1082
+msgid "whether agroforestry destroys the environment"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1083
+msgid "gay marriage and your views on it"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1084
+msgid "whether war is the best option to solve international disputes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1085
+msgid "whether primary school children should be allowed to own mobile phones"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1086
+msgid "whether using animals for medical research should be allowed"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1087
+msgid "whether men and women will ever be equal, if they already are, and whether equality will last"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1088
+msgid "whether you can have a happy family life and a successful career at the same time"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1089
+msgid "whether marriage is an outdated institution"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1090
+msgid "whether citizens should be allowed to carry guns and other weapons"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1091
+msgid "whether the death penalty is acceptable for any reasons"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1092
+msgid "whether non-citizens and tourists should be allowed to vote in their country of residence"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1093
+msgid "whether sex education should be taught to children under 12"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1094
+msgid "whether or not women are paid the same as men"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1095
+msgid "whether bribery and corruption is acceptable in government"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1096
+msgid "whether bribery and corruption is acceptable in private business"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1097
+msgid "whether music that glorifies violence should be banned"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1098
+msgid "whether condoms should be distributed for free in primary schools"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1099
+msgid "whether nuclear weapons are necessary weapons"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1100
+msgid "whether teachers should be allowed to carry guns"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1101
+msgid "whether professional sports people earn too much money"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1102
+msgid "our views on whether or not beauty contests should be banned"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1103
+msgid "our views on whether or not cosmetic surgery should be outlawed"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1104
+msgid "our views on whether or not abortions are okay"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1105
+msgid "our views on whether or not social deprivation causes crime"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1106
+msgid "our views on whether or not military service should be compulsory"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1107
+msgid "our views on whether or not war is ever an option for solving international disputes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1108
+msgid "our views on whether or not torture can be acceptable in some cases"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1109
+msgid "our views on whether or not curfews keep teens out of trouble"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1110
+msgid "our views on whether or not we're becoming too dependent on computers"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1111
+msgid "our views on whether or not smoking should be banned worldwide"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1112
+msgid "our views on whether or not it should be illegal to ride a bicycle without a helmet"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1113
+msgid "our views on whether or not single sex schools are bad for childhood development and lead to unhealthy views of the opposite sex"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1114
+msgid "our views on whether or not homework is harmful"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1115
+msgid "our views on whether or not the United Nations is a failed organisation"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1116
+msgid "our views on whether or not intelligence tests should be given before couples can have children"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1117
+msgid "our views on whether or not a woman's place is in the home"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1118
+msgid "our views on whether or not it's a man's world"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1119
+msgid "our views on whether or not money makes you happy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1120
+msgid "our views on whether or not money can buy you happiness"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1121
+msgid "our views on whether or not the internet must be censored to protect society"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1122
+msgid "our views on whether or not genetically modified foods have no ill health effects"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1123
+msgid "our views on whether a man should have a wife for the family and a paramour for pleasure"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1124
+msgid "our views on whether a woman should have a husband for the family and a paramour for pleasure"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1125
+msgid "our views on whether soft drugs should be legalised"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1126
+msgid "our views on whether or not electric cars help the environment"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1127
+msgid "our views on whether or not staying unmarried leads to a happier life"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1128
+msgid "our views on whether or not software piracy is a real crime"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1129
+msgid "our views on whether or not religion is needed"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1130
+msgid "our views on whether veganism is the key to solving climate change"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1131
+msgid "our views on whether the police force is institutionally racist"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1132
+msgid "our views on whether democracy must be imposed on nations"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1133
+msgid "our views on whether the war in Iraq was justified"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1134
+msgid "our views on whether your race affects your intelligence"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1135
+msgid "our views on whether your race affects your sporting ability"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1136
+msgid "our views on whether the world is over populated and steps must be taken to reduce births"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1137
+msgid "whether or not euthanasia should be illegal"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1138
+msgid "whether or not cloning is a valuable scientific pursuit"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1139
+msgid "whether obesity is a disease and not a lifestyle choice"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1140
+msgid "whether or not video games contribute to youth violence"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1141
+msgid "whether the drinking age should be lowered"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1142
+msgid "whether the drinking age should be raised"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1143
+msgid "whether the smoking age should be lowered"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1144
+msgid "whether the smoking age should be raised"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1145
+msgid "whether the age of consent should be lowered"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1146
+msgid "whether the age of consent should be raised"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1147
+msgid "whether the voting age should be lowered"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1148
+msgid "whether the voting age should be raised"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1149
+msgid "whether the driving age should be lowered"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1150
+msgid "whether the driving age should be raised"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1151
+msgid "whether the gambling age should be lowered"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1152
+msgid "whether the gambling age should be raised"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1153
+msgid "whether the military service age should be lowered"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1154
+msgid "whether the military service age should be raised"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1155
+msgid "whether drugs should be accepted in sports"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1156
+msgid "whether self driving cars are going to make our lives easier"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1157
+msgid "whether climate change exists"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1158
+msgid "whether carbohydrates are more damaging than fats"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1159
+msgid "whether terrorism can be justifed"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1160
+msgid "whether or not street prostitution should be illegal"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1161
+msgid "whether or not prostitution in a brothel should be illegal"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1162
+msgid "whether or not prostituting yourself in your own home should be illegal"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1163
+msgid "whether prisoners should be allowed to vote"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1164
+msgid "whether prenuptual agreements make families stronger"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1165
+msgid "whether corporal punishment should be allowed in schools"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1171
+msgid "if it is better to scrunch or fold"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1172
+msgid "if it is better to squat or sit"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1173
+msgid "if it is better to shower or bath"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1174
+msgid "if it is better to wipe from the front or back"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1175
+msgid "if it is better to "
+msgstr ""
+
+#: src/lifesim_lib/const.py:1177
+msgid "your imaginary friend"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1178
+msgid "your most prized posession"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1185
+msgid "not spending enough time with your family"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1188
+msgid "the importance of not sucking your thumb"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1191
+msgid "not drawing on the kitchen table"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1194
+msgid "the importance of cleaning up after yourself"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1196
+msgid "the importance of saving for retirement"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1200
+msgid "the best gift you ever received"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1201
+msgid "your most bizarre pet peeves"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1202
+msgid "why you love your closest friends"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1203
+msgid "your favourite books to read at the beach"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1204
+msgid "your favourite foods to eat on a cold night"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1205
+msgid "your biggest turn offs in other people"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1206
+msgid "remembering the times when you've felt closest together"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1207
+msgid "what you would do if you knew you couldn't fail"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1208
+msgid "your favourite summertime memory"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1209
+msgid "something you've always wanted to try"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1210
+msgid "things you've always wanted to try"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1211
+msgid "a moment in history you would have liked to have been a part of"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1212
+msgid "how to manage money better"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1213
+msgid "where you would go if you could time travel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1214
+msgid "what superpower you would have if you could have one"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1215
+msgid "what you're feeling thankful for today"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1216
+msgid "how much they mean to you"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1217
+msgid "something that you know you don't need but you're really grateful you have"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1218
+msgid "your fears of not accomplishing your New Year resolutions"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1219
+msgid "how silly New Year's resolutions are"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1220
+msgid "the best part of your day"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1223
+msgid "what happens when we die"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1235 src/lifesim_lib/const.py:1287
+msgid "birdwatching"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1236
+msgid "to a cake baking class"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1237
+msgid "to a comic book store"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1238
+msgid "to a music festival"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1239
+msgid "to a yoga class"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1240
+msgid "to attend a juggling class"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1241
+msgid "to bring donuts to the police station"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1242 src/lifesim_lib/const.py:1264
+msgid "to build a sandcastle in a sandbox at the park"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1243
+msgid "to get cornrow braids"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1244
+msgid "to get henna tattoos"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1245
+msgid "to listen to a punk band"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1246
+msgid "to participate in a neighbourhood cleanup"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1247
+msgid "to the park to feed the ducks"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1250
+msgid "to practice sumo wrestling"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1251
+msgid "to play in the rain"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1252
+msgid "to toilet paper the neighbour's house"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1253
+msgid "to scare random people by jumping out of the bushes at a local park"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1254
+msgid "to make a wish while throwing a coing in a fountain"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1255 src/lifesim_lib/const.py:1300
+msgid "to watch toy unboxing videos"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1256
+msgid "to a café to play cards"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1257
+msgid "to watch a movie under the stars in the park"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1258
+msgid "to perform in a flash mob at the grocery store"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1259
+msgid "to fly a kite"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1260 src/lifesim_lib/const.py:1296
+msgid "to a rugby game"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1261
+msgid "to the circus"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1262
+msgid "longboarding"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1263
+msgid "to a Hindu temple"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1265
+msgid "to an escape room"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1266
+msgid "antiquing"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1267
+msgid "to write haikus"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1268
+msgid "to play in the sprinklers at the local park"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1269
+msgid "to play bingo at the community centre"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1270
+msgid "to an arcade"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1271
+msgid "to throw paper aeroplanes off the bleachers at the local high school"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1272
+msgid "to the water park"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1273
+msgid "to the aquarium to look at sharks"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1274
+msgid "to sing P!nk songs at karaoke night"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1275
+msgid "to the movies"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1276
+msgid "axe throwing"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1277
+msgid "to make home made mini pizzas"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1278
+msgid "to a painting class"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1279
+msgid "to have a random dance party in a public plaza"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1280
+msgid "to plant trees in the forest"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1281
+msgid "whale watching"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1282
+msgid "to make and pass out balloon animals at the park"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1283
+msgid "snowboarding"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1284
+msgid "to the park"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1285
+msgid "to graffiti train cars"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1286
+msgid "to learn origami at the community centre"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1288
+msgid "to the shooting range"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1289
+msgid "to do caricature drawings of random people in a public place"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1290
+msgid "yodelling"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1291
+msgid "deep sea fishing"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1292
+msgid "to a carnival"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1293
+msgid "to ding dong ditch the neighbours"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1294
+msgid "to parkour hardcore"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1295
+msgid "to watch a random trial at the municipal court"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1297
+msgid "to make selfies for Instagram"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1298
+msgid "to the museum"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1299
+msgid "to walk along a scenic vista"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1301
+msgid "to fly a drone"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1302
+msgid "to make a safety evacuation map"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1303
+msgid "horseback riding in the countryside"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1304
+msgid "to dinner"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1305
+msgid "to a puppet-making seminar"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1306
+msgid "to the symphony"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1311
+msgid "listened to hip-hop music with your"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1312
+msgid "listened to classical music with your"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1313
+msgid "made an obstacle course for your"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1314
+msgid "played with your"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1315
+msgid "used a laser pointer to play with your"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1316
+msgid "rolled a ball or yarn across the floor for your"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1326
+msgid "The Dominican Republic's forces have been withdrawn from Haiti, indicating an end to the war. In total, there were more than 10,000 casualties as a result of the conflict"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1331
+msgid "You weren't doing anything fun, but then your friend came over wanting to go out and play. You both had a blast!"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1354
+msgid "cat"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1355
+msgid "dog"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1356
+msgid "fish"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1360
+msgid "Abyssinian Cat"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1361
+msgid "America Shorthair Cat"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1362
+msgid "House Cat"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1363
+msgid "Tabby Cat"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1366
+msgid "Cairn Terrier"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1367
+msgid "German Shepherd"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1368
+msgid "Mutt"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1371
+msgid "Betta Fish"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1375 src/lifesim_lib/const.py:1590
+msgid "Oliver"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1376 src/lifesim_lib/const.py:1585
+msgid "Leo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1377 src/lifesim_lib/const.py:1581
+msgid "Milo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1378 src/lifesim_lib/const.py:1514
+#: src/lifesim_lib/const.py:1580 src/lifesim_lib/const.py:1724
+msgid "Charlie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1379 src/lifesim_lib/const.py:1579
+msgid "Max"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1380 src/lifesim_lib/const.py:1611
+msgid "Simba"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1381 src/lifesim_lib/const.py:1591
+msgid "Jack"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1382 src/lifesim_lib/const.py:1600
+msgid "Loki"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1383 src/lifesim_lib/const.py:1593
+msgid "Ollie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1384 src/lifesim_lib/const.py:1622
+msgid "Jasper"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1385 src/lifesim_lib/const.py:1582
+msgid "Buddy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1386 src/lifesim_lib/const.py:1549
+msgid "Smokey"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1387 src/lifesim_lib/const.py:1623
+msgid "Oscar"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1388 src/lifesim_lib/const.py:1594
+msgid "Toby"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1389 src/lifesim_lib/const.py:1567
+msgid "Tiger"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1390 src/lifesim_lib/const.py:1597
+msgid "Finn"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1391
+msgid "Simon"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1392 src/lifesim_lib/const.py:1558
+msgid "Binx"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1393 src/lifesim_lib/const.py:1598
+msgid "Louie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1394 src/lifesim_lib/const.py:1609
+msgid "Henry"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1395 src/lifesim_lib/const.py:1512
+#: src/lifesim_lib/const.py:1626
+msgid "Oreo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1396 src/lifesim_lib/const.py:1592
+msgid "Winston"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1397 src/lifesim_lib/const.py:1531
+msgid "Salem"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1398 src/lifesim_lib/const.py:1602
+msgid "Gus"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1399
+msgid "Felix"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1400
+msgid "Tigger"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1401 src/lifesim_lib/const.py:1583
+msgid "Rocky"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1402 src/lifesim_lib/const.py:1482
+msgid "Kitty"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1403 src/lifesim_lib/const.py:1638
+msgid "Sam"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1404 src/lifesim_lib/const.py:1587
+msgid "Teddy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1405 src/lifesim_lib/const.py:1605
+msgid "Apollo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1406 src/lifesim_lib/const.py:1554
+msgid "Blu"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1407 src/lifesim_lib/const.py:1641
+msgid "Gizmo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1408 src/lifesim_lib/const.py:1607
+msgid "Archie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1409 src/lifesim_lib/const.py:1595
+msgid "Jax"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1410 src/lifesim_lib/const.py:1584
+msgid "Bear"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1411 src/lifesim_lib/const.py:1561
+msgid "Boots"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1412 src/lifesim_lib/const.py:1540
+#: src/lifesim_lib/const.py:1646 src/lifesim_lib/const.py:1763
+msgid "Frankie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1413 src/lifesim_lib/const.py:1674
+msgid "Chester"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1414 src/lifesim_lib/const.py:1624
+msgid "Bandit"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1415 src/lifesim_lib/const.py:1589
+msgid "Beau"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1416 src/lifesim_lib/const.py:1508
+msgid "Pumpkin"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1417 src/lifesim_lib/const.py:1671
+msgid "Cosmo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1418 src/lifesim_lib/const.py:1563
+#: src/lifesim_lib/const.py:1616
+msgid "Lucky"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1419 src/lifesim_lib/const.py:1610
+msgid "Thor"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1420 src/lifesim_lib/const.py:1666
+msgid "Frank"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1421 src/lifesim_lib/const.py:1535
+msgid "Midnight"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1422 src/lifesim_lib/const.py:1620
+msgid "Benny"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1423
+msgid "Tom"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1424 src/lifesim_lib/const.py:1522
+msgid "Boo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1425
+msgid "Ash"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1426 src/lifesim_lib/const.py:1652
+msgid "Romeo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1427 src/lifesim_lib/const.py:1661
+msgid "Goose"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1428 src/lifesim_lib/const.py:1659
+msgid "Joey"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1429 src/lifesim_lib/const.py:1527
+msgid "Mochi"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1430 src/lifesim_lib/const.py:1650
+msgid "Ozzy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1431
+msgid "Merlin"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1432 src/lifesim_lib/const.py:1633
+msgid "Prince"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1433 src/lifesim_lib/const.py:1493
+#: src/lifesim_lib/const.py:1708
+msgid "Pepper"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1434 src/lifesim_lib/const.py:1645
+msgid "Bruce"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1435 src/lifesim_lib/const.py:1618
+msgid "Otis"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1436
+msgid "Harry"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1437
+msgid "Percy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1438 src/lifesim_lib/const.py:1536
+#: src/lifesim_lib/const.py:1656 src/lifesim_lib/const.py:1773
+msgid "Peanut"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1439 src/lifesim_lib/const.py:1532
+msgid "Bean"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1440 src/lifesim_lib/const.py:1588
+msgid "Tucker"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1441 src/lifesim_lib/const.py:1599
+msgid "Murphy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1442 src/lifesim_lib/const.py:1601
+msgid "Moose"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1443 src/lifesim_lib/const.py:1654
+msgid "Mac"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1444
+msgid "Kevin"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1445
+msgid "Casper"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1446 src/lifesim_lib/const.py:1617
+msgid "Buster"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1447 src/lifesim_lib/const.py:1789
+msgid "Bob"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1448
+msgid "Thomas"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1449 src/lifesim_lib/const.py:1619
+msgid "Jackson"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1450
+msgid "Sylvester"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1451 src/lifesim_lib/const.py:1615
+msgid "Jake"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1452
+msgid "Fred"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1453
+msgid "Mango"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1454
+msgid "Sunny"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1455 src/lifesim_lib/const.py:1606
+msgid "Hank"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1456 src/lifesim_lib/const.py:1655
+msgid "Bubba"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1457
+msgid "Calvin"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1458 src/lifesim_lib/const.py:1636
+#: src/lifesim_lib/const.py:1738
+msgid "Marley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1459 src/lifesim_lib/const.py:1499
+#: src/lifesim_lib/const.py:1630 src/lifesim_lib/const.py:1696
+msgid "Coco"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1460 src/lifesim_lib/const.py:1678
+msgid "Louis"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1461
+msgid "Tony"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1462
+msgid "Bagheera"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1463 src/lifesim_lib/const.py:1586
+msgid "Duke"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1464
+msgid "Clyde"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1465 src/lifesim_lib/const.py:1649
+msgid "Hunter"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1466 src/lifesim_lib/const.py:1518
+msgid "Mittens"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1467 src/lifesim_lib/const.py:1643
+msgid "Luke"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1468
+msgid "Nugget"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1469 src/lifesim_lib/const.py:1604
+msgid "Ace"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1470 src/lifesim_lib/const.py:1550
+#: src/lifesim_lib/const.py:1613 src/lifesim_lib/const.py:1740
+msgid "Scout"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1471
+msgid "Tito"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1472
+msgid "Monty"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1473 src/lifesim_lib/const.py:1675
+msgid "Wally"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1474
+msgid "Alex"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1477 src/lifesim_lib/const.py:1682
+msgid "Luna"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1478 src/lifesim_lib/const.py:1681
+msgid "Bella"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1479 src/lifesim_lib/const.py:1695
+msgid "Lily"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1480 src/lifesim_lib/const.py:1683
+msgid "Lucy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1481 src/lifesim_lib/const.py:1693
+msgid "Nala"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1483 src/lifesim_lib/const.py:1691
+msgid "Chloe"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1484 src/lifesim_lib/const.py:1689
+msgid "Stella"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1485 src/lifesim_lib/const.py:1716
+msgid "Zoe"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1486 src/lifesim_lib/const.py:1685
+msgid "Lola"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1487 src/lifesim_lib/const.py:1759
+msgid "Cleo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1488 src/lifesim_lib/const.py:1684
+msgid "Daisy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1489 src/lifesim_lib/const.py:1697
+msgid "Sophie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1490 src/lifesim_lib/const.py:1706
+msgid "Willow"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1491 src/lifesim_lib/const.py:1723
+msgid "Olive"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1492 src/lifesim_lib/const.py:1692
+msgid "Penny"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1494 src/lifesim_lib/const.py:1698
+msgid "Rosie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1495 src/lifesim_lib/const.py:1687
+msgid "Molly"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1496
+msgid "Kiki"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1497 src/lifesim_lib/const.py:1699
+msgid "Ellie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1498 src/lifesim_lib/const.py:1734
+msgid "Phoebe"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1500 src/lifesim_lib/const.py:1707
+msgid "Lulu"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1501 src/lifesim_lib/const.py:1733
+msgid "Princess"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1502 src/lifesim_lib/const.py:1690
+msgid "Maggie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1503 src/lifesim_lib/const.py:1701
+msgid "Piper"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1504 src/lifesim_lib/const.py:1705
+msgid "Millie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1505 src/lifesim_lib/const.py:1709
+msgid "Ginger"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1506 src/lifesim_lib/const.py:1713
+msgid "Nova"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1507 src/lifesim_lib/const.py:1721
+msgid "Hazel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1509 src/lifesim_lib/const.py:1700
+msgid "Ruby"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1510 src/lifesim_lib/const.py:1760
+msgid "Penelope"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1511 src/lifesim_lib/const.py:1768
+msgid "Fiona"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1513
+msgid "Baby"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1515 src/lifesim_lib/const.py:1712
+msgid "Winnie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1516 src/lifesim_lib/const.py:1743
+msgid "Minnie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1517 src/lifesim_lib/const.py:1711
+msgid "Abby"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1519 src/lifesim_lib/const.py:1747
+msgid "Poppy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1520 src/lifesim_lib/const.py:1737
+msgid "Cookie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1521 src/lifesim_lib/const.py:1754
+msgid "Ivy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1523 src/lifesim_lib/const.py:1703
+msgid "Roxy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1524 src/lifesim_lib/const.py:1732
+msgid "Belle"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1525 src/lifesim_lib/const.py:1736
+msgid "Ella"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1526
+msgid "Zelda"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1528
+msgid "Alice"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1529 src/lifesim_lib/const.py:1751
+msgid "Angel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1530 src/lifesim_lib/const.py:1735
+msgid "Emma"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1533
+msgid "Freya"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1534 src/lifesim_lib/const.py:1612
+#: src/lifesim_lib/const.py:1688
+msgid "Bailey"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1537 src/lifesim_lib/const.py:1746
+msgid "Leia"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1538
+msgid "Peaches"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1539 src/lifesim_lib/const.py:1756
+msgid "Gigi"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1541 src/lifesim_lib/const.py:1727
+msgid "Honey"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1542
+msgid "Violet"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1543
+msgid "Charlotte"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1544
+msgid "Olivia"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1545
+msgid "Sage"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1546
+msgid "Stormy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1547
+msgid "Kiwi"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1548 src/lifesim_lib/const.py:1761
+msgid "Bonnie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1551
+msgid "Arya"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1552
+msgid "Sushi"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1553 src/lifesim_lib/const.py:1764
+msgid "Sugar"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1555 src/lifesim_lib/const.py:1748
+msgid "Josie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1556
+msgid "Gypsy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1557 src/lifesim_lib/const.py:1755
+msgid "Mocha"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1559 src/lifesim_lib/const.py:1780
+msgid "Trixie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1560
+msgid "Snickers"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1562
+msgid "Iris"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1564 src/lifesim_lib/const.py:1719
+msgid "Lady"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1565
+msgid "Elsa"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1566
+msgid "Pixie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1568 src/lifesim_lib/const.py:1753
+msgid "Ava"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1569 src/lifesim_lib/const.py:1752
+msgid "Holly"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1570
+msgid "Tilly"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1571 src/lifesim_lib/const.py:1774
+msgid "Grace"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1572
+msgid "Opal"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1573
+msgid "Peach"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1574
+msgid "Muffin"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1575
+msgid "Maple"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1576
+msgid "Sally"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1596
+msgid "Blue"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1603
+msgid "Bruno"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1608
+msgid "Kobe"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1614
+msgid "Diesel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1621
+msgid "Chewy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1625
+msgid "Rex"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1627 src/lifesim_lib/const.py:1715
+msgid "Riley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1628
+msgid "Baxter"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1629
+msgid "Cody"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1631
+msgid "Rocco"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1632
+msgid "Tank"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1634
+msgid "Ranger"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1635
+msgid "King"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1637
+msgid "Roscoe"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1639
+msgid "Oakley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1640
+msgid "Copper"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1642
+msgid "Chase"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1644
+msgid "Boomer"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1647
+msgid "Chance"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1648
+msgid "Rusty"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1651
+msgid "Tyson"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1653
+msgid "Rudy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1657
+msgid "Kai"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1658
+msgid "Chico"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1660
+msgid "Atlas"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1662
+msgid "Samson"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1663
+msgid "Chief"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1664
+msgid "Levi"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1665
+msgid "Titan"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1667
+msgid "Axel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1668
+msgid "Brutus"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1669
+msgid "Ghost"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1670
+msgid "Brady"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1672
+msgid "Scooby"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1673
+msgid "Chip"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1676
+msgid "Rufus"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1677
+msgid "Dash"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1686
+msgid "Sadie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1694
+msgid "Zoey"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1702
+msgid "Mia"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1704
+msgid "Gracie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1710
+msgid "Harley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1714
+msgid "Kona"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1717
+msgid "Lilly"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1718
+msgid "Dixie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1720
+msgid "Izzy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1722
+msgid "Layla"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1725
+msgid "Sasha"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1726
+msgid "Maya"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1728
+msgid "Athena"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1729
+msgid "Lexi"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1730
+msgid "Cali"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1731
+msgid "Annie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1739
+msgid "Callie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1741
+msgid "Roxie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1742
+msgid "Remi"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1744
+msgid "Maddie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1745
+msgid "Dakota"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1749
+msgid "Harper"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1750
+msgid "Mila"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1757
+msgid "Paisley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1758
+msgid "Koda"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1762
+msgid "Missy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1765
+msgid "Aspen"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1766
+msgid "Xena"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1767
+msgid "Shelby"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1769
+msgid "Dolly"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1770
+msgid "Georgia"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1771
+msgid "Shadow"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1772
+msgid "Delilah"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1775
+msgid "Rose"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1776
+msgid "Skye"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1777
+msgid "Pearl"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1778
+msgid "Jasmine"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1779
+msgid "Juno"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1783
+msgid "Finneaus"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1784
+msgid "Fishy McFish"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1785
+msgid "Swimster"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1786
+msgid "Chips"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1787
+msgid "Caspian"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1788
+msgid "Ripley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1790
+msgid "Bubbles"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1791
+msgid "Bigmouth"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1792
+msgid "Swimzell"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1793
+msgid "Swim Shady"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1794
+msgid "Bigmouth Billy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1795
+msgid "Squirtle"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1796
+msgid "Long John Silver"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1797
+msgid "Mr. Ray"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1798
+msgid "Captain Morgan"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1799
+msgid "Betta White"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1800
+msgid "Small Fry"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1801
+msgid "Tuna Piano"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1802
+msgid "Harvey"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1811
+msgid "Alex Pettyfer"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1812
+msgid "Ashton Kutcher"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1813
+msgid "Adam Brody"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1814
+msgid "Andrew Garfield"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1815
+msgid "Alexander Skarsgård"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1816
+msgid "Austin Nichols"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1817
+msgid "Allan Hyde"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1818
+msgid "Adam Garcia"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1819 src/lifesim_lib/const.py:1912
+#: src/lifesim_lib/const.py:1943 src/lifesim_lib/const.py:1949
+#: src/lifesim_lib/const.py:1961
+msgid "Arnold Schwarzenegger"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1820
+msgid "Ben McKenzie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1821
+msgid "Bryan Greenberg"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1822 src/lifesim_lib/const.py:1950
+msgid "Brad Pitt"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1823
+msgid "Bradley Cooper"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1824
+msgid "Channing Tatum"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1825
+msgid "Clive Owen"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1826
+msgid "Chace Crawford"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1827
+msgid "Cam Gigandet"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1828
+msgid "Chris Brown"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1829
+msgid "Chris Pine"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1830
+msgid "Chad Michael Murray"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1831
+msgid "Columbus Short"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1832
+msgid "Christian Bale"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1833
+msgid "Casey Affleck"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1834
+msgid "Cillian Murphy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1835
+msgid "Daniel Craig"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1836 src/lifesim_lib/const.py:1913
+msgid "David Beckham"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1837
+msgid "Ed Westwick"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1838
+msgid "Eric Bana"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1839
+msgid "Emile Hirsch"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1840
+msgid "Eric Dane"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1841
+msgid "Gerard Butler"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1842
+msgid "Garrett Hedlund"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1843
+msgid "Hayden Christensen"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1844
+msgid "Hugh Jackman"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1845
+msgid "Hugh Laurie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1846
+msgid "Hugh Dancy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1847
+msgid "Heath Ledger"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1848
+msgid "Ian Somerhalder"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1849
+msgid "James Lafferty"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1850
+msgid "James Marsden"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1851 src/lifesim_lib/const.py:1938
+msgid "John Mayer"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1852
+msgid "Jude Law"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1853
+msgid "Jensen Ackles"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1854
+msgid "Jake Gyllenhaal"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1855
+msgid "Justin Chambers"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1856
+msgid "Jesse Metcalfe"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1857 src/lifesim_lib/const.py:1922
+#: src/lifesim_lib/const.py:1939
+msgid "Justin Timberlake"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1858
+msgid "Javier Bardem"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1859 src/lifesim_lib/const.py:1916
+#: src/lifesim_lib/const.py:1925 src/lifesim_lib/const.py:1951
+msgid "Joe Manganiello"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1860
+msgid "Johnny Depp"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1861
+msgid "James Franco"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1862
+msgid "Jack O'Connell"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1863
+msgid "Kellan Lutz"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1864
+msgid "Josh Hartnett"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1865
+msgid "Jason Segel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1866
+msgid "Jared Padalecki"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1867
+msgid "Joseph Gordon-Levitt"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1868
+msgid "Liam Hemsworth"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1869
+msgid "Leonardo DiCaprio"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1870
+msgid "Luke Pasqualino"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1871
+msgid "Milo Ventimiglia"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1872
+msgid "Mark Salling"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1873
+msgid "Matthew Goode"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1874
+msgid "Mads Mikkelsen"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1875
+msgid "Marshall Mathers"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1876
+msgid "Mekhi Phifer"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1877
+msgid "Matt Lanter"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1878
+msgid "Mike Vogel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1879
+msgid "Nick Zano"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1880
+msgid "Orlando Bloom"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1881
+msgid "Patrick Swayze"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1882
+msgid "Penn Badgley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1883
+msgid "Peter Facinelli"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1884
+msgid "Paul Walker"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1885
+msgid "Ryan Gosling"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1886
+msgid "Ryan Reynolds"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1887
+msgid "Robbie Jones"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1888
+msgid "Robert Pattinson"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1889
+msgid "Rick Malambri"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1890
+msgid "Ryan Kwanten"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1891
+msgid "Ryan Phillippe"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1892
+msgid "Rafi Gavron"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1893
+msgid "Sam Worthington"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1894
+msgid "Sean Faris"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1895 src/lifesim_lib/const.py:1957
+msgid "Sylvester Stallone"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1896 src/lifesim_lib/const.py:1958
+msgid "Seth Rogan"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1897
+msgid "Shia LaBeouf"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1898
+msgid "Stephen Colletti"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1899
+msgid "Shane West"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1900
+msgid "Simon Rex"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1901
+msgid "Taylor Lautner"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1902
+msgid "Tom Hardy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1903 src/lifesim_lib/const.py:1940
+msgid "Tupac Shakur"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1904
+msgid "Tristan Mack Wilds"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1905
+msgid "Timothy Olyphant"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1906
+msgid "Tom Welling"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1907
+msgid "Travis Barker"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1908
+msgid "Wentworth Miller"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1909
+msgid "Zac Efron"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1919
+msgid "Elon Musk"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1928
+msgid "Michael Kors"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1929
+msgid "Tom Ford"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1932
+msgid "David Gandy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1933
+msgid "Sean O'Pry"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1936
+msgid "Eminem"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1937
+msgid "Jared Followill"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1946
+msgid "James Deen"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1954
+msgid "Prince Carl Philip of Sweden, Duke of Värmland"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1964
+msgid "Zach King"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1967
+msgid "Randy Orton"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1970
+msgid "Stan Lee"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1974 src/lifesim_lib/const.py:2095
+msgid "Adriana Lima"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1975 src/lifesim_lib/const.py:2096
+msgid "Aishwarya Rai Bachchan"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1976 src/lifesim_lib/const.py:2097
+msgid "Alessandra Ambrosio"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1977
+msgid "Amber Heard"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1978 src/lifesim_lib/const.py:2098
+msgid "Ana Beatriz Barros"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1979
+msgid "Anna Paquin"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1980
+msgid "AnnaSophia Robb"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1981 src/lifesim_lib/const.py:2099
+msgid "Anne Vyalitsyna"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1982
+msgid "Angelina Jolie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1983 src/lifesim_lib/const.py:2084
+#: src/lifesim_lib/const.py:2138
+msgid "Ashley Benson"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1984
+msgid "Ashley Greene"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1985 src/lifesim_lib/const.py:2100
+msgid "Bar Refaeli"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1986 src/lifesim_lib/const.py:2101
+msgid "Behati Prinsloo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1987 src/lifesim_lib/const.py:2139
+msgid "Beyoncé Knowles"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1988
+msgid "Blake Lively"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1989 src/lifesim_lib/const.py:2102
+msgid "Brooklyn Decker"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1990 src/lifesim_lib/const.py:2103
+msgid "Candice Swanepoel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1991 src/lifesim_lib/const.py:2085
+#: src/lifesim_lib/const.py:2104 src/lifesim_lib/const.py:2140
+msgid "Cassie Ventura"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1992 src/lifesim_lib/const.py:2156
+msgid "Charlize Theron"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1993 src/lifesim_lib/const.py:2141
+msgid "Cheryl Cole"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1994
+msgid "Chloë Grace Moretz"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1995 src/lifesim_lib/const.py:2105
+#: src/lifesim_lib/const.py:2157
+msgid "Cindy Crawford"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1996 src/lifesim_lib/const.py:2080
+#: src/lifesim_lib/const.py:2142
+msgid "Demi Lovato"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1997 src/lifesim_lib/const.py:2106
+msgid "Denise Richards"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1998
+msgid "Diane Kruger"
+msgstr ""
+
+#: src/lifesim_lib/const.py:1999 src/lifesim_lib/const.py:2107
+msgid "Doutzen Kroes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2000 src/lifesim_lib/const.py:2108
+msgid "Elisha Cuthbert"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2001
+msgid "Emilia Clarke"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2002
+msgid "Emily Blunt"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2003
+msgid "Emma Stone"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2004
+msgid "Emma Watson"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2005
+msgid "Erin Heatherton"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2006 src/lifesim_lib/const.py:2109
+msgid "Eva Green"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2007
+msgid "Eva Longoria"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2008
+msgid "Eva Mendes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2009
+msgid "Freida Pinto"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2010 src/lifesim_lib/const.py:2110
+msgid "Gisele Bündchen"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2011
+msgid "Hilary Duff"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2012 src/lifesim_lib/const.py:2143
+msgid "Indiana Evans"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2013 src/lifesim_lib/const.py:2111
+msgid "Irina Shayk"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2014
+msgid "Isabel Lucas"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2015 src/lifesim_lib/const.py:2112
+msgid "Izabel Goulart"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2016 src/lifesim_lib/const.py:2086
+#: src/lifesim_lib/const.py:2113
+msgid "Jenna Dewan"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2017
+msgid "Jennifer Lawrence"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2018
+msgid "Jessica Alba"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2019
+msgid "Jessica Biel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2020
+msgid "Jordana Brewster"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2021 src/lifesim_lib/const.py:2114
+msgid "Josie Maran"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2022 src/lifesim_lib/const.py:2115
+msgid "Karolina Kurkova"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2023
+msgid "Kate Beckinsale"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2024 src/lifesim_lib/const.py:2116
+msgid "Kate Upton"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2025
+msgid "Katie Holmes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2026
+msgid "Keira Knightley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2027 src/lifesim_lib/const.py:2117
+msgid "Kelly Brook"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2028 src/lifesim_lib/const.py:2118
+msgid "Kendall Jenner"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2029 src/lifesim_lib/const.py:2091
+#: src/lifesim_lib/const.py:2181
+msgid "Kim Kardashian"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2030
+msgid "Kristen Stewart"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2031
+msgid "Kristin Kreuk"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2032 src/lifesim_lib/const.py:2119
+msgid "Laetitia Casta"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2033
+msgid "Lauren Conrad"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2034 src/lifesim_lib/const.py:2120
+msgid "Lily Aldridge"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2035
+msgid "Lucy Hale"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2036 src/lifesim_lib/const.py:2158
+msgid "Marion Cotillard"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2037 src/lifesim_lib/const.py:2167
+msgid "Nikki Reed"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2038
+msgid "Nina Dobrev"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2039
+msgid "Olivia Wilde"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2040 src/lifesim_lib/const.py:2121
+msgid "Malin Akerman"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2041 src/lifesim_lib/const.py:2122
+msgid "Marisa Miller"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2042
+msgid "Megan Fox"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2043 src/lifesim_lib/const.py:2144
+msgid "Minka Kelly"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2044
+msgid "Mila Kunis"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2045 src/lifesim_lib/const.py:2123
+msgid "Miranda Kerr"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2046 src/lifesim_lib/const.py:2124
+msgid "Monica Bellucci"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2047 src/lifesim_lib/const.py:2125
+#: src/lifesim_lib/const.py:2171
+msgid "Natalia Vodianova"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2048
+msgid "Natalie Portman"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2049
+msgid "Nicole Scherzinger"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2050 src/lifesim_lib/const.py:2126
+#: src/lifesim_lib/const.py:2175
+msgid "Olivia Culpo"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2051
+msgid "Penélope Cruz"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2052
+msgid "Rachel Bilson"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2053
+msgid "Rachel McAdams"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2054 src/lifesim_lib/const.py:2127
+msgid "Rachael Taylor"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2055
+msgid "Rachel Weisz"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2056 src/lifesim_lib/const.py:2092
+#: src/lifesim_lib/const.py:2145
+msgid "Rihanna Fenty"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2057 src/lifesim_lib/const.py:2087
+#: src/lifesim_lib/const.py:2128 src/lifesim_lib/const.py:2146
+#: src/lifesim_lib/const.py:2159 src/lifesim_lib/const.py:2182
+msgid "Roselyn Sanchez"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2058 src/lifesim_lib/const.py:2129
+msgid "Rosie Huntington-Whiteley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2059
+msgid "Salma Hayek"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2060
+msgid "Sara Carbonero"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2061
+msgid "Scarlett Johansson"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2062 src/lifesim_lib/const.py:2147
+#: src/lifesim_lib/const.py:2160
+msgid "Selena Gomez"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2063
+msgid "Shanina Shaik"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2064 src/lifesim_lib/const.py:2130
+#: src/lifesim_lib/const.py:2183
+msgid "Shay Mitchell"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2065 src/lifesim_lib/const.py:2131
+msgid "Sienna Miller"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2066 src/lifesim_lib/const.py:2077
+#: src/lifesim_lib/const.py:2132
+msgid "Sofía Vergara"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2067 src/lifesim_lib/const.py:2081
+#: src/lifesim_lib/const.py:2088 src/lifesim_lib/const.py:2133
+#: src/lifesim_lib/const.py:2178
+msgid "Stacy Keibler"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2068 src/lifesim_lib/const.py:2134
+#: src/lifesim_lib/const.py:2161 src/lifesim_lib/const.py:2184
+msgid "Tyra Banks"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2069
+msgid "Vanessa Hudgens"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2070 src/lifesim_lib/const.py:2135
+msgid "Ximena Navarrete"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2071
+msgid "Zoe Saldana"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2074
+msgid "Serena Williams"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2150
+msgid "Hillary Clinton"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2153
+msgid "Jenna Jameson"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2164 src/lifesim_lib/const.py:2170
+msgid "Catherine Middleton, Princess of Wales"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2172
+msgid "Pippa Middleton"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2187
+msgid "The Backstreet Boys"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2195
+msgid "an abandoned building"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2196
+msgid "an abandoned factory"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2197
+msgid "an abandoned house"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2198
+msgid "an abandoned office building"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2199
+msgid "an abandoned school"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2200
+msgid "an airport"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2201
+msgid "an airfield"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2202
+msgid "an alleyway"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2203
+msgid "an ambulance station"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2204
+msgid "an apartment building"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2205
+msgid "an aquarium"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2206
+msgid "an arcade"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2207
+msgid "an art gallery"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2208
+msgid "an avenue"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2209
+msgid "a bakery"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2210
+msgid "a bank"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2211
+msgid "a bar"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2212
+msgid "a barber shop"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2213
+msgid "a beauty salon"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2214
+msgid "a bed & breakfast"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2215
+msgid "a bicycle rental stand"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2216
+msgid "a billboard"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2217
+msgid "a bookstore"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2218
+msgid "a boulevard"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2219
+msgid "a bowling alley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2220
+msgid "a bridge"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2221
+msgid "a bus stop"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2222
+msgid "a butcher's shop"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2223
+msgid "a cafe"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2224
+msgid "a canal"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2225
+msgid "the central business district"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2226
+msgid "a church"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2227
+msgid "City Hall"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2228
+msgid "a clinic"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2229
+msgid "a coffee shop"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2230
+msgid "a college"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2231
+msgid "a community centre"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2232
+msgid "a community gardens"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2233
+msgid "a concert hall"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2234
+msgid "a condominium"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2235
+msgid "a construction site"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2236
+msgid "a convenience store"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2237
+msgid "a court"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2238
+msgid "a cycle highway"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2239
+msgid "a daycare centre"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2240
+msgid "a dentist"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2241
+msgid "a department store"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2242
+msgid "a dock"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2243
+msgid "the docks"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2244
+msgid "a doctor's office"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2245
+msgid "some drainage infrastructure"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2246
+msgid "a dry cleaner"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2247
+msgid "an embassy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2248
+msgid "a factory"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2249
+msgid "a fire hydrant"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2250
+msgid "a fire station"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2251
+msgid "a flower shop"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2252
+msgid "a garbage facility"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2253
+msgid "a garden"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2254
+msgid "a gardens"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2255
+msgid "a government building"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2256
+msgid "a green-roof"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2257
+msgid "a grocery store"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2258
+msgid "a greengrocer"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2259
+msgid "a gym"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2260
+msgid "a gymnasium"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2261
+msgid "a harbour"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2262
+msgid "the harbour"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2263
+msgid "a highway"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2264
+msgid "a historical building"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2265
+msgid "a historical site"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2266
+msgid "a hospital"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2267
+msgid "a hotel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2268
+msgid "a house"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2269
+msgid "a jail"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2270
+msgid "a karaoke bar"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2271
+msgid "a karaoke lounge"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2272
+msgid "a landmark"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2273
+msgid "a laundromat"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2274
+msgid "a library"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2275
+msgid "a linear park"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2276
+msgid "a market"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2277
+msgid "the markets"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2278
+msgid "a mixed-use building"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2279
+msgid "a mixed-use street"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2280
+msgid "a monument"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2281
+msgid "a movie theatre"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2282
+msgid "a museum"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2283
+msgid "a nature reserve"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2284
+msgid "a newspaper office"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2285
+msgid "some night architecture"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2286
+msgid "a nightclub"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2287
+msgid "a nursery school"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2288
+msgid "a nursing home"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2289
+msgid "an observatory"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2290
+msgid "an office building"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2291
+msgid "an opera house"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2292
+msgid "some outdoor seating"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2293
+msgid "an overpass"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2294
+msgid "a park"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2295
+msgid "a patisserie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2296
+msgid "some pedestrian infrastructure"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2297
+msgid "a performance theatre"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2298
+msgid "a pharmacist"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2299
+msgid "a place of worship"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2300
+msgid "a play street"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2301
+msgid "a playground"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2302
+msgid "a police station"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2303 src/lifesim_lib/const.py:2522
+msgid "a pond"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2304
+msgid "a port"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2305
+msgid "the port"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2306
+msgid "a post office"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2307
+msgid "a prison"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2308
+msgid "a product showroom"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2309
+msgid "a pub"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2310
+msgid "a public bath"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2311
+msgid "a public pool"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2312
+msgid "a public square"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2313
+msgid "a public toilet"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2314
+msgid "a radio station"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2315
+msgid "a railway line"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2316
+msgid "a railway station"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2317
+msgid "a recreation centre"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2318
+msgid "a recreation facility"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2319
+msgid "some remarkable architecture"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2320
+msgid "a restaurant"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2321 src/lifesim_lib/const.py:2533
+msgid "a river"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2322
+msgid "a school"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2323
+msgid "the sewers"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2324
+msgid "a shoe store"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2325
+msgid "a shopping centre"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2326
+msgid "a shopping mall"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2327
+msgid "a shop"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2328
+msgid "a skating rink"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2329
+msgid "a skyscraper"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2330
+msgid "a spa"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2331
+msgid "a sports facility"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2332
+msgid "a sports shop"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2333
+msgid "a sports stadium"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2334
+msgid "a sports store"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2335
+msgid "a stadium"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2336 src/lifesim_lib/const.py:2549
+msgid "a stream"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2337
+msgid "a street"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2338
+msgid "some street art"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2339
+msgid "a street food vendor"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2340
+msgid "a street vendor"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2341
+msgid "a street light"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2342
+msgid "some street lights"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2343
+msgid "a strip of shops"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2344
+msgid "a subway station"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2345
+msgid "a swimming pool"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2346
+msgid "a synagogue"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2347
+msgid "a taxi stand"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2348
+msgid "a technology centre"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2349
+msgid "some tech infrastructure"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2350
+msgid "a television station"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2351
+msgid "a tennis court"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2352
+msgid "a temple"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2353
+msgid "a temple complex"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2354
+msgid "a theme park"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2355
+msgid "a tower"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2356
+msgid "a traffic light"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2357
+msgid "some traffic lights"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2358
+msgid "a train line"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2359
+msgid "a train station"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2360
+msgid "a tree"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2361
+msgid "some trees"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2362
+msgid "the underground"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2363
+msgid "an underpass"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2364
+msgid "a university"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2365
+msgid "an urban farm"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2366
+msgid "an urban forest"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2367
+msgid "a vending machine"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2368
+msgid "some vending machines"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2369
+msgid "a vertical park"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2370
+msgid "a visitor centre"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2371
+msgid "a void deck"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2372
+msgid "a water pipe"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2373
+msgid "some water pipes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2374
+msgid "a water tower"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2375
+msgid "a waterfront"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2376
+msgid "the waterfront"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2377
+msgid "a waterfront tower"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2386
+msgid "across the river"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2387
+msgid "across town"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2388
+msgid "downtown"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2389
+msgid "down the road"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2390
+msgid "over the road"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2391
+msgid "up the road"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2392
+msgid "up the street"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2400
+msgid "caught the bus"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2401
+msgid "hiked"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2402
+msgid "hitch-hiked"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2403
+msgid "jogged"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2404
+msgid "knocked about"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2405
+msgid "legged it"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2406
+msgid "meandered"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2407
+msgid "ran"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2408
+msgid "rode"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2409
+msgid "rowed a boat"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2410
+msgid "skated"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2411
+msgid "took a bus"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2412
+msgid "took a cab"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2413
+msgid "took a taxi"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2414
+msgid "took the train"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2415
+msgid "took a water taxi"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2416
+msgid "walked"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2417
+msgid "went jogging"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2423
+msgid "a barn"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2424
+msgid "a campsite"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2425
+msgid "a country lane"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2426
+msgid "a dam"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2427
+msgid "a farm"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2428
+msgid "a field"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2429
+msgid "a fish farm"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2430
+msgid "a paddock"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2431
+msgid "a hay shed"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2432
+msgid "a wildlife preserve"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2433
+msgid "a windmill"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2439
+msgid "an alluvial fan"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2440
+msgid "an archipelago"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2441
+msgid "the archipelago"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2442
+msgid "an atoll"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2443
+msgid "a sand bar"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2444
+msgid "a barchan"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2445
+msgid "a basin"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2446
+msgid "the bay"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2447
+msgid "a coastal bay"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2448
+msgid "the bayside"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2449
+msgid "a beach"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2450
+msgid "the beach"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2451
+msgid "a butte"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2452
+msgid "the buttes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2453
+msgid "a cape"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2454
+msgid "a canyon"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2455
+msgid "the canyon"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2456
+msgid "a cave"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2457
+msgid "the caves"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2458
+msgid "a channel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2459
+msgid "a cliff"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2460
+msgid "the cliffs"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2461
+msgid "the coast"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2462
+msgid "a desert"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2463
+msgid "the desert"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2464
+msgid "a divide"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2465
+msgid "a dune"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2466
+msgid "a crescent dune"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2467
+msgid "a sand dune"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2468
+msgid "a geyser"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2469
+msgid "the geysers"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2470
+msgid "a glacier"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2471
+msgid "a gorge"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2472
+msgid "the gorge"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2473
+msgid "the grasslands"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2474
+msgid "the gulf"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2475
+msgid "a gully"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2476
+msgid "a dry gully"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2477
+msgid "a hill"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2478
+msgid "the hills"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2479
+msgid "an iceberg"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2480
+msgid "an ice sheet"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2481
+msgid "an inselberg"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2482
+msgid "an island"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2483
+msgid "the islands"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2484
+msgid "an isthmus"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2485
+msgid "a jungle"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2486
+msgid "the jungle"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2487
+msgid "a lagoon"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2488
+msgid "a moraine"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2489
+msgid "a mountain"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2490
+msgid "the mountains"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2491
+msgid "the base of a mountain"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2492
+msgid "the foot of a mountain"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2493
+msgid "a mountain peak"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2494
+msgid "a mountain range"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2495
+msgid "the mountain range"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2496
+msgid "the top of a mountain"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2497
+msgid "a fjord"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2498
+msgid "a forest"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2499
+msgid "the forest"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2500
+msgid "a deciduous forest"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2501
+msgid "a temperate forest"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2502
+msgid "a lake"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2503
+msgid "the lake"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2504
+msgid "the edge of a lake"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2505
+msgid "a salt lake"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2506
+msgid "the salt lakes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2507
+msgid "a marsh"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2508
+msgid "the marshes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2509
+msgid "a mesa"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2510
+msgid "the mouth of the river"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2511
+msgid "an oasis"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2512
+msgid "the ocean"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2513
+msgid "a salt pan"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2514
+msgid "a peninsula"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2515
+msgid "the peninsula"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2516
+msgid "a plain"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2517
+msgid "the plains"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2518
+msgid "a flood plain"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2519
+msgid "the flood plains"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2520
+msgid "a pediment"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2521
+msgid "the plateau"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2523
+msgid "a prairie"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2524
+msgid "the quays"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2525
+msgid "a rainforest"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2526
+msgid "a subtropical rainforest"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2527
+msgid "a tropical rainforest"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2528
+msgid "a ravine"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2529
+msgid "the ravine"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2530
+msgid "a reef"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2531
+msgid "a coral reef"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2532
+msgid "the coral reef"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2534
+msgid "the river"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2535
+msgid "a river basin"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2536
+msgid "the river basin"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2537
+msgid "a river delta"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2538
+msgid "the river delta"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2539
+msgid "the source of a river"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2540
+msgid "a savanna"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2541
+msgid "the sea"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2542
+msgid "the seaside"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2543
+msgid "the shrublands"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2544
+msgid "the sound"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2545
+msgid "a coastal sound"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2546
+msgid "a steppe"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2547
+msgid "the steppes"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2548
+msgid "a strait"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2550
+msgid "a swamp"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2551
+msgid "the swamp"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2552
+msgid "a tributary"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2553
+msgid "a tundra"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2554
+msgid "the tundra"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2555
+msgid "a valley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2556
+msgid "a river valley"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2557
+msgid "a volcano"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2558
+msgid "an active volcano"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2559
+msgid "a dormant volcano"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2560
+msgid "an extinct volcano"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2561
+msgid "a wadi"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2562
+msgid "some wadis"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2563
+msgid "a waterfall"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2564
+msgid "the waterfalls"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2565
+msgid "a wetland"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2566
+msgid "the wetlands"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2567
+msgid "some yardangs"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2568
+msgid "some zeugens"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2574
+msgid "a hot night"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2575
+msgid "a cold night"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2576
+msgid "a dark and stormy night"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2577
+msgid "a windy night"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2578
+msgid "a clear and starry night"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2579
+msgid "a hot sunny day"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2580
+msgid "a hot day"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2581
+msgid "a cold day"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2582
+msgid "a wet and windy day"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2583
+msgid "a windy day"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2584
+msgid "a cool, overcast evening"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2585
+msgid "a wet windy evening"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2586
+msgid "a hot sweaty evening"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2587
+msgid "a brisk early morning"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2588
+msgid "a warm overcast morning"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2596
+msgid "arm"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2597
+msgid "head"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2598
+msgid "leg"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2599
+msgid "foot"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2600
+msgid "knee"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2607
+msgid "punched"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2608
+msgid "hit"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2609
+msgid "kicked"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2610
+msgid "attacked"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2611
+msgid "bit"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2616
+msgid "a dimwit"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2617
+msgid "a dork"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2618
+msgid "a douchebag"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2619
+msgid "a dummy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2620
+msgid "a dunce"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2621
+msgid "a fatty"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2622
+msgid "a freak"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2623
+msgid "a goblin"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2624
+msgid "a jerk"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2625
+msgid "a jumpoff"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2626
+msgid "a lamebrain"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2627
+msgid "a loser"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2628
+msgid "a maniac"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2629
+msgid "a mouth-breather"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2630
+msgid "a pig"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2631
+msgid "a pumpkinhead"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2632
+msgid "a punk"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2633
+msgid "a scallywag"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2634
+msgid "a simpleton"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2635
+msgid "a snake"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2636
+msgid "a tool"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2637
+msgid "a tramp"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2638
+msgid "a triple-chin"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2639
+msgid "a twat"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2640
+msgid "a twit"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2641
+msgid "a villain"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2642
+msgid "a vulture"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2643
+msgid "a weasel"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2644
+msgid "an abomination to mankind"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2645
+msgid "an airhead"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2646
+msgid "an idiot"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2647
+msgid "an imbecile"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2648
+msgid "awful"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2649
+msgid "brainless"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2650
+msgid "careless"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2651
+msgid "dumb"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2652
+msgid "evil"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2653
+msgid "foolhardy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2654
+msgid "mediocre at best"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2655
+msgid "mentally defective"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2656
+msgid "nasty"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2657
+msgid "obtuse"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2658
+msgid "psycho"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2659
+msgid "putrid"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2660
+msgid "skeezy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2661
+msgid "stupid"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2662
+msgid "trashy"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2663
+msgid "weak"
+msgstr ""
+
+#: src/lifesim_lib/const.py:2664
 msgid "weaksauce"
 msgstr ""
 
@@ -2916,20 +7078,20 @@ msgstr ""
 msgid "Your mood can change more easily. All changes to your Happiness are more intense."
 msgstr ""
 
-#: src/lifesim_lib/lifesim_lib.py:229 src/lifesim_lib/lifesim_lib.py:234
-#: src/lifesim_lib/lifesim_lib.py:245 src/lifesim_lib/lifesim_lib.py:250
+#: src/lifesim_lib/lifesim_lib.py:233 src/lifesim_lib/lifesim_lib.py:238
+#: src/lifesim_lib/lifesim_lib.py:249 src/lifesim_lib/lifesim_lib.py:254
 msgid "Invalid input; try again."
 msgstr ""
 
-#: src/lifesim_lib/lifesim_lib.py:264 src/people/classes/player.py:615
+#: src/lifesim_lib/lifesim_lib.py:268 src/people/classes/player.py:660
 msgid "No"
 msgstr ""
 
-#: src/lifesim_lib/lifesim_lib.py:264 src/people/classes/player.py:615
+#: src/lifesim_lib/lifesim_lib.py:268 src/people/classes/player.py:660
 msgid "Yes"
 msgstr ""
 
-#: src/lifesim_lib/lifesim_lib.py:279
+#: src/lifesim_lib/lifesim_lib.py:283
 msgid "Press Enter to continue..."
 msgstr ""
 
@@ -2941,7 +7103,7 @@ msgstr ""
 msgid "Traits"
 msgstr ""
 
-#: src/menus/main.py:18 src/menus/main.py:1237
+#: src/menus/main.py:18 src/menus/main.py:1239
 msgid "Gender"
 msgstr ""
 
@@ -2969,19 +7131,19 @@ msgstr ""
 msgid "School"
 msgstr ""
 
-#: src/menus/main.py:30 src/menus/main.py:1288
+#: src/menus/main.py:30 src/menus/main.py:1290
 msgid "Job Menu"
 msgstr ""
 
-#: src/menus/main.py:32 src/menus/main.py:1259
+#: src/menus/main.py:32 src/menus/main.py:1261
 msgid "Find a Job"
 msgstr ""
 
-#: src/menus/main.py:33 src/menus/main.py:1334
+#: src/menus/main.py:33 src/menus/main.py:1336
 msgid "View Saved Games"
 msgstr ""
 
-#: src/menus/main.py:35 src/menus/main.py:1169
+#: src/menus/main.py:35 src/menus/main.py:1171
 msgid "Debug Menu"
 msgstr ""
 
@@ -2990,9 +7152,9 @@ msgid "Relationships: "
 msgstr ""
 
 #: src/menus/main.py:46 src/menus/main.py:71 src/menus/main.py:496
-#: src/menus/main.py:1062 src/menus/main.py:1145 src/menus/main.py:1170
-#: src/menus/main.py:1186 src/menus/main.py:1239 src/menus/main.py:1297
-#: src/menus/main.py:1341 src/menus/main.py:1347
+#: src/menus/main.py:1062 src/menus/main.py:1145 src/menus/main.py:1172
+#: src/menus/main.py:1188 src/menus/main.py:1241 src/menus/main.py:1299
+#: src/menus/main.py:1343 src/menus/main.py:1349
 msgid "Back"
 msgstr ""
 
@@ -3012,13 +7174,13 @@ msgstr ""
 msgid "Generosity"
 msgstr ""
 
-#: src/menus/main.py:64 src/menus/main.py:1177
-#: src/people/classes/player.py:421
+#: src/menus/main.py:64 src/menus/main.py:1179
+#: src/people/classes/player.py:441
 msgid "Smarts"
 msgstr ""
 
-#: src/menus/main.py:65 src/menus/main.py:1178
-#: src/people/classes/player.py:422
+#: src/menus/main.py:65 src/menus/main.py:1180
+#: src/people/classes/player.py:442
 msgid "Looks"
 msgstr ""
 
@@ -3400,7 +7562,7 @@ msgstr ""
 msgid "You divorced your {partner}."
 msgstr ""
 
-#: src/menus/main.py:489
+#: src/menus/main.py:489 src/people/classes/player.py:464
 msgid "The judge has ordered you to pay {name} ${amount} to settle your divorce."
 msgstr ""
 
@@ -4134,7 +8296,7 @@ msgstr ""
 msgid "No, {hes_shes} not my type"
 msgstr ""
 
-#: src/menus/main.py:914 src/people/classes/player.py:603
+#: src/menus/main.py:914 src/people/classes/player.py:648
 msgid "You are now dating {name}."
 msgstr ""
 
@@ -4186,8 +8348,8 @@ msgstr ""
 msgid "You have achieved a deeper awareness of yourself."
 msgstr ""
 
-#: src/menus/main.py:1011 src/menus/main.py:1179
-#: src/people/classes/player.py:385
+#: src/menus/main.py:1011 src/menus/main.py:1181
+#: src/people/classes/player.py:405
 msgid "Karma"
 msgstr ""
 
@@ -4307,207 +8469,203 @@ msgstr ""
 msgid "You began studying harder"
 msgstr ""
 
-#: src/menus/main.py:1163
+#: src/menus/main.py:1165
 msgid "You dropped out of school."
 msgstr ""
 
-#: src/menus/main.py:1168
+#: src/menus/main.py:1170
 msgid "Your parents won't let you drop out of school."
 msgstr ""
 
-#: src/menus/main.py:1170
+#: src/menus/main.py:1172
 msgid "Identity"
 msgstr ""
 
-#: src/menus/main.py:1170
+#: src/menus/main.py:1172
 msgid "Stats"
 msgstr ""
 
-#: src/menus/main.py:1174
+#: src/menus/main.py:1176
 msgid "Your stats"
 msgstr ""
 
-#: src/menus/main.py:1175 src/people/classes/player.py:419
+#: src/menus/main.py:1177 src/people/classes/player.py:439
 msgid "Happiness"
 msgstr ""
 
-#: src/menus/main.py:1176 src/people/classes/player.py:420
-msgid "Health"
-msgstr ""
-
-#: src/menus/main.py:1181
+#: src/menus/main.py:1183
 msgid "The below stats only matter if you have a job:"
 msgstr ""
 
-#: src/menus/main.py:1182 src/menus/main.py:1292
+#: src/menus/main.py:1184 src/menus/main.py:1294
 msgid "Stress"
 msgstr ""
 
-#: src/menus/main.py:1183 src/menus/main.py:1292
+#: src/menus/main.py:1185 src/menus/main.py:1294
 msgid "Performance"
 msgstr ""
 
-#: src/menus/main.py:1187
+#: src/menus/main.py:1189
 msgid "Modify Happiness"
 msgstr ""
 
-#: src/menus/main.py:1188
+#: src/menus/main.py:1190
 msgid "Modify Health"
 msgstr ""
 
-#: src/menus/main.py:1189
+#: src/menus/main.py:1191
 msgid "Modify Smarts"
 msgstr ""
 
-#: src/menus/main.py:1190
+#: src/menus/main.py:1192
 msgid "Modify Looks"
 msgstr ""
 
-#: src/menus/main.py:1191
+#: src/menus/main.py:1193
 msgid "Modify Karma"
 msgstr ""
 
-#: src/menus/main.py:1192
+#: src/menus/main.py:1194
 msgid "Modify Stress"
 msgstr ""
 
-#: src/menus/main.py:1193
+#: src/menus/main.py:1195
 msgid "Modify Performance"
 msgstr ""
 
-#: src/menus/main.py:1198
+#: src/menus/main.py:1200
 msgid "What would you like to set Happiness to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1203
+#: src/menus/main.py:1205
 msgid "What would you like to set Health to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1208
+#: src/menus/main.py:1210
 msgid "What would you like to set Smarts to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1213
+#: src/menus/main.py:1215
 msgid "What would you like to set Looks to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1218
+#: src/menus/main.py:1220
 msgid "What would you like to set Karma to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1223
+#: src/menus/main.py:1225
 msgid "What would you like to set Stress to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1228
+#: src/menus/main.py:1230
 msgid "What would you like to set Performance to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1235
+#: src/menus/main.py:1237
 msgid "First name"
 msgstr ""
 
-#: src/menus/main.py:1236
+#: src/menus/main.py:1238
 msgid "Last name"
 msgstr ""
 
-#: src/menus/main.py:1240
+#: src/menus/main.py:1242
 msgid "Change first name"
 msgstr ""
 
-#: src/menus/main.py:1241
+#: src/menus/main.py:1243
 msgid "Change last name"
 msgstr ""
 
-#: src/menus/main.py:1242
+#: src/menus/main.py:1244
 msgid "Change gender"
 msgstr ""
 
-#: src/menus/main.py:1247
+#: src/menus/main.py:1249
 msgid "Enter first name: "
 msgstr ""
 
-#: src/menus/main.py:1251
+#: src/menus/main.py:1253
 msgid "Enter last name: "
 msgstr ""
 
-#: src/menus/main.py:1264
+#: src/menus/main.py:1266
 msgid "You found a job with a salary of ${salary:,}. Would you like to apply?"
 msgstr ""
 
-#: src/menus/main.py:1280
+#: src/menus/main.py:1282
 msgid "You got the job!"
 msgstr ""
 
-#: src/menus/main.py:1284
+#: src/menus/main.py:1286
 msgid "You didn't get an interview."
 msgstr ""
 
-#: src/menus/main.py:1289
+#: src/menus/main.py:1291
 msgid "Your job"
 msgstr ""
 
-#: src/menus/main.py:1294
+#: src/menus/main.py:1296
 msgid "Hours"
 msgstr ""
 
-#: src/menus/main.py:1298
+#: src/menus/main.py:1300
 msgid "Work Harder"
 msgstr ""
 
-#: src/menus/main.py:1299
+#: src/menus/main.py:1301
 msgid "Quit Job"
 msgstr ""
 
-#: src/menus/main.py:1299
+#: src/menus/main.py:1301
 msgid "Retire"
 msgstr ""
 
-#: src/menus/main.py:1300
+#: src/menus/main.py:1302
 msgid "Adjust Hours"
 msgstr ""
 
-#: src/menus/main.py:1314
+#: src/menus/main.py:1316
 msgid "Do you want to retire? You will receive a yearly pension of ${pension}"
 msgstr ""
 
-#: src/menus/main.py:1322
+#: src/menus/main.py:1324
 msgid "You retired and are now receiving pension of ${pension}."
 msgstr ""
 
-#: src/menus/main.py:1326
+#: src/menus/main.py:1328
 msgid "Are you sure you want to quit your job?"
 msgstr ""
 
-#: src/menus/main.py:1328
+#: src/menus/main.py:1330
 msgid "You quit your job."
 msgstr ""
 
-#: src/menus/main.py:1330
+#: src/menus/main.py:1332
 msgid "What would you like to set your hours to? (38 - 70)"
 msgstr ""
 
-#: src/menus/main.py:1337
+#: src/menus/main.py:1339
 msgid "No previously saved games"
 msgstr ""
 
-#: src/menus/main.py:1339
+#: src/menus/main.py:1341
 msgid "Previously saved games:"
 msgstr ""
 
-#: src/menus/main.py:1347
+#: src/menus/main.py:1349
 msgid "Delete Save"
 msgstr ""
 
-#: src/menus/main.py:1347
+#: src/menus/main.py:1349
 msgid "Load Save"
 msgstr ""
 
-#: src/menus/main.py:1349
+#: src/menus/main.py:1351
 msgid "Would you like to load this save?"
 msgstr ""
 
-#: src/menus/main.py:1355
+#: src/menus/main.py:1357
 msgid "Are you sure you want to delete this save?"
 msgstr ""
 
@@ -4539,11 +8697,11 @@ msgstr ""
 msgid "Choose your gender:"
 msgstr ""
 
-#: src/menus/start.py:33 src/people/classes/player.py:376
+#: src/menus/start.py:33 src/people/classes/player.py:396
 msgid "Female"
 msgstr ""
 
-#: src/menus/start.py:33 src/people/classes/player.py:376
+#: src/menus/start.py:33 src/people/classes/player.py:396
 msgid "Male"
 msgstr ""
 
@@ -4651,237 +8809,257 @@ msgstr ""
 msgid "Wife"
 msgstr ""
 
-#: src/people/classes/player.py:148
+#: src/people/classes/player.py:97
+msgid "You lose the {trait!r} trait!"
+msgstr ""
+
+#: src/people/classes/player.py:102
+msgid "You have gained the {trait} trait!"
+msgstr ""
+
+#: src/people/classes/player.py:168
 msgid "You have the following traits:"
 msgstr ""
 
-#: src/people/classes/player.py:244
+#: src/people/classes/player.py:264
 msgid "You died of old age."
 msgstr ""
 
-#: src/people/classes/player.py:259
+#: src/people/classes/player.py:279
 msgid "You are suffering from depression."
 msgstr ""
 
-#: src/people/classes/player.py:267
+#: src/people/classes/player.py:287
 msgid "Your {relative} died at the age of {age} due to old age."
 msgstr ""
 
-#: src/people/classes/player.py:285
+#: src/people/classes/player.py:305
 msgid "Would you like to attend the funeral?"
 msgstr ""
 
-#: src/people/classes/player.py:293
+#: src/people/classes/player.py:313
 msgid "You inherited ${amount}"
 msgstr ""
 
-#: src/people/classes/player.py:318
+#: src/people/classes/player.py:338
 msgid ""
 "You have been fired from your job.\n"
 "Reason: Performance"
 msgstr ""
 
-#: src/people/classes/player.py:331
+#: src/people/classes/player.py:351
 msgid "You feel like you're on the verge of burnout from so much work!"
 msgstr ""
 
-#: src/people/classes/player.py:336
+#: src/people/classes/player.py:356
 msgid "You're feeling stressed out from all of this work."
 msgstr ""
 
-#: src/people/classes/player.py:342
+#: src/people/classes/player.py:362
 msgid "You are suffering from high blood pressure."
 msgstr ""
 
-#: src/people/classes/player.py:385
+#: src/people/classes/player.py:405
 msgid "Lifetime Happiness"
 msgstr ""
 
-#: src/people/classes/player.py:447
+#: src/people/classes/player.py:475
 msgid "You were struck by lightning!"
 msgstr ""
 
-#: src/people/classes/player.py:464
+#: src/people/classes/player.py:492
 msgid "You died after being struck by lightning."
 msgstr ""
 
-#: src/people/classes/player.py:477
+#: src/people/classes/player.py:505
 msgid "You graduated from university."
 msgstr ""
 
-#: src/people/classes/player.py:482
+#: src/people/classes/player.py:510
 msgid "You now have to start paying back your student loan"
 msgstr ""
 
-#: src/people/classes/player.py:486
+#: src/people/classes/player.py:514
 msgid "You were expelled from university after earning bad grades."
 msgstr ""
 
-#: src/people/classes/player.py:495
+#: src/people/classes/player.py:523
 msgid "You've fully paid off your student loan"
 msgstr ""
 
-#: src/people/classes/player.py:499
+#: src/people/classes/player.py:527
 msgid "You are no longer suffering from depression"
 msgstr ""
 
-#: src/people/classes/player.py:510
+#: src/people/classes/player.py:538
 msgid "You died due to a massive heart attack."
 msgstr ""
 
-#: src/people/classes/player.py:513
+#: src/people/classes/player.py:541
 msgid "You are no longer suffering from high blood pressure"
 msgstr ""
 
-#: src/people/classes/player.py:520
+#: src/people/classes/player.py:548
 msgid "Your mother is taking to to the doctor's office to get vaccinated."
 msgstr ""
 
-#: src/people/classes/player.py:522
+#: src/people/classes/player.py:550
 msgid "How will you behave?"
 msgstr ""
 
-#: src/people/classes/player.py:523
+#: src/people/classes/player.py:551
 msgid "Bite her"
 msgstr ""
 
-#: src/people/classes/player.py:523
+#: src/people/classes/player.py:551
 msgid "Throw a tantrum"
 msgstr ""
 
-#: src/people/classes/player.py:523
+#: src/people/classes/player.py:551
 msgid "Try to stay calm"
 msgstr ""
 
-#: src/people/classes/player.py:527
+#: src/people/classes/player.py:555
 msgid "You remained calm"
 msgstr ""
 
-#: src/people/classes/player.py:531
+#: src/people/classes/player.py:559
 msgid "You threw a tantrum"
 msgstr ""
 
-#: src/people/classes/player.py:535
+#: src/people/classes/player.py:563
 msgid "You bit your mother"
 msgstr ""
 
-#: src/people/classes/player.py:553
+#: src/people/classes/player.py:581
 msgid "You are starting elementary school"
 msgstr ""
 
-#: src/people/classes/player.py:557
+#: src/people/classes/player.py:585
 msgid "You are starting middle school"
 msgstr ""
 
-#: src/people/classes/player.py:561
+#: src/people/classes/player.py:589
 msgid "You are starting high school"
 msgstr ""
 
-#: src/people/classes/player.py:570
+#: src/people/classes/player.py:595
 msgid "Your {partner} wants to break up with you."
 msgstr ""
 
-#: src/people/classes/player.py:571
+#: src/people/classes/player.py:596 src/people/classes/player.py:616
 msgid "What will you do?"
 msgstr ""
 
-#: src/people/classes/player.py:573
+#: src/people/classes/player.py:598 src/people/classes/player.py:618
 msgid "Beg {him_her} to stay"
 msgstr ""
 
-#: src/people/classes/player.py:573
+#: src/people/classes/player.py:598 src/people/classes/player.py:618
 msgid "Wish {him_her} well"
 msgstr ""
 
-#: src/people/classes/player.py:576
+#: src/people/classes/player.py:601
 msgid "You wished {self.partner.name} the best"
 msgstr ""
 
-#: src/people/classes/player.py:579
+#: src/people/classes/player.py:604 src/people/classes/player.py:624
 msgid "You begged {self.partner.name} to stay with you."
 msgstr ""
 
-#: src/people/classes/player.py:582
+#: src/people/classes/player.py:607 src/people/classes/player.py:627
 msgid "{he_she} decided to stay with you."
 msgstr ""
 
-#: src/people/classes/player.py:584
+#: src/people/classes/player.py:609
 msgid "{he_she} dumped you anyway."
 msgstr ""
 
-#: src/people/classes/player.py:590
-msgid "A female"
-msgstr ""
-
-#: src/people/classes/player.py:590
-msgid "A male"
-msgstr ""
-
-#: src/people/classes/player.py:592
-msgid "{a_male_female} named {name} has asked you out."
-msgstr ""
-
-#: src/people/classes/player.py:598
-msgid "Start dating {him_her}"
-msgstr ""
-
-#: src/people/classes/player.py:599
-msgid "Reject {him_her}"
-msgstr ""
-
-#: src/people/classes/player.py:608
-msgid "You graduated from high school."
-msgstr ""
-
-#: src/people/classes/player.py:614
-msgid "Would you like to apply to university?"
-msgstr ""
-
-#: src/people/classes/player.py:619
-msgid "Your application to university was accepted!"
+#: src/people/classes/player.py:615
+msgid "Your {partner} wants a divorce."
 msgstr ""
 
 #: src/people/classes/player.py:621
+msgid "You honored {self.partner.name}'s request for a divorce."
+msgstr ""
+
+#: src/people/classes/player.py:629
+msgid "{he_she} insisted on getting a divorce."
+msgstr ""
+
+#: src/people/classes/player.py:635
+msgid "A female"
+msgstr ""
+
+#: src/people/classes/player.py:635
+msgid "A male"
+msgstr ""
+
+#: src/people/classes/player.py:637
+msgid "{a_male_female} named {name} has asked you out."
+msgstr ""
+
+#: src/people/classes/player.py:643
+msgid "Start dating {him_her}"
+msgstr ""
+
+#: src/people/classes/player.py:644
+msgid "Reject {him_her}"
+msgstr ""
+
+#: src/people/classes/player.py:653
+msgid "You graduated from high school."
+msgstr ""
+
+#: src/people/classes/player.py:659
+msgid "Would you like to apply to university?"
+msgstr ""
+
+#: src/people/classes/player.py:664
+msgid "Your application to university was accepted!"
+msgstr ""
+
+#: src/people/classes/player.py:666
 msgid "Scholarship"
 msgstr ""
 
-#: src/people/classes/player.py:622
+#: src/people/classes/player.py:667
 msgid "Student Loan"
 msgstr ""
 
-#: src/people/classes/player.py:623
+#: src/people/classes/player.py:668
 msgid "Ask parents to pay"
 msgstr ""
 
-#: src/people/classes/player.py:627
+#: src/people/classes/player.py:672
 msgid "How would you like to pay for your college tuition?"
 msgstr ""
 
-#: src/people/classes/player.py:633
+#: src/people/classes/player.py:678
 msgid "Your scholarship application has been awarded!"
 msgstr ""
 
-#: src/people/classes/player.py:641
+#: src/people/classes/player.py:686
 msgid "Your scholarship application was rejected."
 msgstr ""
 
-#: src/people/classes/player.py:651
+#: src/people/classes/player.py:696
 msgid "Your parents agreed to pay for your university tuition!"
 msgstr ""
 
-#: src/people/classes/player.py:661
+#: src/people/classes/player.py:706
 msgid "Your parents refused to pay for your university tuition."
 msgstr ""
 
-#: src/people/classes/player.py:669
+#: src/people/classes/player.py:714
 msgid "You took out a student loan to pay for your university tuition."
 msgstr ""
 
-#: src/people/classes/player.py:675
+#: src/people/classes/player.py:720
 msgid "You are now enrolled in university."
 msgstr ""
 
-#: src/people/classes/player.py:679
+#: src/people/classes/player.py:724
 msgid "Your application to university was rejected."
 msgstr ""
 
