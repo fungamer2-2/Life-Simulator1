@@ -483,9 +483,9 @@ def main_menu(player):
 					print(
 						_("You divorced your {partner}.").format(partner=partner)
 					)
-					player.change_happiness(-randint(10, 15))
 					amount = round(player.money * random.uniform(0.4, 0.6)) 
 					if amount > 0:
+						player.change_happiness(-randint(10, 15))
 						display_event(_("The judge has ordered you to pay {name} ${amount} to settle your divorce.").format(name=relation.name, amount=amount))
 						player.money -= amount
 					player.lose_partner()
@@ -1149,6 +1149,8 @@ def main_menu(player):
 			if not player.studied:
 				player.change_grades(randint(5, 7 + (100 - player.grades) // 5))
 				player.change_smarts(randint(0, 2) + (player.has_trait("NERD")))
+				if randint(1, 3000) <= player.smarts:
+					player.learn_trait("NERD")
 				player.studied = True
 		if choice == 3:
 			can_drop_out = player.smarts < randint(8, 12) + randint(0, 13)

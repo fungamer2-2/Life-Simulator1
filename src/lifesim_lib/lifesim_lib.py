@@ -137,7 +137,7 @@ TRAITS_DICT = {
     "NERD": (
         _("Nerd"),
         _("You gain more smarts by going to the library and doing other activities."),
-        1,
+        2,
     ),
     "GENIUS": (
         _("Genius"),
@@ -188,12 +188,16 @@ TRAITS_DICT = {
 
 
 class Trait:
-    def __init__(self, name, desc, val, conflicts=None):
+    def __init__(self, id, name, desc, val, conflicts=None):
         assert type(val) is int, "Trait value must be an integer"
+        self.id = id
         self.name = name
-        self.desc = desc
         self.val = val
         self.conflicts = conflicts or []
+        
+    @property
+    def desc(self):
+    	return TRAITS_DICT[self.id][1]
 
     def conflicts_with(self, other):
         return other in self.conflicts
@@ -212,7 +216,7 @@ class Trait:
 
     @classmethod
     def from_name(cls, name):
-        return cls(*TRAITS_DICT[name])
+        return cls(name, *TRAITS_DICT[name])
 
 
 pairs = list(TRAITS_DICT.items())
