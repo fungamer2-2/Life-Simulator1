@@ -144,7 +144,7 @@ TRAITS_DICT = {
         _(
             "You tend to be very intelligent. Your Smarts increases over time, and you gain more Smarts when going to the library."
         ),
-        3,
+        4,
     ),
     "FAST_WORKER": (
         _("Fast Worker"),

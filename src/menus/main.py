@@ -765,10 +765,10 @@ def main_menu(player):
 							_("You played dominoes with some friends."),
 							_("You made a robot with Meccano"),
 						]
-				print(random.choice(sayings))
-				if not player.played:
-					player.played = True
-					player.change_happiness(happy_gain)
+			print(random.choice(sayings))
+			if not player.played:
+				player.played = True
+				player.change_happiness(happy_gain)
 		elif choice == _("Arts and Crafts"):
 			if player.age >= randint(5, 10) and randint(1, 10) == 1:
 				sayings = [
@@ -787,14 +787,8 @@ def main_menu(player):
 				print(random.choice(sayings))
 				player.change_happiness(-randint(2, 4))
 			else:
-				happy_gain = randint(2, 6)
-				if player.has_trait("CHEERFUL"):
-					player.change_happiness(randint(1, 3))
-				if player.has_trait("NERD"):
-					player.change_smarts(randint(2, 3))
-				if player.has_trait("GENIUS"):
-					player.change_smarts(randint(3, 4))
-				if player.age >= 1 and player.age < 3:
+				
+				if player.age < 3:
 					sayings = [
 						_("You decided to finger-paint."),
 						_("You decided to make something from mud!"),
@@ -802,8 +796,7 @@ def main_menu(player):
 						_("You squished clay between your fingers."),
 						_("You drew with your large crayons."),
 					]
-					print(random.choice(sayings))
-				if player.age >= 3 and player.age < 6:
+				elif player.age < 6:
 					sayings = [
 						_("You decided to draw."),
 						_("You decided to make something from clay!"),
@@ -815,8 +808,7 @@ def main_menu(player):
 						),
 						_("You drew a stick figure picture of your family."),
 					]
-					print(random.choice(sayings))
-				if player.age >= 6 and player.age < 10:
+				elif player.age < 10:
 					sayings = [
 						_("You decided to draw."),
 						_("You decided to make something from clay!"),
@@ -830,8 +822,7 @@ def main_menu(player):
 						_("You tried to draw a picture of a bowl of fruit."),
 						_("You tried to draw your favourite cartoon character."),
 					]
-					print(random.choice(sayings))
-				if player.age >= 10 and player.age < 13:
+				elif player.age < 13:
 					sayings = [
 						_("You decided to draw."),
 						_("You decided to make something from clay!"),
@@ -850,8 +841,7 @@ def main_menu(player):
 						_("You tried to paint a picture of a cat."),
 						_("You tried to paint a picture of a bowl of fruit."),
 					]
-					print(random.choice(sayings))
-				if player.age >= 13 and player.age < 16:
+				else:
 					sayings = [
 						_("You decided to draw."),
 						_("You decided to make something from clay!"),
@@ -869,13 +859,10 @@ def main_menu(player):
 						_("You painted a picture of a cat."),
 						_("You painted a picture of a bowl of fruit."),
 					]
-					print(random.choice(sayings))
-
-					if not player.did_arts_and_crafts:
-						player.change_happiness(randint(2, 5))
-						player.change_smarts(randint(1, 2))
-
+				print(random.choice(sayings))
 				if not player.did_arts_and_crafts:
+					player.change_happiness(randint(2, 5))
+					player.change_smarts(randint(1, 2))
 					if player.has_trait("CHEERFUL"):
 						player.change_happiness(3)
 					if player.has_trait("NERD"):
@@ -1149,7 +1136,7 @@ def main_menu(player):
 			if not player.studied:
 				player.change_grades(randint(5, 7 + (100 - player.grades) // 5))
 				player.change_smarts(randint(0, 2) + (player.has_trait("NERD")))
-				if randint(1, 3000) <= player.smarts:
+				if randint(1, 2500) <= player.smarts:
 					player.learn_trait("NERD")
 				player.studied = True
 		if choice == 3:

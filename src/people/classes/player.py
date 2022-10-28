@@ -84,23 +84,25 @@ class Player(Person):
 
 	def learn_trait(self, trait):
 		if trait not in TRAITS_DICT:
-			return
-		if not self.has_trait(trait):
-			conflicts = [t for t in self.traits.values() if (t.id != trait and t.conflicts_with(trait))]
-			if conflicts:
-				removal = random.choice(conflicts)
-				color = None
-				if removal.val > 0:
-					color = "red"
-				elif removal.val < 0:
-					color = "green"
-				print_colored(_("You lose the {trait!r} trait!").format(trait=removal.name), color)
-				del self.traits[removal.id]
-			else:
-				data = ALL_TRAITS_DICT[trait]
-				data.get_color()
-				print_colored(_("You have gained the {trait} trait!").format(trait=data.name), data.get_color())
-				self.traits[trait] = data
+			return False
+		if self.has_trait(trait):
+			return False
+		conflicts = [t for t in self.traits.values() if (t.id != trait and t.conflicts_with(trait))]
+		if conflicts:
+			removal = random.choice(conflicts)
+			color = None
+			if removal.val > 0:
+				color = "red" #Losing a good trait is bad
+			elif removal.val < 0:
+				color = "green" #Losing a bad trait is good
+			print_colored(_("You lose the {trait!r} trait!").format(trait=removal.name), color)
+			del self.traits[removal.id]
+		else:
+			data = ALL_TRAITS_DICT[trait]
+			data.get_color()
+			print_colored(_("You have gained the {trait} trait!").format(trait=data.name), data.get_color())
+			self.traits[trait] = data
+		return True
 				
 	def is_depressed(self):
 		return (
@@ -574,9 +576,9 @@ class Player(Person):
 			self.change_grades(round_stochastic(grade_delta))
 		if self.has_trait("GENIUS"):
 			if self.age < randint(18, 25):
-				self.change_smarts(randint(0, 8))
+				self.change_smarts(randint(0, 9))
 			else:
-				self.change_smarts(randint(0, 3))
+				self.change_smarts(randint(0, 4))
 		if self.age == 6:
 			print(_("You are starting elementary school"))
 			self.change_smarts(randint(1, 2) + 2 * self.has_trait("GENIUS"))
