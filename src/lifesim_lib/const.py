@@ -399,6 +399,54 @@ FLIRT_SAID_SAW = [
 # General
 # Workplace
 
+#------------------------------------------------------------------
+# Hook Up
+
+# {Relation}
+# Things are getting hot with your {relation}, {name}, and you're thinking about safe sex.
+# What will you do? > Use a condom (Make him_her use a condom) || Don't use a condom
+# No condoms are available. What will you do? > Oh well, keep going || Pull out (Tell him to pull out) || Never mind, I can't do it
+
+# You had a one night stand with your {relation}, {name}. {hook_up_yes_female}
+HOOK_UP_YES_FEMALE = [
+    _("You have a hard time walking straight the next day"),
+    _("You left your underwear behind"),
+]
+HOOK_UP_NO_FEMALE = [
+    _(""),
+]
+# If your character is male
+HOOK_UP_YES_MALE = [
+    _("You left your underwear behind"),
+]
+HOOK_UP_NO_MALE = [
+    _(""),
+]
+
+# {Random NPC}
+# {A dude} named {name} {invites you to exchange nude pics}. > Take him to bed || Absolutely not
+# If take him to bed:
+# Things are getting hot with {name}, and you're thinking about safe sex.
+# What will you do? > Use a condom (Make him_her use a condom) || Don't use a condom
+# No condoms are available. What will you do? > Oh well, keep going || Pull out (Tell him to pull out) || Never mind, I can't do it
+HOOK_UP_MALE_TYPES = [
+    _("A dude"),
+    _("A guy"),
+    _("An interesting guy"),
+]
+HOOK_UP_MALE_TEXTS = [
+    _("invites you to exchange nude pics"),
+]
+# You have an opportunity to have a one night stand with a young man named {name}.
+# What will you do? > Hit that (/ Sleep with him_her / Get at it / Give it to him_her) || No, I'm not into that
+
+# No condoms are available and it looks like he_she's got some craziness going on down below.
+# What will you do? > Keep going worry later || Pull out (/Tell him to pull out) || Nevermind, I can't do it
+
+# You {got up and left}. He respected your decision (/He called you {insults})
+HOOK_UP_CRAZINESS_NO = [
+    _("got up and left"),
+]
 
 #------------------------------------------------------------------
 # Jobs lists for NPC
@@ -406,12 +454,18 @@ FLIRT_SAID_SAW = [
 # Teacher Jobs (for school faculty):
 
 # Primary School Teachers
-TEACHER_JOBS_PRIMARY = [
-
+FACULTY_JOBS_PRIMARY = [
+    _(""),
+]
+STAFF_JOBS_PRIMARY = [
+    _("Principal"),
+    _("Administrator"),
+    _("Cleaner"),
+    _("Executive Assistant"),
+    _("Groundskeeper"),
 ]
 # Middle School Teachers
-TEACHER_JOBS_MIDDLE = [
-    _("Principal"),
+FACULTY_JOBS_MIDDLE = [
     _("Art Teacher"),
     _("Careers Teacher"),
     _("IT Teacher"),
@@ -425,11 +479,16 @@ TEACHER_JOBS_MIDDLE = [
     _("Science Teacher"),
     _("Social Studies Teacher"),
 ]
-# High School / Secondary Teachers
-TEACHER_JOBS_SECONDARY = [
+STAFF_JOBS_MIDDLE = [
     _("Principal"),
+    _("Administrator"),
+    _("Cleaner"),
+    _("Executive Assistant"),
+    _("Groundskeeper"),
+]
+# High School / Secondary Teachers
+FACULTY_JOBS_SECONDARY = [
     _("Art Teacher"),
-    _("Careers Counsellor"),
     _("Chemistry Teacher"),
     _("Computer Science Teacher"),
     _("Drama Teacher"),
@@ -441,9 +500,34 @@ TEACHER_JOBS_SECONDARY = [
     _("P.E. Teacher"),
     _("Physics Teacher"),
 ]
+STAFF_JOBS_SECONDARY = [
+    _("Principal"),
+    _("Administrator"),
+    _("Cleaner"),
+    _("Careers Counsellor"),
+    _("Executive Assistant"),
+    _("Groundskeeper"),
+]
+# Community College Teachers
+FACULTY_JOBS_COMMUNITY_COLLEGE = [
+    _("Associate Professor"),
+    _("Professor"),
+    _("Researcher")
+]
+STAFF_JOBS_COMMUNITY_COLLEGE = [
+    _("Dean"),
+    _("Groundskeeper"),
+]
 # University teachers (for each degree)
-
-
+FACULTY_JOBS_UNIVERSITY = [
+    _("Associate Professor"),
+    _("Professor"),
+    _("Researcher")
+]
+STAFF_JOBS_UNIVERSITY = [
+    _("Dean"),
+    _("Groundskeeper"),
+]
 
 # World NPC Jobs (For dating app, love interest/find a date, parent's jobs, other {relation}'s jobs):
 # School Love Interest (ages under 18)
@@ -473,6 +557,8 @@ JOBS_HIGH_SCHOOL = [
 ]
 
 JOBS_NPC = [
+    _("Unemployed"),
+    _(""),
 
 ]
 #------------------------------------------------------------------
@@ -490,26 +576,154 @@ JOBS_PART_TIME = [
     _("Arcade Assistant"),
     _("Armpit Sniffer"),
     _("Barista"),
+    _("Bellhop"),
     _("Bike Shop Mechanic"),
+    _("Bookkeeper"),
     _("Boutique Associate"),
     _("Bowling Alley Assistant"),
     _("Camp Counsellor"),
     _("Car Wash Attendant"),
+    _("Caterer"),
+    _("Collections Specialist"),
     _("Dance Instructor"),
+    _("Delivery Driver"),
     _("Doorman"),
     _("Fitness Instructor"),
     _("Gym Receptionist"),
     _("Hotel Concierge"),
+    _("Hotel Front Desk Clerk"),
     _("Ice Cream Scooper"),
     _("Lifeguard"),
     _("Mall Kiosk Worker"),
+    _("Mall Santa"),
+    _("Office Assistant"),
     _("Personal Trainer"),
+    _("Sandwich Maker"),
+    _("School Bus Driver"),
+    _("Sign Holder"),
+    _("Swim Instructor"),
     _("Usher"),
     _("Valet"),
     _("Window Cleaner"),
 ]
 
-
+# Full time jobs arranged into job categories. E.g. Junior Financial Analyst (Corporate) comes under CORPORATE =, or FINANCE =
+# Junior Corporate jobs for age/qualification reasons. {JOBS_CORPORATE_JUNIOR} (Corporate).
+# Nb. These will probably need to be re-categorised once they're all down. The in-app classification system isn't very good
+JOBS_ADULT_FILM_STUDIO = [
+    _("Porn Writer"),
+    _(""),
+    _(""),
+]
+JOBS_AIRLINE_JUNIOR = [
+    _("Baggage Handler"),
+    _("Junior Flight Attendant"),
+]
+JOBS_AIRLINE = [
+    _("Baggage Handler"),
+    _(""),
+]
+JOBS_CAR_DEALER_JUNIOR = [
+    _("Auto Mechanic"),
+    _(""),
+    _(""),
+]
+JOBS_CAR_DEALER = [
+    _("Apprentice Auto Mechanic"),
+    _("Apprentice Auto Electrician"),
+    _(""),
+]
+JOBS_CHURCH = [
+    _("Deacon"),
+    _(""),
+]
+JOBS_CIRCUS = [
+    _("Magician"),
+    _(""),
+]
+JOBS_CORPORATE_JUNIOR = [
+    _("Administrative Assistant"),
+    _("Janitor"),
+    _("Junior Financial Advisor"),
+    _("Junior Financial Analyst"),
+    _("Junior Internal Auditor"),
+    _("Junior Lobbyist"),
+    _(""),
+]
+JOBS_CORPORATE = [
+    _("Administrative Assistant"),
+    _("Janitor"),
+    _("Financial Advisor"),
+    _("Financial Analyst"),
+    _("Internal Auditor"),
+    _("Lobbyist"),
+    _(""),
+]
+JOBS_FAST_FOOD = [
+    _("Crew Member"),
+    _(""),
+]
+JOBS_FILM_STUDIO = [
+    _("Dancer"),
+    _(""),
+]
+JOBS_GROCERY_STORE_JUNIOR = [
+    _("Apprentice Grocer"),
+    _(""),
+]
+JOBS_GROCERY_STORE = [
+    _("Grocer"),
+    _(""),
+]
+JOBS_INDUSTRIAL = [
+    _("Factory Worker"),
+    _(""),
+]
+JOBS_MODEL_AGENCY = [
+    _("Foot Model"),
+    _(""),
+]
+JOBS_MUNICIPAL = [
+    _("Bus Driver"),
+    _(""),
+]
+JOBS_MUSEUM = [
+    _("Docent"),
+    _(""),
+]
+JOBS_RIDE_SHARING_APP = [
+    _("Driver"),
+    _(""),
+]
+JOBS_RESTAURANT = [
+    _("Server"),
+    _("Host"),
+]
+JOBS_SALON = [
+    _("Massage Therapist"),
+    _(""),
+]
+JOBS_SMALL_BUSINESS_JUNIOR = [
+    _("Apprentice Tailor"),
+    _(""),
+    _(""),
+]
+JOBS_SMALL_BUSINESS = [
+    _("Housekeeper"),
+    _("Water Slide Tester"),
+    _("Construction Worker"),
+    _(""),
+    _(""),
+]
+JOBS_STRIP_CLUB = [
+    _("Exotic Dancer"),
+    _(""),
+    _(""),
+]
+JOBS_TRAVEL_AGENCY = [
+    _("Bus Driver"),
+    _(""),
+]
 
 #------------------------------------------------------------------
 # Suck-ups
@@ -551,6 +765,7 @@ IDENTITY_GENDER_MALE = [
 # Social media
 
 # Social media posts:
+# Nb. There seems to be an issue in the original where the number of new followers from a viral post can be unrealistically low. E.g. Over 20,000 likes but 11 follows. suggest having a minimum percentage, otherwise it's not 'viral' its just bot likes 
 
 # Instagram
 # Challenges = 'You recorded a video of yourself doing the '{challenges}' and posted it on Instagram. 
@@ -668,8 +883,34 @@ SOCIAL_STORIES = [
 ]
 # Thirst Traps = 'You posted a photo on Instagram of yourself {thirst_traps}.
 THIRST_TRAPS = [
-    _("wearing just a t-shirt while eating a cucumber"),
+    _("holding a water pistol and wearing white underwear"),
+    _("looking off into the distance and only wearing a towel"),
+    _("taking a shower through half-fogged glass"),
+    _("wearing a sexy bathing suit while taking a shower"),
+    _("wearing just a pair of jeans while mowing the lawn"),
+    _("wearing just a t-shirt"),
+    _("wearing just a t-shirt while laying on the dinner table"),
+    _("wearing nothing while making a duck face"),
+    _("wearing nothing while riding an inflatable Orca in the swimming pool"),
+    _("wearing only sushi while reading a book"),
+    _("wearing practically nothing while laying in bed"),
+    _("wearing practically nothing while posing in the bathroom mirror"),
+    _("wearing your birthday suit while pretending to sleep"), 
+      
+]
+THIRST_TRAPS_FEMALE = [
+    _("not wearing your bikini bottoms while laying by the pool"),
     _("wearing a thong while eating a cucumber"),
+    _("wearing a thong while sprawled out on the floor"),
+    _("wearing edible underwear while dancing at home"),
+    _("wearing edible underwear while laying on the dinner table"),
+    _("wearing just a t-shirt while eating a cucumber"),     
+]
+THIRST_TRAPS_MALE = [
+    _("as 'The Naked Chef'"),
+    _("wearing a suit while eating a cherry"),
+    _("wearing just a pair of jeans while mowing the lawn"),
+    _("flexing your muscles while shaving your beard"),   
 ]
 # Your Travels = 'You posted {social_travel_media} {social_travel} on Instagram
 SOCIAL_TRAVEL_MEDIA = [
@@ -810,7 +1051,7 @@ NEGATIVE_SOCIAL_RESPONSES = [
 # Violin
 
 #------------------------------------------------------------------
-# Middle School cliques:
+# Middle School and High School cliques:
 
 # Artsy Kids
 # Band Geeks
@@ -2280,6 +2521,7 @@ URBAN_LOCATION = [
 	_("a monument"),
 	_("a movie theatre"),
 	_("a museum"),
+    _("a music festival"),
 	_("a nature reserve"),
 	_("a newspaper office"),
 	_("some night architecture"),
@@ -2423,6 +2665,7 @@ RURAL_LOCATION = [
 	_("a barn"),
     _("a campsite"),
 	_("a country lane"),
+    _("a country music festival"),
 	_("a dam"),
 	_("a farm"),
 	_("a field"),
