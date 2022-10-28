@@ -459,6 +459,7 @@ FACULTY_JOBS_PRIMARY = [
 ]
 STAFF_JOBS_PRIMARY = [
     _("Principal"),
+    _("Assistant Principal"),
     _("Administrator"),
     _("Cleaner"),
     _("Executive Assistant"),
@@ -481,6 +482,7 @@ FACULTY_JOBS_MIDDLE = [
 ]
 STAFF_JOBS_MIDDLE = [
     _("Principal"),
+    _("Assistant Principal"),
     _("Administrator"),
     _("Cleaner"),
     _("Executive Assistant"),
@@ -488,6 +490,7 @@ STAFF_JOBS_MIDDLE = [
 ]
 # High School / Secondary Teachers
 FACULTY_JOBS_SECONDARY = [
+    _("Accounting Teacher"),
     _("Art Teacher"),
     _("Chemistry Teacher"),
     _("Computer Science Teacher"),
@@ -502,6 +505,7 @@ FACULTY_JOBS_SECONDARY = [
 ]
 STAFF_JOBS_SECONDARY = [
     _("Principal"),
+    _("Assistant Principal"),
     _("Administrator"),
     _("Cleaner"),
     _("Careers Counsellor"),
@@ -559,7 +563,6 @@ JOBS_HIGH_SCHOOL = [
 JOBS_NPC = [
     _("Unemployed"),
     _(""),
-
 ]
 #------------------------------------------------------------------
 # Jobs
@@ -659,6 +662,10 @@ JOBS_CORPORATE = [
     _("Lobbyist"),
     _(""),
 ]
+JOBS_ENGINEERING_FIRM = [
+    _("Engineer I"),
+    _(""),
+]
 JOBS_FAST_FOOD = [
     _("Crew Member"),
     _(""),
@@ -685,7 +692,7 @@ JOBS_MODEL_AGENCY = [
 ]
 JOBS_MUNICIPAL = [
     _("Bus Driver"),
-    _(""),
+    _("Magistrate"),
 ]
 JOBS_MUSEUM = [
     _("Docent"),
@@ -696,8 +703,12 @@ JOBS_RIDE_SHARING_APP = [
     _(""),
 ]
 JOBS_RESTAURANT = [
+    _("Bartender"),
     _("Server"),
     _("Host"),
+]
+JOBS_SCHOOL = [
+    _("Assistant Principal"),
 ]
 JOBS_SALON = [
     _("Massage Therapist"),
@@ -705,14 +716,14 @@ JOBS_SALON = [
 ]
 JOBS_SMALL_BUSINESS_JUNIOR = [
     _("Apprentice Tailor"),
-    _(""),
+    _("Junior Graphic Designer"),
     _(""),
 ]
 JOBS_SMALL_BUSINESS = [
     _("Housekeeper"),
     _("Water Slide Tester"),
     _("Construction Worker"),
-    _(""),
+    _("Road Kill Remover"),
     _(""),
 ]
 JOBS_STRIP_CLUB = [
@@ -720,10 +731,95 @@ JOBS_STRIP_CLUB = [
     _(""),
     _(""),
 ]
-JOBS_TRAVEL_AGENCY = [
-    _("Bus Driver"),
+JOBS_TELEVISION_JUNIOR = [
+    _("Junior Cameraman"),
     _(""),
 ]
+JOBS_TELEVISION = [
+    _("Cameraman"),
+    _(""),
+]
+JOBS_TRAVEL_AGENCY = [
+    _("Tour Operator"),
+    _(""),
+]
+JOBS_UNIVERSITY = [
+    _("Professor"),
+    _(""),
+]
+JOBS_VETERINARY_CLINIC_JUNIOR = [
+    _("Junior Veterinarian"),
+    _(""),
+]
+JOBS_VETERINARY_CLINIC = [
+    _("Junior Veterinarian"),
+    _("Veterinarian"),
+]
+
+# Jobs and their relevant qualifications
+NO_QUALIFICATION_JOBS = [
+    _("Bartender"),
+]
+HIGH_SCHOOL_QUALIFICATION_JOBS = [
+    _("Apprentice Cameraman"),
+]
+# Temporary 'University' Cover-all
+UNIVERSITY_QUALIFICATION_JOBS = [
+    _("Engineering I"),
+]
+GRADUATE_SCHOOL_QUALIFICATION_JOBS = [
+    _("Pofessor"),
+]
+LAW_SCHOOL_QUALIFICATION_JOBS = [
+    _("Magistrate"),
+]
+
+# Careers and their relevant jobs
+# I.e. Job for Engineering I is published as:
+# Title: Engineer I
+# Career: Chemical Engineer
+# Employer: Sunbeam Consulting
+# Salary: $49,140
+# Education: University
+CAREER_CHEMICAL_ENGINEER = [
+    _("Engineering I"),
+]
+CAREER_VETERINARIAN = [
+    _("Junior Veterinarian"),
+    _("Veterinarian"),
+]
+
+# Hashed out while working on a better system design.
+# No need for a Veterinary School when Veterinary medicine is your degree.
+# Suggest something along the lines of either 'University' is renamed 'Undergraduate University' and 'Postgraduate University' is introduced for Masters / PhD level jobs. Or, 'University' leads you to an undergrad and postgrad selection.
+#
+# University Degrees
+#   MAJORS = [
+#       _("Arts"),
+#       _("Business and Management"),
+#       _("Computer Science"),
+#       _("Economics"),
+#       _("Education and Teaching"),
+#       _("Engineering"),
+#       _("Gender Studies"),
+#       _("Music"),
+#       _("Humanities"),
+#       _("Law"),
+#       _("Marketing"),
+#       _("Mathematics and Statistics"),
+#       _("Medicine"),
+#       _("Political Science"),
+#       _("Veterinary Medicine"),
+#       _(""),
+#   ]
+#   # Student Outcomes. These jobs need one of the above Degrees
+#   ARTS_JOBS = [
+#       _(""),
+#   ]
+#   ENGINEERING_JOBS = [
+#       _("Engineering I"),
+#   ]
+
 
 #------------------------------------------------------------------
 # Suck-ups
