@@ -138,7 +138,7 @@ class Player(Person):
 		trait_names = list(ALL_TRAITS_DICT.keys())
 		total_traits = len(ALL_TRAITS)
 		num_traits = 1
-		while randint(1, 100) <= 35 and num_traits < randint(1, total_traits):
+		while randint(1, 100) <= 40 and num_traits < randint(1, total_traits):
 			num_traits += 1
 		t = {}
 		for i in range(num_traits):

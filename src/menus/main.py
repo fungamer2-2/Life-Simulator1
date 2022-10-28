@@ -152,7 +152,7 @@ def main_menu(player):
 					else:
 						sayings = [
 							_(
-								"You took your {relation} shopping a flea market."
+								"You took your {relation} shopping at a flea market."
 							).format(relation=relation.name_accusative()),
 							_("You took your {relation} bowling.").format(
 								relation=relation.name_accusative()
@@ -1042,8 +1042,8 @@ def main_menu(player):
 			if not player.visited_library:  # You can only get the bonus once per year
 				happy_gain = enjoyment / 15
 				if player.has_trait("BOOK_LOVER"):
-					happy_gain += 1
-					happy_gain *= 2
+					happy_gain *= 1.5
+					happy_gain += 2
 				player.change_happiness(round_stochastic(happy_gain))
 				if player.has_trait("CHEERFUL"):
 					player.change_happiness(3)
