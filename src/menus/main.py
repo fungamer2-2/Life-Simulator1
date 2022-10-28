@@ -1011,9 +1011,15 @@ def main_menu(player):
 				enjoyment += randint(5, 20)
 			elif player.has_trait("NERD"):
 				enjoyment += randint(0, 15)
+			if player.has_trait("BOOK_LOVER"):
+				enjoyment = max(enjoyment, randint(35, 100))
 			display_bar(_("Your Enjoyment"), enjoyment)
 			if not player.visited_library:  # You can only get the bonus once per year
-				player.change_happiness(round_stochastic(enjoyment / 15))
+				happy_gain = enjoyment / 15
+				if player.has_trait("BOOK_LOVER"):
+					happy_gain += 1
+					happy_gain *= 2
+				player.change_happiness(round_stochastic(happy_gain))
 				if player.has_trait("CHEERFUL"):
 					player.change_happiness(3)
 				player.change_smarts(randint(2, 5))
@@ -1021,6 +1027,10 @@ def main_menu(player):
 					player.change_smarts(5)
 				elif player.has_trait("NERD"):
 					player.change_smarts(3)
+				player.times_visited_library += 1
+				prob = 1/35
+				if random.random() < prob * 0.95**player.times_visited_library and player.learn_trait("BOOK_LOVER"):
+					player.change_happiness(2)
 				player.visited_library = True
 		elif choice == _("Gym"):
 			if player.health < 10:
@@ -1287,6 +1297,7 @@ def main_menu(player):
 			_("Work Harder"),
 			_("Retire") if can_retire else _("Quit Job"),
 			_("Adjust Hours"),
+			_("Request a Raise")
 		)
 		if choice == 2:
 			print("You worked harder.")
@@ -1298,7 +1309,9 @@ def main_menu(player):
 				player.worked_harder = True
 		elif choice == 3:
 			if can_retire:
-				pension = round(player.salary * min(player.years_worked, 35) * 0.02)
+				from statistics import mean
+				amount = mean(sorted(player.salary_years, reverse=True)[:5])
+				pension = round(amount * min(player.years_worked, 35) * 0.02)
 				if yes_no(
 					_(
 						"Do you want to retire? You will receive a yearly pension of ${pension}"
@@ -1318,8 +1331,22 @@ def main_menu(player):
 		elif choice == 4:
 			print(_("What would you like to set your hours to? (38 - 70)"))
 			player.update_hours(int_input_range(38, 70))
-
-		# TODO: Add ability to ask for a raise
+		elif choice == 5:
+			if player.age - player.last_raise >= 8 and not player.asked_for_raise and player.performance >= randint(40, 100):
+				print(_("Your request for a raise has been approved."))
+				perc = round(randint(10, 60) / 10, 2)
+				player.salary += round(player.salary * perc/100)
+				display_event(_("You got a raise of {perc}%").format(perc=perc))
+				player.times_asked_since_last_raise = 0
+				player.age_at_last_raise = player.age
+			else:
+				display_event(_("Your request for a raise has been rejected."))
+				if player.times_asked_since_last_raise >= 2 and randint(1, 9) == 1:
+					display_event(_("Your boss fired you for asking for a raise."))
+					player.lose_job()
+					player.change_happiness(-randint(25, 35))
+				player.times_asked_since_last_raise += 1
+			player.asked_for_raise = True
 	elif choice == _("View Saved Games"):
 		players = list(filter(lambda p: p["ID"] != player.ID, get_saves()))
 		if not players:

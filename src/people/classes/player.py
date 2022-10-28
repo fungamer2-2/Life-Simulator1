@@ -75,10 +75,13 @@ class Player(Person):
 		self.performance = 0
 		self.job_hours = 40
 		self.date_options = 10
+		self.times_visited_library = 0
+		self.times_asked_since_last_raise = 0
+		self.last_raise = 0
 		self.partner = None
 		self.traits = {}
 		self.illnesses = []
-
+		self.salary_years = []
 		self.ID = str(uuid.uuid4())
 		self.save_path = SAVE_PATH + "/" + self.ID + ".pickle"
 
@@ -228,6 +231,7 @@ class Player(Person):
 		self.did_arts_and_crafts = False
 		self.worked_harder = False
 		self.listened_to_music = False
+		self.asked_for_raise = False
 		self.date_options = randint(9, 11)
 
 	def age_up(self):
@@ -322,6 +326,7 @@ class Player(Person):
 		if self.partner:
 			assert self.partner in self.relations
 		if self.has_job:
+			self.salary_years.append(self.salary)
 			happy_change = (
 				self.happiness - oldhappy
 			)  # Large decreases in happiness can increase stress
@@ -373,7 +378,10 @@ class Player(Person):
 			self.stress = 45
 			self.performance = 50
 			self.job_hours = 40
-
+			self.last_raise = self.age
+			self.times_asked_since_last_raise = 0
+			self.salary_years = []
+			
 	def lose_job(self):
 		if self.has_job:
 			self.has_job = False
@@ -382,6 +390,7 @@ class Player(Person):
 			self.stress = 0
 			self.performance = 0
 			self.job_hours = 0
+			self.salary_years = []
 
 	def change_stress(self, amount):
 		if self.has_job:
@@ -597,18 +606,18 @@ class Player(Person):
 				print(_("Your {partner} wants to break up with you.").format(partner=name))
 				print(_("What will you do?"))
 				him_her = self.partner.him_her()
-				choices = choice_input(_("Wish {him_her} well"), _("Beg {him_her} to stay"))
+				choices = choice_input(_("Wish {him_her} well").format(him_her=him_her), _("Beg {him_her} to stay").format(him_her=him_her))
 				self.change_happiness(-randint(15, 18))
 				if choice == 1:
-					print(_("You wished {self.partner.name} the best"))
+					print(_("You wished {name} the best").format(name=self.partner.name))
 					self.lose_partner()
 				elif choice == 2:
-					print(_("You begged {self.partner.name} to stay with you."))
+					print(_("You begged {name} to stay with you.").format(name=self.partner.name))
 					he_she = self.partner.he_she().capitalize()
 					if randint(1, 100) > partner.willpower:
-						display_event(_("{he_she} decided to stay with you."))
+						display_event(_("{he_she} decided to stay with you.").format(he_she=he_she))
 					else:
-						display_event(_("{he_she} dumped you anyway."))
+						display_event(_("{he_she} dumped you anyway.").format(he_she=he_she))
 						self.lose_partner()
 						self.change_happiness(-randint(10, 20))
 		elif self.marital_status == 3:
@@ -617,18 +626,21 @@ class Player(Person):
 				print(_("Your {partner} wants a divorce.").format(partner=name))
 				print(_("What will you do?"))
 				him_her = self.partner.him_her()
-				choices = choice_input(_("Wish {him_her} well"), _("Beg {him_her} to stay"))
+				choices = choice_input(
+					_("Wish {him_her} well").format(him_her=him_her),
+					_("Beg {him_her} to stay").format(him_her=him_her)
+				)
 				self.change_happiness(-randint(15, 18))
 				if choice == 1:
-					print(_("You honored {self.partner.name}'s request for a divorce."))
+					print(_("You honored {name}'s request for a divorce.").format(name=self.parter.name))
 					self.divorce()
 				elif choice == 2:
-					print(_("You begged {self.partner.name} to stay with you."))
+					print(_("You begged {name} to stay with you.").format(name=self.partner.name))
 					he_she = self.partner.he_she().capitalize()
 					if min(randint(1, 100) for _ in range(2)) > partner.willpower:
-						print(_("{he_she} decided to stay with you."))
+						print(_("{he_she} decided to stay with you.").format(he_she=he_she))
 					else:
-						display_event(_("{he_she} insisted on getting a divorce."))
+						display_event(_("{he_she} insisted on getting a divorce.").format(he_she=he_she))
 						self.change_happiness(-randint(15, 22))
 						self.divorce()
 		if self.age >= 18 and self.age < randint(42, 70) and self.marital_status == 0 and randint(1, 16) == 1:

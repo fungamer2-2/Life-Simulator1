@@ -23,6 +23,8 @@ class Partner(Relationship):
         )
         self.status = status
         self.willpower = randint(0, 60) + randint(0, 40)
+        if randint(1, 2) == 1:
+        	self.willpower = max(self.willpower, randint(40, 100))
         self.craziness = randint(0, 100)
         self.years_together = 0
         self.was_proposed_to = False

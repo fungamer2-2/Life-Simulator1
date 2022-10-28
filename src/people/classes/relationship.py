@@ -26,7 +26,7 @@ class Relationship(Person):
         return wordmale if self.gender == Gender.Male else wordfemale
 
     def he_she(self):
-        return self.get_gender_word(_("He"), _("She"))
+        return self.get_gender_word(_("he"), _("she"))
 
     def his_her(self):
         return self.get_gender_word(_("his"), _("her"))

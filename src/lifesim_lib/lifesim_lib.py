@@ -134,6 +134,11 @@ TRAITS_DICT = {
         1,
         ["GRUMPY"],
     ),
+    "BOOK_LOVER": (
+        _("Book Lover"),
+        _("You enjoy reading a good book. You gain more happiness when going to the library."),
+        2,
+    ),
     "NERD": (
         _("Nerd"),
         _("You gain more smarts by going to the library and doing other activities."),
