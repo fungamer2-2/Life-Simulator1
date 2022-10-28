@@ -463,7 +463,9 @@ STAFF_JOBS_PRIMARY = [
     _("Administrator"),
     _("Cleaner"),
     _("Executive Assistant"),
+    _("Food Service"),
     _("Groundskeeper"),
+    _("Substitute Teacher"),
 ]
 # Middle School Teachers
 FACULTY_JOBS_MIDDLE = [
@@ -486,7 +488,9 @@ STAFF_JOBS_MIDDLE = [
     _("Administrator"),
     _("Cleaner"),
     _("Executive Assistant"),
+    _("Food Service"),
     _("Groundskeeper"),
+    _("Substitute Teacher"),
 ]
 # High School / Secondary Teachers
 FACULTY_JOBS_SECONDARY = [
@@ -510,7 +514,9 @@ STAFF_JOBS_SECONDARY = [
     _("Cleaner"),
     _("Careers Counsellor"),
     _("Executive Assistant"),
+    _("Food Service"),
     _("Groundskeeper"),
+    _("Substitute Teacher"),
 ]
 # Community College Teachers
 FACULTY_JOBS_COMMUNITY_COLLEGE = [
@@ -520,6 +526,7 @@ FACULTY_JOBS_COMMUNITY_COLLEGE = [
 ]
 STAFF_JOBS_COMMUNITY_COLLEGE = [
     _("Dean"),
+    _("Food Service"),
     _("Groundskeeper"),
 ]
 # University teachers (for each degree)
@@ -530,7 +537,15 @@ FACULTY_JOBS_UNIVERSITY = [
 ]
 STAFF_JOBS_UNIVERSITY = [
     _("Dean"),
+    _("Associate Dean"),
+    _("Chancellor"),
+    _("Director of Education"),
+    _("Food Service"),
     _("Groundskeeper"),
+    _("Librarian"),
+    _("President"),
+    _("Vice Chancellor"),
+    _("Vice President"),
 ]
 
 # World NPC Jobs (For dating app, love interest/find a date, parent's jobs, other {relation}'s jobs):
@@ -614,8 +629,18 @@ JOBS_PART_TIME = [
 # Junior Corporate jobs for age/qualification reasons. {JOBS_CORPORATE_JUNIOR} (Corporate).
 # Nb. These will probably need to be re-categorised once they're all down. The in-app classification system isn't very good
 JOBS_ADULT_FILM_STUDIO = [
+    _("Porn Actor"),
+    _("Porn Cameraman"),
+    _("Porn Star"),
     _("Porn Writer"),
+    _("Porn Director"),
+]
+JOBS_APP_DEVELOPER_JUNIOR = [
+    _("Junior App Developer"),
     _(""),
+]
+JOBS_APP_DEVELOPER = [
+    _("App Developer"),
     _(""),
 ]
 JOBS_AIRLINE_JUNIOR = [
@@ -647,6 +672,8 @@ JOBS_CIRCUS = [
 JOBS_CORPORATE_JUNIOR = [
     _("Administrative Assistant"),
     _("Janitor"),
+    _("Junior Computer Programmer"),
+    _("Junior Database Administrator"),
     _("Junior Financial Advisor"),
     _("Junior Financial Analyst"),
     _("Junior Internal Auditor"),
@@ -655,15 +682,28 @@ JOBS_CORPORATE_JUNIOR = [
 ]
 JOBS_CORPORATE = [
     _("Administrative Assistant"),
+    _("Computer Programmer"),
     _("Janitor"),
     _("Financial Advisor"),
     _("Financial Analyst"),
     _("Internal Auditor"),
     _("Lobbyist"),
+    _("Receptionist"),
     _(""),
+]
+JOBS_DENTAL_OFFICE = [
+    _("Dental Hygenist"),
+    _("Dentist"),
+]
+JOBS_ENGINEERING_FIRM_JUNIOR = [
+    _("Junior Microbiologist"),
 ]
 JOBS_ENGINEERING_FIRM = [
     _("Engineer I"),
+    _("Environmental Scientist"),
+]
+JOBS_ESCORT_AGENCY = [
+    _("Escort"),
     _(""),
 ]
 JOBS_FAST_FOOD = [
@@ -682,8 +722,24 @@ JOBS_GROCERY_STORE = [
     _("Grocer"),
     _(""),
 ]
+JOBS_HOSPITAL = [
+    _("Brain Surgeon"),
+    _(""),
+]
 JOBS_INDUSTRIAL = [
     _("Factory Worker"),
+    _(""),
+]
+JOBS_INSURANCE_AGENCY = [
+    _("Insurance Agent"),
+    _(""),
+]
+JOBS_JEWELLER = [
+    _("Sales Associate"),
+    _("Jeweller"),
+]
+JOBS_LAW_FIRM = [
+    _("Legal Secretary"),
     _(""),
 ]
 JOBS_MODEL_AGENCY = [
@@ -691,11 +747,31 @@ JOBS_MODEL_AGENCY = [
     _(""),
 ]
 JOBS_MUNICIPAL = [
+    _("Junior Policy Analyst"),
+    _("Junior Mail Carrier"),
+]
+JOBS_MUNICIPAL = [
     _("Bus Driver"),
     _("Magistrate"),
+    _("Mail Carrier"),
 ]
 JOBS_MUSEUM = [
-    _("Docent"),
+    _("Museum Docent"),
+    _("Gallery Associate"),
+]
+JOBS_NIGHTCLUB = [
+    _("Bartender"),
+    _("DJ"),
+    _("Host"),
+    _("Manager"),
+    _("Security"),
+]
+JOBS_REAL_ESTATE = [
+    _("Real Estate Agent"),
+    _(""),
+]
+JOBS_RETAILER = [
+    _("Retail Salesperson"),
     _(""),
 ]
 JOBS_RIDE_SHARING_APP = [
@@ -715,6 +791,7 @@ JOBS_SALON = [
     _(""),
 ]
 JOBS_SMALL_BUSINESS_JUNIOR = [
+    _("Apprentice Moonshiner"),
     _("Apprentice Tailor"),
     _("Junior Graphic Designer"),
     _(""),
@@ -724,7 +801,7 @@ JOBS_SMALL_BUSINESS = [
     _("Water Slide Tester"),
     _("Construction Worker"),
     _("Road Kill Remover"),
-    _(""),
+    _("Construction Worker"),
 ]
 JOBS_STRIP_CLUB = [
     _("Exotic Dancer"),
@@ -733,7 +810,7 @@ JOBS_STRIP_CLUB = [
 ]
 JOBS_TELEVISION_JUNIOR = [
     _("Junior Cameraman"),
-    _(""),
+    _("Junior Reporter"),
 ]
 JOBS_TELEVISION = [
     _("Cameraman"),
@@ -741,6 +818,14 @@ JOBS_TELEVISION = [
 ]
 JOBS_TRAVEL_AGENCY = [
     _("Tour Operator"),
+    _("Travel Associate"),
+]
+JOBS_TRUCKING_COMPANY_JUNIOR = [
+    _("Apprentice Trucker"),
+    _(""),
+]
+JOBS_TRUCKING_COMPANY = [
+    _("Trucker"),
     _(""),
 ]
 JOBS_UNIVERSITY = [
@@ -765,10 +850,10 @@ HIGH_SCHOOL_QUALIFICATION_JOBS = [
 ]
 # Temporary 'University' Cover-all
 UNIVERSITY_QUALIFICATION_JOBS = [
-    _("Engineering I"),
+    _("Engineer I"),
 ]
 GRADUATE_SCHOOL_QUALIFICATION_JOBS = [
-    _("Pofessor"),
+    _("Professor"),
 ]
 LAW_SCHOOL_QUALIFICATION_JOBS = [
     _("Magistrate"),
@@ -781,8 +866,56 @@ LAW_SCHOOL_QUALIFICATION_JOBS = [
 # Employer: Sunbeam Consulting
 # Salary: $49,140
 # Education: University
+## Potentially, these lists could be good for salaries as 'if career_chemical_engineer == Engineer I then base_salary = randint(47000, 52000)'
+### or potentially if base_salary were years_in_job then automatic raises and requested raises could work off 'if years_in_job = > 2 then random chance increase current_salary by randint(2, 7) %'. and raise requests could directly call increase current_salary by randint(2, 7)% dependant on work performance
+CAREER_ADULT_MEDIA = [
+    _("Porn Actor"),
+    _("Porn Cameraman"),
+    _("Porn Star"),
+    _("Porn Writer"),
+    _("Porn Director"),
+]
+CAREER_CAMERAMAN = [
+    _("Apprentice Cameraman"),
+    _("Cameraman"),
+]
 CAREER_CHEMICAL_ENGINEER = [
-    _("Engineering I"),
+    _("Engineer I"),
+]
+CAREER_DENTISTRY = [
+    _("Dental Hygenist"),
+    _("Dentist"),
+]
+CAREER_FINANCIAL_ADVISOR = [
+    _("Financial Advisor"),
+    _("Junior Financial Advisor"),
+]
+CAREER_FINANCIAL_ANALYST = [
+    _("Financial Analyst"),
+    _("Junior Financial Analyst"),
+]
+CAREER_HOSPITALITY = [
+    _("Bartender"),
+    _("Host"),
+    _("Waiter"),
+]
+CAREER_INTERNAL_AUDITOR = [
+    _("Internal Auditor"),
+    _("Junior Internal Auditor"),
+]
+CAREER_JUDGE = [
+    _("Magistrate"),
+]
+CAREER_LOBBYIST = [
+    _("Junior Lobbyist"),
+    _("Lobbyist"),
+]
+CAREER_PROFESSOR = [
+    _("Professor"),
+]
+CAREER_SCHOOL_ADMINISTRATOR = [
+    _("Assistant Principal"),
+    _("Principal"),
 ]
 CAREER_VETERINARIAN = [
     _("Junior Veterinarian"),
@@ -817,7 +950,7 @@ CAREER_VETERINARIAN = [
 #       _(""),
 #   ]
 #   ENGINEERING_JOBS = [
-#       _("Engineering I"),
+#       _("Engineer I"),
 #   ]
 
 
