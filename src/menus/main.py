@@ -1053,9 +1053,13 @@ def main_menu(player):
 				elif player.has_trait("NERD"):
 					player.change_smarts(3)
 				player.times_visited_library += 1
-				prob = 1/30
-				if random.random() < prob * 0.94**player.times_visited_library and player.learn_trait("BOOK_LOVER"):
-					player.change_happiness(2)
+				prob = 1/33
+				if random.random() < prob * 0.95**player.times_visited_library:
+					can_learn_nerd = not player.has_trait("NERD")
+					if can_learn_nerd and randint(1, 200) <= player.smarts:
+						player.learn_trait("NERD")
+					else:
+						player.learn_trait("BOOK_LOVER")
 				player.visited_library = True
 		elif choice == _("Gym"):
 			if player.health < 10:
