@@ -248,11 +248,11 @@ class Player(Person):
 			else:
 				self.change_happiness(-randint(1, 5))
 		if self.has_trait("FAST_WORKER"):
-			self.change_performance(randint(0, 4))
+			self.change_performance(randint(0, 3))
 		elif self.has_trait("SLOW_WORKER"):
-			self.change_performance(-randint(0, 4))
+			self.change_performance(-randint(0, 3))
 		if self.has_trait("LAZY"):
-			self.change_performance(-randint(1, 5))
+			self.change_performance(-randint(0, 5))
 			self.change_stress(-randint(0, 4))
 		self.reset_already_did()
 		self.change_karma(randint(-2, 2))

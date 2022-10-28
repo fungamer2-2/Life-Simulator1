@@ -359,7 +359,8 @@ def main_menu(player):
 				if not relation.was_complimented:
 					player.change_karma(randint(0, 2))
 					relation.change_relationship(round_stochastic(appreciation / 6))
-					if randint(1, 300) <= round_stochastic(
+					roll = randint(1, 300)
+					if roll <= round_stochastic(
 						appreciation * relation.relationship / 50
 					):
 						compliment = random.choice(COMPLIMENTS)
@@ -376,8 +377,8 @@ def main_menu(player):
 						)
 						if player.has_trait("CHEERFUL"):
 							player.change_happiness(4)
-						if randint(1, 6) == 1:
-							relation.change_relationship(randint(5, 25))
+						if roll <= 15: #Like a natural 20, in a way
+							relation.change_relationship(randint(25, 40))
 					relation.was_complimented = True
 			elif choice == _("Insult"):
 				rel = relation.name_accusative()
@@ -869,7 +870,31 @@ def main_menu(player):
 						player.change_smarts(randint(0, 2))
 			player.did_arts_and_crafts = True
 		elif choice == _("Listen to music"):
-			print(_("You listened to some music."))
+			music_artists = [
+				_("The Beatles"), 
+				_("Eminem"),
+				_("Michael Jackson"),
+				_("Elton John"),
+				_("Elvis Presley"),
+				_("Rihanna"),
+				_("Madonna"),
+				_("Pink Floyd"),
+				_("Mariah Carey"),
+				_("Taylor Swift"),
+				_("Beyoncé"),
+				_("Whitney Houston"),
+				_("The Rolling Stones"),
+				_("Drake"),
+				_("Justin Bieber"),
+				_("Ed Sheeran"),
+				_("Bruno Mars")
+			]
+			sayings = [
+				_("You listened to some music."),
+				_("You played your favorite song."),
+				_("You listened to a song by {music_artist}.").format(music_artist=random.choice(music_artists))
+			]
+			print(random.choice(sayings))
 			if not player.listened_to_music:
 				player.change_happiness(
 					randint(4, 8) + 3 * player.has_trait("CHEERFUL")
@@ -1028,8 +1053,8 @@ def main_menu(player):
 				elif player.has_trait("NERD"):
 					player.change_smarts(3)
 				player.times_visited_library += 1
-				prob = 1/35
-				if random.random() < prob * 0.95**player.times_visited_library and player.learn_trait("BOOK_LOVER"):
+				prob = 1/28
+				if random.random() < prob * 0.96**player.times_visited_library and player.learn_trait("BOOK_LOVER"):
 					player.change_happiness(2)
 				player.visited_library = True
 		elif choice == _("Gym"):
@@ -1332,13 +1357,13 @@ def main_menu(player):
 			print(_("What would you like to set your hours to? (38 - 70)"))
 			player.update_hours(int_input_range(38, 70))
 		elif choice == 5:
-			if player.age - player.last_raise >= 8 and not player.asked_for_raise and player.performance >= randint(40, 100):
+			if player.age - player.last_raise >= 10 and not player.asked_for_raise and player.performance >= randint(40, 120):
 				print(_("Your request for a raise has been approved."))
-				perc = round(randint(10, 60) / 10, 2)
+				perc = round(randint(20, 85) / 10, 2)
 				player.salary += round(player.salary * perc/100)
 				display_event(_("You got a raise of {perc}%").format(perc=perc))
 				player.times_asked_since_last_raise = 0
-				player.age_at_last_raise = player.age
+				player.last_raise = player.age
 			else:
 				display_event(_("Your request for a raise has been rejected."))
 				if player.times_asked_since_last_raise >= 2 and randint(1, 9) == 1:
