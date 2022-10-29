@@ -806,6 +806,10 @@ JOBS_LAW_FIRM = [
     _("Legal Secretary"),
     _(""),
 ]
+JOBS_MALL = [
+    _("Mall Cop"),
+    _("Facilities Manager"),
+]
 JOBS_MODEL_AGENCY = [
     _("Catalogue Model"),
     _("Foot Model"),
@@ -1067,6 +1071,511 @@ CAREER_VETERINARIAN = [
 
 #----
 # Special Jobs
+
+# Professional Athlete Jobs
+PROFESSIONAL_SPORTS_TYPES = [
+    _("American Football"),
+    _("Association Football"),
+    _("Australian Rules Football"),
+    _("Baseball"),
+    _("Basketball"),
+    _("Boxing"),
+    _("Canadian Football"),
+    _("Cricket"),
+    _("Gaelic Football"),
+    _("Golf"),
+    _("Ice Hockey"),
+    _("Rugby League"),
+    _("Rugby Union"),
+    _("Surfing"),
+    _("Tennis"),
+    _("Volleyball"),
+]
+# - American Football -
+# American Football Teams
+AMERICAN_FOOTBALL_TEAMS_NFC = [
+    _("Arizona Cardinals"),
+    _("Atlanta Falcons"),
+    _("Carolina Panthers"),
+    _("Chicago Bears"),
+    _("Dallas Cowboys"),
+    _("Detroit Lions"),
+    _("Green Bay Packers"),
+    _("Los Angeles Rams"),
+    _("Minnesota Vikings"),
+    _("New Orleans Saints"),
+    _("New York Giants"),
+    _("Philadelphia Eagles"),
+    _("San Francisco 49ers"),
+    _("Seattle Seahawks"),
+    _("Tampa Bay Buccaneers"),
+    _("Washington Commanders"),
+]
+AMERICAN_FOOTBALL_TEAMS_AFC = [
+    _("Baltimore Ravens"),
+    _("Buffalo Bills"),
+    _("Cincinnati Bengals"),
+    _("Cleveland Browns"),
+    _("Denver Broncos"),
+    _("Houston Texans"),
+    _("Indianapolis Colts"),
+    _("Jacksonville Jaguars"),
+    _("Kansas City Chiefs"),
+    _("Las Vegas Raiders"),
+    _("Los Angeles Chargers"),
+    _("Miami Dolphins"),
+    _("New England Patriots"),
+    _("New York Jets"),
+    _("Pittsburgh Steelers"),
+    _("Tennessee Titans"),
+]
+# Positions
+AMERICAN_FOOTBALL_POSITIONS = [
+    _("Safety"),
+    _("Cornerback"),
+    _("Outside Linebacker"),
+    _("Middle Linebacker"),
+    _("End"),
+    _("Defensive Tackle"),
+    _("Wide Receiver"),
+    _("Offensive Tackle"),
+    _("Offensive Guard"),
+    _("Center"),
+    _("Tight End"),
+    _("Quarterback"),
+    _("Wide Receiver"),
+    _("Fullback / Running Back"),
+    _("Halfback / Running Back"),
+]
+# - Association Football -
+# Association Football Teams
+ASSOCIATION_FOOTBALL_TEAMS = [
+
+]
+# Positions
+ASSOCIATION_FOOTBALL_POSITIONS = [
+    _("Goalkeeper"),
+    _("Full-Back"),
+    _("Centre-Back"),
+    _("Sweeper"),
+    _("Wing-Back"),
+    _("Defensive Midfielder"),
+    _("Central Midfielder"),
+    _("Attacking Midfielder"),
+    _("Winger"),
+    _("Forward"),
+    _("Striker"),
+]
+# - Australian Rules Football -
+# Australian Rules Football Teams
+AUSTRALIAN_RULES_FOOTBALL_TEAMS = [
+
+]
+# Positions
+AUSTRALIAN_RULES_FOOTBALL_POSITIONS = [
+    _("Left Forward Pocket"),
+    _("Full Forward"),
+    _("Right Forward Pocket"),
+    _("Left Forward Flank"),
+    _("Centre Half Forward"),
+    _("Right Forward Flank"),
+    _("Left Wing"),
+    _("Centre"),
+    _("Ruck Rover"),
+    _("Ruck"),
+    _("Rover"),
+    _("Right Wing"),
+    _("Left Back Flank"),
+    _("Centre Half Back"),
+    _("Right Back Flank"),
+    _("Left Back Pocket"),
+    _("Full Back"),
+    _("Right Back Pocket"),
+]
+# - Baseball -
+# Baseball Teams
+BASEBALL_TEAMS = [
+
+]
+# Positions
+BASEBALL_POSITIONS = [
+    _("Pitcher"),
+    _("Catcher"),
+    _("First Base"),
+    _("Second Base"),
+    _("Third Base"),
+    _("Shortstop"),
+    _("Left Field"),
+    _("Center Field"),
+    _("Right Field"),
+    _("Outfield"),
+    _("Designated Hitter"),
+]
+# - Basketball -
+# Basketball Teams
+BASKETBALL_TEAMS = [
+
+]
+# Positions
+BASKETBALL_POSITIONS = [
+    _("Point Guard"),
+    _("Shooting Guard"),
+    _("Small Forward"),
+    _("Power Forward"),
+    _("Center"),
+
+]
+# - Boxing -
+# Male Boxers
+BOXERS_MALE = [
+
+]
+# Female Boxers
+BOXERS_FEMALE = [
+
+]
+# - Canadian Football -
+# Canadian Football Teams
+CANADIAN_FOOTBALL_TEAMS = [
+
+]
+# Positions
+CANADIAN_FOOTBALL_POSITIONS = [
+
+]
+# - Cricket -
+# Cricket Teams
+CRICKET_TEAMS = [
+
+]
+# Positions
+CRICKET_POSITIONS = [
+
+]
+# - Gaelic Football -
+# Gaelic Football Teams
+GAELIC_FOOTBALL_TEAMS = [
+
+]
+# Positions
+GAELIC_FOOTBALL_POSITIONS = [
+
+]
+# - Golf -
+# Male Golfers
+GOLFERS_MALE = [
+
+]
+# Female Golfers
+GOLFERS_FEMALE = [
+
+]
+# - Ice Hockey -
+# Ice Hockey Teams
+ICE_HOCKEY_TEAMS = [
+
+]
+# Positions
+ICE_HOCKEY_POSITIONS = [
+
+]
+# - Rugby League -
+# Rugby League Teams
+RUGBY_LEAGUE_TEAMS = [
+
+]
+# Positions
+RUGBY_LEAGUE_POSITIONS = [
+
+]
+# - Rugby Union -
+# Rugby Union Teams
+RUGBY_UNION_TEAMS = [
+
+]
+# Positions
+RUGBY_UNION_POSITIONS = [
+
+]
+# - Surfing -
+# Male Surfers
+SURFERS_MALE_PRO = [
+    _("Filipe Toledo"),
+    _("Italo Ferreira"),
+    _("Jack Robinson"),
+    _("Ethan Ewing"),
+    _("Kanoa Igarashi"),
+    _("Miguel Pupo"),
+    _("Griffin Colapinto"),
+    _("Caio Ibelli"),
+    _("Connor O'Leary"),
+    _("Callum Robson"),
+    _("Samuel Pupo"),
+    _("John John Florence"),
+    _("Matthew McGillivray"),
+    _("Jordy Smith"),
+    _("Kelly Slater"),
+    _("Barron Mamiya"),
+    _("Nat Young"),
+    _("Jake Marshall"),
+    _("Yago Dora"),
+    _("Kolohe Andino"),
+    _("Jadson Andre"),
+    _("Seth Moniz"),
+    _("Jackson Baker"),
+    _("Gabriel Medina"),
+]
+SURFERS_MALE_CHALLENGER = [
+
+]
+SURFERS_MALE_QUALIFYING = [
+
+]
+SURFERS_MALE_JUNIOR = [
+
+]
+# Female Surfers
+SURFERS_FEMALE_PRO = [
+    _("Stephanie Gilmore"),
+    _("Carissa Moore"),
+    _("Johanne Defay"),
+    _("Tatiana Weston-Webb"),
+    _("Brisa Hennessy"),
+    _("Lakey Peterson"),
+    _("Courtney Conlogue"),
+    _("Tyler Wright"),
+    _("Gabriela Bryan"),
+    _("Isabella Nichols"),
+    _("Caroline Marks"),
+    _("Sally Fitzgibbons"),
+]
+SURFERS_FEMALE_CHALLENGER = [
+
+]
+SURFERS_FEMALE_QUALIFYING = [
+
+]
+SURFERS_FEMALE_JUNIOR = [
+
+]
+
+# - Tennis -
+# Male Tennis players
+TENNIS_PLAYERS_MALE = [
+    _("Carlos Alcaraz"),
+    _("Rafael Nadal"),
+    _("Casper Ruud"),
+    _("Daniil Medvedev"),
+    _("Stefanos Tsitsipas"),
+    _("Alexander Zverev"),
+    _("Novak Djokovic"),
+    _("Andrey Rublev"),
+    _("Felix Auger-Aliassime"),
+    _("Taylor Fritz"),
+    _("Hubert Hurkacz"),
+    _("Jannik Sinner"),
+    _("Cameron Norrie"),
+    _("Matteo Berrettini"),
+    _("Pablo Carreno Busta"),
+    _("Marin Čilić"),
+    _("Frances Tiafoe"),
+    _("Karen Khachanov"),
+    _("Denis Shapovalov"),
+    _("Nick Kyrgios"),
+    _("Diego Schwartzman"),
+    _("Roberto Bautista Agut"),
+    _("Lorenzo Musetti"),
+    _("Alex De Minaur"),
+    _("Holger Rune"),
+    _("Daniel Evans"),
+    _("Borna Coric"),
+    _("Miomir Kecmanovic"),
+    _("Francisco Cerundolo"),
+    _("Tommy Paul"),
+    _("Alejandro Davidovich Fokina"),
+    _("Grigor Dimitrov"),
+    _("Sebastian Korda"),
+    _("Maxime Cressy"),
+    _("Botic Van De Zandschulp"),
+    _("Reilly Opelka"),
+    _("Yoshihito Nishioka"),
+    _("Alexander Bublik"),
+    _("Sebastian Baez"),
+    _("Albert Ramos-Vinolas"),
+    _("Gael Monfils"),
+    _("Adrian Mannarino"),
+    _("Emil Ruusuvuori"),
+    _("Brandon Nakashima"),
+    _("Jack Draper"),
+    _("Alex Molcan"),
+    _("John Isner"),
+    _("Lorenzo Sonego"),
+    _("Andy Murray"),
+    _("Jenson Brooksby"),
+    _("Arthur Rinderknech"),
+    _("Filip Krajinovic"),
+    _("David Goffin"),
+    _("Oscar Otte"),
+    _("Pedro Cachin"),
+    _("J.J. Wolf"),
+    _("Jaume Munar"),
+    _("Marcos Giron"),
+    _("Fabio Fognini"),
+    _("Aslan Karatsev"),
+    _("Pedro Martinez"),
+    _("Marc-Andrea Huesler"),
+    _("Benjamin Bonzi"),
+    _("Corentin Moutet"),
+    _("Mackenzie McDonald"),
+    _("Thiago Monteiro"),
+    _("Constant Lestienne"),
+    _("Daniel Elahi Galan"),
+    _("Quentin Halys"),
+    _("João Sousa"),
+    _("Tallon Griekspoor"),
+    _("Ilya Ivashka"),
+    _("Federico Coria"),
+    _("Richard Gasquet"),
+    _("Laslo Djere"),
+    _("Mikael Ymer"),
+    _("Alejandro Tabilo"),
+    _("Jiri Lehecka"),
+    _("Bernabe Zapata Miralles"),
+    _("Roberto Carballes Baena"),
+    _("Radu Albot"),
+    _("Kamil Majchrzak"),
+    _("Hugo Gaston"),
+    _("SoonWoo Kwon"),
+    _("Jordan Thompson"),
+    _("Cristian Garin"),
+    _("Dusan Lajovic"),
+    _("Chun-Hsin Tseng"),
+    _("Tomas Martin Etcheverry"),
+    _("Taro Daniel"),
+    _("Thanasi Kokkinakis"),
+    _("Hugo Dellien"),
+    _("Roman Safiullin"),
+    _("Nikoloz Basilashvili"),
+    _("Nuno Borges"),
+    _("Pavel Kotov"),
+    _("Zhizhen Zhang"),
+    _("Alexei Popyrin"),
+    _("Facundo Bagnis"),
+    _("Christopher O'Connell"),
+]
+# Female Tennis players
+TENNIS_PLAYERS_FEMALE = [
+    _("Iga Swiatek"),
+    _("Ons Jabeur"),
+    _("Jessica Pegula"),
+    _("Coco Gauff"),
+    _("Maria Sakkari"),
+    _("Caroline Garcia"),
+    _("Aryna Sabalenka"),
+    _("Daria Kasatkina"),
+    _("Veronika Kudermetova"),
+    _("Simona Halep"),
+    _("Madison Keys"),
+    _("Paula Badosa"),
+    _("Belinda Bencic"),
+    _("Danielle Collins"),
+    _("Beatriz Haddad Maia"),
+    _("Petra Kvitova"),
+    _("Anett Kontaveit"),
+    _("Jelena Ostapenko"),
+    _("Liudmila Samsonova"),
+    _("Ekaterina Alexandrova"),
+    _("Barbora Krejcikova"),
+    _("Elena Rybakina"),
+    _("Amanda Anisimova"),
+    _("Shuai Zhang"),
+    _("Qinwen Zheng"),
+    _("Martina Trevisan"),
+    _("Victoria Azarenka"),
+    _("Marie Bouzkova"),
+    _("Kaia Kanepi"),
+    _("Elise Mertens"),
+    _("Aliaksandra Sasnovich"),
+    _("Karolina Pliskova"),
+    _("Irina-Camelia Begu"),
+    _("Ajla Tomljanovic"),
+    _("Jil Teichmann"),
+    _("Alize Cornet"),
+    _("Sloane Stephens"),
+    _("Sorana Cirstea"),
+    _("Petra Martic"),
+    _("Leylah Fernandez"),
+    _("Alison Riske-Amritraj"),
+    _("Shelby Rogers"),
+    _("Naomi Osaka"),
+    _("Anastasia Potapova"),
+    _("Bernarda Pera"),
+    _("Bianca Andreescu"),
+    _("Anhelina Kalinina"),
+    _("Ana Bogdan"),
+    _("Katerina Siniakova"),
+    _("Mayar Sherif"),
+    _("Madison Brengle"),
+    _("Xiyu Wang"),
+    _("Yulia Putintseva"),
+    _("Daria Saville"),
+    _("Magda Linette"),
+    _("Alison Van Uytvanck"),
+    _("Garbine Muguruza"),
+    _("Diane Parry"),
+    _("Anna Bondar"),
+    _("Claire Liu"),
+    _("Lucia Bronzetti"),
+    _("Lin Zhu"),
+    _("Anna Kalinskaya"),
+    _("Maryna Zanevska"),
+    _("Marta Kostyuk"),
+    _("Jule Niemeier"),
+    _("Sara Sorribes Tormo"),
+    _("Danka Kovinic"),
+    _("Camila Giorgi"),
+    _("Tatjana Maria"),
+    _("Donna Vekic"),
+    _("Rebecca Marino"),
+    _("Nuria Parrizas Diaz"),
+    _("Linda Fruhvirtova"),
+    _("Tereza Martincova"),
+    _("Emma Raducanu"),
+    _("Viktorija Golubic"),
+    _("Jasmine Paolini"),
+    _("Elisabetta Cocciaretto"),
+    _("Panna Udvardy"),
+    _("Anna Blinkova"),
+    _("Lauren Davis"),
+    _("Yue Yuan"),
+    _("Dalma Galfi"),
+    _("Julia Grabher"),
+    _("Camila Osorio"),
+    _("Harriet Dart"),
+    _("Kaja Juvan"),
+    _("Tamara Zidansek"),
+    _("Tamara Korpatsch"),
+    _("Linda Noskova"),
+    _("Viktoriya Tomova"),
+    _("Qiang Wang"),
+    _("Varvara Gracheva"),
+    _("Oceane Dodin"),
+    _("Elena-Gabriela Ruse"),
+    _("Aleksandra Krunic"),
+    _("Dayana Yastremska"),
+    _("Angelique Kerber"),
+    _("Kamilla Rakhimova"),
+]
+# - Volleyball -
+# Volleyball Teams
+VOLLEYBALL_TEAMS = [
+
+]
+# Positions
+VOLLEYBALL_POSITIONS = [
+
+]
+
 
 # Street Hustler Jobs:
 # Streets
