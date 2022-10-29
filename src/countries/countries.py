@@ -201,6 +201,8 @@ COUNTRIES = [
 
 # Todo: Differences in Cultural & Legal systems
 
+# - States (or similar) -
+# - Major Cities -
 # - Age related - Nb. this will probably need some work.
 # Alcohol 
 # Alcohol_Beer
