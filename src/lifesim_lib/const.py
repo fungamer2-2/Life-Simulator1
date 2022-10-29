@@ -608,6 +608,8 @@ JOBS_FREELANCE_GIGS = [
     _("Babysitter"),
     _("Dog Walker"),
     _("Pet Sitter"),
+    _("Lemonade Stand"),
+    _("Kissing booth"),
 ]
 JOBS_PART_TIME = [
     _("Arcade Assistant"),
@@ -622,6 +624,7 @@ JOBS_PART_TIME = [
     _("Car Wash Attendant"),
     _("Caterer"),
     _("Collections Specialist"),
+    _("Concessions Attendant"),
     _("Dance Instructor"),
     _("Delivery Driver"),
     _("Doorman"),
@@ -635,19 +638,46 @@ JOBS_PART_TIME = [
     _("Mall Santa"),
     _("Office Assistant"),
     _("Personal Trainer"),
+    _("Pool Towel Attendant"),
     _("Sandwich Maker"),
     _("School Bus Driver"),
     _("Sign Holder"),
+    _("Street Sweeper"),
     _("Swim Instructor"),
     _("Usher"),
     _("Valet"),
     _("Window Cleaner"),
+    _("Yoga Receptionist"),
 ]
+# Part time job categories
+JOBS_PART_TIME_CAR_WASH = [ 
+    _("Car Wash Attendant"),
+    _(""),
+]
+JOBS_PART_TIME_GYM = [
+    _("Yoga Receptionist"),
+]
+JOBS_PART_TIME_HOTEL = [
+    _("Pool Towel Attendant"),
+]
+JOBS_PART_TIME_MALL = [
+    _("Arcade Assistant"),
+]
+JOBS_PART_TIME_MOVIE_THEATRE = [
+    _("Concessions Attendant"),
+]
+JOBS_PART_TIME_MUNICIPAL = [
+    _(""),
+    _("Street Sweeper"),
+]
+
+
 
 # Full time jobs arranged into job categories. E.g. Junior Financial Analyst (Corporate) comes under CORPORATE =, or FINANCE =
 # Junior Corporate jobs for age/qualification reasons. {JOBS_CORPORATE_JUNIOR} (Corporate).
 # Nb. These will probably need to be re-categorised once they're all down. The in-app classification system isn't very good
 JOBS_ADULT_FILM_STUDIO = [
+    _("Fluffer"),
     _("Porn Actor"),
     _("Porn Cameraman"),
     _("Porn Star"),
@@ -671,13 +701,13 @@ JOBS_AIRLINE = [
     _(""),
 ]
 JOBS_CAR_DEALER_JUNIOR = [
-    _("Auto Mechanic"),
-    _(""),
+    _("Apprentice Auto Mechanic"),
+    _("Apprentice Auto Electrician"),
     _(""),
 ]
 JOBS_CAR_DEALER = [
-    _("Apprentice Auto Mechanic"),
-    _("Apprentice Auto Electrician"),
+    _("Auto Mechanic"),
+    _("Auto Electrician"),
     _(""),
 ]
 JOBS_CHURCH = [
@@ -685,8 +715,21 @@ JOBS_CHURCH = [
     _(""),
 ]
 JOBS_CIRCUS = [
+    _("Acrobat"),
+    _("Clown"),
+    _("Dancer"),
+    _("Fire Breather"),
+    _("Fire Eater"),
+    _("Horse Rider"),
+    _("Juggler"),
+    _("Lion Tamer"),
     _("Magician"),
-    _(""),
+    _("Magician's Assistant"),
+    _("Plate Spinner"),
+    _("Sword Eater"),
+    _("Tightrope Walker"),
+    _("Trapeze Artist"),
+    _("Unicyclist"),
 ]
 JOBS_CORPORATE_JUNIOR = [
     _("Administrative Assistant"),
@@ -712,6 +755,7 @@ JOBS_CORPORATE = [
 ]
 JOBS_DENTAL_OFFICE = [
     _("Dental Hygenist"),
+    _("Dental Receptionist"),
     _("Dentist"),
 ]
 JOBS_ENGINEERING_FIRM_JUNIOR = [
@@ -727,7 +771,8 @@ JOBS_ESCORT_AGENCY = [
 ]
 JOBS_FAST_FOOD = [
     _("Crew Member"),
-    _(""),
+    _("Manager"),
+    _("Team Leader"),
 ]
 JOBS_FILM_STUDIO = [
     _("Dancer"),
@@ -762,8 +807,20 @@ JOBS_LAW_FIRM = [
     _(""),
 ]
 JOBS_MODEL_AGENCY = [
+    _("Catalogue Model"),
     _("Foot Model"),
-    _(""),
+    _("Hand Model"),
+    _("Fit Model"),
+    _("Lingerie Model"),
+    _("Model Scout"),
+    _("Modelling Agent"),
+    _("Photo Model"),
+    _("Runway Model"),
+]
+JOBS_MOVIES = [
+    _("Cameraman"),
+    _("Director"),
+    _("Key Grip"),
 ]
 JOBS_MUNICIPAL = [
     _("Junior Policy Analyst"),
@@ -827,13 +884,39 @@ JOBS_STRIP_CLUB = [
     _(""),
     _(""),
 ]
+JOBS_SUPERMARKET_JUNIOR = [
+    _("Apprentice Baker"),
+    _("Apprentice Butcher"),
+    _("Apprentice Grocer"),
+    _(""),
+]
+JOBS_SUPERMARKET = [
+    _("Baker"),
+    _("Butcher"),
+    _("Grocer"),
+    _(""),
+]
 JOBS_TELEVISION_JUNIOR = [
     _("Junior Cameraman"),
     _("Junior Reporter"),
 ]
 JOBS_TELEVISION = [
+    _("Animator"),
     _("Cameraman"),
-    _(""),
+    _("Cinematographer"),
+    _("Casting Director"),
+    _("Comedian"),
+    _("Costume Designer"),
+    _("Director"),
+    _("Director of Photography"),
+    _("Editor"),
+    _("Key Grip"),
+    _("Music Director"),
+    _("News Reporter"),
+    _("Production Designer and Art Director"),
+    _("Sound Editor"),
+    _("Talkshow Host"),
+    _("Writer"),
 ]
 JOBS_TRAVEL_AGENCY = [
     _("Tour Operator"),
@@ -893,6 +976,15 @@ CAREER_ADULT_MEDIA = [
     _("Porn Star"),
     _("Porn Writer"),
     _("Porn Director"),
+]
+CAREER_AGENCY_MODEL = [
+    _("Catalogue Model"),
+    _("Foot Model"),
+    _("Hand Model"),
+    _("Fit Model"),
+    _("Lingerie Model"),
+    _("Photo Model"),
+    _("Runway Model"),
 ]
 CAREER_CAMERAMAN = [
     _("Apprentice Cameraman"),
@@ -971,6 +1063,198 @@ CAREER_VETERINARIAN = [
 #   ENGINEERING_JOBS = [
 #       _("Engineer I"),
 #   ]
+
+
+#----
+# Special Jobs
+
+# Street Hustler Jobs:
+# Streets
+STREET_HUSTLE_STREET_NAMES = [
+    _("Taylor Street"),
+    _("Wall Street"),
+    _("Woodland Drive"),
+    _("8th Street"),
+    _("Bridle Court"),
+    _("Adams Avenue"),
+    _("5th Street South"),
+    _("East Street"),
+    _("Valley View Road"),
+    _("Jones Street"),
+    _("Sycamore Drive"),
+    _("Chestnut Street"),
+    _("Cedar Street"),
+    _("Jackson Avenue"),
+    _("Lincoln Avenue"),
+    _("Inverness Drive"),
+    _("Fieldstone Drive"),
+    _("Cross Street"),
+    _("Westminster Drive"),
+    _("Primrose Lane"),
+    _("Canal Street"),
+    _("Grove Street"),
+    _("8th Street West"),
+    _("Hill Street"),
+    _("Route 4"),
+    _("Locust Street"),
+    _("3rd Street West"),
+    _("Buttonwood Drive"),
+    _("Pearl Street"),
+    _("B Street"),
+    _("Fairview Road"),
+    _("Bridge Street"),
+    _("Orange Street"),
+    _("Holly Drive"),
+    _("William Street"),
+    _("Clark Street"),
+    _("Jackson Street"),
+    _("Garfield Avenue"),
+    _("Sycamore Street"),
+    _("Somerset Drive"),
+    _("Bridle Lane"),
+    _("North Avenue"),
+    _("Lexington Court"),
+    _("6th Street North"),
+    _("Park Drive"),
+    _("Walnut Street"),
+    _("Dogwood Drive"),
+    _("Highland Drive"),
+    _("Cottage Street"),
+    _("9th Street"),
+]
+# Hustles
+STREET_HUSTLES = [
+    _("Busker"),
+    _("Panhandler"),
+    _("Scam Artist"),
+    _("Street Performer"),
+]
+# - Busker -
+# Instruments
+BUSKER_INSTRUMENTS = [
+    _("Ash Guitar"),
+    _("Silver Plastic Keyboard"),
+]
+# Music type
+BUSKER_MUSIC_TYPES = [
+    _("Classic Rock"),
+    _("Reggae"),
+    _("Romantic"),
+    _("Pop"),
+    _("Funk"),
+    _("Polka"),
+    _("Country"),
+    _("Bluegrass"),
+    _("Renaissance"),
+    _("New age"),
+    _("Adult contemporary"),
+    _("House music"),
+    _("Synth-pop"),
+    _("World music"),
+    _("Funk carioca"),
+    _("Bossa nova"),
+    _("Indie"),
+    _("Elevator music"),
+    _("Worship"),
+    _("Kawaii metal"),
+    _("Grunge"),
+    _("Punk rock"),
+    _("Screamo"),
+    _("Emo pop"),
+    _("Disco"),
+    _("Peaceful"),
+    _("Classical"),
+    _("Peruvian"),
+    _("Jazz"),
+    _("Folk"),
+    _("Blues"),
+]
+# Attire
+BUSKER_ATTIRE_MALE = [
+    _(""),
+]
+BUSKER_ATTIRE_FEMALE = [
+    _("Petticoat skirt"),
+    _("Trenchcoat"),
+    _("Angel costume"),
+    _("Black turtleneck"),
+    _("Dirndl dress"),
+    _("Lingerie"),
+    _("Mask"),
+    _("Devil costume"),
+    _("Poncho"),
+    _("Swimwear"),
+    _("Evening dress"),
+    _("Business suit"),
+]
+# Collection box
+BUSKER_COLLECTION_BOXES = [
+    _("Top hat"),
+    _("Raggedy knit cap"),
+    _("Shoe box"),
+    _("Tip jar"),
+    _("Music instrument case"),
+    _("Gas station soda cup"),
+    _("Glass fishbowl"),
+    _("Crusty tupperware container"),
+    _("Rusty bucket"),
+    _("Baseball cap"),
+    _("Coffee tin"),
+    _("Backpack"),
+    _("Hobo stick"),
+]
+# - Panhandler - 
+# Props
+PANHANDLER_PROPS = [
+    _("Hazmat suit"),
+    _("Straw hat"),
+    _("Hobo sack"),
+    _("Tattered suit and tie"),
+    _("Walker"),
+    _("Eviction notice"),
+    _("Plaster cast"),
+    _("Arm sling"),
+    _("Matted fur coat"),
+]
+# Signs. > call these between quotation marks "{panhandler_signs}"
+PANHANDLER_SIGNS = [
+    _("Let's do lunch, U buy"),
+    _("Will take insults for money"),
+    _("Free Hugs!"),
+    _("Need money for food"),
+    _("I'm too sober for this"),
+    _("Will picket your boss' house..."),
+    _("I'll let you spank me for $1"),
+    _("Saving up for a better life"),
+    _("Psychiatric help: $1"),
+    _("I need tree fiddy..."),
+]
+# Collection box
+PANHANDLER_COLLECTION_BOXES = [
+    _("Garbage can lid"),
+    _("Paper bag"),
+    _("Red Solo cup"),
+    _("Tattered picnic basket"),
+    _("Coffee canister"),
+    _("Empty MacBook Pro box"),
+    _("Cast-iron skillet"),
+    _("Duffel bag"),
+    _("Plastic shopping bag"),
+]
+# Strategy
+PANHANDLER_STRATEGIES = [
+    _("Hang outside a halfway house"),
+    _("Go to a packed convention centre"),
+    _("Hang around the entrance to a mall"),
+    _("Rush up to pedestrians"),
+    _("Sit outside a train station"),
+    _("Walk around a farmers market"),
+    _("Pass out on the street"),
+    _("Sit in front of a church on Sunday"),
+    _("Approach people leaving a concert hall"),
+    _("Stand on a corner known for drug dealing"),
+]
+
 
 
 #------------------------------------------------------------------
@@ -1796,16 +2080,35 @@ SPEND_TIME_TEEN = [
 ]
 
 # E.g. You {spend_time_pet_x)} {pet_type}, {pet_name} = You listened to music with your cat, Pip.
+# All pets
 SPEND_TIME_PET_CAT = [
     _("listened to hip-hop music with your"),
     _("listened to classical music with your"),
-    _("made an obstacle course for your"),
     _("played with your"),
+]
+# Pet type specific
+SPEND_TIME_PET_CAT = [
+    _("curled up and watched a movie with your"),
+    _("let a motorised weasel ball loose for your"),
+    _("made an obstacle course for your"),
+    _("used a cucumber to take prank videos of your"),
     _("used a laser pointer to play with your"),
     _("rolled a ball or yarn across the floor for your"),
 ]
 SPEND_TIME_PET_DOG = [
-
+    _("curled up and watched a movie with your"),
+    _("did the 'What The Fluff' challenge with your"),
+    _("gave belly rubs, pats and scratches to your"),
+    _("jingled some keys loudly, and went out to walk your"),
+    _("made a breadcrumb trail of dog biscuits for your"),
+    _("made a breadcrumb trail of dog biscuits leading to a bone for your"),
+    _("made an obstacle course for your"),
+    _("loudly announced walk time, and went walking with your"),
+    _("said 'Walkies!', and went walking with your"),
+    _("went swimming at the beach with your"),
+    _("went to the park and threw a ball for your"),
+    _("went to the river and threw sticks in it for your"),
+    
 ]
 
 # Events section:
@@ -2674,6 +2977,9 @@ CELEBRITY_FEMALE_WRITER = [
 ]
 CELEBRITY_BAND = [
     _("The Backstreet Boys"),
+    _("The Beatles"), 
+    _("Pink Floyd"),
+    _("The Rolling Stones"),
 ]
 
 # List of Urban locations (a park, a bank etc.) called after 'to' or 'at' "we went to {urban_location}", "we spent time at {urban_location}"
