@@ -341,6 +341,17 @@ def main_menu(player):
 						appreciation = min(
 							appreciation, randint(0, 60) + randint(0, 40)
 						)
+				compliments = COMPLIMENTS[:]
+				if relation.gender == Gender.Male:
+					compliments.extend([
+						_("an alpha male"),
+						_("handsome")
+					])
+				else:
+					compliments.extend([
+						_("an alpha female"),
+						_("beautiful")
+					])
 				compliment = random.choice(COMPLIMENTS)
 				print(
 					_("You told your {relation} that {hes_shes} {compliment}.").format(
@@ -870,31 +881,16 @@ def main_menu(player):
 						player.change_smarts(randint(0, 2))
 			player.did_arts_and_crafts = True
 		elif choice == _("Listen to music"):
-			music_artists = [
-				_("The Beatles"), 
-				_("Eminem"),
-				_("Michael Jackson"),
-				_("Elton John"),
-				_("Elvis Presley"),
-				_("Rihanna"),
-				_("Madonna"),
-				_("Pink Floyd"),
-				_("Mariah Carey"),
-				_("Taylor Swift"),
-				_("Beyoncé"),
-				_("Whitney Houston"),
-				_("The Rolling Stones"),
-				_("Drake"),
-				_("Justin Bieber"),
-				_("Ed Sheeran"),
-				_("Bruno Mars")
-			]
-			sayings = [
-				_("You listened to some music."),
-				_("You played your favorite song."),
-				_("You listened to a song by {music_artist}.").format(music_artist=random.choice(music_artists))
-			]
-			print(random.choice(sayings))
+			music_categories = [_("pop music"), _("rock music"), _("hip-hop"), _("latin music")]
+			if randint(1, 2) == 1:
+				print(_("You listened to some music."))
+			else:
+				sayings = [
+					_("You listened to some {music_type}.").format(music_type=random.choice(music_categories)),
+					_("You played your favorite song."),
+					_("You listened to a song by {music_artist}.").format(music_artist=random.choice(MUSIC_ARTISTS))
+				]
+				print(random.choice(sayings))
 			if not player.listened_to_music:
 				player.change_happiness(
 					randint(4, 8) + 3 * player.has_trait("CHEERFUL")

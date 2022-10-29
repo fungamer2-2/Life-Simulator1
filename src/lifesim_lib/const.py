@@ -46,7 +46,6 @@ COMPLIMENTS = [
     _("admirable"),
     _("an OG"),
     _("an eager beaver"),
-    _("beautiful"),
     _("brave"),
     _("bright"),
     _("brilliant"),
@@ -95,6 +94,26 @@ COMPLIMENTS = [
     _("wise"),
     _("wonderful"),
     _("world-class"),
+]
+
+MUSIC_ARTISTS = [
+	_("The Beatles"), 
+	_("Eminem"),
+	_("Michael Jackson"),
+	_("Elton John"),
+	_("Elvis Presley"),
+	_("Rihanna"),
+	_("Madonna"),
+	_("Pink Floyd"),
+	_("Mariah Carey"),
+	_("Taylor Swift"),
+	_("Beyoncé"),
+	_("Whitney Houston"),
+	_("The Rolling Stones"),
+	_("Drake"),
+	_("Justin Bieber"),
+	_("Ed Sheeran"),
+	_("Bruno Mars")
 ]
 
 # Insults moved to the bottom
