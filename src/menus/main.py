@@ -2,6 +2,7 @@ import random
 from random import randint
 
 from src.lifesim_lib.const import *
+from src.lifesim_lib.countries import *
 from src.lifesim_lib.translation import _
 from src.lifesim_lib.lifesim_lib import *
 from src.people.classes.parent import Parent
