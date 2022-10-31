@@ -9,7 +9,7 @@ from src.people.classes.parent import Parent
 from src.people.classes.person import Person
 from src.people.classes.sibling import Sibling
 from src.people.classes.partner import Partner
-
+from src.people.classes.child import Child
 
 def main_menu(player):
 	print()
@@ -61,7 +61,7 @@ def main_menu(player):
 			if isinstance(relation, Parent):
 				bars.append((_("Generosity"), relation.generosity))
 				bars.append((_("Money"), relation.money))
-			elif isinstance(relation, (Sibling, Partner)):
+			elif isinstance(relation, (Sibling, Partner, Child)):
 				bars.append((_("Smarts"), relation.smarts))
 				bars.append((_("Looks"), relation.looks))
 				if isinstance(relation, Sibling):
@@ -100,6 +100,11 @@ def main_menu(player):
 						enjoyment1 = max(enjoyment1, randint(0, 100))
 					elif player.has_trait("GRUMPY"):
 						enjoyment1 = min(enjoyment1, randint(0, 100))
+					enjoyment2 = round(random.triangular(0, 100, relation.relationship))
+					if isinstance(relation, Child):
+						enjoyment1 += round_stochastic((100 - enjoyment1)*max(0, 18 - relation.age)/randint(36, 45))
+						enjoyment1 += round_stochastic((100 - enjoyment1)*max(0, 13 - relation.age)/randint(26, 52))
+					
 					if player.age < 3:
 						sayings = [
 							_(
@@ -194,7 +199,6 @@ def main_menu(player):
 							),
 						]
 					print(random.choice(sayings))
-					enjoyment2 = round(random.triangular(0, 100, relation.relationship))
 					print_align_bars(
 						(_("Your Enjoyment"), enjoyment1),
 						(
@@ -427,33 +431,32 @@ def main_menu(player):
 							else -randint(3, 8)
 						)
 			elif choice == _("Have a baby"):
-				print(_("Coming soon!"))
-				#already_pregnant = player.partner.is_pregnant if player.gender == Gender.Male else player.is_pregnant
-#				if already_pregnant:
-#					rel = player.partner.name_accusative()
-#					if player.gender == Gender.Male:
-#						print(_("Your {partner} is already pregnant!").format(partner=rel))
-#					else:
-#						print(_("You are already pregnant!"))
-#				elif relation.relationship >= randint(45, 75) and partner.years_together >= randint(1, 2):
-#					rel = player.partner.name_accusative()
-#					display_event(_("You and your {partner} tried for a baby.").format(partner=rel))
-#					if randint(1, 2) == 1:
-#						if player.gender == Gender.Male:
-#							print(_("Your {partner} is pregnant with your baby!").format(player=rel))
-#						else:
-#							print(_("You are pregnant with {name}'s baby!").format(name=player.partner.firstname))
-#						if yes_no(_("Would you like to keep it?")):
-#							if player.gender == Gender.Male:
-#								player.partner.is_pregnant = True
-#							else:
-#								player.is_pregnant = True
-#					else:
-#						msg = _("You failed to get her pregnant.") if player.gender == Gender.Male else _("You failed to get pregnant.")
-#						print(msg)
-#				else:
-#					print(_("Your {partner} doesn't want to have a baby with you.").format(partner=player.partner.name_accusative()))
-#					player.partner.change_relationship(-randint(4, 8))
+				already_pregnant = player.partner.is_pregnant if player.gender == Gender.Male else player.is_pregnant
+				if already_pregnant:
+					rel = player.partner.name_accusative()
+					if player.gender == Gender.Male:
+						print(_("Your {partner} is already pregnant!").format(partner=rel))
+					else:
+						print(_("You are already pregnant!"))
+				elif relation.relationship >= randint(45, 75) and player.partner.years_together >= randint(1, 2):
+					rel = player.partner.name_accusative()
+					display_event(_("You and your {partner} tried for a baby.").format(partner=rel), cls=False)
+					if randint(1, 2) == 1:
+						if player.gender == Gender.Male:
+							print(_("Your {partner} is pregnant with your baby!").format(partner=rel))
+						else:
+							print(_("You are pregnant with {name}'s baby!").format(name=player.partner.firstname))
+						if yes_no(_("Would you like to keep it?")):
+							if player.gender == Gender.Male:
+								player.partner.is_pregnant = True
+							else:
+								player.is_pregnant = True
+					else:
+						msg = _("You failed to get your {partner} pregnant.").format(partner=player.partner.name_accusative()) if player.gender == Gender.Male else _("You failed to get pregnant.")
+						print(msg)
+				else:
+					print(_("Your {partner} doesn't want to have a baby with you.").format(partner=player.partner.name_accusative()))
+					player.partner.change_relationship(-randint(4, 8))
 			elif choice == _("Break up"):
 				partner = player.partner.name_accusative()
 				if yes_no(
@@ -500,12 +503,11 @@ def main_menu(player):
 				choices = random.sample(places, 4)
 				while True:
 					print(_("Choose a location:"))
-					choice = choice_input(*(list(map(lambda a: a.translated().capitalize(), choices)) + ["Cancel"]))
+					choice = choice_input(*(list(map(lambda a: str(a).capitalize(), choices)) + ["Cancel"]))
 					if choice <= len(choices):
 						location = choices[choice - 1]
 						price = locations[location]
-						location_trans = location.translated()
-						print(_("You have chosen to marry {name} at a {place}.\nCost: ${price}").format(name=relation.name, place=location_trans, price=price))
+						print(_("You have chosen to marry {name} at a {place}.\nCost: ${price}").format(name=relation.name, place=location, price=price))
 						choice = choice_input(_("Do it"), _("Edit the plan"), _("Actually, never mind"))
 						if choice == 1:
 							if player.money < price:
@@ -1314,7 +1316,7 @@ def main_menu(player):
 						player.gender = Gender.Male
 	if choice == _("Find a Job"):
 		salary = round_stochastic(
-			randexpo(30000, 55000)
+			randexpo(30000, 65000)
 		)  # TODO: Add a selection of different types of jobs
 		if yes_no(
 			_(

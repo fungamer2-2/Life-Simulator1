@@ -16,13 +16,13 @@ class TranslateMarker:
             raise TypeError("only strings are allowed")
         self.string = string
         
-    def __str__(self):
+    def raw_str(self):
         return self.string
     
     def __hash__(self):
         return hash(self.string)
         
-    def translated(self):
+    def __str__(self):
         if lang:
             return lang.gettext(self.string)
         return self.string
@@ -36,6 +36,7 @@ class TranslateMarker:
     	
     def __ne__(self, other):
     	return not self.__eq__(other)
+    	
 
 def get_save_files():
     return os.listdir(SAVE_PATH)
@@ -288,10 +289,11 @@ def press_enter():
     input(_("Press Enter to continue..."))
 
 
-def display_event(message):
+def display_event(message, cls=True):
     print(message)
     press_enter()
-    clear_screen()
+    if cls:
+  	  clear_screen()
 
 
 def display_bar(stat_name, val):

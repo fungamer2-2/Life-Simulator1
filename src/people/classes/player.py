@@ -80,6 +80,7 @@ class Player(Person):
 		self.times_asked_since_last_raise = 0
 		self.last_raise = 0
 		self.partner = None
+		self._recent_child_father = None #Used if the player is female and got pregnant but then broke up with their partner
 		self.traits = {}
 		self.illnesses = []
 		self.salary_years = []
@@ -144,7 +145,8 @@ class Player(Person):
 		looks = clamp(round_stochastic(looks), 0, 100)
 		mother, father = (other, self) if self.gender == Gender.Male else (self, other)
 		c = Child(random_name(gender), last, gender, smarts, looks, mother, father)
-
+		return c
+		
 	def has_trait(self, name):
 		return name in self.traits
 		
@@ -304,6 +306,48 @@ class Player(Person):
 				self.change_stress(
 					-randint(0, round_stochastic(abs(diff) / 9 * factor))
 				)
+				
+		if self.gender == Gender.Female:
+			if self.is_pregnant:
+				self.is_pregnant = False
+				c = self.generate_child(self._recent_child_father)
+				self._recent_child_father = None
+				typ = c.get_translated_type().lower()
+				print(_("You just had a baby {son_daughter}!").format(son_daughter=typ))
+				him_her = c.him_her()
+				while True:
+					print(_("What will you name {him_her}? (or leave blank for a random name)").format(him_her=him_her))
+					name = input()
+					if name == "":
+						break
+					elif len(name.strip()) > 0:
+						c.firstname = name.strip()
+						c.update_name()
+						break
+				self.change_happiness(randint(35, 50))
+				self.change_stress(randint(0, 6))
+				self.relations.append(c)
+				print(_("You are the mother of a baby {son_daughter} named {name}.").format(son_daughter=typ, name=c.name))
+		elif self.partner and self.partner.is_pregnant:
+			
+			c = self.generate_child(self.partner)
+			typ = c.get_translated_type().lower()
+			self.partner.is_pregnant = False
+			print(_("Your {partner} just had a baby {son_daughter}!").format(partner=self.partner.name_accusative(), son_daughter=typ))
+			him_her = c.him_her()
+			while True:
+				print(_("What will you name {him_her}? (or leave blank for a random name)").format(him_her=him_her))
+				name = input()
+				if name == "":
+					break
+				elif len(name.strip()) > 0:
+					c.firstname = name.strip()
+					c.update_name()
+					break
+			self.change_happiness(randint(35, 50))
+			self.change_stress(randint(0, 8))
+			self.relations.append(c)
+			print(_("You are the father of a baby {son_daughter} named {name}.").format(son_daughter=typ, name=c.name))
 		if self.happiness < randint(1, 10) and not self.is_depressed():
 			display_event(_("You are suffering from depression."))
 			self.add_illness("Depression")
@@ -328,8 +372,10 @@ class Player(Person):
 				elif isinstance(relation, Sibling):
 					happy_remove = randint(25, 40)
 				elif isinstance(relation, Partner):
-					happy_remove = randint(60, 100)
+					happy_remove = randint(70, 100)
 					self.partner = None
+				elif isinstance(relation, Child):
+					happy_remove = randint
 				self.change_happiness(-happy_remove)
 				if yes_no(_("Would you like to attend the funeral?")):
 					self.change_happiness(randint(3, 5))
@@ -345,11 +391,6 @@ class Player(Person):
 					self.change_happiness(
 						round_stochastic(1.5 * math.log10(inheritance))
 					)
-		if self.gender == Gender.Female:
-			if self.is_pregnant:
-				self.is_pregnant = False
-		elif self.partner and self.partner.is_pregnant:
-			self.partner.is_pregnant = False
 		self.random_events()
 		if self.partner:
 			assert self.partner in self.relations
