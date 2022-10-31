@@ -8,6 +8,7 @@ from src.people.classes.parent import Parent
 from src.people.classes.person import Person
 from src.people.classes.sibling import Sibling
 from src.people.classes.partner import Partner
+from src.people.classes.child import Child
 
 
 class Player(Person):
@@ -83,6 +84,7 @@ class Player(Person):
 		self.illnesses = []
 		self.salary_years = []
 		self.ID = str(uuid.uuid4())
+		self.is_pregnant = False
 		self.save_path = SAVE_PATH + "/" + self.ID + ".pickle"
 
 	def learn_trait(self, trait):
@@ -129,6 +131,19 @@ class Player(Person):
 		while p.death_check():
 			p.age -= randint(1, 5)
 		return p
+		
+	def generate_child(self, other):
+		if self.gender == Gender.Male:
+			last = self.lastname
+		else:
+			last = other.lastname
+		gender = Gender.random()
+		smarts = random.gauss((self.smarts + other.smarts)/2, 9)
+		smarts = clamp(round_stochastic(smarts), 0, 100)
+		looks = random.gauss((self.looks + other.looks)/2, 7)
+		looks = clamp(round_stochastic(looks), 0, 100)
+		mother, father = (other, self) if self.gender == Gender.Male else (self, other)
+		c = Child(random_name(gender), last, gender, smarts, looks, mother, father)
 
 	def has_trait(self, name):
 		return name in self.traits
@@ -330,6 +345,11 @@ class Player(Person):
 					self.change_happiness(
 						round_stochastic(1.5 * math.log10(inheritance))
 					)
+		if self.gender == Gender.Female:
+			if self.is_pregnant:
+				self.is_pregnant = False
+		elif self.partner and self.partner.is_pregnant:
+			self.partner.is_pregnant = False
 		self.random_events()
 		if self.partner:
 			assert self.partner in self.relations

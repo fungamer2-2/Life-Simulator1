@@ -28,6 +28,7 @@ class Partner(Relationship):
         self.craziness = randint(0, 100)
         self.years_together = 0
         self.was_proposed_to = False
+        self.is_pregnant = False
 
     def age_up(self):
         super().age_up()

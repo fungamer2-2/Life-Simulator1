@@ -2,7 +2,7 @@ import random
 from random import randint
 
 from src.lifesim_lib.const import *
-from src.lifesim_lib.countries import *
+from src.countries import *
 from src.lifesim_lib.translation import _
 from src.lifesim_lib.lifesim_lib import *
 from src.people.classes.parent import Parent
@@ -79,6 +79,7 @@ def main_menu(player):
 					choices.append(_("Compliment"))
 					choices.append(_("Insult"))
 				if isinstance(relation, Partner):
+					choices.append(_("Have a baby"))
 					if relation.status < 2:
 						choices.append(_("Break up"))
 					else:
@@ -421,10 +422,38 @@ def main_menu(player):
 							)
 						)
 						player.change_happiness(
-							-randint(1, 5)
+							-randint(2, 5)
 							if isinstance(relation, Sibling)
 							else -randint(3, 8)
 						)
+			elif choice == _("Have a baby"):
+				print(_("Coming soon!"))
+				#already_pregnant = player.partner.is_pregnant if player.gender == Gender.Male else player.is_pregnant
+#				if already_pregnant:
+#					rel = player.partner.name_accusative()
+#					if player.gender == Gender.Male:
+#						print(_("Your {partner} is already pregnant!").format(partner=rel))
+#					else:
+#						print(_("You are already pregnant!"))
+#				elif relation.relationship >= randint(45, 75) and partner.years_together >= randint(1, 2):
+#					rel = player.partner.name_accusative()
+#					display_event(_("You and your {partner} tried for a baby.").format(partner=rel))
+#					if randint(1, 2) == 1:
+#						if player.gender == Gender.Male:
+#							print(_("Your {partner} is pregnant with your baby!").format(player=rel))
+#						else:
+#							print(_("You are pregnant with {name}'s baby!").format(name=player.partner.firstname))
+#						if yes_no(_("Would you like to keep it?")):
+#							if player.gender == Gender.Male:
+#								player.partner.is_pregnant = True
+#							else:
+#								player.is_pregnant = True
+#					else:
+#						msg = _("You failed to get her pregnant.") if player.gender == Gender.Male else _("You failed to get pregnant.")
+#						print(msg)
+#				else:
+#					print(_("Your {partner} doesn't want to have a baby with you.").format(partner=player.partner.name_accusative()))
+#					player.partner.change_relationship(-randint(4, 8))
 			elif choice == _("Break up"):
 				partner = player.partner.name_accusative()
 				if yes_no(
