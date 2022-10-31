@@ -608,6 +608,8 @@ JOBS_FREELANCE_GIGS = [
     _("Babysitter"),
     _("Dog Walker"),
     _("Pet Sitter"),
+    _("Lemonade Stand"),
+    _("Kissing booth"),
 ]
 JOBS_PART_TIME = [
     _("Arcade Assistant"),
@@ -622,6 +624,7 @@ JOBS_PART_TIME = [
     _("Car Wash Attendant"),
     _("Caterer"),
     _("Collections Specialist"),
+    _("Concessions Attendant"),
     _("Dance Instructor"),
     _("Delivery Driver"),
     _("Doorman"),
@@ -635,19 +638,46 @@ JOBS_PART_TIME = [
     _("Mall Santa"),
     _("Office Assistant"),
     _("Personal Trainer"),
+    _("Pool Towel Attendant"),
     _("Sandwich Maker"),
     _("School Bus Driver"),
     _("Sign Holder"),
+    _("Street Sweeper"),
     _("Swim Instructor"),
     _("Usher"),
     _("Valet"),
     _("Window Cleaner"),
+    _("Yoga Receptionist"),
 ]
+# Part time job categories
+JOBS_PART_TIME_CAR_WASH = [ 
+    _("Car Wash Attendant"),
+    _(""),
+]
+JOBS_PART_TIME_GYM = [
+    _("Yoga Receptionist"),
+]
+JOBS_PART_TIME_HOTEL = [
+    _("Pool Towel Attendant"),
+]
+JOBS_PART_TIME_MALL = [
+    _("Arcade Assistant"),
+]
+JOBS_PART_TIME_MOVIE_THEATRE = [
+    _("Concessions Attendant"),
+]
+JOBS_PART_TIME_MUNICIPAL = [
+    _(""),
+    _("Street Sweeper"),
+]
+
+
 
 # Full time jobs arranged into job categories. E.g. Junior Financial Analyst (Corporate) comes under CORPORATE =, or FINANCE =
 # Junior Corporate jobs for age/qualification reasons. {JOBS_CORPORATE_JUNIOR} (Corporate).
 # Nb. These will probably need to be re-categorised once they're all down. The in-app classification system isn't very good
 JOBS_ADULT_FILM_STUDIO = [
+    _("Fluffer"),
     _("Porn Actor"),
     _("Porn Cameraman"),
     _("Porn Star"),
@@ -671,13 +701,13 @@ JOBS_AIRLINE = [
     _(""),
 ]
 JOBS_CAR_DEALER_JUNIOR = [
-    _("Auto Mechanic"),
-    _(""),
+    _("Apprentice Auto Mechanic"),
+    _("Apprentice Auto Electrician"),
     _(""),
 ]
 JOBS_CAR_DEALER = [
-    _("Apprentice Auto Mechanic"),
-    _("Apprentice Auto Electrician"),
+    _("Auto Mechanic"),
+    _("Auto Electrician"),
     _(""),
 ]
 JOBS_CHURCH = [
@@ -685,8 +715,21 @@ JOBS_CHURCH = [
     _(""),
 ]
 JOBS_CIRCUS = [
+    _("Acrobat"),
+    _("Clown"),
+    _("Dancer"),
+    _("Fire Breather"),
+    _("Fire Eater"),
+    _("Horse Rider"),
+    _("Juggler"),
+    _("Lion Tamer"),
     _("Magician"),
-    _(""),
+    _("Magician's Assistant"),
+    _("Plate Spinner"),
+    _("Sword Eater"),
+    _("Tightrope Walker"),
+    _("Trapeze Artist"),
+    _("Unicyclist"),
 ]
 JOBS_CORPORATE_JUNIOR = [
     _("Administrative Assistant"),
@@ -712,6 +755,7 @@ JOBS_CORPORATE = [
 ]
 JOBS_DENTAL_OFFICE = [
     _("Dental Hygenist"),
+    _("Dental Receptionist"),
     _("Dentist"),
 ]
 JOBS_ENGINEERING_FIRM_JUNIOR = [
@@ -727,7 +771,8 @@ JOBS_ESCORT_AGENCY = [
 ]
 JOBS_FAST_FOOD = [
     _("Crew Member"),
-    _(""),
+    _("Manager"),
+    _("Team Leader"),
 ]
 JOBS_FILM_STUDIO = [
     _("Dancer"),
@@ -761,9 +806,25 @@ JOBS_LAW_FIRM = [
     _("Legal Secretary"),
     _(""),
 ]
+JOBS_MALL = [
+    _("Mall Cop"),
+    _("Facilities Manager"),
+]
 JOBS_MODEL_AGENCY = [
+    _("Catalogue Model"),
     _("Foot Model"),
-    _(""),
+    _("Hand Model"),
+    _("Fit Model"),
+    _("Lingerie Model"),
+    _("Model Scout"),
+    _("Modelling Agent"),
+    _("Photo Model"),
+    _("Runway Model"),
+]
+JOBS_MOVIES = [
+    _("Cameraman"),
+    _("Director"),
+    _("Key Grip"),
 ]
 JOBS_MUNICIPAL = [
     _("Junior Policy Analyst"),
@@ -827,13 +888,39 @@ JOBS_STRIP_CLUB = [
     _(""),
     _(""),
 ]
+JOBS_SUPERMARKET_JUNIOR = [
+    _("Apprentice Baker"),
+    _("Apprentice Butcher"),
+    _("Apprentice Grocer"),
+    _(""),
+]
+JOBS_SUPERMARKET = [
+    _("Baker"),
+    _("Butcher"),
+    _("Grocer"),
+    _(""),
+]
 JOBS_TELEVISION_JUNIOR = [
     _("Junior Cameraman"),
     _("Junior Reporter"),
 ]
 JOBS_TELEVISION = [
+    _("Animator"),
     _("Cameraman"),
-    _(""),
+    _("Cinematographer"),
+    _("Casting Director"),
+    _("Comedian"),
+    _("Costume Designer"),
+    _("Director"),
+    _("Director of Photography"),
+    _("Editor"),
+    _("Key Grip"),
+    _("Music Director"),
+    _("News Reporter"),
+    _("Production Designer and Art Director"),
+    _("Sound Editor"),
+    _("Talkshow Host"),
+    _("Writer"),
 ]
 JOBS_TRAVEL_AGENCY = [
     _("Tour Operator"),
@@ -893,6 +980,15 @@ CAREER_ADULT_MEDIA = [
     _("Porn Star"),
     _("Porn Writer"),
     _("Porn Director"),
+]
+CAREER_AGENCY_MODEL = [
+    _("Catalogue Model"),
+    _("Foot Model"),
+    _("Hand Model"),
+    _("Fit Model"),
+    _("Lingerie Model"),
+    _("Photo Model"),
+    _("Runway Model"),
 ]
 CAREER_CAMERAMAN = [
     _("Apprentice Cameraman"),
@@ -971,6 +1067,703 @@ CAREER_VETERINARIAN = [
 #   ENGINEERING_JOBS = [
 #       _("Engineer I"),
 #   ]
+
+
+#----
+# Special Jobs
+
+# Professional Athlete Jobs
+PROFESSIONAL_SPORTS_TYPES = [
+    _("American Football"),
+    _("Association Football"),
+    _("Australian Rules Football"),
+    _("Baseball"),
+    _("Basketball"),
+    _("Boxing"),
+    _("Canadian Football"),
+    _("Cricket"),
+    _("Gaelic Football"),
+    _("Golf"),
+    _("Ice Hockey"),
+    _("Rugby League"),
+    _("Rugby Union"),
+    _("Surfing"),
+    _("Tennis"),
+    _("Volleyball"),
+]
+# - American Football -
+# American Football Teams
+AMERICAN_FOOTBALL_TEAMS_NFC = [
+    _("Arizona Cardinals"),
+    _("Atlanta Falcons"),
+    _("Carolina Panthers"),
+    _("Chicago Bears"),
+    _("Dallas Cowboys"),
+    _("Detroit Lions"),
+    _("Green Bay Packers"),
+    _("Los Angeles Rams"),
+    _("Minnesota Vikings"),
+    _("New Orleans Saints"),
+    _("New York Giants"),
+    _("Philadelphia Eagles"),
+    _("San Francisco 49ers"),
+    _("Seattle Seahawks"),
+    _("Tampa Bay Buccaneers"),
+    _("Washington Commanders"),
+]
+AMERICAN_FOOTBALL_TEAMS_AFC = [
+    _("Baltimore Ravens"),
+    _("Buffalo Bills"),
+    _("Cincinnati Bengals"),
+    _("Cleveland Browns"),
+    _("Denver Broncos"),
+    _("Houston Texans"),
+    _("Indianapolis Colts"),
+    _("Jacksonville Jaguars"),
+    _("Kansas City Chiefs"),
+    _("Las Vegas Raiders"),
+    _("Los Angeles Chargers"),
+    _("Miami Dolphins"),
+    _("New England Patriots"),
+    _("New York Jets"),
+    _("Pittsburgh Steelers"),
+    _("Tennessee Titans"),
+]
+# Positions
+AMERICAN_FOOTBALL_POSITIONS = [
+    _("Safety"),
+    _("Cornerback"),
+    _("Outside Linebacker"),
+    _("Middle Linebacker"),
+    _("End"),
+    _("Defensive Tackle"),
+    _("Wide Receiver"),
+    _("Offensive Tackle"),
+    _("Offensive Guard"),
+    _("Center"),
+    _("Tight End"),
+    _("Quarterback"),
+    _("Wide Receiver"),
+    _("Fullback / Running Back"),
+    _("Halfback / Running Back"),
+]
+# - Association Football -
+# Association Football Teams
+ASSOCIATION_FOOTBALL_TEAMS = [
+
+]
+# Positions
+ASSOCIATION_FOOTBALL_POSITIONS = [
+    _("Goalkeeper"),
+    _("Full-Back"),
+    _("Centre-Back"),
+    _("Sweeper"),
+    _("Wing-Back"),
+    _("Defensive Midfielder"),
+    _("Central Midfielder"),
+    _("Attacking Midfielder"),
+    _("Winger"),
+    _("Forward"),
+    _("Striker"),
+]
+# - Australian Rules Football -
+# Australian Rules Football Teams
+AUSTRALIAN_RULES_FOOTBALL_TEAMS = [
+
+]
+# Positions
+AUSTRALIAN_RULES_FOOTBALL_POSITIONS = [
+    _("Left Forward Pocket"),
+    _("Full Forward"),
+    _("Right Forward Pocket"),
+    _("Left Forward Flank"),
+    _("Centre Half Forward"),
+    _("Right Forward Flank"),
+    _("Left Wing"),
+    _("Centre"),
+    _("Ruck Rover"),
+    _("Ruck"),
+    _("Rover"),
+    _("Right Wing"),
+    _("Left Back Flank"),
+    _("Centre Half Back"),
+    _("Right Back Flank"),
+    _("Left Back Pocket"),
+    _("Full Back"),
+    _("Right Back Pocket"),
+]
+# - Baseball -
+# Baseball Teams
+BASEBALL_TEAMS = [
+
+]
+# Positions
+BASEBALL_POSITIONS = [
+    _("Pitcher"),
+    _("Catcher"),
+    _("First Base"),
+    _("Second Base"),
+    _("Third Base"),
+    _("Shortstop"),
+    _("Left Field"),
+    _("Center Field"),
+    _("Right Field"),
+    _("Outfield"),
+    _("Designated Hitter"),
+]
+# - Basketball -
+# Basketball Teams
+BASKETBALL_TEAMS = [
+
+]
+# Positions
+BASKETBALL_POSITIONS = [
+    _("Point Guard"),
+    _("Shooting Guard"),
+    _("Small Forward"),
+    _("Power Forward"),
+    _("Center"),
+
+]
+# - Boxing -
+# Male Boxers
+BOXERS_MALE = [
+
+]
+# Female Boxers
+BOXERS_FEMALE = [
+
+]
+# - Canadian Football -
+# Canadian Football Teams
+CANADIAN_FOOTBALL_TEAMS = [
+
+]
+# Positions
+CANADIAN_FOOTBALL_POSITIONS = [
+
+]
+# - Cricket -
+# Cricket Teams
+CRICKET_TEAMS = [
+
+]
+# Positions
+CRICKET_POSITIONS = [
+
+]
+# - Gaelic Football -
+# Gaelic Football Teams
+GAELIC_FOOTBALL_TEAMS = [
+
+]
+# Positions
+GAELIC_FOOTBALL_POSITIONS = [
+
+]
+# - Golf -
+# Male Golfers
+GOLFERS_MALE = [
+
+]
+# Female Golfers
+GOLFERS_FEMALE = [
+
+]
+# - Ice Hockey -
+# Ice Hockey Teams
+ICE_HOCKEY_TEAMS = [
+
+]
+# Positions
+ICE_HOCKEY_POSITIONS = [
+
+]
+# - Rugby League -
+# Rugby League Teams
+RUGBY_LEAGUE_TEAMS = [
+
+]
+# Positions
+RUGBY_LEAGUE_POSITIONS = [
+
+]
+# - Rugby Union -
+# Rugby Union Teams
+RUGBY_UNION_TEAMS = [
+
+]
+# Positions
+RUGBY_UNION_POSITIONS = [
+
+]
+# - Surfing -
+# Male Surfers
+SURFERS_MALE_PRO = [
+    _("Filipe Toledo"),
+    _("Italo Ferreira"),
+    _("Jack Robinson"),
+    _("Ethan Ewing"),
+    _("Kanoa Igarashi"),
+    _("Miguel Pupo"),
+    _("Griffin Colapinto"),
+    _("Caio Ibelli"),
+    _("Connor O'Leary"),
+    _("Callum Robson"),
+    _("Samuel Pupo"),
+    _("John John Florence"),
+    _("Matthew McGillivray"),
+    _("Jordy Smith"),
+    _("Kelly Slater"),
+    _("Barron Mamiya"),
+    _("Nat Young"),
+    _("Jake Marshall"),
+    _("Yago Dora"),
+    _("Kolohe Andino"),
+    _("Jadson Andre"),
+    _("Seth Moniz"),
+    _("Jackson Baker"),
+    _("Gabriel Medina"),
+]
+SURFERS_MALE_CHALLENGER = [
+
+]
+SURFERS_MALE_QUALIFYING = [
+
+]
+SURFERS_MALE_JUNIOR = [
+
+]
+# Female Surfers
+SURFERS_FEMALE_PRO = [
+    _("Stephanie Gilmore"),
+    _("Carissa Moore"),
+    _("Johanne Defay"),
+    _("Tatiana Weston-Webb"),
+    _("Brisa Hennessy"),
+    _("Lakey Peterson"),
+    _("Courtney Conlogue"),
+    _("Tyler Wright"),
+    _("Gabriela Bryan"),
+    _("Isabella Nichols"),
+    _("Caroline Marks"),
+    _("Sally Fitzgibbons"),
+]
+SURFERS_FEMALE_CHALLENGER = [
+
+]
+SURFERS_FEMALE_QUALIFYING = [
+
+]
+SURFERS_FEMALE_JUNIOR = [
+
+]
+
+# - Tennis -
+# Male Tennis players
+TENNIS_PLAYERS_MALE = [
+    _("Carlos Alcaraz"),
+    _("Rafael Nadal"),
+    _("Casper Ruud"),
+    _("Daniil Medvedev"),
+    _("Stefanos Tsitsipas"),
+    _("Alexander Zverev"),
+    _("Novak Djokovic"),
+    _("Andrey Rublev"),
+    _("Felix Auger-Aliassime"),
+    _("Taylor Fritz"),
+    _("Hubert Hurkacz"),
+    _("Jannik Sinner"),
+    _("Cameron Norrie"),
+    _("Matteo Berrettini"),
+    _("Pablo Carreno Busta"),
+    _("Marin Čilić"),
+    _("Frances Tiafoe"),
+    _("Karen Khachanov"),
+    _("Denis Shapovalov"),
+    _("Nick Kyrgios"),
+    _("Diego Schwartzman"),
+    _("Roberto Bautista Agut"),
+    _("Lorenzo Musetti"),
+    _("Alex De Minaur"),
+    _("Holger Rune"),
+    _("Daniel Evans"),
+    _("Borna Coric"),
+    _("Miomir Kecmanovic"),
+    _("Francisco Cerundolo"),
+    _("Tommy Paul"),
+    _("Alejandro Davidovich Fokina"),
+    _("Grigor Dimitrov"),
+    _("Sebastian Korda"),
+    _("Maxime Cressy"),
+    _("Botic Van De Zandschulp"),
+    _("Reilly Opelka"),
+    _("Yoshihito Nishioka"),
+    _("Alexander Bublik"),
+    _("Sebastian Baez"),
+    _("Albert Ramos-Vinolas"),
+    _("Gael Monfils"),
+    _("Adrian Mannarino"),
+    _("Emil Ruusuvuori"),
+    _("Brandon Nakashima"),
+    _("Jack Draper"),
+    _("Alex Molcan"),
+    _("John Isner"),
+    _("Lorenzo Sonego"),
+    _("Andy Murray"),
+    _("Jenson Brooksby"),
+    _("Arthur Rinderknech"),
+    _("Filip Krajinovic"),
+    _("David Goffin"),
+    _("Oscar Otte"),
+    _("Pedro Cachin"),
+    _("J.J. Wolf"),
+    _("Jaume Munar"),
+    _("Marcos Giron"),
+    _("Fabio Fognini"),
+    _("Aslan Karatsev"),
+    _("Pedro Martinez"),
+    _("Marc-Andrea Huesler"),
+    _("Benjamin Bonzi"),
+    _("Corentin Moutet"),
+    _("Mackenzie McDonald"),
+    _("Thiago Monteiro"),
+    _("Constant Lestienne"),
+    _("Daniel Elahi Galan"),
+    _("Quentin Halys"),
+    _("João Sousa"),
+    _("Tallon Griekspoor"),
+    _("Ilya Ivashka"),
+    _("Federico Coria"),
+    _("Richard Gasquet"),
+    _("Laslo Djere"),
+    _("Mikael Ymer"),
+    _("Alejandro Tabilo"),
+    _("Jiri Lehecka"),
+    _("Bernabe Zapata Miralles"),
+    _("Roberto Carballes Baena"),
+    _("Radu Albot"),
+    _("Kamil Majchrzak"),
+    _("Hugo Gaston"),
+    _("SoonWoo Kwon"),
+    _("Jordan Thompson"),
+    _("Cristian Garin"),
+    _("Dusan Lajovic"),
+    _("Chun-Hsin Tseng"),
+    _("Tomas Martin Etcheverry"),
+    _("Taro Daniel"),
+    _("Thanasi Kokkinakis"),
+    _("Hugo Dellien"),
+    _("Roman Safiullin"),
+    _("Nikoloz Basilashvili"),
+    _("Nuno Borges"),
+    _("Pavel Kotov"),
+    _("Zhizhen Zhang"),
+    _("Alexei Popyrin"),
+    _("Facundo Bagnis"),
+    _("Christopher O'Connell"),
+]
+# Female Tennis players
+TENNIS_PLAYERS_FEMALE = [
+    _("Iga Swiatek"),
+    _("Ons Jabeur"),
+    _("Jessica Pegula"),
+    _("Coco Gauff"),
+    _("Maria Sakkari"),
+    _("Caroline Garcia"),
+    _("Aryna Sabalenka"),
+    _("Daria Kasatkina"),
+    _("Veronika Kudermetova"),
+    _("Simona Halep"),
+    _("Madison Keys"),
+    _("Paula Badosa"),
+    _("Belinda Bencic"),
+    _("Danielle Collins"),
+    _("Beatriz Haddad Maia"),
+    _("Petra Kvitova"),
+    _("Anett Kontaveit"),
+    _("Jelena Ostapenko"),
+    _("Liudmila Samsonova"),
+    _("Ekaterina Alexandrova"),
+    _("Barbora Krejcikova"),
+    _("Elena Rybakina"),
+    _("Amanda Anisimova"),
+    _("Shuai Zhang"),
+    _("Qinwen Zheng"),
+    _("Martina Trevisan"),
+    _("Victoria Azarenka"),
+    _("Marie Bouzkova"),
+    _("Kaia Kanepi"),
+    _("Elise Mertens"),
+    _("Aliaksandra Sasnovich"),
+    _("Karolina Pliskova"),
+    _("Irina-Camelia Begu"),
+    _("Ajla Tomljanovic"),
+    _("Jil Teichmann"),
+    _("Alize Cornet"),
+    _("Sloane Stephens"),
+    _("Sorana Cirstea"),
+    _("Petra Martic"),
+    _("Leylah Fernandez"),
+    _("Alison Riske-Amritraj"),
+    _("Shelby Rogers"),
+    _("Naomi Osaka"),
+    _("Anastasia Potapova"),
+    _("Bernarda Pera"),
+    _("Bianca Andreescu"),
+    _("Anhelina Kalinina"),
+    _("Ana Bogdan"),
+    _("Katerina Siniakova"),
+    _("Mayar Sherif"),
+    _("Madison Brengle"),
+    _("Xiyu Wang"),
+    _("Yulia Putintseva"),
+    _("Daria Saville"),
+    _("Magda Linette"),
+    _("Alison Van Uytvanck"),
+    _("Garbine Muguruza"),
+    _("Diane Parry"),
+    _("Anna Bondar"),
+    _("Claire Liu"),
+    _("Lucia Bronzetti"),
+    _("Lin Zhu"),
+    _("Anna Kalinskaya"),
+    _("Maryna Zanevska"),
+    _("Marta Kostyuk"),
+    _("Jule Niemeier"),
+    _("Sara Sorribes Tormo"),
+    _("Danka Kovinic"),
+    _("Camila Giorgi"),
+    _("Tatjana Maria"),
+    _("Donna Vekic"),
+    _("Rebecca Marino"),
+    _("Nuria Parrizas Diaz"),
+    _("Linda Fruhvirtova"),
+    _("Tereza Martincova"),
+    _("Emma Raducanu"),
+    _("Viktorija Golubic"),
+    _("Jasmine Paolini"),
+    _("Elisabetta Cocciaretto"),
+    _("Panna Udvardy"),
+    _("Anna Blinkova"),
+    _("Lauren Davis"),
+    _("Yue Yuan"),
+    _("Dalma Galfi"),
+    _("Julia Grabher"),
+    _("Camila Osorio"),
+    _("Harriet Dart"),
+    _("Kaja Juvan"),
+    _("Tamara Zidansek"),
+    _("Tamara Korpatsch"),
+    _("Linda Noskova"),
+    _("Viktoriya Tomova"),
+    _("Qiang Wang"),
+    _("Varvara Gracheva"),
+    _("Oceane Dodin"),
+    _("Elena-Gabriela Ruse"),
+    _("Aleksandra Krunic"),
+    _("Dayana Yastremska"),
+    _("Angelique Kerber"),
+    _("Kamilla Rakhimova"),
+]
+# - Volleyball -
+# Volleyball Teams
+VOLLEYBALL_TEAMS = [
+
+]
+# Positions
+VOLLEYBALL_POSITIONS = [
+
+]
+
+
+# Street Hustler Jobs:
+# Streets
+STREET_HUSTLE_STREET_NAMES = [
+    _("Taylor Street"),
+    _("Wall Street"),
+    _("Woodland Drive"),
+    _("8th Street"),
+    _("Bridle Court"),
+    _("Adams Avenue"),
+    _("5th Street South"),
+    _("East Street"),
+    _("Valley View Road"),
+    _("Jones Street"),
+    _("Sycamore Drive"),
+    _("Chestnut Street"),
+    _("Cedar Street"),
+    _("Jackson Avenue"),
+    _("Lincoln Avenue"),
+    _("Inverness Drive"),
+    _("Fieldstone Drive"),
+    _("Cross Street"),
+    _("Westminster Drive"),
+    _("Primrose Lane"),
+    _("Canal Street"),
+    _("Grove Street"),
+    _("8th Street West"),
+    _("Hill Street"),
+    _("Route 4"),
+    _("Locust Street"),
+    _("3rd Street West"),
+    _("Buttonwood Drive"),
+    _("Pearl Street"),
+    _("B Street"),
+    _("Fairview Road"),
+    _("Bridge Street"),
+    _("Orange Street"),
+    _("Holly Drive"),
+    _("William Street"),
+    _("Clark Street"),
+    _("Jackson Street"),
+    _("Garfield Avenue"),
+    _("Sycamore Street"),
+    _("Somerset Drive"),
+    _("Bridle Lane"),
+    _("North Avenue"),
+    _("Lexington Court"),
+    _("6th Street North"),
+    _("Park Drive"),
+    _("Walnut Street"),
+    _("Dogwood Drive"),
+    _("Highland Drive"),
+    _("Cottage Street"),
+    _("9th Street"),
+]
+# Hustles
+STREET_HUSTLES = [
+    _("Busker"),
+    _("Panhandler"),
+    _("Scam Artist"),
+    _("Street Performer"),
+]
+# - Busker -
+# Instruments
+BUSKER_INSTRUMENTS = [
+    _("Ash Guitar"),
+    _("Silver Plastic Keyboard"),
+]
+# Music type
+BUSKER_MUSIC_TYPES = [
+    _("Classic Rock"),
+    _("Reggae"),
+    _("Romantic"),
+    _("Pop"),
+    _("Funk"),
+    _("Polka"),
+    _("Country"),
+    _("Bluegrass"),
+    _("Renaissance"),
+    _("New age"),
+    _("Adult contemporary"),
+    _("House music"),
+    _("Synth-pop"),
+    _("World music"),
+    _("Funk carioca"),
+    _("Bossa nova"),
+    _("Indie"),
+    _("Elevator music"),
+    _("Worship"),
+    _("Kawaii metal"),
+    _("Grunge"),
+    _("Punk rock"),
+    _("Screamo"),
+    _("Emo pop"),
+    _("Disco"),
+    _("Peaceful"),
+    _("Classical"),
+    _("Peruvian"),
+    _("Jazz"),
+    _("Folk"),
+    _("Blues"),
+]
+# Attire
+BUSKER_ATTIRE_MALE = [
+    _(""),
+]
+BUSKER_ATTIRE_FEMALE = [
+    _("Petticoat skirt"),
+    _("Trenchcoat"),
+    _("Angel costume"),
+    _("Black turtleneck"),
+    _("Dirndl dress"),
+    _("Lingerie"),
+    _("Mask"),
+    _("Devil costume"),
+    _("Poncho"),
+    _("Swimwear"),
+    _("Evening dress"),
+    _("Business suit"),
+]
+# Collection box
+BUSKER_COLLECTION_BOXES = [
+    _("Top hat"),
+    _("Raggedy knit cap"),
+    _("Shoe box"),
+    _("Tip jar"),
+    _("Music instrument case"),
+    _("Gas station soda cup"),
+    _("Glass fishbowl"),
+    _("Crusty tupperware container"),
+    _("Rusty bucket"),
+    _("Baseball cap"),
+    _("Coffee tin"),
+    _("Backpack"),
+    _("Hobo stick"),
+]
+# - Panhandler - 
+# Props
+PANHANDLER_PROPS = [
+    _("Hazmat suit"),
+    _("Straw hat"),
+    _("Hobo sack"),
+    _("Tattered suit and tie"),
+    _("Walker"),
+    _("Eviction notice"),
+    _("Plaster cast"),
+    _("Arm sling"),
+    _("Matted fur coat"),
+]
+# Signs. > call these between quotation marks "{panhandler_signs}"
+PANHANDLER_SIGNS = [
+    _("Let's do lunch, U buy"),
+    _("Will take insults for money"),
+    _("Free Hugs!"),
+    _("Need money for food"),
+    _("I'm too sober for this"),
+    _("Will picket your boss' house..."),
+    _("I'll let you spank me for $1"),
+    _("Saving up for a better life"),
+    _("Psychiatric help: $1"),
+    _("I need tree fiddy..."),
+]
+# Collection box
+PANHANDLER_COLLECTION_BOXES = [
+    _("Garbage can lid"),
+    _("Paper bag"),
+    _("Red Solo cup"),
+    _("Tattered picnic basket"),
+    _("Coffee canister"),
+    _("Empty MacBook Pro box"),
+    _("Cast-iron skillet"),
+    _("Duffel bag"),
+    _("Plastic shopping bag"),
+]
+# Strategy
+PANHANDLER_STRATEGIES = [
+    _("Hang outside a halfway house"),
+    _("Go to a packed convention centre"),
+    _("Hang around the entrance to a mall"),
+    _("Rush up to pedestrians"),
+    _("Sit outside a train station"),
+    _("Walk around a farmers market"),
+    _("Pass out on the street"),
+    _("Sit in front of a church on Sunday"),
+    _("Approach people leaving a concert hall"),
+    _("Stand on a corner known for drug dealing"),
+]
+
 
 
 #------------------------------------------------------------------
@@ -1796,16 +2589,35 @@ SPEND_TIME_TEEN = [
 ]
 
 # E.g. You {spend_time_pet_x)} {pet_type}, {pet_name} = You listened to music with your cat, Pip.
+# All pets
 SPEND_TIME_PET_CAT = [
     _("listened to hip-hop music with your"),
     _("listened to classical music with your"),
-    _("made an obstacle course for your"),
     _("played with your"),
+]
+# Pet type specific
+SPEND_TIME_PET_CAT = [
+    _("curled up and watched a movie with your"),
+    _("let a motorised weasel ball loose for your"),
+    _("made an obstacle course for your"),
+    _("used a cucumber to take prank videos of your"),
     _("used a laser pointer to play with your"),
     _("rolled a ball or yarn across the floor for your"),
 ]
 SPEND_TIME_PET_DOG = [
-
+    _("curled up and watched a movie with your"),
+    _("did the 'What The Fluff' challenge with your"),
+    _("gave belly rubs, pats and scratches to your"),
+    _("jingled some keys loudly, and went out to walk your"),
+    _("made a breadcrumb trail of dog biscuits for your"),
+    _("made a breadcrumb trail of dog biscuits leading to a bone for your"),
+    _("made an obstacle course for your"),
+    _("loudly announced walk time, and went walking with your"),
+    _("said 'Walkies!', and went walking with your"),
+    _("went swimming at the beach with your"),
+    _("went to the park and threw a ball for your"),
+    _("went to the river and threw sticks in it for your"),
+    
 ]
 
 # Events section:
@@ -2674,6 +3486,9 @@ CELEBRITY_FEMALE_WRITER = [
 ]
 CELEBRITY_BAND = [
     _("The Backstreet Boys"),
+    _("The Beatles"), 
+    _("Pink Floyd"),
+    _("The Rolling Stones"),
 ]
 
 # List of Urban locations (a park, a bank etc.) called after 'to' or 'at' "we went to {urban_location}", "we spent time at {urban_location}"
