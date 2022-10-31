@@ -372,10 +372,16 @@ class Player(Person):
 				elif isinstance(relation, Sibling):
 					happy_remove = randint(25, 40)
 				elif isinstance(relation, Partner):
-					happy_remove = randint(70, 100)
+					happy_remove = randint(65, 100)
+					children = (r for r in self.relations if isinstance(r, Child))
+					for c in children:
+						if relation.gender == Gender.Male:
+							c.father = None
+						else:
+							c.mother = None
 					self.partner = None
 				elif isinstance(relation, Child):
-					happy_remove = randint
+					happy_remove = randint(75, 100)
 				self.change_happiness(-happy_remove)
 				if yes_no(_("Would you like to attend the funeral?")):
 					self.change_happiness(randint(3, 5))
