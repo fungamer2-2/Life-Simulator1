@@ -614,7 +614,11 @@ class Player(Person):
 				print(_("Your {partner} wants to break up with you.").format(partner=name))
 				print(_("What will you do?"))
 				him_her = self.partner.him_her()
-				choices = choice_input(_("Wish {him_her} well").format(him_her=him_her), _("Beg {him_her} to stay").format(him_her=him_her))
+				choices = choice_input(
+					_("Wish {him_her} well").format(him_her=him_her), 
+					_("Beg {him_her} to stay").format(him_her=him_her),
+					_("Insult {him_her} one last time").format(him_her=him_her)
+				)
 				self.change_happiness(-randint(15, 18))
 				if choice == 1:
 					print(_("You wished {name} the best").format(name=self.partner.name))
@@ -628,15 +632,23 @@ class Player(Person):
 						display_event(_("{he_she} dumped you anyway.").format(he_she=he_she))
 						self.lose_partner()
 						self.change_happiness(-randint(10, 20))
+				elif choice == 3:
+					self.change_karma(-4)
+					he_she = self.partner.he_she()
+					insult = random.choice(INSULTS)
+					print(_("{name} broke up with you.").format(name=self.partner.name))
+					print(_("You called {him_her} {insult} as {he_she} was walking out the door."))
+					self.lose_partner()
 		elif self.marital_status == 3:
-			if self.partner.relationship <= randint(15, 30) and randint(1, 7) == 1:
+			if self.partner.relationship <= randint(15, 30) and randint(1, 6) == 1:
 				name = self.partner.name_accusative()
 				print(_("Your {partner} wants a divorce.").format(partner=name))
 				print(_("What will you do?"))
 				him_her = self.partner.him_her()
 				choices = choice_input(
 					_("Wish {him_her} well").format(him_her=him_her),
-					_("Beg {him_her} to stay").format(him_her=him_her)
+					_("Beg {him_her} to stay").format(him_her=him_her),
+					_("Insult {him_her} one last time").format(him_her=him_her)
 				)
 				self.change_happiness(-randint(15, 18))
 				if choice == 1:
@@ -651,6 +663,13 @@ class Player(Person):
 						display_event(_("{he_she} insisted on getting a divorce.").format(he_she=he_she))
 						self.change_happiness(-randint(15, 22))
 						self.divorce()
+				elif choice == 3:
+					self.change_karma(-4)
+					he_she = self.partner.he_she()
+					insult = random.choice(INSULTS)
+					print(_("{name} divorced you.").format(name=self.partner.name))
+					print(_("You called {him_her} {insult} as {he_she} was walking out the door."))
+					self.divorce()
 		if self.age >= 18 and self.age < randint(42, 70) and self.marital_status == 0 and randint(1, 16) == 1:
 			partner = self.generate_partner()
 			if partner.compatibility_check(self):

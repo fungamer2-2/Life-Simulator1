@@ -156,7 +156,7 @@ TRAITS_DICT = {
         _("You tend to work faster, improving your performance over time."),
         1,
         ["SLOW_WORKER", "LAZY"],
-    ),
+    ),  
     "GRUMPY": (
         _("Grumpy"),
         _("It is difficult for you to be in a good mood."),

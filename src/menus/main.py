@@ -298,6 +298,7 @@ def main_menu(player):
 						relation.had_conversation = True
 					if agreement < 15:
 						relation.change_relationship(-randint(2, 8))
+						player.change_happiness(-4)
 						print(
 							_(
 								"You and your {relation} got into an argument. What will you do?"
@@ -310,6 +311,7 @@ def main_menu(player):
 						)
 						if choice == 1:
 							player.change_karma(randint(1, 3))
+							player.change_happiness(-randint(2, 4))
 							print(
 								_("You apologized to your {relation}").format(
 									relation=relation.name_accusative()
