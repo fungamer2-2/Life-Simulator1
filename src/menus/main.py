@@ -102,8 +102,8 @@ def main_menu(player):
 						enjoyment1 = min(enjoyment1, randint(0, 100))
 					enjoyment2 = round(random.triangular(0, 100, relation.relationship))
 					if isinstance(relation, Child):
-						enjoyment1 += round_stochastic((100 - enjoyment1)*max(0, 18 - relation.age)/randint(36, 45))
-						enjoyment1 += round_stochastic((100 - enjoyment1)*max(0, 13 - relation.age)/randint(26, 52))
+						enjoyment1 += round_stochastic((100 - enjoyment1)*max(0, 18 - relation.age)/randint(36, 100))
+						enjoyment2 += round_stochastic((100 - enjoyment2)*max(0, 13 - relation.age)/randint(26, 39))
 					
 					if player.age < 3:
 						sayings = [
