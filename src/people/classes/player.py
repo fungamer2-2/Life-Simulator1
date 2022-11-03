@@ -84,6 +84,7 @@ class Player(Person):
 		self.traits = {}
 		self.illnesses = []
 		self.salary_years = []
+		self.children = []
 		self.ID = str(uuid.uuid4())
 		self.is_pregnant = False
 		self.save_path = SAVE_PATH + "/" + self.ID + ".pickle"
@@ -109,7 +110,39 @@ class Player(Person):
 			print_colored(_("You have gained the {trait} trait!").format(trait=data.name), data.get_color())
 			self.traits[trait] = data
 		return True
-				
+		
+	def convert_child_to_player(self, c):
+		self.__init__()
+		self.relations = []
+		self.parents = {}
+		if c.mother:
+			mother = Parent(c.mother.lastname, c.mother.age, Gender.Female)
+			mother.health = c.mother.health
+			mother.relationship = randint(90, 100) - randint(0, min(c.age, 50))
+			self.relations.append(mother)
+			self.parents["Mother"] = mother
+		if c.father:
+			father = Parent(c.father.lastname, c.father.age, Gender.Male)
+			father.health = c.father.health
+			father.relationship = randint(90, 100) - randint(0, min(c.age, 50))
+			self.relations.append(father)
+			self.parents["Father"] = father
+		
+		self.firstname = c.firstname
+		self.lastname = c.lastname
+		self.update_name()
+		self.age = c.age	
+		self.happiness = c.relationship + round_stochastic((randint(0, 100) - c.relationship)/3)
+		self.health = c.health
+		self.smarts = c.smarts
+		self.looks = c.looks
+		if self.age >= 6 and self.age < 17:
+			self.calc_grades(self.smarts + randint(-10, 10))
+		elif self.age >= 17 and self.age < 21:
+			went_to_uv = self.smarts >= randint(35, 45)
+			if went_to_uv:
+				self.uv_years = 21 - self.age
+			
 	def is_depressed(self):
 		return (
 			"Depression" in self.illnesses
@@ -205,7 +238,7 @@ class Player(Person):
 		p = cls()
 		p.__dict__.update(d)
 		return p
-
+	
 	def change_happiness(self, amount):
 		if amount != 0 and self.has_trait("MOODY"):
 			amount = round_stochastic(amount * 1.5)
@@ -327,9 +360,9 @@ class Player(Person):
 				self.change_happiness(randint(35, 50))
 				self.change_stress(randint(0, 6))
 				self.relations.append(c)
+				self.children.append(c)
 				print(_("You are the mother of a baby {son_daughter} named {name}.").format(son_daughter=typ, name=c.name))
 		elif self.partner and self.partner.is_pregnant:
-			
 			c = self.generate_child(self.partner)
 			typ = c.get_translated_type().lower()
 			self.partner.is_pregnant = False
@@ -347,6 +380,7 @@ class Player(Person):
 			self.change_happiness(randint(35, 50))
 			self.change_stress(randint(0, 8))
 			self.relations.append(c)
+			self.children.append(c)
 			print(_("You are the father of a baby {son_daughter} named {name}.").format(son_daughter=typ, name=c.name))
 		if self.happiness < randint(1, 10) and not self.is_depressed():
 			display_event(_("You are suffering from depression."))
@@ -373,15 +407,15 @@ class Player(Person):
 					happy_remove = randint(25, 40)
 				elif isinstance(relation, Partner):
 					happy_remove = randint(65, 100)
-					children = (r for r in self.relations if isinstance(r, Child))
-					for c in children:
-						if relation.gender == Gender.Male:
+					for c in self.children:
+						if relation is c.father:
 							c.father = None
-						else:
+						elif relation is c.mother:
 							c.mother = None
 					self.partner = None
 				elif isinstance(relation, Child):
 					happy_remove = randint(75, 100)
+					self.children.remove(relation)
 				self.change_happiness(-happy_remove)
 				if yes_no(_("Would you like to attend the funeral?")):
 					self.change_happiness(randint(3, 5))

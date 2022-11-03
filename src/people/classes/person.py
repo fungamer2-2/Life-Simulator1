@@ -30,17 +30,21 @@ class Person:
         self.change_smarts(randint(-3, 3))
         self.change_looks(randint(-3, 3))
         if self.age == 13:
-            val = 0
-            if randint(1, 4) == 1:
-                val = randint(0, 1)
-            else:
-                val = min(randint(0, 12) for _ in range(4))
-            self.teen_looks_inc = val
+            self.gen_teen_looks_inc()
         if self.age >= 13 and self.age < randint(24, 27):
             self.change_looks(self.teen_looks_inc)
         if self.age > 50 and self.looks > randint(20, 25) and randint(1, 4) < 4:
             decay = min((self.age - 51) // 5 + 1, 4)
             self.change_looks(-randint(0, decay))
+            
+    def gen_teen_looks_inc(self):
+        val = 0
+        if randint(1, 4) == 1:
+            val = randint(0, 1)
+        else:
+            val = min(randint(0, 12) for _ in range(4))
+        self.teen_looks_inc = val
+        
 
     def death_check(self):
         return (self.age >= randint(98, 122) and randint(1, 100) <= 65) or (
