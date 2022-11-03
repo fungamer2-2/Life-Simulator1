@@ -522,7 +522,7 @@ class Player(Person):
 		else:
 			avg_happy = round(self.total_happiness / self.age)
 			score = self.happiness * 0.3 + avg_happy * 0.7
-		print_align_bars((_("Lifetime Happiness"), avg_happy), (_("Karma"), self.karma))
+		print_align_bars((_("Lifetime Happiness"), score), (_("Karma"), self.karma))
 		self.delete_save()
 		press_enter()
 		raise PlayerDied
