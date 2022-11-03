@@ -14,12 +14,23 @@ TODO List:
 
 while True:
 	clear_screen()
+	player = start_menu()
 	try:
-		player = start_menu()
 		print(_("Age {age}").format(age=player.age))
 		while True:
-			main_menu(player)
-			player.save_game()
+			try:
+				main_menu(player)
+			except Exception as e:
+				clear_screen()
+				print(_("An error has occured"))
+				import traceback
+				traceback.print_exception(type(e), e, e.__traceback__)
+				
+				input(_("Press enter to continue"))
+			else:
+				player.save_game()
 	except PlayerDied:
+		#if player.children and yes_no(_("Would you like to continue as one of your children?")):
+#			names = [c.name for c in player.children]
 		if not yes_no(_("Would you like to start a new life?")):
 			break

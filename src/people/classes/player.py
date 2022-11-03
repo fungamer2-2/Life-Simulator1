@@ -111,7 +111,7 @@ class Player(Person):
 			self.traits[trait] = data
 		return True
 		
-	def convert_child_to_player(self, c):
+	def convert_child_to_player(self, c): #This is here for when it's possible to continue as your child
 		self.__init__()
 		self.relations = []
 		self.parents = {}
