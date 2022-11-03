@@ -21,6 +21,8 @@ while True:
 			try:
 				main_menu(player)
 			except Exception as e:
+				if type(e) == PlayerDied:
+					raise
 				clear_screen()
 				print(_("An error has occured"))
 				import traceback
