@@ -451,6 +451,7 @@ def main_menu(player):
 								player.partner.is_pregnant = True
 							else:
 								player.is_pregnant = True
+								player._recent_child_father = player.partner
 					else:
 						msg = _("You failed to get your {partner} pregnant.").format(partner=player.partner.name_accusative()) if player.gender == Gender.Male else _("You failed to get pregnant.")
 						print(msg)
@@ -472,7 +473,7 @@ def main_menu(player):
 				partner = player.partner
 				name = partner.name_accusative()
 				if (
-					partner.years_together >= randint(3, 4)
+					partner.years_together >= randint(3, 5)
 					and not partner.was_proposed_to
 					and partner.relationship >= randint(50, 60) + randint(0, 40)
 				):
