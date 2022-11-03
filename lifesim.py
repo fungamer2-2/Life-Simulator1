@@ -25,8 +25,10 @@ while True:
 				print(_("An error has occured"))
 				import traceback
 				traceback.print_exception(type(e), e, e.__traceback__)
-				
-				input(_("Press enter to continue"))
+				print()
+				print(_("Please report this bug on Github"))
+				print("https://github.com/fungamer2-2/Life-Simulator1/issues/new?template=bug_report.md")
+				exit(1)
 			else:
 				player.save_game()
 	except PlayerDied:
