@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-11-01 09:24-0400\n"
+"POT-Creation-Date: 2022-11-03 10:03-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,11 +15,19 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: lifesim.py:19 src/people/classes/player.py:293
+#: lifesim.py:19 src/people/classes/player.py:326
 msgid "Age {age}"
 msgstr ""
 
-#: lifesim.py:24
+#: lifesim.py:25
+msgid "An error has occured"
+msgstr ""
+
+#: lifesim.py:29
+msgid "Please report this bug on Github"
+msgstr ""
+
+#: lifesim.py:37
 msgid "Would you like to start a new life?"
 msgstr ""
 
@@ -1704,7 +1712,7 @@ msgid "Gymnastics"
 msgstr ""
 
 #: src/lifesim_lib/const.py:329 src/menus/main.py:1235
-#: src/people/classes/player.py:526
+#: src/people/classes/player.py:560
 msgid "Health"
 msgstr ""
 
@@ -10760,11 +10768,11 @@ msgstr ""
 msgid "Invalid input; try again."
 msgstr ""
 
-#: src/lifesim_lib/lifesim_lib.py:274 src/people/classes/player.py:768
+#: src/lifesim_lib/lifesim_lib.py:274 src/people/classes/player.py:802
 msgid "No"
 msgstr ""
 
-#: src/lifesim_lib/lifesim_lib.py:274 src/people/classes/player.py:768
+#: src/lifesim_lib/lifesim_lib.py:274 src/people/classes/player.py:802
 msgid "Yes"
 msgstr ""
 
@@ -10852,12 +10860,12 @@ msgid "Generosity"
 msgstr ""
 
 #: src/menus/main.py:65 src/menus/main.py:1236
-#: src/people/classes/player.py:527
+#: src/people/classes/player.py:561
 msgid "Smarts"
 msgstr ""
 
 #: src/menus/main.py:66 src/menus/main.py:1237
-#: src/people/classes/player.py:528
+#: src/people/classes/player.py:562
 msgid "Looks"
 msgstr ""
 
@@ -11295,7 +11303,7 @@ msgstr ""
 msgid "You divorced your {partner}."
 msgstr ""
 
-#: src/menus/main.py:536 src/people/classes/player.py:550
+#: src/menus/main.py:536 src/people/classes/player.py:584
 msgid "The judge has ordered you to pay {name} ${amount} to settle your divorce."
 msgstr ""
 
@@ -12057,7 +12065,7 @@ msgstr ""
 msgid "No, {hes_shes} not my type"
 msgstr ""
 
-#: src/menus/main.py:957 src/people/classes/player.py:756
+#: src/menus/main.py:957 src/people/classes/player.py:790
 msgid "You are now dating {name}."
 msgstr ""
 
@@ -12110,7 +12118,7 @@ msgid "You have achieved a deeper awareness of yourself."
 msgstr ""
 
 #: src/menus/main.py:1054 src/menus/main.py:1238
-#: src/people/classes/player.py:491
+#: src/people/classes/player.py:525
 msgid "Karma"
 msgstr ""
 
@@ -12250,7 +12258,7 @@ msgstr ""
 msgid "Your stats"
 msgstr ""
 
-#: src/menus/main.py:1234 src/people/classes/player.py:525
+#: src/menus/main.py:1234 src/people/classes/player.py:559
 msgid "Happiness"
 msgstr ""
 
@@ -12478,11 +12486,11 @@ msgstr ""
 msgid "Choose your gender:"
 msgstr ""
 
-#: src/menus/start.py:33 src/people/classes/player.py:482
+#: src/menus/start.py:33 src/people/classes/player.py:516
 msgid "Female"
 msgstr ""
 
-#: src/menus/start.py:33 src/people/classes/player.py:482
+#: src/menus/start.py:33 src/people/classes/player.py:516
 msgid "Male"
 msgstr ""
 
@@ -12606,297 +12614,297 @@ msgstr ""
 msgid "Wife"
 msgstr ""
 
-#: src/people/classes/player.py:104
+#: src/people/classes/player.py:105
 msgid "You lose the {trait!r} trait!"
 msgstr ""
 
-#: src/people/classes/player.py:109
+#: src/people/classes/player.py:110
 msgid "You have gained the {trait} trait!"
 msgstr ""
 
-#: src/people/classes/player.py:159
+#: src/people/classes/player.py:192
 msgid "You died after sustaining massive injuries in an assault."
 msgstr ""
 
-#: src/people/classes/player.py:198
+#: src/people/classes/player.py:231
 msgid "You have the following traits:"
 msgstr ""
 
-#: src/people/classes/player.py:295
+#: src/people/classes/player.py:328
 msgid "You died of old age."
 msgstr ""
 
-#: src/people/classes/player.py:316
+#: src/people/classes/player.py:349
 msgid "You just had a baby {son_daughter}!"
 msgstr ""
 
-#: src/people/classes/player.py:319 src/people/classes/player.py:339
+#: src/people/classes/player.py:352 src/people/classes/player.py:372
 msgid "What will you name {him_her}? (or leave blank for a random name)"
 msgstr ""
 
-#: src/people/classes/player.py:330
+#: src/people/classes/player.py:364
 msgid "You are the mother of a baby {son_daughter} named {name}."
 msgstr ""
 
-#: src/people/classes/player.py:336
+#: src/people/classes/player.py:369
 msgid "Your {partner} just had a baby {son_daughter}!"
 msgstr ""
 
-#: src/people/classes/player.py:350
+#: src/people/classes/player.py:384
 msgid "You are the father of a baby {son_daughter} named {name}."
 msgstr ""
 
-#: src/people/classes/player.py:352
+#: src/people/classes/player.py:386
 msgid "You are suffering from depression."
 msgstr ""
 
-#: src/people/classes/player.py:360
+#: src/people/classes/player.py:394
 msgid "Your {relative} died at the age of {age} due to old age."
 msgstr ""
 
-#: src/people/classes/player.py:386
+#: src/people/classes/player.py:420
 msgid "Would you like to attend the funeral?"
 msgstr ""
 
-#: src/people/classes/player.py:394
+#: src/people/classes/player.py:428
 msgid "You inherited ${amount}"
 msgstr ""
 
-#: src/people/classes/player.py:420
+#: src/people/classes/player.py:454
 msgid ""
 "You have been fired from your job.\n"
 "Reason: Performance"
 msgstr ""
 
-#: src/people/classes/player.py:433
+#: src/people/classes/player.py:467
 msgid "You feel like you're on the verge of burnout from so much work!"
 msgstr ""
 
-#: src/people/classes/player.py:438
+#: src/people/classes/player.py:472
 msgid "You're feeling stressed out from all of this work."
 msgstr ""
 
-#: src/people/classes/player.py:444
+#: src/people/classes/player.py:478
 msgid "You are suffering from high blood pressure."
 msgstr ""
 
-#: src/people/classes/player.py:491
+#: src/people/classes/player.py:525
 msgid "Lifetime Happiness"
 msgstr ""
 
-#: src/people/classes/player.py:561
+#: src/people/classes/player.py:595
 msgid "You were struck by lightning!"
 msgstr ""
 
-#: src/people/classes/player.py:578
+#: src/people/classes/player.py:612
 msgid "You died after being struck by lightning."
 msgstr ""
 
-#: src/people/classes/player.py:591
+#: src/people/classes/player.py:625
 msgid "You graduated from university."
 msgstr ""
 
-#: src/people/classes/player.py:596
+#: src/people/classes/player.py:630
 msgid "You now have to start paying back your student loan"
 msgstr ""
 
-#: src/people/classes/player.py:600
+#: src/people/classes/player.py:634
 msgid "You were expelled from university after earning bad grades."
 msgstr ""
 
-#: src/people/classes/player.py:609
+#: src/people/classes/player.py:643
 msgid "You've fully paid off your student loan"
 msgstr ""
 
-#: src/people/classes/player.py:613
+#: src/people/classes/player.py:647
 msgid "You are no longer suffering from depression"
 msgstr ""
 
-#: src/people/classes/player.py:624
+#: src/people/classes/player.py:658
 msgid "You died due to a massive heart attack."
 msgstr ""
 
-#: src/people/classes/player.py:627
+#: src/people/classes/player.py:661
 msgid "You are no longer suffering from high blood pressure"
 msgstr ""
 
-#: src/people/classes/player.py:634
+#: src/people/classes/player.py:668
 msgid "Your mother is taking to to the doctor's office to get vaccinated."
 msgstr ""
 
-#: src/people/classes/player.py:636
+#: src/people/classes/player.py:670
 msgid "How will you behave?"
 msgstr ""
 
-#: src/people/classes/player.py:637
+#: src/people/classes/player.py:671
 msgid "Bite her"
 msgstr ""
 
-#: src/people/classes/player.py:637
+#: src/people/classes/player.py:671
 msgid "Throw a tantrum"
 msgstr ""
 
-#: src/people/classes/player.py:637
+#: src/people/classes/player.py:671
 msgid "Try to stay calm"
 msgstr ""
 
-#: src/people/classes/player.py:641
+#: src/people/classes/player.py:675
 msgid "You remained calm"
 msgstr ""
 
-#: src/people/classes/player.py:645
+#: src/people/classes/player.py:679
 msgid "You threw a tantrum"
 msgstr ""
 
-#: src/people/classes/player.py:649
+#: src/people/classes/player.py:683
 msgid "You bit your mother"
 msgstr ""
 
-#: src/people/classes/player.py:667
+#: src/people/classes/player.py:701
 msgid "You are starting elementary school"
 msgstr ""
 
-#: src/people/classes/player.py:671
+#: src/people/classes/player.py:705
 msgid "You are starting middle school"
 msgstr ""
 
-#: src/people/classes/player.py:675
+#: src/people/classes/player.py:709
 msgid "You are starting high school"
 msgstr ""
 
-#: src/people/classes/player.py:681
+#: src/people/classes/player.py:715
 msgid "Your {partner} wants to break up with you."
 msgstr ""
 
-#: src/people/classes/player.py:682 src/people/classes/player.py:713
+#: src/people/classes/player.py:716 src/people/classes/player.py:747
 msgid "What will you do?"
 msgstr ""
 
-#: src/people/classes/player.py:685 src/people/classes/player.py:716
+#: src/people/classes/player.py:719 src/people/classes/player.py:750
 msgid "Wish {him_her} well"
 msgstr ""
 
-#: src/people/classes/player.py:686 src/people/classes/player.py:717
+#: src/people/classes/player.py:720 src/people/classes/player.py:751
 msgid "Beg {him_her} to stay"
 msgstr ""
 
-#: src/people/classes/player.py:687 src/people/classes/player.py:718
+#: src/people/classes/player.py:721 src/people/classes/player.py:752
 msgid "Insult {him_her} one last time"
 msgstr ""
 
-#: src/people/classes/player.py:691
+#: src/people/classes/player.py:725
 msgid "You wished {name} the best"
 msgstr ""
 
-#: src/people/classes/player.py:694 src/people/classes/player.py:725
+#: src/people/classes/player.py:728 src/people/classes/player.py:759
 msgid "You begged {name} to stay with you."
 msgstr ""
 
-#: src/people/classes/player.py:697 src/people/classes/player.py:728
+#: src/people/classes/player.py:731 src/people/classes/player.py:762
 msgid "{he_she} decided to stay with you."
 msgstr ""
 
-#: src/people/classes/player.py:699
+#: src/people/classes/player.py:733
 msgid "{he_she} dumped you anyway."
 msgstr ""
 
-#: src/people/classes/player.py:706
+#: src/people/classes/player.py:740
 msgid "{name} broke up with you."
 msgstr ""
 
-#: src/people/classes/player.py:707 src/people/classes/player.py:738
+#: src/people/classes/player.py:741 src/people/classes/player.py:772
 msgid "You called {him_her} {insult} as {he_she} was walking out the door."
 msgstr ""
 
-#: src/people/classes/player.py:712
+#: src/people/classes/player.py:746
 msgid "Your {partner} wants a divorce."
 msgstr ""
 
-#: src/people/classes/player.py:722
+#: src/people/classes/player.py:756
 msgid "You honored {name}'s request for a divorce."
 msgstr ""
 
-#: src/people/classes/player.py:730
+#: src/people/classes/player.py:764
 msgid "{he_she} insisted on getting a divorce."
 msgstr ""
 
-#: src/people/classes/player.py:737
+#: src/people/classes/player.py:771
 msgid "{name} divorced you."
 msgstr ""
 
-#: src/people/classes/player.py:743
+#: src/people/classes/player.py:777
 msgid "A female"
 msgstr ""
 
-#: src/people/classes/player.py:743
+#: src/people/classes/player.py:777
 msgid "A male"
 msgstr ""
 
-#: src/people/classes/player.py:745
+#: src/people/classes/player.py:779
 msgid "{a_male_female} named {name} has asked you out."
 msgstr ""
 
-#: src/people/classes/player.py:751
+#: src/people/classes/player.py:785
 msgid "Start dating {him_her}"
 msgstr ""
 
-#: src/people/classes/player.py:752
+#: src/people/classes/player.py:786
 msgid "Reject {him_her}"
 msgstr ""
 
-#: src/people/classes/player.py:761
+#: src/people/classes/player.py:795
 msgid "You graduated from high school."
 msgstr ""
 
-#: src/people/classes/player.py:767
+#: src/people/classes/player.py:801
 msgid "Would you like to apply to university?"
 msgstr ""
 
-#: src/people/classes/player.py:772
+#: src/people/classes/player.py:806
 msgid "Your application to university was accepted!"
 msgstr ""
 
-#: src/people/classes/player.py:774
+#: src/people/classes/player.py:808
 msgid "Scholarship"
 msgstr ""
 
-#: src/people/classes/player.py:775
+#: src/people/classes/player.py:809
 msgid "Student Loan"
 msgstr ""
 
-#: src/people/classes/player.py:776
+#: src/people/classes/player.py:810
 msgid "Ask parents to pay"
 msgstr ""
 
-#: src/people/classes/player.py:780
+#: src/people/classes/player.py:814
 msgid "How would you like to pay for your college tuition?"
 msgstr ""
 
-#: src/people/classes/player.py:786
+#: src/people/classes/player.py:820
 msgid "Your scholarship application has been awarded!"
 msgstr ""
 
-#: src/people/classes/player.py:794
+#: src/people/classes/player.py:828
 msgid "Your scholarship application was rejected."
 msgstr ""
 
-#: src/people/classes/player.py:804
+#: src/people/classes/player.py:838
 msgid "Your parents agreed to pay for your university tuition!"
 msgstr ""
 
-#: src/people/classes/player.py:814
+#: src/people/classes/player.py:848
 msgid "Your parents refused to pay for your university tuition."
 msgstr ""
 
-#: src/people/classes/player.py:822
+#: src/people/classes/player.py:856
 msgid "You took out a student loan to pay for your university tuition."
 msgstr ""
 
-#: src/people/classes/player.py:828
+#: src/people/classes/player.py:862
 msgid "You are now enrolled in university."
 msgstr ""
 
-#: src/people/classes/player.py:832
+#: src/people/classes/player.py:866
 msgid "Your application to university was rejected."
 msgstr ""
 
