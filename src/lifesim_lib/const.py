@@ -1230,7 +1230,7 @@ ORGANISED_CRIME_JOIN_METHOD = [
 # Biker
 BIKER_SYNDICATE = [
     _("Bandidos"),
-    _("Hells Angels"),
+    _("Hell's Angels"),
 ]
 # Irish mob
 IRISH_MOB_SYNDICATE = [
