@@ -87,7 +87,8 @@ def main_menu(player):
 					if relation.status == 0:
 						choices.append(_("Propose"))
 					elif relation.status == 1:
-						choices.append(_("Plan the Wedding"))
+						choices.append(_("Plan the wedding"))
+						choices.append(_("Call off the engagement"))
 			choice = choice_input(*choices, return_text=True)
 			clear_screen()
 			if choice == _("Spend time"):
@@ -441,7 +442,8 @@ def main_menu(player):
 				elif relation.relationship >= randint(45, 75) and player.partner.years_together >= randint(1, 2):
 					rel = player.partner.name_accusative()
 					display_event(_("You and your {partner} tried for a baby.").format(partner=rel), cls=False)
-					if randint(1, 2) == 1:
+					fertility = player.partner.fertility if player.gender == Gender.Male else player.fertility
+					if randint(1, 100) <= fertility and randint(1, 4) < 4:
 						if player.gender == Gender.Male:
 							print(_("Your {partner} is pregnant with your baby!").format(partner=rel))
 						else:
@@ -473,7 +475,7 @@ def main_menu(player):
 				partner = player.partner
 				name = partner.name_accusative()
 				if (
-					partner.years_together >= randint(3, 5)
+					partner.years_together >= randint(3, 8 - partner.craziness // 20)
 					and not partner.was_proposed_to
 					and partner.relationship >= randint(50, 60) + randint(0, 40)
 				):
@@ -490,7 +492,19 @@ def main_menu(player):
 						player.change_happiness(-randint(3, 8))
 						partner.change_relationship(-randint(4, 9))
 						partner.was_proposed_to = True
-			elif choice == _("Plan the Wedding"):
+			elif choice == _("Call off the engagement"):
+				partner = player.partner.name_accusative()
+				if yes_no(
+					_("Are you sure you want to call off your engagement with your {partner}?").format(
+						partner=partner
+					)
+				):
+					print(
+						_("You called off your engagement with your {partner}.").format(partner=partner)
+					)
+					player.partner.status = 0
+					player.partner.change_relationship(-15)
+			elif choice == _("Plan the wedding"):
 				locations = {
 					TranslateMarker("golf course"): 15300,
 					TranslateMarker("vineyard"): 15300,
@@ -812,7 +826,7 @@ def main_menu(player):
 							_("You played dominoes with some friends."),
 							_("You made a robot with Meccano"),
 						]
-			print(random.choice(sayings))
+				print(random.choice(sayings))
 			if not player.played:
 				player.played = True
 				player.change_happiness(happy_gain)
@@ -992,7 +1006,7 @@ def main_menu(player):
 							ILLNESSES_TRANSLATIONS.get(name, name)
 							for name in player.illnesses
 						]
-						print(", ".join(s))
+						print(", ".join(map(str, s)))
 						options = ["Back"]
 						options.extend(
 							_("Treat {illness}").format(illness=n) for n in s
@@ -1018,11 +1032,16 @@ def main_menu(player):
 								if was_cured:
 									player.change_health(randint(4, 8))
 									player.change_happiness(randint(3, 6))
+							elif illness == "Common Cold":
+								was_cured = True
+								player.change_health(randint(4, 6))
+								player.change_happiness(randint(4, 7))
 							print(
 								_("You were treated for your {illness}.").format(
 									illness=illness
 								)
 							)
+							
 							if was_cured:
 								display_event(
 									_(

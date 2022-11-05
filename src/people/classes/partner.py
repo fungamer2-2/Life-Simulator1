@@ -4,7 +4,6 @@ from src.people.classes.relationship import Relationship
 from src.lifesim_lib.translation import _
 from src.lifesim_lib.lifesim_lib import *
 
-
 class Partner(Relationship):
     def __init__(self, age, gender, smarts, looks, relationship, status):
         happiness = randint(30, 100)
@@ -26,6 +25,9 @@ class Partner(Relationship):
         if randint(1, 2) == 1:
         	self.willpower = max(self.willpower, randint(40, 100))
         self.craziness = randint(0, 100)
+        self.fertility = 0
+        if self.gender == Gender.Female:
+        	self.fertility = randint(25, 100)
         self.years_together = 0
         self.was_proposed_to = False
         self.is_pregnant = False
@@ -36,18 +38,19 @@ class Partner(Relationship):
         self.was_proposed_to = False
 
     def print_info(self):
-        display_data(_("Their Age"), self.looks)
+        display_data(_("Their Age"), self.age)
         print_align_bars(
             (_("Their Smarts"), self.smarts),
             (_("Their Looks"), self.looks),
             (_("Their Craziness"), self.craziness),
         )
 
-    def compatibility_check(self, player):
+    def compatibility_check(self, other):
         if randint(1, 6) == 1:
-            return randint(1, 100) <= player.karma
-        c1 = player.looks - self.looks + 50
-        c2 = player.smarts - self.smarts + 50
+            k = player.karma if isinstance(other, Player) else 50
+            return randint(1, 100) <= 5
+        c1 = other.looks - self.looks + 50
+        c2 = other.smarts - self.smarts + 50
         return randint(1, 50) + randint(0, 50) <= round_stochastic(c1 + (c2 - c1) / 3)
 
     def get_translated_type(self):
@@ -60,3 +63,5 @@ class Partner(Relationship):
 
     def name_accusative(self):
         return self.get_translated_type().lower() + ", " + self.firstname
+
+from src.people.classes.player import Player

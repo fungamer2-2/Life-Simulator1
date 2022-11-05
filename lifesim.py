@@ -4,7 +4,7 @@ from src.lifesim_lib.translation import _
 from src.lifesim_lib.const import *
 from src.menus.main import main_menu
 from src.menus.start import start_menu
-from src.lifesim_lib.lifesim_lib import PlayerDied, yes_no, clear_screen
+from src.lifesim_lib.lifesim_lib import PlayerDied, yes_no, choice_input, clear_screen
 
 """
 TODO List:
@@ -12,11 +12,8 @@ TODO List:
 - Add social media
 """
 
-while True:
-	clear_screen()
-	player = start_menu()
+def game_loop(player):
 	try:
-		print(_("Age {age}").format(age=player.age))
 		while True:
 			try:
 				main_menu(player)
@@ -34,7 +31,22 @@ while True:
 			else:
 				player.save_game()
 	except PlayerDied:
-		#if player.children and yes_no(_("Would you like to continue as one of your children?")):
-#			names = [c.name for c in player.children]
-		if not yes_no(_("Would you like to start a new life?")):
+		pass
+
+while True:
+	clear_screen()
+	player = start_menu()
+	while True:
+		print(_("Age {age}").format(age=player.age))
+		game_loop(player)
+		if player.children and yes_no(_("Would you like to continue as one of your children?")):
+			names = [c.name for c in player.children]
+			print(_("Which child would you like to continue as?"))
+			choice = choice_input(*names)
+			c = player.children[choice - 1]
+			player.convert_child_to_player(c)
+		elif yes_no(_("Would you like to start a new life?")):
 			break
+		else:
+			print(_("Thanks for playing!"))
+			exit()

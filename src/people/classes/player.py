@@ -86,9 +86,12 @@ class Player(Person):
 		self.salary_years = []
 		self.children = []
 		self.ID = str(uuid.uuid4())
+		self.fertility = 0
+		if self.gender == Gender.Female:
+			self.fertility = randint(25, 100)
 		self.is_pregnant = False
 		self.save_path = SAVE_PATH + "/" + self.ID + ".pickle"
-
+		
 	def learn_trait(self, trait):
 		if trait not in TRAITS_DICT:
 			return False
@@ -112,59 +115,66 @@ class Player(Person):
 		return True
 		
 	def convert_child_to_player(self, c): #This is here for when it's possible to continue as your child
+		parent_name = self.name
+		children = self.children[:]
+		num = len(self.children)
+		money = self.money
 		self.__init__()
 		self.relations = []
 		self.parents = {}
-		if c.mother:
+		if c.mother and type(c.mother) != Player:
 			mother = Parent(c.mother.lastname, c.mother.age, Gender.Female)
 			mother.health = c.mother.health
 			mother.relationship = randint(90, 100) - randint(0, min(c.age, 50))
 			self.relations.append(mother)
 			self.parents["Mother"] = mother
-		if c.father:
+		if c.father and type(c.father) != Player:
 			father = Parent(c.father.lastname, c.father.age, Gender.Male)
 			father.health = c.father.health
 			father.relationship = randint(90, 100) - randint(0, min(c.age, 50))
 			self.relations.append(father)
 			self.parents["Father"] = father
-		
+		if children:
+			for child in children:
+				s = Sibling(child.lastname, child.age, child.gender, child.smarts, child.looks)
+				s.change_relationship(round_stochastic(random.gauss(0, 8)))
+				self.relations.append(s)
+		if c.partner:
+			self.partner = c.partner
+			self.partner.change_relationship(randint(-10, 10))
+			self.relations.append(c.partner)
 		self.firstname = c.firstname
 		self.lastname = c.lastname
 		self.update_name()
-		self.age = c.age	
-		self.happiness = c.relationship + round_stochastic((randint(0, 100) - c.relationship)/3)
+		self.age = c.age
+		self.total_happiness = c.total_happiness	
+		self.happiness = round_stochastic((c.relationship + c.happiness)/2)
 		self.health = c.health
 		self.smarts = c.smarts
 		self.looks = c.looks
 		if self.age >= 6 and self.age < 17:
 			self.calc_grades(self.smarts + randint(-10, 10))
-		elif self.age >= 17 and self.age < 21:
-			went_to_uv = self.smarts >= randint(35, 45)
-			if went_to_uv:
-				self.uv_years = 21 - self.age
+		if c.is_in_uv:
+			self.chose_student_loan = True
+			self.uv_years = c.is_in_uv
+		self.change_happiness(-randint(0, 50)) #Lose some happiness as we just lost our parent
+		if c.salary > 0:
+			self.has_job = True
+			self.salary = c.salary
+			self.stress = randint(20, 50)
+			if randint(1, 2) == 1:
+				self.stress += randint(0, 25)
+			self.performance = randint(40, 80)
+		self.money += c.money
+		print(_("Your parent, {name}, passed away.").format(name=parent_name))
+		if money > 0:
+			amount = max(1, round_stochastic(money / num)) 
+			print(_("They left behind cash assets of ${amount}.").format(amount=money))
+			print(_("You inherited ${amount}.").format(amount=amount))
+			self.money += amount
 			
 	def is_depressed(self):
-		return (
-			"Depression" in self.illnesses
-		)  # TODO: Migrate depression to a list of diseases
-
-	def generate_partner(self):
-		m = self.age // 6
-		age = 0
-		while age < 18:
-			age = self.age + randint(-m, m)
-		gender = Gender.Female if self.gender == Gender.Male else Gender.Male
-		p = Partner(
-			age,
-			gender,
-			randint(0, 50) + randint(0, 50),
-			randint(0, 60) + randint(0, 40),
-			50,
-			0,
-		)
-		while p.death_check():
-			p.age -= randint(1, 5)
-		return p
+		return "Depression" in self.illnesses
 		
 	def generate_child(self, other):
 		if self.gender == Gender.Male:
@@ -361,6 +371,8 @@ class Player(Person):
 				self.change_stress(randint(0, 6))
 				self.relations.append(c)
 				self.children.append(c)
+				if self.partner:
+					self.partner.change_relationship(randint(3, 10))
 				print(_("You are the mother of a baby {son_daughter} named {name}.").format(son_daughter=typ, name=c.name))
 		elif self.partner and self.partner.is_pregnant:
 			c = self.generate_child(self.partner)
@@ -381,10 +393,11 @@ class Player(Person):
 			self.change_stress(randint(0, 8))
 			self.relations.append(c)
 			self.children.append(c)
+			self.partner.change_relationship(randint(8, 15))
 			print(_("You are the father of a baby {son_daughter} named {name}.").format(son_daughter=typ, name=c.name))
 		if self.happiness < randint(1, 10) and not self.is_depressed():
 			display_event(_("You are suffering from depression."))
-			self.add_illness("Depression")
+			self.add_illness(TranslateMarker("Depression"))
 			self.change_happiness(-50)
 			self.change_health(-randint(4, 8))
 		for relation in self.relations[:]:
@@ -477,7 +490,7 @@ class Player(Person):
 				):
 					display_event(_("You are suffering from high blood pressure."))
 					self.change_health(-randint(4, 8))
-					self.add_illness("High Blood Pressure")
+					self.add_illness(TranslateMarker("High Blood Pressure"))
 
 	def get_job(self, salary):
 		if not self.has_job:
@@ -614,7 +627,7 @@ class Player(Person):
 			self.years_worked += 1
 		if self.salary > 0:
 			money = self.salary * self.job_hours / 40
-			tax = calculate_tax(self.salary)
+			tax = calculate_tax(money)
 			income = self.salary - tax
 			income *= random.uniform(0.4, 0.8)  # Expenses
 			self.money += round_stochastic(income)
@@ -663,6 +676,13 @@ class Player(Person):
 					self.change_happiness(randint(4, 8))
 					self.change_health(randint(4, 8))
 					self.remove_illness("High Blood Pressure")
+			elif illness == "Common Cold":
+				self.remove_illness(illness)
+		if randint(1, 20) == 1:
+			display_event(_("You are suffering from the common cold."))
+			self.add_illness(TranslateMarker("Common Cold"))
+			self.change_health(-randint(1, 4))
+			self.change_happiness(-randint(3, 4))
 		if self.age == 2 and randint(1, 2) == 1:
 			print(
 				_("Your mother is taking to to the doctor's office to get vaccinated.")
