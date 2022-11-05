@@ -162,7 +162,7 @@ class Player(Person):
 			self.has_job = True
 			self.salary = c.salary
 			self.stress = randint(20, 50)
-			if randint(1, 2) == 1:
+			if one_in(2):
 				self.stress += randint(0, 25)
 			self.performance = randint(40, 80)
 		self.money += c.money
@@ -300,6 +300,7 @@ class Player(Person):
 		self.worked_harder = False
 		self.listened_to_music = False
 		self.asked_for_raise = False
+		self.skipped_school = False
 		self.date_options = randint(9, 11)
 
 	def age_up(self):
@@ -604,7 +605,7 @@ class Player(Person):
 		self.change_stress(round((self.job_hours - prev) * 0.75))
 
 	def random_events(self):
-		if self.age >= 5 and randint(1, 5000) == 1:
+		if self.age >= 5 and one_in(5000):
 			print(_("You were struck by lightning!"))
 			good_or_bad = (
 				randint(1, 2) == 1
@@ -621,7 +622,7 @@ class Player(Person):
 				self.change_looks(-100)
 			self.display_stats()
 			press_enter()
-			if not good_or_bad and randint(1, 5) == 1:
+			if not good_or_bad and one_in(5):
 				self.die(_("You died after being struck by lightning."))
 		if self.has_job:
 			self.years_worked += 1
@@ -669,7 +670,7 @@ class Player(Person):
 				if self.stress > randint(80, 95) and self.health < randint(1, 10):
 					if randint(1, 3) == 1:
 						self.die(_("You died due to a massive heart attack."))
-				elif self.stress < randint(25, 60) and randint(1, 2) == 1:
+				elif self.stress < randint(25, 60) and one_in(2):
 					display_event(
 						_("You are no longer suffering from high blood pressure")
 					)
@@ -683,7 +684,7 @@ class Player(Person):
 			self.add_illness(TranslateMarker("Common Cold"))
 			self.change_health(-randint(1, 4))
 			self.change_happiness(-randint(3, 4))
-		if self.age == 2 and randint(1, 2) == 1:
+		if self.age == 2 and one_in(2):
 			print(
 				_("Your mother is taking to to the doctor's office to get vaccinated.")
 			)
@@ -730,7 +731,7 @@ class Player(Person):
 			self.change_smarts(randint(1, 4) + 4 * self.has_trait("GENIUS"))
 			self.calc_grades(randint(-8, 8))
 		if 1 <= self.marital_status <= 2:
-			if self.partner.relationship < randint(25, 35) and randint(1, 3) == 1:
+			if self.partner.relationship < randint(25, 35) and one_in(3):
 				name = self.partner.name_accusative()
 				print(_("Your {partner} wants to break up with you.").format(partner=name))
 				print(_("What will you do?"))
@@ -761,7 +762,7 @@ class Player(Person):
 					print(_("You called {him_her} {insult} as {he_she} was walking out the door."))
 					self.lose_partner()
 		elif self.marital_status == 3:
-			if self.partner.relationship <= randint(15, 30) and randint(1, 6) == 1:
+			if self.partner.relationship <= randint(15, 30) and one_in(6):
 				name = self.partner.name_accusative()
 				print(_("Your {partner} wants a divorce.").format(partner=name))
 				print(_("What will you do?"))
@@ -791,7 +792,7 @@ class Player(Person):
 					print(_("{name} divorced you.").format(name=self.partner.name))
 					print(_("You called {him_her} {insult} as {he_she} was walking out the door."))
 					self.divorce()
-		if self.age >= 18 and self.age < randint(42, 70) and self.marital_status == 0 and randint(1, 16) == 1:
+		if self.age >= 18 and self.age < randint(42, 70) and self.marital_status == 0 and one_in(16):
 			partner = self.generate_partner()
 			if partner.compatibility_check(self):
 				string = _("A male") if partner.gender == Gender.Male else _("A female")

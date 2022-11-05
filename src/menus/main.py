@@ -105,101 +105,7 @@ def main_menu(player):
 					if isinstance(relation, Child):
 						enjoyment1 += round_stochastic((100 - enjoyment1)*max(0, 18 - relation.age)/randint(36, 100))
 						enjoyment2 += round_stochastic((100 - enjoyment2)*max(0, 13 - relation.age)/randint(26, 39))
-					
-					if player.age < 3:
-						sayings = [
-							_(
-								"You did some finger-painting with your {relation}."
-							).format(relation=relation.name_accusative()),
-							_("You played in the mud with your {relation}.").format(
-								relation=relation.name_accusative()
-							),
-							_(
-								"You and your {relation} drew in your colouring book together"
-							).format(relation=relation.name_accusative()),
-							_(
-								"You and your {relation} squished clay between your fingers."
-							).format(relation=relation.name_accusative()),
-							_(
-								"You and your {relation} drew with your large crayons."
-							).format(relation=relation.name_accusative()),
-							_(
-								"You and your {relation} played with your toys together."
-							).format(relation=relation.name_accusative()),
-							_(
-								"You and your {relation} played with your blocks."
-							).format(relation=relation.name_accusative()),
-							_("You and your {relation} played in your sandbox.").format(
-								relation=relation.name_accusative()
-							),
-							_(
-								"You and your {relation} played with your stuffed animals."
-							).format(relation=relation.name_accusative()),
-							_(
-								"Your {relation} pushed you on your toddler swing."
-							).format(relation=relation.name_accusative()),
-							_("Your {relation} played with you and your toys.").format(
-								relation=relation.name_accusative()
-							),
-							_("Your {relation} played with you.").format(
-								relation=relation.name_accusative()
-							),
-							_("Your {relation} raced you around the house.").format(
-								relation=relation.name_accusative()
-							),
-							_("Your {relation} tickled you until you giggled.").format(
-								relation=relation.name_accusative()
-							),
-							_("You and your {relation} went to the park.").format(
-								relation=relation.name_accusative()
-							),
-							_("You and your {relation} went to the shops.").format(
-								relation=relation.name_accusative()
-							),
-						]
-					else:
-						sayings = [
-							_(
-								"You took your {relation} shopping at a flea market."
-							).format(relation=relation.name_accusative()),
-							_("You took your {relation} bowling.").format(
-								relation=relation.name_accusative()
-							),
-							_("You took your {relation} to the beach.").format(
-								relation=relation.name_accusative()
-							),
-							_("You took your {relation} to play golf.").format(
-								relation=relation.name_accusative()
-							),
-							_("You took your {relation} to get cornrow braids.").format(
-								relation=relation.name_accusative()
-							),
-							_("You took your {relation} to do some gardening.").format(
-								relation=relation.name_accusative()
-							),
-							_("You took your {relation} to a pilates class.").format(
-								relation=relation.name_accusative()
-							),
-							_("You took your {relation} to play catch.").format(
-								relation=relation.name_accusative()
-							),
-							_(
-								"You took your {relation} to make homemade mini pizzas."
-							).format(relation=relation.name_accusative()),
-							_(
-								"You took your {relation} to perform in a flashmob at the courthouse."
-							).format(relation=relation.name_accusative()),
-							_(
-								"You took your {relation} to do a puzzle at the library."
-							).format(relation=relation.name_accusative()),
-							_(
-								"You took your {relation} to relax while floating in a natural hot spring."
-							).format(relation=relation.name_accusative()),
-							_("You took your {relation} crocheting.").format(
-								relation=relation.name_accusative()
-							),
-						]
-					print(random.choice(sayings))
+					print(_("You took your {relation} {place}.").format(relation=relation.name_accusative(), place=random.choice(SPEND_TIME_PLACES)))
 					print_align_bars(
 						(_("Your Enjoyment"), enjoyment1),
 						(
@@ -587,7 +493,7 @@ def main_menu(player):
 					"You played with your toys.",
 					"You had a lot of fun playing with your toys.",
 				]
-				if randint(1, 100) <= 50:
+				if one_in(2):
 					if player.age < 3:
 						sayings = [
 							_("You played with your toy wagon."),
@@ -831,7 +737,7 @@ def main_menu(player):
 				player.played = True
 				player.change_happiness(happy_gain)
 		elif choice == _("Arts and Crafts"):
-			if player.age >= randint(5, 10) and randint(1, 10) == 1:
+			if player.age >= randint(5, 10) and one_in(10):
 				sayings = [
 					_(
 						"You thought about doing arts and crafts, but couldn't decide what to make."
@@ -931,7 +837,7 @@ def main_menu(player):
 			player.did_arts_and_crafts = True
 		elif choice == _("Listen to music"):
 			music_categories = [_("pop music"), _("rock music"), _("hip-hop"), _("latin music")]
-			if randint(1, 2) == 1:
+			if one_in(2):
 				print(_("You listened to some music."))
 			else:
 				sayings = [
@@ -1016,19 +922,14 @@ def main_menu(player):
 							was_cured = False
 							illness = player.illnesses[choice - 2]
 							if illness == "Depression":
-								was_cured = randint(
-									1, 4
-								) == 1 and player.happiness >= randint(20, 35)
+								was_cured = one_in(4) and player.happiness >= randint(20, 35)
 								if was_cured:
 									player.change_health(randint(4, 8))
 									player.change_happiness(
 										(100 - player.happiness) // 2
 									)
 							elif illness == "High Blood Pressure":
-								was_cured = (
-									player.stress < randint(65, 85)
-									and randint(1, 3) == 1
-								)
+								was_cured = player.stress < randint(65, 85) and one_in(3)
 								if was_cured:
 									player.change_health(randint(4, 8))
 									player.change_happiness(randint(3, 6))
@@ -1218,7 +1119,7 @@ def main_menu(player):
 		print(_("School Menu"))
 		print()
 		display_bar(_("Grades"), player.grades)
-		choice = choice_input(_("Back"), _("Study harder"), _("Drop out"))
+		choice = choice_input(_("Back"), _("Study harder"), _("Drop out"), _("Skip school"))
 		clear_screen()
 		if choice == 2:
 			print(_("You began studying harder"))
@@ -1244,6 +1145,21 @@ def main_menu(player):
 			else:
 				player.tried_to_drop_out = True
 				print(_("Your parents won't let you drop out of school."))
+		if choice == 4:
+			#Skip school
+			place = random.choice(SPEND_TIME_PLACES)
+			display_event(_("You skipped school and went {place} instead.").format(place=place), cls=False)
+			player.change_smarts(-2)
+			player.change_grades(-randint(4, 8))
+			if player.uv_years == 0 and one_in(5): #Can't get caught while in university
+				display_event(_("You were caught skipping school!\nYou were sent to the principal's office and got detention."))
+				player.change_happiness(-randint(15, 25))
+				player.change_karma(-randint(1, 6))
+			elif not player.skipped_school:
+				player.change_happiness(randint(3, 7))
+				player.change_karma(-randint(1, 6))
+			player.skipped_school = True
+				
 	if choice == _("Debug Menu"):
 		choice = choice_input(_("Back"), _("Stats"), _("Identity"))
 		if choice == 2:

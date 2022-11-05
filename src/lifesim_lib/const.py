@@ -25,6 +25,37 @@ ILLNESSES_TRANSLATIONS = {
     "High Blood Pressure": _("High Blood Pressure"),
 }
 
+SPEND_TIME_PLACES = [
+	_("shopping at a flea market"),
+	_("bowling"),
+	_("to the beach"),
+	_("to play golf"),
+	_("to do some gardening"),
+	_("to a pilates class"),
+	_("to play catch"),
+	_("to make homemade mini pizzas"),
+	_("to perform in a flashmob at the courthouse"),
+	_("to do a puzzle at the library"),
+	_("to relax while floating in a natural hot spring"),
+	_("crocheting"),
+	_("to bring donuts to the police station"),
+	_("to blow bubbles"),
+	_("bird-watching"),
+	_("for a picnic"),
+	_("to a baseball game"),
+	_("to an arcade"),
+	_("to an art museum"),
+	_("to a tennis match"),
+	_("to the circus"),
+	_("to the movies"),
+	_("to play tennis"),
+	_("to fly a kite"),
+	_("bungee-jumping"),
+	_("fishing"),
+	_("shopping"),
+	_("to a hockey game")
+]
+
 COMPLIMENTS = [
     _("a boss"),
     _("a bubbly personality"),

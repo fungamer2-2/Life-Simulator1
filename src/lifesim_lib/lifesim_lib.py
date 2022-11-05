@@ -61,6 +61,8 @@ def randexpo(lo, avg):
     assert lo < avg, "lo must be less than avg"
     return lo + random.expovariate(1 / (avg - lo))
 
+def one_in(x):
+	return x <= 1 or random.randint(1, x) == 1
 
 def calculate_tax(salary):
     tax = 0
