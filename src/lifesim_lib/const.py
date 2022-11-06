@@ -1678,7 +1678,26 @@ AMERICAN_FOOTBALL_POSITIONS = [
 # - Association Football -
 # Association Football Teams
 ASSOCIATION_FOOTBALL_TEAMS = [
-
+    _("Arsenal"),
+    _("Aston Villa"),
+    _("Bournemouth"),
+    _("Brentford"),
+    _("Brighton & Hove Albion"),
+    _("Chelsea"),
+    _("Crystal Palace"),
+    _("Everton"),
+    _("Fulham"),
+    _("Leeds United"),
+    _("Leicester City"),
+    _("Liverpool"),
+    _("Manchester City"),
+    _("Manchester United"),
+    _("Newcastle United"),
+    _("Nottingham Forest"),
+    _("Southampton"),
+    _("Tottenham Hotspur"),
+    _("West Ham United"),
+    _("Wolverhampton Wanderers"),
 ]
 # Positions
 ASSOCIATION_FOOTBALL_POSITIONS = [
@@ -1697,7 +1716,24 @@ ASSOCIATION_FOOTBALL_POSITIONS = [
 # - Australian Rules Football -
 # Australian Rules Football Teams
 AUSTRALIAN_RULES_FOOTBALL_TEAMS = [
-
+    _("Adelaide Crows"),
+    _("Brisbane Lions"),
+    _("Carlton Blues"),
+    _("Collingwood Magpies"),
+    _("Essendon Bombers"),
+    _("Fremantle Dockers"),
+    _("Geelong Cats"),
+    _("Gold Coast Suns"),
+    _("Greater Western Sydney Giants"),
+    _("Hawthorn Hawks"),
+    _("Melbourne Demons"),
+    _("North Melbourne Kangaroos"),
+    _("Port Adelaide Power"),
+    _("Richmond Tigers"),
+    _("St Kilda Saints"),
+    _("Sydney Swans"),
+    _("West Coast Eagles"),
+    _("Western Bulldogs"),
 ]
 # Positions
 AUSTRALIAN_RULES_FOOTBALL_POSITIONS = [
