@@ -327,12 +327,13 @@ def main_menu(player):
 						chance = (100 - relation.relationship) / 4
 					attack_chance = 0
 					if isinstance(relation, Sibling):
-						attack_chance = 30 * (relation.petulance / 100) ** 1.5
+						attack_chance = 30 * (relation.petulance/100)**1.5
 					elif isinstance(relation, Partner):
-						attack_chance = 40 * (relation.craziness/100)**2
+						attack_chance = 45 * (relation.craziness/100)**2
 					if random.uniform(0, 100) < attack_chance:
 						display_event(_("Your {rel} attacked you!").format(rel=rel))
 						player.was_attacked(randint(4, 10), False)
+						relation.change_relationship(-randint(4, 8))
 					elif random.uniform(0, 100) < chance:
 						insult = random.choice(INSULTS)
 						display_event(
@@ -340,11 +341,7 @@ def main_menu(player):
 								rel=rel, insult=insult
 							)
 						)
-						player.change_happiness(
-							-randint(2, 5)
-							if isinstance(relation, Sibling)
-							else -randint(3, 8)
-						)
+						player.change_happiness(-randint(2, 6))
 			elif choice == _("Have a baby"):
 				already_pregnant = player.partner.is_pregnant if player.gender == Gender.Male else player.is_pregnant
 				if already_pregnant:

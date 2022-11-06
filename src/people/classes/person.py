@@ -55,7 +55,7 @@ class Person:
 			age,
 			gender,
 			randint(0, 50) + randint(0, 50),
-			randint(0, 60) + randint(0, 40),
+			randint(0, 50) + randint(0, 50),
 			50,
 			0,
 		)

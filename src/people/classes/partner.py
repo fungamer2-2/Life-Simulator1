@@ -1,3 +1,4 @@
+import random
 from random import randint
 
 from src.people.classes.relationship import Relationship
@@ -31,7 +32,12 @@ class Partner(Relationship):
         self.years_together = 0
         self.was_proposed_to = False
         self.is_pregnant = False
-
+        P_CONST = math.log(5, 4) #Generate net worth using Pareto distribution
+        net_worth = round_stochastic(13000/((1-random.random())**(1/P_CONST)))
+        if randint(1, 100) <= 40:
+            net_worth -= randint(0, 60000)
+        self.net_worth = net_worth
+        
     def age_up(self):
         super().age_up()
         self.years_together += 1

@@ -194,8 +194,8 @@ class Player(Person):
 		return name in self.traits
 		
 	def was_attacked(self, damage, can_die=True):
-		self.change_happiness(damage)
-		self.change_health(damage)
+		self.change_happiness(-damage)
+		self.change_health(-damage)
 		if damage >= 40:
 			self.change_looks(-randint(0, (damage - 40)//2))
 		if can_die and self.health <= 0 and randint(1, 100) <= damage:
