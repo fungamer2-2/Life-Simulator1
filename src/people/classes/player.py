@@ -198,7 +198,7 @@ class Player(Person):
 		self.change_health(damage)
 		if damage >= 40:
 			self.change_looks(-randint(0, (damage - 40)//2))
-		if self.can_die and self.health <= 0 and randint(1, 100) <= damage:
+		if can_die and self.health <= 0 and randint(1, 100) <= damage:
 			self.die(_("You died after sustaining massive injuries in an assault."))
 		
 	def randomize_traits(self):
