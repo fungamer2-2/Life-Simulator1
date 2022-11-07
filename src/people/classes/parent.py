@@ -26,7 +26,16 @@ class Parent(Relationship):
         )
         self.generosity = randint(0, 100)
         self.money = randint(0, 50) + randint(0, 50)
-
+        self.asked_for_money = 0 #Increases by 1 after the player asks for money. The player will be given money if this value == 0. If this value >= 3, they will tell the player "to stop asking for money"
+        self.ask_money_cd = 0 #This value is set to 3 when the parent gives the player money and is decremented every year. Once this value reaches 0, asked_for_money is reset to 0
+        
+    def age_up(self):
+        super().age_up()
+        if self.ask_money_cd > 0:
+        	self.ask_money_cd -= 1
+        	if self.ask_money_cd == 0:
+        		self.asked_for_money = 0
+        
     def name_accusative(self):
         return self.get_gender_word(_("father"), _("mother"))
 

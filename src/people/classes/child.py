@@ -81,7 +81,7 @@ class Child(Relationship):
 			if self.partner.death_check():
 				self.partner = None
 			else:
-				breakup_chance = 50 if self.partner.status == 2 else 15
+				breakup_chance = 55 if self.partner.status == 2 else 15
 				if randint(1, breakup_chance) == 1:
 					self.change_happiness(-randint(5, 20))
 					if self.partner.status == 2:

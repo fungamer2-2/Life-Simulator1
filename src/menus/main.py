@@ -89,11 +89,13 @@ def main_menu(player):
 					elif relation.status == 1:
 						choices.append(_("Plan the wedding"))
 						choices.append(_("Call off the engagement"))
+				elif player.age >= 6 and isinstance(relation, Parent):
+					choices.append(_("Ask for money"))
 			choice = choice_input(*choices, return_text=True)
 			clear_screen()
 			if choice == _("Spend time"):
 				if relation.relationship < 15:
-					print(_("Your {relation} refused to see you."))
+					print(_("Your {relation} refused to see you.").format(relation=relation.name_accusative()))
 					player.change_happiness(-4)
 				else:
 					enjoyment1 = max(randint(0, 70), randint(0, 70)) + randint(0, 30)
@@ -241,6 +243,26 @@ def main_menu(player):
 								)
 							)
 							relation.change_relationship(-randint(4, 7))
+			elif choice == _("Ask for money"):
+				typ = relation.name_accusative()
+				if relation.asked_for_money >= 3:
+					print(_("Your {parent} told you to stop asking for money.").format(parent=typ))
+					if relation.relationship < 25:
+						insult = random.choice(INSULTS)
+						print(_("{he_she} called you {insult}.").format(he_she=relation.he_she().capitalize(), insult=insult))
+					relation.change_relationship(-randint(5, 10))
+				else:
+					if relation.asked_for_money == 0 and randint(1, 35) <= relation.generosity:
+						amount = 5 ** (relation.generosity/22) * (relation.money/100)**2 * math.sqrt(player.age)
+						amount = max(randint(1, 5), round_stochastic(amount * random.uniform(0.6, 1.4)))
+						print(_("Your {parent} gave you ${amount}.").format(parent=typ, amount=amount))
+						player.money += amount
+						relation.change_relationship(-randint(0, 8))
+						relation.ask_money_cd = 3
+					else:
+						print(_("Your {parent} refused to give you any money.").format(parent=typ))
+						relation.change_relationship(-randint(4, 8))
+					relation.asked_for_money += 1
 			elif choice == _("Compliment"):
 				appreciation = randint(0, 60) + randint(0, 40)
 				relationship = relation.relationship
