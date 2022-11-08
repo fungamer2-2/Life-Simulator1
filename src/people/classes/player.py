@@ -120,7 +120,9 @@ class Player(Person):
 		children = self.children[:]
 		num = len(self.children)
 		money = self.money
+		gen = self.generation
 		self.__init__()
+		self.generation = gen + 1
 		self.relations = []
 		self.parents = {}
 		if c.mother and type(c.mother) != Player:

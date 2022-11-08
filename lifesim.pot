@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-11-07 13:03-0500\n"
+"POT-Creation-Date: 2022-11-07 20:51-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,31 +15,31 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: lifesim.py:24
+#: lifesim.py:25
 msgid "An error has occured"
 msgstr ""
 
-#: lifesim.py:28
+#: lifesim.py:29
 msgid "Please report this bug on Github"
 msgstr ""
 
-#: lifesim.py:40 src/people/classes/player.py:337
+#: lifesim.py:41 src/people/classes/player.py:343
 msgid "Age {age}"
 msgstr ""
 
-#: lifesim.py:42
+#: lifesim.py:43
 msgid "Would you like to continue as one of your children?"
 msgstr ""
 
-#: lifesim.py:44
+#: lifesim.py:45
 msgid "Which child would you like to continue as?"
 msgstr ""
 
-#: lifesim.py:48
+#: lifesim.py:49
 msgid "Would you like to start a new life?"
 msgstr ""
 
-#: lifesim.py:51
+#: lifesim.py:52
 msgid "Thanks for playing!"
 msgstr ""
 
@@ -827,11 +827,11 @@ msgstr ""
 msgid "Zimbabwe"
 msgstr ""
 
-#: src/lifesim_lib/const.py:24 src/people/classes/player.py:401
+#: src/lifesim_lib/const.py:24 src/people/classes/player.py:407
 msgid "Depression"
 msgstr ""
 
-#: src/lifesim_lib/const.py:25 src/people/classes/player.py:494
+#: src/lifesim_lib/const.py:25 src/people/classes/player.py:502
 msgid "High Blood Pressure"
 msgstr ""
 
@@ -1835,8 +1835,8 @@ msgstr ""
 msgid "Gymnastics"
 msgstr ""
 
-#: src/lifesim_lib/const.py:360 src/menus/main.py:1197
-#: src/people/classes/player.py:574
+#: src/lifesim_lib/const.py:360 src/menus/main.py:1198
+#: src/people/classes/player.py:582
 msgid "Health"
 msgstr ""
 
@@ -10872,11 +10872,11 @@ msgstr ""
 msgid "Invalid input; try again."
 msgstr ""
 
-#: src/lifesim_lib/lifesim_lib.py:276 src/people/classes/player.py:823
+#: src/lifesim_lib/lifesim_lib.py:276 src/people/classes/player.py:831
 msgid "No"
 msgstr ""
 
-#: src/lifesim_lib/lifesim_lib.py:276 src/people/classes/player.py:823
+#: src/lifesim_lib/lifesim_lib.py:276 src/people/classes/player.py:831
 msgid "Yes"
 msgstr ""
 
@@ -10892,11 +10892,11 @@ msgstr ""
 msgid "Traits"
 msgstr ""
 
-#: src/menus/main.py:19 src/menus/main.py:1258
+#: src/menus/main.py:19 src/menus/main.py:1259
 msgid "Gender"
 msgstr ""
 
-#: src/menus/main.py:20 src/menus/main.py:63
+#: src/menus/main.py:20 src/menus/main.py:64
 msgid "Money"
 msgstr ""
 
@@ -10904,1599 +10904,1603 @@ msgstr ""
 msgid "Salary"
 msgstr ""
 
-#: src/menus/main.py:26 src/menus/main.py:39
+#: src/menus/main.py:24
+msgid "Generation"
+msgstr ""
+
+#: src/menus/main.py:27 src/menus/main.py:40
 msgid "Age +1"
 msgstr ""
 
-#: src/menus/main.py:26 src/menus/main.py:42
+#: src/menus/main.py:27 src/menus/main.py:43
 msgid "Relationships"
 msgstr ""
 
-#: src/menus/main.py:26 src/menus/main.py:487
+#: src/menus/main.py:27 src/menus/main.py:488
 msgid "Activities"
 msgstr ""
 
-#: src/menus/main.py:28 src/menus/main.py:1145
+#: src/menus/main.py:29 src/menus/main.py:1146
 msgid "School"
 msgstr ""
 
-#: src/menus/main.py:31 src/menus/main.py:1309
+#: src/menus/main.py:32 src/menus/main.py:1310
 msgid "Job Menu"
 msgstr ""
 
-#: src/menus/main.py:33 src/menus/main.py:1280
+#: src/menus/main.py:34 src/menus/main.py:1281
 msgid "Find a Job"
 msgstr ""
 
-#: src/menus/main.py:34 src/menus/main.py:1372
+#: src/menus/main.py:35 src/menus/main.py:1373
 msgid "View Saved Games"
 msgstr ""
 
-#: src/menus/main.py:36 src/menus/main.py:1190
+#: src/menus/main.py:37 src/menus/main.py:1191
 msgid "Debug Menu"
 msgstr ""
 
-#: src/menus/main.py:44
+#: src/menus/main.py:45
 msgid "Relationships: "
 msgstr ""
 
-#: src/menus/main.py:47 src/menus/main.py:72 src/menus/main.py:490
-#: src/menus/main.py:1066 src/menus/main.py:1149 src/menus/main.py:1191
-#: src/menus/main.py:1207 src/menus/main.py:1260 src/menus/main.py:1318
-#: src/menus/main.py:1379 src/menus/main.py:1385
+#: src/menus/main.py:48 src/menus/main.py:73 src/menus/main.py:491
+#: src/menus/main.py:1067 src/menus/main.py:1150 src/menus/main.py:1192
+#: src/menus/main.py:1208 src/menus/main.py:1261 src/menus/main.py:1319
+#: src/menus/main.py:1380 src/menus/main.py:1386
 msgid "Back"
 msgstr ""
 
-#: src/menus/main.py:54
+#: src/menus/main.py:55
 msgid "Name"
 msgstr ""
 
-#: src/menus/main.py:59
+#: src/menus/main.py:60
 msgid "Age"
 msgstr ""
 
-#: src/menus/main.py:60
+#: src/menus/main.py:61
 msgid "Relationship"
 msgstr ""
 
-#: src/menus/main.py:62
+#: src/menus/main.py:63
 msgid "Generosity"
 msgstr ""
 
-#: src/menus/main.py:65 src/menus/main.py:1198
-#: src/people/classes/player.py:575
+#: src/menus/main.py:66 src/menus/main.py:1199
+#: src/people/classes/player.py:583
 msgid "Smarts"
 msgstr ""
 
-#: src/menus/main.py:66 src/menus/main.py:1199
-#: src/people/classes/player.py:576
+#: src/menus/main.py:67 src/menus/main.py:1200
+#: src/people/classes/player.py:584
 msgid "Looks"
 msgstr ""
 
-#: src/menus/main.py:68
+#: src/menus/main.py:69
 msgid "Petulance"
 msgstr ""
 
-#: src/menus/main.py:70
+#: src/menus/main.py:71
 msgid "Craziness"
 msgstr ""
 
-#: src/menus/main.py:75 src/menus/main.py:96
+#: src/menus/main.py:76 src/menus/main.py:97
 msgid "Spend time"
 msgstr ""
 
-#: src/menus/main.py:77 src/menus/main.py:126
+#: src/menus/main.py:78 src/menus/main.py:127
 msgid "Have a conversation"
 msgstr ""
 
-#: src/menus/main.py:79 src/menus/main.py:266
+#: src/menus/main.py:80 src/menus/main.py:267
 msgid "Compliment"
 msgstr ""
 
-#: src/menus/main.py:80 src/menus/main.py:331
+#: src/menus/main.py:81 src/menus/main.py:332
 msgid "Insult"
 msgstr ""
 
-#: src/menus/main.py:82 src/menus/main.py:367
+#: src/menus/main.py:83 src/menus/main.py:368
 msgid "Have a baby"
 msgstr ""
 
-#: src/menus/main.py:84 src/menus/main.py:396
+#: src/menus/main.py:85 src/menus/main.py:397
 msgid "Break up"
 msgstr ""
 
-#: src/menus/main.py:86 src/menus/main.py:474
+#: src/menus/main.py:87 src/menus/main.py:475
 msgid "Divorce"
 msgstr ""
 
-#: src/menus/main.py:88 src/menus/main.py:407
+#: src/menus/main.py:89 src/menus/main.py:408
 msgid "Propose"
 msgstr ""
 
-#: src/menus/main.py:90 src/menus/main.py:440
+#: src/menus/main.py:91 src/menus/main.py:441
 msgid "Plan the wedding"
 msgstr ""
 
-#: src/menus/main.py:91 src/menus/main.py:428
+#: src/menus/main.py:92 src/menus/main.py:429
 msgid "Call off the engagement"
 msgstr ""
 
-#: src/menus/main.py:93 src/menus/main.py:246
+#: src/menus/main.py:94 src/menus/main.py:247
 msgid "Ask for money"
 msgstr ""
 
-#: src/menus/main.py:98
+#: src/menus/main.py:99
 msgid "Your {relation} refused to see you."
 msgstr ""
 
-#: src/menus/main.py:110
+#: src/menus/main.py:111
 msgid "You took your {relation} {place}."
 msgstr ""
 
-#: src/menus/main.py:112 src/menus/main.py:1019 src/menus/main.py:1050
+#: src/menus/main.py:113 src/menus/main.py:1020 src/menus/main.py:1051
 msgid "Your Enjoyment"
 msgstr ""
 
-#: src/menus/main.py:114
+#: src/menus/main.py:115
 msgid "{his_her} Enjoyment"
 msgstr ""
 
-#: src/menus/main.py:129
+#: src/menus/main.py:130
 msgid "Your {relation} isn't interested in having a conversation with you."
 msgstr ""
 
-#: src/menus/main.py:150
+#: src/menus/main.py:151
 msgid "You and your {relation} had a chat about the hierarchy of licorice."
 msgstr ""
 
-#: src/menus/main.py:153
+#: src/menus/main.py:154
 msgid "You and your {relation} had a chat about {chat}."
 msgstr ""
 
-#: src/menus/main.py:157
+#: src/menus/main.py:158
 msgid "You and your {relation} had a chat about which is better, Star Wars or Star Trek."
 msgstr ""
 
-#: src/menus/main.py:160
+#: src/menus/main.py:161
 msgid "You and your {relation} had a chat about which is better, Coke or Pepsi."
 msgstr ""
 
-#: src/menus/main.py:163
+#: src/menus/main.py:164
 msgid "You and your {relation} had a chat about which is better, Lord of the Rings or Harry Potter."
 msgstr ""
 
-#: src/menus/main.py:166
+#: src/menus/main.py:167
 msgid "You and your {relation} had a chat about who is better, the Red Sox or Yankees."
 msgstr ""
 
-#: src/menus/main.py:169
+#: src/menus/main.py:170
 msgid "You and your {relation} discussed Frida Kahlo's moustache."
 msgstr ""
 
-#: src/menus/main.py:172
+#: src/menus/main.py:173
 msgid "You and your {relation} discussed {discussion}."
 msgstr ""
 
-#: src/menus/main.py:176
+#: src/menus/main.py:177
 msgid "You and your {relation} discussed which is the best breed of dog."
 msgstr ""
 
-#: src/menus/main.py:179
+#: src/menus/main.py:180
 msgid "You and your {relation} discussed which is the best breed of cat."
 msgstr ""
 
-#: src/menus/main.py:182
+#: src/menus/main.py:183
 msgid "You and your {relation} discussed why dogs are better than cats."
 msgstr ""
 
-#: src/menus/main.py:185
+#: src/menus/main.py:186
 msgid "You and your {relation} discussed why cats are better than dogs."
 msgstr ""
 
-#: src/menus/main.py:188
+#: src/menus/main.py:189
 msgid "You and your {relation} talked about whether you would rather have overly large hands or small feet."
 msgstr ""
 
-#: src/menus/main.py:191
+#: src/menus/main.py:192
 msgid "You and your {relation} talked about {talk}."
 msgstr ""
 
-#: src/menus/main.py:195
+#: src/menus/main.py:196
 msgid "You and your {relation} talked about who will win the Monaco Grand Prix."
 msgstr ""
 
-#: src/menus/main.py:198
+#: src/menus/main.py:199
 msgid "You and your {relation} had a heart-to-heart about the best gift you ever received."
 msgstr ""
 
-#: src/menus/main.py:201
+#: src/menus/main.py:202
 msgid "You and your {relation} had a heart-to-heart about {heart_to_heart}."
 msgstr ""
 
-#: src/menus/main.py:206
+#: src/menus/main.py:207
 msgid "Agreement"
 msgstr ""
 
-#: src/menus/main.py:217
+#: src/menus/main.py:218
 msgid "You and your {relation} got into an argument. What will you do?"
 msgstr ""
 
-#: src/menus/main.py:222
+#: src/menus/main.py:223
 msgid "Apologize"
 msgstr ""
 
-#: src/menus/main.py:223
+#: src/menus/main.py:224
 msgid "Agree to disagree"
 msgstr ""
 
-#: src/menus/main.py:224
+#: src/menus/main.py:225
 msgid "Insult {him_her}"
 msgstr ""
 
-#: src/menus/main.py:230
+#: src/menus/main.py:231
 msgid "You apologized to your {relation}"
 msgstr ""
 
-#: src/menus/main.py:236
+#: src/menus/main.py:237
 msgid "You agreed to disagree"
 msgstr ""
 
-#: src/menus/main.py:241
+#: src/menus/main.py:242
 msgid "You called your {relation} {insult}."
 msgstr ""
 
-#: src/menus/main.py:249
+#: src/menus/main.py:250
 msgid "Your {parent} told you to stop asking for money."
 msgstr ""
 
-#: src/menus/main.py:252
+#: src/menus/main.py:253
 msgid "{he_she} called you {insult}."
 msgstr ""
 
-#: src/menus/main.py:258
+#: src/menus/main.py:259
 msgid "Your {parent} gave you ${amount}."
 msgstr ""
 
-#: src/menus/main.py:263
+#: src/menus/main.py:264
 msgid "Your {parent} refused to give you any money."
 msgstr ""
 
-#: src/menus/main.py:284
+#: src/menus/main.py:285
 msgid "an alpha male"
 msgstr ""
 
-#: src/menus/main.py:285
+#: src/menus/main.py:286
 msgid "handsome"
 msgstr ""
 
-#: src/menus/main.py:289
+#: src/menus/main.py:290
 msgid "an alpha female"
 msgstr ""
 
-#: src/menus/main.py:290
+#: src/menus/main.py:291
 msgid "beautiful"
 msgstr ""
 
-#: src/menus/main.py:294
+#: src/menus/main.py:295
 msgid "You told your {relation} that {hes_shes} {compliment}."
 msgstr ""
 
-#: src/menus/main.py:301
+#: src/menus/main.py:302
 msgid "{his_her} Appreciation"
 msgstr ""
 
-#: src/menus/main.py:316
+#: src/menus/main.py:317
 msgid "Your {relation} told you that you're {compliment}!"
 msgstr ""
 
-#: src/menus/main.py:334
+#: src/menus/main.py:335
 msgid "Are you sure you want to insult your {relation}?"
 msgstr ""
 
-#: src/menus/main.py:340
+#: src/menus/main.py:341
 msgid "You called your {rel} {insult}."
 msgstr ""
 
-#: src/menus/main.py:356
+#: src/menus/main.py:357
 msgid "Your {rel} attacked you!"
 msgstr ""
 
-#: src/menus/main.py:362
+#: src/menus/main.py:363
 msgid "Your {rel} called you {insult}!"
 msgstr ""
 
-#: src/menus/main.py:372
+#: src/menus/main.py:373
 msgid "Your {partner} is already pregnant!"
 msgstr ""
 
-#: src/menus/main.py:374
+#: src/menus/main.py:375
 msgid "You are already pregnant!"
 msgstr ""
 
-#: src/menus/main.py:377
+#: src/menus/main.py:378
 msgid "You and your {partner} tried for a baby."
 msgstr ""
 
-#: src/menus/main.py:381
+#: src/menus/main.py:382
 msgid "Your {partner} is pregnant with your baby!"
 msgstr ""
 
-#: src/menus/main.py:383
+#: src/menus/main.py:384
 msgid "You are pregnant with {name}'s baby!"
 msgstr ""
 
-#: src/menus/main.py:384
+#: src/menus/main.py:385
 msgid "Would you like to keep it?"
 msgstr ""
 
-#: src/menus/main.py:391
+#: src/menus/main.py:392
 msgid "You failed to get pregnant."
 msgstr ""
 
-#: src/menus/main.py:391
+#: src/menus/main.py:392
 msgid "You failed to get your {partner} pregnant."
 msgstr ""
 
-#: src/menus/main.py:394
+#: src/menus/main.py:395
 msgid "Your {partner} doesn't want to have a baby with you."
 msgstr ""
 
-#: src/menus/main.py:399
+#: src/menus/main.py:400
 msgid "Are you sure you want to break up with your {partner}?"
 msgstr ""
 
-#: src/menus/main.py:404
+#: src/menus/main.py:405
 msgid "You broke up with your {partner}."
 msgstr ""
 
-#: src/menus/main.py:416
+#: src/menus/main.py:417
 msgid "Your {partner} accepted your proposal!"
 msgstr ""
 
-#: src/menus/main.py:422
+#: src/menus/main.py:423
 msgid "Your {partner} rejected your proposal."
 msgstr ""
 
-#: src/menus/main.py:431
+#: src/menus/main.py:432
 msgid "Are you sure you want to call off your engagement with your {partner}?"
 msgstr ""
 
-#: src/menus/main.py:436
+#: src/menus/main.py:437
 msgid "You called off your engagement with your {partner}."
 msgstr ""
 
-#: src/menus/main.py:442
+#: src/menus/main.py:443
 msgid "golf course"
 msgstr ""
 
-#: src/menus/main.py:443
+#: src/menus/main.py:444
 msgid "vineyard"
 msgstr ""
 
-#: src/menus/main.py:444
+#: src/menus/main.py:445
 msgid "family member's house"
 msgstr ""
 
-#: src/menus/main.py:445
+#: src/menus/main.py:446
 msgid "courthouse"
 msgstr ""
 
-#: src/menus/main.py:446
+#: src/menus/main.py:447
 msgid "restaurant"
 msgstr ""
 
-#: src/menus/main.py:447
+#: src/menus/main.py:448
 msgid "drive-thru wedding chapel"
 msgstr ""
 
-#: src/menus/main.py:448
+#: src/menus/main.py:449
 msgid "country club"
 msgstr ""
 
-#: src/menus/main.py:453
+#: src/menus/main.py:454
 msgid "Choose a location:"
 msgstr ""
 
-#: src/menus/main.py:458
+#: src/menus/main.py:459
 msgid ""
 "You have chosen to marry {name} at a {place}.\n"
 "Cost: ${price}"
 msgstr ""
 
-#: src/menus/main.py:459
+#: src/menus/main.py:460
 msgid "Actually, never mind"
 msgstr ""
 
-#: src/menus/main.py:459
+#: src/menus/main.py:460
 msgid "Do it"
 msgstr ""
 
-#: src/menus/main.py:459
+#: src/menus/main.py:460
 msgid "Edit the plan"
 msgstr ""
 
-#: src/menus/main.py:462
+#: src/menus/main.py:463
 msgid "You don't have enough money for this wedding plan."
 msgstr ""
 
-#: src/menus/main.py:465
+#: src/menus/main.py:466
 msgid "You married {name} at a {place}."
 msgstr ""
 
-#: src/menus/main.py:476
+#: src/menus/main.py:477
 msgid "Are you sure you want to divorce your {partner}?"
 msgstr ""
 
-#: src/menus/main.py:478
+#: src/menus/main.py:479
 msgid "You divorced your {partner}."
 msgstr ""
 
-#: src/menus/main.py:483 src/people/classes/player.py:598
+#: src/menus/main.py:484 src/people/classes/player.py:606
 msgid "The judge has ordered you to pay {name} ${amount} to settle your divorce."
 msgstr ""
 
-#: src/menus/main.py:488
+#: src/menus/main.py:489
 msgid "Activities Menu"
 msgstr ""
 
-#: src/menus/main.py:492 src/menus/main.py:509
+#: src/menus/main.py:493 src/menus/main.py:510
 msgid "Play with your toys"
 msgstr ""
 
-#: src/menus/main.py:494 src/menus/main.py:912
+#: src/menus/main.py:495 src/menus/main.py:913
 msgid "Doctor"
 msgstr ""
 
-#: src/menus/main.py:496 src/menus/main.py:766
+#: src/menus/main.py:497 src/menus/main.py:767
 msgid "Arts and Crafts"
 msgstr ""
 
-#: src/menus/main.py:498 src/menus/main.py:988
+#: src/menus/main.py:499 src/menus/main.py:989
 msgid "Meditate"
 msgstr ""
 
-#: src/menus/main.py:499 src/menus/main.py:1006
+#: src/menus/main.py:500 src/menus/main.py:1007
 msgid "Library"
 msgstr ""
 
-#: src/menus/main.py:500 src/menus/main.py:1042
+#: src/menus/main.py:501 src/menus/main.py:1043
 msgid "Gym"
 msgstr ""
 
-#: src/menus/main.py:501 src/menus/main.py:865
+#: src/menus/main.py:502 src/menus/main.py:866
 msgid "Listen to music"
 msgstr ""
 
-#: src/menus/main.py:503 src/menus/main.py:1060
+#: src/menus/main.py:504 src/menus/main.py:1061
 msgid "Lottery"
 msgstr ""
 
-#: src/menus/main.py:505 src/menus/main.py:884
+#: src/menus/main.py:506 src/menus/main.py:885
 msgid "Find a Partner"
 msgstr ""
 
-#: src/menus/main.py:506 src/menus/main.py:1141
+#: src/menus/main.py:507 src/menus/main.py:1142
 msgid "Surrender"
 msgstr ""
 
-#: src/menus/main.py:511
+#: src/menus/main.py:512
 msgid "You don't feel like playing, but you decide to try anyway."
 msgstr ""
 
-#: src/menus/main.py:526 src/menus/main.py:573
+#: src/menus/main.py:527 src/menus/main.py:574
 msgid "You played with your toy wagon."
 msgstr ""
 
-#: src/menus/main.py:527 src/menus/main.py:574 src/menus/main.py:638
-#: src/menus/main.py:695
+#: src/menus/main.py:528 src/menus/main.py:575 src/menus/main.py:639
+#: src/menus/main.py:696
 msgid "You played with some of your balls."
 msgstr ""
 
-#: src/menus/main.py:528
+#: src/menus/main.py:529
 msgid "You raced around on your foot propelled bike."
 msgstr ""
 
-#: src/menus/main.py:529 src/menus/main.py:575
+#: src/menus/main.py:530 src/menus/main.py:576
 msgid "You played with your push-pull toy."
 msgstr ""
 
-#: src/menus/main.py:530 src/menus/main.py:576
+#: src/menus/main.py:531 src/menus/main.py:577
 msgid "You put toys in your wagon and pulled them around the living room."
 msgstr ""
 
-#: src/menus/main.py:533 src/menus/main.py:579
+#: src/menus/main.py:534 src/menus/main.py:580
 msgid "You swung on your toddler swing."
 msgstr ""
 
-#: src/menus/main.py:534 src/menus/main.py:580
+#: src/menus/main.py:535 src/menus/main.py:581
 msgid "You slid on your toddler slide."
 msgstr ""
 
-#: src/menus/main.py:535 src/menus/main.py:581
+#: src/menus/main.py:536 src/menus/main.py:582
 msgid "You played with your stacking toys."
 msgstr ""
 
-#: src/menus/main.py:536 src/menus/main.py:582
+#: src/menus/main.py:537 src/menus/main.py:583
 msgid "You played with your nesting toys."
 msgstr ""
 
-#: src/menus/main.py:537 src/menus/main.py:583
+#: src/menus/main.py:538 src/menus/main.py:584
 msgid "You played with your shape sorter."
 msgstr ""
 
-#: src/menus/main.py:538 src/menus/main.py:584
+#: src/menus/main.py:539 src/menus/main.py:585
 msgid "You played with your pop-up toys."
 msgstr ""
 
-#: src/menus/main.py:539 src/menus/main.py:585
+#: src/menus/main.py:540 src/menus/main.py:586
 msgid "You played with your puzzle with knobs."
 msgstr ""
 
-#: src/menus/main.py:540 src/menus/main.py:586
+#: src/menus/main.py:541 src/menus/main.py:587
 msgid "You played with your blocks."
 msgstr ""
 
-#: src/menus/main.py:541 src/menus/main.py:587
+#: src/menus/main.py:542 src/menus/main.py:588
 msgid "You played in your sandbox."
 msgstr ""
 
-#: src/menus/main.py:542 src/menus/main.py:588
+#: src/menus/main.py:543 src/menus/main.py:589
 msgid "You played with your sandbox toys."
 msgstr ""
 
-#: src/menus/main.py:543 src/menus/main.py:589
+#: src/menus/main.py:544 src/menus/main.py:590
 msgid "You played in your wading pool."
 msgstr ""
 
-#: src/menus/main.py:544 src/menus/main.py:590
+#: src/menus/main.py:545 src/menus/main.py:591
 msgid "You played with your wading pool toys"
 msgstr ""
 
-#: src/menus/main.py:545 src/menus/main.py:591
+#: src/menus/main.py:546 src/menus/main.py:592
 msgid "You played with your bath toys."
 msgstr ""
 
-#: src/menus/main.py:546 src/menus/main.py:592
+#: src/menus/main.py:547 src/menus/main.py:593
 msgid "Your mum gave you a bath and you played with your bath toys."
 msgstr ""
 
-#: src/menus/main.py:549 src/menus/main.py:595
+#: src/menus/main.py:550 src/menus/main.py:596
 msgid "Your dad gave you a bath and you played with your bath toys."
-msgstr ""
-
-#: src/menus/main.py:552 src/menus/main.py:598 src/menus/main.py:640
-#: src/menus/main.py:697
-msgid "You played with your stuffed animals."
 msgstr ""
 
 #: src/menus/main.py:553 src/menus/main.py:599 src/menus/main.py:641
 #: src/menus/main.py:698
+msgid "You played with your stuffed animals."
+msgstr ""
+
+#: src/menus/main.py:554 src/menus/main.py:600 src/menus/main.py:642
+#: src/menus/main.py:699
 msgid "You played with your dolls."
 msgstr ""
 
-#: src/menus/main.py:554 src/menus/main.py:600
+#: src/menus/main.py:555 src/menus/main.py:601
 msgid "You played with your play vehicles."
 msgstr ""
 
-#: src/menus/main.py:555 src/menus/main.py:601
+#: src/menus/main.py:556 src/menus/main.py:602
 msgid "You played with your toy kitchen equipment."
 msgstr ""
 
-#: src/menus/main.py:556 src/menus/main.py:602
+#: src/menus/main.py:557 src/menus/main.py:603
 msgid "You played with your toy kitchen gadgets."
 msgstr ""
 
-#: src/menus/main.py:557 src/menus/main.py:603
+#: src/menus/main.py:558 src/menus/main.py:604
 msgid "You played with your toy telephone."
 msgstr ""
 
-#: src/menus/main.py:558 src/menus/main.py:604
+#: src/menus/main.py:559 src/menus/main.py:605
 msgid "You played with your toy lawn mower."
 msgstr ""
 
-#: src/menus/main.py:559 src/menus/main.py:605
+#: src/menus/main.py:560 src/menus/main.py:606
 msgid "You played with your toy shopping cart."
 msgstr ""
 
-#: src/menus/main.py:560 src/menus/main.py:606
+#: src/menus/main.py:561 src/menus/main.py:607
 msgid "You played with your toy workbench."
 msgstr ""
 
-#: src/menus/main.py:561 src/menus/main.py:607
+#: src/menus/main.py:562 src/menus/main.py:608
 msgid "You played in your playhouse."
 msgstr ""
 
-#: src/menus/main.py:562 src/menus/main.py:608
+#: src/menus/main.py:563 src/menus/main.py:609
 msgid "You pretended to hold a meeting at your toy table and chairs with your stuffed animals."
 msgstr ""
 
-#: src/menus/main.py:565
+#: src/menus/main.py:566
 msgid "You made a sausage out of clay."
 msgstr ""
 
-#: src/menus/main.py:566
+#: src/menus/main.py:567
 msgid "You made a a ball out of clay."
 msgstr ""
 
-#: src/menus/main.py:567 src/menus/main.py:613
+#: src/menus/main.py:568 src/menus/main.py:614
 msgid "You played with your playdough."
 msgstr ""
 
-#: src/menus/main.py:568 src/menus/main.py:614
+#: src/menus/main.py:569 src/menus/main.py:615
 msgid "You played with your toy guitar."
 msgstr ""
 
-#: src/menus/main.py:569 src/menus/main.py:615
+#: src/menus/main.py:570 src/menus/main.py:616
 msgid "You played with your toy piano."
 msgstr ""
 
-#: src/menus/main.py:611
+#: src/menus/main.py:612
 msgid "You made a rough pot of clay."
 msgstr ""
 
-#: src/menus/main.py:612
+#: src/menus/main.py:613
 msgid "You made a rough bowl out of clay."
 msgstr ""
 
-#: src/menus/main.py:616 src/menus/main.py:643 src/menus/main.py:700
+#: src/menus/main.py:617 src/menus/main.py:644 src/menus/main.py:701
 msgid "You kicked a ball in your yard."
 msgstr ""
 
-#: src/menus/main.py:617 src/menus/main.py:644
+#: src/menus/main.py:618 src/menus/main.py:645
 msgid "You fed your baby doll."
 msgstr ""
 
-#: src/menus/main.py:618 src/menus/main.py:645
+#: src/menus/main.py:619 src/menus/main.py:646
 msgid "You changed the daiper on your baby doll."
 msgstr ""
 
-#: src/menus/main.py:619 src/menus/main.py:646
+#: src/menus/main.py:620 src/menus/main.py:647
 msgid "You bathed your baby doll."
 msgstr ""
 
-#: src/menus/main.py:620 src/menus/main.py:647
+#: src/menus/main.py:621 src/menus/main.py:648
 msgid "You put your mum's clothes on and dressed up as her."
 msgstr ""
 
-#: src/menus/main.py:621 src/menus/main.py:648
+#: src/menus/main.py:622 src/menus/main.py:649
 msgid "You put your dad's clothes on and dressed up as him."
 msgstr ""
 
-#: src/menus/main.py:622 src/menus/main.py:649
+#: src/menus/main.py:623 src/menus/main.py:650
 msgid "You climbed on your climbing gym."
 msgstr ""
 
-#: src/menus/main.py:623 src/menus/main.py:650
+#: src/menus/main.py:624 src/menus/main.py:651
 msgid "You dressed up your stuffed animals."
 msgstr ""
 
-#: src/menus/main.py:624 src/menus/main.py:651
+#: src/menus/main.py:625 src/menus/main.py:652
 msgid "You changed your doll's clothes."
 msgstr ""
 
-#: src/menus/main.py:625
+#: src/menus/main.py:626
 msgid "You played with your chalk."
 msgstr ""
 
-#: src/menus/main.py:626 src/menus/main.py:653
+#: src/menus/main.py:627 src/menus/main.py:654
 msgid "You rode your tricycle."
 msgstr ""
 
-#: src/menus/main.py:627 src/menus/main.py:654 src/menus/main.py:703
+#: src/menus/main.py:628 src/menus/main.py:655 src/menus/main.py:704
 msgid "You read a storybook."
 msgstr ""
 
-#: src/menus/main.py:628 src/menus/main.py:655 src/menus/main.py:704
+#: src/menus/main.py:629 src/menus/main.py:656 src/menus/main.py:705
 msgid "You played with your finger puppets."
 msgstr ""
 
-#: src/menus/main.py:629 src/menus/main.py:656 src/menus/main.py:705
+#: src/menus/main.py:630 src/menus/main.py:657 src/menus/main.py:706
 msgid "You played with your hand puppet."
 msgstr ""
 
-#: src/menus/main.py:630
+#: src/menus/main.py:631
 msgid "You played a simple board game."
 msgstr ""
 
-#: src/menus/main.py:631
+#: src/menus/main.py:632
 msgid "You played a word matching game."
 msgstr ""
 
-#: src/menus/main.py:632
+#: src/menus/main.py:633
 msgid "You played a picture matching game."
 msgstr ""
 
-#: src/menus/main.py:633
+#: src/menus/main.py:634
 msgid "You played make believe with a cardboard box."
 msgstr ""
 
-#: src/menus/main.py:634 src/menus/main.py:661
+#: src/menus/main.py:635 src/menus/main.py:662
 msgid "You made a fort using bed sheets and cushions."
 msgstr ""
 
-#: src/menus/main.py:639 src/menus/main.py:696
+#: src/menus/main.py:640 src/menus/main.py:697
 msgid "You played with your Lego."
 msgstr ""
 
-#: src/menus/main.py:642 src/menus/main.py:699
+#: src/menus/main.py:643 src/menus/main.py:700
 msgid "You played with your toy cars."
 msgstr ""
 
-#: src/menus/main.py:652 src/menus/main.py:702
+#: src/menus/main.py:653 src/menus/main.py:703
 msgid "You played with your chalk and drew on the sidewalk."
 msgstr ""
 
-#: src/menus/main.py:657 src/menus/main.py:706
+#: src/menus/main.py:658 src/menus/main.py:707
 msgid "You played a board game."
 msgstr ""
 
-#: src/menus/main.py:658 src/menus/main.py:707
+#: src/menus/main.py:659 src/menus/main.py:708
 msgid "You played a word game."
 msgstr ""
 
-#: src/menus/main.py:659 src/menus/main.py:708
+#: src/menus/main.py:660 src/menus/main.py:709
 msgid "You played a video game."
 msgstr ""
 
-#: src/menus/main.py:660
+#: src/menus/main.py:661
 msgid "You made a costume out of a cardboard box."
 msgstr ""
 
-#: src/menus/main.py:662 src/menus/main.py:712
+#: src/menus/main.py:663 src/menus/main.py:713
 msgid "You rode your bicycle."
 msgstr ""
 
-#: src/menus/main.py:663 src/menus/main.py:713
+#: src/menus/main.py:664 src/menus/main.py:714
 msgid "You played with some gym equipment."
 msgstr ""
 
-#: src/menus/main.py:664
+#: src/menus/main.py:665
 msgid "You played with your baseball glove."
 msgstr ""
 
-#: src/menus/main.py:665
+#: src/menus/main.py:666
 msgid "You played with your hockey stick."
 msgstr ""
 
-#: src/menus/main.py:666
+#: src/menus/main.py:667
 msgid "You played with your tennis racquet."
 msgstr ""
 
-#: src/menus/main.py:667 src/menus/main.py:717
+#: src/menus/main.py:668 src/menus/main.py:718
 msgid "You played tennis with your family."
 msgstr ""
 
-#: src/menus/main.py:668 src/menus/main.py:719
+#: src/menus/main.py:669 src/menus/main.py:720
 msgid "You played football with your friends."
 msgstr ""
 
-#: src/menus/main.py:669 src/menus/main.py:720
+#: src/menus/main.py:670 src/menus/main.py:721
 msgid "You walked on your stilts."
 msgstr ""
 
-#: src/menus/main.py:670 src/menus/main.py:721
+#: src/menus/main.py:671 src/menus/main.py:722
 msgid "You skated on your ice skates."
 msgstr ""
 
-#: src/menus/main.py:671 src/menus/main.py:723
+#: src/menus/main.py:672 src/menus/main.py:724
 msgid "You skated on your roller blades."
 msgstr ""
 
-#: src/menus/main.py:672 src/menus/main.py:725
+#: src/menus/main.py:673 src/menus/main.py:726
 msgid "You skated on your skateboard."
 msgstr ""
 
-#: src/menus/main.py:673 src/menus/main.py:727
+#: src/menus/main.py:674 src/menus/main.py:728
 msgid "You rode your scooter."
 msgstr ""
 
-#: src/menus/main.py:674 src/menus/main.py:728
+#: src/menus/main.py:675 src/menus/main.py:729
 msgid "You rode your pogo stick."
 msgstr ""
 
-#: src/menus/main.py:675 src/menus/main.py:729
+#: src/menus/main.py:676 src/menus/main.py:730
 msgid "You played with your jump rope."
 msgstr ""
 
-#: src/menus/main.py:676 src/menus/main.py:735
+#: src/menus/main.py:677 src/menus/main.py:736
 msgid "You made a paper aeroplane."
 msgstr ""
 
-#: src/menus/main.py:677 src/menus/main.py:736
+#: src/menus/main.py:678 src/menus/main.py:737
 msgid "You played with your action figures."
 msgstr ""
 
-#: src/menus/main.py:678 src/menus/main.py:737
+#: src/menus/main.py:679 src/menus/main.py:738
 msgid "You played with your train set."
 msgstr ""
 
-#: src/menus/main.py:679 src/menus/main.py:738
+#: src/menus/main.py:680 src/menus/main.py:739
 msgid "You played with your magic set."
 msgstr ""
 
-#: src/menus/main.py:680 src/menus/main.py:739
+#: src/menus/main.py:681 src/menus/main.py:740
 msgid "You played with your craft kit."
 msgstr ""
 
-#: src/menus/main.py:681 src/menus/main.py:740
+#: src/menus/main.py:682 src/menus/main.py:741
 msgid "You played with your science set."
 msgstr ""
 
-#: src/menus/main.py:682
+#: src/menus/main.py:683
 msgid "You painted a basic picture."
 msgstr ""
 
-#: src/menus/main.py:683 src/menus/main.py:742
+#: src/menus/main.py:684 src/menus/main.py:743
 msgid "You played tabletop sports."
 msgstr ""
 
-#: src/menus/main.py:684
+#: src/menus/main.py:685
 msgid "You played with a jigsaw puzzle."
 msgstr ""
 
-#: src/menus/main.py:685 src/menus/main.py:744
+#: src/menus/main.py:686 src/menus/main.py:745
 msgid "You played with your fashion dolls."
 msgstr ""
 
-#: src/menus/main.py:686 src/menus/main.py:745
+#: src/menus/main.py:687 src/menus/main.py:746
 msgid "You played with your career dolls."
 msgstr ""
 
-#: src/menus/main.py:687
+#: src/menus/main.py:688
 msgid "You played with your dollhouse."
 msgstr ""
 
-#: src/menus/main.py:688 src/menus/main.py:746
+#: src/menus/main.py:689 src/menus/main.py:747
 msgid "You played with your puppets."
 msgstr ""
 
-#: src/menus/main.py:689 src/menus/main.py:747
+#: src/menus/main.py:690 src/menus/main.py:748
 msgid "You played with your toy theatre."
 msgstr ""
 
-#: src/menus/main.py:690 src/menus/main.py:748
+#: src/menus/main.py:691 src/menus/main.py:749
 msgid "You played with your marionettes."
 msgstr ""
 
-#: src/menus/main.py:691
+#: src/menus/main.py:692
 msgid "You read a fairytale and imagined you were in it."
 msgstr ""
 
-#: src/menus/main.py:701
+#: src/menus/main.py:702
 msgid "You dressed up your stuffed toys."
 msgstr ""
 
-#: src/menus/main.py:709
+#: src/menus/main.py:710
 msgid "You made a fort using bed sheets and cushions, and slept in it."
 msgstr ""
 
-#: src/menus/main.py:714
+#: src/menus/main.py:715
 msgid "You played baseball with your friends."
 msgstr ""
 
-#: src/menus/main.py:715
+#: src/menus/main.py:716
 msgid "You played hockey with your friends."
 msgstr ""
 
-#: src/menus/main.py:716
+#: src/menus/main.py:717
 msgid "You played tennis with your friends."
 msgstr ""
 
-#: src/menus/main.py:718
+#: src/menus/main.py:719
 msgid "You played with your football."
 msgstr ""
 
-#: src/menus/main.py:722
+#: src/menus/main.py:723
 msgid "You went ice skating with your friends."
 msgstr ""
 
-#: src/menus/main.py:724
+#: src/menus/main.py:725
 msgid "You went roller blading with your friends."
 msgstr ""
 
-#: src/menus/main.py:726
+#: src/menus/main.py:727
 msgid "You went skateboarding with your friends."
 msgstr ""
 
-#: src/menus/main.py:730
+#: src/menus/main.py:731
 msgid "You played jump rope with your friends."
 msgstr ""
 
-#: src/menus/main.py:731
+#: src/menus/main.py:732
 msgid "You played with your basketball."
 msgstr ""
 
-#: src/menus/main.py:732
+#: src/menus/main.py:733
 msgid "You played basketball with your friends."
 msgstr ""
 
-#: src/menus/main.py:733
+#: src/menus/main.py:734
 msgid "You played with your netball."
 msgstr ""
 
-#: src/menus/main.py:734
+#: src/menus/main.py:735
 msgid "You played netball with your friends."
 msgstr ""
 
-#: src/menus/main.py:741
+#: src/menus/main.py:742
 msgid "You painted a picture."
 msgstr ""
 
-#: src/menus/main.py:743
+#: src/menus/main.py:744
 msgid "You completed a jigsaw puzzle."
 msgstr ""
 
-#: src/menus/main.py:749
+#: src/menus/main.py:750
 msgid "You read a story and imagined you were in it."
 msgstr ""
 
-#: src/menus/main.py:750
+#: src/menus/main.py:751
 msgid "You played chess with a friend."
 msgstr ""
 
-#: src/menus/main.py:751
+#: src/menus/main.py:752
 msgid "You played foosball with a friend."
 msgstr ""
 
-#: src/menus/main.py:752
+#: src/menus/main.py:753
 msgid "You played darts with a friend."
 msgstr ""
 
-#: src/menus/main.py:753
+#: src/menus/main.py:754
 msgid "You played with your RC car."
 msgstr ""
 
-#: src/menus/main.py:754
+#: src/menus/main.py:755
 msgid "You played with your drone."
 msgstr ""
 
-#: src/menus/main.py:755
+#: src/menus/main.py:756
 msgid "You read a mystery book."
 msgstr ""
 
-#: src/menus/main.py:756
+#: src/menus/main.py:757
 msgid "You read an adventure book."
 msgstr ""
 
-#: src/menus/main.py:757
+#: src/menus/main.py:758
 msgid "You played checkers with a friend."
 msgstr ""
 
-#: src/menus/main.py:758
+#: src/menus/main.py:759
 msgid "You played solitaire with a pack of cards."
 msgstr ""
 
-#: src/menus/main.py:759
+#: src/menus/main.py:760
 msgid "You played dominoes with some friends."
 msgstr ""
 
-#: src/menus/main.py:760
+#: src/menus/main.py:761
 msgid "You made a robot with Meccano"
 msgstr ""
 
-#: src/menus/main.py:769
+#: src/menus/main.py:770
 msgid "You thought about doing arts and crafts, but couldn't decide what to make."
 msgstr ""
 
-#: src/menus/main.py:772
+#: src/menus/main.py:773
 msgid "For some reason, you couldn't think of any ideas."
 msgstr ""
 
-#: src/menus/main.py:773
+#: src/menus/main.py:774
 msgid "You came up with a cool arts and crafts idea, only to quickly forget what it was."
 msgstr ""
 
-#: src/menus/main.py:776
+#: src/menus/main.py:777
 msgid "You were unable to think of anything creative to do."
 msgstr ""
 
-#: src/menus/main.py:777
+#: src/menus/main.py:778
 msgid "You felt a bit frustrated when you couldn't come up with any creative ideas."
 msgstr ""
 
-#: src/menus/main.py:787 src/menus/main.py:797 src/menus/main.py:809
-#: src/menus/main.py:823 src/menus/main.py:842
+#: src/menus/main.py:788 src/menus/main.py:798 src/menus/main.py:810
+#: src/menus/main.py:824 src/menus/main.py:843
 msgid "You decided to finger-paint."
 msgstr ""
 
-#: src/menus/main.py:788
+#: src/menus/main.py:789
 msgid "You decided to make something from mud!"
 msgstr ""
 
-#: src/menus/main.py:789
+#: src/menus/main.py:790
 msgid "You drew in your colouring book"
 msgstr ""
 
-#: src/menus/main.py:790
+#: src/menus/main.py:791
 msgid "You squished clay between your fingers."
 msgstr ""
 
-#: src/menus/main.py:791
+#: src/menus/main.py:792
 msgid "You drew with your large crayons."
-msgstr ""
-
-#: src/menus/main.py:795 src/menus/main.py:807 src/menus/main.py:821
-#: src/menus/main.py:840
-msgid "You decided to draw."
 msgstr ""
 
 #: src/menus/main.py:796 src/menus/main.py:808 src/menus/main.py:822
 #: src/menus/main.py:841
+msgid "You decided to draw."
+msgstr ""
+
+#: src/menus/main.py:797 src/menus/main.py:809 src/menus/main.py:823
+#: src/menus/main.py:842
 msgid "You decided to make something from clay!"
 msgstr ""
 
-#: src/menus/main.py:798
+#: src/menus/main.py:799
 msgid "You played with your crayons."
 msgstr ""
 
-#: src/menus/main.py:799 src/menus/main.py:811 src/menus/main.py:825
+#: src/menus/main.py:800 src/menus/main.py:812 src/menus/main.py:826
 msgid "You drew in your colouring book."
 msgstr ""
 
-#: src/menus/main.py:800
+#: src/menus/main.py:801
 msgid "You drew a house that looked like a triangle on top of a square."
 msgstr ""
 
-#: src/menus/main.py:803
+#: src/menus/main.py:804
 msgid "You drew a stick figure picture of your family."
 msgstr ""
 
-#: src/menus/main.py:810 src/menus/main.py:824
+#: src/menus/main.py:811 src/menus/main.py:825
 msgid "You drew with your crayons."
 msgstr ""
 
-#: src/menus/main.py:812
+#: src/menus/main.py:813
 msgid "You tried to draw a picture of your house."
 msgstr ""
 
-#: src/menus/main.py:813
+#: src/menus/main.py:814
 msgid "You tried to draw a picture of your family."
 msgstr ""
 
-#: src/menus/main.py:814
+#: src/menus/main.py:815
 msgid "You tried to draw a picture of a landscape."
 msgstr ""
 
-#: src/menus/main.py:815
+#: src/menus/main.py:816
 msgid "You tried to draw a picture of a cat."
 msgstr ""
 
-#: src/menus/main.py:816
+#: src/menus/main.py:817
 msgid "You tried to draw a picture of a bowl of fruit."
 msgstr ""
 
-#: src/menus/main.py:817
+#: src/menus/main.py:818
 msgid "You tried to draw your favourite cartoon character."
 msgstr ""
 
-#: src/menus/main.py:826 src/menus/main.py:844
+#: src/menus/main.py:827 src/menus/main.py:845
 msgid "You drew a picture of your house."
 msgstr ""
 
-#: src/menus/main.py:827 src/menus/main.py:845
+#: src/menus/main.py:828 src/menus/main.py:846
 msgid "You drew a picture of your family."
 msgstr ""
 
-#: src/menus/main.py:828 src/menus/main.py:846
+#: src/menus/main.py:829 src/menus/main.py:847
 msgid "You drew a picture of a landscape."
 msgstr ""
 
-#: src/menus/main.py:829 src/menus/main.py:847
+#: src/menus/main.py:830 src/menus/main.py:848
 msgid "You drew a picture of a cat."
 msgstr ""
 
-#: src/menus/main.py:830 src/menus/main.py:848
+#: src/menus/main.py:831 src/menus/main.py:849
 msgid "You drew a picture of a bowl of fruit."
 msgstr ""
 
-#: src/menus/main.py:831 src/menus/main.py:849
+#: src/menus/main.py:832 src/menus/main.py:850
 msgid "You drew your favourite cartoon character."
 msgstr ""
 
-#: src/menus/main.py:832
+#: src/menus/main.py:833
 msgid "You tried to paint a picture of your house."
 msgstr ""
 
-#: src/menus/main.py:833
+#: src/menus/main.py:834
 msgid "You tried to paint a picture of your family."
 msgstr ""
 
-#: src/menus/main.py:834
+#: src/menus/main.py:835
 msgid "You tried to paint a picture of a landscape."
 msgstr ""
 
-#: src/menus/main.py:835
+#: src/menus/main.py:836
 msgid "You tried to paint a picture of a cat."
 msgstr ""
 
-#: src/menus/main.py:836
+#: src/menus/main.py:837
 msgid "You tried to paint a picture of a bowl of fruit."
 msgstr ""
 
-#: src/menus/main.py:843
+#: src/menus/main.py:844
 msgid "You drew with charcoal."
 msgstr ""
 
-#: src/menus/main.py:850
+#: src/menus/main.py:851
 msgid "You painted a picture of your house."
 msgstr ""
 
-#: src/menus/main.py:851
+#: src/menus/main.py:852
 msgid "You painted a picture of your family."
 msgstr ""
 
-#: src/menus/main.py:852
+#: src/menus/main.py:853
 msgid "You painted a picture of a landscape."
 msgstr ""
 
-#: src/menus/main.py:853
+#: src/menus/main.py:854
 msgid "You painted a picture of a cat."
 msgstr ""
 
-#: src/menus/main.py:854
+#: src/menus/main.py:855
 msgid "You painted a picture of a bowl of fruit."
 msgstr ""
 
-#: src/menus/main.py:866
+#: src/menus/main.py:867
 msgid "hip-hop"
 msgstr ""
 
-#: src/menus/main.py:866
+#: src/menus/main.py:867
 msgid "latin music"
 msgstr ""
 
-#: src/menus/main.py:866
+#: src/menus/main.py:867
 msgid "pop music"
 msgstr ""
 
-#: src/menus/main.py:866
+#: src/menus/main.py:867
 msgid "rock music"
 msgstr ""
 
-#: src/menus/main.py:868
+#: src/menus/main.py:869
 msgid "You listened to some music."
 msgstr ""
 
-#: src/menus/main.py:871
+#: src/menus/main.py:872
 msgid "You listened to some {music_type}."
 msgstr ""
 
-#: src/menus/main.py:872
+#: src/menus/main.py:873
 msgid "You played your favorite song."
 msgstr ""
 
-#: src/menus/main.py:873
+#: src/menus/main.py:874
 msgid "You listened to a song by {music_artist}."
 msgstr ""
 
-#: src/menus/main.py:886
+#: src/menus/main.py:887
 msgid "You are unable to find anyone to ask on a date."
 msgstr ""
 
-#: src/menus/main.py:889
+#: src/menus/main.py:890
 msgid "a female"
 msgstr ""
 
-#: src/menus/main.py:889
+#: src/menus/main.py:890
 msgid "a male"
 msgstr ""
 
-#: src/menus/main.py:891
+#: src/menus/main.py:892
 msgid "You met {a_male_female} named {name}."
 msgstr ""
 
-#: src/menus/main.py:899
+#: src/menus/main.py:900
 msgid "Ask {him_her} out"
 msgstr ""
 
-#: src/menus/main.py:900
+#: src/menus/main.py:901
 msgid "No, {hes_shes} not my type"
 msgstr ""
 
-#: src/menus/main.py:904 src/people/classes/player.py:811
+#: src/menus/main.py:905 src/people/classes/player.py:819
 msgid "You are now dating {name}."
 msgstr ""
 
-#: src/menus/main.py:909
+#: src/menus/main.py:910
 msgid "{name} rejected you."
 msgstr ""
 
-#: src/menus/main.py:916
+#: src/menus/main.py:917
 msgid "Would you like to visit the doctor? ($100 consultation fee)"
 msgstr ""
 
-#: src/menus/main.py:919
+#: src/menus/main.py:920
 msgid "Would you like to visit the doctor?"
 msgstr ""
 
-#: src/menus/main.py:922
+#: src/menus/main.py:923
 msgid "You don't have enough money."
 msgstr ""
 
-#: src/menus/main.py:928
+#: src/menus/main.py:929
 msgid "The doctor has determined that you are not suffering from any illnesses."
 msgstr ""
 
-#: src/menus/main.py:934
+#: src/menus/main.py:935
 msgid "The doctor has determined that you are currently suffering from the following:"
 msgstr ""
 
-#: src/menus/main.py:945
+#: src/menus/main.py:946
 msgid "Treat {illness}"
 msgstr ""
 
-#: src/menus/main.py:968
+#: src/menus/main.py:969
 msgid "You were treated for your {illness}."
 msgstr ""
 
-#: src/menus/main.py:975
+#: src/menus/main.py:976
 msgid "You are no longer suffering from {illness}."
 msgstr ""
 
-#: src/menus/main.py:984
+#: src/menus/main.py:985
 msgid "You continue to suffer from {illness}."
 msgstr ""
 
-#: src/menus/main.py:989
+#: src/menus/main.py:990
 msgid "You practiced meditation."
 msgstr ""
 
-#: src/menus/main.py:1000
+#: src/menus/main.py:1001
 msgid "You have achieved a deeper awareness of yourself."
 msgstr ""
 
-#: src/menus/main.py:1001 src/menus/main.py:1200
-#: src/people/classes/player.py:539
+#: src/menus/main.py:1002 src/menus/main.py:1201
+#: src/people/classes/player.py:547
 msgid "Karma"
 msgstr ""
 
-#: src/menus/main.py:1007
+#: src/menus/main.py:1008
 msgid "You went to the library."
 msgstr ""
 
-#: src/menus/main.py:1044
+#: src/menus/main.py:1045
 msgid "Your health is too weak to visit the gym."
 msgstr ""
 
-#: src/menus/main.py:1049
+#: src/menus/main.py:1050
 msgid "You worked out at the gym."
 msgstr ""
 
-#: src/menus/main.py:1061
+#: src/menus/main.py:1062
 msgid "Play the lottery today!"
 msgstr ""
 
-#: src/menus/main.py:1062
+#: src/menus/main.py:1063
 msgid "Ticket cost: $4 each"
 msgstr ""
 
-#: src/menus/main.py:1064
+#: src/menus/main.py:1065
 msgid "Lottery jackpot: ${jackpot}"
 msgstr ""
 
-#: src/menus/main.py:1066
+#: src/menus/main.py:1067
 msgid "Buy 10 tickets"
 msgstr ""
 
-#: src/menus/main.py:1066
+#: src/menus/main.py:1067
 msgid "Buy a ticket"
 msgstr ""
 
-#: src/menus/main.py:1075
+#: src/menus/main.py:1076
 msgid "You don't have enough money"
 msgstr ""
 
-#: src/menus/main.py:1079
+#: src/menus/main.py:1080
 msgid "Guess the 4 winning numbers between 1 and 20. Each number in the line must be separated by a space."
 msgstr ""
 
-#: src/menus/main.py:1084
+#: src/menus/main.py:1085
 msgid "The numbers within each line must be unique."
 msgstr ""
 
-#: src/menus/main.py:1086
+#: src/menus/main.py:1087
 msgid "The numbers must be unique."
 msgstr ""
 
-#: src/menus/main.py:1093
+#: src/menus/main.py:1094
 msgid "Guess #{num}: "
 msgstr ""
 
-#: src/menus/main.py:1095
+#: src/menus/main.py:1096
 msgid "Guess: "
 msgstr ""
 
-#: src/menus/main.py:1101
+#: src/menus/main.py:1102
 msgid "The values must all be integers."
 msgstr ""
 
-#: src/menus/main.py:1105
+#: src/menus/main.py:1106
 msgid "You must enter exactly 4 numbers"
 msgstr ""
 
-#: src/menus/main.py:1108
+#: src/menus/main.py:1109
 msgid "All values must be between 1 and 20"
 msgstr ""
 
-#: src/menus/main.py:1111
+#: src/menus/main.py:1112
 msgid "All values must be unique."
 msgstr ""
 
-#: src/menus/main.py:1117
+#: src/menus/main.py:1118
 msgid "The winning numbers are {nums}"
 msgstr ""
 
-#: src/menus/main.py:1128
+#: src/menus/main.py:1129
 msgid "YOU WON THE ${amount} LOTTERY JACKPOT!!!"
 msgstr ""
 
-#: src/menus/main.py:1137
+#: src/menus/main.py:1138
 msgid "You did not win the ${amount} lottery jackpot."
 msgstr ""
 
-#: src/menus/main.py:1142
+#: src/menus/main.py:1143
 msgid "Are you sure you want to surrender this life?"
 msgstr ""
 
-#: src/menus/main.py:1143
+#: src/menus/main.py:1144
 msgid "This will kill your current character. Continue?"
 msgstr ""
 
-#: src/menus/main.py:1144
+#: src/menus/main.py:1145
 msgid "You surrendered."
 msgstr ""
 
-#: src/menus/main.py:1146
+#: src/menus/main.py:1147
 msgid "School Menu"
 msgstr ""
 
-#: src/menus/main.py:1148
+#: src/menus/main.py:1149
 msgid "Grades"
 msgstr ""
 
-#: src/menus/main.py:1149
+#: src/menus/main.py:1150
 msgid "Drop out"
 msgstr ""
 
-#: src/menus/main.py:1149
+#: src/menus/main.py:1150
 msgid "Skip school"
 msgstr ""
 
-#: src/menus/main.py:1149
+#: src/menus/main.py:1150
 msgid "Study harder"
 msgstr ""
 
-#: src/menus/main.py:1152
+#: src/menus/main.py:1153
 msgid "You began studying harder"
 msgstr ""
 
-#: src/menus/main.py:1169
+#: src/menus/main.py:1170
 msgid "You dropped out of school."
 msgstr ""
 
-#: src/menus/main.py:1174
+#: src/menus/main.py:1175
 msgid "Your parents won't let you drop out of school."
 msgstr ""
 
-#: src/menus/main.py:1178
+#: src/menus/main.py:1179
 msgid "You skipped school and went {place} instead."
 msgstr ""
 
-#: src/menus/main.py:1182
+#: src/menus/main.py:1183
 msgid ""
 "You were caught skipping school!\n"
 "You were sent to the principal's office and got detention."
 msgstr ""
 
-#: src/menus/main.py:1191
+#: src/menus/main.py:1192
 msgid "Identity"
 msgstr ""
 
-#: src/menus/main.py:1191
+#: src/menus/main.py:1192
 msgid "Stats"
 msgstr ""
 
-#: src/menus/main.py:1195
+#: src/menus/main.py:1196
 msgid "Your stats"
 msgstr ""
 
-#: src/menus/main.py:1196 src/people/classes/player.py:573
+#: src/menus/main.py:1197 src/people/classes/player.py:581
 msgid "Happiness"
 msgstr ""
 
-#: src/menus/main.py:1202
+#: src/menus/main.py:1203
 msgid "The below stats only matter if you have a job:"
 msgstr ""
 
-#: src/menus/main.py:1203 src/menus/main.py:1313
+#: src/menus/main.py:1204 src/menus/main.py:1314
 msgid "Stress"
 msgstr ""
 
-#: src/menus/main.py:1204 src/menus/main.py:1313
+#: src/menus/main.py:1205 src/menus/main.py:1314
 msgid "Performance"
 msgstr ""
 
-#: src/menus/main.py:1208
+#: src/menus/main.py:1209
 msgid "Modify Happiness"
 msgstr ""
 
-#: src/menus/main.py:1209
+#: src/menus/main.py:1210
 msgid "Modify Health"
 msgstr ""
 
-#: src/menus/main.py:1210
+#: src/menus/main.py:1211
 msgid "Modify Smarts"
 msgstr ""
 
-#: src/menus/main.py:1211
+#: src/menus/main.py:1212
 msgid "Modify Looks"
 msgstr ""
 
-#: src/menus/main.py:1212
+#: src/menus/main.py:1213
 msgid "Modify Karma"
 msgstr ""
 
-#: src/menus/main.py:1213
+#: src/menus/main.py:1214
 msgid "Modify Stress"
 msgstr ""
 
-#: src/menus/main.py:1214
+#: src/menus/main.py:1215
 msgid "Modify Performance"
 msgstr ""
 
-#: src/menus/main.py:1219
+#: src/menus/main.py:1220
 msgid "What would you like to set Happiness to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1224
+#: src/menus/main.py:1225
 msgid "What would you like to set Health to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1229
+#: src/menus/main.py:1230
 msgid "What would you like to set Smarts to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1234
+#: src/menus/main.py:1235
 msgid "What would you like to set Looks to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1239
+#: src/menus/main.py:1240
 msgid "What would you like to set Karma to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1244
+#: src/menus/main.py:1245
 msgid "What would you like to set Stress to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1249
+#: src/menus/main.py:1250
 msgid "What would you like to set Performance to? (0-100)"
 msgstr ""
 
-#: src/menus/main.py:1256
+#: src/menus/main.py:1257
 msgid "First name"
 msgstr ""
 
-#: src/menus/main.py:1257
+#: src/menus/main.py:1258
 msgid "Last name"
 msgstr ""
 
-#: src/menus/main.py:1261
+#: src/menus/main.py:1262
 msgid "Change first name"
 msgstr ""
 
-#: src/menus/main.py:1262
+#: src/menus/main.py:1263
 msgid "Change last name"
 msgstr ""
 
-#: src/menus/main.py:1263
+#: src/menus/main.py:1264
 msgid "Change gender"
 msgstr ""
 
-#: src/menus/main.py:1268
+#: src/menus/main.py:1269
 msgid "Enter first name: "
 msgstr ""
 
-#: src/menus/main.py:1272
+#: src/menus/main.py:1273
 msgid "Enter last name: "
 msgstr ""
 
-#: src/menus/main.py:1285
+#: src/menus/main.py:1286
 msgid "You found a job with a salary of ${salary:,}. Would you like to apply?"
 msgstr ""
 
-#: src/menus/main.py:1301
+#: src/menus/main.py:1302
 msgid "You got the job!"
 msgstr ""
 
-#: src/menus/main.py:1305
+#: src/menus/main.py:1306
 msgid "You didn't get an interview."
 msgstr ""
 
-#: src/menus/main.py:1310
+#: src/menus/main.py:1311
 msgid "Your job"
 msgstr ""
 
-#: src/menus/main.py:1315
+#: src/menus/main.py:1316
 msgid "Hours"
 msgstr ""
 
-#: src/menus/main.py:1319
+#: src/menus/main.py:1320
 msgid "Work Harder"
 msgstr ""
 
-#: src/menus/main.py:1320
+#: src/menus/main.py:1321
 msgid "Quit Job"
 msgstr ""
 
-#: src/menus/main.py:1320
+#: src/menus/main.py:1321
 msgid "Retire"
 msgstr ""
 
-#: src/menus/main.py:1321
+#: src/menus/main.py:1322
 msgid "Adjust Hours"
 msgstr ""
 
-#: src/menus/main.py:1322
+#: src/menus/main.py:1323
 msgid "Request a Raise"
 msgstr ""
 
-#: src/menus/main.py:1338
+#: src/menus/main.py:1339
 msgid "Do you want to retire? You will receive a yearly pension of ${pension}"
 msgstr ""
 
-#: src/menus/main.py:1346
+#: src/menus/main.py:1347
 msgid "You retired and are now receiving pension of ${pension}."
 msgstr ""
 
-#: src/menus/main.py:1350
+#: src/menus/main.py:1351
 msgid "Are you sure you want to quit your job?"
 msgstr ""
 
-#: src/menus/main.py:1352
+#: src/menus/main.py:1353
 msgid "You quit your job."
 msgstr ""
 
-#: src/menus/main.py:1354
+#: src/menus/main.py:1355
 msgid "What would you like to set your hours to? (38 - 70)"
 msgstr ""
 
-#: src/menus/main.py:1358
+#: src/menus/main.py:1359
 msgid "Your request for a raise has been approved."
 msgstr ""
 
-#: src/menus/main.py:1361
+#: src/menus/main.py:1362
 msgid "You got a raise of {perc}%"
 msgstr ""
 
-#: src/menus/main.py:1365
+#: src/menus/main.py:1366
 msgid "Your request for a raise has been rejected."
 msgstr ""
 
-#: src/menus/main.py:1367
+#: src/menus/main.py:1368
 msgid "Your boss fired you for asking for a raise."
 msgstr ""
 
-#: src/menus/main.py:1375
+#: src/menus/main.py:1376
 msgid "No previously saved games"
 msgstr ""
 
-#: src/menus/main.py:1377
+#: src/menus/main.py:1378
 msgid "Previously saved games:"
 msgstr ""
 
-#: src/menus/main.py:1385
+#: src/menus/main.py:1386
 msgid "Delete Save"
 msgstr ""
 
-#: src/menus/main.py:1385
+#: src/menus/main.py:1386
 msgid "Load Save"
 msgstr ""
 
-#: src/menus/main.py:1387
+#: src/menus/main.py:1388
 msgid "Would you like to load this save?"
 msgstr ""
 
-#: src/menus/main.py:1393
+#: src/menus/main.py:1394
 msgid "Are you sure you want to delete this save?"
 msgstr ""
 
@@ -12528,11 +12532,11 @@ msgstr ""
 msgid "Choose your gender:"
 msgstr ""
 
-#: src/menus/start.py:33 src/people/classes/player.py:530
+#: src/menus/start.py:33 src/people/classes/player.py:538
 msgid "Female"
 msgstr ""
 
-#: src/menus/start.py:33 src/people/classes/player.py:530
+#: src/menus/start.py:33 src/people/classes/player.py:538
 msgid "Male"
 msgstr ""
 
@@ -12584,59 +12588,75 @@ msgstr ""
 msgid "You have a {siblingtype} named {name}, age {age}."
 msgstr ""
 
-#: src/people/classes/child.py:22
+#: src/people/classes/child.py:24
+msgid "adopted daughter"
+msgstr ""
+
+#: src/people/classes/child.py:24
+msgid "adopted son"
+msgstr ""
+
+#: src/people/classes/child.py:26
 msgid "daughter"
 msgstr ""
 
-#: src/people/classes/child.py:22
+#: src/people/classes/child.py:26
 msgid "son"
 msgstr ""
 
-#: src/people/classes/child.py:25
+#: src/people/classes/child.py:31
+msgid "Adopted Daughter"
+msgstr ""
+
+#: src/people/classes/child.py:31
+msgid "Adopted Son"
+msgstr ""
+
+#: src/people/classes/child.py:33
 msgid "Daughter"
 msgstr ""
 
-#: src/people/classes/child.py:25
+#: src/people/classes/child.py:33
 msgid "Son"
 msgstr ""
 
-#: src/people/classes/child.py:38
+#: src/people/classes/child.py:46
 msgid "Your {child} graduated from university."
 msgstr ""
 
-#: src/people/classes/child.py:42
+#: src/people/classes/child.py:50
 msgid "Your {child} is starting elementary school"
 msgstr ""
 
-#: src/people/classes/child.py:45
+#: src/people/classes/child.py:53
 msgid "Your {child} is starting middle school"
 msgstr ""
 
-#: src/people/classes/child.py:48
+#: src/people/classes/child.py:56
 msgid "Your {child} is starting high school"
 msgstr ""
 
-#: src/people/classes/child.py:51
+#: src/people/classes/child.py:59
 msgid "Your {child} graduated from high school"
 msgstr ""
 
-#: src/people/classes/child.py:55
+#: src/people/classes/child.py:63
 msgid "Your {child} started going to university."
 msgstr ""
 
-#: src/people/classes/child.py:88
+#: src/people/classes/child.py:96
 msgid "Your {child}, and {partner} divorced."
 msgstr ""
 
-#: src/people/classes/child.py:94
+#: src/people/classes/child.py:102
 msgid "Your {child}, and {partner} broke up."
 msgstr ""
 
-#: src/people/classes/child.py:101
+#: src/people/classes/child.py:109
 msgid "Your {child} is now married to {partner}."
 msgstr ""
 
-#: src/people/classes/child.py:112
+#: src/people/classes/child.py:120
 msgid "Your {child} is now in a relationship with {partner}, age {age}."
 msgstr ""
 
@@ -12696,317 +12716,321 @@ msgstr ""
 msgid "Wife"
 msgstr ""
 
-#: src/people/classes/player.py:108
+#: src/people/classes/player.py:109
 msgid "You lose the {trait!r} trait!"
 msgstr ""
 
-#: src/people/classes/player.py:113
+#: src/people/classes/player.py:114
 msgid "You have gained the {trait} trait!"
 msgstr ""
 
-#: src/people/classes/player.py:169
+#: src/people/classes/player.py:175
 msgid "Your parent, {name}, passed away."
 msgstr ""
 
-#: src/people/classes/player.py:172
+#: src/people/classes/player.py:178
 msgid "They left behind cash assets of ${amount}."
 msgstr ""
 
-#: src/people/classes/player.py:173
+#: src/people/classes/player.py:179
 msgid "You inherited ${amount}."
 msgstr ""
 
-#: src/people/classes/player.py:202
+#: src/people/classes/player.py:208
 msgid "You died after sustaining massive injuries in an assault."
 msgstr ""
 
-#: src/people/classes/player.py:241
+#: src/people/classes/player.py:247
 msgid "You have the following traits:"
 msgstr ""
 
-#: src/people/classes/player.py:339
+#: src/people/classes/player.py:345
 msgid "You died of old age."
 msgstr ""
 
-#: src/people/classes/player.py:360
+#: src/people/classes/player.py:366
 msgid "You just had a baby {son_daughter}!"
 msgstr ""
 
-#: src/people/classes/player.py:363 src/people/classes/player.py:385
+#: src/people/classes/player.py:369 src/people/classes/player.py:391
 msgid "What will you name {him_her}? (or leave blank for a random name)"
 msgstr ""
 
-#: src/people/classes/player.py:377
+#: src/people/classes/player.py:383
 msgid "You are the mother of a baby {son_daughter} named {name}."
 msgstr ""
 
-#: src/people/classes/player.py:382
+#: src/people/classes/player.py:388
 msgid "Your {partner} just had a baby {son_daughter}!"
 msgstr ""
 
-#: src/people/classes/player.py:398
+#: src/people/classes/player.py:404
 msgid "You are the father of a baby {son_daughter} named {name}."
 msgstr ""
 
-#: src/people/classes/player.py:400
+#: src/people/classes/player.py:406
 msgid "You are suffering from depression."
 msgstr ""
 
-#: src/people/classes/player.py:408
+#: src/people/classes/player.py:414
 msgid "Your {relative} died at the age of {age} due to old age."
 msgstr ""
 
-#: src/people/classes/player.py:434
+#: src/people/classes/player.py:440
 msgid "Would you like to attend the funeral?"
 msgstr ""
 
-#: src/people/classes/player.py:442
+#: src/people/classes/player.py:448
 msgid "You inherited ${amount}"
 msgstr ""
 
-#: src/people/classes/player.py:468
+#: src/people/classes/player.py:474
 msgid ""
 "You have been fired from your job.\n"
 "Reason: Performance"
 msgstr ""
 
-#: src/people/classes/player.py:481
+#: src/people/classes/player.py:477
+msgid "Your performance was {perf}%"
+msgstr ""
+
+#: src/people/classes/player.py:489
 msgid "You feel like you're on the verge of burnout from so much work!"
 msgstr ""
 
-#: src/people/classes/player.py:486
+#: src/people/classes/player.py:494
 msgid "You're feeling stressed out from all of this work."
 msgstr ""
 
-#: src/people/classes/player.py:492
+#: src/people/classes/player.py:500
 msgid "You are suffering from high blood pressure."
 msgstr ""
 
-#: src/people/classes/player.py:539
+#: src/people/classes/player.py:547
 msgid "Lifetime Happiness"
 msgstr ""
 
-#: src/people/classes/player.py:609
+#: src/people/classes/player.py:617
 msgid "You were struck by lightning!"
 msgstr ""
 
-#: src/people/classes/player.py:626
+#: src/people/classes/player.py:634
 msgid "You died after being struck by lightning."
 msgstr ""
 
-#: src/people/classes/player.py:639
+#: src/people/classes/player.py:647
 msgid "You graduated from university."
 msgstr ""
 
-#: src/people/classes/player.py:644
+#: src/people/classes/player.py:652
 msgid "You now have to start paying back your student loan"
 msgstr ""
 
-#: src/people/classes/player.py:648
+#: src/people/classes/player.py:656
 msgid "You were expelled from university after earning bad grades."
 msgstr ""
 
-#: src/people/classes/player.py:657
+#: src/people/classes/player.py:665
 msgid "You've fully paid off your student loan"
 msgstr ""
 
-#: src/people/classes/player.py:661
+#: src/people/classes/player.py:669
 msgid "You are no longer suffering from depression"
 msgstr ""
 
-#: src/people/classes/player.py:672
+#: src/people/classes/player.py:680
 msgid "You died due to a massive heart attack."
 msgstr ""
 
-#: src/people/classes/player.py:675
+#: src/people/classes/player.py:683
 msgid "You are no longer suffering from high blood pressure"
 msgstr ""
 
-#: src/people/classes/player.py:683
+#: src/people/classes/player.py:691
 msgid "You are suffering from the common cold."
 msgstr ""
 
-#: src/people/classes/player.py:684
+#: src/people/classes/player.py:692
 msgid "Common Cold"
 msgstr ""
 
-#: src/people/classes/player.py:689
+#: src/people/classes/player.py:697
 msgid "Your mother is taking to to the doctor's office to get vaccinated."
 msgstr ""
 
-#: src/people/classes/player.py:691
+#: src/people/classes/player.py:699
 msgid "How will you behave?"
 msgstr ""
 
-#: src/people/classes/player.py:692
+#: src/people/classes/player.py:700
 msgid "Bite her"
 msgstr ""
 
-#: src/people/classes/player.py:692
+#: src/people/classes/player.py:700
 msgid "Throw a tantrum"
 msgstr ""
 
-#: src/people/classes/player.py:692
+#: src/people/classes/player.py:700
 msgid "Try to stay calm"
 msgstr ""
 
-#: src/people/classes/player.py:696
+#: src/people/classes/player.py:704
 msgid "You remained calm"
 msgstr ""
 
-#: src/people/classes/player.py:700
+#: src/people/classes/player.py:708
 msgid "You threw a tantrum"
 msgstr ""
 
-#: src/people/classes/player.py:704
+#: src/people/classes/player.py:712
 msgid "You bit your mother"
 msgstr ""
 
-#: src/people/classes/player.py:722
+#: src/people/classes/player.py:730
 msgid "You are starting elementary school"
 msgstr ""
 
-#: src/people/classes/player.py:726
+#: src/people/classes/player.py:734
 msgid "You are starting middle school"
 msgstr ""
 
-#: src/people/classes/player.py:730
+#: src/people/classes/player.py:738
 msgid "You are starting high school"
 msgstr ""
 
-#: src/people/classes/player.py:736
+#: src/people/classes/player.py:744
 msgid "Your {partner} wants to break up with you."
 msgstr ""
 
-#: src/people/classes/player.py:737 src/people/classes/player.py:768
+#: src/people/classes/player.py:745 src/people/classes/player.py:776
 msgid "What will you do?"
 msgstr ""
 
-#: src/people/classes/player.py:740 src/people/classes/player.py:771
+#: src/people/classes/player.py:748 src/people/classes/player.py:779
 msgid "Wish {him_her} well"
 msgstr ""
 
-#: src/people/classes/player.py:741 src/people/classes/player.py:772
+#: src/people/classes/player.py:749 src/people/classes/player.py:780
 msgid "Beg {him_her} to stay"
 msgstr ""
 
-#: src/people/classes/player.py:742 src/people/classes/player.py:773
+#: src/people/classes/player.py:750 src/people/classes/player.py:781
 msgid "Insult {him_her} one last time"
 msgstr ""
 
-#: src/people/classes/player.py:746
+#: src/people/classes/player.py:754
 msgid "You wished {name} the best"
 msgstr ""
 
-#: src/people/classes/player.py:749 src/people/classes/player.py:780
+#: src/people/classes/player.py:757 src/people/classes/player.py:788
 msgid "You begged {name} to stay with you."
 msgstr ""
 
-#: src/people/classes/player.py:752 src/people/classes/player.py:783
+#: src/people/classes/player.py:760 src/people/classes/player.py:791
 msgid "{he_she} decided to stay with you."
 msgstr ""
 
-#: src/people/classes/player.py:754
+#: src/people/classes/player.py:762
 msgid "{he_she} dumped you anyway."
 msgstr ""
 
-#: src/people/classes/player.py:761
+#: src/people/classes/player.py:769
 msgid "{name} broke up with you."
 msgstr ""
 
-#: src/people/classes/player.py:762 src/people/classes/player.py:793
+#: src/people/classes/player.py:770 src/people/classes/player.py:801
 msgid "You called {him_her} {insult} as {he_she} was walking out the door."
 msgstr ""
 
-#: src/people/classes/player.py:767
+#: src/people/classes/player.py:775
 msgid "Your {partner} wants a divorce."
 msgstr ""
 
-#: src/people/classes/player.py:777
+#: src/people/classes/player.py:785
 msgid "You honored {name}'s request for a divorce."
 msgstr ""
 
-#: src/people/classes/player.py:785
+#: src/people/classes/player.py:793
 msgid "{he_she} insisted on getting a divorce."
 msgstr ""
 
-#: src/people/classes/player.py:792
+#: src/people/classes/player.py:800
 msgid "{name} divorced you."
 msgstr ""
 
-#: src/people/classes/player.py:798
+#: src/people/classes/player.py:806
 msgid "A female"
 msgstr ""
 
-#: src/people/classes/player.py:798
+#: src/people/classes/player.py:806
 msgid "A male"
 msgstr ""
 
-#: src/people/classes/player.py:800
+#: src/people/classes/player.py:808
 msgid "{a_male_female} named {name} has asked you out."
 msgstr ""
 
-#: src/people/classes/player.py:806
+#: src/people/classes/player.py:814
 msgid "Start dating {him_her}"
 msgstr ""
 
-#: src/people/classes/player.py:807
+#: src/people/classes/player.py:815
 msgid "Reject {him_her}"
 msgstr ""
 
-#: src/people/classes/player.py:816
+#: src/people/classes/player.py:824
 msgid "You graduated from high school."
 msgstr ""
 
-#: src/people/classes/player.py:822
+#: src/people/classes/player.py:830
 msgid "Would you like to apply to university?"
 msgstr ""
 
-#: src/people/classes/player.py:827
+#: src/people/classes/player.py:835
 msgid "Your application to university was accepted!"
 msgstr ""
 
-#: src/people/classes/player.py:829
+#: src/people/classes/player.py:837
 msgid "Scholarship"
 msgstr ""
 
-#: src/people/classes/player.py:830
+#: src/people/classes/player.py:838
 msgid "Student Loan"
 msgstr ""
 
-#: src/people/classes/player.py:831
+#: src/people/classes/player.py:839
 msgid "Ask parents to pay"
 msgstr ""
 
-#: src/people/classes/player.py:835
+#: src/people/classes/player.py:843
 msgid "How would you like to pay for your college tuition?"
 msgstr ""
 
-#: src/people/classes/player.py:841
+#: src/people/classes/player.py:849
 msgid "Your scholarship application has been awarded!"
 msgstr ""
 
-#: src/people/classes/player.py:849
+#: src/people/classes/player.py:857
 msgid "Your scholarship application was rejected."
 msgstr ""
 
-#: src/people/classes/player.py:859
+#: src/people/classes/player.py:867
 msgid "Your parents agreed to pay for your university tuition!"
 msgstr ""
 
-#: src/people/classes/player.py:869
+#: src/people/classes/player.py:877
 msgid "Your parents refused to pay for your university tuition."
 msgstr ""
 
-#: src/people/classes/player.py:877
+#: src/people/classes/player.py:885
 msgid "You took out a student loan to pay for your university tuition."
 msgstr ""
 
-#: src/people/classes/player.py:883
+#: src/people/classes/player.py:891
 msgid "You are now enrolled in university."
 msgstr ""
 
-#: src/people/classes/player.py:887
+#: src/people/classes/player.py:895
 msgid "Your application to university was rejected."
 msgstr ""
 
