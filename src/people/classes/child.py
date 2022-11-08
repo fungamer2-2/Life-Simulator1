@@ -7,7 +7,7 @@ from src.lifesim_lib.translation import _
 class Child(Relationship):
 	"""Class that represents any children the player has"""
 	
-	def __init__(self, first, last, gender, smarts, looks, mother=None, father=None):
+	def __init__(self, first, last, gender, smarts, looks, mother=None, father=None, adopted=False):
 		super().__init__(first, last, 0, gender, randint(50, 100), randint(80, 100), smarts, looks, randint(60, 100))
 		self.mother = mother
 		self.father = father
@@ -17,13 +17,21 @@ class Child(Relationship):
 		self.is_in_uv = 0
 		self.partner = None
 		self.partner_desire = randint(0, 100)
-	
+		self.adopted = adopted
+		
 	def name_accusative(self):
-		return self.get_gender_word(_("son"), _("daughter")) + ", " + self.firstname
+		if self.adopted:
+			typ = self.get_gender_word(_("adopted son"), _("adopted daughter"))
+		else:
+			typ = self.get_gender_word(_("son"), _("daughter"))
+		return typ + ", " + self.firstname
 
 	def get_translated_type(self):
-		return self.get_gender_word(_("Son"), _("Daughter"))
-	
+		if self.adopted:
+			return self.get_gender_word(_("Adopted Son"), _("Adopted Daughter"))
+		else:
+			return self.get_gender_word(_("Son"), _("Daughter"))
+			
 	def age_up(self):
 		self.total_happiness += self.happiness
 		super().age_up()
@@ -81,12 +89,12 @@ class Child(Relationship):
 			if self.partner.death_check():
 				self.partner = None
 			else:
-				breakup_chance = 55 if self.partner.status == 2 else 15
+				breakup_chance = 60 if self.partner.status == 2 else 15
 				if randint(1, breakup_chance) == 1:
 					self.change_happiness(-randint(5, 20))
 					if self.partner.status == 2:
 						print(_("Your {child}, and {partner} divorced.").format(child=self.name_accusative(), partner=self.partner.name))
-						if self.partner_desire > (cap := randint(8, 15)):
+						if self.partner_desire > (cap := randint(5, 12)):
 							self.partner_desire -= randint(3, 10)
 							if self.partner_desire < cap:
 								self.partner_desire = cap

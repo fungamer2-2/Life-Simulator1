@@ -17,10 +17,11 @@ def main_menu(player):
 	if player.traits:
 		display_data(_("Traits"), player.get_traits_str())
 	display_data(_("Gender"), player.get_gender_str())
-	print(_("Money") + f": ${player.money:,}")
+	display_data(_("Money"), f": ${player.money:,}")
 	if player.salary > 0:
 		print(_("Salary") + f": ${player.salary:,}")
-
+	if player.generation > 1:
+		display_data(_("Generation"), player.generation)
 	player.display_stats()
 	print()
 	choices = [_("Age +1"), _("Relationships"), _("Activities")]

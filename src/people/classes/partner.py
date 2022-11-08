@@ -53,8 +53,8 @@ class Partner(Relationship):
 
     def compatibility_check(self, other):
         if randint(1, 6) == 1:
-            k = player.karma if isinstance(other, Player) else 50
-            return randint(1, 100) <= 5
+            k = other.karma if isinstance(other, Player) else 50
+            return randint(1, 100) <= k
         c1 = other.looks - self.looks + 50
         c2 = other.smarts - self.smarts + 50
         return randint(1, 50) + randint(0, 50) <= round_stochastic(c1 + (c2 - c1) / 3)

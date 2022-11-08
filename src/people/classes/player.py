@@ -91,6 +91,7 @@ class Player(Person):
 			self.fertility = randint(25, 100)
 		self.is_pregnant = False
 		self.save_path = SAVE_PATH + "/" + self.ID + ".pickle"
+		self.generation = 0
 		
 	def learn_trait(self, trait):
 		if trait not in TRAITS_DICT:
@@ -147,6 +148,9 @@ class Player(Person):
 		self.lastname = c.lastname
 		self.update_name()
 		self.age = c.age
+		self.gender = c.gender
+		if self.gender == Gender.Female:
+			self.fertility = randint(25, 100)
 		self.total_happiness = c.total_happiness	
 		self.happiness = round_stochastic((c.relationship + c.happiness)/2)
 		self.health = c.health
@@ -467,6 +471,8 @@ class Player(Person):
 				display_event(
 					_("You have been fired from your job.\nReason: Performance")
 				)
+				if DEBUG:
+					print(_("Your performance was {perf}%").format(perf=self.performance))
 				self.lose_job()
 				self.change_happiness(-randint(20, 35))
 			if self.stress > 65:
@@ -528,7 +534,7 @@ class Player(Person):
 
 	def get_gender_str(self):
 		return _("Male") if self.gender == Gender.Male else _("Female")
-
+	
 	def die(self, message):
 		print(message)
 		if self.age == 0:
