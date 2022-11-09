@@ -17,6 +17,7 @@ class Child(Relationship):
 		self.is_in_uv = 0
 		self.partner = None
 		self.partner_desire = randint(0, 100)
+		self.may_divorce = False
 		self.adopted = adopted
 		
 	def name_accusative(self):
@@ -89,8 +90,8 @@ class Child(Relationship):
 			if self.partner.death_check():
 				self.partner = None
 			else:
-				breakup_chance = 60 if self.partner.status == 2 else 15
-				if randint(1, breakup_chance) == 1:
+				breakup_chance = 45 if self.partner.status == 2 else 15
+				if (self.may_divorce or self.partner.status != 2) and randint(1, breakup_chance) == 1:
 					self.change_happiness(-randint(5, 20))
 					if self.partner.status == 2:
 						print(_("Your {child}, and {partner} divorced.").format(child=self.name_accusative(), partner=self.partner.name))
@@ -105,10 +106,11 @@ class Child(Relationship):
 							if self.partner_desire < cap:
 								self.partner_desire = cap
 					self.partner = None
-				elif self.partner.status < 2 and self.partner.years_together >= randint(3, 7) and randint(1, 5) == 1:
+				elif self.partner.status < 2 and self.partner.years_together >= randint(3, 7) and one_in(5):
 					print(_("Your {child} is now married to {partner}.").format(child=self.name_accusative(), partner=self.partner.name))
 					self.partner.change_relationship(randint(10, 45))
 					self.partner.status = 2
+					self.may_divorce = one_in(2)
 		else:
 			if self.age >= 18 and randint(1, 700) <= self.partner_desire:
 				attempts = min(randint(9, 11), round_stochastic(self.partner_desire / 8))

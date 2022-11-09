@@ -46,6 +46,7 @@ while True:
 			choice = choice_input(*names)
 			c = player.children[choice - 1]
 			player.convert_child_to_player(c)
+			player.save_game()
 		elif yes_no(_("Would you like to start a new life?")):
 			break
 		else:

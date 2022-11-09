@@ -91,7 +91,7 @@ class Player(Person):
 			self.fertility = randint(25, 100)
 		self.is_pregnant = False
 		self.save_path = SAVE_PATH + "/" + self.ID + ".pickle"
-		self.generation = 0
+		self.generation = 1
 		
 	def learn_trait(self, trait):
 		if trait not in TRAITS_DICT:
@@ -209,6 +209,8 @@ class Player(Person):
 		
 	def randomize_traits(self):
 		self.traits.clear()
+		if one_in(3): #1/3 chance of having no traits
+			return
 		trait_names = list(ALL_TRAITS_DICT.keys())
 		total_traits = len(ALL_TRAITS)
 		num_traits = 1
@@ -218,13 +220,14 @@ class Player(Person):
 		for i in range(num_traits):
 			attempts = 50
 			good = randint(1, 100) <= 60
+			allow_neutral = one_in(2)
 			while attempts > 0:
 				name = random.choice(trait_names)
 				if name in t:
 					attempts -= 1
 					continue
 				selected = ALL_TRAITS_DICT[name]
-				if selected.val != 0 and (selected.val > 0) ^ good:
+				if (selected.val == 0) ^ allow_neutral and (selected.val > 0) ^ good:
 					attempts -= 1
 					continue
 				if not selected.roll_selection():

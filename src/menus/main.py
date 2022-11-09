@@ -14,10 +14,10 @@ from src.people.classes.child import Child
 def main_menu(player):
 	print()
 	display_data(_("Your name"), player.name)
-	if player.traits:
-		display_data(_("Traits"), player.get_traits_str())
+	t = player.get_traits_str() if player.traits else "None"
+	display_data(_("Traits"), t)
 	display_data(_("Gender"), player.get_gender_str())
-	display_data(_("Money"), f": ${player.money:,}")
+	display_data(_("Money"), f"${player.money:,}")
 	if player.salary > 0:
 		print(_("Salary") + f": ${player.salary:,}")
 	if player.generation > 1:
@@ -501,6 +501,7 @@ def main_menu(player):
 			choices.append(_("Gym"))
 			choices.append(_("Listen to music"))
 		if player.age >= 18:
+			choices.append(_("Adoption"))
 			choices.append(_("Lottery"))
 			if player.marital_status == 0:
 				choices.append(_("Find a Partner"))
@@ -1058,6 +1059,45 @@ def main_menu(player):
 						player.change_looks(randint(2, 4))
 					player.worked_out = True
 				print()
+		elif choice == _("Adoption"):
+			if player.age > 70:
+				print(_("You are too old to adopt a child."))
+			elif len(player.children) >= 5:
+				print(_("You already have enough children."))
+			else:	
+				gender = Gender.random()
+				smarts = randint(0, 50) + randint(0, 50)
+				looks = randint(0, 50) + randint(0, 50)
+				c = Child(random_name(gender), random_last_name(), gender, smarts, looks, adopted=True)
+				age = randint(1, 17)
+				for i in range(age):
+					c.total_happiness += randint(30, 100)
+				c.age = age
+				if c.gender == Gender.Male:
+					s = _("a {age}-year-old boy")
+				else:
+					s = _("a {age}-year-old girl")
+				s = s.format(age=c.age)
+				print(_("You have an opportunity to adopt {name}, {name_and_age}.").format(name=c.name, name_and_age=s))
+				print_align_bars(
+					(_("Smarts"), c.smarts),
+					(_("Looks"), c.looks)
+				)
+				cost = randint(10000, 30000)
+				display_data(_("Cost"), f"${cost}")
+				if yes_no(_("Would you like to adopt this child?")):
+					if player.money < cost:
+						print(_("You don't have enough money"))
+					else:
+						c.happiness = randint(40, 100)
+						player.money -= cost
+						if yes_no(_("Would you like to change {name}'s last name to match yours?").format(name=c.name)):
+							c.lastname = player.lastname
+							c.update_name()
+						print(_("You have adopted {name}, {name_and_age}.").format(name=c.name, name_and_age=s))
+						player.change_happiness(randint(15, 30))
+						player.relations.append(c)
+						player.children.append(c)
 		elif choice == _("Lottery"):
 			print(_("Play the lottery today!"))
 			print(_("Ticket cost: $4 each"))
