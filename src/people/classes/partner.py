@@ -5,6 +5,7 @@ from src.people.classes.relationship import Relationship
 from src.lifesim_lib.translation import _
 from src.lifesim_lib.lifesim_lib import *
 
+
 class Partner(Relationship):
     def __init__(self, age, gender, smarts, looks, relationship, status):
         happiness = randint(30, 100)
@@ -24,20 +25,20 @@ class Partner(Relationship):
         self.status = status
         self.willpower = randint(0, 60) + randint(0, 40)
         if randint(1, 2) == 1:
-        	self.willpower = max(self.willpower, randint(40, 100))
+            self.willpower = max(self.willpower, randint(40, 100))
         self.craziness = randint(0, 100)
         self.fertility = 0
         if self.gender == Gender.Female:
-        	self.fertility = randint(25, 100)
+            self.fertility = randint(25, 100)
         self.years_together = 0
         self.was_proposed_to = False
         self.is_pregnant = False
-        P_CONST = math.log(5, 4) #Generate net worth using Pareto distribution
-        net_worth = round_stochastic(13000/((1-random.random())**(1/P_CONST)))
+        P_CONST = math.log(5, 4)  # Generate net worth using Pareto distribution
+        net_worth = round_stochastic(13000 / ((1 - random.random()) ** (1 / P_CONST)))
         if randint(1, 100) <= 40:
             net_worth -= randint(0, 60000)
         self.net_worth = net_worth
-        
+
     def age_up(self):
         super().age_up()
         self.years_together += 1
@@ -69,5 +70,6 @@ class Partner(Relationship):
 
     def name_accusative(self):
         return self.get_translated_type().lower() + ", " + self.firstname
+
 
 from src.people.classes.player import Player
