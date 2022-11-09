@@ -204,7 +204,7 @@ COUNTRIES = [
 # - States (or similar) -
 # - Major Cities -
 # - Age related - Nb. this will probably need some work.
-# Alcohol 
+# Alcohol
 # Alcohol_Beer
 # Consent
 # Driving

@@ -8,35 +8,35 @@ from src.lifesim_lib.translation import lang, _
 
 class PlayerDied(Exception):
     pass
-    
+
+
 class TranslateMarker:
-    
     def __init__(self, string):
         if type(string) != str:
             raise TypeError("only strings are allowed")
         self.string = string
-        
+
     def raw_str(self):
         return self.string
-    
+
     def __hash__(self):
         return hash(self.string)
-        
+
     def __str__(self):
         if lang:
             return lang.gettext(self.string)
         return self.string
-        
+
     def __eq__(self, other):
-    	if isinstance(other, TranslateMarker):
-    		return self.string == other.string
-    	if isinstance(other, str):
-    		return self.string == other
-    	return False
-    	
+        if isinstance(other, TranslateMarker):
+            return self.string == other.string
+        if isinstance(other, str):
+            return self.string == other
+        return False
+
     def __ne__(self, other):
-    	return not self.__eq__(other)
-    	
+        return not self.__eq__(other)
+
 
 def get_save_files():
     return os.listdir(SAVE_PATH)
@@ -61,8 +61,10 @@ def randexpo(lo, avg):
     assert lo < avg, "lo must be less than avg"
     return lo + random.expovariate(1 / (avg - lo))
 
+
 def one_in(x):
-	return x <= 1 or random.randint(1, x) == 1
+    return x <= 1 or random.randint(1, x) == 1
+
 
 def calculate_tax(salary):
     tax = 0
@@ -139,7 +141,9 @@ TRAITS_DICT = {
     ),
     "BOOK_LOVER": (
         _("Book Lover"),
-        _("You enjoy reading a good book. You gain more happiness when going to the library."),
+        _(
+            "You enjoy reading a good book. You gain more happiness when going to the library."
+        ),
         2,
     ),
     "NERD": (
@@ -159,7 +163,7 @@ TRAITS_DICT = {
         _("You tend to work faster, improving your performance over time."),
         1,
         ["SLOW_WORKER", "LAZY"],
-    ),  
+    ),
     "GRUMPY": (
         _("Grumpy"),
         _("It is difficult for you to be in a good mood."),
@@ -202,10 +206,10 @@ class Trait:
         self.name = name
         self.val = val
         self.conflicts = conflicts or []
-        
+
     @property
     def desc(self):
-    	return TRAITS_DICT[self.id][1]
+        return TRAITS_DICT[self.id][1]
 
     def conflicts_with(self, other):
         return other in self.conflicts
@@ -295,7 +299,7 @@ def display_event(message, cls=True):
     print(message)
     press_enter()
     if cls:
-  	  clear_screen()
+        clear_screen()
 
 
 def display_bar(stat_name, val):
