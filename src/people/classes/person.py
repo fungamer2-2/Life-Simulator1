@@ -36,7 +36,7 @@ class Person:
         if self.age > 50 and self.looks > randint(20, 25) and randint(1, 4) < 4:
             decay = min((self.age - 51) // 5 + 1, 4)
             self.change_looks(-randint(0, decay))
-
+            
     def gen_teen_looks_inc(self):
         val = 0
         if randint(1, 4) == 1:
@@ -44,7 +44,7 @@ class Person:
         else:
             val = min(randint(0, 12) for _ in range(4))
         self.teen_looks_inc = val
-
+        
     def generate_partner(self):
         from src.people.classes.partner import Partner
 
@@ -66,9 +66,11 @@ class Person:
         return p
 
     def death_check(self):
+        k1 = self.karma if self.__class__.__name__ == "Player" else 50
+        h = self.happiness + int((self.health - self.happiness)/3)
         return (self.age >= randint(98, 122) and randint(1, 100) <= 65) or (
-            self.age > randint(70 + self.health // 12, 90 + self.health // 3)
-            and randint(1, 100) <= 60
+            self.age > randint(70 + h // 11, 90 + h // 3) + int((k1 - 50)/5)
+            and randint(1, 100) <= 65
         )
 
     def change_happiness(self, amount):
