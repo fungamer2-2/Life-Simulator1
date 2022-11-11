@@ -1123,7 +1123,7 @@ CAREER_VETERINARIAN = [
 # Special Jobs
 
 # Actor
-ACTOR_MENU = [
+MENU_ACTOR = [
     _("Talent Manager"),
     _("Talent Agent"),
     _("Audition"),
@@ -1274,7 +1274,7 @@ YAKUZA_SYNDICATE = []
 
 
 # Model
-MODEL_MENU = [
+MENU_MODEL = [
     _("Model Manager"),
     _("Model Agent"),
     _("Audition"),
@@ -2295,15 +2295,290 @@ PANHANDLER_STRATEGIES = [
 #   You drew a portrait of your {teacher_job}, {teacher_name}, and gave it to {him_her}.
 
 # ------------------------------------------------------------------
-# Sexualities
+# Casino
+CASINO_NAMES = [
+    _("Aria"),
+    _("Babylon"),
+    _("Back Passage"),
+    _("Baden-Baden"),
+    _("Bally’s"),
+    _("Bellagio"),
+    _("Binion's Horsehoe"),
+    _("Caesar’s Palace"),
+    _("Casino Royale"),
+    _("Circus Circus"),
+    _("Cosmopolitan"),
+    _("Encore"),
+    _("Excalibur"),
+    _("Flamingo"),
+    _("Galaxy"),
+    _("Golden Dragon"),
+    _("Golden Showers"),
+    _("Grand Lisboa"),
+    _("Grand Waldo"),
+    _("Harrah’s"),
+    _("Hot Slots"),
+    _("Luxor"),
+    _("Macau Palace"),
+    _("Mandalay Bay"),
+    _("MGM Grand"),
+    _("Mirage"),
+    _("Monte Carlo"),
+    _("Mountain"),
+    _("New York-New York"),
+    _("Ocean’s"),
+    _("Oh Craps!"),
+    _("Palazzo"),
+    _("Paris"),
+    _("MGM"),
+    _("Pink Taco"),
+    _("Planet Hollywood"),
+    _("Resorts World"),
+    _("Rio"),
+    _("Sahara"),
+    _("Slots-A-Fun"),
+    _("Strat"),
+    _("Taj Mahal"),
+    _("The Cromwell"),
+    _("The Linq"),
+    _("The Sands"),
+    _("The Star"),
+    _("Treasure Island"),
+    _("Tropicana"),
+    _("Venetian"),
+    _("Whiskey Pete’s"),
+    _("Wynn"),
+]
 
+
+# ------------------------------------------------------------------
+# Crime
+MENU_CRIME = [
+    _("Bank Robbery"),
+    _("Burglary"),
+    _("Embezzle"),
+    _("Grand Theft Auto"),
+    _("Hitman"),
+    _("Mischief"),
+    _("Murder"),
+    _("Pickpocket"),
+    _("Porch Pirate"),
+    _("Shoplift"),
+    _("Train Robbery"),
+]
+
+
+# ------------------------------------------------------------------
+# Doctors
+MENU_DOCTORS = [
+    _("Alternative Doctor"),
+    _("Doctor"),
+    _("Donate Blood"),
+    _("Donate Plasma"),
+    _("Emergency Room"),
+    _("Optometrist"),
+    _("Psychiatrist"),
+    _("Witch Doctor"),
+]
+MENU_ALTERNATIVE_DOCTORS = [
+    _("Acupuncturist"),
+    _("Chiropractor"),
+    _("Colon Hydrotherapy"),
+    _("Homeopathic Doctor"),
+]
+
+# ------------------------------------------------------------------
+# Fertility
+MENU_FERTILITY_FEMALE = [
+    _("Birth Control"),
+    _("IVF"),
+    _("Sperm Donor"),
+    _("Surrogate"),
+    _("Tubal Litigation"),
+]
+MENU_FERTILITY_MALE = [
+]
+
+
+# ------------------------------------------------------------------
+# Horse Races
+HORSE_RACE_HORSE_NAMES = [
+    _("1 Up"),
+    _("Afleet Alex"),
+    _("Allegro"),
+    _("Amazing Grace"),
+    _("AnAppleADay"),
+    _("Animal Kingdom"),
+    _("Anything’s Possible"),
+    _("Arrogate"),
+    _("Arrrrr"),
+    _("AsGoodAsItGets"),
+    _("Assault"),
+    _("Bangers n’ Mash"),
+    _("Bernardini"),
+    _("Best Bet"),
+    _("Big Ben"),
+    _("Big Brown"),
+    _("Black Bess"),
+    _("Black Velvet"),
+    _("Blushing Groom"),
+    _("Braveheart"),
+    _("Bricks and Mortar"),
+    _("Bucking Bronco"),
+    _("Bullet Proof"),
+    _("Buttercup"),
+    _("Caramel Wafer"),
+    _("ChaseYourDreams"),
+    _("Chicken Dinner"),
+    _("Chico Time"),
+    _("Cloud 9"),
+    _("Conquistador Cielo"),
+    _("Cotton Eyed Joe"),
+    _("Curlin"),
+    _("Daisy"),
+    _("Damascus"),
+    _("Dancing Queen"),
+    _("Denman’s Call"),
+    _("Destiny’s Child"),
+    _("Don’t You Stop"),
+    _("DoReMiFaSoLaTiDo"),
+    _("Easy Goer"),
+    _("Eight Belles"),
+    _("Enchantress"),
+    _("Exterminator"),
+    _("Fast As Lightning"),
+    _("Ferdinand"),
+    _("Fifty Shades of Hay"),
+    _("Flame Thrower"),
+    _("Fly Me To The Moon"),
+    _("Foolish Pleasure"),
+    _("Foxy Lady"),
+    _("FrostyJacks"),
+    _("Gallant Fox"),
+    _("Game On Dude"),
+    _("Genuine Risk"),
+    _("Ghostzapper"),
+    _("Giant’s Causeway"),
+    _("Ginger Snap"),
+    _("Glamour Puss"),
+    _("Go For Wand"),
+    _("Gold Digger"),
+    _("Gold Dust"),
+    _("Graydar"),
+    _("Great Gatsby"),
+    _("Gun Runner"),
+    _("Hahahahahaha"),
+    _("Hail to Reason"),
+    _("Havre de Grace"),
+    _("Head over Heels"),
+    _("Hoof Hearted"),
+    _("Horsing Around"),
+    _("Hotshot"),
+    _("I’ll Have Another"),
+    _("Isn’t She Lovely"),
+    _("It’s A Long Story"),
+    _("Iwinyougetnothing"),
+    _("Jackpot"),
+    _("Jean Valjean"),
+    _("John Henry"),
+    _("Key to the Mint"),
+    _("King of Kings"),
+    _("Lady Eli"),
+    _("Lady Jane Gray"),
+    _("Lady’s Secret"),
+    _("Lava Man"),
+    _("Lawyer Ron"),
+    _("Let’s Go!"),
+    _("Lexington"),
+    _("Looking Good"),
+    _("Magic Mike"),
+    _("Mamma Mia"),
+    _("Maple Stirrup"),
+    _("Mariah’s Storm"),
+    _("Midnight Dream"),
+    _("Mineshaft"),
+    _("Mischief"),
+    _("Morgan Le Fay"),
+    _("My Heart’s Desire"),
+    _("Mysterious Girl"),
+    _("No Fear"),
+    _("Nuts"),
+    _("Old Town Road"),
+    _("Omaha Beach"),
+    _("One Trick Pony"),
+    _("Palace Malice"),
+    _("Perfect Harmony"),
+    _("Personal Ensign"),
+    _("Pippi Longstocking"),
+    _("Point Given"),
+    _("Prima Donna"),
+    _("Prince Caspian"),
+    _("Prince Charming"),
+    _("Pulpit"),
+    _("Quality Street"),
+    _("Queen Bee"),
+    _("Queen of Sheba"),
+    _("Rachel Alexandra"),
+    _("Rainbow Fire"),
+    _("Raise a Native"),
+    _("Razzle Dazzle"),
+    _("Regret"),
+    _("Riva Ridge"),
+    _("Round Table"),
+    _("RubyRubyRubyRuby"),
+    _("Runhappy"),
+    _("SaveTheBest‘TillLast"),
+    _("Seeking the Gold"),
+    _("Senorita"),
+    _("Serena’s Song"),
+    _("Shanghai Bobby"),
+    _("ShimmyShimmyYa"),
+    _("Silver Charm"),
+    _("Sir Barton"),
+    _("Skip Away"),
+    _("Slew o’ Gold"),
+    _("Sniper’s Dream"),
+    _("Snow White"),
+    _("Socks"),
+    _("Speed of Light"),
+    _("Speedy Gonzales"),
+    _("Storm Cat"),
+    _("Stormbreaker"),
+    _("Street Sense"),
+    _("Super Horse"),
+    _("Super Star"),
+    _("Sweet Dreams"),
+    _("Sweet Pea"),
+    _("Tabasco Cat"),
+    _("Tempest"),
+    _("Thunder Bolt"),
+    _("Thunder Gulch"),
+    _("Tiznow"),
+    _("Tonalist"),
+    _("Trigger"),
+    _("Triple Threat"),
+    _("Trojan Horse"),
+    _("Twist n’ Shout"),
+    _("War Emblem"),
+    _("WeAreTheChampions"),
+    _("Wee Willie Winkie"),
+    _("Winsome"),
+    _("Wise Dan"),
+    _("World Class"),
+    _("Zero to Hero"),
+]
+
+
+
+# ------------------------------------------------------------------
+# Identity
+
+# Sexualities
 SEXUALITY = [
     _("Straight"),
     _("Bi"),
     _("Gay"),
 ]
-
-# ------------------------------------------------------------------
 # Identity Genders
 IDENTITY_GENDER_FEMALE = [
     _("Cisgender"),
@@ -2317,6 +2592,100 @@ IDENTITY_GENDER_MALE = [
     _("Non-Binary"),
     _("Transgender Female"),
 ]
+# Name Change
+
+# ------------------------------------------------------------------
+# Licences
+LICENCE_TYPES = [
+    _("Boating Licence"),
+    _("Driving Licence"),
+    _("Flight School"),
+    _("Motorbike Licence"),
+    _("Pilot's Licence"),
+] 
+
+
+# ------------------------------------------------------------------
+# Love 
+# Maybe Dating app and gay dating app should be rolled into 'Dating App' with a gender selection
+MENU_LOVE = [
+    _("Date"),
+    _("Dating App"),
+    _("Gay Dating App"),
+    _("Hook Up"),
+    _("Threesome"),
+]
+
+
+# ------------------------------------------------------------------
+# Nightlife
+NIGHTLIFE_TYPES = [
+    _("Bar"),
+    _("Cabaret"),
+    _("Karaoke Bar"),
+    _("Live Music"),
+    _("Lounge Bar"),
+    _("Night Market"),
+    _("Nightclub"),
+    _("Pub"),
+    _("Strip Club"),
+]
+NIGHTCLUB_NAMES = [
+    _("APT"),
+    _("BCM Dance Palace"),
+    _("Berghain"),
+    _("Beta"),
+    _("Blue Note"),
+    _("Cavo Paradiso"),
+    _("CBGB"),
+    _("Club Space"),
+    _("Copacabana"),
+    _("Fabric"),
+    _("Green Valley"),
+    _("Hacienda"),
+    _("Hakkasan"),
+    _("Lead"),
+    _("Limelight"),
+    _("LIV"),
+    _("Marquee"),
+    _("Ministry of Sound"),
+    _("Octagon"),
+    _("Pacha"),
+    _("Paradise Garage"),
+    _("Privilege"),
+    _("Sirena"),
+    _("Space"),
+    _("Studio 54"),
+    _("The Bank"),
+    _("The Roxy"),
+    _("The Warehouse Project"),
+    _("Tootsie’s Orchid Lounge"),
+    _("Trouw"),
+    _("Tunnel"),
+    _("Viper Room"),
+    _("Webster Hall"),
+    _("Whisky A Go-Go"),
+    _("Womb"),
+    _("XS"),
+    _("Zouk"),
+]
+
+
+
+# ------------------------------------------------------------------
+# Plastic Surgery
+PLASTIC_SURGERIES = [
+    _("Botox"),
+    _("Brazilian Butt Lift"),
+    _("Breast Augmentation"),
+    _("Eyelid Surgery"),
+    _("Face Lift"),
+    _("Gender Reassignment"),
+    _("Liposuction"),
+    _("Nose Job"),
+    _("Tummy Tuck"),
+]
+
 
 # ------------------------------------------------------------------
 # Social media
