@@ -43,6 +43,7 @@ I will then convert it to a `.mo` file so it can be translated.
 
 NOTE: The text between the `{}` in strings is used for string formatting, and is not to be translated. Their translations are handled separately.
 
+Translation strings may be need to be updated as new strings are being added.
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for more details.
