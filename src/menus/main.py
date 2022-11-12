@@ -1061,7 +1061,6 @@ def main_menu(player):
 					player.worked_out = True
 				print()
 		elif choice == _("Plastic Surgery"):
-			#print(_("Coming soon!"))
 			if player.age - player.last_plastic_surgery < 8:
 				print(_("Please wait a while before getting another plastic surgery."))
 			elif yes_no(_("Would you like to receive plastic surgery? (Cost: $25000)")):

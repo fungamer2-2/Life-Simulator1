@@ -328,6 +328,55 @@ class Player(Person):
 		self.asked_for_raise = False
 		self.skipped_school = False
 		self.date_options = randint(9, 11)
+		
+	def process_relation_death(self, relation, reason=None):
+		if relation not in self.relations:
+			return
+		if reason is None:
+			reason = _("died of old age")
+		rel_str = relation.name_accusative()
+		he_she = relation.he_she().capitalize()
+		print(
+			_(
+				"Your {relative} died at the age of {age}.\n{he_she} {reason}."
+			).format(relative=rel_str, age=relation.age, he_she=he_she, reason=reason)
+		)
+		inheritance = 0
+		happy_remove = randint(40, 55)
+		if isinstance(relation, Parent):
+			if randint(1, 100) <= 70 and randint(1, 100) <= relation.generosity:
+				avg = 100000 * (relation.money / 100) ** 2
+				lo = max(avg * relation.generosity / 200, 1)
+				inheritance = round_stochastic(randexpo(lo, avg))
+			del self.parents[relation.get_type()]
+		elif isinstance(relation, Sibling):
+			happy_remove = randint(25, 40)
+		elif isinstance(relation, Partner):
+			happy_remove = randint(65, 100)
+			for c in self.children:
+				if relation is c.father:
+					c.father = None
+				elif relation is c.mother:
+					c.mother = None
+				self.partner = None
+		elif isinstance(relation, Child):
+			happy_remove = randint(75, 100)
+			self.children.remove(relation)
+		self.change_happiness(-happy_remove)
+		if yes_no(_("Would you like to attend the funeral?")):
+			self.change_happiness(randint(3, 5))
+			self.change_karma(randint(3, 5))
+		else:
+			self.change_karma(-randint(2, 5))
+		self.relations.remove(relation)
+		if inheritance > 0:
+			display_event(
+				_("You inherited ${amount}").format(amount=inheritance)
+			)
+			self.money += inheritance
+			self.change_happiness(
+				round_stochastic(1.5 * math.log10(inheritance))
+			)
 
 	def age_up(self):
 		oldhappy = self.happiness
@@ -450,49 +499,17 @@ class Player(Person):
 			self.change_happiness(-50)
 			self.change_health(-randint(4, 8))
 		for relation in self.relations[:]:
-			if relation.death_check():
-				rel_str = relation.name_accusative()
-				print(
-					_(
-						"Your {relative} died at the age of {age} due to old age."
-					).format(relative=rel_str, age=relation.age)
-				)
-				inheritance = 0
-				happy_remove = randint(40, 55)
-				if isinstance(relation, Parent):
-					if randint(1, 100) <= 70 and randint(1, 100) <= relation.generosity:
-						avg = 100000 * (relation.money / 100) ** 2
-						lo = max(avg * relation.generosity / 200, 1)
-						inheritance = round_stochastic(randexpo(lo, avg))
-					del self.parents[relation.get_type()]
-				elif isinstance(relation, Sibling):
-					happy_remove = randint(25, 40)
-				elif isinstance(relation, Partner):
-					happy_remove = randint(65, 100)
-					for c in self.children:
-						if relation is c.father:
-							c.father = None
-						elif relation is c.mother:
-							c.mother = None
-					self.partner = None
-				elif isinstance(relation, Child):
-					happy_remove = randint(75, 100)
-					self.children.remove(relation)
-				self.change_happiness(-happy_remove)
-				if yes_no(_("Would you like to attend the funeral?")):
-					self.change_happiness(randint(3, 5))
-					self.change_karma(randint(3, 5))
-				else:
-					self.change_karma(-randint(2, 5))
-				self.relations.remove(relation)
-				if inheritance > 0:
-					display_event(
-						_("You inherited ${amount}").format(amount=inheritance)
-					)
-					self.money += inheritance
-					self.change_happiness(
-						round_stochastic(1.5 * math.log10(inheritance))
-					)
+			sudden_death = relation.age >= 6 and one_in(2000)
+			if sudden_death or relation.death_check():
+				reason = None
+				if sudden_death:
+					sudden_death_reasons = RELATION_SUDDEN_DEATH_REASONS[:]
+					if relation.age >= 16:
+						sudden_death_reasons.append(_("died after driving off a cliff while texting and driving"))
+					reason = random.choice(sudden_death_reasons)
+					if one_in(1000):
+						reason = _("starved to death after playing this game for too many days without stopping to eat")
+				self.process_relation_death(relation)
 		self.random_events()
 		if self.partner:
 			assert self.partner in self.relations
@@ -922,13 +939,15 @@ class Player(Person):
 			choice = choice_input(_("Yes"), _("No"))
 			clear_screen()
 			if choice == 1:
-				if self.smarts >= random.randint(28, 44):
+				if self.smarts >= random.randint(30, 44):
 					print(_("Your application to university was accepted!"))
 					self.change_happiness(randint(7, 9))
 					SCHOLARSHIP = _("Scholarship")
 					LOAN = _("Student Loan")
 					PARENTS = _("Ask parents to pay")
-					choices = [SCHOLARSHIP, LOAN, PARENTS]
+					choices = [SCHOLARSHIP, LOAN]
+					if self.parents:
+						choices.append(PARENTS)
 					chosen = False
 					while not chosen:
 						print(_("How would you like to pay for your college tuition?"))
