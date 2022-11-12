@@ -8,7 +8,6 @@ from src.lifesim_lib.lifesim_lib import PlayerDied, yes_no, choice_input, clear_
 
 """
 TODO List:
-- Add plastic surgery
 - Add social media
 - Allow children to have traits
 """

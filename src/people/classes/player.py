@@ -94,6 +94,7 @@ class Player(Person):
 		self.is_pregnant = False
 		self.save_path = SAVE_PATH + "/" + self.ID + ".pickle"
 		self.generation = 1
+		self.last_plastic_surgery = 0
 
 	def learn_trait(self, trait):
 		if trait not in TRAITS_DICT:
