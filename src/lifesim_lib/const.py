@@ -149,6 +149,231 @@ MUSIC_ARTISTS = [
 
 # Insults moved to the bottom
 
+# Temporary Checklist (1 + for added, 2 ++ for completed, 3 >>> for added to game)
+#-------
+# [Activities Menu]
+# Accessories
+# Adoption >>> (main/child/player etc)
+# Casino +
+# Crime ++
+#   Bank Robbery +
+#   Burglary +
+#   Embezzle +
+#   Grand Theft Auto +
+#   Hitman +
+#   Mischief +
+#   Murder +
+#   Pickpocket +
+#   Porch Pirate +
+#   Shoplift +
+#   Train Robbery +
+# Doctors ++
+#   Alernative Doctor ++
+#       Acupuncturist +
+#       Chiropractor +
+#       Colon Hydrotherapy +
+#       Homeopathic Doctor +
+#   Doctor +
+#   Donate Plasma +
+#   Emergency Room +
+#   Optometrist +
+#   Psychiatrist +
+#   Witch Doctor +
+# Emigrate
+# Fertility (Female) ++
+#   Birth Control +
+#   IVF +
+#   Sperm Donor +
+#   Surrogate +
+#   Tubal Ligiation +
+# Fertility (Male) +
+#   (add menu)
+# Horse Races +
+#   Racehorse names ++
+# Identity +
+#   Gender ++
+#   Name Change ++
+#   Sexuality ++
+# Lawsuit
+# Licences ++
+#   Boating +
+#   Driving +
+#   Flight School +
+#   Pilot's +
+# Lottery
+# Love ++
+#   Date +
+#   Dating App +
+#   Gay Dating App +
+#   Hook Up +
+#   Threesome +
+# Mind & Body
+#   Acting Lessons
+#   Book +
+#   Diet
+#   Garden
+#   Gym
+#   Instruments +
+#       Musical instrument types ++
+#   Library
+#   Martial Arts
+#   Meditate
+#   Memory Test
+#   Walk
+#   Voice Lessons
+# Movie Theatre
+#   Comedy +
+#   Documentary
+# Nightlife ++
+#   Bar +
+#   Cabaret +
+#   Karaoke Bar +
+#   Live Music +
+#   Lounge Bar +
+#   Night Market +
+#   Nightclub +
+#   Pub +
+#   Strip Club +
+# Pets +
+#   Pet types +
+# Plastic Surgery ++
+#   Botox +
+#   Brazilian Butt Lift +
+#   Breast Augmentation +
+#   Eyelid Surgery +
+#   Face Lift +
+#   Gender Reassignment +
+#   Liposuction +
+#   Nose Job +
+#   Tummy Tuck +
+# Rehab
+#   Alcoholics Anonymous
+#   Hypnotherapy
+#   Rehab Centre
+# Salon & Spa
+#   Dye Job
+#   Hair Stylist
+#   Massage
+#   Nail Salon
+#   Tanning Salon
+#   Waxing Salon
+# Shopping
+# Social Media ++
+#   Facebook +
+#   Instagram +
+#   TikTok +
+#   Twitter +
+#   YouTube +
+# Sweepstakes
+# Time Machine
+# Vacation
+#   Cruise
+#   Vacation
+# Will & Testament
+# Surrender
+
+#-------
+# [Assets Menu]
+
+#-------
+# [Interactions with NPCs]
+
+
+#-------
+# [Occupation Menu]
+# Education +
+#   Primary School +
+#       Primary School Faculty +
+#       Primary School Staff +
+#   Middle School +
+#       Activities +
+#       Cliques +
+#       Middle School Faculty +
+#       Middle School Staff +
+#   High School +
+#       Activities +
+#       Cliques +
+#       High School Faculty +
+#       High School Staff +
+#   Community College
+#   University
+#       Undergraduate courses
+#       Postgraduate courses
+#   Business School
+#   Dental School
+#   Law School
+#   Medical School
+#   Nursing School
+#   Pharmacy School
+#   Veterinary School
+# Freelance Gigs +
+#   Freelance Job Types +
+# Job Recruiter
+# Jobs +
+#   Full-Time Job Types +
+#   Full-Time Job Categories / Career paths +
+#   Education / Age requirements +
+# Military
+# Part-Time Jobs +
+#   Part Time Job Types +
+#   Part Time Job Categories +
+# Special Careers ++
+#   Actor ++
+#       Audition +
+#       Extra +
+#   Business +
+#       Acquisition +
+#       Startup +
+#           Startup types +
+#   Mafia ++
+#       Criminal organisation types ++
+#       Join methods +
+#       Syndicate names +
+#   Model +
+#       Agent Offers +
+#       Audition Types +
+#       Freelance Types +
+#       Fashion Brands +
+#       Fashion Magazines +
+#       Fashion Week Locations +
+#   Musician ++
+#       Band +
+#           Band roles +
+#       Solo +
+#           Solo artist roles +
+#               Record label names +
+#   Politician +
+#       Political office types +
+#   Pro Athlete +
+#       Sports types ++
+#           American Football +
+#           Association Football +
+#           Australian Rules Football +
+#           Baseball +
+#           Basketball +
+#           Boxing +
+#           Canadian Football +
+#           Cricket +
+#           Gaelic Football +
+#           Golf +
+#           Ice Hockey +
+#           Rugby League +
+#           Rugby Union +
+#           Surfing +
+#           Tennis +
+#           Volleyball +
+#   Street Hustler +
+#       Street Names ++
+#       Street Hustling types ++
+#           Busker +
+#           Panhandler +
+#           Scam Artist +
+#           Street Performer +
+#- Also: Jobs for NPC Students and Adults in the wild +
+#   NPC Student Jobs +
+#   NPC Adult Jobs +
+
+
 # ------------------------------------------------------------------
 # Flirts
 
@@ -638,6 +863,7 @@ JOBS_FREELANCE_GIGS = [
     _("Lemonade Stand"),
     _("Kissing booth"),
 ]
+# Part-Time Job Types
 JOBS_PART_TIME = [
     _("Arcade Assistant"),
     _("Armpit Sniffer"),
@@ -650,12 +876,14 @@ JOBS_PART_TIME = [
     _("Camp Counsellor"),
     _("Car Wash Attendant"),
     _("Caterer"),
+    _("Clothing Shop Assitant"),
     _("Collections Specialist"),
     _("Concessions Attendant"),
     _("Dance Instructor"),
     _("Delivery Driver"),
     _("Doorman"),
     _("Fitness Instructor"),
+    _("Flower Shop Assistant"),
     _("Gym Receptionist"),
     _("Hotel Concierge"),
     _("Hotel Front Desk Clerk"),
@@ -697,9 +925,13 @@ JOBS_PART_TIME_MUNICIPAL = [
     _(""),
     _("Street Sweeper"),
 ]
+JOBS_PART_TIME_RETAIL = [
+    _("Clothing Shop Assitant"),
+    _("Flower Shop Assitant"),
+]
 
 
-# Full time jobs arranged into job categories. E.g. Junior Financial Analyst (Corporate) comes under CORPORATE =, or FINANCE =
+# Full-Time jobs arranged into job categories. E.g. Junior Financial Analyst (Corporate) comes under CORPORATE =, or FINANCE =
 # Junior Corporate jobs for age/qualification reasons. {JOBS_CORPORATE_JUNIOR} (Corporate).
 # Nb. These will probably need to be re-categorised once they're all down. The in-app classification system isn't very good
 JOBS_ADULT_FILM_STUDIO = [
@@ -2947,104 +3179,107 @@ NEGATIVE_SOCIAL_RESPONSES = [
 
 # ------------------------------------------------------------------
 # Instruments
-
-# Accordian
-# Banjo
-# Bass Guitar
-# Cello
-# Didgeridoo
-# Drums
-# Flute
-# Guitar
-# Harmonica
-# Harp
-# Kazoo
-# Keyboard
-# Organ
-# Pan Flute
-# Piano
-# Recorder
-# Saxophone
-# Steel Drum
-# Tambourine
-# Triangle
-# Trombone
-# Trumpet
-# Tuba
-# Violin
+MUSICAL_INSTRUMENT_TYPES = [
+    _("Accordian"),
+    _("Banjo"),
+    _("Bass Guitar"),
+    _("Cello"),
+    _("Didgeridoo"),
+    _("Drums"),
+    _("Flute"),
+    _("Guitar"),
+    _("Harmonica"),
+    _("Harp"),
+    _("Kazoo"),
+    _("Keyboard"),
+    _("Organ"),
+    _("Pan Flute"),
+    _("Piano"),
+    _("Recorder"),
+    _("Saxophone"),
+    _("Steel Drum"),
+    _("Tambourine"),
+    _("Triangle"),
+    _("Trombone"),
+    _("Trumpet"),
+    _("Tuba"),
+    _("Violin"),
+]
 
 # ------------------------------------------------------------------
 # Middle School and High School cliques:
-
-# Artsy Kids
-# Band Geeks
-# Brainy Kids
-# Drama Kids
-# Gamers
-# Goths
-# Hipsters
-# Loners
-# Mean Girls
-# Nerds
-# Normals
-# Popular Kids
-# Skaters
-# Social Floaters
-# Talented Kids
-# Troublemakers
-# Weebs
+SCHOOL_CLIQUES = [
+    _("Artsy Kids"),
+    _("Band Geeks"),
+    _("Brainy Kids"),
+    _("Drama Kids"),
+    _("Gamers"),
+    _("Goths"),
+    _("Hipsters"),
+    _("Loners"),
+    _("Mean Girls"),
+    _("Nerds"),
+    _("Normals"),
+    _("Popular Kids"),
+    _("Skaters"),
+    _("Social Floaters"),
+    _("Talented Kids"),
+    _("Troublemakers"),
+    _("Weebs"),
+]
 
 # ------------------------------------------------------------------
 # Middle School activities:
-
-# Animal Rights Club
-# Basketball Team
-# Cheerleading Team
-# Choir
-# Creative Writing Club
-# Cross Country Team
-# Diving Team
-# Drama Club
-# Field Hockey Team
-# Gymnastics Team
-# History Club
-# Lacrosse Team
-# Math Club
-# Recycling Club
-# Science Club
-# Soccer Team
-# Swim Team
-# Tennis Team
-# Track Team
-# Video Games Club
-# Volleyball Team
-# Yearbook Club
-
+MIDDLE_SCHOOL_ACTIVITIES = [
+    _("Animal Rights Club"),
+    _("Basketball Team"),
+    _("Cheerleading Team"),
+    _("Choir"),
+    _("Creative Writing Club"),
+    _("Cross Country Team"),
+    _("Diving Team"),
+    _("Drama Club"),
+    _("Field Hockey Team"),
+    _("Gymnastics Team"),
+    _("History Club"),
+    _("Lacrosse Team"),
+    _("Math Club"),
+    _("Recycling Club"),
+    _("Science Club"),
+    _("Soccer Team"),
+    _("Swim Team"),
+    _("Tennis Team"),
+    _("Track Team"),
+    _("Video Games Club"),
+    _("Volleyball Team"),
+    _("Yearbook Club"),
+]
 
 # High School activities:
-
-# Baking Club
-# Basketball Team
-# Cheerleading Team
-# Computer Science Club
-# Concert Band
-# Cross Country Team
-# Diving Team
-# Drama Club
-# Golf Team
-# Gymnastics Team
-# Handball Team
-# Skateboarding Club
-# Soccer Team
-# Student Council
-# Swim Team
-# Tennis Team
-# Track Team
-# Tutoring Club
-# Video Games Club
-# Volleyball Team
-# Woodworkers Club
-# Yearbook Club
+HIGH_SCHOOL_ACTIVITIES = [
+    _("Baking Club"),
+    _("Basketball Team"),
+    _("Cheerleading Team"),
+    _("Computer Science Club"),
+    _("Concert Band"),
+    _("Cross Country Team"),
+    _("Diving Team"),
+    _("Drama Club"),
+    _("Golf Team"),
+    _("Gymnastics Team"),
+    _("Handball Team"),
+    _("Skateboarding Club"),
+    _("Soccer Team"),
+    _("Student Council"),
+    _("Swim Team"),
+    _("Tennis Team"),
+    _("Track Team"),
+    _("Tutoring Club"),
+    _("Video Games Club"),
+    _("Volleyball Team"),
+    _("Woodworkers Club"),
+    _("Yearbook Club"),
+]
 
 # ------------------------------------------------------------------
 
