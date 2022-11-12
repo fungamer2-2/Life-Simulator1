@@ -193,6 +193,7 @@ MUSIC_ARTISTS = [
 # Identity +
 #   Gender ++
 #   Name Change ++
+#   Sexes ++
 #   Sexuality ++
 # Lawsuit
 # Licences ++
@@ -209,7 +210,7 @@ MUSIC_ARTISTS = [
 #   Threesome +
 # Mind & Body
 #   Acting Lessons
-#   Book +
+#   Read a Book +
 #   Diet
 #   Garden
 #   Gym
@@ -251,12 +252,12 @@ MUSIC_ARTISTS = [
 #   Hypnotherapy
 #   Rehab Centre
 # Salon & Spa
-#   Dye Job
-#   Hair Stylist
-#   Massage
-#   Nail Salon
-#   Tanning Salon
-#   Waxing Salon
+#   Dye Job +
+#   Hair Stylist +
+#   Massage ++
+#   Nail Salon +
+#   Tanning Salon +
+#   Waxing Salon +
 # Shopping
 # Social Media ++
 #   Facebook +
@@ -372,6 +373,2234 @@ MUSIC_ARTISTS = [
 #- Also: Jobs for NPC Students and Adults in the wild +
 #   NPC Student Jobs +
 #   NPC Adult Jobs +
+
+
+
+# -------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------
+# [Activities Menu]
+
+# ------------------------------------------------------------------
+# Accessories
+
+# ------------------------------------------------------------------
+# Adoption >>> (main/child/player etc)
+
+# ------------------------------------------------------------------
+# Casino
+CASINO_NAMES = [
+    _("Aria"),
+    _("Babylon"),
+    _("Back Passage"),
+    _("Baden-Baden"),
+    _("Bally’s"),
+    _("Bellagio"),
+    _("Binion's Horsehoe"),
+    _("Caesar’s Palace"),
+    _("Casino Royale"),
+    _("Circus Circus"),
+    _("Cosmopolitan"),
+    _("Encore"),
+    _("Excalibur"),
+    _("Flamingo"),
+    _("Galaxy"),
+    _("Golden Dragon"),
+    _("Golden Showers"),
+    _("Grand Lisboa"),
+    _("Grand Waldo"),
+    _("Harrah’s"),
+    _("Hot Slots"),
+    _("Luxor"),
+    _("Macau Palace"),
+    _("Mandalay Bay"),
+    _("MGM Grand"),
+    _("Mirage"),
+    _("Monte Carlo"),
+    _("Mountain"),
+    _("New York-New York"),
+    _("Ocean’s"),
+    _("Oh Craps!"),
+    _("Palazzo"),
+    _("Paris"),
+    _("MGM"),
+    _("Pink Taco"),
+    _("Planet Hollywood"),
+    _("Resorts World"),
+    _("Rio"),
+    _("Sahara"),
+    _("Slots-A-Fun"),
+    _("Strat"),
+    _("Taj Mahal"),
+    _("The Cromwell"),
+    _("The Linq"),
+    _("The Sands"),
+    _("The Star"),
+    _("Treasure Island"),
+    _("Tropicana"),
+    _("Venetian"),
+    _("Whiskey Pete’s"),
+    _("Wynn"),
+]
+
+# ------------------------------------------------------------------
+# Crime
+MENU_CRIME = [
+    _("Bank Robbery"),
+    _("Burglary"),
+    _("Embezzle"),
+    _("Grand Theft Auto"),
+    _("Hitman"),
+    _("Mischief"),
+    _("Murder"),
+    _("Pickpocket"),
+    _("Porch Pirate"),
+    _("Shoplift"),
+    _("Train Robbery"),
+]
+#   Bank Robbery
+#   Burglary
+#   Embezzle
+#   Grand Theft Auto
+#   Hitman
+#   Mischief
+#   Murder
+#   Pickpocket
+#   Porch Pirate
+#   Shoplift
+#   Train Robbery
+
+# ------------------------------------------------------------------
+# Doctors
+MENU_DOCTORS = [
+    _("Alternative Doctor"),
+    _("Doctor"),
+    _("Donate Blood"),
+    _("Donate Plasma"),
+    _("Emergency Room"),
+    _("Optometrist"),
+    _("Psychiatrist"),
+    _("Witch Doctor"),
+]
+
+#   Alernative Doctor 
+MENU_ALTERNATIVE_DOCTORS = [
+    _("Acupuncturist"),
+    _("Chiropractor"),
+    _("Colon Hydrotherapy"),
+    _("Homeopathic Doctor"),
+]
+#       Acupuncturist +
+#       Chiropractor +
+#       Colon Hydrotherapy +
+#       Homeopathic Doctor +
+#   Doctor +
+#   Donate Plasma +
+#   Emergency Room +
+#   Optometrist +
+#   Psychiatrist +
+#   Witch Doctor +
+
+# ------------------------------------------------------------------
+# Emigrate
+
+# ------------------------------------------------------------------
+# Fertility
+MENU_FERTILITY_FEMALE = [
+    _("Birth Control"),
+    _("IVF"),
+    _("Sperm Donor"),
+    _("Surrogate"),
+    _("Tubal Litigation"),
+]
+# Birth Control
+# IVF
+# Sperm Donor
+# Surrogate
+# Tubal Ligiation
+MENU_FERTILITY_MALE = [
+]
+
+# ------------------------------------------------------------------
+# Horse Races
+# Racehorse names
+HORSE_RACE_HORSE_NAMES = [
+    _("1 Up"),
+    _("Afleet Alex"),
+    _("Allegro"),
+    _("Amazing Grace"),
+    _("AnAppleADay"),
+    _("Animal Kingdom"),
+    _("Anything’s Possible"),
+    _("Arrogate"),
+    _("Arrrrr"),
+    _("AsGoodAsItGets"),
+    _("Assault"),
+    _("Bangers n’ Mash"),
+    _("Bernardini"),
+    _("Best Bet"),
+    _("Big Ben"),
+    _("Big Brown"),
+    _("Black Bess"),
+    _("Black Velvet"),
+    _("Blushing Groom"),
+    _("Braveheart"),
+    _("Bricks and Mortar"),
+    _("Bucking Bronco"),
+    _("Bullet Proof"),
+    _("Buttercup"),
+    _("Caramel Wafer"),
+    _("ChaseYourDreams"),
+    _("Chicken Dinner"),
+    _("Chico Time"),
+    _("Cloud 9"),
+    _("Conquistador Cielo"),
+    _("Cotton Eyed Joe"),
+    _("Curlin"),
+    _("Daisy"),
+    _("Damascus"),
+    _("Dancing Queen"),
+    _("Denman’s Call"),
+    _("Destiny’s Child"),
+    _("Don’t You Stop"),
+    _("DoReMiFaSoLaTiDo"),
+    _("Easy Goer"),
+    _("Eight Belles"),
+    _("Enchantress"),
+    _("Exterminator"),
+    _("Fast As Lightning"),
+    _("Ferdinand"),
+    _("Fifty Shades of Hay"),
+    _("Flame Thrower"),
+    _("Fly Me To The Moon"),
+    _("Foolish Pleasure"),
+    _("Foxy Lady"),
+    _("FrostyJacks"),
+    _("Gallant Fox"),
+    _("Game On Dude"),
+    _("Genuine Risk"),
+    _("Ghostzapper"),
+    _("Giant’s Causeway"),
+    _("Ginger Snap"),
+    _("Glamour Puss"),
+    _("Go For Wand"),
+    _("Gold Digger"),
+    _("Gold Dust"),
+    _("Graydar"),
+    _("Great Gatsby"),
+    _("Gun Runner"),
+    _("Hahahahahaha"),
+    _("Hail to Reason"),
+    _("Havre de Grace"),
+    _("Head over Heels"),
+    _("Hoof Hearted"),
+    _("Horsing Around"),
+    _("Hotshot"),
+    _("I’ll Have Another"),
+    _("Isn’t She Lovely"),
+    _("It’s A Long Story"),
+    _("Iwinyougetnothing"),
+    _("Jackpot"),
+    _("Jean Valjean"),
+    _("John Henry"),
+    _("Key to the Mint"),
+    _("King of Kings"),
+    _("Lady Eli"),
+    _("Lady Jane Gray"),
+    _("Lady’s Secret"),
+    _("Lava Man"),
+    _("Lawyer Ron"),
+    _("Let’s Go!"),
+    _("Lexington"),
+    _("Looking Good"),
+    _("Magic Mike"),
+    _("Mamma Mia"),
+    _("Maple Stirrup"),
+    _("Mariah’s Storm"),
+    _("Midnight Dream"),
+    _("Mineshaft"),
+    _("Mischief"),
+    _("Morgan Le Fay"),
+    _("My Heart’s Desire"),
+    _("Mysterious Girl"),
+    _("No Fear"),
+    _("Nuts"),
+    _("Old Town Road"),
+    _("Omaha Beach"),
+    _("One Trick Pony"),
+    _("Palace Malice"),
+    _("Perfect Harmony"),
+    _("Personal Ensign"),
+    _("Pippi Longstocking"),
+    _("Point Given"),
+    _("Prima Donna"),
+    _("Prince Caspian"),
+    _("Prince Charming"),
+    _("Pulpit"),
+    _("Quality Street"),
+    _("Queen Bee"),
+    _("Queen of Sheba"),
+    _("Rachel Alexandra"),
+    _("Rainbow Fire"),
+    _("Raise a Native"),
+    _("Razzle Dazzle"),
+    _("Regret"),
+    _("Riva Ridge"),
+    _("Round Table"),
+    _("RubyRubyRubyRuby"),
+    _("Runhappy"),
+    _("SaveTheBest‘TillLast"),
+    _("Seeking the Gold"),
+    _("Senorita"),
+    _("Serena’s Song"),
+    _("Shanghai Bobby"),
+    _("ShimmyShimmyYa"),
+    _("Silver Charm"),
+    _("Sir Barton"),
+    _("Skip Away"),
+    _("Slew o’ Gold"),
+    _("Sniper’s Dream"),
+    _("Snow White"),
+    _("Socks"),
+    _("Speed of Light"),
+    _("Speedy Gonzales"),
+    _("Storm Cat"),
+    _("Stormbreaker"),
+    _("Street Sense"),
+    _("Super Horse"),
+    _("Super Star"),
+    _("Sweet Dreams"),
+    _("Sweet Pea"),
+    _("Tabasco Cat"),
+    _("Tempest"),
+    _("Thunder Bolt"),
+    _("Thunder Gulch"),
+    _("Tiznow"),
+    _("Tonalist"),
+    _("Trigger"),
+    _("Triple Threat"),
+    _("Trojan Horse"),
+    _("Twist n’ Shout"),
+    _("War Emblem"),
+    _("WeAreTheChampions"),
+    _("Wee Willie Winkie"),
+    _("Winsome"),
+    _("Wise Dan"),
+    _("World Class"),
+    _("Zero to Hero"),
+]
+
+# ------------------------------------------------------------------
+# Identity
+
+# Identity Genders
+IDENTITY_GENDER_FEMALE = [
+    _("Cisgender"),
+    _("Genderqueer"),
+    _("Non-Binary"),
+    _("Transgender Male"),
+]
+IDENTITY_GENDER_MALE = [
+    _("Cisgender"),
+    _("Genderqueer"),
+    _("Non-Binary"),
+    _("Transgender Female"),
+]
+# Name Change
+# Sexes
+SEXES = [
+    _("Female"),
+    _("Intersex"),
+    _("Male"),
+]
+# Sexuality
+SEXUALITIES = [
+    _("Straight"),
+    _("Bi"),
+    _("Gay"),
+]
+
+# ------------------------------------------------------------------
+# Lawsuit
+
+# ------------------------------------------------------------------
+# Licences
+LICENCE_TYPES = [
+    _("Boating Licence"),
+    _("Driving Licence"),
+    _("Flight School"),
+    _("Motorbike Licence"),
+    _("Pilot's Licence"),
+] 
+# Boating
+# Driving
+# Flight School
+# Pilot's
+# ------------------------------------------------------------------
+# Lottery
+
+# ------------------------------------------------------------------
+# Love 
+# Maybe Dating app and gay dating app should be rolled into 'Dating App' with a sex/gender selection. Especially if you'd like to add an element of bi-curiosity / experimentation
+MENU_LOVE = [
+    _("Date"),
+    _("Dating App"),
+    _("Gay Dating App"),
+    _("Hook Up"),
+    _("Threesome"),
+]
+# Date
+# Dating App
+# Gay Dating App
+# Hook Up
+# Threesome
+
+# ------------------------------------------------------------------
+# Mind & Body
+# ------------------
+#   Acting Lessons
+
+# ------------------
+# Read a book 
+# Books
+BOOKS = [
+    _("The Dictionary"),
+]
+BOOKS_CHILD = [
+    _("Where the Wild Things Are"),
+    _("Goodnight Moon"),
+    _("Brown Bear, Brown Bear, What Do You See?"),
+    _("The Snowy Day"),
+    _("If You Give A Mouse A Cookie"),
+    _("Stellaluna"),
+    _("The Very Hungry Caterpillar"),
+]
+BOOKS_TEEN = [
+    _(""),
+]
+# ------------------
+# Diet
+# ------------------
+# Garden
+# ------------------
+# Gym
+# ------------------
+# Instruments
+MUSICAL_INSTRUMENT_TYPES = [
+    _("Accordian"),
+    _("Banjo"),
+    _("Bass Guitar"),
+    _("Cello"),
+    _("Didgeridoo"),
+    _("Drums"),
+    _("Flute"),
+    _("Guitar"),
+    _("Harmonica"),
+    _("Harp"),
+    _("Kazoo"),
+    _("Keyboard"),
+    _("Organ"),
+    _("Pan Flute"),
+    _("Piano"),
+    _("Recorder"),
+    _("Saxophone"),
+    _("Steel Drum"),
+    _("Tambourine"),
+    _("Triangle"),
+    _("Trombone"),
+    _("Trumpet"),
+    _("Tuba"),
+    _("Violin"),
+]
+#   Library
+# ------------------
+#   Martial Arts - maybe add skill bar because not all of these have graded belt systems
+MARTIAL_ART_TYPES = [
+    _("Boxing"),
+    _("Capoeira"),
+    _("Jiu-Jitsu"),
+    _("Judo"),
+    _("Kalaripayattu"),
+    _("Karate"),
+    _("Kickboxing"),
+    _("Kung Fu"),
+    _("Muay Thai"),
+    _("Taekwondo"),
+    _("Wrestling"),
+]
+# Boxing doesn't have ranks afaik
+
+# Capoeira Belts in order of rank
+# Student ranks
+#   Incante (Beginner) - No colour
+#   Batizado (Baptized) - Light Green
+#   Graduado (Graduated) - Yellow
+#   Adaptado (Adept) - Blue
+#   Intermediário (Intermediary) - Green
+#   Avançado (Advanced) - Green/Blue
+#   Estagiário (Trainee) - Yellow/Blue
+# Instructor ranks
+#   Formado (Graduated) - Yellow/Green/Blue
+#   Monitor (Monitor) - White/Green
+#   Contramestre (Foreman) - White/Blue
+#   Mestre (Master) - White
+
+# Jiu-Jitsu belts in rank order
+#   White
+#   Blue
+#   Purple
+#   Brown
+#   Black
+#   Black/Red
+#   Red/White
+#   Red
+
+# Judo belts (https://en.wikipedia.org/wiki/Rank_in_Judo) Kanō's original kyū-dan grading system. Because, internationally no countries agree with each other's grading system
+# Student ranks
+#   Sixth kyū - Light Blue
+#   Fifth kyū - White
+#   Fourth kyū - White
+#   Third kyū - Brown
+#   Second kyū - Brown
+#   First kyū - Brown
+# Instructor ranks
+#   First dan - Black
+#   Second dan - Black
+#   Third dan - Black
+#   Fourth dan - Black
+#   Fifth dan - Black
+#   Sixth dan - Red and White
+#   Seventh dan - Red and White
+#   Eighth dan - Red and White
+#   Ninth dan - Red and White
+#   Tenth dan - Red
+
+# Kalaripayattu (no official grading system found)
+
+# Kickboxing (no grading system, some schools use the karate system)
+
+# Karate belts
+# Student ranks
+#   Eighth kyū - White
+#   Seventh kyū - Yellow
+#   Sixth kyū - Orange
+#   Fifth kyū - Green
+#   Fourth kyū - Blue
+#   Third kyū - Purple
+#   Second kyū - Red
+#   First kyū - Brown
+# Instructor ranks
+#   First dan - Black
+#   Second dan - Black
+#   Third dan - Black
+#   Fourth dan - Black
+#   Fifth dan - Black
+#   Sixth dan - Black
+#   Seventh dan - Black
+#   Eighth dan - Black
+#   Ninth dan - Black
+#   Tenth dan - Black
+
+# Kung Fu (Shaolin) (no traditional belts, may use Japanese/Karate system)
+# Styles for 'You learnt {shaolin_style}. Nb. Imitative styles are eg. Dragon, Tiger, Monkey etc.
+SHAOLIN_STYLES = [
+    _("luóhàn shíbā shǒu (Luohan's 18 hands)"),
+    _("hóngquán (Flood style)"),
+    _("pàoquán (Explosive style)"),
+    _("tōngbìquán (Penetrating-Arms style)"),
+    _("qī xīng & cháng hù xīn yì mén quán (7-star & Long Guard the Heart and Mind Gate style)"),
+    _("méihuāquán (Plum Blossom style)"),
+    _("cháo & zhāo yáng quán (Facing & Bright Sun style)"),
+    _("luóhànquán (Luohan style)"),
+    _("jīn'gāngquán (Vajrapani style)"),
+    _("tàizǔ chángquán (Emperor's Long-range style)"),
+    _("liùhéquán (6 match style)"),
+    _("róuquán (Soft style)"),
+    _("xīnyìquán (Mind style)"),
+    _("xiàngxíngquán (Imitative style)"),
+    _("zuìquán (Drunken style)"),
+]
+# Kung Fu (Wing Chun) (no traditional belts, may use Japanese/Karate system)
+# Forms for 'You learnt {wing_chun_form}. Nb. dont have pinyin for all, some may be cantonese yale or other (the ones without non-basic ASCII characters)
+WING_CHUN_FORMS = [
+    _("Siu Nim Tau (Little Idea)"),
+    _("Chum Kiu (Sinking Bridge)"),
+    _("Biu Jee (Clear Direction)"),
+    _("Bā Zhǎn Dāo (Eight Way Chopping Knives)"),
+    _("Liù Diǎn Bàn Gùn (Six-and-a-Half Point Pole"),
+    _("Muk Yan Jong (Wooden Dummy)"),
+    _("Chī Shǒu (Sticking Hands)"),
+    _("Chī Jiǎo (Sticking Legs)"),
+    _("Jeui Da (Chase Strike)"),
+    _("Fa Kyun (Variegated Fist)"),
+    _("Jin Jeung (Arrow Palm)"),
+    _("Jin Kyun (Arrow Fist)"),
+    _("Jeui Kyun (Drunken Fist)"),
+    _("Sap Saam Sau (Thirteen Hands)"),
+    _("Chi Sau Lung (Sticking Hands Set)"),
+]
+
+# Muay Thai (no traditional belts, may use japanese system)
+
+# Taekwondo
+# Student ranks
+#   Eighth geup - White
+#   Seventh geup - Yellow
+#   Sixth geup - Orange
+#   Fifth geup - Green
+#   Fourth geup - Blue
+#   Third geup - Purple
+#   Second geup - Red
+#   First geup - Brown
+# Instructor ranks
+#   First dan - Black
+#   Second dan - Black
+#   Third dan - Black
+#   Fourth dan - Black
+#   Fifth dan - Black
+#   Sixth dan - Black
+#   Seventh dan - Black
+#   Eighth dan - Black
+#   Ninth dan - Black
+
+# Wrestling (no belt system)
+
+# ------------------
+#   Meditate
+
+# ------------------
+#   Memory Test
+
+# ------------------
+#   Walk
+
+# ------------------
+#   Voice Lessons
+
+# ------------------------------------------------------------------
+# Movie Theatre
+# Also Movies by category / genre (with year in the list) for 'we watched a comedy movie called {movie-name, from movie-year}, it {made me laugh}/{made us cry}/{was hilarious!}
+
+# Adult Movies
+MOVIES_ADULT = [
+    _("9 Lives of a Wet Pussy, from 1976. It starred Pauline LaMonde and was about the erotic escapades of a young New York heiress"),
+    _("A Dirty Western, from 1975"),
+    _("A Perfect Ending, from 2012"),
+    _("A Taste of Joy, from 2012"),
+    _("Alice in Wonderland: An X-Rated Musical Comedy, from 1976"),
+    _("Animal Instincts, from 1992"),
+    _("Aphrodesia's Diary, from 1983"),
+    _("Babylon Pink, from 1979. It starred several leads and was about the sexual fantasies of several women; a bored housewife, a business woman, an older woman, and a sexually curious teenager"),
+    _("Barbara Broadcast, from 1977"),
+    _("Behind the Green Door, from 1972"),
+    _("Bend Over Boyfriend, from 1998"),
+    _("Bijou, from 1972. It starred Bill Harrison and was a gay film about a construction worker discovering an invitation to a sex club"),
+    _("Black Emmanuelle, from 1975"),
+    _("Blue Movie, from 1969. It was directed by Andy Warhol and starred Viva, and Louis Waldon"),
+    _("Bound, from 2015"),
+    _("Cabaret Desire, from 2011"),
+    _("Chemistry, from 2006"),
+    _("Dangerous Liaisons, from 2005"),
+    _("Debbie Does Dallas, from 1978"),
+    _("Deep Throat, from 1972"),
+    _("El Paso Wrecking Corp., from 1978"),
+    _("Emmanuelle, from 1974"),
+    _("Flashpoint, from 1998"),
+    _("Flesh Gordon, from 1974"),
+    _("Harlot, from 1971"),
+    _("High Test Girls, from 1980"),
+    _("Hotel Erotica, from 2002"),
+    _("Insatiable, from 1980"),
+    _("I am Curious (Blue), from 1968"),
+    _("I am Curious (Yellow), from 1967"),
+    _("Infidelity: Sex Stories 2, from 2011"),
+    _("Last Tango, from 2011"),
+    _("Love Toy, from 1968"),
+    _("Maraschino Cherry, from 1978"),
+    _("Missing: A Lesbian Crime Story, from 2016"),
+    _("Mona the Virgin Nymph, from 1970"),
+    _("Nothing Personal, from 1990. It starred Moana Pozzi and was about a personal quest to improve her sex life"),
+    _("Once Upon a Girl, from 1976"),
+    _("Perspective, from 2019"),
+    _("Pink Prison, from 1999"),
+    _("Pink Velvet 3: A Lesbian Odyssey, from 2005"),
+    _("Pirates, from 2005"),
+    _("Pirates II: Stagnetti’s Revenge, from 2008"),
+    _("Red Shoe Diaries, from 1992"),
+    _("Reel People, from 1984. It starred Juliet Anderson and was about real people performing their sexual desires on film for the first time"),
+    _("Rendez-vous, from 2015"),
+    _("School Girl, from 1971"),
+    _("Score, from 1974"),
+    _("Sensational Janine, from 1976"),
+    _("Sex Pursuits, from 1971. It starred Rene Bond"),
+    _("Sex Stories, from 2009. It starred multiple leads and was about two dinner parties simultaneously unfolding. Each sharing stories of their recent escapades"),
+    _("Sexual Chronicles of a French Family, from 2012"),
+    _("Snapshot, from 2016"),
+    _("Taboo, from 1980"),
+    _("Taboo II, from 1982"),
+    _("The Bare Wench Project, from 2000"),
+    _("The Bi Apple, from 2007"),
+    _("The Bite, from 1977"),
+    _("The Cheerleaders, from 1973"),
+    _("The Devil in Miss Jones, from 1973. It starred Georgina Spelvin and was about a woman who commits suicide. Where, instead of going to Heaven, she returns to life to embody lust"),
+    _("The Dreamers, from 2003"),
+    _("The Fashionistas, from 2002"),
+    _("The Friend Zone, from 2012. It starred Riley Reid"),
+    _("The Good Girl, from 2004"),
+    _("The Grafenberg Spot, from 1985"),
+    _("The Jade Pussycat, from 1977"),
+    _("The Obsession, from 2017. It starred Abella Danger"),
+    _("The Opening of Misty Beethoven, from 1976"),
+    _("The Submission of Emma Marx, from 2013"),
+    _("The Ultimate Pleasure, from 1977. It starred Kristine Heller and was about a cab driver who finds a suitcase full of money and realises he now has the means to fulfil all of his wife’s sexual fantasies"),
+    _("The Walking Dead: A Hardcore Parody, from 2013"),
+    _("The Xterminator, from 1986"),
+    _("Through the Looking Glass, from 1976"),
+    _("Tonight for Sure, from 1962"),
+    _("Xana and Dax: When Opposites Attract, from 2005"),
+    _("XConfessions Vol. 3, from 2014. It starred Maria Agrado, Samantha Bentley and Samia Duarte, and was a compilation of 10 erotic stories"),
+]
+# Animated Movies
+MOVIES_ANIMATED = [
+    _("Big Hero 6, from 2014"),
+    _("Brave, from 2012"),
+    _("Cars 2, from 2011"),
+    _("Coco, from 2017"),
+    _("Despicable Me, from 2010"),
+    _("Despicable Me 2, from 2013"),
+    _("Despicable Me 3, from 2017"),
+    _("Finding Dory, from 2016"),
+    _("Finding Nemo, from 2003"),
+    _("Frozen, from 2013"),
+    _("Frozen II, from 2019"),
+    _("Hotel Transylvania 3: Summer Vacation, from 2018"),
+    _("How to Train Your Dragon 2, from 2014"),
+    _("How to Train Your Dragon: The Hidden World, from 2019"),
+    _("Ice Age: Continental Drift, from 2012"),
+    _("Ice Age: Dawn of the Dinosaurs, from 2009"),
+    _("Ice Age: The Meltdown, from 2006"),
+    _("Incredibles 2, from 2018"),
+    _("Inside Out, from 2015"),
+    _("Kung Fu Panda, from 2008"),
+    _("Kung Fu Panda 2, from 2011"),
+    _("Madagascar, from 2005"),
+    _("Madagascar 3: Europe's Most Wanted, from 2012"),
+    _("Madagascar: Escape 2 Africa, from 2008"),
+    _("Minions, from 2015"),
+    _("Minions: The Rise of Gru , from 2022"),
+    _("Moana, from 2016"),
+    _("Monsters University, from 2013"),
+    _("Monsters, Inc., from 2001"),
+    _("Ne Zha, from 2019"),
+    _("Puss in Boots, from 2011"),
+    _("Ralph Breaks the Internet, from 2018"),
+    _("Ratatouille, from 2007"),
+    _("Shrek 2, from 2004"),
+    _("Shrek Forever After, from 2010"),
+    _("Shrek the Third, from 2007"),
+    _("Sing, from 2016"),
+    _("Tangled, from 2010"),
+    _("The Boss Baby, from 2017"),
+    _("The Croods, from 2013"),
+    _("The Incredibles, from 2004"),
+    _("The Lion King , from 1994"),
+    _("The Lion King , from 2019"),
+    _("The Secret Life of Pets, from 2016"),
+    _("The Simpsons Movie, from 2007"),
+    _("Toy Story 3, from 2010"),
+    _("Toy Story 4, from 2019"),
+    _("Up, from 2009"),
+    _("WALL-E, from 2008"),
+    _("Zootopia, from 2016"),
+]
+# Christmas Movies
+MOVIES_CHRISTMAS = [
+    _("A Bad Moms Christmas, from 2017"),
+    _("A Christmas Carol, from 2009"),
+    _("A Madea Christmas, from 2015"),
+    _("Almost Christmas, from 2016"),
+    _("Arthur Christmas, from 2011"),
+    _("Bad Santa, from 2003"),
+    _("Christmas with the Kranks, from 2004"),
+    _("Daddy's Home 2, from 2017"),
+    _("Deck the Halls, from 2006"),
+    _("Dr. Seuss' How the Grinch Stole Christmas!, from 2000"),
+    _("Elf, from 2003"),
+    _("Four Christmases, from 2008"),
+    _("Fred Claus, from 2007"),
+    _("Home Alone, from 1990"),
+    _("Home Alone 2: Lost in New York, from 1992"),
+    _("Jingle All the Way, from 1996"),
+    _("Krampus, from 2015"),
+    _("Last Christmas, from 2019"),
+    _("Love Actually, from 2003"),
+    _("Love the Coopers, from 2016"),
+    _("Miracle on 34th Street, from 1994"),
+    _("National Lampoon's Christmas Vacation, from 1989"),
+    _("Office Christmas Party, from 2016"),
+    _("Scrooged, from 1988"),
+    _("The Best Man Holiday, from 2013"),
+    _("The Grinch, from 2018"),
+    _("The Holiday, from 2006"),
+    _("The Nightmare Before Christmas, from 1993"),
+    _("The Nutcracker and the Four Realms, from 2018"),
+    _("The Polar Express, from 2004"),
+    _("The Santa Clause, from 1994"),
+    _("The Santa Clause 2, from 2002"),
+    _("The Santa Clause 3: The Escape Clause, from 2006"),
+    _("The Star, from 2017"),
+    _("This Christmas, from 2007"),
+]
+# Comedy Movies
+MOVIES_COMEDY = [
+    _("Bruce Almighty, from 2003"),
+    _("Cars, from 2006"),
+    _("Cars 2, from 2011"),
+    _("Deadpool, from 2016"),
+    _("Deadpool 2, from 2018"),
+    _("Despicable Me, from 2010"),
+    _("Despicable Me 2, from 2013"),
+    _("Despicable Me 3, from 2017"),
+    _("Detective Chinatown 2, from 2018"),
+    _("Detective Chinatown 3, from 2021"),
+    _("Hi, Mom, from 2021"),
+    _("Home Alone, from 1990"),
+    _("Hotel Transylvania 2, from 2015"),
+    _("Hotel Transylvania 3: Summer Vacation, from 2018"),
+    _("Incredibles 2, from 2018"),
+    _("Inside Out, from 2015"),
+    _("Madagascar, from 2005"),
+    _("Madagascar 3: Europe's Most Wanted, from 2012"),
+    _("Madagascar: Escape 2 Africa, from 2008"),
+    _("Meet the Fockers, from 2004"),
+    _("Men in Black, from 1997"),
+    _("Men in Black 3, from 2012"),
+    _("Men in Black II, from 2002"),
+    _("Minions, from 2015"),
+    _("Monsters University, from 2013"),
+    _("Monsters, Inc., from 2001"),
+    _("Mrs. Doubtfire, from 1993"),
+    _("Puss in Boots, from 2011"),
+    _("Ralph Breaks the Internet, from 2018"),
+    _("Ratatouille, from 2007"),
+    _("Sex and the City, from 2008"),
+    _("Shrek, from 2001"),
+    _("Shrek 2, from 2004"),
+    _("Shrek Forever After, from 2010"),
+    _("Shrek the Third, from 2007"),
+    _("Tangled, from 2010"),
+    _("Ted, from 2012"),
+    _("The Hangover, from 2009"),
+    _("The Hangover Part II, from 2011"),
+    _("The Incredibles, from 2004"),
+    _("The Intouchables, from 2011"),
+    _("The Lego Movie, from 2014"),
+    _("The Mermaid, from 2016"),
+    _("The Secret Life of Pets, from 2016"),
+    _("The Secret Life of Pets 2, from 2019"),
+    _("The Simpsons Movie, from 2007"),
+    _("Toy Story 2, from 1999"),
+    _("Toy Story 3, from 2010"),
+    _("Toy Story 4, from 2019"),
+    _("Wreck-It Ralph, from 2012"),
+]
+# Documentary Movies
+MOVIES_DOCUMENTARY = [
+    _("March of the Penguins, from 2005"),
+]
+# Fantasy Movies
+MOVIES_FANTASY = [
+    _("Aladdin, from 2019"),
+    _("Aladdin, from 1992"),
+    _("Alice in Wonderland, from 2010"),
+    _("Beauty and the Beast, from 2017"),
+    _("Cinderella, from 2015"),
+    _("Clash of the Titans, from 2010"),
+    _("Coco, from 2017"),
+    _("Demon Slayer: Kimetsu no Yaiba the Movie: Mugen Train, from 2020"),
+    _("Fantastic Beasts and Where to Find Them, from 2016"),
+    _("Fantastic Beasts: The Crimes of Grindelwald, from 2018"),
+    _("Frozen, from 2013"),
+    _("Frozen II, from 2019"),
+    _("Harry Potter and the Chamber of Secrets, from 2002"),
+    _("Harry Potter and the Deathly Hallows – Part 1, from 2010"),
+    _("Harry Potter and the Deathly Hallows – Part 2, from 2011"),
+    _("Harry Potter and the Goblet of Fire, from 2005"),
+    _("Harry Potter and the Half-Blood Prince, from 2009"),
+    _("Harry Potter and the Order of the Phoenix, from 2007"),
+    _("Harry Potter and the Philosopher's Stone, from 2001"),
+    _("Harry Potter and the Prisoner of Azkaban, from 2004"),
+    _("How to Train Your Dragon, from 2010"),
+    _("How to Train Your Dragon 2, from 2014"),
+    _("Indiana Jones and the Last Crusade, from 1989"),
+    _("Jumanji: The Next Level, from 2019"),
+    _("Jumanji: Welcome to the Jungle, from 2017"),
+    _("Maleficent, from 2014"),
+    _("Maleficent: Mistress of Evil, from 2019"),
+    _("Night at the Museum, from 2006"),
+    _("Oz the Great and Powerful, from 2013"),
+    _("Pirates of the Caribbean: At World's End, from 2007"),
+    _("Pirates of the Caribbean: Dead Man's Chest, from 2006"),
+    _("Pirates of the Caribbean: Dead Men Tell No Tales, from 2017"),
+    _("Pirates of the Caribbean: On Stranger Tides, from 2011"),
+    _("Pirates of the Caribbean: The Curse of the Black Pearl, from 2003"),
+    _("Shrek 2, from 2004"),
+    _("Shrek Forever After, from 2010"),
+    _("Shrek the Third, from 2007"),
+    _("The Chronicles of Narnia: The Lion, the Witch and the Wardrobe, from 2006"),
+    _("The Hobbit: An Unexpected Journey, from 2012"),
+    _("The Hobbit: The Battle of the Five Armies, from 2014"),
+    _("The Hobbit: The Desolation of Smaug, from 2013"),
+    _("The Jungle Book, from 2016"),
+    _("The Lord of the Rings: The Fellowship of the Ring, from 2001"),
+    _("The Lord of the Rings: The Return of the King, from 2003"),
+    _("The Lord of the Rings: The Two Towers, from 2002"),
+    _("The Twilight Saga: Breaking Dawn – Part 1, from 2011"),
+    _("The Twilight Saga: Breaking Dawn – Part 2, from 2012"),
+    _("The Twilight Saga: Eclipse, from 2010"),
+    _("The Twilight Saga: New Moon, from 2009"),
+    _("Up, from 2009"),
+]
+# Horror Movies
+# There may be some issues with this list, it was taken from wikipedia's top grossing horror films list. 'scary movie' for instance is a teen comedy, and 'the mummy' is an action adventure
+MOVIES_HORROR = [
+    _("A Quiet Place, from 2018"),
+    _("A Quiet Place Part II, from 2021"),
+    _("Alien: Covenant, from 2017"),
+    _("Annabelle, from 2014"),
+    _("Annabelle Comes Home, from 2019"),
+    _("Annabelle: Creation, from 2017"),
+    _("Bram Stoker's Dracula, from 1992"),
+    _("Constantine, from 2005"),
+    _("Dark Shadows, from 2012"),
+    _("Get Out, from 2017"),
+    _("Glass, from 2019"),
+    _("Halloween, from 2018"),
+    _("Hannibal, from 2001"),
+    _("I Am Legend, from 2007"),
+    _("Interview with the Vampire, from 1994"),
+    _("It, from 2017"),
+    _("It Chapter Two, from 2019"),
+    _("Jaws, from 1975"),
+    _("Jaws 2, from 1978"),
+    _("Paranormal Activity 3, from 2011"),
+    _("Prometheus, from 2012"),
+    _("Resident Evil: Afterlife, from 2010"),
+    _("Resident Evil: Retribution, from 2012"),
+    _("Resident Evil: The Final Chapter, from 2017"),
+    _("Scary Movie, from 2000"),
+    _("Shutter Island, from 2010"),
+    _("Signs, from 2002"),
+    _("Sleepy Hollow, from 1999"),
+    _("Split, from 2017"),
+    _("The Blair Witch Project, from 1999"),
+    _("The Conjuring, from 2013"),
+    _("The Conjuring 2, from 2016"),
+    _("The Conjuring: The Devil Made Me Do It, from 2021"),
+    _("The Exorcist, from 1973"),
+    _("The Meg, from 2018"),
+    _("The Mummy, from 1999"),
+    _("The Mummy, from 2017"),
+    _("The Mummy Returns, from 2001"),
+    _("The Mummy: Tomb of the Dragon Emperor, from 2008"),
+    _("The Nun, from 2018"),
+    _("The Others, from 2001"),
+    _("The Ring, from 2002"),
+    _("The Silence of the Lambs, from 1991"),
+    _("The Sixth Sense, from 1999"),
+    _("The Village, from 2004"),
+    _("Unbreakable, from 2000"),
+    _("Us, from 2019"),
+    _("Van Helsing, from 2004"),
+    _("War of the Worlds, from 2005"),
+    _("World War Z, from 2013"),
+]
+# Musicals
+MOVIES_MUSICAL = [
+    _("A Star Is Born, from 2018"),
+    _("Aladdin, from 2019"),
+    _("Aladdin, from 1992"),
+    _("Alvin and the Chipmunks, from 2007"),
+    _("Alvin and the Chipmunks: Chipwrecked, from 2011"),
+    _("Alvin and the Chipmunks: The Squeakquel, from 2009"),
+    _("Baahubali 2: The Conclusion, from 2017"),
+    _("Beauty and the Beast, from 2017"),
+    _("Beauty and the Beast, from 1991"),
+    _("Bohemian Rhapsody, from 2018"),
+    _("Charlie and the Chocolate Factory, from 2005"),
+    _("Chicago, from 2002"),
+    _("Cinderella, from 1950"),
+    _("Encanto, from 2021"),
+    _("Enchanted, from 2007"),
+    _("Frozen II, from 2019"),
+    _("Frozen, from 2013"),
+    _("Grease, from 1978"),
+    _("Happy Feet, from 2006"),
+    _("Hercules, from 1997"),
+    _("High School Musical 3: Senior Year, from 2008"),
+    _("Home, from 2015"),
+    _("La La Land, from 2016"),
+    _("Les Misérables, from 2012"),
+    _("Mamma Mia: Here We Go Again!, from 2018"),
+    _("Mamma Mia!, from 2008"),
+    _("Mary Poppins Returns, from 2018"),
+    _("Moana, from 2016"),
+    _("Mulan, from 1998"),
+    _("Pitch Perfect 2, from 2015"),
+    _("Pocahontas, from 1995"),
+    _("Rio, from 2011"),
+    _("Rio 2, from 2014"),
+    _("Saturday Night Fever, from 1977"),
+    _("Sing, from 2016"),
+    _("Sing 2, from 2021"),
+    _("Snow White and the Seven Dwarfs, from 1937"),
+    _("Tangled, from 2010"),
+    _("Tarzan, from 1999"),
+    _("The Greatest Showman, from 2017"),
+    _("The Hunchback of Notre Dame, from 1996"),
+    _("The Jungle Book, from 2016"),
+    _("The Jungle Book, from 1967"),
+    _("The Lion King, from 2019"),
+    _("The Lion King, from 1994"),
+    _("The Lorax, from 2012"),
+    _("The Polar Express, from 2004"),
+    _("The Princess and the Frog, from 2009"),
+    _("The Sound of Music, from 1965"),
+    _("Trolls, from 2016"),
+]
+# Sci-Fi movies
+MOVIES_SCI_FI = [
+    _("Armageddon, from 1998"),
+    _("Avatar, from 2009"),
+    _("Bumblebee, from 2018"),
+    _("Dawn of the Planet of the Apes, from 2014"),
+    _("E.T. the Extra-Terrestrial , from 1982"),
+    _("Godzilla, from 2014"),
+    _("Gravity, from 2013"),
+    _("I Am Legend, from 2007"),
+    _("Inception, from 2010"),
+    _("Independence Day, from 1996"),
+    _("Interstellar, from 2014"),
+    _("Jurassic Park, from 1993"),
+    _("Jurassic World, from 2015"),
+    _("Jurassic World Dominion , from 2022"),
+    _("Jurassic World: Fallen Kingdom, from 2018"),
+    _("Men in Black, from 1997"),
+    _("Men in Black 3, from 2012"),
+    _("Ready Player One, from 2018"),
+    _("Rise of the Planet of the Apes, from 2011"),
+    _("Rogue One: A Star Wars Story, from 2016"),
+    _("Star Trek Into Darkness, from 2013"),
+    _("Star Wars, from 1977"),
+    _("Star Wars: Episode I – The Phantom Menace, from 1999"),
+    _("Star Wars: Episode II – Attack of the Clones, from 2002"),
+    _("Star Wars: Episode III – Revenge of the Sith, from 2005"),
+    _("Star Wars: Episode V – The Empire Strikes Back, from 1980"),
+    _("Star Wars: Episode VI – Return of the Jedi, from 1983"),
+    _("Star Wars: The Force Awakens, from 2015"),
+    _("Star Wars: The Last Jedi, from 2017"),
+    _("Star Wars: The Rise of Skywalker, from 2019"),
+    _("Terminator 2: Judgment Day, from 1991"),
+    _("The Day After Tomorrow, from 2004"),
+    _("The Hunger Games, from 2012"),
+    _("The Hunger Games: Catching Fire, from 2013"),
+    _("The Hunger Games: Mockingjay – Part 1, from 2014"),
+    _("The Hunger Games: Mockingjay – Part 2, from 2015"),
+    _("The Lost World: Jurassic Park, from 1997"),
+    _("The Martian, from 2015"),
+    _("The Matrix, from 1999"),
+    _("The Matrix Reloaded, from 2003"),
+    _("The Wandering Earth, from 2019"),
+    _("Transformers, from 2007"),
+    _("Transformers: Age of Extinction, from 2014"),
+    _("Transformers: Dark of the Moon, from 2011"),
+    _("Transformers: Revenge of the Fallen, from 2009"),
+    _("Transformers: The Last Knight, from 2017"),
+    _("WALL-E, from 2008"),
+    _("War for the Planet of the Apes, from 2017"),
+    _("War of the Worlds, from 2005"),
+]
+#---
+# General movies (Random List)
+# Movies
+MOVIES = [
+    _("20,000 Leagues Under the Sea"),
+    _("2001: A Space Odyssey"),
+    _("Aladdin"),
+    _("Alice in Wonderland"),
+    _("All Quiet on the Western Front"),
+    _("Aquaman"),
+    _("Armageddon"),
+    _("Avatar"),
+    _("Avengers: Age of Ultron"),
+    _("Avengers: Endgame"),
+    _("Avengers: Infinity War"),
+    _("Back to the Future"),
+    _("Bambi"),
+    _("Beauty and the Beast"),
+    _("Ben-Hur"),
+    _("Black Panther"),
+    _("Boom Town"),
+    _("Butch Cassidy and the Sundance Kid"),
+    _("Captain America: Civil War"),
+    _("Captain Marvel"),
+    _("Cavalcade"),
+    _("Cinderella"),
+    _("Cinerama Holiday"),
+    _("City Lights"),
+    _("Cleopatra"),
+    _("Demon Slayer: Mugen Train"),
+    _("Despicable Me 3"),
+    _("Diamonds Are Forever"),
+    _("Die Hard with a Vengeance"),
+    _("Douglas Fairbanks in Robin Hood"),
+    _("Duel in the Sun"),
+    _("E.T. the Extra-Terrestrial"),
+    _("Easter Parade"),
+    _("Fatal Attraction"),
+    _("Fiddler on the Roof"),
+    _("Finding Dory"),
+    _("For Heaven's Sake"),
+    _("For Whom the Bell Tolls"),
+    _("Forever Amber"),
+    _("Frankenstein"),
+    _("From Russia with Love"),
+    _("Frozen"),
+    _("Frozen II"),
+    _("Funny Girl"),
+    _("Furious 7"),
+    _("Ghost"),
+    _("Going My Way"),
+    _("Goldfinger"),
+    _("Gone with the Wind"),
+    _("Grease"),
+    _("Harry Potter and the Deathly Hallows – Part 2"),
+    _("Harry Potter and the Goblet of Fire"),
+    _("Harry Potter and the Philosopher's Stone"),
+    _("Hawaii"),
+    _("How the West Was Won"),
+    _("I'm No Angel"),
+    _("Incredibles 2"),
+    _("Independence Day"),
+    _("Indiana Jones and the Last Crusade"),
+    _("Indiana Jones and the Temple of Doom"),
+    _("Intolerance"),
+    _("Iron Man 3"),
+    _("It Happened One Night"),
+    _("Jaws"),
+    _("Joker"),
+    _("Jurassic Park"),
+    _("Jurassic World"),
+    _("Jurassic World Dominion"),
+    _("Jurassic World: Fallen Kingdom"),
+    _("King Kong"),
+    _("King Solomon's Mines"),
+    _("Lady and the Tramp"),
+    _("Lawrence of Arabia"),
+    _("Love Story"),
+    _("Mary Poppins"),
+    _("Mickey"),
+    _("Minions"),
+    _("Mission: Impossible 2"),
+    _("Mister Roberts"),
+    _("Mom and Dad"),
+    _("Moonraker"),
+    _("Mrs. Miniver"),
+    _("Mutiny on the Bounty"),
+    _("My Fair Lady"),
+    _("One Hundred and One Dalmatians"),
+    _("Peter Pan"),
+    _("Pinocchio"),
+    _("Pirates of the Caribbean: At World's End"),
+    _("Pirates of the Caribbean: Dead Man's Chest"),
+    _("Pirates of the Caribbean: On Stranger Tides"),
+    _("Psycho"),
+    _("Quo Vadis"),
+    _("Raiders of the Lost Ark"),
+    _("Rain Man"),
+    _("Rear Window"),
+    _("Return of the Jedi"),
+    _("Rocky"),
+    _("Rocky II"),
+    _("Rogue One: A Star Wars Story"),
+    _("Samson and Delilah"),
+    _("San Francisco"),
+    _("Sergeant York"),
+    _("She Done Him Wrong"),
+    _("Shrek 2"),
+    _("Skyfall"),
+    _("Snow White and the Seven Dwarfs"),
+    _("Song of the South"),
+    _("South Pacific"),
+    _("Spartacus"),
+    _("Spider-Man: Far From Home"),
+    _("Spider-Man: No Way Home"),
+    _("Star Wars"),
+    _("Star Wars: Episode I – The Phantom Menace"),
+    _("Star Wars: The Force Awakens"),
+    _("Star Wars: The Last Jedi"),
+    _("Star Wars: The Rise of Skywalker"),
+    _("Sunny Side Up"),
+    _("Swiss Family Robinson"),
+    _("Terminator 2: Judgment Day"),
+    _("The Avengers"),
+    _("The Bells of St. Mary's"),
+    _("The Best Years of Our Lives"),
+    _("The Bible: In the Beginning"),
+    _("The Big Parade"),
+    _("The Birth of a Nation"),
+    _("The Bridge on the River Kwai"),
+    _("The Broadway Melody"),
+    _("The Covered Wagon"),
+    _("The Dark Knight"),
+    _("The Dark Knight Rises"),
+    _("The Empire Strikes Back"),
+    _("The Exorcist"),
+    _("The Fate of the Furious"),
+    _("The Four Horsemen of the Apocalypse"),
+    _("The French Connection"),
+    _("The Godfather"),
+    _("The Godfather: Part II"),
+    _("The Godfather: Part III"),
+    _("The Graduate"),
+    _("The Greatest Show on Earth"),
+    _("The Hobbit: An Unexpected Journey"),
+    _("The Jungle Book"),
+    _("The Lion King"),
+    _("The Longest Day"),
+    _("The Lord of the Rings: The Return of the King"),
+    _("The Lord of the Rings: The Two Towers"),
+    _("The Merry Widow"),
+    _("The Miracle Man"),
+    _("The Red Shoes"),
+    _("The Robe"),
+    _("The Sea Hawk"),
+    _("The Sign of the Cross"),
+    _("The Singing Fool"),
+    _("The Snake Pit"),
+    _("The Sound of Music"),
+    _("The Sting"),
+    _("The Ten Commandments"),
+    _("The Towering Inferno"),
+    _("This Is Cinerama"),
+    _("This Is the Army"),
+    _("Titanic"),
+    _("Top Gun"),
+    _("Top Gun: Maverick"),
+    _("Toy Story"),
+    _("Toy Story 3"),
+    _("Toy Story 4"),
+    _("Transformers: Age of Extinction"),
+    _("Transformers: Dark of the Moon"),
+    _("Unconquered"),
+    _("Way Down East"),
+    _("West Side Story"),
+    _("White Christmas"),
+    _("Who's Afraid of Virginia Woolf?"),
+    _("Wings"),
+    _("You Can't Take It With You"),
+    _("Zootopia"),
+]
+# Children's Movies
+MOVIES_CHILD = [
+    _("Big Boy's Little Adventure"),
+]
+# Teen Movies
+MOVIES_TEEN = [
+    _(""),
+]
+
+# ------------------------------------------------------------------
+# Nightlife
+NIGHTLIFE_TYPES = [
+    _("Bar"),
+    _("Cabaret"),
+    _("Karaoke Bar"),
+    _("Live Music"),
+    _("Lounge Bar"),
+    _("Night Market"),
+    _("Nightclub"),
+    _("Pub"),
+    _("Strip Club"),
+]
+# Bar
+# Cabaret
+# Karaoke Bar
+# Live Music
+# Lounge Bar
+# Night Market
+# Nightclub
+NIGHTCLUB_NAMES = [
+    _("APT"),
+    _("BCM Dance Palace"),
+    _("Berghain"),
+    _("Beta"),
+    _("Blue Note"),
+    _("Cavo Paradiso"),
+    _("CBGB"),
+    _("Club Space"),
+    _("Copacabana"),
+    _("Fabric"),
+    _("Green Valley"),
+    _("Hacienda"),
+    _("Hakkasan"),
+    _("Lead"),
+    _("Limelight"),
+    _("LIV"),
+    _("Marquee"),
+    _("Ministry of Sound"),
+    _("Octagon"),
+    _("Pacha"),
+    _("Paradise Garage"),
+    _("Privilege"),
+    _("Sirena"),
+    _("Space"),
+    _("Studio 54"),
+    _("The Bank"),
+    _("The Roxy"),
+    _("The Warehouse Project"),
+    _("Tootsie’s Orchid Lounge"),
+    _("Trouw"),
+    _("Tunnel"),
+    _("Viper Room"),
+    _("Webster Hall"),
+    _("Whisky A Go-Go"),
+    _("Womb"),
+    _("XS"),
+    _("Zouk"),
+]
+# Pub +
+# Strip Club +
+# ------------------------------------------------------------------
+# Pets
+# Pet types:
+PET_TYPE = [
+    _("cat"),
+    _("dog"),
+    _("fish"),
+]
+# Pet breeds: (for use in the pet shop or pet profile)
+PET_BREEDS_CAT = [
+    _("Abyssinian Cat"),
+    _("America Shorthair Cat"),
+    _("House Cat"),
+    _("Tabby Cat"),
+]
+PET_BREEDS_DOG = [
+    _("Cairn Terrier"),
+    _("German Shepherd"),
+    _("Mutt"),
+]
+PET_BREEDS_FISH = [
+    _("Betta Fish"),
+]
+# Pet names:
+PET_NAMES_CAT_MALE = [
+    _("Oliver"),
+    _("Leo"),
+    _("Milo"),
+    _("Charlie"),
+    _("Max"),
+    _("Simba"),
+    _("Jack"),
+    _("Loki"),
+    _("Ollie"),
+    _("Jasper"),
+    _("Buddy"),
+    _("Smokey"),
+    _("Oscar"),
+    _("Toby"),
+    _("Tiger"),
+    _("Finn"),
+    _("Simon"),
+    _("Binx"),
+    _("Louie"),
+    _("Henry"),
+    _("Oreo"),
+    _("Winston"),
+    _("Salem"),
+    _("Gus"),
+    _("Felix"),
+    _("Tigger"),
+    _("Rocky"),
+    _("Kitty"),
+    _("Sam"),
+    _("Teddy"),
+    _("Apollo"),
+    _("Blu"),
+    _("Gizmo"),
+    _("Archie"),
+    _("Jax"),
+    _("Bear"),
+    _("Boots"),
+    _("Frankie"),
+    _("Chester"),
+    _("Bandit"),
+    _("Beau"),
+    _("Pumpkin"),
+    _("Cosmo"),
+    _("Lucky"),
+    _("Thor"),
+    _("Frank"),
+    _("Midnight"),
+    _("Benny"),
+    _("Tom"),
+    _("Boo"),
+    _("Ash"),
+    _("Romeo"),
+    _("Goose"),
+    _("Joey"),
+    _("Mochi"),
+    _("Ozzy"),
+    _("Merlin"),
+    _("Prince"),
+    _("Pepper"),
+    _("Bruce"),
+    _("Otis"),
+    _("Harry"),
+    _("Percy"),
+    _("Peanut"),
+    _("Bean"),
+    _("Tucker"),
+    _("Murphy"),
+    _("Moose"),
+    _("Mac"),
+    _("Kevin"),
+    _("Casper"),
+    _("Buster"),
+    _("Bob"),
+    _("Thomas"),
+    _("Jackson"),
+    _("Sylvester"),
+    _("Jake"),
+    _("Fred"),
+    _("Mango"),
+    _("Sunny"),
+    _("Hank"),
+    _("Bubba"),
+    _("Calvin"),
+    _("Marley"),
+    _("Coco"),
+    _("Louis"),
+    _("Tony"),
+    _("Bagheera"),
+    _("Duke"),
+    _("Clyde"),
+    _("Hunter"),
+    _("Mittens"),
+    _("Luke"),
+    _("Nugget"),
+    _("Ace"),
+    _("Scout"),
+    _("Tito"),
+    _("Monty"),
+    _("Wally"),
+    _("Alex"),
+]
+PET_NAMES_CAT_FEMALE = [
+    _("Luna"),
+    _("Bella"),
+    _("Lily"),
+    _("Lucy"),
+    _("Nala"),
+    _("Kitty"),
+    _("Chloe"),
+    _("Stella"),
+    _("Zoe"),
+    _("Lola"),
+    _("Cleo"),
+    _("Daisy"),
+    _("Sophie"),
+    _("Willow"),
+    _("Olive"),
+    _("Penny"),
+    _("Pepper"),
+    _("Rosie"),
+    _("Molly"),
+    _("Kiki"),
+    _("Ellie"),
+    _("Phoebe"),
+    _("Coco"),
+    _("Lulu"),
+    _("Princess"),
+    _("Maggie"),
+    _("Piper"),
+    _("Millie"),
+    _("Ginger"),
+    _("Nova"),
+    _("Hazel"),
+    _("Pumpkin"),
+    _("Ruby"),
+    _("Penelope"),
+    _("Fiona"),
+    _("Oreo"),
+    _("Baby"),
+    _("Charlie"),
+    _("Winnie"),
+    _("Minnie"),
+    _("Abby"),
+    _("Mittens"),
+    _("Poppy"),
+    _("Cookie"),
+    _("Ivy"),
+    _("Boo"),
+    _("Roxy"),
+    _("Belle"),
+    _("Ella"),
+    _("Zelda"),
+    _("Mochi"),
+    _("Alice"),
+    _("Angel"),
+    _("Emma"),
+    _("Salem"),
+    _("Bean"),
+    _("Freya"),
+    _("Bailey"),
+    _("Midnight"),
+    _("Peanut"),
+    _("Leia"),
+    _("Peaches"),
+    _("Gigi"),
+    _("Frankie"),
+    _("Honey"),
+    _("Violet"),
+    _("Charlotte"),
+    _("Olivia"),
+    _("Sage"),
+    _("Stormy"),
+    _("Kiwi"),
+    _("Bonnie"),
+    _("Smokey"),
+    _("Scout"),
+    _("Arya"),
+    _("Sushi"),
+    _("Sugar"),
+    _("Blu"),
+    _("Josie"),
+    _("Gypsy"),
+    _("Mocha"),
+    _("Binx"),
+    _("Trixie"),
+    _("Snickers"),
+    _("Boots"),
+    _("Iris"),
+    _("Lucky"),
+    _("Lady"),
+    _("Elsa"),
+    _("Pixie"),
+    _("Tiger"),
+    _("Ava"),
+    _("Holly"),
+    _("Tilly"),
+    _("Grace"),
+    _("Opal"),
+    _("Peach"),
+    _("Muffin"),
+    _("Maple"),
+    _("Sally"),
+]
+PET_NAMES_DOG_MALE = [
+    _("Max"),
+    _("Charlie"),
+    _("Milo"),
+    _("Buddy"),
+    _("Rocky"),
+    _("Bear"),
+    _("Leo"),
+    _("Duke"),
+    _("Teddy"),
+    _("Tucker"),
+    _("Beau"),
+    _("Oliver"),
+    _("Jack"),
+    _("Winston"),
+    _("Ollie"),
+    _("Toby"),
+    _("Jax"),
+    _("Blue"),
+    _("Finn"),
+    _("Louie"),
+    _("Murphy"),
+    _("Loki"),
+    _("Moose"),
+    _("Gus"),
+    _("Bruno"),
+    _("Ace"),
+    _("Apollo"),
+    _("Hank"),
+    _("Archie"),
+    _("Kobe"),
+    _("Henry"),
+    _("Thor"),
+    _("Simba"),
+    _("Bailey"),
+    _("Scout"),
+    _("Diesel"),
+    _("Jake"),
+    _("Lucky"),
+    _("Buster"),
+    _("Otis"),
+    _("Jackson"),
+    _("Benny"),
+    _("Chewy"),
+    _("Jasper"),
+    _("Oscar"),
+    _("Bandit"),
+    _("Rex"),
+    _("Oreo"),
+    _("Riley"),
+    _("Baxter"),
+    _("Cody"),
+    _("Coco"),
+    _("Rocco"),
+    _("Tank"),
+    _("Prince"),
+    _("Ranger"),
+    _("King"),
+    _("Marley"),
+    _("Roscoe"),
+    _("Sam"),
+    _("Oakley"),
+    _("Copper"),
+    _("Gizmo"),
+    _("Chase"),
+    _("Luke"),
+    _("Boomer"),
+    _("Bruce"),
+    _("Frankie"),
+    _("Chance"),
+    _("Rusty"),
+    _("Hunter"),
+    _("Ozzy"),
+    _("Tyson"),
+    _("Romeo"),
+    _("Rudy"),
+    _("Mac"),
+    _("Bubba"),
+    _("Peanut"),
+    _("Kai"),
+    _("Chico"),
+    _("Joey"),
+    _("Atlas"),
+    _("Goose"),
+    _("Samson"),
+    _("Chief"),
+    _("Levi"),
+    _("Titan"),
+    _("Frank"),
+    _("Axel"),
+    _("Brutus"),
+    _("Ghost"),
+    _("Brady"),
+    _("Cosmo"),
+    _("Scooby"),
+    _("Chip"),
+    _("Chester"),
+    _("Wally"),
+    _("Rufus"),
+    _("Dash"),
+    _("Louis"),
+]
+PET_NAMES_DOG_FEMALE = [
+    _("Bella"),
+    _("Luna"),
+    _("Lucy"),
+    _("Daisy"),
+    _("Lola"),
+    _("Sadie"),
+    _("Molly"),
+    _("Bailey"),
+    _("Stella"),
+    _("Maggie"),
+    _("Chloe"),
+    _("Penny"),
+    _("Nala"),
+    _("Zoey"),
+    _("Lily"),
+    _("Coco"),
+    _("Sophie"),
+    _("Rosie"),
+    _("Ellie"),
+    _("Ruby"),
+    _("Piper"),
+    _("Mia"),
+    _("Roxy"),
+    _("Gracie"),
+    _("Millie"),
+    _("Willow"),
+    _("Lulu"),
+    _("Pepper"),
+    _("Ginger"),
+    _("Harley"),
+    _("Abby"),
+    _("Winnie"),
+    _("Nova"),
+    _("Kona"),
+    _("Riley"),
+    _("Zoe"),
+    _("Lilly"),
+    _("Dixie"),
+    _("Lady"),
+    _("Izzy"),
+    _("Hazel"),
+    _("Layla"),
+    _("Olive"),
+    _("Charlie"),
+    _("Sasha"),
+    _("Maya"),
+    _("Honey"),
+    _("Athena"),
+    _("Lexi"),
+    _("Cali"),
+    _("Annie"),
+    _("Belle"),
+    _("Princess"),
+    _("Phoebe"),
+    _("Emma"),
+    _("Ella"),
+    _("Cookie"),
+    _("Marley"),
+    _("Callie"),
+    _("Scout"),
+    _("Roxie"),
+    _("Remi"),
+    _("Minnie"),
+    _("Maddie"),
+    _("Dakota"),
+    _("Leia"),
+    _("Poppy"),
+    _("Josie"),
+    _("Harper"),
+    _("Mila"),
+    _("Angel"),
+    _("Holly"),
+    _("Ava"),
+    _("Ivy"),
+    _("Mocha"),
+    _("Gigi"),
+    _("Paisley"),
+    _("Koda"),
+    _("Cleo"),
+    _("Penelope"),
+    _("Bonnie"),
+    _("Missy"),
+    _("Frankie"),
+    _("Sugar"),
+    _("Aspen"),
+    _("Xena"),
+    _("Shelby"),
+    _("Fiona"),
+    _("Dolly"),
+    _("Georgia"),
+    _("Shadow"),
+    _("Delilah"),
+    _("Peanut"),
+    _("Grace"),
+    _("Rose"),
+    _("Skye"),
+    _("Pearl"),
+    _("Jasmine"),
+    _("Juno"),
+    _("Trixie"),
+]
+PET_NAMES_FISH = [
+    _("Finneaus"),
+    _("Fishy McFish"),
+    _("Swimster"),
+    _("Chips"),
+    _("Caspian"),
+    _("Ripley"),
+    _("Bob"),
+    _("Bubbles"),
+    _("Bigmouth"),
+    _("Swimzell"),
+    _("Swim Shady"),
+    _("Bigmouth Billy"),
+    _("Squirtle"),
+    _("Long John Silver"),
+    _("Mr. Ray"),
+    _("Captain Morgan"),
+    _("Betta White"),
+    _("Small Fry"),
+    _("Tuna Piano"),
+    _("Harvey"),
+]
+
+# ------------------------------------------------------------------
+# Plastic Surgery
+PLASTIC_SURGERIES = [
+    _("Botox"),
+    _("Brazilian Butt Lift"),
+    _("Breast Augmentation"),
+    _("Eyelid Surgery"),
+    _("Face Lift"),
+    _("Gender Reassignment"),
+    _("Liposuction"),
+    _("Nose Job"),
+    _("Tummy Tuck"),
+]
+# Botox
+# Brazilian Butt Lift
+# Breast Augmentation
+# Eyelid Surgery
+# Face Lift
+# Gender Reassignment
+# Liposuction
+# Nose Job
+# Tummy Tuck
+# ------------------------------------------------------------------
+# Rehab
+#   Alcoholics Anonymous
+#   Hypnotherapy
+#   Rehab Centre
+# ------------------------------------------------------------------
+# Salon & Spa
+MENU_SALON_AND_SPA = [
+    _("Dye Job"),
+    _("Hair Stylist"),
+    _("Massage"),
+    _("Nail Salon"),
+    _("Tanning Salon"),
+    _("Waxing Salon"),
+]
+# Dye Job
+# Hair Stylist
+# Massage
+MASSAGE_TYPES = [
+    _("Acupressure"),
+    _("Aromatherapy"),
+    _("Ayurvedic"),
+    _("Chair"),
+    _("Chat-an-Asana"),
+    _("Compression"),
+    _("Craniosacral"),
+    _("Deep Tissue"),
+    _("Foot"),
+    _("Happy Ending"),
+    _("Head and Scalp"),
+    _("Hot Stone"),
+    _("Myofascial"),
+    _("Percussion"),
+    _("Reflexology"),
+    _("Reiki"),
+    _("Shiatsu"),
+    _("Sports"),
+    _("Swedish"),
+    _("Thai"),
+    _("Trigger Point"),
+]
+MASSAGE_TYPE_HAS_PARTNER = [
+    _("Couple's"),
+]
+MASSAGE_TYPE_PREGNANT = [
+    _("Pregnancy"),
+]
+# Nail Salon
+NAIL_SALON = [
+    _("Manicure"),
+    _("Pedicure"),
+    _("Manicure & Pedicure"),
+]
+# Tanning Salon
+TANNING_SALON = [
+    _("Spray Tan"),
+    _("Tanning Bed"),
+]
+# Waxing Salon
+WAXING_SALON = [
+    _("Bikini Wax"),
+    _("French Wax"),
+    _("Hollywood Wax"),
+    _("Brazilian Full Body"),
+]
+# ------------------------------------------------------------------
+# Shopping
+
+# ------------------------------------------------------------------
+# Social media
+
+# Social media posts:
+# Nb. There seems to be an issue in the original where the number of new followers from a viral post can be unrealistically low. E.g. Over 20,000 likes but 11 follows. suggest having a minimum percentage, otherwise it's not 'viral' its just bot likes
+
+# Facebook
+
+# Instagram
+# Challenges = 'You recorded a video of yourself doing the '{challenges}' and posted it on Instagram.
+CHALLENGES = [
+    _("Ice Bucket Challenge"),
+    _(""),
+]
+# Dance videos = 'You recorded a video of yourself {dance_video_dances} to {dance_video_songs} and posted it to Instagram.
+DANCE_VIDEO_DANCES = [
+    _("tap dancing"),
+]
+DANCE_VIDEO_SONGS = [
+    _("a P!nk song"),
+]
+# Family photos = 'You posted {family_photos} family photo on Instagram.
+FAMILY_PHOTOS = [
+    _("a cute"),
+    _("an embarrasing"),
+]
+# Food photos = 'You posted a picture of {food_photos} on Instagram.
+FOOD_PHOTOS = [
+    _("a photo of a cake you found on the internet"),
+    _("your nasty snack"),
+]
+# Memes = 'You shared {memes} meme on Instagram.
+MEMES = [
+    _("a ridiculous"),
+]
+# Motivational Quotes = 'You posted {quotes_adjective} quote about {quotes_topic}
+QUOTES_ADJECTIVE = [
+    _("an inspirational"),
+]
+QUOTES_TOPIC = [
+    _("relationships"),
+]
+# Political Video = 'You posted on Instagram {political_videos}.
+POLITICAL_VIDEOS = [
+    _("promoting your political ideology"),
+    _("campaigning for your political ideology"),
+    _("supporting your favourite political candidate"),
+]
+# Poll = 'You posted a poll on Instagram asking your followers "{polls}".
+POLLS = [
+    _("Which social media platform is the best?"),
+    _("What is the best song?"),
+]
+# Random Video = 'You recorded {random_video_adjectives} video of {random_video_topics} and posted it on Instagram.
+RANDOM_VIDEO_ADJECTIVES = [
+    _("an outlandish"),
+]
+RANDOM_VIDEO_TOPICS = [
+    _("yourself talking with accents"),
+]
+# Reshare Celebrity = 'You shared {reshare_celebrity_media} that {celebrity} posted on Instagram. Use a random choice between all the celebrity name lists in place of {celebrity}
+RESHARE_CELEBRITY_MEDIA = [
+    _("a meme"),
+    _("a photo"),
+    _("a picture"),
+    _("a reel"),
+    _("a story"),
+    _("a video"),
+]
+# Reshare Friend = 'You shared {reshare_friend_media} that your friend posted on Instagram.
+RESHARE_FRIEND_MEDIA = [
+    _("a meme"),
+    _("a photo"),
+    _("a picture"),
+    _("a reel"),
+    _("a story"),
+    _("a video"),
+]
+# Reshare Celebrity = 'You shared {reshare_musician_media} that {celebrity_musician} posted on Instagram. Use a random choice between the {celebrity_musician_male}, {celebrity_musician_female}, and {celebrity_band} lists in the celebrity section
+RESHARE_MUSICIAN_MEDIA = [
+    _("a meme"),
+    _("a photo"),
+    _("a picture"),
+    _("a recording session"),
+    _("a reel"),
+    _("a song"),
+    _("a story"),
+    _("a video"),
+    _("their latest album cover"),
+]
+# Selfies = 'You posted {selfies} on Instagram.
+SELFIES = [
+    _("a duck face selfie"),
+    _("a selfie pulling a funny face"),
+    _("a professional looking selfie"),
+]
+# Sexy Pics = 'You posted {sexy_pics_male} on Instagram.
+SEXY_PICS_MALE = [
+    _("a risqué selfie of yourself"),
+    _("a photo of yourself clearly showing your muscles"),
+    _("a selfie gazing through the lens dreamily"),
+    _("a gym selfie while working out"),
+]
+# Sexy Pics = 'You posted {sexy_pics_female} on Instagram.
+SEXY_PICS_FEMALE = [
+    _("a risqué selfie of yourself"),
+    _("a side-on mirror selfie emphasising your tight dress"),
+    _("an over-the-shoulder bikini selfie showing your bum in the background"),
+    _("a gym selfie while working out"),
+]
+# Skit Video = 'You {and your friend made a slapstick skit} video and posted it on Instagram.
+SKIT_VIDEOS = [
+    _("and your friend made a slapstick skit"),
+]
+# Social Justice Video = 'You posted on Instagram {social_justice_videos}.
+SOCIAL_JUSTICE_VIDEOS = [
+    _("supporting social justice"),
+]
+# Stories = 'You posted a story {social_stories} on Instagram.
+SOCIAL_STORIES = [
+    _("about your weird day"),
+]
+# Thirst Traps = 'You posted a photo on Instagram of yourself {thirst_traps}.
+THIRST_TRAPS = [
+    _("holding a water pistol and wearing white underwear"),
+    _("looking off into the distance and only wearing a towel"),
+    _("taking a shower through half-fogged glass"),
+    _("wearing a sexy bathing suit while taking a shower"),
+    _("wearing just a pair of jeans while mowing the lawn"),
+    _("wearing just a t-shirt"),
+    _("wearing just a t-shirt while laying on the dinner table"),
+    _("wearing nothing while making a duck face"),
+    _("wearing nothing while riding an inflatable Orca in the swimming pool"),
+    _("wearing only sushi while reading a book"),
+    _("wearing practically nothing while laying in bed"),
+    _("wearing practically nothing while posing in the bathroom mirror"),
+    _("wearing your birthday suit while pretending to sleep"),
+]
+THIRST_TRAPS_FEMALE = [
+    _("not wearing your bikini bottoms while laying by the pool"),
+    _("wearing a thong while eating a cucumber"),
+    _("wearing a thong while sprawled out on the floor"),
+    _("wearing edible underwear while dancing at home"),
+    _("wearing edible underwear while laying on the dinner table"),
+    _("wearing just a t-shirt while eating a cucumber"),
+]
+THIRST_TRAPS_MALE = [
+    _("as 'The Naked Chef'"),
+    _("wearing a suit while eating a cherry"),
+    _("wearing just a pair of jeans while mowing the lawn"),
+    _("flexing your muscles while shaving your beard"),
+]
+# Your Travels = 'You posted {social_travel_media} {social_travel} on Instagram
+SOCIAL_TRAVEL_MEDIA = [
+    _("some magnificent art photos"),
+    _("a stunning night video"),
+    _("a video of yourself walking through markets"),
+]
+SOCIAL_TRAVEL = [
+    _("from your last vacation"),
+    _("from your trip to Paris"),
+    _("you took on your Hawaiian trip"),
+]
+# Vlog = 'You recorded {vlog} and posted it on Instagram.
+VLOG_POSTS = [
+    _("your daily life shenanigans as a vlog"),
+    _("a vlog of your morning routine"),
+]
+
+
+# TikTok
+# Twitter
+# YouTube
+
+
+# Social media handles: (for when 'someone called {@offensivebeavis} replied to your post, saying {you look sinister})
+
+SOCIAL_HANDLES = [
+    _("@2OldForThis"),
+    _("@TheTroubleMakers"),
+    _("@joe_not_exotic"),
+    _("@shaquille.oatmeal"),
+    _("@RenegadeMaster"),
+    _("@viewer_discretion_advised"),
+    _("@FunnyCatVidz"),
+    _("@CharliDamelioForPresident"),
+    _("@everythingbagelwithvegancreamcheese"),
+    _("@name_is_in_use"),
+    _("@i_dont_dance"),
+    _("@builtdifferent"),
+    _("@shadowbanned"),
+    _("@not_my_idea"),
+    _("@down_with_the_kids"),
+    _("@amicoolyet"),
+    _("@Addison_Rae_Of_Sunshine"),
+    _("@im_an_accountant"),
+    _("@IYELLALOT"),
+    _("@FrostedCupcake"),
+    _("@Avocadorable"),
+    _("@MrsDracoMalfoy"),
+    _("@MrsChalamet"),
+    _("@MrsStyles"),
+    _("@CourtesyFlush"),
+    _("@MomsSpaghetti"),
+    _("@just_a_teen"),
+    _("@GenZWarrior"),
+    _("@what_does_this_button_do"),
+    _("@not_funny"),
+    _("@DestinysGrandchild"),
+    _("@champain"),
+    _("@AspiringInfluencer"),
+    _("@ClassyBadassy"),
+    _("@severusvape"),
+    _("@RuleFollower"),
+    _("@Lizzos_Flute"),
+    _("@urcutejeans"),
+    _("@guess_who"),
+    _("@insert_name_here"),
+    _("@InstagramM0del"),
+    _("@baeconandeggz"),
+    _("@look_mom"),
+    _("@botaccount"),
+    _("@QuarQueen"),
+    _("@Reese_Withoutaspoon"),
+    _("@ReeseWithafork"),
+    _("@ImageNotUploaded"),
+    _("@No_Feet_Pics"),
+    _("@wherearethetomatoes"),
+    _("@TequilaMockingbird"),
+    _("@the_other_name_were_taken"),
+    _("@not_my_first_choice"),
+    _("@PaintMeLikeOneOfYourFrenchGirls"),
+    _("@Hot_Name_Here"),
+    _("@InstagramHubby"),
+    _("@BasicBeach"),
+    _("@thot_patrol"),
+    _("@my_anaconda_does"),
+    _("@kim_chi"),
+    _("@username_copied"),
+    _("@Ariana_Grandes_Ponytail"),
+    _("@definitely_not_an_athlete"),
+    _("@will_pay_extra_for_guac"),
+    _("@not_my_1st_rodeo"),
+    _("@coolshirtbra"),
+    _("@DMmeforcompliments"),
+    _("@baecon"),
+    _("@boneappleteeth"),
+    _("@valid8me"),
+    _("@personallyvictimizedbyreginageorge"),
+    _("@been_there_done_that"),
+    _("@hi_future_employers"),
+    _("@chalametbmybae"),
+    _("@NorthWestsAssistant"),
+    _("@hotgirlbummer"),
+]
+
+# Negative social responses: (E.g. 'someone called {@offensivebeavis} replied to your post, saying {you look sinister})
+NEGATIVE_SOCIAL_RESPONSES = [
+    _("you look sinister"),
+    _("your thoughts are absurd"),
+]
+
+# If you choose to meet someone from social media and they agree
+# E.g. {@offensivebeavis} has agreed to meet you at {a campsite}; use random choice {urban_locations}, {rural_locations}, {natural_locations} lists in place of {a campsite}
+
+
+
+# ------------------------------------------------------------------
+# Sweepstakes
+# ------------------------------------------------------------------
+# Time Machine
+# ------------------------------------------------------------------
+# Vacation
+#   Cruise
+#   Vacation
+# ------------------------------------------------------------------
+# Will & Testament
+# ------------------------------------------------------------------
+# Surrender
+
+# -------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------
+# [Assets Menu]
+
+# -------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------
+# [Interactions with NPCs]
+
+
+# -------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------
+# [Occupation Menu]
+# Education +
+#   Primary School +
+#       Primary School Faculty +
+#       Primary School Staff +
+#   Middle School +
+#       Activities +
+#       Cliques +
+#       Middle School Faculty +
+#       Middle School Staff +
+#   High School +
+#       Activities +
+#       Cliques +
+#       High School Faculty +
+#       High School Staff +
+#   Community College
+#   University
+#       Undergraduate courses
+#       Postgraduate courses
+#   Business School
+#   Dental School
+#   Law School
+#   Medical School
+#   Nursing School
+#   Pharmacy School
+#   Veterinary School
+# Freelance Gigs +
+#   Freelance Job Types +
+# Job Recruiter
+# Jobs +
+#   Full-Time Job Types +
+#   Full-Time Job Categories / Career paths +
+#   Education / Age requirements +
+# Military
+# Part-Time Jobs +
+#   Part Time Job Types +
+#   Part Time Job Categories +
+# Special Careers ++
+#   Actor ++
+#       Audition +
+#       Extra +
+#   Business +
+#       Acquisition +
+#       Startup +
+#           Startup types +
+#   Mafia ++
+#       Criminal organisation types ++
+#       Join methods +
+#       Syndicate names +
+#   Model +
+#       Agent Offers +
+#       Audition Types +
+#       Freelance Types +
+#       Fashion Brands +
+#       Fashion Magazines +
+#       Fashion Week Locations +
+#   Musician ++
+#       Band +
+#           Band roles +
+#       Solo +
+#           Solo artist roles +
+#               Record label names +
+#   Politician +
+#       Political office types +
+#   Pro Athlete +
+#       Sports types ++
+#           American Football +
+#           Association Football +
+#           Australian Rules Football +
+#           Baseball +
+#           Basketball +
+#           Boxing +
+#           Canadian Football +
+#           Cricket +
+#           Gaelic Football +
+#           Golf +
+#           Ice Hockey +
+#           Rugby League +
+#           Rugby Union +
+#           Surfing +
+#           Tennis +
+#           Volleyball +
+#   Street Hustler +
+#       Street Names ++
+#       Street Hustling types ++
+#           Busker +
+#           Panhandler +
+#           Scam Artist +
+#           Street Performer +
+#- Also: Jobs for NPC Students and Adults in the wild +
+#   NPC Student Jobs +
+#   NPC Adult Jobs +
+
+
+
 
 
 # ------------------------------------------------------------------
@@ -2526,685 +4755,18 @@ PANHANDLER_STRATEGIES = [
 #   You added your {teacher_job}, {teacher_name}, on Snapchat.
 #   You drew a portrait of your {teacher_job}, {teacher_name}, and gave it to {him_her}.
 
-# ------------------------------------------------------------------
-# Casino
-CASINO_NAMES = [
-    _("Aria"),
-    _("Babylon"),
-    _("Back Passage"),
-    _("Baden-Baden"),
-    _("Bally’s"),
-    _("Bellagio"),
-    _("Binion's Horsehoe"),
-    _("Caesar’s Palace"),
-    _("Casino Royale"),
-    _("Circus Circus"),
-    _("Cosmopolitan"),
-    _("Encore"),
-    _("Excalibur"),
-    _("Flamingo"),
-    _("Galaxy"),
-    _("Golden Dragon"),
-    _("Golden Showers"),
-    _("Grand Lisboa"),
-    _("Grand Waldo"),
-    _("Harrah’s"),
-    _("Hot Slots"),
-    _("Luxor"),
-    _("Macau Palace"),
-    _("Mandalay Bay"),
-    _("MGM Grand"),
-    _("Mirage"),
-    _("Monte Carlo"),
-    _("Mountain"),
-    _("New York-New York"),
-    _("Ocean’s"),
-    _("Oh Craps!"),
-    _("Palazzo"),
-    _("Paris"),
-    _("MGM"),
-    _("Pink Taco"),
-    _("Planet Hollywood"),
-    _("Resorts World"),
-    _("Rio"),
-    _("Sahara"),
-    _("Slots-A-Fun"),
-    _("Strat"),
-    _("Taj Mahal"),
-    _("The Cromwell"),
-    _("The Linq"),
-    _("The Sands"),
-    _("The Star"),
-    _("Treasure Island"),
-    _("Tropicana"),
-    _("Venetian"),
-    _("Whiskey Pete’s"),
-    _("Wynn"),
-]
 
 
-# ------------------------------------------------------------------
-# Crime
-MENU_CRIME = [
-    _("Bank Robbery"),
-    _("Burglary"),
-    _("Embezzle"),
-    _("Grand Theft Auto"),
-    _("Hitman"),
-    _("Mischief"),
-    _("Murder"),
-    _("Pickpocket"),
-    _("Porch Pirate"),
-    _("Shoplift"),
-    _("Train Robbery"),
-]
 
 
-# ------------------------------------------------------------------
-# Doctors
-MENU_DOCTORS = [
-    _("Alternative Doctor"),
-    _("Doctor"),
-    _("Donate Blood"),
-    _("Donate Plasma"),
-    _("Emergency Room"),
-    _("Optometrist"),
-    _("Psychiatrist"),
-    _("Witch Doctor"),
-]
-MENU_ALTERNATIVE_DOCTORS = [
-    _("Acupuncturist"),
-    _("Chiropractor"),
-    _("Colon Hydrotherapy"),
-    _("Homeopathic Doctor"),
-]
-
-# ------------------------------------------------------------------
-# Fertility
-MENU_FERTILITY_FEMALE = [
-    _("Birth Control"),
-    _("IVF"),
-    _("Sperm Donor"),
-    _("Surrogate"),
-    _("Tubal Litigation"),
-]
-MENU_FERTILITY_MALE = [
-]
 
 
-# ------------------------------------------------------------------
-# Horse Races
-HORSE_RACE_HORSE_NAMES = [
-    _("1 Up"),
-    _("Afleet Alex"),
-    _("Allegro"),
-    _("Amazing Grace"),
-    _("AnAppleADay"),
-    _("Animal Kingdom"),
-    _("Anything’s Possible"),
-    _("Arrogate"),
-    _("Arrrrr"),
-    _("AsGoodAsItGets"),
-    _("Assault"),
-    _("Bangers n’ Mash"),
-    _("Bernardini"),
-    _("Best Bet"),
-    _("Big Ben"),
-    _("Big Brown"),
-    _("Black Bess"),
-    _("Black Velvet"),
-    _("Blushing Groom"),
-    _("Braveheart"),
-    _("Bricks and Mortar"),
-    _("Bucking Bronco"),
-    _("Bullet Proof"),
-    _("Buttercup"),
-    _("Caramel Wafer"),
-    _("ChaseYourDreams"),
-    _("Chicken Dinner"),
-    _("Chico Time"),
-    _("Cloud 9"),
-    _("Conquistador Cielo"),
-    _("Cotton Eyed Joe"),
-    _("Curlin"),
-    _("Daisy"),
-    _("Damascus"),
-    _("Dancing Queen"),
-    _("Denman’s Call"),
-    _("Destiny’s Child"),
-    _("Don’t You Stop"),
-    _("DoReMiFaSoLaTiDo"),
-    _("Easy Goer"),
-    _("Eight Belles"),
-    _("Enchantress"),
-    _("Exterminator"),
-    _("Fast As Lightning"),
-    _("Ferdinand"),
-    _("Fifty Shades of Hay"),
-    _("Flame Thrower"),
-    _("Fly Me To The Moon"),
-    _("Foolish Pleasure"),
-    _("Foxy Lady"),
-    _("FrostyJacks"),
-    _("Gallant Fox"),
-    _("Game On Dude"),
-    _("Genuine Risk"),
-    _("Ghostzapper"),
-    _("Giant’s Causeway"),
-    _("Ginger Snap"),
-    _("Glamour Puss"),
-    _("Go For Wand"),
-    _("Gold Digger"),
-    _("Gold Dust"),
-    _("Graydar"),
-    _("Great Gatsby"),
-    _("Gun Runner"),
-    _("Hahahahahaha"),
-    _("Hail to Reason"),
-    _("Havre de Grace"),
-    _("Head over Heels"),
-    _("Hoof Hearted"),
-    _("Horsing Around"),
-    _("Hotshot"),
-    _("I’ll Have Another"),
-    _("Isn’t She Lovely"),
-    _("It’s A Long Story"),
-    _("Iwinyougetnothing"),
-    _("Jackpot"),
-    _("Jean Valjean"),
-    _("John Henry"),
-    _("Key to the Mint"),
-    _("King of Kings"),
-    _("Lady Eli"),
-    _("Lady Jane Gray"),
-    _("Lady’s Secret"),
-    _("Lava Man"),
-    _("Lawyer Ron"),
-    _("Let’s Go!"),
-    _("Lexington"),
-    _("Looking Good"),
-    _("Magic Mike"),
-    _("Mamma Mia"),
-    _("Maple Stirrup"),
-    _("Mariah’s Storm"),
-    _("Midnight Dream"),
-    _("Mineshaft"),
-    _("Mischief"),
-    _("Morgan Le Fay"),
-    _("My Heart’s Desire"),
-    _("Mysterious Girl"),
-    _("No Fear"),
-    _("Nuts"),
-    _("Old Town Road"),
-    _("Omaha Beach"),
-    _("One Trick Pony"),
-    _("Palace Malice"),
-    _("Perfect Harmony"),
-    _("Personal Ensign"),
-    _("Pippi Longstocking"),
-    _("Point Given"),
-    _("Prima Donna"),
-    _("Prince Caspian"),
-    _("Prince Charming"),
-    _("Pulpit"),
-    _("Quality Street"),
-    _("Queen Bee"),
-    _("Queen of Sheba"),
-    _("Rachel Alexandra"),
-    _("Rainbow Fire"),
-    _("Raise a Native"),
-    _("Razzle Dazzle"),
-    _("Regret"),
-    _("Riva Ridge"),
-    _("Round Table"),
-    _("RubyRubyRubyRuby"),
-    _("Runhappy"),
-    _("SaveTheBest‘TillLast"),
-    _("Seeking the Gold"),
-    _("Senorita"),
-    _("Serena’s Song"),
-    _("Shanghai Bobby"),
-    _("ShimmyShimmyYa"),
-    _("Silver Charm"),
-    _("Sir Barton"),
-    _("Skip Away"),
-    _("Slew o’ Gold"),
-    _("Sniper’s Dream"),
-    _("Snow White"),
-    _("Socks"),
-    _("Speed of Light"),
-    _("Speedy Gonzales"),
-    _("Storm Cat"),
-    _("Stormbreaker"),
-    _("Street Sense"),
-    _("Super Horse"),
-    _("Super Star"),
-    _("Sweet Dreams"),
-    _("Sweet Pea"),
-    _("Tabasco Cat"),
-    _("Tempest"),
-    _("Thunder Bolt"),
-    _("Thunder Gulch"),
-    _("Tiznow"),
-    _("Tonalist"),
-    _("Trigger"),
-    _("Triple Threat"),
-    _("Trojan Horse"),
-    _("Twist n’ Shout"),
-    _("War Emblem"),
-    _("WeAreTheChampions"),
-    _("Wee Willie Winkie"),
-    _("Winsome"),
-    _("Wise Dan"),
-    _("World Class"),
-    _("Zero to Hero"),
-]
+
 
 
 
 # ------------------------------------------------------------------
-# Identity
 
-# Sexualities
-SEXUALITY = [
-    _("Straight"),
-    _("Bi"),
-    _("Gay"),
-]
-# Identity Genders
-IDENTITY_GENDER_FEMALE = [
-    _("Cisgender"),
-    _("Genderqueer"),
-    _("Non-Binary"),
-    _("Transgender Male"),
-]
-IDENTITY_GENDER_MALE = [
-    _("Cisgender"),
-    _("Genderqueer"),
-    _("Non-Binary"),
-    _("Transgender Female"),
-]
-# Name Change
-
-# ------------------------------------------------------------------
-# Licences
-LICENCE_TYPES = [
-    _("Boating Licence"),
-    _("Driving Licence"),
-    _("Flight School"),
-    _("Motorbike Licence"),
-    _("Pilot's Licence"),
-] 
-
-
-# ------------------------------------------------------------------
-# Love 
-# Maybe Dating app and gay dating app should be rolled into 'Dating App' with a gender selection
-MENU_LOVE = [
-    _("Date"),
-    _("Dating App"),
-    _("Gay Dating App"),
-    _("Hook Up"),
-    _("Threesome"),
-]
-
-
-# ------------------------------------------------------------------
-# Nightlife
-NIGHTLIFE_TYPES = [
-    _("Bar"),
-    _("Cabaret"),
-    _("Karaoke Bar"),
-    _("Live Music"),
-    _("Lounge Bar"),
-    _("Night Market"),
-    _("Nightclub"),
-    _("Pub"),
-    _("Strip Club"),
-]
-NIGHTCLUB_NAMES = [
-    _("APT"),
-    _("BCM Dance Palace"),
-    _("Berghain"),
-    _("Beta"),
-    _("Blue Note"),
-    _("Cavo Paradiso"),
-    _("CBGB"),
-    _("Club Space"),
-    _("Copacabana"),
-    _("Fabric"),
-    _("Green Valley"),
-    _("Hacienda"),
-    _("Hakkasan"),
-    _("Lead"),
-    _("Limelight"),
-    _("LIV"),
-    _("Marquee"),
-    _("Ministry of Sound"),
-    _("Octagon"),
-    _("Pacha"),
-    _("Paradise Garage"),
-    _("Privilege"),
-    _("Sirena"),
-    _("Space"),
-    _("Studio 54"),
-    _("The Bank"),
-    _("The Roxy"),
-    _("The Warehouse Project"),
-    _("Tootsie’s Orchid Lounge"),
-    _("Trouw"),
-    _("Tunnel"),
-    _("Viper Room"),
-    _("Webster Hall"),
-    _("Whisky A Go-Go"),
-    _("Womb"),
-    _("XS"),
-    _("Zouk"),
-]
-
-
-
-# ------------------------------------------------------------------
-# Plastic Surgery
-PLASTIC_SURGERIES = [
-    _("Botox"),
-    _("Brazilian Butt Lift"),
-    _("Breast Augmentation"),
-    _("Eyelid Surgery"),
-    _("Face Lift"),
-    _("Gender Reassignment"),
-    _("Liposuction"),
-    _("Nose Job"),
-    _("Tummy Tuck"),
-]
-
-
-# ------------------------------------------------------------------
-# Social media
-
-# Social media posts:
-# Nb. There seems to be an issue in the original where the number of new followers from a viral post can be unrealistically low. E.g. Over 20,000 likes but 11 follows. suggest having a minimum percentage, otherwise it's not 'viral' its just bot likes
-
-# Instagram
-# Challenges = 'You recorded a video of yourself doing the '{challenges}' and posted it on Instagram.
-CHALLENGES = [
-    _("Ice Bucket Challenge"),
-    _(""),
-]
-# Dance videos = 'You recorded a video of yourself {dance_video_dances} to {dance_video_songs} and posted it to Instagram.
-DANCE_VIDEO_DANCES = [
-    _("tap dancing"),
-]
-DANCE_VIDEO_SONGS = [
-    _("a P!nk song"),
-]
-# Family photos = 'You posted {family_photos} family photo on Instagram.
-FAMILY_PHOTOS = [
-    _("a cute"),
-    _("an embarrasing"),
-]
-# Food photos = 'You posted a picture of {food_photos} on Instagram.
-FOOD_PHOTOS = [
-    _("a photo of a cake you found on the internet"),
-    _("your nasty snack"),
-]
-# Memes = 'You shared {memes} meme on Instagram.
-MEMES = [
-    _("a ridiculous"),
-]
-# Motivational Quotes = 'You posted {quotes_adjective} quote about {quotes_topic}
-QUOTES_ADJECTIVE = [
-    _("an inspirational"),
-]
-QUOTES_TOPIC = [
-    _("relationships"),
-]
-# Political Video = 'You posted on Instagram {political_videos}.
-POLITICAL_VIDEOS = [
-    _("promoting your political ideology"),
-    _("campaigning for your political ideology"),
-    _("supporting your favourite political candidate"),
-]
-# Poll = 'You posted a poll on Instagram asking your followers "{polls}".
-POLLS = [
-    _("Which social media platform is the best?"),
-    _("What is the best song?"),
-]
-# Random Video = 'You recorded {random_video_adjectives} video of {random_video_topics} and posted it on Instagram.
-RANDOM_VIDEO_ADJECTIVES = [
-    _("an outlandish"),
-]
-RANDOM_VIDEO_TOPICS = [
-    _("yourself talking with accents"),
-]
-# Reshare Celebrity = 'You shared {reshare_celebrity_media} that {celebrity} posted on Instagram. Use a random choice between all the celebrity name lists in place of {celebrity}
-RESHARE_CELEBRITY_MEDIA = [
-    _("a meme"),
-    _("a photo"),
-    _("a picture"),
-    _("a reel"),
-    _("a story"),
-    _("a video"),
-]
-# Reshare Friend = 'You shared {reshare_friend_media} that your friend posted on Instagram.
-RESHARE_FRIEND_MEDIA = [
-    _("a meme"),
-    _("a photo"),
-    _("a picture"),
-    _("a reel"),
-    _("a story"),
-    _("a video"),
-]
-# Reshare Celebrity = 'You shared {reshare_musician_media} that {celebrity_musician} posted on Instagram. Use a random choice between the {celebrity_musician_male}, {celebrity_musician_female}, and {celebrity_band} lists in the celebrity section
-RESHARE_MUSICIAN_MEDIA = [
-    _("a meme"),
-    _("a photo"),
-    _("a picture"),
-    _("a recording session"),
-    _("a reel"),
-    _("a song"),
-    _("a story"),
-    _("a video"),
-    _("their latest album cover"),
-]
-# Selfies = 'You posted {selfies} on Instagram.
-SELFIES = [
-    _("a duck face selfie"),
-    _("a selfie pulling a funny face"),
-    _("a professional looking selfie"),
-]
-# Sexy Pics = 'You posted {sexy_pics_male} on Instagram.
-SEXY_PICS_MALE = [
-    _("a risqué selfie of yourself"),
-    _("a photo of yourself clearly showing your muscles"),
-    _("a selfie gazing through the lens dreamily"),
-    _("a gym selfie while working out"),
-]
-# Sexy Pics = 'You posted {sexy_pics_female} on Instagram.
-SEXY_PICS_FEMALE = [
-    _("a risqué selfie of yourself"),
-    _("a side-on mirror selfie emphasising your tight dress"),
-    _("an over-the-shoulder bikini selfie showing your bum in the background"),
-    _("a gym selfie while working out"),
-]
-# Skit Video = 'You {and your friend made a slapstick skit} video and posted it on Instagram.
-SKIT_VIDEOS = [
-    _("and your friend made a slapstick skit"),
-]
-# Social Justice Video = 'You posted on Instagram {social_justice_videos}.
-SOCIAL_JUSTICE_VIDEOS = [
-    _("supporting social justice"),
-]
-# Stories = 'You posted a story {social_stories} on Instagram.
-SOCIAL_STORIES = [
-    _("about your weird day"),
-]
-# Thirst Traps = 'You posted a photo on Instagram of yourself {thirst_traps}.
-THIRST_TRAPS = [
-    _("holding a water pistol and wearing white underwear"),
-    _("looking off into the distance and only wearing a towel"),
-    _("taking a shower through half-fogged glass"),
-    _("wearing a sexy bathing suit while taking a shower"),
-    _("wearing just a pair of jeans while mowing the lawn"),
-    _("wearing just a t-shirt"),
-    _("wearing just a t-shirt while laying on the dinner table"),
-    _("wearing nothing while making a duck face"),
-    _("wearing nothing while riding an inflatable Orca in the swimming pool"),
-    _("wearing only sushi while reading a book"),
-    _("wearing practically nothing while laying in bed"),
-    _("wearing practically nothing while posing in the bathroom mirror"),
-    _("wearing your birthday suit while pretending to sleep"),
-]
-THIRST_TRAPS_FEMALE = [
-    _("not wearing your bikini bottoms while laying by the pool"),
-    _("wearing a thong while eating a cucumber"),
-    _("wearing a thong while sprawled out on the floor"),
-    _("wearing edible underwear while dancing at home"),
-    _("wearing edible underwear while laying on the dinner table"),
-    _("wearing just a t-shirt while eating a cucumber"),
-]
-THIRST_TRAPS_MALE = [
-    _("as 'The Naked Chef'"),
-    _("wearing a suit while eating a cherry"),
-    _("wearing just a pair of jeans while mowing the lawn"),
-    _("flexing your muscles while shaving your beard"),
-]
-# Your Travels = 'You posted {social_travel_media} {social_travel} on Instagram
-SOCIAL_TRAVEL_MEDIA = [
-    _("some magnificent art photos"),
-    _("a stunning night video"),
-    _("a video of yourself walking through markets"),
-]
-SOCIAL_TRAVEL = [
-    _("from your last vacation"),
-    _("from your trip to Paris"),
-    _("you took on your Hawaiian trip"),
-]
-# Vlog = 'You recorded {vlog} and posted it on Instagram.
-VLOG_POSTS = [
-    _("your daily life shenanigans as a vlog"),
-    _("a vlog of your morning routine"),
-]
-
-# Social media handles: (for when 'someone called {@offensivebeavis} replied to your post, saying {you look sinister})
-
-SOCIAL_HANDLES = [
-    _("@2OldForThis"),
-    _("@TheTroubleMakers"),
-    _("@joe_not_exotic"),
-    _("@shaquille.oatmeal"),
-    _("@RenegadeMaster"),
-    _("@viewer_discretion_advised"),
-    _("@FunnyCatVidz"),
-    _("@CharliDamelioForPresident"),
-    _("@everythingbagelwithvegancreamcheese"),
-    _("@name_is_in_use"),
-    _("@i_dont_dance"),
-    _("@builtdifferent"),
-    _("@shadowbanned"),
-    _("@not_my_idea"),
-    _("@down_with_the_kids"),
-    _("@amicoolyet"),
-    _("@Addison_Rae_Of_Sunshine"),
-    _("@im_an_accountant"),
-    _("@IYELLALOT"),
-    _("@FrostedCupcake"),
-    _("@Avocadorable"),
-    _("@MrsDracoMalfoy"),
-    _("@MrsChalamet"),
-    _("@MrsStyles"),
-    _("@CourtesyFlush"),
-    _("@MomsSpaghetti"),
-    _("@just_a_teen"),
-    _("@GenZWarrior"),
-    _("@what_does_this_button_do"),
-    _("@not_funny"),
-    _("@DestinysGrandchild"),
-    _("@champain"),
-    _("@AspiringInfluencer"),
-    _("@ClassyBadassy"),
-    _("@severusvape"),
-    _("@RuleFollower"),
-    _("@Lizzos_Flute"),
-    _("@urcutejeans"),
-    _("@guess_who"),
-    _("@insert_name_here"),
-    _("@InstagramM0del"),
-    _("@baeconandeggz"),
-    _("@look_mom"),
-    _("@botaccount"),
-    _("@QuarQueen"),
-    _("@Reese_Withoutaspoon"),
-    _("@ReeseWithafork"),
-    _("@ImageNotUploaded"),
-    _("@No_Feet_Pics"),
-    _("@wherearethetomatoes"),
-    _("@TequilaMockingbird"),
-    _("@the_other_name_were_taken"),
-    _("@not_my_first_choice"),
-    _("@PaintMeLikeOneOfYourFrenchGirls"),
-    _("@Hot_Name_Here"),
-    _("@InstagramHubby"),
-    _("@BasicBeach"),
-    _("@thot_patrol"),
-    _("@my_anaconda_does"),
-    _("@kim_chi"),
-    _("@username_copied"),
-    _("@Ariana_Grandes_Ponytail"),
-    _("@definitely_not_an_athlete"),
-    _("@will_pay_extra_for_guac"),
-    _("@not_my_1st_rodeo"),
-    _("@coolshirtbra"),
-    _("@DMmeforcompliments"),
-    _("@baecon"),
-    _("@boneappleteeth"),
-    _("@valid8me"),
-    _("@personallyvictimizedbyreginageorge"),
-    _("@been_there_done_that"),
-    _("@hi_future_employers"),
-    _("@chalametbmybae"),
-    _("@NorthWestsAssistant"),
-    _("@hotgirlbummer"),
-]
-
-# Negative social responses: (E.g. 'someone called {@offensivebeavis} replied to your post, saying {you look sinister})
-NEGATIVE_SOCIAL_RESPONSES = [
-    _("you look sinister"),
-    _("your thoughts are absurd"),
-]
-
-# If you choose to meet someone from social media and they agree
-# E.g. {@offensivebeavis} has agreed to meet you at {a campsite}; use random choice {urban_locations}, {rural_locations}, {natural_locations} lists in place of {a campsite}
-
-
-# ------------------------------------------------------------------
-# Instruments
-MUSICAL_INSTRUMENT_TYPES = [
-    _("Accordian"),
-    _("Banjo"),
-    _("Bass Guitar"),
-    _("Cello"),
-    _("Didgeridoo"),
-    _("Drums"),
-    _("Flute"),
-    _("Guitar"),
-    _("Harmonica"),
-    _("Harp"),
-    _("Kazoo"),
-    _("Keyboard"),
-    _("Organ"),
-    _("Pan Flute"),
-    _("Piano"),
-    _("Recorder"),
-    _("Saxophone"),
-    _("Steel Drum"),
-    _("Tambourine"),
-    _("Triangle"),
-    _("Trombone"),
-    _("Trumpet"),
-    _("Tuba"),
-    _("Violin"),
-]
 
 # ------------------------------------------------------------------
 # Middle School and High School cliques:
@@ -3281,661 +4843,11 @@ HIGH_SCHOOL_ACTIVITIES = [
     _("Yearbook Club"),
 ]
 
-# ------------------------------------------------------------------
-
-# Books
-BOOKS = [
-    _("The Dictionary"),
-]
-BOOKS_CHILD = [
-    _("Where the Wild Things Are"),
-    _("Goodnight Moon"),
-    _("Brown Bear, Brown Bear, What Do You See?"),
-    _("The Snowy Day"),
-    _("If You Give A Mouse A Cookie"),
-    _("Stellaluna"),
-    _("The Very Hungry Caterpillar"),
-]
-BOOKS_TEEN = [
-    _(""),
-]
 
 # ------------------------------------------------------------------
 
-# Movies
 
-MOVIES = [
-    _("20,000 Leagues Under the Sea"),
-    _("2001: A Space Odyssey"),
-    _("Aladdin"),
-    _("Alice in Wonderland"),
-    _("All Quiet on the Western Front"),
-    _("Aquaman"),
-    _("Armageddon"),
-    _("Avatar"),
-    _("Avengers: Age of Ultron"),
-    _("Avengers: Endgame"),
-    _("Avengers: Infinity War"),
-    _("Back to the Future"),
-    _("Bambi"),
-    _("Beauty and the Beast"),
-    _("Ben-Hur"),
-    _("Black Panther"),
-    _("Boom Town"),
-    _("Butch Cassidy and the Sundance Kid"),
-    _("Captain America: Civil War"),
-    _("Captain Marvel"),
-    _("Cavalcade"),
-    _("Cinderella"),
-    _("Cinerama Holiday"),
-    _("City Lights"),
-    _("Cleopatra"),
-    _("Demon Slayer: Mugen Train"),
-    _("Despicable Me 3"),
-    _("Diamonds Are Forever"),
-    _("Die Hard with a Vengeance"),
-    _("Douglas Fairbanks in Robin Hood"),
-    _("Duel in the Sun"),
-    _("E.T. the Extra-Terrestrial"),
-    _("Easter Parade"),
-    _("Fatal Attraction"),
-    _("Fiddler on the Roof"),
-    _("Finding Dory"),
-    _("For Heaven's Sake"),
-    _("For Whom the Bell Tolls"),
-    _("Forever Amber"),
-    _("Frankenstein"),
-    _("From Russia with Love"),
-    _("Frozen"),
-    _("Frozen II"),
-    _("Funny Girl"),
-    _("Furious 7"),
-    _("Ghost"),
-    _("Going My Way"),
-    _("Goldfinger"),
-    _("Gone with the Wind"),
-    _("Grease"),
-    _("Harry Potter and the Deathly Hallows – Part 2"),
-    _("Harry Potter and the Goblet of Fire"),
-    _("Harry Potter and the Philosopher's Stone"),
-    _("Hawaii"),
-    _("How the West Was Won"),
-    _("I'm No Angel"),
-    _("Incredibles 2"),
-    _("Independence Day"),
-    _("Indiana Jones and the Last Crusade"),
-    _("Indiana Jones and the Temple of Doom"),
-    _("Intolerance"),
-    _("Iron Man 3"),
-    _("It Happened One Night"),
-    _("Jaws"),
-    _("Joker"),
-    _("Jurassic Park"),
-    _("Jurassic World"),
-    _("Jurassic World Dominion"),
-    _("Jurassic World: Fallen Kingdom"),
-    _("King Kong"),
-    _("King Solomon's Mines"),
-    _("Lady and the Tramp"),
-    _("Lawrence of Arabia"),
-    _("Love Story"),
-    _("Mary Poppins"),
-    _("Mickey"),
-    _("Minions"),
-    _("Mission: Impossible 2"),
-    _("Mister Roberts"),
-    _("Mom and Dad"),
-    _("Moonraker"),
-    _("Mrs. Miniver"),
-    _("Mutiny on the Bounty"),
-    _("My Fair Lady"),
-    _("One Hundred and One Dalmatians"),
-    _("Peter Pan"),
-    _("Pinocchio"),
-    _("Pirates of the Caribbean: At World's End"),
-    _("Pirates of the Caribbean: Dead Man's Chest"),
-    _("Pirates of the Caribbean: On Stranger Tides"),
-    _("Psycho"),
-    _("Quo Vadis"),
-    _("Raiders of the Lost Ark"),
-    _("Rain Man"),
-    _("Rear Window"),
-    _("Return of the Jedi"),
-    _("Rocky"),
-    _("Rocky II"),
-    _("Rogue One: A Star Wars Story"),
-    _("Samson and Delilah"),
-    _("San Francisco"),
-    _("Sergeant York"),
-    _("She Done Him Wrong"),
-    _("Shrek 2"),
-    _("Skyfall"),
-    _("Snow White and the Seven Dwarfs"),
-    _("Song of the South"),
-    _("South Pacific"),
-    _("Spartacus"),
-    _("Spider-Man: Far From Home"),
-    _("Spider-Man: No Way Home"),
-    _("Star Wars"),
-    _("Star Wars: Episode I – The Phantom Menace"),
-    _("Star Wars: The Force Awakens"),
-    _("Star Wars: The Last Jedi"),
-    _("Star Wars: The Rise of Skywalker"),
-    _("Sunny Side Up"),
-    _("Swiss Family Robinson"),
-    _("Terminator 2: Judgment Day"),
-    _("The Avengers"),
-    _("The Bells of St. Mary's"),
-    _("The Best Years of Our Lives"),
-    _("The Bible: In the Beginning"),
-    _("The Big Parade"),
-    _("The Birth of a Nation"),
-    _("The Bridge on the River Kwai"),
-    _("The Broadway Melody"),
-    _("The Covered Wagon"),
-    _("The Dark Knight"),
-    _("The Dark Knight Rises"),
-    _("The Empire Strikes Back"),
-    _("The Exorcist"),
-    _("The Fate of the Furious"),
-    _("The Four Horsemen of the Apocalypse"),
-    _("The French Connection"),
-    _("The Godfather"),
-    _("The Godfather: Part II"),
-    _("The Godfather: Part III"),
-    _("The Graduate"),
-    _("The Greatest Show on Earth"),
-    _("The Hobbit: An Unexpected Journey"),
-    _("The Jungle Book"),
-    _("The Lion King"),
-    _("The Longest Day"),
-    _("The Lord of the Rings: The Return of the King"),
-    _("The Lord of the Rings: The Two Towers"),
-    _("The Merry Widow"),
-    _("The Miracle Man"),
-    _("The Red Shoes"),
-    _("The Robe"),
-    _("The Sea Hawk"),
-    _("The Sign of the Cross"),
-    _("The Singing Fool"),
-    _("The Snake Pit"),
-    _("The Sound of Music"),
-    _("The Sting"),
-    _("The Ten Commandments"),
-    _("The Towering Inferno"),
-    _("This Is Cinerama"),
-    _("This Is the Army"),
-    _("Titanic"),
-    _("Top Gun"),
-    _("Top Gun: Maverick"),
-    _("Toy Story"),
-    _("Toy Story 3"),
-    _("Toy Story 4"),
-    _("Transformers: Age of Extinction"),
-    _("Transformers: Dark of the Moon"),
-    _("Unconquered"),
-    _("Way Down East"),
-    _("West Side Story"),
-    _("White Christmas"),
-    _("Who's Afraid of Virginia Woolf?"),
-    _("Wings"),
-    _("You Can't Take It With You"),
-    _("Zootopia"),
-]
-MOVIES_CHILD = [
-    _("Big Boy's Little Adventure"),
-]
-MOVIES_TEEN = [
-    _(""),
-]
-# Movies by category / genre (with year in the list) for 'we watched a comedy movie called {movie-name, from movie-year}, it {made me laugh}/{made us cry}/{was hilarious!}
-MOVIES_ANIMATED = [
-    _("Big Hero 6, from 2014"),
-    _("Brave, from 2012"),
-    _("Cars 2, from 2011"),
-    _("Coco, from 2017"),
-    _("Despicable Me, from 2010"),
-    _("Despicable Me 2, from 2013"),
-    _("Despicable Me 3, from 2017"),
-    _("Finding Dory, from 2016"),
-    _("Finding Nemo, from 2003"),
-    _("Frozen, from 2013"),
-    _("Frozen II, from 2019"),
-    _("Hotel Transylvania 3: Summer Vacation, from 2018"),
-    _("How to Train Your Dragon 2, from 2014"),
-    _("How to Train Your Dragon: The Hidden World, from 2019"),
-    _("Ice Age: Continental Drift, from 2012"),
-    _("Ice Age: Dawn of the Dinosaurs, from 2009"),
-    _("Ice Age: The Meltdown, from 2006"),
-    _("Incredibles 2, from 2018"),
-    _("Inside Out, from 2015"),
-    _("Kung Fu Panda, from 2008"),
-    _("Kung Fu Panda 2, from 2011"),
-    _("Madagascar, from 2005"),
-    _("Madagascar 3: Europe's Most Wanted, from 2012"),
-    _("Madagascar: Escape 2 Africa, from 2008"),
-    _("Minions, from 2015"),
-    _("Minions: The Rise of Gru , from 2022"),
-    _("Moana, from 2016"),
-    _("Monsters University, from 2013"),
-    _("Monsters, Inc., from 2001"),
-    _("Ne Zha, from 2019"),
-    _("Puss in Boots, from 2011"),
-    _("Ralph Breaks the Internet, from 2018"),
-    _("Ratatouille, from 2007"),
-    _("Shrek 2, from 2004"),
-    _("Shrek Forever After, from 2010"),
-    _("Shrek the Third, from 2007"),
-    _("Sing, from 2016"),
-    _("Tangled, from 2010"),
-    _("The Boss Baby, from 2017"),
-    _("The Croods, from 2013"),
-    _("The Incredibles, from 2004"),
-    _("The Lion King , from 1994"),
-    _("The Lion King , from 2019"),
-    _("The Secret Life of Pets, from 2016"),
-    _("The Simpsons Movie, from 2007"),
-    _("Toy Story 3, from 2010"),
-    _("Toy Story 4, from 2019"),
-    _("Up, from 2009"),
-    _("WALL-E, from 2008"),
-    _("Zootopia, from 2016"),
-]
-MOVIES_CHRISTMAS = [
-    _("A Bad Moms Christmas, from 2017"),
-    _("A Christmas Carol, from 2009"),
-    _("A Madea Christmas, from 2015"),
-    _("Almost Christmas, from 2016"),
-    _("Arthur Christmas, from 2011"),
-    _("Bad Santa, from 2003"),
-    _("Christmas with the Kranks, from 2004"),
-    _("Daddy's Home 2, from 2017"),
-    _("Deck the Halls, from 2006"),
-    _("Dr. Seuss' How the Grinch Stole Christmas!, from 2000"),
-    _("Elf, from 2003"),
-    _("Four Christmases, from 2008"),
-    _("Fred Claus, from 2007"),
-    _("Home Alone, from 1990"),
-    _("Home Alone 2: Lost in New York, from 1992"),
-    _("Jingle All the Way, from 1996"),
-    _("Krampus, from 2015"),
-    _("Last Christmas, from 2019"),
-    _("Love Actually, from 2003"),
-    _("Love the Coopers, from 2016"),
-    _("Miracle on 34th Street, from 1994"),
-    _("National Lampoon's Christmas Vacation, from 1989"),
-    _("Office Christmas Party, from 2016"),
-    _("Scrooged, from 1988"),
-    _("The Best Man Holiday, from 2013"),
-    _("The Grinch, from 2018"),
-    _("The Holiday, from 2006"),
-    _("The Nightmare Before Christmas, from 1993"),
-    _("The Nutcracker and the Four Realms, from 2018"),
-    _("The Polar Express, from 2004"),
-    _("The Santa Clause, from 1994"),
-    _("The Santa Clause 2, from 2002"),
-    _("The Santa Clause 3: The Escape Clause, from 2006"),
-    _("The Star, from 2017"),
-    _("This Christmas, from 2007"),
-]
-MOVIES_COMEDY = [
-    _("Bruce Almighty, from 2003"),
-    _("Cars, from 2006"),
-    _("Cars 2, from 2011"),
-    _("Deadpool, from 2016"),
-    _("Deadpool 2, from 2018"),
-    _("Despicable Me, from 2010"),
-    _("Despicable Me 2, from 2013"),
-    _("Despicable Me 3, from 2017"),
-    _("Detective Chinatown 2, from 2018"),
-    _("Detective Chinatown 3, from 2021"),
-    _("Hi, Mom, from 2021"),
-    _("Home Alone, from 1990"),
-    _("Hotel Transylvania 2, from 2015"),
-    _("Hotel Transylvania 3: Summer Vacation, from 2018"),
-    _("Incredibles 2, from 2018"),
-    _("Inside Out, from 2015"),
-    _("Madagascar, from 2005"),
-    _("Madagascar 3: Europe's Most Wanted, from 2012"),
-    _("Madagascar: Escape 2 Africa, from 2008"),
-    _("Meet the Fockers, from 2004"),
-    _("Men in Black, from 1997"),
-    _("Men in Black 3, from 2012"),
-    _("Men in Black II, from 2002"),
-    _("Minions, from 2015"),
-    _("Monsters University, from 2013"),
-    _("Monsters, Inc., from 2001"),
-    _("Mrs. Doubtfire, from 1993"),
-    _("Puss in Boots, from 2011"),
-    _("Ralph Breaks the Internet, from 2018"),
-    _("Ratatouille, from 2007"),
-    _("Sex and the City, from 2008"),
-    _("Shrek, from 2001"),
-    _("Shrek 2, from 2004"),
-    _("Shrek Forever After, from 2010"),
-    _("Shrek the Third, from 2007"),
-    _("Tangled, from 2010"),
-    _("Ted, from 2012"),
-    _("The Hangover, from 2009"),
-    _("The Hangover Part II, from 2011"),
-    _("The Incredibles, from 2004"),
-    _("The Intouchables, from 2011"),
-    _("The Lego Movie, from 2014"),
-    _("The Mermaid, from 2016"),
-    _("The Secret Life of Pets, from 2016"),
-    _("The Secret Life of Pets 2, from 2019"),
-    _("The Simpsons Movie, from 2007"),
-    _("Toy Story 2, from 1999"),
-    _("Toy Story 3, from 2010"),
-    _("Toy Story 4, from 2019"),
-    _("Wreck-It Ralph, from 2012"),
-]
-MOVIES_FANTASY = [
-    _("Aladdin, from 2019"),
-    _("Aladdin, from 1992"),
-    _("Alice in Wonderland, from 2010"),
-    _("Beauty and the Beast, from 2017"),
-    _("Cinderella, from 2015"),
-    _("Clash of the Titans, from 2010"),
-    _("Coco, from 2017"),
-    _("Demon Slayer: Kimetsu no Yaiba the Movie: Mugen Train, from 2020"),
-    _("Fantastic Beasts and Where to Find Them, from 2016"),
-    _("Fantastic Beasts: The Crimes of Grindelwald, from 2018"),
-    _("Frozen, from 2013"),
-    _("Frozen II, from 2019"),
-    _("Harry Potter and the Chamber of Secrets, from 2002"),
-    _("Harry Potter and the Deathly Hallows – Part 1, from 2010"),
-    _("Harry Potter and the Deathly Hallows – Part 2, from 2011"),
-    _("Harry Potter and the Goblet of Fire, from 2005"),
-    _("Harry Potter and the Half-Blood Prince, from 2009"),
-    _("Harry Potter and the Order of the Phoenix, from 2007"),
-    _("Harry Potter and the Philosopher's Stone, from 2001"),
-    _("Harry Potter and the Prisoner of Azkaban, from 2004"),
-    _("How to Train Your Dragon, from 2010"),
-    _("How to Train Your Dragon 2, from 2014"),
-    _("Indiana Jones and the Last Crusade, from 1989"),
-    _("Jumanji: The Next Level, from 2019"),
-    _("Jumanji: Welcome to the Jungle, from 2017"),
-    _("Maleficent, from 2014"),
-    _("Maleficent: Mistress of Evil, from 2019"),
-    _("Night at the Museum, from 2006"),
-    _("Oz the Great and Powerful, from 2013"),
-    _("Pirates of the Caribbean: At World's End, from 2007"),
-    _("Pirates of the Caribbean: Dead Man's Chest, from 2006"),
-    _("Pirates of the Caribbean: Dead Men Tell No Tales, from 2017"),
-    _("Pirates of the Caribbean: On Stranger Tides, from 2011"),
-    _("Pirates of the Caribbean: The Curse of the Black Pearl, from 2003"),
-    _("Shrek 2, from 2004"),
-    _("Shrek Forever After, from 2010"),
-    _("Shrek the Third, from 2007"),
-    _("The Chronicles of Narnia: The Lion, the Witch and the Wardrobe, from 2006"),
-    _("The Hobbit: An Unexpected Journey, from 2012"),
-    _("The Hobbit: The Battle of the Five Armies, from 2014"),
-    _("The Hobbit: The Desolation of Smaug, from 2013"),
-    _("The Jungle Book, from 2016"),
-    _("The Lord of the Rings: The Fellowship of the Ring, from 2001"),
-    _("The Lord of the Rings: The Return of the King, from 2003"),
-    _("The Lord of the Rings: The Two Towers, from 2002"),
-    _("The Twilight Saga: Breaking Dawn – Part 1, from 2011"),
-    _("The Twilight Saga: Breaking Dawn – Part 2, from 2012"),
-    _("The Twilight Saga: Eclipse, from 2010"),
-    _("The Twilight Saga: New Moon, from 2009"),
-    _("Up, from 2009"),
-]
-# There may be some issues with this list, it was taken from wikipedia's top grossing horror films list. 'scary movie' for instance is a teen comedy, and 'the mummy' is an action adventure
-MOVIES_HORROR = [
-    _("A Quiet Place, from 2018"),
-    _("A Quiet Place Part II, from 2021"),
-    _("Alien: Covenant, from 2017"),
-    _("Annabelle, from 2014"),
-    _("Annabelle Comes Home, from 2019"),
-    _("Annabelle: Creation, from 2017"),
-    _("Bram Stoker's Dracula, from 1992"),
-    _("Constantine, from 2005"),
-    _("Dark Shadows, from 2012"),
-    _("Get Out, from 2017"),
-    _("Glass, from 2019"),
-    _("Halloween, from 2018"),
-    _("Hannibal, from 2001"),
-    _("I Am Legend, from 2007"),
-    _("Interview with the Vampire, from 1994"),
-    _("It, from 2017"),
-    _("It Chapter Two, from 2019"),
-    _("Jaws, from 1975"),
-    _("Jaws 2, from 1978"),
-    _("Paranormal Activity 3, from 2011"),
-    _("Prometheus, from 2012"),
-    _("Resident Evil: Afterlife, from 2010"),
-    _("Resident Evil: Retribution, from 2012"),
-    _("Resident Evil: The Final Chapter, from 2017"),
-    _("Scary Movie, from 2000"),
-    _("Shutter Island, from 2010"),
-    _("Signs, from 2002"),
-    _("Sleepy Hollow, from 1999"),
-    _("Split, from 2017"),
-    _("The Blair Witch Project, from 1999"),
-    _("The Conjuring, from 2013"),
-    _("The Conjuring 2, from 2016"),
-    _("The Conjuring: The Devil Made Me Do It, from 2021"),
-    _("The Exorcist, from 1973"),
-    _("The Meg, from 2018"),
-    _("The Mummy, from 1999"),
-    _("The Mummy, from 2017"),
-    _("The Mummy Returns, from 2001"),
-    _("The Mummy: Tomb of the Dragon Emperor, from 2008"),
-    _("The Nun, from 2018"),
-    _("The Others, from 2001"),
-    _("The Ring, from 2002"),
-    _("The Silence of the Lambs, from 1991"),
-    _("The Sixth Sense, from 1999"),
-    _("The Village, from 2004"),
-    _("Unbreakable, from 2000"),
-    _("Us, from 2019"),
-    _("Van Helsing, from 2004"),
-    _("War of the Worlds, from 2005"),
-    _("World War Z, from 2013"),
-]
-MOVIES_MUSICAL = [
-    _("A Star Is Born, from 2018"),
-    _("Aladdin, from 2019"),
-    _("Aladdin, from 1992"),
-    _("Alvin and the Chipmunks, from 2007"),
-    _("Alvin and the Chipmunks: Chipwrecked, from 2011"),
-    _("Alvin and the Chipmunks: The Squeakquel, from 2009"),
-    _("Baahubali 2: The Conclusion, from 2017"),
-    _("Beauty and the Beast, from 2017"),
-    _("Beauty and the Beast, from 1991"),
-    _("Bohemian Rhapsody, from 2018"),
-    _("Charlie and the Chocolate Factory, from 2005"),
-    _("Chicago, from 2002"),
-    _("Cinderella, from 1950"),
-    _("Encanto, from 2021"),
-    _("Enchanted, from 2007"),
-    _("Frozen II, from 2019"),
-    _("Frozen, from 2013"),
-    _("Grease, from 1978"),
-    _("Happy Feet, from 2006"),
-    _("Hercules, from 1997"),
-    _("High School Musical 3: Senior Year, from 2008"),
-    _("Home, from 2015"),
-    _("La La Land, from 2016"),
-    _("Les Misérables, from 2012"),
-    _("Mamma Mia: Here We Go Again!, from 2018"),
-    _("Mamma Mia!, from 2008"),
-    _("Mary Poppins Returns, from 2018"),
-    _("Moana, from 2016"),
-    _("Mulan, from 1998"),
-    _("Pitch Perfect 2, from 2015"),
-    _("Pocahontas, from 1995"),
-    _("Rio, from 2011"),
-    _("Rio 2, from 2014"),
-    _("Saturday Night Fever, from 1977"),
-    _("Sing, from 2016"),
-    _("Sing 2, from 2021"),
-    _("Snow White and the Seven Dwarfs, from 1937"),
-    _("Tangled, from 2010"),
-    _("Tarzan, from 1999"),
-    _("The Greatest Showman, from 2017"),
-    _("The Hunchback of Notre Dame, from 1996"),
-    _("The Jungle Book, from 2016"),
-    _("The Jungle Book, from 1967"),
-    _("The Lion King, from 2019"),
-    _("The Lion King, from 1994"),
-    _("The Lorax, from 2012"),
-    _("The Polar Express, from 2004"),
-    _("The Princess and the Frog, from 2009"),
-    _("The Sound of Music, from 1965"),
-    _("Trolls, from 2016"),
-]
-MOVIES_ADULT = [
-    _(
-        "9 Lives of a Wet Pussy, from 1976. It starred Pauline LaMonde and was about the erotic escapades of a young New York heiress"
-    ),
-    _("A Dirty Western, from 1975"),
-    _("A Perfect Ending, from 2012"),
-    _("A Taste of Joy, from 2012"),
-    _("Alice in Wonderland: An X-Rated Musical Comedy, from 1976"),
-    _("Animal Instincts, from 1992"),
-    _("Aphrodesia's Diary, from 1983"),
-    _(
-        "Babylon Pink, from 1979. It starred several leads and was about the sexual fantasies of several women; a bored housewife, a business woman, an older woman, and a sexually curious teenager"
-    ),
-    _("Barbara Broadcast, from 1977"),
-    _("Behind the Green Door, from 1972"),
-    _("Bend Over Boyfriend, from 1998"),
-    _(
-        "Bijou, from 1972. It starred Bill Harrison and was a gay film about a construction worker discovering an invitation to a sex club"
-    ),
-    _("Black Emmanuelle, from 1975"),
-    _(
-        "Blue Movie, from 1969. It was directed by Andy Warhol and starred Viva, and Louis Waldon"
-    ),
-    _("Bound, from 2015"),
-    _("Cabaret Desire, from 2011"),
-    _("Chemistry, from 2006"),
-    _("Dangerous Liaisons, from 2005"),
-    _("Debbie Does Dallas, from 1978"),
-    _("Deep Throat, from 1972"),
-    _("El Paso Wrecking Corp., from 1978"),
-    _("Emmanuelle, from 1974"),
-    _("Flashpoint, from 1998"),
-    _("Flesh Gordon, from 1974"),
-    _("Harlot, from 1971"),
-    _("High Test Girls, from 1980"),
-    _("Hotel Erotica, from 2002"),
-    _("Insatiable, from 1980"),
-    _("I am Curious (Blue), from 1968"),
-    _("I am Curious (Yellow), from 1967"),
-    _("Infidelity: Sex Stories 2, from 2011"),
-    _("Last Tango, from 2011"),
-    _("Love Toy, from 1968"),
-    _("Maraschino Cherry, from 1978"),
-    _("Missing: A Lesbian Crime Story, from 2016"),
-    _("Mona the Virgin Nymph, from 1970"),
-    _(
-        "Nothing Personal, from 1990. It starred Moana Pozzi and was about a personal quest to improve her sex life"
-    ),
-    _("Once Upon a Girl, from 1976"),
-    _("Perspective, from 2019"),
-    _("Pink Prison, from 1999"),
-    _("Pink Velvet 3: A Lesbian Odyssey, from 2005"),
-    _("Pirates, from 2005"),
-    _("Pirates II: Stagnetti’s Revenge, from 2008"),
-    _("Red Shoe Diaries, from 1992"),
-    _(
-        "Reel People, from 1984. It starred Juliet Anderson and was about real people performing their sexual desires on film for the first time"
-    ),
-    _("Rendez-vous, from 2015"),
-    _("School Girl, from 1971"),
-    _("Score, from 1974"),
-    _("Sensational Janine, from 1976"),
-    _("Sex Pursuits, from 1971. It starred Rene Bond"),
-    _(
-        "Sex Stories, from 2009. It starred multiple leads and was about two dinner parties simultaneously unfolding. Each sharing stories of their recent escapades"
-    ),
-    _("Sexual Chronicles of a French Family, from 2012"),
-    _("Snapshot, from 2016"),
-    _("Taboo, from 1980"),
-    _("Taboo II, from 1982"),
-    _("The Bare Wench Project, from 2000"),
-    _("The Bi Apple, from 2007"),
-    _("The Bite, from 1977"),
-    _("The Cheerleaders, from 1973"),
-    _(
-        "The Devil in Miss Jones, from 1973. It starred Georgina Spelvin and was about a woman who commits suicide. Where, instead of going to Heaven, she returns to life to embody lust"
-    ),
-    _("The Dreamers, from 2003"),
-    _("The Fashionistas, from 2002"),
-    _("The Friend Zone, from 2012. It starred Riley Reid"),
-    _("The Good Girl, from 2004"),
-    _("The Grafenberg Spot, from 1985"),
-    _("The Jade Pussycat, from 1977"),
-    _("The Obsession, from 2017. It starred Abella Danger"),
-    _("The Opening of Misty Beethoven, from 1976"),
-    _("The Submission of Emma Marx, from 2013"),
-    _(
-        "The Ultimate Pleasure, from 1977. It starred Kristine Heller and was about a cab driver who finds a suitcase full of money and realises he now has the means to fulfil all of his wife’s sexual fantasies"
-    ),
-    _("The Walking Dead: A Hardcore Parody, from 2013"),
-    _("The Xterminator, from 1986"),
-    _("Through the Looking Glass, from 1976"),
-    _("Tonight for Sure, from 1962"),
-    _("Xana and Dax: When Opposites Attract, from 2005"),
-    _(
-        "XConfessions Vol. 3, from 2014. It starred Maria Agrado, Samantha Bentley and Samia Duarte, and was a compilation of 10 erotic stories"
-    ),
-]
-MOVIES_SCI_FI = [
-    _("Armageddon, from 1998"),
-    _("Avatar, from 2009"),
-    _("Bumblebee, from 2018"),
-    _("Dawn of the Planet of the Apes, from 2014"),
-    _("E.T. the Extra-Terrestrial , from 1982"),
-    _("Godzilla, from 2014"),
-    _("Gravity, from 2013"),
-    _("I Am Legend, from 2007"),
-    _("Inception, from 2010"),
-    _("Independence Day, from 1996"),
-    _("Interstellar, from 2014"),
-    _("Jurassic Park, from 1993"),
-    _("Jurassic World, from 2015"),
-    _("Jurassic World Dominion , from 2022"),
-    _("Jurassic World: Fallen Kingdom, from 2018"),
-    _("Men in Black, from 1997"),
-    _("Men in Black 3, from 2012"),
-    _("Ready Player One, from 2018"),
-    _("Rise of the Planet of the Apes, from 2011"),
-    _("Rogue One: A Star Wars Story, from 2016"),
-    _("Star Trek Into Darkness, from 2013"),
-    _("Star Wars, from 1977"),
-    _("Star Wars: Episode I – The Phantom Menace, from 1999"),
-    _("Star Wars: Episode II – Attack of the Clones, from 2002"),
-    _("Star Wars: Episode III – Revenge of the Sith, from 2005"),
-    _("Star Wars: Episode V – The Empire Strikes Back, from 1980"),
-    _("Star Wars: Episode VI – Return of the Jedi, from 1983"),
-    _("Star Wars: The Force Awakens, from 2015"),
-    _("Star Wars: The Last Jedi, from 2017"),
-    _("Star Wars: The Rise of Skywalker, from 2019"),
-    _("Terminator 2: Judgment Day, from 1991"),
-    _("The Day After Tomorrow, from 2004"),
-    _("The Hunger Games, from 2012"),
-    _("The Hunger Games: Catching Fire, from 2013"),
-    _("The Hunger Games: Mockingjay – Part 1, from 2014"),
-    _("The Hunger Games: Mockingjay – Part 2, from 2015"),
-    _("The Lost World: Jurassic Park, from 1997"),
-    _("The Martian, from 2015"),
-    _("The Matrix, from 1999"),
-    _("The Matrix Reloaded, from 2003"),
-    _("The Wandering Earth, from 2019"),
-    _("Transformers, from 2007"),
-    _("Transformers: Age of Extinction, from 2014"),
-    _("Transformers: Dark of the Moon, from 2011"),
-    _("Transformers: Revenge of the Fallen, from 2009"),
-    _("Transformers: The Last Knight, from 2017"),
-    _("WALL-E, from 2008"),
-    _("War for the Planet of the Apes, from 2017"),
-    _("War of the Worlds, from 2005"),
-]
+
 
 
 # ------------------------------------------------------------------
@@ -4359,13 +5271,14 @@ SPEND_TIME_TEEN = [
 ]
 
 # E.g. You {spend_time_pet_x)} {pet_type}, {pet_name} = You listened to music with your cat, Pip.
-# All pets
-SPEND_TIME_PET_CAT = [
+# All pets (generic)
+SPEND_TIME_PET = [
     _("listened to hip-hop music with your"),
     _("listened to classical music with your"),
     _("played with your"),
 ]
 # Pet type specific
+# Cat
 SPEND_TIME_PET_CAT = [
     _("curled up and watched a movie with your"),
     _("let a motorised weasel ball loose for your"),
@@ -4374,6 +5287,7 @@ SPEND_TIME_PET_CAT = [
     _("used a laser pointer to play with your"),
     _("rolled a ball or yarn across the floor for your"),
 ]
+# Dog
 SPEND_TIME_PET_DOG = [
     _("curled up and watched a movie with your"),
     _("did the 'What The Fluff' challenge with your"),
@@ -4423,458 +5337,7 @@ CHILD_EVENT_CHOICE_SCHOOL = [
     _(""),
 ]
 
-# Pet types:
-PET_TYPE = [
-    _("cat"),
-    _("dog"),
-    _("fish"),
-]
-# Pet breeds: (for use in the pet shop)
-PET_BREEDS_CAT = [
-    _("Abyssinian Cat"),
-    _("America Shorthair Cat"),
-    _("House Cat"),
-    _("Tabby Cat"),
-]
-PET_BREEDS_DOG = [
-    _("Cairn Terrier"),
-    _("German Shepherd"),
-    _("Mutt"),
-]
-PET_BREEDS_FISH = [
-    _("Betta Fish"),
-]
-# Pet names:
-PET_NAMES_CAT_MALE = [
-    _("Oliver"),
-    _("Leo"),
-    _("Milo"),
-    _("Charlie"),
-    _("Max"),
-    _("Simba"),
-    _("Jack"),
-    _("Loki"),
-    _("Ollie"),
-    _("Jasper"),
-    _("Buddy"),
-    _("Smokey"),
-    _("Oscar"),
-    _("Toby"),
-    _("Tiger"),
-    _("Finn"),
-    _("Simon"),
-    _("Binx"),
-    _("Louie"),
-    _("Henry"),
-    _("Oreo"),
-    _("Winston"),
-    _("Salem"),
-    _("Gus"),
-    _("Felix"),
-    _("Tigger"),
-    _("Rocky"),
-    _("Kitty"),
-    _("Sam"),
-    _("Teddy"),
-    _("Apollo"),
-    _("Blu"),
-    _("Gizmo"),
-    _("Archie"),
-    _("Jax"),
-    _("Bear"),
-    _("Boots"),
-    _("Frankie"),
-    _("Chester"),
-    _("Bandit"),
-    _("Beau"),
-    _("Pumpkin"),
-    _("Cosmo"),
-    _("Lucky"),
-    _("Thor"),
-    _("Frank"),
-    _("Midnight"),
-    _("Benny"),
-    _("Tom"),
-    _("Boo"),
-    _("Ash"),
-    _("Romeo"),
-    _("Goose"),
-    _("Joey"),
-    _("Mochi"),
-    _("Ozzy"),
-    _("Merlin"),
-    _("Prince"),
-    _("Pepper"),
-    _("Bruce"),
-    _("Otis"),
-    _("Harry"),
-    _("Percy"),
-    _("Peanut"),
-    _("Bean"),
-    _("Tucker"),
-    _("Murphy"),
-    _("Moose"),
-    _("Mac"),
-    _("Kevin"),
-    _("Casper"),
-    _("Buster"),
-    _("Bob"),
-    _("Thomas"),
-    _("Jackson"),
-    _("Sylvester"),
-    _("Jake"),
-    _("Fred"),
-    _("Mango"),
-    _("Sunny"),
-    _("Hank"),
-    _("Bubba"),
-    _("Calvin"),
-    _("Marley"),
-    _("Coco"),
-    _("Louis"),
-    _("Tony"),
-    _("Bagheera"),
-    _("Duke"),
-    _("Clyde"),
-    _("Hunter"),
-    _("Mittens"),
-    _("Luke"),
-    _("Nugget"),
-    _("Ace"),
-    _("Scout"),
-    _("Tito"),
-    _("Monty"),
-    _("Wally"),
-    _("Alex"),
-]
-PET_NAMES_CAT_FEMALE = [
-    _("Luna"),
-    _("Bella"),
-    _("Lily"),
-    _("Lucy"),
-    _("Nala"),
-    _("Kitty"),
-    _("Chloe"),
-    _("Stella"),
-    _("Zoe"),
-    _("Lola"),
-    _("Cleo"),
-    _("Daisy"),
-    _("Sophie"),
-    _("Willow"),
-    _("Olive"),
-    _("Penny"),
-    _("Pepper"),
-    _("Rosie"),
-    _("Molly"),
-    _("Kiki"),
-    _("Ellie"),
-    _("Phoebe"),
-    _("Coco"),
-    _("Lulu"),
-    _("Princess"),
-    _("Maggie"),
-    _("Piper"),
-    _("Millie"),
-    _("Ginger"),
-    _("Nova"),
-    _("Hazel"),
-    _("Pumpkin"),
-    _("Ruby"),
-    _("Penelope"),
-    _("Fiona"),
-    _("Oreo"),
-    _("Baby"),
-    _("Charlie"),
-    _("Winnie"),
-    _("Minnie"),
-    _("Abby"),
-    _("Mittens"),
-    _("Poppy"),
-    _("Cookie"),
-    _("Ivy"),
-    _("Boo"),
-    _("Roxy"),
-    _("Belle"),
-    _("Ella"),
-    _("Zelda"),
-    _("Mochi"),
-    _("Alice"),
-    _("Angel"),
-    _("Emma"),
-    _("Salem"),
-    _("Bean"),
-    _("Freya"),
-    _("Bailey"),
-    _("Midnight"),
-    _("Peanut"),
-    _("Leia"),
-    _("Peaches"),
-    _("Gigi"),
-    _("Frankie"),
-    _("Honey"),
-    _("Violet"),
-    _("Charlotte"),
-    _("Olivia"),
-    _("Sage"),
-    _("Stormy"),
-    _("Kiwi"),
-    _("Bonnie"),
-    _("Smokey"),
-    _("Scout"),
-    _("Arya"),
-    _("Sushi"),
-    _("Sugar"),
-    _("Blu"),
-    _("Josie"),
-    _("Gypsy"),
-    _("Mocha"),
-    _("Binx"),
-    _("Trixie"),
-    _("Snickers"),
-    _("Boots"),
-    _("Iris"),
-    _("Lucky"),
-    _("Lady"),
-    _("Elsa"),
-    _("Pixie"),
-    _("Tiger"),
-    _("Ava"),
-    _("Holly"),
-    _("Tilly"),
-    _("Grace"),
-    _("Opal"),
-    _("Peach"),
-    _("Muffin"),
-    _("Maple"),
-    _("Sally"),
-]
-PET_NAMES_DOG_MALE = [
-    _("Max"),
-    _("Charlie"),
-    _("Milo"),
-    _("Buddy"),
-    _("Rocky"),
-    _("Bear"),
-    _("Leo"),
-    _("Duke"),
-    _("Teddy"),
-    _("Tucker"),
-    _("Beau"),
-    _("Oliver"),
-    _("Jack"),
-    _("Winston"),
-    _("Ollie"),
-    _("Toby"),
-    _("Jax"),
-    _("Blue"),
-    _("Finn"),
-    _("Louie"),
-    _("Murphy"),
-    _("Loki"),
-    _("Moose"),
-    _("Gus"),
-    _("Bruno"),
-    _("Ace"),
-    _("Apollo"),
-    _("Hank"),
-    _("Archie"),
-    _("Kobe"),
-    _("Henry"),
-    _("Thor"),
-    _("Simba"),
-    _("Bailey"),
-    _("Scout"),
-    _("Diesel"),
-    _("Jake"),
-    _("Lucky"),
-    _("Buster"),
-    _("Otis"),
-    _("Jackson"),
-    _("Benny"),
-    _("Chewy"),
-    _("Jasper"),
-    _("Oscar"),
-    _("Bandit"),
-    _("Rex"),
-    _("Oreo"),
-    _("Riley"),
-    _("Baxter"),
-    _("Cody"),
-    _("Coco"),
-    _("Rocco"),
-    _("Tank"),
-    _("Prince"),
-    _("Ranger"),
-    _("King"),
-    _("Marley"),
-    _("Roscoe"),
-    _("Sam"),
-    _("Oakley"),
-    _("Copper"),
-    _("Gizmo"),
-    _("Chase"),
-    _("Luke"),
-    _("Boomer"),
-    _("Bruce"),
-    _("Frankie"),
-    _("Chance"),
-    _("Rusty"),
-    _("Hunter"),
-    _("Ozzy"),
-    _("Tyson"),
-    _("Romeo"),
-    _("Rudy"),
-    _("Mac"),
-    _("Bubba"),
-    _("Peanut"),
-    _("Kai"),
-    _("Chico"),
-    _("Joey"),
-    _("Atlas"),
-    _("Goose"),
-    _("Samson"),
-    _("Chief"),
-    _("Levi"),
-    _("Titan"),
-    _("Frank"),
-    _("Axel"),
-    _("Brutus"),
-    _("Ghost"),
-    _("Brady"),
-    _("Cosmo"),
-    _("Scooby"),
-    _("Chip"),
-    _("Chester"),
-    _("Wally"),
-    _("Rufus"),
-    _("Dash"),
-    _("Louis"),
-]
-PET_NAMES_DOG_FEMALE = [
-    _("Bella"),
-    _("Luna"),
-    _("Lucy"),
-    _("Daisy"),
-    _("Lola"),
-    _("Sadie"),
-    _("Molly"),
-    _("Bailey"),
-    _("Stella"),
-    _("Maggie"),
-    _("Chloe"),
-    _("Penny"),
-    _("Nala"),
-    _("Zoey"),
-    _("Lily"),
-    _("Coco"),
-    _("Sophie"),
-    _("Rosie"),
-    _("Ellie"),
-    _("Ruby"),
-    _("Piper"),
-    _("Mia"),
-    _("Roxy"),
-    _("Gracie"),
-    _("Millie"),
-    _("Willow"),
-    _("Lulu"),
-    _("Pepper"),
-    _("Ginger"),
-    _("Harley"),
-    _("Abby"),
-    _("Winnie"),
-    _("Nova"),
-    _("Kona"),
-    _("Riley"),
-    _("Zoe"),
-    _("Lilly"),
-    _("Dixie"),
-    _("Lady"),
-    _("Izzy"),
-    _("Hazel"),
-    _("Layla"),
-    _("Olive"),
-    _("Charlie"),
-    _("Sasha"),
-    _("Maya"),
-    _("Honey"),
-    _("Athena"),
-    _("Lexi"),
-    _("Cali"),
-    _("Annie"),
-    _("Belle"),
-    _("Princess"),
-    _("Phoebe"),
-    _("Emma"),
-    _("Ella"),
-    _("Cookie"),
-    _("Marley"),
-    _("Callie"),
-    _("Scout"),
-    _("Roxie"),
-    _("Remi"),
-    _("Minnie"),
-    _("Maddie"),
-    _("Dakota"),
-    _("Leia"),
-    _("Poppy"),
-    _("Josie"),
-    _("Harper"),
-    _("Mila"),
-    _("Angel"),
-    _("Holly"),
-    _("Ava"),
-    _("Ivy"),
-    _("Mocha"),
-    _("Gigi"),
-    _("Paisley"),
-    _("Koda"),
-    _("Cleo"),
-    _("Penelope"),
-    _("Bonnie"),
-    _("Missy"),
-    _("Frankie"),
-    _("Sugar"),
-    _("Aspen"),
-    _("Xena"),
-    _("Shelby"),
-    _("Fiona"),
-    _("Dolly"),
-    _("Georgia"),
-    _("Shadow"),
-    _("Delilah"),
-    _("Peanut"),
-    _("Grace"),
-    _("Rose"),
-    _("Skye"),
-    _("Pearl"),
-    _("Jasmine"),
-    _("Juno"),
-    _("Trixie"),
-]
-PET_NAMES_FISH = [
-    _("Finneaus"),
-    _("Fishy McFish"),
-    _("Swimster"),
-    _("Chips"),
-    _("Caspian"),
-    _("Ripley"),
-    _("Bob"),
-    _("Bubbles"),
-    _("Bigmouth"),
-    _("Swimzell"),
-    _("Swim Shady"),
-    _("Bigmouth Billy"),
-    _("Squirtle"),
-    _("Long John Silver"),
-    _("Mr. Ray"),
-    _("Captain Morgan"),
-    _("Betta White"),
-    _("Small Fry"),
-    _("Tuna Piano"),
-    _("Harvey"),
-]
+
 
 # ------------------------------------------------------------------
 # Celebrity list
