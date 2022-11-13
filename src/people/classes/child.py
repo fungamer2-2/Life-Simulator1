@@ -15,6 +15,7 @@ class Child(Relationship):
 		self.salary = 0
 		self.money = 0
 		self.is_in_uv = 0
+		self.years_worked = 0
 		self.partner = None
 		self.partner_desire = randint(0, 100)
 		self.may_divorce = False
@@ -64,6 +65,7 @@ class Child(Relationship):
 				print(_("Your {child} started going to university.").format(child=self.name_accusative()))
 				self.is_in_uv = 4
 		if self.salary > 0:
+			self.years_worked += 1
 			tax = calculate_tax(self.salary)
 			income = self.salary - tax
 			income *= random.uniform(0.4, 0.8) 
@@ -83,6 +85,7 @@ class Child(Relationship):
 				elif mod < 0:
 					roll -= randint(0, abs(mod))
 				if roll <= 100:
+					self.years_worked = 0
 					self.salary = salary
 					break
 		if self.partner:

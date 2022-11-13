@@ -188,6 +188,8 @@ class Player(Person):
 			if one_in(2):
 				self.stress += randint(0, 25)
 			self.performance = randint(40, 80)
+			self.years_worked = c.years_worked
+			self.salary_years = [c.salary]*c.years_worked
 		self.money += c.money
 		print(_("Your parent, {name}, passed away.").format(name=parent_name))
 		if money > 0:
@@ -531,7 +533,22 @@ class Player(Person):
 			self.change_performance(
 				randint(-4, 4) + round_stochastic((50 - self.stress) / 20)
 			)
-			if self.performance < 15 and randint(1, self.performance + 1) == 1:
+			if self.can_retire() and one_in(3):
+				pension = self.calc_pension()
+				if self.age >= 70 and one_in(3):
+					display_event(_("You have been forced to retire from your position."))
+					self.lose_job()
+					print(_("You are now receiving a yearly pension of ${pension:,}.").format(pension=pension))
+					self.salary = pension
+					self.change_happiness(randint(12, 25))
+				else:
+					print(_("You are eligible to retire and begin receiving a yearly pension of ${pension:,}.").format(pension=pension))
+					if yes_no(_("Would you like to retire?")):
+						print(_("You retired and are now receiving pension."))
+						self.lose_job()
+						self.salary = pension
+						self.change_happiness(randint(25, 50))
+			elif self.performance < 15 and randint(1, self.performance + 1) == 1:
 				display_event(
 					_("You have been fired from your job.\nReason: Performance")
 				)
@@ -650,8 +667,13 @@ class Player(Person):
 		)
 
 	def can_retire(self):
-		return self.years_worked >= 10 and player.age >= 65
-
+		return self.years_worked >= 10 and self.age >= 65
+	
+	def calc_pension(self):
+		from statistics import mean
+		amount = mean(sorted(self.salary_years, reverse=True)[:5])
+		return round(amount * min(self.years_worked, 35) * 0.02) 
+	
 	@property
 	def marital_status(self):
 		if not self.partner:
@@ -832,7 +854,7 @@ class Player(Person):
 						)
 					)
 					he_she = self.partner.he_she().capitalize()
-					if randint(1, 100) > partner.willpower:
+					if randint(1, 100) > self.partner.willpower:
 						display_event(
 							_("{he_she} decided to stay with you.").format(
 								he_she=he_she
@@ -852,7 +874,7 @@ class Player(Person):
 					print(
 						_(
 							"You called {him_her} {insult} as {he_she} was walking out the door."
-						)
+						).format(him_her=him_her, insult=insult, he_she=he_she)
 					)
 					self.lose_partner()
 		elif self.marital_status == 3:

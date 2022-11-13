@@ -1402,9 +1402,7 @@ def main_menu(player):
 				player.worked_harder = True
 		elif choice == 3:
 			if can_retire:
-				from statistics import mean
-				amount = mean(sorted(player.salary_years, reverse=True)[:5])
-				pension = round(amount * min(player.years_worked, 35) * 0.02)
+				pension = player.calc_pension()
 				if yes_no(
 					_(
 						"Do you want to retire? You will receive a yearly pension of ${pension}"
