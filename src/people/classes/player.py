@@ -358,7 +358,7 @@ class Player(Person):
 					c.father = None
 				elif relation is c.mother:
 					c.mother = None
-				self.partner = None
+			self.partner = None
 		elif isinstance(relation, Child):
 			happy_remove = randint(75, 100)
 			self.children.remove(relation)
