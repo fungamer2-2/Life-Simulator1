@@ -128,25 +128,27 @@ COMPLIMENTS = [
 ]
 
 RELATION_SUDDEN_DEATH_REASONS = [
-	_("died after a tree fell on the home"),
-	_("died after falling into a well"),
-	_("was eaten by a crocodile"),
-	_("died after being bitten by a poisonous spider"),
-	_("died after being struck by lightning"),
-	_("was killed in a tornado"),
-	_("was killed in a flood"),
-	_("died after falling off a cliff while admiring a view"),
-	_("died after being hit by a car while walking"),
-	_("died after being hit by a train while walking"),
-	_("was killed in a landslide"),
-	_("was sucked into a jet engine and shredded to pieces"),
-	_("died due to carbon monoxide poisoning after a car was left running in the garage"),
-	_("died after a fireworks mishap"),
-	_("died due to a fire in the home"),
-	_("died after being bit on the arm by a poisonous snake"),
-	_("died after being charged by a hippopotamus"),
-	_("died due to smoke inhalation caused by a forest fire"),
-	_("was killed in a fatal car crash")
+    _("died after a tree fell on the home"),
+    _("died after falling into a well"),
+    _("was eaten by a crocodile"),
+    _("died after being bitten by a poisonous spider"),
+    _("died after being struck by lightning"),
+    _("was killed in a tornado"),
+    _("was killed in a flood"),
+    _("died after falling off a cliff while admiring a view"),
+    _("died after being hit by a car while walking"),
+    _("died after being hit by a train while walking"),
+    _("was killed in a landslide"),
+    _("was sucked into a jet engine and shredded to pieces"),
+    _(
+        "died due to carbon monoxide poisoning after a car was left running in the garage"
+    ),
+    _("died after a fireworks mishap"),
+    _("died due to a fire in the home"),
+    _("died after being bit on the arm by a poisonous snake"),
+    _("died after being charged by a hippopotamus"),
+    _("died due to smoke inhalation caused by a forest fire"),
+    _("was killed in a fatal car crash"),
 ]
 
 MUSIC_ARTISTS = [
