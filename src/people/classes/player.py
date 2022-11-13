@@ -509,7 +509,7 @@ class Player(Person):
 					reason = random.choice(sudden_death_reasons)
 					if one_in(1000):
 						reason = _("starved to death after playing this game for too many days without stopping to eat")
-				self.process_relation_death(relation)
+				self.process_relation_death(relation, reason)
 		self.random_events()
 		if self.partner:
 			assert self.partner in self.relations
@@ -811,7 +811,7 @@ class Player(Person):
 				)
 				print(_("What will you do?"))
 				him_her = self.partner.him_her()
-				choices = choice_input(
+				choice = choice_input(
 					_("Wish {him_her} well").format(him_her=him_her),
 					_("Beg {him_her} to stay").format(him_her=him_her),
 					_("Insult {him_her} one last time").format(him_her=him_her),
