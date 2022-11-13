@@ -17,7 +17,6 @@ def game_loop(player):
 		while True:
 			try:
 				main_menu(player)
-				raise Exception("uh oh, something went wrong!")
 			except Exception as e:
 				if type(e) == PlayerDied:
 					raise
