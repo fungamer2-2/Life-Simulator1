@@ -165,12 +165,13 @@ TRAITS_DICT = {
         ["SLOW_WORKER", "LAZY"],
     ),
     "WELL_KEPT": (
-    	_("Well-Kept"), #I decided to call it this for lack of a better term
-    	_("You tend to be good at taking care of your appearance. Your Looks increases slightly over time."),
-    	1,
-    	["BADLY_KEPT"]
+        _("Well-Kept"),  # I decided to call it this for lack of a better term
+        _(
+            "You tend to be good at taking care of your appearance. Your Looks increases slightly over time."
+        ),
+        1,
+        ["BADLY_KEPT"],
     ),
-    
     "GRUMPY": (
         _("Grumpy"),
         _("It is difficult for you to be in a good mood."),
@@ -197,12 +198,11 @@ TRAITS_DICT = {
         -1,
     ),
     "BADLY_KEPT": (
-    	_("Badly-Kept"),
-    	_("You tend to neglect your appearance, decreasing your Looks over time."),
-    	-1,
-    	["WELL_KEPT"]
+        _("Badly-Kept"),
+        _("You tend to neglect your appearance, decreasing your Looks over time."),
+        -1,
+        ["WELL_KEPT"],
     ),
-    
     "MOODY": (
         _("Moody"),
         _(
