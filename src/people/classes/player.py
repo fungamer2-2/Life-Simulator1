@@ -382,8 +382,11 @@ class Player(Person):
 		oldhappy = self.happiness
 		self.total_happiness += self.happiness
 		super().age_up()
-		if self.has_trait("WELL_KEPT") and self.age >= 6:
-			self.change_looks(randint(0, 2))
+		if self.age >= 6:
+			if self.has_trait("WELL_KEPT"): 
+				self.change_looks(randint(0, 2))
+			elif self.has_trait("BADLY_KEPT"):
+				self.change_looks(-randint(0, 2))
 		if self.has_trait("SICKLY"):
 			self.change_health(-randint(0, 4))
 		if self.has_trait("MOODY") and not self.is_depressed():

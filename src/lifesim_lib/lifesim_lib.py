@@ -167,7 +167,8 @@ TRAITS_DICT = {
     "WELL_KEPT": (
     	_("Well-Kept"), #I decided to call it this for lack of a better term
     	_("You tend to be good at taking care of your appearance. Your Looks increases slightly over time."),
-    	1
+    	1,
+    	["BADLY_KEPT"]
     ),
     
     "GRUMPY": (
@@ -195,6 +196,13 @@ TRAITS_DICT = {
         _("You tend to be in poor health, decreasing your Health over time."),
         -1,
     ),
+    "BADLY_KEPT": (
+    	_("Badly-Kept"),
+    	_("You tend to neglect your appearance, decreasing your Looks over time."),
+    	-1,
+    	["WELL_KEPT"]
+    ),
+    
     "MOODY": (
         _("Moody"),
         _(
