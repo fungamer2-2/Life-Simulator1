@@ -1002,6 +1002,10 @@ def main_menu(player):
 					player.change_stress(-3)
 					print(_("You have achieved a deeper awareness of yourself."))
 					display_bar(_("Karma"), player.karma)
+				if player.has_trait("MEDITATOR"):
+					player.change_stress(-5)
+				elif one_in(100) and randint(1, 100) > player.stress:
+					player.learn_trait("MEDITATOR")
 				if player.has_trait("CHEERFUL"):
 					player.change_happiness(4)
 				player.meditated = True

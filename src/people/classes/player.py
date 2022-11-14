@@ -424,11 +424,15 @@ class Player(Person):
 		if self.has_job:
 			self.change_stress(randint(-4, 4))
 			base = 60 - self.happiness * 0.3 + (self.job_hours - 40)
+			if self.has_trait("MEDITATOR"):
+				base *= 2/3
 			diff = base - self.stress
 			if diff > 0:
 				self.change_stress(randint(0, round_stochastic(diff / 6)))
 			elif diff < 0:
 				factor = self.happiness / 25 + 0.5
+				if self.has_trait("MEDITATOR"):
+					factor += 0.5
 				self.change_stress(
 					-randint(0, round_stochastic(abs(diff) / 9 * factor))
 				)

@@ -165,13 +165,19 @@ TRAITS_DICT = {
         ["SLOW_WORKER", "LAZY"],
     ),
     "WELL_KEPT": (
-        _("Well-Kept"),  # I decided to call it this for lack of a better term
+        _("Well-Kept"),
         _(
             "You tend to be good at taking care of your appearance. Your Looks increases slightly over time."
         ),
         1,
         ["BADLY_KEPT"],
     ),
+    "MEDITATOR": (
+        _("Meditator"),
+        _("You tend to be less stressed than most people. In addition, meditation helps you recover from stress more quickly."),
+        2,
+    ),
+    
     "GRUMPY": (
         _("Grumpy"),
         _("It is difficult for you to be in a good mood."),
