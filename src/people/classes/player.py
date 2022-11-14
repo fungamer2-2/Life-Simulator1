@@ -925,7 +925,7 @@ class Player(Person):
 					print(
 						_(
 							"You called {him_her} {insult} as {he_she} was walking out the door."
-						)
+						).format(him_her=him_her, insult=insult, he_she=he_she)
 					)
 					self.divorce()
 		if (
