@@ -2226,15 +2226,261 @@ WAXING_SALON = [
 # Instagram
 # Challenges = 'You recorded a video of yourself doing the '{challenges}' and posted it on Instagram.
 CHALLENGES = [
+    _("Banana Challenge"),
+    _("Beauty Mode Challenge"),
+    _("Between Art and Quarantine Challenge"),
+    _("Bin Isolation Challenge"),
+    _("Buss It Challenge"),
+    _("Cinnamon Challenge"),
+    _("Condom Challenge"),
+    _("Cucumber Challenge"),
+    _("Dalgona Coffee Challenge"),
+    _("Doodle Challenge"),
+    _("Don't Judge Me Challenge"),
+    _("Don't Leave Me Challenge"),
+    _("Don't Rush Challenge"),
+    _("Drop Challenge"),
+    _("Drop The Towel Challenge"),
+    _("Flip the Switch Challenge"),
+    _("Gauntlet Challenge"),
+    _("Gesture Challenge"),
+    _("Harlem Shake"),
     _("Ice Bucket Challenge"),
-    _(""),
+    _("Kim K Breaks The Internet"),
+    _("Kylie Jenner Lip Challenge"),
+    _("Mannequin Challenge"),
+    _("Momo Challenge"),
+    _("No Bra Challenge"),
+    _("OhNaNa Challenge"),
+    _("Patience Challenge"),
+    _("Penny Challenge"),
+    _("Pillow Challenge"),
+    _("Plank Challenge"),
+    _("Savage Challenge"),
+    _("Silhouette Challenge"),
+    _("Sundress Challenge"),
+    _("Super Bowl Challenge"),
+    _("Teeth Challenge"),
+    _("Trick Shot Challenge"),
+    _("Try Not To Cum Challenge"),
+    _("Until Tomorrow Challenge"),
+    _("Vogue Challenge"),
+    _("'Who is More' Challenge"),
+    _("Wipe it Down Challenge"),
+    _("Your First Move Is Their Last Move Challenge"),
 ]
 # Dance videos = 'You recorded a video of yourself {dance_video_dances} to {dance_video_songs} and posted it to Instagram.
 DANCE_VIDEO_DANCES = [
-    _("tap dancing"),
+    _("Tap dancing"),
+    _("Bachata dancing"),
+    _("Balloon dancing"),
+    _("Belly dancing"),
+    _("Bolero dancing"),
+    _("Boogaloo dancing"),
+    _("Booty Clappin'"),
+    _("Booty Poppin'"),
+    _("Booty Shakin'"),
+    _("Ballet dancing"),
+    _("Baroque dancing"),
+    _("Black Bottom dancing"),
+    _("Blues dancing"),
+    _("Bolojo dancing"),
+    _("Boogie-woogie dancing"),
+    _("Breakaway dancing"),
+    _("Breakdancing"),
+    _("Bubble dancing"),
+    _("Bugg dancing"),
+    _("Bump dancing"),
+    _("Burlesque dancing"),
+    _("Cabbage patch dancing"),
+    _("Cakewalk dancing"),
+    _("Carolina Shag dancing"),
+    _("Cat Daddy dancing"),
+    _("Cha Cha dancing"),
+    _("Charleston dancing"),
+    _("Circle dancing"),
+    _("Collegiate Shag dancing"),
+    _("Cutting shapes"),
+    _("Dabbing"),
+    _("Dancing in the nude"),
+    _("Dougie dancing"),
+    _("Dirty dancing"),
+    _("East Coast Swing dancing"),
+    _("Electric boogaloo dancing"),
+    _("Electric boogie dancing"),
+    _("Electro  dancing"),
+    _("Exotic dancing"),
+    _("Fire dancing"),
+    _("Flamenco dancing"),
+    _("Flexing"),
+    _("Flying Men Dancing"),
+    _("Footwork dancing"),
+    _("Foxtrot dancing"),
+    _("Free dancing"),
+    _("Free step dancing"),
+    _("Fusion dancing"),
+    _("Gangsta Walk dancing"),
+    _("Gettin' down"),
+    _("Go-go dancing"),
+    _("Grindin'"),
+    _("Hand dancing"),
+    _("Hand Jiving"),
+    _("Harlem shake dancing"),
+    _("Horizontal Tango dancing"),
+    _("Hustle dancing"),
+    _("Interpretive dancing"),
+    _("Irish dancing"),
+    _("Jaywalk dancing"),
+    _("Jazz dancing"),
+    _("Jerkin'"),
+    _("Jitterbug dancing"),
+    _("Jive dancing"),
+    _("Jumpstyle dancing"),
+    _("K-POP dancing"),
+    _("Kizomba dancing"),
+    _("Knockin' boots"),
+    _("Kompa dancing"),
+    _("Krumping"),
+    _("Lambada dancing"),
+    _("Lap dancing"),
+    _("Line dancing"),
+    _("Litefeet dancing"),
+    _("Lockin'"),
+    _("Lyrical hip-hop dancing"),
+    _("Mambo dancing"),
+    _("Moonwalk dancing"),
+    _("Mujra dancing"),
+    _("Penguin dancing"),
+    _("Pole dancing"),
+    _("Poppin'"),
+    _("Quickstep dancing"),
+    _("Robot dancing"),
+    _("Round dancing"),
+    _("Rumba dancing"),
+    _("Salsa dancing"),
+    _("Samba dancing"),
+    _("Sexy Dancing"),
+    _("Shag dancing"),
+    _("Slow Dancing"),
+    _("Slut Drop dancing"),
+    _("Square dancing"),
+    _("Stepping"),
+    _("Stick dance"),
+    _("Stripping"),
+    _("Striptease dancing"),
+    _("Tap dancing"),
+    _("Tango dancing"),
+    _("Turfing"),
+    _("Twerk dancing"),
+    _("Two Step dancing"),
+    _("Uprock dancing"),
+    _("Vintage dancing"),
+    _("Vogue dancing"),
+    _("Waltzing"),
+    _("Watergate dancing"),
 ]
 DANCE_VIDEO_SONGS = [
+    _("(Everything I Do) I Do It For You, by Bryan Adams"),
+    _("(Just Like) Starting Over, by John Lennon"),
     _("a P!nk song"),
+    _("Abracadabra, by The Steve Miller Band"),
+    _("All About That Bass, by Meghan Trainor"),
+    _("Another One Bites The Dust, by Queen"),
+    _("Apologize, by Timbaland"),
+    _("Aquarius/Let The Sunshine In (The Flesh Failures), by The 5th Dimension"),
+    _("Because I Love You (The Postman Song), by Stevie B"),
+    _("Bette Davis Eyes, by Kim Carnes"),
+    _("Billie Jean, by Michael Jackson"),
+    _("Blinding Lights, by The Weeknd"),
+    _("Blurred Lines, by Robin Thicke Featuring T.I. + Pharrell"),
+    _("Boom Boom Pow, by The Black Eyed Peas"),
+    _("Call Me Maybe, by Carly Rae Jepsen"),
+    _("Call Me, by Blondie"),
+    _("Candle In The Wind 1997/Something About The Way You Look Tonight, by Elton John"),
+    _("Centerfold, by The J. Geils Band"),
+    _("Circles, by Post Malone"),
+    _("Closer, by The Chainsmokers"), 
+    _("Despacito, by Luis Fonsi & Daddy Yankee"),
+    _("Dilemma, by Nelly Featuring Kelly Rowland"),
+    _("Ebony And Ivory, by Paul McCartney And Stevie Wonder"),
+    _("End Of The Road, by Boyz II Men"),
+    _("Endless Love, by Diana Ross & Lionel Richie"),
+    _("Every Breath You Take, by The Police"),
+    _("Eye Of The Tiger, by Survivor"),
+    _("Flashdance...What A Feeling, by Irene Cara"),
+    _("Foolish Games/You Were Meant For Me, by Jewel"),  
+    _("Gangsta's Paradise, by Coolio"),
+    _("Girls Like You, by Maroon 5"),
+    _("God's Plan, by Drake"),
+    _("Gold Digger, by Kanye West"),
+    _("Happy, by Pharrell Williams"),
+    _("Hey Jude, by The Beatles"),
+    _("Hot Stuff, by Donna Summer"),
+    _("How Deep Is Your Love, by Bee Gees"),
+    _("How Do I Live, by LeAnn Rimes"),
+    _("How You Remind Me, by Nickelback"),
+    _("I Gotta Feeling, by The Black Eyed Peas"),
+    _("I Heard It Through The Grapevine, by Marvin Gaye"),
+    _("I Just Want To Be Your Everything, by Andy Gibb"),
+    _("I Love Rock 'N Roll, by Joan Jett & The Blackhearts"),
+    _("I Want To Hold Your Hand, by The Beatles"),
+    _("I Will Always Love You, by Whitney Houston"),
+    _("I'll Make Love To You, by Boyz II Men"),
+    _("I'm A Believer, by The Monkees"),
+    _("It's All In The Game, by Tommy Edwards"),
+    _("Just The Way You Are, by Bruno Mars"),
+    _("Lady, by Kenny Rogers"),
+    _("Le Freak, by Chic"),
+    _("Let Me Love You, by Mario"),
+    _("Let's Get It On, by Marvin Gaye"),
+    _("Levitating, by Dua Lipa"),
+    _("Low, by Flo Rida"),
+    _("Macarena (Bayside Boys Mix), by Los Del Rio"),
+    _("Mack The Knife by Bobby Darin"),
+    _("Mood, by 24kGoldn"),
+    _("Moves Like Jagger, by Maroon 5"),
+    _("Night Fever, by Bee Gees"),
+    _("No One, by Alicia Keys"),
+    _("Old Town Road, by Lil Nas X"),
+    _("One Sweet Day, by Mariah Carey & Boyz II Men"),
+    _("Party Rock Anthem, by LMFAO"),
+    _("Perfect, by Ed Sheeran"),
+    _("Physical, by Olivia Newton-John"),
+    _("Rockstar, by Post Malone"),
+    _("Rolling In The Deep, by Adele"),
+    _("Royals, by Lorde"),
+    _("Rush Rush, by Paula Abdul"),
+    _("Say Say Say, by Paul McCartney And Michael Jackson"),
+    _("Shadow Dancing, by Andy Gibb"),
+    _("Shape Of You, by Ed Sheeran"),
+    _("Silly Love Songs, by Wings"),
+    _("Smooth, by Santana"),
+    _("Somebody That I Used To Know, by Gotye"),
+    _("Stayin' Alive, by Bee Gees"),
+    _("Sugar, Sugar, by The Archies"),
+    _("Sunflower (Spider-Man: Into The Spider-Verse), by Post Malone & Swae Lee"),
+    _("That's What Friends Are For, by Dionne & Friends"),
+    _("The Battle Of New Orleans, by Johnny Horton"),
+    _("The Boy Is Mine, by Brandy & Monica"),
+    _("The Sign, by Ace Of Base"),
+    _("The Theme From 'A Summer Place', by Percy Faith And His Orchestra"),
+    _("The Twist, by Chubby Checker"),
+    _("Tie A Yellow Ribbon Round The Ole Oak Tree, by Dawn"),
+    _("Tik Tok, by Ke$ha"),
+    _("Tonight's The Night (Gonna Be Alright), by Rod Stewart"),
+    _("Too Close, by Next"),
+    _("Tossin' And Turnin', by Bobby Lewis"),
+    _("Truly Madly Deeply, by Savage Garden"),
+    _("Un-Break My Heart, by Toni Braxton"),
+    _("Upside Down, by Diana Ross"),
+    _("Uptown Funk!, By Mark Ronson"),
+    _("We Belong Together, by Mariah Carey"),
+    _("We Found Love, by Rihanna"),
+    _("Whoomp! (There It Is), by Tag Team"),
+    _("Yeah!, by Usher"),
+    _("You Light Up My Life, by Debby Boone"),
+    _("You're So Vain, by Carly Simon"),
+    _("You're Still The One, by Shania Twain"),
 ]
 # Family photos = 'You posted {family_photos} family photo on Instagram.
 FAMILY_PHOTOS = [
@@ -2307,12 +2553,110 @@ RESHARE_MUSICIAN_MEDIA = [
 ]
 # Selfies = 'You posted {selfies} on Instagram.
 SELFIES = [
+    _("a basic selfie"),
+    _("a bathroom mirror selfie"),
+    _("a bathroom selfie"),
+    _("a beach feet brag selfie"),
+    _("a beach selfie"),
+    _("a 'Beauty Guru' selfie"),
+    _("a bed selfie"),
+    _("a belfie"),
+    _("a blurry selfie"),
+    _("a blurry, drunken selfie"),
+    _("a butt selfie"),
+    _("a cat lover selfie"),
+    _("a 'Could I Be A Model?' selfie"),
+    _("a 'Could I Be A Supermodel?' selfie"),
+    _("a dancing-in-the-rain selfie"),
+    _("a dog lover selfie"),
+    _("a 'Drenched From The Rain' selfie"),
+    _("a drunk selfie"),
     _("a duck face selfie"),
-    _("a selfie pulling a funny face"),
+    _("a finger moustache selfie"),
+    _("a fish gape selfie"),
+    _("a 'Food Next To Your Face' selfie"),
+    _("a food selfie"),
+    _("a 'Found My Light' selfie"),
+    _("a 'Free the Nipple' selfie"),
+    _("a gym selfie"),
+    _("a hair curtain selfie"),
+    _("a holiday selfie"),
+    _("a hotdog legs selfie"),
+    _("a kissy face selfie"),
+    _("a 'Lazy Sunday' selfie"),
+    _("a 'Look At My Hair' selfie"),
+    _("a mirror selfie"),
+    _("a model pout selfie"),
+    _("a 'Morning Sex' selfie"),
+    _("a parody selfie"),
+    _("a 'Pretending to Sleep' selfie"),
     _("a professional looking selfie"),
+    _("a rain dancing selfie"),
+    _("a selfie collage"),
+    _("a selfie of mostly your nostrils"),
+    _("a selfie of your abs"),
+    _("a selfie of your butt"),
+    _("a selfie of your chest"),
+    _("a selfie in front of your bathroom mirror"),
+    _("a selfie in front of your bedroom mirror"),
+    _("a selfie in the reflection of a shop window"),
+    _("a selfie pulling a funny face"),
+    _("a selfie showing your bad side"),
+    _("a selfie showing your good side"),
+    _("a selfie showing your naughty side"),
+    _("a selfie with cake all over your face"),
+    _("a selfie with cream all over your face"),
+    _("a selfie with dirt all over your face"),
+    _("a selfie with mud all over your face"),
+    _("a selfie with pasta sauce all over your face"),
+    _("a selfie with perfect Back lighting"),
+    _("a selfie with perfect Broad lighting"),
+    _("a selfie with perfect Butterfly lighting"),
+    _("a selfie with perfect Loop lighting"),
+    _("a selfie with perfect Paramount lighting"),
+    _("a selfie with perfect Rembrandt lighting"),
+    _("a selfie with perfect Short lighting"),
+    _("a selfie with perfect Silhouette lighting"),
+    _("a selfie with perfect Split lighting"),
+    _("a shitfaced selfie"),
+    _("a swimming selfie"),
+    _("a swimwear selfie"),
+    _("a 'There's Someone Super Hot Behind Me' selfie"),
+    _("a Throwback Thursday selfie"),
+    _("a topless selfie"),
+    _("a 'Weather Report' selfie"),
+    _("a workout selfie"),
+    _("an abs selfie"),
+    _("an 'Am I Hot?' selfie"),
+    _("an 'Am I Sexy?' selfie"),
+    _("an 'Am I Ugly?' selfie"),
+    _("an artistic selfie"),
+    _("an FYP selfie"),
+    _("an 'I don't Give a Fuck, But Really I do' selfie"),
+    _("an 'I Eat, Therefore I am' selfie"),
+    _("an 'I Love Autumn' selfie"),
+    _("an 'I Love Spring' selfie"),
+    _("an 'I Love Summer' selfie"),
+    _("an 'I Love Winter' selfie"),
+    _("an 'I Saw a Celebrity' selfie"),
+    _("an 'I Woke Up Like This' selfie"),
+    _("an 'I Work Out' selfie"),
+    _("an incriminating selfie"),
+    _("an 'I'm A Basic Bitch' selfie"),
+    _("an 'I'm An Artist' selfie"),
+    _("an 'I'm At The Pool' selfie"),
+    _("an 'I'm Bored' selfie"),
+    _("an 'I'm Hard At Work' selfie"),
+    _("an 'I'm Having So Much Fun' selfie"),
+    _("an 'I'm In A Car' selfie"),
+    _("an 'I'm In Love' selfie"),
+    _("an OOTD selfie"),
+    _("an over-explained selfie"),
+    
 ]
 # Sexy Pics = 'You posted {sexy_pics_male} on Instagram.
 SEXY_PICS_MALE = [
+    _("a bedroom mirror selfie only wearing tight blue Calvin Klein briefs and a backwards baseball cap. You were tugging at the side of your briefs like you were about to take them off"),
     _("a risqué selfie of yourself"),
     _("a photo of yourself clearly showing your muscles"),
     _("a selfie gazing through the lens dreamily"),
@@ -2320,10 +2664,18 @@ SEXY_PICS_MALE = [
 ]
 # Sexy Pics = 'You posted {sexy_pics_female} on Instagram.
 SEXY_PICS_FEMALE = [
+    _("a photo of yourself seductively licking the straw of your drink"),
     _("a risqué selfie of yourself"),
     _("a side-on mirror selfie emphasising your tight dress"),
     _("an over-the-shoulder bikini selfie showing your bum in the background"),
+    _("yourself practicing yoga in tight TikTok leggings"),
+]
+SEXY_PICS = [
+    _("a risqué selfie of yourself"),
+    _("an 'Am I Wearing Pants?' selfie"),
+    _("a selfie gazing through the lens dreamily"),
     _("a gym selfie while working out"),
+    _("a nude mirror selfie holding a cup of tea in front of your crotch"),
 ]
 # Skit Video = 'You {and your friend made a slapstick skit} video and posted it on Instagram.
 SKIT_VIDEOS = [
@@ -2337,12 +2689,37 @@ SOCIAL_JUSTICE_VIDEOS = [
 SOCIAL_STORIES = [
     _("about your weird day"),
 ]
-# Thirst Traps = 'You posted a photo on Instagram of yourself {thirst_traps}.
+# Thirst Traps = 'You posted a {photo_video} on {Instagram_Twitter} of yourself {thirst_traps}.
 THIRST_TRAPS = [
+    _("covering your crotch with only a hand towel"),
+    _("eating a bowl of noodles while topless"),
+    _("getting changed at a clothing store"),
+    _("getting changed at home"),
+    _("getting changed at the beach"),
+    _("getting changed at the gym"),
+    _("getting changed at the pool"),
+    _("getting changed in a changing room"),
+    _("getting changed in public"),
+    _("half under your sheets, but only covering your bottom half"),
+    _("half under your sheets, but only covering your top half"),
+    _("half under your sheets, but not covering anything"),
     _("holding a water pistol and wearing white underwear"),
     _("looking off into the distance and only wearing a towel"),
+    _("oiled-up with water beading on your skin while wearing a tight white tee and underpants"),
+    _("playing with yourself through your clothes"),
+    _("practicing yoga in only a towel"),
+    _("practicing yoga in your underwear"),
+    _("practicing your lapdancing techniqes over an empty chair"),
+    _("preparing food in your underwear"),
+    _("sitting in an empty bath tub in your birthday suit. You asked if anyone wanted to join you"),
+    _("standing nude on a hotel balcony"),
+    _("standing in front of your bed in the nude, and with your back to the camera"),
+    _("standing in front of your bed in the nude, and with your back to the camera. On your bed was your laptop with the 'Home Alone Face' on its screen"),
+    _("standing on a hotel balcony with only a towel around your waist"),
     _("taking a shower through half-fogged glass"),
     _("wearing a sexy bathing suit while taking a shower"),
+    _("wearing an open dressing gown with nothing on underneath"),
+    _("wearing distressed overalls with nothing on underneath, and only one side buttoned up"),
     _("wearing just a pair of jeans while mowing the lawn"),
     _("wearing just a t-shirt"),
     _("wearing just a t-shirt while laying on the dinner table"),
@@ -2354,18 +2731,113 @@ THIRST_TRAPS = [
     _("wearing your birthday suit while pretending to sleep"),
 ]
 THIRST_TRAPS_FEMALE = [
+    _("drinking a cup of milk in only your underpants, and spilling it down your chest"),
+    _("exercising in a pair of Victoria's Secret PINK Varsity shorts and a super baggy tank top. You'd tucked it in loosely for maximum side boob and nip slips"),
+    _("exercising in a seethrough white crop top"),
+    _("exercising in thin seethrough leggings"),
+    _("exercising with your sports bra fully unzipped at the front"),
+    _("exercising with your sports bra fully unzipped at the front, and barely holding your breasts in"),
+    _("exercising with your sports bra fully unzipped at the front, with one of your boobs fully out"),
+    _("getting changed at a Honey Birdette store"),
+    _("getting changed at a Victoria's Secret store"),
+    _("in white shoes, pink and white knee-high socks, and a blue and white striped tee with no bra. You had your shorts and panties around your ankles, and your top pulled up over your chest. You looked super happy!"),
+    _("laying on a woolen rug on the floor with a navy blue playsuit pulled up between your butt cheeks, pigtails, and knee-high white socks. Your makeup was on point and you told your followers you were sending nudes to everyone that likes"),
+    _("laying on your back on a couch wearing only a fishnet crop top. You had your knees up and your legs apart. You pinched your nipple and rubbed yourself between your legs. You captioned it with 'Embarrassed to admit you like me?' and added a banana and a squirt emoji"),
+    _("making the Ahegao face while wearing cat ears"),
     _("not wearing your bikini bottoms while laying by the pool"),
+    _("nude in the bathroom mirror, with a dildo on the bench 'Strategically' covering your crotch"),
+    _("on your knees with your tongue out and your mouth wide open"),
+    _("on your knees with your tongue out and your mouth wide open. You took the photo from above yourself"),
+    _("on your knees with your tongue out and your mouth wide open. You were wearing your gym clothes and pushing your boobs together"),
+    _("on your knees with your tongue out and your mouth wide open. You weren't wearing anything"),
+    _("playing with yourself while wearing a bikini"),
+    _("practicing yoga in only a bra"),
+    _("practicing yoga in only a thong"),
+    _("practicing your slut drop technique in a short skirt and no underwear"),
+    _("preparing food in only your bra"),
+    _("preparing food in only your panties"),
+    _("preparing food in only a G-string"),
+    _("preparing food while wearing a seethrough camisole"),
+    _("preparing food while wearing a seethrough chemise"),
+    _("pulling your panties to the side"),
+    _("pushing your boobs together while wearing a short school dress and stockings"),
+    _("riding a Sybian while wearing a summerdress"),
+    _("shaking your bare ass to the camera and pulling your cheeks apart. You asked your followers 'Which hole you fucking first?' with a booty emoji"),
+    _("showing a closeup of the underside of your foot. You were in a car and upskirting yourself in the background to show you weren't wearing panties. You said you were looking for a foot freak with a fat wallet and captioned it with 'Findom Paypig Goddess Foot Fetish Soles Domme'"),
+    _("showing your panties while bending over"),
+    _("showing your panties while laying in bed"),
+    _("showing your underboobs while bending over"),
+    _("showing your underboobs while laying in bed"),
+    _("slowly lifting your T-Shirt to show off your boobs"),
+    _("taking a photo up your shirt to show off your boobs"),
+    _("taking a photo up your shirt to show off your nipples"),
+    _("using a mirror to show everyone you're not wearing any underwear"),
+    _("using a ring light and a mirror to show off your body. It was dark and artistic, and your eyes looked amazing! You told everyone you wanted to start a thirst trap thread"),
+    _("wearing a bikini and pulling the bottoms to the side"),
+    _("wearing a pink business shirt with floral patterned sheer black lingerie underneath. You knelt on your bed and caressed your body to music"),
+    _("wearing a short tartan skirt, glasses, and a torn croptop showing off your underboobs"),
+    _("wearing a tank top that you'd stretched to show off your sideboobs"),
     _("wearing a thong while eating a cucumber"),
     _("wearing a thong while sprawled out on the floor"),
+    _("wearing a tiny black tank top with 'Come Here Daddy' written in pink across you boobs. You pointed to your chest and made the Ahegao face"),
+    _("wearing an off-the-shoulder sweatshirt that you'd cropped to show your underboobs"),
+    _("wearing cute panties with ghosts on them. You wore a matching cropped tank with 'Boo Bees' written on itand writhed around on your bed to sensual music while licking your lips"),
+    _("wearing distressed shorts overalls with nothing on underneath, and only one side buttoned up"),
+    _("wearing distressed shorts overalls with nothing on underneath, and only one side buttoned up. You thought your boobs looked amazing!"),
     _("wearing edible underwear while dancing at home"),
+    _("wearing edible underwear while laying in bed"),
     _("wearing edible underwear while laying on the dinner table"),
+    _("wearing Honey Birdette lingerie while kneeling on your bed on all fours and holding a spanking paddle"),
+    _("wearing Honey Birdette lingerie while laying on your back in bed and holding a riding crop"),
+    _("wearing Honey Birdette lingerie while laying on your bed with your legs splayed, and dangling a pair of handcuffs from your fingertip"),
     _("wearing just a t-shirt while eating a cucumber"),
+    _("wearing 'Morning Sex' panties and a wet 'No Bra Club' T-Shirt"),
+    _("wearing one-side overalls with nothing on underneath, while you sucked on a lollipop"),
+    _("wearing only a short tartan skirt"),
+    _("wearing only a bodychain"),
+    _("wearing only a bodychain. You were on your bed on your knees and looking at the camera with your tongue out and your mouth open"),
+    _("wearing seethrough panties and a comfy cropped hoodie"),
+    _("wearing unbuttoned jeans and a high-cropped Playboy tee that barely covered your nipples. You had your tongue out and toothpaste on it to like cum"),
+    _("wearing white panties with 'Morning Sex' written on them"),
+    _("with one of your girlfriends. She dressed up like a sexy school girl, and you dressed up like a sexy french maid. You told everyone to follow you for nudes in their dm"),
+    _("with one of your girlfriends. You were both sitting cross-legged on the floor of your bedroom in your underwear. You were looking up with your mouths open and your tongues out and you captioned it with 'Who wants to come over and play with us?'"),
+    _("with smudged mascara and tousled bed hair. You were drinking a morning cup of coffee and wearing only an unbuttoned, oversized business shirt"),
+    _("with your arms up against the wall and your panties half way down your legs"),
+    _("with your jeans unbuttoned and your top pulled up over your breasts"),
+    _("with wet panties and an exhausted look on your face"),
+]
+THIRST_TRAPS_FEMALE_IS_WORKING = [
+]
+THIRST_TRAPS_FEMALE_IS_STUDYING = [
+]
+THIRST_TRAPS_FEMALE_HAS_SISTER = [
 ]
 THIRST_TRAPS_MALE = [
     _("as 'The Naked Chef'"),
+    _("beating your meat while wearing a business shirt and pants. You only undid your fly for it and you came at the camera"),
+    _("bench pressing while wearing only a pair of tight, white Calvin Klein briefs"),
+    _("preparing food in only a business tie"),
+    _("preparing food in only a suit jacket"),
+    _("preparing food in only suit pants"),
+    _("preparing food in only your socks"),
+    _("pulling your tank top up to show your abs"),
+    _("pumping the porpoise close up. It was very dark and grainy"),
+    _("showing your bulge in tight jeans"),
+    _("showing your bulge in tight pants"),
     _("wearing a suit while eating a cherry"),
     _("wearing just a pair of jeans while mowing the lawn"),
+    _("wearing loose boxer shorts and jiggling your hard junk inside them. You asked everyone if you’d make a good dilf"),
+    _("wearing only a blue jockstrap while man spreading on your bed. You captioned it saying you were offering thirst traps today"),
+    _("wearing seethrough white pants and nothing underneath"),
+    _("wearing a tank top pulled up and a women’s knit thong. You bunched yourself into it and asked everyone if it was a thirst trap"),
     _("flexing your muscles while shaving your beard"),
+]
+THIRST_TRAPS_MALE_IS_WORKING = [
+]
+THIRST_TRAPS_MALE_IS_STUDYING = [
+]
+THIRST_TRAPS_MALE_HAS_UNCLE = [
+    _("wearing tight white boxer briefs showing off your package in a hotel laundry room. Your uncle walked in while you were making it"),
 ]
 # Your Travels = 'You posted {social_travel_media} {social_travel} on Instagram
 SOCIAL_TRAVEL_MEDIA = [
@@ -2473,7 +2945,11 @@ SOCIAL_HANDLES = [
 
 # Negative social responses: (E.g. 'someone called {@offensivebeavis} replied to your post, saying {you look sinister})
 NEGATIVE_SOCIAL_RESPONSES = [
+    _("a long line of words with no punctuation, and an ad hominem attack"),
+    _("something that was clearly supposed to be offensive, but didn't actually make any sense"),
     _("you look sinister"),
+    _("you should stop spending so much time on social media, and go back to school"),
+    _("you're clearly a flat-earther"),
     _("your thoughts are absurd"),
 ]
 
@@ -2498,7 +2974,180 @@ NEGATIVE_SOCIAL_RESPONSES = [
 # -------------------------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------------------------
 # [Assets Menu]
+# Cars
+CAR_BRANDS = [
+    _("Alpha Romeo"),
+    _("Abarth"),
+    _("AC"),
+    _("Acura"),
+    _("Aston Martin"),
+    _("Audi"),
+    _("Arrinera"),
+    _("Aixam"),
+    _("AC"),
+    _("Bentley"),
+    _("BMW"),
+    _("Buick"),
+    _("Bugatti"),
+    _("Chevrolet"),
+    _("Cadillac"),
+    _("Chrysler"),
+    _("Chery"),
+    _("Caterham"),
+    _("Corvette"),
+    _("Citroën"),
+    _("Dacia"),
+    _("Dihatsu"),
+    _("Dodge"),
+    _("Daewoo"),
+    _("Elfin"),
+    _("Fiat"),
+    _("Ferrari"),
+    _("Ford"),
+    _("GMC"),
+    _("Gaz"),
+    _("Gillet"),
+    _("Ginetta"),
+    _("Geely"),
+    _("Great Wall"),
+    _("Gumpert"),
+    _("Honda"),
+    _("Hennessey"),
+    _("Hyundai"),
+    _("Hummer"),
+    _("Holden"),
+    _("Isuzu"),
+    _("Infiniti"),
+    _("Jeep"),
+    _("Jaguar"),
+    _("Joss"),
+    _("Koenigsegg"),
+    _("Lamborghini"),
+    _("Land Rover"),
+    _("Lancia"),
+    _("Lincoln"),
+    _("Lexus"),
+    _("Luxgen"),
+    _("Lotus"),
+    _("Lada"),
+    _("Maruti"),
+    _("Maserati"),
+    _("Mahindra"),
+    _("Mazda"),
+    _("Maybach"),
+    _("McLaren"),
+    _("Mercedes Benz"),
+    _("Mini"),
+    _("Morgan"),
+    _("Mitsubishi"),
+    _("Mustang"),
+    _("Mosler"),
+    _("Nissan"),
+    _("Noble"),
+    _("Opel"),
+    _("Peugot"),
+    _("Piaggio"),
+    _("Panoz"),
+    _("Pagani"),
+    _("Perodua"),
+    _("Pininfarina"),
+    _("Porsche"),
+    _("Proton"),
+    _("Renault"),
+    _("Rolls Royce"),
+    _("Rover"),
+    _("Rimac Automobil"),
+    _("Ruf Automobile"),
+    _("REVA"),
+    _("Scania"),
+    _("SEAT"),
+    _("Saab"),
+    _("Scion"),
+    _("Škoda"),
+    _("Spyker"),
+    _("Smart"),
+    _("Shelby"),
+    _("Subaru"),
+    _("SsangYong"),
+    _("Suzuki"),
+    _("Tesla"),
+    _("Tata"),
+    _("Toyota"),
+    _("Tatra"),
+    _("Think"),
+    _("Troller"),
+    _("TVR"),
+    _("Tramontana"),
+    _("UAZ"),
+    _("Vanderbrink"),
+    _("Volvo"),
+    _("Vauxhall"),
+    _("Venturi"),
+    _("Viper"),
+    _("Wiesmann"),
+    _("ZAZ"),
+    _("Zagato"),
+    _("ZiL"),
+]
+# Car Models
+ALPHA_ROMEO_CARS = [
+    _("Giulia"),
+    _("Giulia Quadrifoglio"),
+    _("Stelvio"),
+    _("Stelvio Quadrifoglio"),
+    _("Tonale"),
+]
 
+# Car models by year (model year, not production year)
+CARS_2023 = [
+    _("Giulia"),
+    _("Giulia Quadrifoglio"),
+    _("Stelvio"),
+    _("Stelvio Quadrifoglio"),
+    _("Tonale"),
+]
+CARS_2022 = [
+    _("Giulia"),
+    _("Giulia Quadrifoglio"),
+    _("Stelvio"),
+    _("Stelvio Quadrifoglio"),
+]
+CARS_2021 = [
+    _("Giulia"),
+    _("Giulia Quadrifoglio"),
+    _("Stelvio"),
+    _("Stelvio Quadrifoglio"),
+]
+CARS_2020 = [
+    _("Giulia"),
+    _("Giulia Quadrifoglio"),
+    _("Stelvio"),
+    _("Stelvio Quadrifoglio"),
+]
+CARS_2019 = [
+    _("Giulia"),
+    _("Giulia Quadrifoglio"),
+    _("Stelvio"),
+    _("Stelvio Quadrifoglio"),
+]
+CARS_2018 = [
+    _("Giulia"),
+    _("Giulia Quadrifoglio"),
+    _("Stelvio"),
+    _("Stelvio Quadrifoglio"),
+]
+CARS_2017 = [
+    _("Giulia"),
+    _("Giulia Quadrifoglio"),
+    _("Stelvio"),
+    _("Stelvio Quadrifoglio"),
+]
+CARS_2016 = [
+    _("Giulia"),
+    _("Giulia Quadrifoglio"),
+]
+CARS_2015 = [
+]
 # -------------------------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------------------------
 # [Interactions with NPCs]
@@ -2508,459 +3157,12 @@ NEGATIVE_SOCIAL_RESPONSES = [
 # -------------------------------------------------------------------------------------------------------
 # [Occupation Menu]
 # Education +
-#   Primary School +
-#       Primary School Faculty +
-#       Primary School Staff +
-#   Middle School +
-#       Activities +
-#       Cliques +
-#       Middle School Faculty +
-#       Middle School Staff +
-#   High School +
-#       Activities +
-#       Cliques +
-#       High School Faculty +
-#       High School Staff +
-#   Community College
-#   University
-#       Undergraduate courses
-#       Postgraduate courses
-#   Business School
-#   Dental School
-#   Law School
-#   Medical School
-#   Nursing School
-#   Pharmacy School
-#   Veterinary School
-# Freelance Gigs +
-#   Freelance Job Types +
-# Job Recruiter
-# Jobs +
-#   Full-Time Job Types +
-#   Full-Time Job Categories / Career paths +
-#   Education / Age requirements +
-# Military
-# Part-Time Jobs +
-#   Part Time Job Types +
-#   Part Time Job Categories +
-# Special Careers ++
-#   Actor ++
-#       Audition +
-#       Extra +
-#   Business +
-#       Acquisition +
-#       Startup +
-#           Startup types +
-#   Mafia ++
-#       Criminal organisation types ++
-#       Join methods +
-#       Syndicate names +
-#   Model +
-#       Agent Offers +
-#       Audition Types +
-#       Freelance Types +
-#       Fashion Brands +
-#       Fashion Magazines +
-#       Fashion Week Locations +
-#   Musician ++
-#       Band +
-#           Band roles +
-#       Solo +
-#           Solo artist roles +
-#               Record label names +
-#   Politician +
-#       Political office types +
-#   Pro Athlete +
-#       Sports types ++
-#           American Football +
-#           Association Football +
-#           Australian Rules Football +
-#           Baseball +
-#           Basketball +
-#           Boxing +
-#           Canadian Football +
-#           Cricket +
-#           Gaelic Football +
-#           Golf +
-#           Ice Hockey +
-#           Rugby League +
-#           Rugby Union +
-#           Surfing +
-#           Tennis +
-#           Volleyball +
-#   Street Hustler +
-#       Street Names ++
-#       Street Hustling types ++
-#           Busker +
-#           Panhandler +
-#           Scam Artist +
-#           Street Performer +
-#- Also: Jobs for NPC Students and Adults in the wild +
-#   NPC Student Jobs +
-#   NPC Adult Jobs +
-
-
-
-
-
-# ------------------------------------------------------------------
-# Flirts
-
-# School flirts
-# Suggest that Primary school = primary school flirts; Middle school = Middle school & primary school flirts; High school = High school, middle school & primary school flirts
-# Primary School flirts:
-#   You complimented your classmate, {name}, on {his_her} haircut.
-#   You followed your classmate, {name}, around school trying to get {him_her} to notice you.
-#   You teased your classmate, {name}, just to get {his_her} attention.
-# -   You sat next to your classmate, {name}, at lunch just to get {his_her} attention.
-# -   You passed a charmingly funny note to your classmate, {name}, in class.
-# -   You passed a note to your classmate, {name}, in class.
-# -   You gave your classmate, {name}, a shy smirk and a wink from across the room.
-# -   You gave your classmate, {name}, an enamouring smirk and wink from across the room.
-# -   You gave your classmate, {name}, a confident smirk and wink from across the room.
-# -   You did the Lean dance move to try to impress your classmate, {name}.
-# -   You did the Carlton dance move to try to impress your classmate, {name}.
-# -   You did the Dejo dance move to try to impress your classmate, {name}.
-# -   You did the Moonwalk dance move to try to impress your classmate, {name}.
-# -   You did the Robot dance move to try to impress your classmate, {name}.
-# -   You did the Soulja Boy dance move to try to impress your classmate, {name}.
-# -   You did the Single Ladies dance move to try to impress your classmate, {name}.
-
-#   You did the {DANCE_MOVE} dance move to try to impress your classmate, {name}.
-DANCE_MOVE = [
-    _("Carlton"),
-    _("Dejo"),
-    _("Lean"),
-    _("Moonwalk"),
-    _("Robot"),
-    _("Running Man"),
-    _("Single Ladies"),
-    _("Soulja Boy"),
-    _("Shoot"),
-]
-#   You gave your classmate, {name}, {FLIRT_VERB_SMIRK} smirk and a wink from across the room.
-FLIRT_VERB_SMIRK = [
-    _("an awkward"),
-    _("a confident"),
-    _("an enamouring"),
-    _("a shy"),
-    _("a smooth"),
-]
-#   You sat next to your classmate, {name}, {FLIRT_LOCATION_SAT} just to get {his_her} attention.
-FLIRT_LOCATION_SAT = [
-    _("at lunch"),
-    _("by the pool"),
-    _("by the sports fields"),
-    _("during assembly"),
-    _("in the gym"),
-    _("in the library"),
-    _("in english class"),
-    _("in math class"),
-    _("in science class"),
-    _("on the way home from school"),
-    _("on the way to school"),
-]
-#   You passed {FLIRT_VERB_NOTE} note to your classmate, {name}, in class.
-FLIRT_VERB_NOTE = [
-    _("a"),
-    _("an awkward"),
-    _("a charmingly funny"),
-    _("a flirtatious"),
-]
-
-# Middle School flirts:
-#   You awkwardly bumped into your classmate, {name}, so that {he_she} had to talk to you.
-#   You stared at your classmate, {name}, for 22 straight minutes today during an assembly, just so she would notice that you are interested in {him_her}.
-#   You passed an awkward note to your classmate, {name}, in class.
-# -   You said "Why, hello there!" Every time you saw your classmate, {name}, at school today.
-#   You winked confidently at your classmate, {name}, while the teacher was discussing the sexual reproductive system.
-#   You laughed at everything your classmate, {name}, said, with the hope that {he_she} would embrace the attention from you.
-
-
-# You stared at your classmate, {name}, for {FLIRT_STARE_TIME_MIDDLE_SCHOOL} straight minutes today during {FLIRT_STARE_CLASSES_MIDDLE_SCHOOL} class, just so she would notice that you are interested in {him_her}.
-# FLIRT_STARE_TIME_MIDDLE_SCHOOL = randint(5, 25)
-# ^ TODO: Move this ^ out of const.py into the string format itself so the number isn't the same if generated multiple times while the game is open
-
-# LIST ORDERED: Alphabetical
-FLIRT_STARE_CLASSES_MIDDLE_SCHOOL = [
-    _("Art"),
-    _("Careers"),
-    _("Computer Science"),
-    _("Drama"),
-    _("English"),
-    _("Geography"),
-    _("History"),
-    _("Math"),
-    _("Music"),
-    _("Physical Eduacation"),
-    _("Science"),
-    _("Social Studies"),
-]
-
-
-# High School flirts:
-# -   You stared at your classmate, {name}, for 55 straight minutes today during science class, just so she would notice that you are interested in {him_her}.
-# -   You said "Why, hello there!" Every time you saw your classmate, {name}, at school today.
-#   You clumsily blew a kiss to your classmate, {name}, while the teacher wasn't looking.
-#   You meekly blew a kiss to your classmate, {name}, while the teacher wasn't looking.
-#   You ran your fingers through your hair as you takled with your classmate, {name}, so that {he_she} would realise you have a crush on her.
-#   You proudly showed your classmate, {name}, how hard you've been working on your twerking form.
-#   You mimicked your classmate, {name}'s, body language so that she would feel like she relates to you.
-
-
-# You stared at your classmate, {name}, for {FLIRT_STARE_TIME_HIGH_SCHOOL} straight minutes today during {FLIRT_STARE_CLASSES_HIGH_SCHOOL} class, just so she would notice that you are interested in {him_her}.
-# FLIRT_STARE_TIME_HIGH_SCHOOL = randint(10, 55)
-# LIST ORDERED: Business > CompSci/IT > English > Family/Consumer Science > Languages > Math > Performing Arts > Physical Ed > Science > Social Studies > Visual Arts > Vocational Ed
-FLIRT_STARE_CLASSES_HIGH_SCHOOL = [
-    _("Accounting"),
-    _("Business law"),
-    _("Business management"),
-    _("Consumer education"),
-    _("Entrepreneurial skills"),
-    _("Introduction to business"),
-    _("Marketing"),
-    _("Personal finance"),
-    _("Animation"),
-    _("App development"),
-    _("Audio production"),
-    _("Computer programming"),
-    _("Computer repair"),
-    _("Film production"),
-    _("Graphic design"),
-    _("Media technology"),
-    _("Music production"),
-    _("Typing"),
-    _("Video game development"),
-    _("Web design"),
-    _("Web programming"),
-    _("Word processing"),
-    _("American literature"),
-    _("British literature"),
-    _("Contemporary literature"),
-    _("Creative writing"),
-    _("Communication skills"),
-    _("Debate"),
-    _("English language and composition"),
-    _("English literature and composition"),
-    _("Humanities"),
-    _("Journalism"),
-    _("Literary analysis"),
-    _("Modern literature"),
-    _("Poetry"),
-    _("Popular literature"),
-    _("Rhetoric"),
-    _("Technical writing"),
-    _("Works of Shakespeare"),
-    _("World literature"),
-    _("Written and oral communication"),
-    _("Chemistry of foods"),
-    _("CPR training"),
-    _("Culinary arts"),
-    _("Early childhood development"),
-    _("Early childhood education"),
-    _("Family studies"),
-    _("Fashion and retail merchandising"),
-    _("Fashion construction"),
-    _("Home economics"),
-    _("Interior design"),
-    _("Nutrition"),
-    _("American Sign Language"),
-    _("Ancient Greek Language"),
-    _("Arabic Language"),
-    _("Chinese Language"),
-    _("French Language"),
-    _("German Language"),
-    _("Hebrew Language"),
-    _("Italian Language"),
-    _("Japanese Language"),
-    _("Korean Language"),
-    _("Latin Language"),
-    _("Portuguese Language"),
-    _("Russian Language"),
-    _("Spanish Language"),
-    _("Algebra 1"),
-    _("Algebra 2"),
-    _("Calculus"),
-    _("Computer math"),
-    _("Consumer math"),
-    _("Fundamentals of math"),
-    _("Geometry"),
-    _("Integrated math"),
-    _("Math applications"),
-    _("Multivariable calculus"),
-    _("Practical math"),
-    _("Pre-algebra"),
-    _("Pre-calculus"),
-    _("Probability"),
-    _("Quantitative literacy"),
-    _("Statistics"),
-    _("Trigonometry"),
-    _("Choir"),
-    _("Concert band"),
-    _("Dance"),
-    _("Drama"),
-    _("Guitar"),
-    _("Jazz band"),
-    _("Marching band"),
-    _("Music theory"),
-    _("Orchestra"),
-    _("Percussion"),
-    _("Piano"),
-    _("Theater technology"),
-    _("World music"),
-    _("Aerobics"),
-    _("Dance"),
-    _("Gymnastics"),
-    _("Health"),
-    _("Lifeguard training"),
-    _("Pilates"),
-    _("Racket sports"),
-    _("Specialized sports"),
-    _("Swimming"),
-    _("Weight training"),
-    _("Yoga"),
-    _("Agriculture"),
-    _("Astronomy"),
-    _("Biology"),
-    _("Botany"),
-    _("Chemistry"),
-    _("Earth science"),
-    _("Electronics"),
-    _("Environmental science"),
-    _("Environmental studies"),
-    _("Forensic science"),
-    _("Geology"),
-    _("Marine biology"),
-    _("Oceanography"),
-    _("Physical science"),
-    _("Physics"),
-    _("Zoology"),
-    _("Cultural anthropology"),
-    _("Current events"),
-    _("European history"),
-    _("Geography"),
-    _("Global studies"),
-    _("Human geography"),
-    _("International relations"),
-    _("Law"),
-    _("Macroeconomics"),
-    _("Microeconomics"),
-    _("Modern world studies"),
-    _("Physical anthropology"),
-    _("Political studies"),
-    _("Psychology"),
-    _("Religious studies"),
-    _("Sociology"),
-    _("National government"),
-    _("National history"),
-    _("Women's studies"),
-    _("World history"),
-    _("World politics"),
-    _("World religions"),
-    _("3-D art"),
-    _("Art history"),
-    _("Ceramics"),
-    _("Digital media"),
-    _("Drawing"),
-    _("Film production"),
-    _("Jewelry design"),
-    _("Painting"),
-    _("Photography"),
-    _("Printmaking"),
-    _("Sculpture"),
-    _("Auto body repair"),
-    _("Auto mechanics"),
-    _("Building construction"),
-    _("Computer-aided drafting"),
-    _("Cosmetology"),
-    _("Criminal justice"),
-    _("Driver education"),
-    _("Electronics"),
-    _("FFA (Future Farmers of America)"),
-    _("Fire science"),
-    _("Heating and cooling systems"),
-    _("Hospitality and tourism"),
-    _("JROTC (Junior Reserve Officers' Training Corps)"),
-    _("Metalworking"),
-    _("Networking"),
-    _("Plumbing"),
-    _("Production technology"),
-    _("Refrigeration fundamentals"),
-    _("Robotics"),
-    _("Woodworking"),
-]
-#   You said "{FLIRT_SAID_SAW}" Every time you saw your classmate, {name}, at school today.
-FLIRT_SAID_SAW = [
-    _("Ooh La La!"),
-    _("Why, hello there!"),
-]
-
-
-# Tertiary (University/Community College etc) Flirts:
-
-
-# Adult flirts
-# General
-# Workplace
-
-# ------------------------------------------------------------------
-# Hook Up
-
-# {Relation}
-# Things are getting hot with your {relation}, {name}, and you're thinking about safe sex.
-# What will you do? > Use a condom (Make him_her use a condom) || Don't use a condom
-# No condoms are available. What will you do? > Oh well, keep going || Pull out (Tell him to pull out) || Never mind, I can't do it
-
-# You had a one night stand with your {relation}, {name}. {hook_up_yes_female}
-HOOK_UP_YES_FEMALE = [
-    _("You have a hard time walking straight the next day"),
-    _("You left your underwear behind"),
-]
-HOOK_UP_NO_FEMALE = [
-    _(""),
-]
-# If your character is male
-HOOK_UP_YES_MALE = [
-    _("You left your underwear behind"),
-]
-HOOK_UP_NO_MALE = [
-    _(""),
-]
-
-# {Random NPC}
-# {A dude} named {name} {invites you to exchange nude pics}. > Take him to bed || Absolutely not
-# If take him to bed:
-# Things are getting hot with {name}, and you're thinking about safe sex.
-# What will you do? > Use a condom (Make him_her use a condom) || Don't use a condom
-# No condoms are available. What will you do? > Oh well, keep going || Pull out (Tell him to pull out) || Never mind, I can't do it
-HOOK_UP_MALE_TYPES = [
-    _("A dude"),
-    _("A guy"),
-    _("An interesting guy"),
-]
-HOOK_UP_MALE_TEXTS = [
-    _("invites you to exchange nude pics"),
-]
-# You have an opportunity to have a one night stand with a young man named {name}.
-# What will you do? > Hit that (/ Sleep with him_her / Get at it / Give it to him_her) || No, I'm not into that
-
-# No condoms are available and it looks like he_she's got some craziness going on down below.
-# What will you do? > Keep going worry later || Pull out (/Tell him to pull out) || Nevermind, I can't do it
-
-# You {got up and left}. He respected your decision (/He called you {insults})
-HOOK_UP_CRAZINESS_NO = [
-    _("got up and left"),
-]
-
-# ------------------------------------------------------------------
-# Jobs lists for NPC
-
-# Teacher Jobs (for school faculty):
-
-# Primary School Teachers
+# Primary School
+# Primary School Faculty
 FACULTY_JOBS_PRIMARY = [
     _(""),
 ]
+# Primary School Staff
 STAFF_JOBS_PRIMARY = [
     _("Principal"),
     _("Assistant Principal"),
@@ -2971,7 +3173,55 @@ STAFF_JOBS_PRIMARY = [
     _("Groundskeeper"),
     _("Substitute Teacher"),
 ]
-# Middle School Teachers
+
+# ------------------
+# Middle School
+# Middle School activities
+MIDDLE_SCHOOL_ACTIVITIES = [
+    _("Animal Rights Club"),
+    _("Basketball Team"),
+    _("Cheerleading Team"),
+    _("Choir"),
+    _("Creative Writing Club"),
+    _("Cross Country Team"),
+    _("Diving Team"),
+    _("Drama Club"),
+    _("Field Hockey Team"),
+    _("Gymnastics Team"),
+    _("History Club"),
+    _("Lacrosse Team"),
+    _("Math Club"),
+    _("Recycling Club"),
+    _("Science Club"),
+    _("Soccer Team"),
+    _("Swim Team"),
+    _("Tennis Team"),
+    _("Track Team"),
+    _("Video Games Club"),
+    _("Volleyball Team"),
+    _("Yearbook Club"),
+]
+# Middle School and High School cliques
+SCHOOL_CLIQUES = [
+    _("Artsy Kids"),
+    _("Band Geeks"),
+    _("Brainy Kids"),
+    _("Drama Kids"),
+    _("Gamers"),
+    _("Goths"),
+    _("Hipsters"),
+    _("Loners"),
+    _("Mean Girls"),
+    _("Nerds"),
+    _("Normals"),
+    _("Popular Kids"),
+    _("Skaters"),
+    _("Social Floaters"),
+    _("Talented Kids"),
+    _("Troublemakers"),
+    _("Weebs"),
+]
+# Middle School Faculty
 FACULTY_JOBS_MIDDLE = [
     _("Art Teacher"),
     _("Careers Teacher"),
@@ -2986,6 +3236,7 @@ FACULTY_JOBS_MIDDLE = [
     _("Science Teacher"),
     _("Social Studies Teacher"),
 ]
+# Middle School Staff
 STAFF_JOBS_MIDDLE = [
     _("Principal"),
     _("Assistant Principal"),
@@ -2996,7 +3247,35 @@ STAFF_JOBS_MIDDLE = [
     _("Groundskeeper"),
     _("Substitute Teacher"),
 ]
-# High School / Secondary Teachers
+# ------------------
+# High School 
+# High School activities
+HIGH_SCHOOL_ACTIVITIES = [
+    _("Baking Club"),
+    _("Basketball Team"),
+    _("Cheerleading Team"),
+    _("Computer Science Club"),
+    _("Concert Band"),
+    _("Cross Country Team"),
+    _("Diving Team"),
+    _("Drama Club"),
+    _("Golf Team"),
+    _("Gymnastics Team"),
+    _("Handball Team"),
+    _("Skateboarding Club"),
+    _("Soccer Team"),
+    _("Student Council"),
+    _("Swim Team"),
+    _("Tennis Team"),
+    _("Track Team"),
+    _("Tutoring Club"),
+    _("Video Games Club"),
+    _("Volleyball Team"),
+    _("Woodworkers Club"),
+    _("Yearbook Club"),
+]
+# High School Cliques (see middle school section)
+# High School Faculty / Secondary School Faculty
 FACULTY_JOBS_SECONDARY = [
     _("Accounting Teacher"),
     _("Art Teacher"),
@@ -3011,6 +3290,7 @@ FACULTY_JOBS_SECONDARY = [
     _("P.E. Teacher"),
     _("Physics Teacher"),
 ]
+# High School Staff / Secondary School Staff
 STAFF_JOBS_SECONDARY = [
     _("Principal"),
     _("Assistant Principal"),
@@ -3022,19 +3302,31 @@ STAFF_JOBS_SECONDARY = [
     _("Groundskeeper"),
     _("Substitute Teacher"),
 ]
-# Community College Teachers
+
+# ------------------
+# Community College
+# Community College Faculty
 FACULTY_JOBS_COMMUNITY_COLLEGE = [
     _("Associate Professor"),
     _("Professor"),
     _("Researcher"),
 ]
+# Community College Staff
 STAFF_JOBS_COMMUNITY_COLLEGE = [
     _("Dean"),
     _("Food Service"),
     _("Groundskeeper"),
 ]
+# ------------------
+# University
+#       Undergraduate courses
+#       Postgraduate courses
+# Teacher Jobs (for school faculty):
 # University teachers (for each degree)
-FACULTY_JOBS_UNIVERSITY = [_("Associate Professor"), _("Professor"), _("Researcher")]
+FACULTY_JOBS_UNIVERSITY = [
+    _("Associate Professor"), 
+    _("Professor"), 
+    _("Researcher")]
 STAFF_JOBS_UNIVERSITY = [
     _("Dean"),
     _("Associate Dean"),
@@ -3047,40 +3339,19 @@ STAFF_JOBS_UNIVERSITY = [
     _("Vice Chancellor"),
     _("Vice President"),
 ]
-
-# World NPC Jobs (For dating app, love interest/find a date, parent's jobs, other {relation}'s jobs):
-# School Love Interest (ages under 18)
-JOBS_HIGH_SCHOOL = [
-    _("High School Dropout"),
-    _("High School Student"),
-    _("High School Student, Part-time Arcade Assistant"),
-    _("High School Student, Part-time Armpit Sniffer"),
-    _("High School Student, Part-time Barista"),
-    _("High School Student, Part-time Bike Shop Mechanic"),
-    _("High School Student, Part-time Boutique Associate"),
-    _("High School Student, Part-time Bowling Alley Assistant"),
-    _("High School Student, Part-time Camp Counsellor"),
-    _("High School Student, Part-time Car Wash Attendant"),
-    _("High School Student, Part-time Dance Instructor"),
-    _("High School Student, Part-time Doorman"),
-    _("High School Student, Part-time Fitness Instructor"),
-    _("High School Student, Part-time Gym Receptionist"),
-    _("High School Student, Part-time Hotel Concierge"),
-    _("High School Student, Part-time Ice Cream Scooper"),
-    _("High School Student, Part-time Lifeguard"),
-    _("High School Student, Part-time Mall Kiosk Worker"),
-    _("High School Student, Part-time Personal Trainer"),
-    _("High School Student, Part-time Usher"),
-    _("High School Student, Part-time Valet"),
-    _("High School Student, Part-time Window Cleaner"),
-]
-
-JOBS_NPC = [
-    _("Unemployed"),
-    _(""),
-]
+UNDERGRADUATE_COURSES = []
+POSTGRADUATE_COURSES = []
+#   Business School
+#   Dental School
+#   Law School
+#   Medical School
+#   Nursing School
+#   Pharmacy School
+#   Veterinary School
 # ------------------------------------------------------------------
 # Jobs
+# Freelance Gigs
+# Freelance Job Types
 JOBS_FREELANCE_GIGS = [
     _("Handyman"),
     _("Tutor"),
@@ -3092,75 +3363,12 @@ JOBS_FREELANCE_GIGS = [
     _("Lemonade Stand"),
     _("Kissing booth"),
 ]
-# Part-Time Job Types
-JOBS_PART_TIME = [
-    _("Arcade Assistant"),
-    _("Armpit Sniffer"),
-    _("Barista"),
-    _("Bellhop"),
-    _("Bike Shop Mechanic"),
-    _("Bookkeeper"),
-    _("Boutique Associate"),
-    _("Bowling Alley Assistant"),
-    _("Camp Counsellor"),
-    _("Car Wash Attendant"),
-    _("Caterer"),
-    _("Clothing Shop Assitant"),
-    _("Collections Specialist"),
-    _("Concessions Attendant"),
-    _("Dance Instructor"),
-    _("Delivery Driver"),
-    _("Doorman"),
-    _("Fitness Instructor"),
-    _("Flower Shop Assistant"),
-    _("Gym Receptionist"),
-    _("Hotel Concierge"),
-    _("Hotel Front Desk Clerk"),
-    _("Ice Cream Scooper"),
-    _("Lifeguard"),
-    _("Mall Kiosk Worker"),
-    _("Mall Santa"),
-    _("Office Assistant"),
-    _("Personal Trainer"),
-    _("Pool Towel Attendant"),
-    _("Sandwich Maker"),
-    _("School Bus Driver"),
-    _("Sign Holder"),
-    _("Street Sweeper"),
-    _("Swim Instructor"),
-    _("Usher"),
-    _("Valet"),
-    _("Window Cleaner"),
-    _("Yoga Receptionist"),
-]
-# Part time job categories
-JOBS_PART_TIME_CAR_WASH = [
-    _("Car Wash Attendant"),
-    _(""),
-]
-JOBS_PART_TIME_GYM = [
-    _("Yoga Receptionist"),
-]
-JOBS_PART_TIME_HOTEL = [
-    _("Pool Towel Attendant"),
-]
-JOBS_PART_TIME_MALL = [
-    _("Arcade Assistant"),
-]
-JOBS_PART_TIME_MOVIE_THEATRE = [
-    _("Concessions Attendant"),
-]
-JOBS_PART_TIME_MUNICIPAL = [
-    _(""),
-    _("Street Sweeper"),
-]
-JOBS_PART_TIME_RETAIL = [
-    _("Clothing Shop Assitant"),
-    _("Flower Shop Assitant"),
-]
-
-
-# Full-Time jobs arranged into job categories. E.g. Junior Financial Analyst (Corporate) comes under CORPORATE =, or FINANCE =
+# ------------------------------------------------------------------
+# Job Recruiter
+# ------------------------------------------------------------------
+# Jobs
+## Full-Time Job Types
+# Full-Time jobs arranged into job categories lower down. E.g. Junior Financial Analyst (Corporate) comes under CORPORATE =, or FINANCE =
 # Junior Corporate jobs for age/qualification reasons. {JOBS_CORPORATE_JUNIOR} (Corporate).
 # Nb. These will probably need to be re-categorised once they're all down. The in-app classification system isn't very good
 JOBS_ADULT_FILM_STUDIO = [
@@ -3457,25 +3665,8 @@ JOBS_VETERINARY_CLINIC = [
     _("Veterinarian"),
 ]
 
-# Jobs and their relevant qualifications
-NO_QUALIFICATION_JOBS = [
-    _("Bartender"),
-]
-HIGH_SCHOOL_QUALIFICATION_JOBS = [
-    _("Apprentice Cameraman"),
-]
-# Temporary 'University' Cover-all
-UNIVERSITY_QUALIFICATION_JOBS = [
-    _("Engineer I"),
-]
-GRADUATE_SCHOOL_QUALIFICATION_JOBS = [
-    _("Professor"),
-]
-LAW_SCHOOL_QUALIFICATION_JOBS = [
-    _("Magistrate"),
-]
-
-# Careers and their relevant jobs
+# Full-Time Job Categories / Career paths
+## Careers and their relevant jobs
 # I.e. Job for Engineering I is published as:
 # Title: Engineer I
 # Career: Chemical Engineer
@@ -3548,41 +3739,96 @@ CAREER_VETERINARIAN = [
     _("Veterinarian"),
 ]
 
-# Hashed out while working on a better system design.
-# No need for a Veterinary School when Veterinary medicine is your degree.
-# Suggest something along the lines of either 'University' is renamed 'Undergraduate University' and 'Postgraduate University' is introduced for Masters / PhD level jobs. Or, 'University' leads you to an undergrad and postgrad selection.
-#
-# University Degrees
-#   MAJORS = [
-#       _("Arts"),
-#       _("Business and Management"),
-#       _("Computer Science"),
-#       _("Economics"),
-#       _("Education and Teaching"),
-#       _("Engineering"),
-#       _("Gender Studies"),
-#       _("Music"),
-#       _("Humanities"),
-#       _("Law"),
-#       _("Marketing"),
-#       _("Mathematics and Statistics"),
-#       _("Medicine"),
-#       _("Political Science"),
-#       _("Veterinary Medicine"),
-#       _(""),
-#   ]
-#   # Student Outcomes. These jobs need one of the above Degrees
-#   ARTS_JOBS = [
-#       _(""),
-#   ]
-#   ENGINEERING_JOBS = [
-#       _("Engineer I"),
-#   ]
-
-
-# ----
-# Special Jobs
-
+# Education / Age requirements
+# Jobs and their relevant qualifications
+NO_QUALIFICATION_JOBS = [
+    _("Bartender"),
+]
+HIGH_SCHOOL_QUALIFICATION_JOBS = [
+    _("Apprentice Cameraman"),
+]
+# Temporary 'University' Cover-all
+UNIVERSITY_QUALIFICATION_JOBS = [
+    _("Engineer I"),
+]
+GRADUATE_SCHOOL_QUALIFICATION_JOBS = [
+    _("Professor"),
+]
+LAW_SCHOOL_QUALIFICATION_JOBS = [
+    _("Magistrate"),
+]
+# ------------------------------------------------------------------
+# Military
+# ------------------------------------------------------------------
+# Part-Time Jobs
+# Part-Time Job Types
+JOBS_PART_TIME = [
+    _("Arcade Assistant"),
+    _("Armpit Sniffer"),
+    _("Barista"),
+    _("Bellhop"),
+    _("Bike Shop Mechanic"),
+    _("Bookkeeper"),
+    _("Boutique Associate"),
+    _("Bowling Alley Assistant"),
+    _("Camp Counsellor"),
+    _("Car Wash Attendant"),
+    _("Caterer"),
+    _("Clothing Shop Assitant"),
+    _("Collections Specialist"),
+    _("Concessions Attendant"),
+    _("Dance Instructor"),
+    _("Delivery Driver"),
+    _("Doorman"),
+    _("Fitness Instructor"),
+    _("Flower Shop Assistant"),
+    _("Gym Receptionist"),
+    _("Hotel Concierge"),
+    _("Hotel Front Desk Clerk"),
+    _("Ice Cream Scooper"),
+    _("Lifeguard"),
+    _("Mall Kiosk Worker"),
+    _("Mall Santa"),
+    _("Office Assistant"),
+    _("Personal Trainer"),
+    _("Pool Towel Attendant"),
+    _("Sandwich Maker"),
+    _("School Bus Driver"),
+    _("Sign Holder"),
+    _("Street Sweeper"),
+    _("Swim Instructor"),
+    _("Usher"),
+    _("Valet"),
+    _("Window Cleaner"),
+    _("Yoga Receptionist"),
+]
+# Part time job categories
+JOBS_PART_TIME_CAR_WASH = [
+    _("Car Wash Attendant"),
+    _(""),
+]
+JOBS_PART_TIME_GYM = [
+    _("Yoga Receptionist"),
+]
+JOBS_PART_TIME_HOTEL = [
+    _("Pool Towel Attendant"),
+]
+JOBS_PART_TIME_MALL = [
+    _("Arcade Assistant"),
+]
+JOBS_PART_TIME_MOVIE_THEATRE = [
+    _("Concessions Attendant"),
+]
+JOBS_PART_TIME_MUNICIPAL = [
+    _(""),
+    _("Street Sweeper"),
+]
+JOBS_PART_TIME_RETAIL = [
+    _("Clothing Shop Assitant"),
+    _("Flower Shop Assitant"),
+]
+# ------------------------------------------------------------------
+# Special Careers 
 # Actor
 MENU_ACTOR = [
     _("Talent Manager"),
@@ -3595,9 +3841,7 @@ TALENT_AGENT_REPRESENTATION_OFFERS_FEMALE = [
     _("if she could get a Carrot Top cast in a film, she could get you in one too"),
 ]
 TALENT_AGENT_REPRESENTATION_OFFERS_MALE = [
-    _(
-        "he basically runs the industry and swears anyone would be lucky to work with him"
-    ),
+    _("he basically runs the industry and swears anyone would be lucky to work with him"),
 ]
 # Audition
 ACTING_AUDITION_TYPE = [
@@ -3662,12 +3906,14 @@ TV_SHOWS = [
 ]
 # "You served as an extra playing {extra_roles_male or female} in the TV show {TV_shows}"
 
-
+# ------------------------------------------------------------------
+# Business
 # Run your own business
 BUSINESS_OWNER_START_TYPE = [
     _("Acquisition"),
     _("Startup"),
 ]
+# Use these for both acquisition and startup
 BUSINESS_TYPES = [
     _("Food Truck"),
     _("Gift Shop"),
@@ -3696,8 +3942,9 @@ BUSINESS_TYPES = [
     _("Car Manufacturer"),
 ]
 
-
-# Organised Crime Jobs
+# ------------------------------------------------------------------
+# Mafia
+# Criminal Organisation types
 CRIMINAL_ORGANISATION = [
     _("Biker"),
     _("Irish Mob"),
@@ -3707,6 +3954,7 @@ CRIMINAL_ORGANISATION = [
     _("Triad"),
     _("Yakuza"),
 ]
+# Join Methods
 ORGANISED_CRIME_JOIN_METHOD = [
     _("Relay messages"),
     _("Chauffeur them around town"),
@@ -3715,6 +3963,7 @@ ORGANISED_CRIME_JOIN_METHOD = [
     _("Do yard work"),
     _("Hang out at their club"),
 ]
+# Syndicate names
 # Biker
 BIKER_SYNDICATE = [
     _("Bandidos"),
@@ -3733,7 +3982,7 @@ TRIAD_SYNDICATE = []
 # Yakuza
 YAKUZA_SYNDICATE = []
 
-
+# ------------------------------------------------------------------
 # Model
 MENU_MODEL = [
     _("Model Manager"),
@@ -3741,15 +3990,15 @@ MENU_MODEL = [
     _("Audition"),
     _("Freelance"),
 ]
+# Agent Offers
 # Look for a modelling agent. "A chick named {names} has offered to represent you as an agent. She said {if she could get Ugly Betty on the cover of Vogue, she could get you there too}"
 MODEL_AGENT_REPRESENTATION_OFFERS_FEMALE = [
     _("if she could get Ugly Betty on the cover of Vogue, she could get you there too"),
 ]
 MODEL_AGENT_REPRESENTATION_OFFERS_MALE = [
-    _(
-        "he basically runs the industry and swears anyone would be lucky to work with him"
-    ),
+    _("he basically runs the industry and swears anyone would be lucky to work with him"),
 ]
+# Audition Types
 # Modelling Audition Job types
 MODEL_AUDITION_JOBS = [
     _("Art"),
@@ -3770,6 +4019,7 @@ MODEL_AUDITION_JOBS = [
     _("Sportswear Roles"),
     _("Swimwear Roles"),
 ]
+# Freelance Types
 # Freelance model work types
 MODEL_FREELANCE_JOBS = [
     _("Art"),
@@ -3793,7 +4043,90 @@ MODEL_FREELANCE_JOBS = [
     _("Swimwear"),
 ]
 # Fashion Magazines
-FASHION_MAGAZINES = []
+FASHION_MAGAZINES_ELITE = [
+    _("Allure"),
+    _("Business of Fashion"),
+    _("Elle"),
+    _("Grazia"),
+    _("Harper's Bazaar"),
+    _("InStyle"),
+    _("L'Officiel"),
+    _("Marie Claire"),
+    _("Numéro"),
+    _("Tatler"),
+    _("V"),
+    _("Vanity Fair"),
+    _("Vogue"),
+    _("W"),
+]
+FASHION_MAGAZINES = [
+    _("303"),
+    _("AnOther"),
+    _("Cliché"),
+    _("Cosmopolitan"),
+    _("DANSK"),
+    _("Dazed"),
+    _("Dazed & Confused"),
+    _("E!"),
+    _("Essence"),
+    _("FASHION"),
+    _("FHM"),
+    _("Flaunt"),
+    _("frankie"),
+    _("GQ"),
+    _("i-D"),
+    _("Interview"),
+    _("IMAGE"),
+    _("LOOK"),
+    _("LOVE"),
+    _("Lucire"),
+    _("Madame Figaro"),
+    _("Muse"),
+    _("Nylon"),
+    _("Oyster"),
+    _("Pop"),
+    _("Purple"),
+    _("RUSSH"),
+    _("Schön!"),
+    _("Who What Wear"),
+    _("Wonderland"),
+    _("WWD"),
+]
+FASHION_MAGAZINES_TEEN = [
+    _("Elle girl"),
+    _("Popteen"),
+    _("Seventeen"),
+    _("Teen Vogue"),
+    _("Vanity Teen"),
+]
+MENS_MAGAZINES = [
+    _("Esquire"),
+    _("FHM"),
+    _("GQ"),
+    _("Interviú"),
+    _("Lui"),
+    _("Playboy"),
+]
+ADULT_MAGAZINES_SOFT = [
+    _("Club"),
+    _("Escort"),
+    _("High Society"),
+    _("Lui"),
+    _("Mayfair"),
+    _("Oui"),
+    _("Penthouse"),
+    _("Playboy"),
+]
+ADULT_MAGAZINES_HARD = [
+    _("18eighteen"),
+    _("Club Confidential"),
+    _("Hustler"),
+    _("Just 18"),
+    _("Penthouse"),
+    _("Pirate"),
+    _("Private"),
+    _("Rodox"),
+]
 # Modelling job types
 MODELLING_JOBS_ART = [
     _("Life Modelling Class"),
@@ -3804,6 +4137,22 @@ MODELLING_JOBS_ART = [
 MODELLING_JOBS_ARTISTIC_NUDE = []
 MODELLING_JOBS_CATWALK = []
 MODELLING_JOBS_COMMERCIAL = []
+MODELLING_JOBS_EDITORIAL = []
+MODELLING_JOBS_FIT = []
+MODELLING_JOBS_FITNESS = []
+MODELLING_JOBS_FOOT = []
+MODELLING_JOBS_GLAMOUR = []
+MODELLING_JOBS_HAND = []
+MODELLING_JOBS_HIGH = []
+MODELLING_JOBS_INSTAGRAM = []
+MODELLING_JOBS_LINGERIE = []
+MODELLING_JOBS_ONLYFANS = []
+MODELLING_JOBS_PARTS = []
+MODELLING_JOBS_PRINT = []
+MODELLING_JOBS_PROMOTIONAL = []
+MODELLING_JOBS_SPORTSWEAR = []
+MODELLING_JOBS_SWIMWEAR = []
+# Fashion Brands
 # E.g. "Fashion Brand: Balenciaga"
 FASHION_BRANDS = [
     _("A.P.C."),
@@ -3976,7 +4325,7 @@ FASHION_BRANDS = [
     _("Zalando"),
     _("Zara"),
 ]
-# Probably needs a better ranking classification
+# Fashion week locations
 FASHION_WEEK_LOCATIONS_BIG_FOUR = [
     _("London"),
     _("Milan"),
@@ -4016,10 +4365,16 @@ FASHION_WEEK_LOCATIONS_MID = [
     _("Swahili"),
     _("Ukrainian"),
 ]
+# For pre fashion week skill level
+FASHION_CATWALK_LOCATIONS_LOCAL = [
+    _("a local shopping mall"),
+    _("a small private charity event"),
+]
 # "You served as a {model_type} for {fashion_brand_or_client}"
 
-
-# Musician Jobs
+# ------------------------------------------------------------------
+# Musician
+# Musician Job Types
 MUSICIAN_JOB_TYPE = [
     _("Band"),
     _("Solo Artist"),
@@ -4041,17 +4396,20 @@ MUSICIAN_SOLO_ARTIST_ROLE = [
     _("Singer"),
     _("Violinist"),
 ]
+# Solo artist record label names
 MUSICIAN_SOLO_ARTIST_RECORD_LABEL = [
     _("Atrium Records"),
     _("Falcon Records"),
     _("United Beats"),
 ]
 
-
+# ------------------------------------------------------------------
+# Politician
 # Politician Jobs
 POLITICIAN_COUNTRY = [
     _("United States"),
 ]
+# Political office types 
 # - United States -
 POLITICIAN_UNITED_STATES = [
     _("School Board Director"),
@@ -4065,8 +4423,8 @@ UNITED_STATES_SCHOOL_BOARD_DIRECTOR_PLATFORM = [
     _("Environment"),
     _("Social Issues"),
 ]
-
-
+# ------------------------------------------------------------------
+#   Pro Athlete +
 # Professional Athlete Jobs
 PROFESSIONAL_SPORTS_TYPES = [
     _("American Football"),
@@ -4086,6 +4444,7 @@ PROFESSIONAL_SPORTS_TYPES = [
     _("Tennis"),
     _("Volleyball"),
 ]
+# Sports Types
 # - American Football -
 # American Football Teams
 AMERICAN_FOOTBALL_TEAMS_NFC = [
@@ -4554,9 +4913,10 @@ VOLLEYBALL_TEAMS = []
 # Positions
 VOLLEYBALL_POSITIONS = []
 
+# ------------------------------------------------------------------
+# Street Hustler
 
-# Street Hustler Jobs:
-# Streets
+# Street Names
 STREET_HUSTLE_STREET_NAMES = [
     _("Taylor Street"),
     _("Wall Street"),
@@ -4609,6 +4969,7 @@ STREET_HUSTLE_STREET_NAMES = [
     _("Cottage Street"),
     _("9th Street"),
 ]
+# Street Hustler Jobs
 # Hustles
 STREET_HUSTLES = [
     _("Busker"),
@@ -4741,6 +5102,457 @@ PANHANDLER_STRATEGIES = [
     _("Approach people leaving a concert hall"),
     _("Stand on a corner known for drug dealing"),
 ]
+# - Scam Artist -
+# - Street Performer -
+
+
+# ------------------------------------------------------------------
+# Jobs for NPC Students and Adults in the wild
+# World NPC Jobs (For dating app, love interest/find a date, parent's jobs, other {relation}'s jobs):
+# School Love Interest (ages under 18), or school aged sibling with a job
+# NPC Student Jobs
+JOBS_NPC_HIGH_SCHOOL = [
+    _("High School Dropout"),
+    _("High School Student"),
+    _("High School Student, Part-time Arcade Assistant"),
+    _("High School Student, Part-time Armpit Sniffer"),
+    _("High School Student, Part-time Barista"),
+    _("High School Student, Part-time Bike Shop Mechanic"),
+    _("High School Student, Part-time Boutique Associate"),
+    _("High School Student, Part-time Bowling Alley Assistant"),
+    _("High School Student, Part-time Camp Counsellor"),
+    _("High School Student, Part-time Car Wash Attendant"),
+    _("High School Student, Part-time Dance Instructor"),
+    _("High School Student, Part-time Doorman"),
+    _("High School Student, Part-time Fitness Instructor"),
+    _("High School Student, Part-time Gym Receptionist"),
+    _("High School Student, Part-time Hotel Concierge"),
+    _("High School Student, Part-time Ice Cream Scooper"),
+    _("High School Student, Part-time Lifeguard"),
+    _("High School Student, Part-time Mall Kiosk Worker"),
+    _("High School Student, Part-time Personal Trainer"),
+    _("High School Student, Part-time Usher"),
+    _("High School Student, Part-time Valet"),
+    _("High School Student, Part-time Window Cleaner"),
+]
+# NPC Adult Jobs
+JOBS_NPC = [
+    _("Unemployed"),
+    _(""),
+]
+
+
+
+# ------------------------------------------------------------------
+# Flirts
+
+# School flirts
+# Suggest that Primary school = primary school flirts; Middle school = Middle school & primary school flirts; High school = High school, middle school & primary school flirts
+# Primary School flirts:
+#   You complimented your classmate, {name}, on {his_her} haircut.
+#   You followed your classmate, {name}, around school trying to get {him_her} to notice you.
+#   You teased your classmate, {name}, just to get {his_her} attention.
+# -   You sat next to your classmate, {name}, at lunch just to get {his_her} attention.
+# -   You passed a charmingly funny note to your classmate, {name}, in class.
+# -   You passed a note to your classmate, {name}, in class.
+# -   You gave your classmate, {name}, a shy smirk and a wink from across the room.
+# -   You gave your classmate, {name}, an enamouring smirk and wink from across the room.
+# -   You gave your classmate, {name}, a confident smirk and wink from across the room.
+# -   You did the Lean dance move to try to impress your classmate, {name}.
+# -   You did the Carlton dance move to try to impress your classmate, {name}.
+# -   You did the Dejo dance move to try to impress your classmate, {name}.
+# -   You did the Moonwalk dance move to try to impress your classmate, {name}.
+# -   You did the Robot dance move to try to impress your classmate, {name}.
+# -   You did the Soulja Boy dance move to try to impress your classmate, {name}.
+# -   You did the Single Ladies dance move to try to impress your classmate, {name}.
+
+#   You did the {DANCE_MOVE} dance move to try to impress your classmate, {name}.
+DANCE_MOVE = [
+    _("Carlton"),
+    _("Dejo"),
+    _("Lean"),
+    _("Moonwalk"),
+    _("Robot"),
+    _("Running Man"),
+    _("Single Ladies"),
+    _("Soulja Boy"),
+    _("Shoot"),
+]
+#   You gave your classmate, {name}, {FLIRT_VERB_SMIRK} smirk and a wink from across the room.
+FLIRT_VERB_SMIRK = [
+    _("an awkward"),
+    _("a confident"),
+    _("an enamouring"),
+    _("a shy"),
+    _("a smooth"),
+]
+#   You sat next to your classmate, {name}, {FLIRT_LOCATION_SAT} just to get {his_her} attention.
+FLIRT_LOCATION_SAT = [
+    _("at lunch"),
+    _("by the pool"),
+    _("by the sports fields"),
+    _("during assembly"),
+    _("in the gym"),
+    _("in the library"),
+    _("in english class"),
+    _("in math class"),
+    _("in science class"),
+    _("on the way home from school"),
+    _("on the way to school"),
+]
+#   You passed {FLIRT_VERB_NOTE} note to your classmate, {name}, in class.
+FLIRT_VERB_NOTE = [
+    _("a"),
+    _("an awkward"),
+    _("a charmingly funny"),
+    _("a flirtatious"),
+]
+
+# Middle School flirts:
+#   You awkwardly bumped into your classmate, {name}, so that {he_she} had to talk to you.
+#   You stared at your classmate, {name}, for 22 straight minutes today during an assembly, just so she would notice that you are interested in {him_her}.
+#   You passed an awkward note to your classmate, {name}, in class.
+# -   You said "Why, hello there!" Every time you saw your classmate, {name}, at school today.
+#   You winked confidently at your classmate, {name}, while the teacher was discussing the sexual reproductive system.
+#   You laughed at everything your classmate, {name}, said, with the hope that {he_she} would embrace the attention from you.
+
+
+# You stared at your classmate, {name}, for {FLIRT_STARE_TIME_MIDDLE_SCHOOL} straight minutes today during {FLIRT_STARE_CLASSES_MIDDLE_SCHOOL} class, just so she would notice that you are interested in {him_her}.
+# FLIRT_STARE_TIME_MIDDLE_SCHOOL = randint(5, 25)
+# ^ TODO: Move this ^ out of const.py into the string format itself so the number isn't the same if generated multiple times while the game is open
+
+# LIST ORDERED: Alphabetical
+FLIRT_STARE_CLASSES_MIDDLE_SCHOOL = [
+    _("Art"),
+    _("Careers"),
+    _("Computer Science"),
+    _("Drama"),
+    _("English"),
+    _("Geography"),
+    _("History"),
+    _("Math"),
+    _("Music"),
+    _("Physical Eduacation"),
+    _("Science"),
+    _("Social Studies"),
+]
+
+
+# High School flirts:
+# -   You stared at your classmate, {name}, for 55 straight minutes today during science class, just so she would notice that you are interested in {him_her}.
+# -   You said "Why, hello there!" Every time you saw your classmate, {name}, at school today.
+#   You clumsily blew a kiss to your classmate, {name}, while the teacher wasn't looking.
+#   You meekly blew a kiss to your classmate, {name}, while the teacher wasn't looking.
+#   You ran your fingers through your hair as you takled with your classmate, {name}, so that {he_she} would realise you have a crush on her.
+#   You proudly showed your classmate, {name}, how hard you've been working on your twerking form.
+#   You mimicked your classmate, {name}'s, body language so that she would feel like she relates to you.
+
+
+# You stared at your classmate, {name}, for {FLIRT_STARE_TIME_HIGH_SCHOOL} straight minutes today during {FLIRT_STARE_CLASSES_HIGH_SCHOOL} class, just so she would notice that you are interested in {him_her}.
+# FLIRT_STARE_TIME_HIGH_SCHOOL = randint(10, 55)
+# LIST ORDERED: Business > CompSci/IT > English > Family/Consumer Science > Languages > Math > Performing Arts > Physical Ed > Science > Social Studies > Visual Arts > Vocational Ed
+FLIRT_STARE_CLASSES_HIGH_SCHOOL = [
+    _("Accounting"),
+    _("Business law"),
+    _("Business management"),
+    _("Consumer education"),
+    _("Entrepreneurial skills"),
+    _("Introduction to business"),
+    _("Marketing"),
+    _("Personal finance"),
+    _("Animation"),
+    _("App development"),
+    _("Audio production"),
+    _("Computer programming"),
+    _("Computer repair"),
+    _("Film production"),
+    _("Graphic design"),
+    _("Media technology"),
+    _("Music production"),
+    _("Typing"),
+    _("Video game development"),
+    _("Web design"),
+    _("Web programming"),
+    _("Word processing"),
+    _("American literature"),
+    _("British literature"),
+    _("Contemporary literature"),
+    _("Creative writing"),
+    _("Communication skills"),
+    _("Debate"),
+    _("English language and composition"),
+    _("English literature and composition"),
+    _("Humanities"),
+    _("Journalism"),
+    _("Literary analysis"),
+    _("Modern literature"),
+    _("Poetry"),
+    _("Popular literature"),
+    _("Rhetoric"),
+    _("Technical writing"),
+    _("Works of Shakespeare"),
+    _("World literature"),
+    _("Written and oral communication"),
+    _("Chemistry of foods"),
+    _("CPR training"),
+    _("Culinary arts"),
+    _("Early childhood development"),
+    _("Early childhood education"),
+    _("Family studies"),
+    _("Fashion and retail merchandising"),
+    _("Fashion construction"),
+    _("Home economics"),
+    _("Interior design"),
+    _("Nutrition"),
+    _("American Sign Language"),
+    _("Ancient Greek Language"),
+    _("Arabic Language"),
+    _("Chinese Language"),
+    _("French Language"),
+    _("German Language"),
+    _("Hebrew Language"),
+    _("Italian Language"),
+    _("Japanese Language"),
+    _("Korean Language"),
+    _("Latin Language"),
+    _("Portuguese Language"),
+    _("Russian Language"),
+    _("Spanish Language"),
+    _("Algebra 1"),
+    _("Algebra 2"),
+    _("Calculus"),
+    _("Computer math"),
+    _("Consumer math"),
+    _("Fundamentals of math"),
+    _("Geometry"),
+    _("Integrated math"),
+    _("Math applications"),
+    _("Multivariable calculus"),
+    _("Practical math"),
+    _("Pre-algebra"),
+    _("Pre-calculus"),
+    _("Probability"),
+    _("Quantitative literacy"),
+    _("Statistics"),
+    _("Trigonometry"),
+    _("Choir"),
+    _("Concert band"),
+    _("Dance"),
+    _("Drama"),
+    _("Guitar"),
+    _("Jazz band"),
+    _("Marching band"),
+    _("Music theory"),
+    _("Orchestra"),
+    _("Percussion"),
+    _("Piano"),
+    _("Theater technology"),
+    _("World music"),
+    _("Aerobics"),
+    _("Dance"),
+    _("Gymnastics"),
+    _("Health"),
+    _("Lifeguard training"),
+    _("Pilates"),
+    _("Racket sports"),
+    _("Specialized sports"),
+    _("Swimming"),
+    _("Weight training"),
+    _("Yoga"),
+    _("Agriculture"),
+    _("Astronomy"),
+    _("Biology"),
+    _("Botany"),
+    _("Chemistry"),
+    _("Earth science"),
+    _("Electronics"),
+    _("Environmental science"),
+    _("Environmental studies"),
+    _("Forensic science"),
+    _("Geology"),
+    _("Marine biology"),
+    _("Oceanography"),
+    _("Physical science"),
+    _("Physics"),
+    _("Zoology"),
+    _("Cultural anthropology"),
+    _("Current events"),
+    _("European history"),
+    _("Geography"),
+    _("Global studies"),
+    _("Human geography"),
+    _("International relations"),
+    _("Law"),
+    _("Macroeconomics"),
+    _("Microeconomics"),
+    _("Modern world studies"),
+    _("Physical anthropology"),
+    _("Political studies"),
+    _("Psychology"),
+    _("Religious studies"),
+    _("Sociology"),
+    _("National government"),
+    _("National history"),
+    _("Women's studies"),
+    _("World history"),
+    _("World politics"),
+    _("World religions"),
+    _("3-D art"),
+    _("Art history"),
+    _("Ceramics"),
+    _("Digital media"),
+    _("Drawing"),
+    _("Film production"),
+    _("Jewelry design"),
+    _("Painting"),
+    _("Photography"),
+    _("Printmaking"),
+    _("Sculpture"),
+    _("Auto body repair"),
+    _("Auto mechanics"),
+    _("Building construction"),
+    _("Computer-aided drafting"),
+    _("Cosmetology"),
+    _("Criminal justice"),
+    _("Driver education"),
+    _("Electronics"),
+    _("FFA (Future Farmers of America)"),
+    _("Fire science"),
+    _("Heating and cooling systems"),
+    _("Hospitality and tourism"),
+    _("JROTC (Junior Reserve Officers' Training Corps)"),
+    _("Metalworking"),
+    _("Networking"),
+    _("Plumbing"),
+    _("Production technology"),
+    _("Refrigeration fundamentals"),
+    _("Robotics"),
+    _("Woodworking"),
+]
+#   You said "{FLIRT_SAID_SAW}" Every time you saw your classmate, {name}, at school today.
+FLIRT_SAID_SAW = [
+    _("Ooh La La!"),
+    _("Why, hello there!"),
+]
+
+
+# Tertiary (University/Community College etc) Flirts:
+
+
+# Adult flirts
+# General
+# Workplace
+
+# ------------------------------------------------------------------
+# Hook Up
+
+# {Relation}
+# Things are getting hot with your {relation}, {name}, and you're thinking about safe sex.
+# What will you do? > Use a condom (Make him_her use a condom) || Don't use a condom
+# No condoms are available. What will you do? > Oh well, keep going || Pull out (Tell him to pull out) || Never mind, I can't do it
+
+# You had a one night stand with your {relation}, {name}. {hook_up_yes_female}
+HOOK_UP_YES_FEMALE = [
+    _("You have a hard time walking straight the next day"),
+    _("You left your underwear behind"),
+]
+HOOK_UP_NO_FEMALE = [
+    _(""),
+]
+# If your character is male
+HOOK_UP_YES_MALE = [
+    _("You left your underwear behind"),
+]
+HOOK_UP_NO_MALE = [
+    _(""),
+]
+
+# {Random NPC}
+# {A dude} named {name} {invites you to exchange nude pics}. > Take him to bed || Absolutely not
+# If take him to bed:
+# Things are getting hot with {name}, and you're thinking about safe sex.
+# What will you do? > Use a condom (Make him_her use a condom) || Don't use a condom
+# No condoms are available. What will you do? > Oh well, keep going || Pull out (Tell him to pull out) || Never mind, I can't do it
+HOOK_UP_MALE_TYPES = [
+    _("A dude"),
+    _("A guy"),
+    _("An interesting guy"),
+]
+HOOK_UP_MALE_TEXTS = [
+    _("invites you to exchange nude pics"),
+]
+# You have an opportunity to have a one night stand with a young man named {name}.
+# What will you do? > Hit that (/ Sleep with him_her / Get at it / Give it to him_her) || No, I'm not into that
+
+# No condoms are available and it looks like he_she's got some craziness going on down below.
+# What will you do? > Keep going worry later || Pull out (/Tell him to pull out) || Nevermind, I can't do it
+
+# You {got up and left}. He respected your decision (/He called you {insults})
+HOOK_UP_CRAZINESS_NO = [
+    _("got up and left"),
+]
+
+# ------------------------------------------------------------------
+
+
+
+
+
+
+# Hashed out while working on a better system design.
+# No need for a Veterinary School when Veterinary medicine is your degree.
+# Suggest something along the lines of either 'University' is renamed 'Undergraduate University' and 'Postgraduate University' is introduced for Masters / PhD level jobs. Or, 'University' leads you to an undergrad and postgrad selection.
+#
+# University Degrees
+#   MAJORS = [
+#       _("Arts"),
+#       _("Business and Management"),
+#       _("Computer Science"),
+#       _("Economics"),
+#       _("Education and Teaching"),
+#       _("Engineering"),
+#       _("Gender Studies"),
+#       _("Music"),
+#       _("Humanities"),
+#       _("Law"),
+#       _("Marketing"),
+#       _("Mathematics and Statistics"),
+#       _("Medicine"),
+#       _("Political Science"),
+#       _("Veterinary Medicine"),
+#       _(""),
+#   ]
+#   # Student Outcomes. These jobs need one of the above Degrees
+#   ARTS_JOBS = [
+#       _(""),
+#   ]
+#   ENGINEERING_JOBS = [
+#       _("Engineer I"),
+#   ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # ------------------------------------------------------------------
@@ -4768,80 +5580,7 @@ PANHANDLER_STRATEGIES = [
 # ------------------------------------------------------------------
 
 
-# ------------------------------------------------------------------
-# Middle School and High School cliques:
-SCHOOL_CLIQUES = [
-    _("Artsy Kids"),
-    _("Band Geeks"),
-    _("Brainy Kids"),
-    _("Drama Kids"),
-    _("Gamers"),
-    _("Goths"),
-    _("Hipsters"),
-    _("Loners"),
-    _("Mean Girls"),
-    _("Nerds"),
-    _("Normals"),
-    _("Popular Kids"),
-    _("Skaters"),
-    _("Social Floaters"),
-    _("Talented Kids"),
-    _("Troublemakers"),
-    _("Weebs"),
-]
 
-# ------------------------------------------------------------------
-# Middle School activities:
-MIDDLE_SCHOOL_ACTIVITIES = [
-    _("Animal Rights Club"),
-    _("Basketball Team"),
-    _("Cheerleading Team"),
-    _("Choir"),
-    _("Creative Writing Club"),
-    _("Cross Country Team"),
-    _("Diving Team"),
-    _("Drama Club"),
-    _("Field Hockey Team"),
-    _("Gymnastics Team"),
-    _("History Club"),
-    _("Lacrosse Team"),
-    _("Math Club"),
-    _("Recycling Club"),
-    _("Science Club"),
-    _("Soccer Team"),
-    _("Swim Team"),
-    _("Tennis Team"),
-    _("Track Team"),
-    _("Video Games Club"),
-    _("Volleyball Team"),
-    _("Yearbook Club"),
-]
-
-# High School activities:
-HIGH_SCHOOL_ACTIVITIES = [
-    _("Baking Club"),
-    _("Basketball Team"),
-    _("Cheerleading Team"),
-    _("Computer Science Club"),
-    _("Concert Band"),
-    _("Cross Country Team"),
-    _("Diving Team"),
-    _("Drama Club"),
-    _("Golf Team"),
-    _("Gymnastics Team"),
-    _("Handball Team"),
-    _("Skateboarding Club"),
-    _("Soccer Team"),
-    _("Student Council"),
-    _("Swim Team"),
-    _("Tennis Team"),
-    _("Track Team"),
-    _("Tutoring Club"),
-    _("Video Games Club"),
-    _("Volleyball Team"),
-    _("Woodworkers Club"),
-    _("Yearbook Club"),
-]
 
 
 # ------------------------------------------------------------------
@@ -4949,12 +5688,8 @@ DISCUSSIONS = [
     _("how to make money with recycling"),
     _("the decreasing productivity of the Japanese workforce"),
     _("a business model to help health-conscious customers"),
-    _(
-        "what the best technologies are to safeguard the right of free speech on the internet"
-    ),
-    _(
-        "what the best technologies are to safeguard the right of privacy on the internet"
-    ),
+    _("what the best technologies are to safeguard the right of free speech on the internet"),
+    _("what the best technologies are to safeguard the right of privacy on the internet"),
     _("how to check for the signs of burnout"),
     _("how to overcome the coal crisis in India"),
     _("the causes of bullying in schools"),
@@ -4974,20 +5709,14 @@ DISCUSSIONS = [
     _("whether the wealthy should be taxed more"),
     _("whether the poor should be given more assistance"),
     _("whether it is possible to maintain a work-life balance"),
-    _(
-        "whether saying 'women make good managers' is sexist like saying 'asians are good at maths' is racist"
-    ),
+    _("whether saying 'women make good managers' is sexist like saying 'asians are good at maths' is racist"),
     _("whether job creators are needed more than job seekers"),
     _("whether a borderless world is a myth or a reality"),
     _("what would happen if Bitcoin crashed to zero and whether it is possible"),
-    _(
-        "business ethics in today's market compared with the past and the potential future"
-    ),
+    _("business ethics in today's market compared with the past and the potential future"),
     _("whether patience is important in business and management"),
     _("whether the family-run business is relevant in today's market"),
-    _(
-        "whether E-commerce discounts are harmful in the long run and is it the business or customer being harmed"
-    ),
+    _("whether E-commerce discounts are harmful in the long run and is it the business or customer being harmed"),
     _("whether globalisation is an opportunity or a threat"),
     _("how markets are found and not created"),
     _("whether the world is ready for a cashless society"),
@@ -5026,18 +5755,12 @@ DISCUSSIONS = [
     _("whether war is the best option to solve international disputes"),
     _("whether primary school children should be allowed to own mobile phones"),
     _("whether using animals for medical research should be allowed"),
-    _(
-        "whether men and women will ever be equal, if they already are, and whether equality will last"
-    ),
-    _(
-        "whether you can have a happy family life and a successful career at the same time"
-    ),
+    _("whether men and women will ever be equal, if they already are, and whether equality will last"),
+    _("whether you can have a happy family life and a successful career at the same time"),
     _("whether marriage is an outdated institution"),
     _("whether citizens should be allowed to carry guns and other weapons"),
     _("whether the death penalty is acceptable for any reasons"),
-    _(
-        "whether non-citizens and tourists should be allowed to vote in their country of residence"
-    ),
+    _("whether non-citizens and tourists should be allowed to vote in their country of residence"),
     _("whether sex education should be taught to children under 12"),
     _("whether or not women are paid the same as men"),
     _("whether bribery and corruption is acceptable in government"),
@@ -5052,38 +5775,24 @@ DISCUSSIONS = [
     _("our views on whether or not abortions are okay"),
     _("our views on whether or not social deprivation causes crime"),
     _("our views on whether or not military service should be compulsory"),
-    _(
-        "our views on whether or not war is ever an option for solving international disputes"
-    ),
+    _("our views on whether or not war is ever an option for solving international disputes"),
     _("our views on whether or not torture can be acceptable in some cases"),
     _("our views on whether or not curfews keep teens out of trouble"),
     _("our views on whether or not we're becoming too dependent on computers"),
     _("our views on whether or not smoking should be banned worldwide"),
-    _(
-        "our views on whether or not it should be illegal to ride a bicycle without a helmet"
-    ),
-    _(
-        "our views on whether or not single sex schools are bad for childhood development and lead to unhealthy views of the opposite sex"
-    ),
+    _("our views on whether or not it should be illegal to ride a bicycle without a helmet"),
+    _("our views on whether or not single sex schools are bad for childhood development and lead to unhealthy views of the opposite sex"),
     _("our views on whether or not homework is harmful"),
     _("our views on whether or not the United Nations is a failed organisation"),
-    _(
-        "our views on whether or not intelligence tests should be given before couples can have children"
-    ),
+    _("our views on whether or not intelligence tests should be given before couples can have children"),
     _("our views on whether or not a woman's place is in the home"),
     _("our views on whether or not it's a man's world"),
     _("our views on whether or not money makes you happy"),
     _("our views on whether or not money can buy you happiness"),
     _("our views on whether or not the internet must be censored to protect society"),
-    _(
-        "our views on whether or not genetically modified foods have no ill health effects"
-    ),
-    _(
-        "our views on whether a man should have a wife for the family and a paramour for pleasure"
-    ),
-    _(
-        "our views on whether a woman should have a husband for the family and a paramour for pleasure"
-    ),
+    _("our views on whether or not genetically modified foods have no ill health effects"),
+    _("our views on whether a man should have a wife for the family and a paramour for pleasure"),
+    _("our views on whether a woman should have a husband for the family and a paramour for pleasure"),
     _("our views on whether soft drugs should be legalised"),
     _("our views on whether or not electric cars help the environment"),
     _("our views on whether or not staying unmarried leads to a happier life"),
@@ -5095,9 +5804,7 @@ DISCUSSIONS = [
     _("our views on whether the war in Iraq was justified"),
     _("our views on whether your race affects your intelligence"),
     _("our views on whether your race affects your sporting ability"),
-    _(
-        "our views on whether the world is over populated and steps must be taken to reduce births"
-    ),
+    _("our views on whether the world is over populated and steps must be taken to reduce births"),
     _("whether or not euthanasia should be illegal"),
     _("whether or not cloning is a valuable scientific pursuit"),
     _("whether obesity is a disease and not a lifestyle choice"),
