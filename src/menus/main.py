@@ -967,17 +967,23 @@ def main_menu(player):
 								was_cured = True
 								player.change_health(randint(4, 6))
 								player.change_happiness(randint(4, 7))
+							elif illness == "Flu":
+								was_cured = True
+								player.change_health(randint(5, 6))
+								player.change_happiness(randint(4, 8))
 							print(
 								_("You were treated for your {illness}.").format(
 									illness=illness
 								)
 							)
-							
+							n = str(illness)
+							if illness in ["Common Cold", "Flu"]:
+								n = _("the {n}").format(n=n)
 							if was_cured:
 								display_event(
 									_(
 										"You are no longer suffering from {illness}."
-									).format(illness=illness)
+									).format(illness=n)
 								)
 								player.remove_illness(illness)
 							else:
@@ -985,7 +991,7 @@ def main_menu(player):
 								player.change_happiness(randint(3, 5))
 								display_event(
 									_("You continue to suffer from {illness}.").format(
-										illness=illness
+										illness=n
 									)
 								)
 		elif choice == _("Meditate"):

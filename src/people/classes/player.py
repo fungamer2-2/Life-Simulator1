@@ -779,13 +779,19 @@ class Player(Person):
 					self.change_happiness(randint(4, 8))
 					self.change_health(randint(4, 8))
 					self.remove_illness("High Blood Pressure")
-			elif illness == "Common Cold":
+			elif illness in ["Common Cold", "Flu"]:
 				self.remove_illness(illness)
-		if randint(1, 20) == 1:
-			display_event(_("You are suffering from the common cold."))
-			self.add_illness(TranslateMarker("Common Cold"))
-			self.change_health(-randint(1, 4))
-			self.change_happiness(-randint(3, 4))
+		if one_in(20):
+			if self.age >= 3 and one_in(6):
+				display_event(_("You are suffering from the flu."))
+				self.add_illness(TranslateMarker("Flu"))
+				self.change_health(-randint(2, 5))
+				self.change_happiness(-randint(3, 5))
+			else:
+				display_event(_("You are suffering from the common cold."))
+				self.add_illness(TranslateMarker("Common Cold"))
+				self.change_health(-randint(1, 4))
+				self.change_happiness(-randint(2, 4))
 		if self.age == 2 and one_in(2):
 			print(
 				_("Your mother is taking to to the doctor's office to get vaccinated.")
