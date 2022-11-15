@@ -388,7 +388,7 @@ class Player(Person):
 			if self.has_trait("WELL_KEPT"): 
 				self.change_looks(randint(0, 2))
 			elif self.has_trait("BADLY_KEPT"):
-				self.change_looks(-randint(0, 2))
+				self.change_looks(-randint(0, 3))
 		if self.has_trait("SICKLY"):
 			self.change_health(-randint(0, 4))
 		if self.has_trait("MOODY") and not self.is_depressed():
@@ -779,6 +779,11 @@ class Player(Person):
 					self.change_happiness(randint(4, 8))
 					self.change_health(randint(4, 8))
 					self.remove_illness("High Blood Pressure")
+			elif illness == "Cancer":
+				self.change_happiness(-randint(5, 8))
+				self.change_health(-randint(10, 18))
+				if self.health <= 0:
+					self.die(_("You died due to complications associated with cancer."))
 			elif illness in ["Common Cold", "Flu"]:
 				self.remove_illness(illness)
 		if one_in(max(3000 - self.age*25, 1000)):
