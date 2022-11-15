@@ -959,7 +959,7 @@ def main_menu(player):
 										(100 - player.happiness) // 2
 									)
 							elif illness == "High Blood Pressure":
-								was_cured = player.stress < randint(65, 85) and one_in(3)
+								was_cured = player.stress < randint(50, 80) and one_in(3)
 								if was_cured:
 									player.change_health(randint(4, 8))
 									player.change_happiness(randint(3, 6))
@@ -971,6 +971,14 @@ def main_menu(player):
 								was_cured = True
 								player.change_health(randint(5, 6))
 								player.change_happiness(randint(4, 8))
+							elif illness == "Cancer":
+								was_cured = one_in(20) and randint(1, 100) <= player.health
+								if was_cured:
+									player.change_health(randint(30, 50))
+									player.change_happiness(randint(20, 40))
+								else:
+									player.change_health(randint(5, 9))
+									player.change_happiness(randint(3, 7))
 							print(
 								_("You were treated for your {illness}.").format(
 									illness=illness
@@ -979,6 +987,7 @@ def main_menu(player):
 							n = str(illness)
 							if illness in ["Common Cold", "Flu"]:
 								n = _("the {n}").format(n=n)
+							n = n.lower()
 							if was_cured:
 								display_event(
 									_(

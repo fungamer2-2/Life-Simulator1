@@ -781,7 +781,12 @@ class Player(Person):
 					self.remove_illness("High Blood Pressure")
 			elif illness in ["Common Cold", "Flu"]:
 				self.remove_illness(illness)
-		if one_in(20):
+		if one_in(max(3000 - self.age*25, 1000)):
+			display_event(_("You have been diagnosed with cancer."))
+			self.add_illness(TranslateMarker("Cancer"))
+			self.change_health(-randint(16, 50))
+			self.change_happiness(-randint(30, 50))
+		elif one_in(20):
 			if self.age >= 3 and one_in(6):
 				display_event(_("You are suffering from the flu."))
 				self.add_illness(TranslateMarker("Flu"))
