@@ -8,7 +8,6 @@ from src.lifesim_lib.lifesim_lib import PlayerDied, yes_no, choice_input, clear_
 
 """
 TODO List:
-- Move the activities menu into its own file
 - Move some activities into submenus
 - Add social media
 - Allow children to have traits
@@ -42,6 +41,7 @@ while True:
 	clear_screen()
 	player = start_menu()
 	player.print_traits()
+	
 	while True:
 		print(_("Age {age}").format(age=player.age))
 		game_loop(player)
