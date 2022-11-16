@@ -556,7 +556,7 @@ def activities_menu(player):
 						print(_("You have achieved a deeper awareness of yourself."))
 						display_bar(_("Karma"), player.karma)
 					if player.has_trait("MEDITATOR"):
-						player.change_stress(-5)
+						player.change_stress(-4)
 					elif one_in(100) and randint(1, 100) > player.stress:
 						player.learn_trait("MEDITATOR")
 					if player.has_trait("CHEERFUL"):
