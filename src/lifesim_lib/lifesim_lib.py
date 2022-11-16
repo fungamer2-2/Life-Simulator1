@@ -65,6 +65,8 @@ def randexpo(lo, avg):
 def one_in(x):
     return x <= 1 or random.randint(1, x) == 1
 
+def x_in_y(x, y):
+	return random.uniform(0, y) < x
 
 def calculate_tax(salary):
     tax = 0

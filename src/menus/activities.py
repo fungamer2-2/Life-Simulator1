@@ -22,7 +22,8 @@ def activities_menu(player):
 			choices.append(_("Mind & Body"))
 			choices.append(_("Listen to music"))
 		if player.age >= 18:
-			choices.append(_("Adoption"))
+			if player.age >= 21:
+				choices.append(_("Adoption"))
 			choices.append(_("Lottery"))
 			choices.append(_("Plastic Surgery"))
 			if player.marital_status == 0:
@@ -291,6 +292,7 @@ def activities_menu(player):
 				player.played = True
 				player.change_happiness(happy_gain)
 		elif choice == _("Arts and Crafts"):
+			selected = True
 			if player.age >= randint(5, 10) and one_in(10):
 				sayings = [
 					_(
@@ -389,6 +391,7 @@ def activities_menu(player):
 						player.change_smarts(randint(0, 2))
 			player.did_arts_and_crafts = True
 		elif choice == _("Listen to music"):
+			selected = True
 			music_categories = [_("pop music"), _("rock music"), _("hip-hop"), _("latin music")]
 			if one_in(2):
 				print(_("You listened to some music."))
@@ -548,9 +551,8 @@ def activities_menu(player):
 					player.change_happiness(randint(3, 5))
 					player.change_karma(randint(1, 3))
 					player.change_stress(-randint(3, 8))
-					if (
-						player.times_meditated == 0 or randint(1, 20) == 1
-					):  # Your first meditation is guaranteed to cause a deeper awareness
+					if player.times_meditated == 0 or one_in(20):  
+						# Your first meditation is guaranteed to cause a deeper awareness
 						player.change_happiness(2)
 						player.change_stress(-3)
 						print(_("You have achieved a deeper awareness of yourself."))
@@ -611,7 +613,7 @@ def activities_menu(player):
 					player.times_visited_library += 1
 					if one_in(48) and random.random() < 0.95**player.times_visited_library:
 						can_learn_nerd = not player.has_trait("NERD")
-						if can_learn_nerd and randint(1, 200) <= player.smarts:
+						if can_learn_nerd and x_in_y(player.smarts, 200):
 							player.learn_trait("NERD")
 						else:
 							player.learn_trait("BOOK_LOVER")

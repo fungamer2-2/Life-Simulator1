@@ -233,12 +233,12 @@ class Player(Person):
 		trait_names = list(ALL_TRAITS_DICT.keys())
 		total_traits = len(ALL_TRAITS)
 		num_traits = 1
-		while randint(1, 100) <= 40 and num_traits < randint(1, total_traits):
+		while x_in_y(3, 8) and num_traits < randint(1, total_traits):
 			num_traits += 1
 		t = {}
 		for i in range(num_traits):
 			attempts = 50
-			good = randint(1, 100) <= 60
+			good = x_in_y(3, 5)
 			allow_neutral = one_in(2)
 			while attempts > 0:
 				name = random.choice(trait_names)
@@ -346,7 +346,7 @@ class Player(Person):
 		inheritance = 0
 		happy_remove = randint(40, 55)
 		if isinstance(relation, Parent):
-			if randint(1, 100) <= 70 and randint(1, 100) <= relation.generosity:
+			if x_in_y(70, 100) and x_in_y(relation.generosity, 100):
 				avg = 100000 * (relation.money / 100) ** 2
 				lo = max(avg * relation.generosity / 200, 1)
 				inheritance = round_stochastic(randexpo(lo, avg))
@@ -424,6 +424,7 @@ class Player(Person):
 		if self.has_job:
 			self.change_stress(randint(-4, 4))
 			base = 60 - self.happiness * 0.3 + (self.job_hours - 40)
+			base += 4 * math.sqrt(sum(1 for c in self.children if c.age < 18))
 			if self.has_trait("MEDITATOR"):
 				base *= 2/3
 			diff = base - self.stress
@@ -440,10 +441,54 @@ class Player(Person):
 		if self.gender == Gender.Female:
 			if self.is_pregnant:
 				self.is_pregnant = False
-				c = self.generate_child(self._recent_child_father)
-				self._recent_child_father = None
-				typ = c.get_translated_type().lower()
-				print(_("You just had a baby {son_daughter}!").format(son_daughter=typ))
+				if not x_in_y(self.fertility, 100) and one_in(5):
+					display_event(_("You suffered a miscarriage and lost the baby!"))
+					self.change_happiness(-randint(30, 50))
+				else:
+					c = self.generate_child(self._recent_child_father)
+					self._recent_child_father = None
+					typ = c.get_translated_type().lower()
+					print(_("You just had a baby {son_daughter}!").format(son_daughter=typ))
+					him_her = c.him_her()
+					while True:
+						print(
+							_(
+								"What will you name {him_her}? (or leave blank for a random name)"
+							).format(him_her=him_her)
+						)
+						name = input()
+						if name == "":
+							break
+						elif len(name.strip()) > 0:
+							c.firstname = name.strip()
+							c.update_name()
+							break
+					self.change_happiness(randint(35, 50))
+					self.change_stress(randint(0, 10))
+					self.relations.append(c)
+					self.children.append(c)
+					if self.partner:
+						self.partner.change_relationship(randint(3, 10))
+					print(
+						_(
+							"You are the mother of a baby {son_daughter} named {name}."
+						).format(son_daughter=typ, name=c.name)
+					)
+		elif self.partner and self.partner.is_pregnant:
+			c = self.generate_child(self.partner)
+			typ = c.get_translated_type().lower()
+			self.partner.is_pregnant = False
+			if not x_in_y(self.fertility, 100) and one_in(5):
+				display_event(_("Your {partner} suffered a miscarriage and lost the baby!").format(
+					partner=self.partner.name_accusative()
+				))
+				self.change_happiness(-randint(30, 50))
+			else:
+				print(
+					_("Your {partner} just had a baby {son_daughter}!").format(
+						partner=self.partner.name_accusative(), son_daughter=typ
+					)
+				)
 				him_her = c.him_her()
 				while True:
 					print(
@@ -459,49 +504,15 @@ class Player(Person):
 						c.update_name()
 						break
 				self.change_happiness(randint(35, 50))
-				self.change_stress(randint(0, 6))
+				self.change_stress(randint(0, 10))
 				self.relations.append(c)
 				self.children.append(c)
-				if self.partner:
-					self.partner.change_relationship(randint(3, 10))
+				self.partner.change_relationship(randint(8, 15))
 				print(
-					_(
-						"You are the mother of a baby {son_daughter} named {name}."
-					).format(son_daughter=typ, name=c.name)
+					_("You are the father of a baby {son_daughter} named {name}.").format(
+						son_daughter=typ, name=c.name
+					)
 				)
-		elif self.partner and self.partner.is_pregnant:
-			c = self.generate_child(self.partner)
-			typ = c.get_translated_type().lower()
-			self.partner.is_pregnant = False
-			print(
-				_("Your {partner} just had a baby {son_daughter}!").format(
-					partner=self.partner.name_accusative(), son_daughter=typ
-				)
-			)
-			him_her = c.him_her()
-			while True:
-				print(
-					_(
-						"What will you name {him_her}? (or leave blank for a random name)"
-					).format(him_her=him_her)
-				)
-				name = input()
-				if name == "":
-					break
-				elif len(name.strip()) > 0:
-					c.firstname = name.strip()
-					c.update_name()
-					break
-			self.change_happiness(randint(35, 50))
-			self.change_stress(randint(0, 8))
-			self.relations.append(c)
-			self.children.append(c)
-			self.partner.change_relationship(randint(8, 15))
-			print(
-				_("You are the father of a baby {son_daughter} named {name}.").format(
-					son_daughter=typ, name=c.name
-				)
-			)
 		if self.happiness < randint(1, 10) and not self.is_depressed():
 			display_event(_("You are suffering from depression."))
 			self.add_illness(TranslateMarker("Depression"))
@@ -577,11 +588,7 @@ class Player(Person):
 						)
 					else:
 						print(_("You're feeling stressed out from all of this work."))
-				if (
-					critical_stress
-					and "High Blood Pressure" not in self.illnesses
-					and randint(1, 7) == 1
-				):
+				if critical_stress and "High Blood Pressure" not in self.illnesses and one_in(7):
 					display_event(_("You are suffering from high blood pressure."))
 					self.change_health(-randint(4, 8))
 					self.add_illness(TranslateMarker("High Blood Pressure"))
@@ -709,9 +716,7 @@ class Player(Person):
 	def random_events(self):
 		if self.age >= 5 and one_in(5000):
 			print(_("You were struck by lightning!"))
-			good_or_bad = (
-				randint(1, 2) == 1
-			)  # TODO: Should I make the chance for it to be good or bad based on your karma?
+			good_or_bad = one_in(2)
 			if good_or_bad:
 				self.change_happiness(100)
 				self.change_health(100)
@@ -874,18 +879,18 @@ class Player(Person):
 						)
 					)
 					he_she = self.partner.he_she().capitalize()
-					if randint(1, 100) > self.partner.willpower:
-						display_event(
-							_("{he_she} decided to stay with you.").format(
-								he_she=he_she
-							)
-						)
-					else:
+					if x_in_y(self.partner.willpower, 100):
 						display_event(
 							_("{he_she} dumped you anyway.").format(he_she=he_she)
 						)
 						self.lose_partner()
 						self.change_happiness(-randint(10, 20))
+					else:
+						display_event(
+							_("{he_she} decided to stay with you.").format(
+								he_she=he_she
+							)
+						)
 				elif choice == 3:
 					self.change_karma(-4)
 					he_she = self.partner.he_she()
@@ -923,15 +928,15 @@ class Player(Person):
 						)
 					)
 					he_she = self.partner.he_she().capitalize()
-					if min(randint(1, 100) for _ in range(2)) > partner.willpower:
-						print(
-							_("{he_she} decided to stay with you.").format(
+					if x_in_y(self.partner.willpower, 100) or x_in_y(self.partner.willpower, 100):
+						display_event(
+							_("{he_she} insisted on getting a divorce.").format(
 								he_she=he_she
 							)
 						)
 					else:
-						display_event(
-							_("{he_she} insisted on getting a divorce.").format(
+						print(
+							_("{he_she} decided to stay with you.").format(
 								he_she=he_she
 							)
 						)
@@ -1017,7 +1022,7 @@ class Player(Person):
 							total = sum(p.generosity for p in self.parents.values())
 							avg = total / len(self.parents)
 							chance = (avg / 100) ** 4
-							if random.random() < chance:
+							if x_in_y(chance, 1.0):
 								display_event(
 									_(
 										"Your parents agreed to pay for your university tuition!"

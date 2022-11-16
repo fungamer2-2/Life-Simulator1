@@ -136,7 +136,7 @@ def main_menu(player):
 				else:
 					agreement = random.triangular(0, 100, 70)
 					agreement += randint(0, max(0, (relation.relationship - 50) // 3))
-					if isinstance(relation, Sibling) and randint(1, 2) == 1:
+					if isinstance(relation, Sibling) and one_in(2):
 						agreement -= randint(0, relation.petulance // 3)
 					if player.age < 6:
 						v = (6 - player.age) * 8
@@ -254,7 +254,7 @@ def main_menu(player):
 						print(_("{he_she} called you {insult}.").format(he_she=relation.he_she().capitalize(), insult=insult))
 					relation.change_relationship(-randint(5, 10))
 				else:
-					if relation.asked_for_money == 0 and randint(1, 35) <= relation.generosity:
+					if relation.asked_for_money == 0 and x_in_y(relation.generosity, 35):
 						amount = 5 ** (relation.generosity/22) * (relation.money/100)**2 * math.sqrt(player.age)
 						amount = max(randint(1, 5), round_stochastic(amount * random.uniform(0.6, 1.4)))
 						print(_("Your {parent} gave you ${amount}.").format(parent=typ, amount=amount))
@@ -310,9 +310,10 @@ def main_menu(player):
 					player.change_karma(randint(0, 2))
 					relation.change_relationship(round_stochastic(appreciation / 6))
 					roll = randint(1, 300)
-					if roll <= round_stochastic(
+					cmp = round_stochastic(
 						appreciation * relation.relationship / 50
-					):
+					)
+					if roll <= cmp:
 						compliment = random.choice(COMPLIMENTS)
 						display_event(
 							_(
@@ -327,7 +328,7 @@ def main_menu(player):
 						)
 						if player.has_trait("CHEERFUL"):
 							player.change_happiness(4)
-						if roll <= 15: #Like a natural 20, in a way
+						if roll <= min(15, cmp//2): 
 							relation.change_relationship(randint(25, 40))
 					relation.was_complimented = True
 			elif choice == _("Insult"):
@@ -354,11 +355,11 @@ def main_menu(player):
 						attack_chance = 30 * (relation.petulance/100)**1.5
 					elif isinstance(relation, Partner):
 						attack_chance = 45 * (relation.craziness/100)**2
-					if random.uniform(0, 100) < attack_chance:
+					if x_in_y(attack_chance, 100):
 						display_event(_("Your {rel} attacked you!").format(rel=rel))
 						player.was_attacked(randint(4, 10), False)
 						relation.change_relationship(-randint(4, 8))
-					elif random.uniform(0, 100) < chance:
+					elif x_in_y(chance, 100):
 						insult = random.choice(INSULTS)
 						display_event(
 							_("Your {rel} called you {insult}!").format(
@@ -378,7 +379,7 @@ def main_menu(player):
 					rel = player.partner.name_accusative()
 					display_event(_("You and your {partner} tried for a baby.").format(partner=rel), cls=False)
 					fertility = player.partner.fertility if player.gender == Gender.Male else player.fertility
-					if randint(1, 100) <= fertility and randint(1, 4) < 4:
+					if x_in_y(fertility, 100):
 						if player.gender == Gender.Male:
 							print(_("Your {partner} is pregnant with your baby!").format(partner=rel))
 						else:
@@ -499,7 +500,7 @@ def main_menu(player):
 			if not player.studied:
 				player.change_grades(randint(5, 7 + (100 - player.grades) // 5))
 				player.change_smarts(randint(0, 2) + (player.has_trait("NERD")))
-				if randint(1, 2500) <= player.smarts:
+				if x_in_y(player.smarts, 2500):
 					player.learn_trait("NERD")
 				player.studied = True
 		if choice == 3:
