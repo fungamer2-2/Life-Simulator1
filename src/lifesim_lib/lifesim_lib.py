@@ -223,6 +223,11 @@ TRAITS_DICT = {
     ),
 }
 
+#The below is a list of traits that cannot be randomly selected 
+NO_RAND_SELECT = {
+	"MEDITATOR"
+}
+
 
 class Trait:
     def __init__(self, id, name, desc, val, conflicts=None):
@@ -240,6 +245,8 @@ class Trait:
         return other in self.conflicts
 
     def roll_selection(self):
+        if self.id in NO_RAND_SELECT:
+        	return False
         if self.val == 0:
             return True
         return random.randint(1, abs(self.val)) == 1

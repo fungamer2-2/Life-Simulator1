@@ -551,16 +551,18 @@ def activities_menu(player):
 					player.change_happiness(randint(3, 5))
 					player.change_karma(randint(1, 3))
 					player.change_stress(-randint(3, 8))
+					if player.has_trait("MEDITATOR"):
+						player.change_stress(-4)
+						player.change_happiness(2)
+						player.change_health(randint(1, 2))
 					if player.times_meditated == 0 or one_in(20):  
 						# Your first meditation is guaranteed to cause a deeper awareness
 						player.change_happiness(2)
 						player.change_stress(-3)
 						print(_("You have achieved a deeper awareness of yourself."))
 						display_bar(_("Karma"), player.karma)
-					if player.has_trait("MEDITATOR"):
-						player.change_stress(-4)
-					elif one_in(50) and randint(1, 100) > player.stress:
-						player.learn_trait("MEDITATOR")
+						if player.times_meditated > 0 and x_in_y(2, 5) and not x_in_y(player.stress, 100):
+							player.learn_trait("MEDITATOR")
 					if player.has_trait("CHEERFUL"):
 						player.change_happiness(4)
 					player.meditated = True
