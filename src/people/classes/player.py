@@ -425,6 +425,7 @@ class Player(Person):
 			self.change_stress(randint(-4, 4))
 			base = 60 - self.happiness * 0.3 + (self.job_hours - 40)
 			base += 4 * math.sqrt(sum(1 for c in self.children if c.age < 18))
+			base = clamp(base, 0, 100)
 			if self.has_trait("MEDITATOR"):
 				base *= 2/3
 			diff = base - self.stress
@@ -478,7 +479,7 @@ class Player(Person):
 			c = self.generate_child(self.partner)
 			typ = c.get_translated_type().lower()
 			self.partner.is_pregnant = False
-			if not x_in_y(self.fertility, 100) and one_in(5):
+			if not x_in_y(self.partner.fertility, 100) and one_in(5):
 				display_event(_("Your {partner} suffered a miscarriage and lost the baby!").format(
 					partner=self.partner.name_accusative()
 				))
