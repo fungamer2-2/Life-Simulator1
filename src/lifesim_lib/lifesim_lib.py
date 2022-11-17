@@ -65,8 +65,10 @@ def randexpo(lo, avg):
 def one_in(x):
     return x <= 1 or random.randint(1, x) == 1
 
+
 def x_in_y(x, y):
-	return random.uniform(0, y) < x
+    return random.uniform(0, y) < x
+
 
 def calculate_tax(salary):
     tax = 0
@@ -176,10 +178,11 @@ TRAITS_DICT = {
     ),
     "MEDITATOR": (
         _("Meditator"),
-        _("You tend to be less stressed than most people. In addition, meditation helps you recover from stress more quickly."),
+        _(
+            "You tend to be less stressed than most people. In addition, meditation helps you recover from stress more quickly."
+        ),
         2,
     ),
-    
     "GRUMPY": (
         _("Grumpy"),
         _("It is difficult for you to be in a good mood."),
