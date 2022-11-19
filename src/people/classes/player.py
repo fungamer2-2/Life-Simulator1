@@ -775,7 +775,7 @@ class Player(Person):
 					self.change_health(-randint(1, 4))
 			elif illness == "High Blood Pressure":
 				self.change_health(-randint(1, 5))
-				if self.stress > randint(80, 95) and self.health < randint(1, 10):
+				if self.stress > randint(80, 95) and self.health < randint(1, 15):
 					if randint(1, 3) == 1:
 						self.die(_("You died due to a massive heart attack."))
 				elif self.stress < randint(25, 60) and one_in(2):
@@ -786,7 +786,7 @@ class Player(Person):
 					self.change_health(randint(4, 8))
 					self.remove_illness("High Blood Pressure")
 			elif illness == "Cancer":
-				self.change_happiness(-randint(5, 8))
+				self.change_happiness(-randint(5, 9))
 				self.change_health(-randint(10, 18))
 				if self.health <= 0:
 					self.die(_("You died due to complications associated with cancer."))
