@@ -25,37 +25,6 @@ ILLNESSES_TRANSLATIONS = {
     "High Blood Pressure": _("High Blood Pressure"),
 }
 
-SPEND_TIME_PLACES = [
-    _("shopping at a flea market"),
-    _("bowling"),
-    _("to the beach"),
-    _("to play golf"),
-    _("to do some gardening"),
-    _("to a pilates class"),
-    _("to play catch"),
-    _("to make homemade mini pizzas"),
-    _("to perform in a flashmob at the courthouse"),
-    _("to do a puzzle at the library"),
-    _("to relax while floating in a natural hot spring"),
-    _("crocheting"),
-    _("to bring donuts to the police station"),
-    _("to blow bubbles"),
-    _("bird-watching"),
-    _("for a picnic"),
-    _("to a baseball game"),
-    _("to an arcade"),
-    _("to an art museum"),
-    _("to a tennis match"),
-    _("to the circus"),
-    _("to the movies"),
-    _("to play tennis"),
-    _("to fly a kite"),
-    _("bungee-jumping"),
-    _("fishing"),
-    _("shopping"),
-    _("to a hockey game"),
-]
-
 COMPLIMENTS = [
     _("a boss"),
     _("a bubbly personality"),
@@ -548,7 +517,7 @@ HOOK_UP_NO_MALE = [
 # What will you do? > Use a condom (Make him_her use a condom) || Don't use a condom
 # No condoms are available. What will you do? > Oh well, keep going || Pull out (Tell him to pull out) || Never mind, I can't do it
 HOOK_UP_MALE_TYPES = [
-    _("A dude"),
+    _("A :dude"),
     _("A guy"),
     _("An interesting guy"),
 ]
@@ -2750,11 +2719,19 @@ NEGATIVE_SOCIAL_RESPONSES = [
 # Books
 # name, category, pages, age unlocked, happiness change, smarts change
 BOOKS = [
-	(_("Brown Bear, Brown Bear, What Do You See?"), _("Children's Picture Book"), 32, 6, 16, 16)
+	(_("Alice's Adventure's In Wonderland"), _("Fantasy"), 239, 10, 100, 50),
+	(_("Becoming"), _("Autobiography"), 463, 16, 16, 50),
+	(_("Brown Bear, Brown Bear, What Do You See?"), _("Children's Picture Book"), 32, 6, 16, 16),
 	(_("Corduroy"), _("Children's Picture Book"), 32, 6, 30, 16),
 	(_("Cosmos"), _("Non-fiction"), 365, 17, 8, 50),
 	(_("Diary of a Wimpy Kid"), _("Children's Novel"), 221, 10, 50, 4),
-	(_("The Cat in the Hat"), _("Children's Picture Book"), 73, 6, 30, 16)
+	(_("Goosebumps"), _("Children's Novel"), 122, 9, 16, 4),
+	(_("I, Robot"), _("Science Fiction"), 253, 15, 8, 8),
+	(_("If You Give a Mouse a Cookue"), _("Children's Picture Book"), 32, 6, 16, 30),
+	(_("Stellaluna"), _("Children's Picture Book"), 48, 6, 30, 16),
+	(_("The Cat in the Hat"), _("Children's Picture Book"), 73, 6, 30, 16),
+	(_("The Little Engine That Could"), _("Children's Picture Book"), 48, 6, 50, 16),
+	(_("The Very Hungry Caterpillar"), _("Children's Picture Book"), 22, 6, 16, 4),
 ]
 
 # ------------------------------------------------------------------
@@ -3408,9 +3385,7 @@ CHATS = [
     _("which is better, Lord of the Rings or Harry Potter"),
     _("who is better, the Red Sox or Yankees"),
     _("who will win the Monaco Grand Prix"),
-    _("how it's illegal to masturbate in Indonesia"),
     _("whether you would rather live without music or television"),
-    _("why mannequins have erect nipples"),
     _("Angleina Jolie's lips"),
 ]
 CHATS_INFANT = [
@@ -3461,6 +3436,9 @@ CHATS_CO_WORKERS = [
 
 # Academic / debatable topics, topics that are contentious etc. (can take words like 'discussed' prior to calling)
 DISCUSSIONS = [
+	_("Frida Kahlo's moustache"),
+	_("which is the best breed of dog"),
+	_("which is the best breed of cat"),
     _("why cats are better than dogs"),
     _("why dogs are better than cats"),
     _("the Russia-Ukraine War"),
@@ -3692,6 +3670,8 @@ DISCUSSIONS_TEEN = [
 # Important 'life' talks
 TALKS = [
     _("not spending enough time with your family"),
+    _("whether you would rather have overly large hands or small feet"),
+    _("who will win the Monaco Grand Prix")
 ]
 TALKS_INFANT = [
     _("the importance of not sucking your thumb"),
@@ -3734,85 +3714,36 @@ HEART_TO_HEARTS_TEEN = [
 
 # ------------------------------------------------------------------
 # Spending time together section:
-
-SPEND_TIME = [
-    _(""),
-]
-# For use in situations like 'Your {relation} took you {to build a sandcastle in a sandbox at the park}
-# If you are the parent/older sibling then 'You took your {relation} {spend_time_child}
-SPEND_TIME_CHILD = [
-    _("birdwatching"),
-    _("to a cake baking class"),
-    _("to a comic book store"),
-    _("to a music festival"),
-    _("to a yoga class"),
-    _("to attend a juggling class"),
+	
+SPEND_TIME_PLACES = [
+    _("shopping at a flea market"),
+    _("bowling"),
+    _("to the beach"),
+    _("to play golf"),
+    _("to do some gardening"),
+    _("to a pilates class"),
+    _("to play catch"),
+    _("to make homemade mini pizzas"),
+    _("to perform in a flashmob at the courthouse"),
+    _("to do a puzzle at the library"),
+    _("to relax while floating in a natural hot spring"),
+    _("crocheting"),
     _("to bring donuts to the police station"),
-    _("to build a sandcastle in a sandbox at the park"),
-    _("to get cornrow braids"),
-    _("to get henna tattoos"),
-    _("to listen to a punk band"),
-    _("to participate in a neighbourhood cleanup"),
-    _("to the park to feed the ducks"),
-]
-SPEND_TIME_TEEN = [
-    _("to practice sumo wrestling"),
-    _("to play in the rain"),
-    _("to toilet paper the neighbour's house"),
-    _("to scare random people by jumping out of the bushes at a local park"),
-    _("to make a wish while throwing a coing in a fountain"),
-    _("to watch toy unboxing videos"),
-    _("to a café to play cards"),
-    _("to watch a movie under the stars in the park"),
-    _("to perform in a flash mob at the grocery store"),
-    _("to fly a kite"),
-    _("to a rugby game"),
-    _("to the circus"),
-    _("longboarding"),
-    _("to a Hindu temple"),
-    _("to build a sandcastle in a sandbox at the park"),
-    _("to an escape room"),
-    _("antiquing"),
-    _("to write haikus"),
-    _("to play in the sprinklers at the local park"),
-    _("to play bingo at the community centre"),
+    _("to blow bubbles"),
+    _("bird-watching"),
+    _("for a picnic"),
+    _("to a baseball game"),
     _("to an arcade"),
-    _("to throw paper aeroplanes off the bleachers at the local high school"),
-    _("to the water park"),
-    _("to the aquarium to look at sharks"),
-    _("to sing P!nk songs at karaoke night"),
+    _("to an art museum"),
+    _("to a tennis match"),
+    _("to the circus"),
     _("to the movies"),
-    _("axe throwing"),
-    _("to make home made mini pizzas"),
-    _("to a painting class"),
-    _("to have a random dance party in a public plaza"),
-    _("to plant trees in the forest"),
-    _("whale watching"),
-    _("to make and pass out balloon animals at the park"),
-    _("snowboarding"),
-    _("to the park"),
-    _("to graffiti train cars"),
-    _("to learn origami at the community centre"),
-    _("birdwatching"),
-    _("to the shooting range"),
-    _("to do caricature drawings of random people in a public place"),
-    _("yodelling"),
-    _("deep sea fishing"),
-    _("to a carnival"),
-    _("to ding dong ditch the neighbours"),
-    _("to parkour hardcore"),
-    _("to watch a random trial at the municipal court"),
-    _("to a rugby game"),
-    _("to make selfies for Instagram"),
-    _("to the museum"),
-    _("to walk along a scenic vista"),
-    _("to watch toy unboxing videos"),
-    _("to fly a drone"),
-    _("to make a safety evacuation map"),
-    _("horseback riding in the countryside"),
-    _("to dinner"),
-    _("to a puppet-making seminar"),
-    _("to the symphony"),
+    _("to play tennis"),
+    _("to fly a kite"),
+    _("bungee-jumping"),
+    _("fishing"),
+    _("shopping"),
+    _("to a hockey game"),
 ]
 
 # E.g. You {spend_time_pet_x)} {pet_type}, {pet_name} = You listened to music with your cat, Pip.
