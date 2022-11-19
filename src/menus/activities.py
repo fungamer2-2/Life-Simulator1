@@ -638,7 +638,7 @@ def activities_menu(player):
 						player.change_happiness(-val)
 						player.change_health(-val)
 						player.change_looks(-val)
-						if player.health <= 0 and not x_in_y(player.karma, 100) and damage >= randint(25, 100):
+						if player.health <= 0 and one_in(6) and not x_in_y(player.karma, 100) and damage >= randint(25, 100):
 							player.die(_("You died after receiving a botched plastic surgery."))
 					else:
 						results = min(randint(14, 100), randint(14, 100))

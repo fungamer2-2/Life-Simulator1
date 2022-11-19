@@ -297,11 +297,6 @@ FLIRT_VERB_NOTE = [
 #   You winked confidently at your classmate, {name}, while the teacher was discussing the sexual reproductive system.
 #   You laughed at everything your classmate, {name}, said, with the hope that {he_she} would embrace the attention from you.
 
-
-# You stared at your classmate, {name}, for {FLIRT_STARE_TIME_MIDDLE_SCHOOL} straight minutes today during {FLIRT_STARE_CLASSES_MIDDLE_SCHOOL} class, just so she would notice that you are interested in {him_her}.
-# FLIRT_STARE_TIME_MIDDLE_SCHOOL = randint(5, 25)
-# ^ TODO: Move this ^ out of const.py into the string format itself so the number isn't the same if generated multiple times while the game is open
-
 # LIST ORDERED: Alphabetical
 FLIRT_STARE_CLASSES_MIDDLE_SCHOOL = [
     _("Art"),
@@ -329,8 +324,6 @@ FLIRT_STARE_CLASSES_MIDDLE_SCHOOL = [
 #   You mimicked your classmate, {name}'s, body language so that she would feel like she relates to you.
 
 
-# You stared at your classmate, {name}, for {FLIRT_STARE_TIME_HIGH_SCHOOL} straight minutes today during {FLIRT_STARE_CLASSES_HIGH_SCHOOL} class, just so she would notice that you are interested in {him_her}.
-# FLIRT_STARE_TIME_HIGH_SCHOOL = randint(10, 55)
 # LIST ORDERED: Business > CompSci/IT > English > Family/Consumer Science > Languages > Math > Performing Arts > Physical Ed > Science > Social Studies > Visual Arts > Vocational Ed
 FLIRT_STARE_CLASSES_HIGH_SCHOOL = [
     _("Accounting"),
@@ -2755,20 +2748,13 @@ NEGATIVE_SOCIAL_RESPONSES = [
 # ------------------------------------------------------------------
 
 # Books
+# name, category, pages, age unlocked, happiness change, smarts change
 BOOKS = [
-    _("The Dictionary"),
-]
-BOOKS_CHILD = [
-    _("Where the Wild Things Are"),
-    _("Goodnight Moon"),
-    _("Brown Bear, Brown Bear, What Do You See?"),
-    _("The Snowy Day"),
-    _("If You Give A Mouse A Cookie"),
-    _("Stellaluna"),
-    _("The Very Hungry Caterpillar"),
-]
-BOOKS_TEEN = [
-    _(""),
+	(_("Brown Bear, Brown Bear, What Do You See?"), _("Children's Picture Book"), 32, 6, 16, 16)
+	(_("Corduroy"), _("Children's Picture Book"), 32, 6, 30, 16),
+	(_("Cosmos"), _("Non-fiction"), 365, 17, 8, 50),
+	(_("Diary of a Wimpy Kid"), _("Children's Novel"), 221, 10, 50, 4),
+	(_("The Cat in the Hat"), _("Children's Picture Book"), 73, 6, 30, 16)
 ]
 
 # ------------------------------------------------------------------
