@@ -7,7 +7,7 @@ from src.menus.start import start_menu
 from src.lifesim_lib.lifesim_lib import PlayerDied, yes_no, choice_input, clear_screen
 
 """
-TODO List: 
+TODO List:
 - Add social media
 - Allow children to have traits
 """

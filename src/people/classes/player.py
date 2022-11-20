@@ -278,8 +278,11 @@ class Player(Person):
 		return p
 
 	def change_happiness(self, amount):
-		if amount != 0 and self.has_trait("MOODY"):
-			amount = round_stochastic(amount * 1.5)
+		if amount != 0:
+			if self.has_trait("MOODY"):
+				amount = round_stochastic(amount * 1.5)
+			elif self.has_trait("NON_EMOTIONAL"):
+				amount = round_stochastic(amount / 2)
 		super().change_happiness(amount)
 
 	def change_jackpot(self):
@@ -392,7 +395,7 @@ class Player(Person):
 		if self.has_trait("SICKLY"):
 			self.change_health(-randint(0, 4))
 		if self.has_trait("MOODY") and not self.is_depressed():
-			self.change_happiness(randint(-8, 8))
+			self.change_happiness(randint(-6, 6))
 		if self.has_trait("GRUMPY") and self.happiness > 33:
 			if randint(1, 10) == 1:
 				self.change_happiness(-randint(5, 8))

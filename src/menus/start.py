@@ -22,22 +22,20 @@ def start_menu():
     choice = choice_input(_("Random Life"), _("Custom Life"))
 
     if choice == 2:
-        first = ""
-        last = ""
-        while not first:
-            first = input(_("Enter your first name: ")).strip()
-        while not last:
-            last = input(_("Enter your last name: ")).strip()
-        print()
         print(_("Choose your gender:"))
         choice = choice_input(_("Male"), _("Female"))
+        gender = Gender.Male if choice == 1 else Gender.Female
+        first = input(_("Enter your first name (or leave blank for random): ")).strip()
+        first = first or random_name(gender)
+        last = input(_("Enter your last name (or leave blank for random): ")).strip()
+        last = last or random_last_name()
         print()
-        player = Player(first, last, Gender.Male if choice == 1 else Gender.Female)
+        print()
+        player = Player(first, last, gender)
         print(_("Would you like to Randomize or Customize your traits?"))
         choice = choice_input(_("Randomize"), _("Customize"))
         if choice == 1:
             player.randomize_traits()
-            player.after_trait_select()
         else:
             player.traits = {}
             all_traits = list(ALL_TRAITS_DICT)
@@ -74,7 +72,7 @@ def start_menu():
                     else:
                         player.traits[trait] = ALL_TRAITS_DICT[trait]
             clear_screen()
-            player.after_trait_select()
+        player.after_trait_select()
         return player
     else:
         player = Player()

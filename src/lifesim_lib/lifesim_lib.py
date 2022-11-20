@@ -214,12 +214,22 @@ TRAITS_DICT = {
         -1,
         ["WELL_KEPT"],
     ),
+    
     "MOODY": (
         _("Moody"),
         _(
             "Your mood can change more easily. All changes to your Happiness are more intense."
         ),
         0,
+        ["NON_EMOTIONAL"]
+    ),
+    "NON_EMOTIONAL": (
+        _("Non-Emotional"),
+        _(
+            "You don't react much to situations. Any changes to your Happiness are less intense."
+        ),
+        0,
+        ["NON_EMOTIONAL"]
     ),
 }
 
