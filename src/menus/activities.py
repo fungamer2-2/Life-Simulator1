@@ -12,7 +12,7 @@ def activities_menu(player):
 		print(_("Activities Menu"))
 		print()
 		choices = [_("Back")]
-		if 1 <= player.age < 13:
+		if 3 <= player.age < 13:
 			choices.append(_("Play with your toys"))
 		if player.age >= 4:
 			choices.append(_("Doctor"))
@@ -639,6 +639,11 @@ def activities_menu(player):
 						category = book[1]
 						total_pages = book[2]
 						happy_amount = book[4]
+						if player.has_trait("BOOK_LOVER"):
+							if happy_amount > 0:
+								happy_amount = math.ceil(min(happy_amount * 1.5, (100 + happy_amount) / 2))
+							else:
+								happy_amount = -(abs(happy_amount)//2)
 						smarts_amount = book[5]
 						reading = True
 						pages = 0
@@ -662,11 +667,18 @@ def activities_menu(player):
 										r = (happy_amount/100)**0.7
 										enjoyment = round_stochastic(enjoyment + (100 - enjoyment)*r)
 									display_bar(_("Your Enjoyment"), enjoyment)
+									learn = []
+									if total_pages > randint(48, 150) and x_in_y(math.sqrt(smarts_amount), 100):
+										learn.append("NERD")
+									if x_in_y(math.sqrt(happy_amount), 100):
+										learn.append("BOOK_LOVER")
+									if learn:
+										player.learn_trait(random.choice(learn))
 									press_enter()
-									h_amount = math.ceil(random.uniform(0.8, 1) * happy_amount * (1 - happy_amount/100))
-									s_amount = math.ceil(random.uniform(0.8, 1) * smarts_amount * (1 - smarts_amount/100))
+									h_amount = math.ceil(random.uniform(0.8, 1) * happy_amount * (1 - player.happiness/100))
+									s_amount = math.ceil(random.uniform(0.8, 1) * smarts_amount * (1 - player.smarts/100))
 									player.change_happiness(h_amount)
-									player.change_smarts(smarts_amount)
+									player.change_smarts(s_amount)
 							else:
 								reading = False
 								if choice == 2:

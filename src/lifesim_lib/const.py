@@ -2730,7 +2730,7 @@ BOOKS = [
 	(_("Goosebumps"), _("Children's Novel"), 122, 9, 16, 4),
 	(_("Hatchet"), _("Young Adult Novel"), 195, 13, 16, 16),
 	(_("I, Robot"), _("Science Fiction"), 253, 15, 8, 8),
-	(_("If You Give a Mouse a Cookue"), _("Children's Picture Book"), 32, 6, 16, 30),
+	(_("If You Give a Mouse a Cookie"), _("Children's Picture Book"), 32, 6, 16, 30),
 	(_("Stellaluna"), _("Children's Picture Book"), 48, 6, 30, 16),
 	(_("The Cat in the Hat"), _("Children's Picture Book"), 73, 6, 30, 16),
 	(_("The Little Engine That Could"), _("Children's Picture Book"), 48, 6, 50, 16),
@@ -3662,7 +3662,6 @@ DISCUSSIONS_CHILD = [
     _("if it is better to squat or sit"),
     _("if it is better to shower or bath"),
     _("if it is better to wipe from the front or back"),
-    _("if it is better to "),
     _("your favourite movie character"),
     _("your imaginary friend"),
     _("your most prized posession"),
@@ -3674,7 +3673,13 @@ DISCUSSIONS_TEEN = [
 TALKS = [
     _("not spending enough time with your family"),
     _("whether you would rather have overly large hands or small feet"),
-    _("who will win the Monaco Grand Prix")
+    _("who will win the Monaco Grand Prix"),
+    _("cloning"),
+    _("cryptocurrencies"),
+    _("good vs evil"),
+    _("how to deal with poor grammar"),
+    _("investment options"),
+    _("whether or not a hot dog qualifies as a sandwich")
 ]
 TALKS_INFANT = [
     _("the importance of not sucking your thumb"),

@@ -73,7 +73,7 @@ def main_menu(player):
 			print_align_bars(*bars)
 			choices = [_("Back")]
 			if relation.age >= 5:
-				if player.age >= 1:
+				if player.age >= 5:
 					choices.append(_("Spend time"))
 				if player.age >= 3:
 					choices.append(_("Have a conversation"))
@@ -144,7 +144,7 @@ def main_menu(player):
 					agreement = clamp(
 						round(agreement), randint(0, 10), randint(90, 100)
 					)
-					if self.age < 13:
+					if player.age < 13:
 						chat = random.choice(CHATS_CHILD)
 					else:
 						chat = random.choice(CHATS)
