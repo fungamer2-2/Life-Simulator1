@@ -229,7 +229,7 @@ TRAITS_DICT = {
             "You don't react much to situations. Any changes to your Happiness are less intense."
         ),
         0,
-        ["NON_EMOTIONAL"]
+        ["MOODY"]
     ),
 }
 
