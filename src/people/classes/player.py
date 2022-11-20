@@ -518,10 +518,11 @@ class Player(Person):
 					)
 				)
 		if self.happiness < randint(1, 10) and not self.is_depressed():
-			display_event(_("You are suffering from depression."))
-			self.add_illness(TranslateMarker("Depression"))
-			self.change_happiness(-50)
-			self.change_health(-randint(4, 8))
+			if not self.has_trait("NON_EMOTIONAL") or one_in(2):
+				display_event(_("You are suffering from depression."))
+				self.add_illness(TranslateMarker("Depression"))
+				self.change_happiness(-50)
+				self.change_health(-randint(4, 8))
 		for relation in self.relations[:]:
 			sudden_death = relation.age >= 6 and one_in(2000)
 			if sudden_death or relation.death_check():
