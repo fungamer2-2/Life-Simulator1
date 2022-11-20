@@ -2720,12 +2720,15 @@ NEGATIVE_SOCIAL_RESPONSES = [
 # name, category, pages, age unlocked, happiness change, smarts change
 BOOKS = [
 	(_("Alice's Adventure's In Wonderland"), _("Fantasy"), 239, 10, 100, 50),
+	(_("Atlas Shrugged"), _("Novel"), 1168, 17, 8, 100),
 	(_("Becoming"), _("Autobiography"), 463, 16, 16, 50),
 	(_("Brown Bear, Brown Bear, What Do You See?"), _("Children's Picture Book"), 32, 6, 16, 16),
+	(_("Captain Underpants and the Attack of the Talking Toilets"), _("Children's Novel"), 133, 7, 4, 4),
 	(_("Corduroy"), _("Children's Picture Book"), 32, 6, 30, 16),
 	(_("Cosmos"), _("Non-fiction"), 365, 17, 8, 50),
 	(_("Diary of a Wimpy Kid"), _("Children's Novel"), 221, 10, 50, 4),
 	(_("Goosebumps"), _("Children's Novel"), 122, 9, 16, 4),
+	(_("Hatchet"), _("Young Adult Novel"), 195, 13, 16, 16),
 	(_("I, Robot"), _("Science Fiction"), 253, 15, 8, 8),
 	(_("If You Give a Mouse a Cookue"), _("Children's Picture Book"), 32, 6, 16, 30),
 	(_("Stellaluna"), _("Children's Picture Book"), 48, 6, 30, 16),

@@ -1,4 +1,4 @@
-import random
+import random, time, math
 from random import randint
 
 from src.lifesim_lib.const import *
@@ -16,10 +16,11 @@ def activities_menu(player):
 			choices.append(_("Play with your toys"))
 		if player.age >= 4:
 			choices.append(_("Doctor"))
-		if player.age >= 1:
+		if player.age >= 5:
 			choices.append(_("Arts and Crafts"))
-		if player.age >= 12:
+		if player.age >= 6:
 			choices.append(_("Mind & Body"))
+		if player.age >= 12:
 			choices.append(_("Listen to music"))
 		if player.age >= 18:
 			if player.age >= 21:
@@ -534,13 +535,15 @@ def activities_menu(player):
 		elif choice == _("Mind & Body"):
 			print(_("Mind & Body"))
 			print()
-			choice = choice_input(
-				_("Back"),
-				_("Meditate"),
-				_("Gym"),
-				_("Library"),
-				return_text=True
-			)
+			choices = [_("Back")]
+			if player.age >= 12:
+				choices.extend([
+					_("Meditate"),
+					_("Gym"),
+					_("Library")
+				])
+			choices.append(_("Read a Book"))
+			choice = choice_input(*choices, return_text=True)
 			clear_screen()
 			if choice != _("Back"):
 				selected = True
@@ -620,6 +623,56 @@ def activities_menu(player):
 						else:
 							player.learn_trait("BOOK_LOVER")
 					player.visited_library = True
+			elif choice == _("Read a Book"):
+				#print(_("Coming soon!"))
+				done = False
+				while not done:
+					available = [b for b in BOOKS if player.age >= b[3]]
+					selection = random.sample(available, min(len(available), 5))
+					names = [s[0] for s in selection]
+					clear_screen()
+					print(_("Which book would you like to read?"))
+					choice = choice_input(*(names + [_("Back")]))
+					if choice <= len(names):
+						book = selection[choice - 1]
+						title = book[0]
+						category = book[1]
+						total_pages = book[2]
+						happy_amount = book[4]
+						smarts_amount = book[5]
+						reading = True
+						pages = 0
+						while reading:
+							clear_screen()
+							print(_('You are reading "{book_title}"').format(book_title=title))
+							display_data(_("Category"), category)
+							display_data(_("Pages read"), f"{pages}/{total_pages}")
+							print()
+							print(_("Press 1 to read each page"))
+							choice = choice_input(_("Read page"), _("Abandon it"), _("Pick a different book"))
+							if choice == 1:
+								pages += 1
+								if pages >= total_pages:
+									time.sleep(0.5)
+									print(_("You read all {pages} pages of \"{book}\".").format(pages=total_pages, book=title))
+									done = True
+									reading = False
+									enjoyment = randint(25, 50) + randint(0, 25)
+									if happy_amount > 0:
+										r = (happy_amount/100)**0.7
+										enjoyment = round_stochastic(enjoyment + (100 - enjoyment)*r)
+									display_bar(_("Your Enjoyment"), enjoyment)
+									press_enter()
+									h_amount = math.ceil(random.uniform(0.8, 1) * happy_amount * (1 - happy_amount/100))
+									s_amount = math.ceil(random.uniform(0.8, 1) * smarts_amount * (1 - smarts_amount/100))
+									player.change_happiness(h_amount)
+									player.change_smarts(smarts_amount)
+							else:
+								reading = False
+								if choice == 2:
+									done = True
+					else:
+						done = True
 		elif choice == _("Plastic Surgery"):
 			selected = True
 			if player.age - player.last_plastic_surgery < 8:
