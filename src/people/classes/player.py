@@ -524,7 +524,7 @@ class Player(Person):
 				self.change_happiness(-50)
 				self.change_health(-randint(4, 8))
 		for relation in self.relations[:]:
-			sudden_death = relation.age >= 6 and one_in(2000)
+			sudden_death = relation.age >= 6 and one_in(1500)
 			if sudden_death or relation.death_check():
 				reason = None
 				if sudden_death:
