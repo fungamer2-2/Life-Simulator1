@@ -86,6 +86,7 @@ def main_menu(player):
 						choices.append(_("Break up"))
 					else:
 						choices.append(_("Divorce"))
+						choices.append(_("Renew Vows"))
 					if relation.status == 0:
 						choices.append(_("Propose"))
 					elif relation.status == 1:
@@ -433,6 +434,7 @@ def main_menu(player):
 								player.change_happiness(randint(10, 16))
 								relation.change_relationship(randint(30, 50))
 								relation.status = 2
+								relation.last_renew_vows = player.age
 							break
 						elif choice == 3:
 							break
@@ -450,6 +452,17 @@ def main_menu(player):
 						display_event(_("The judge has ordered you to pay {name} ${amount} to settle your divorce.").format(name=relation.name, amount=amount))
 						player.money -= amount
 					player.lose_partner()
+			elif choice == _("Renew Vows"):
+				partner = relation.name_accusative()
+				if relation.asked_renew_vows or player.age - relation.last_renew_vows < 10 or relation.relationship < randint(40, 70):
+					print(_("Your {partner} doesn't want to renew your wedding vows.").format(partner=partner))
+					relation.change_relationship(-randint(4, 8))
+					relation.asked_renew_vows = True
+				else:
+					print(_("You and your {partner} renewed your wedding vows.").format(partner=partner))
+					relation.change_relationship(randint(15, 20))
+					player.change_happiness(randint(10, 16))
+					relation.last_renew_vows = player.age
 			print()
 	if choice == _("Activities"):	
 		activities_menu(player)			

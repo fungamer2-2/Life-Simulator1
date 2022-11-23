@@ -38,11 +38,14 @@ class Partner(Relationship):
         if randint(1, 100) <= 40:
             net_worth -= randint(0, 60000)
         self.net_worth = net_worth
+        self.last_renew_vows = -1
+        self.asked_renew_vows = False
 
     def age_up(self):
         super().age_up()
         self.years_together += 1
         self.was_proposed_to = False
+        self.asked_renew_vows = False
 
     def print_info(self):
         display_data(_("Their Age"), self.age)
