@@ -349,7 +349,44 @@ def main_menu(player):
 							print(_("Your {partner} is pregnant with your baby!").format(partner=rel))
 						else:
 							print(_("You are pregnant with {name}'s baby!").format(name=player.partner.firstname))
-						if yes_no(_("Would you like to keep it?")):
+						print(_("What will you do"))
+						choice = choice_input(
+							_("Keep the baby"),
+							_("Get an abortion")
+						)
+						overrule_chance = 10 * (player.partner.craziness/100)**2
+						if player.partner.gender == Gender.Female:
+							if choice == 1:
+								overrule_chance /= 2
+						elif choice == 2:
+							overrule_chance /= 2
+						is_pregnant = True
+						if choice == 1:
+							if x_in_y(overrule_chance, 100):
+								is_pregnant = False
+								if player.partner.gender == Gender.Female:
+									msg = _("Your {partner} got an abortion anyway!")
+								else:
+									msg = _("Your {partner} forced you to get an abortion!")
+								display_event(msg.format(partner=rel))
+								player.change_happiness(-randint(10, 15))
+						else:
+							if x_in_y(overrule_chance, 100):
+								if player.partner.gender == Gender.Female:
+									msg = _("Your {partner} refused to get an abortion!")
+								else:
+									msg = _("Your {partner} forced you to keep the baby!")
+								display_event(msg.format(partner=rel))
+								player.change_happiness(-randint(8, 15))
+							else:
+								is_pregnant = False
+								if player.gender == Gender.Male:
+									msg = _("You made your {partner} get an abortion!")
+								else:
+									msg = _("You got an abortion!")
+								display_event(msg.format(partner=rel))
+						
+						if is_pregnant:
 							if player.gender == Gender.Male:
 								player.partner.is_pregnant = True
 							else:
