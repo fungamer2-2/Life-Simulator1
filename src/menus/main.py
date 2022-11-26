@@ -514,7 +514,7 @@ def main_menu(player):
 			if not player.studied:
 				player.change_grades(randint(5, 7 + (100 - player.grades) // 5))
 				player.change_smarts(randint(0, 2) + (player.has_trait("NERD")))
-				if x_in_y(player.smarts, 2500):
+				if x_in_y(player.smarts, 2000):
 					player.learn_trait("NERD")
 				player.studied = True
 		if choice == 3:

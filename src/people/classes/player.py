@@ -95,6 +95,9 @@ class Player(Person):
 		self.save_path = SAVE_PATH + "/" + self.ID + ".pickle"
 		self.generation = 1
 		self.last_plastic_surgery = 0
+		self.plastic_surgeons = [None, None]
+		self.update_plastic_surgeon(0)
+		self.update_plastic_surgeon(1)
 
 	def learn_trait(self, trait):
 		if trait not in TRAITS_DICT:
@@ -126,6 +129,11 @@ class Player(Person):
 			)
 			self.traits[trait] = data
 		return True
+		
+	def update_plastic_surgeon(self, index):
+		name = random_last_name()
+		reputation = randint(20, 60) + randint(0, 40)
+		self.plastic_surgeons[index] = (name, reputation)
 
 	def convert_child_to_player(self, c):  # This is here for when it's possible to continue as your child
 		parent_name = self.name
@@ -410,7 +418,9 @@ class Player(Person):
 			self.change_stress(-randint(0, 4))
 		self.reset_already_did()
 		self.change_karma(randint(-2, 2))
-
+		for i in range(2):
+			if one_in(30):
+				self.update_plastic_surgeon(i)
 		for relation in self.relations:
 			relation.age_up()
 			if isinstance(relation, Parent):
@@ -796,7 +806,7 @@ class Player(Person):
 					self.die(_("You died due to complications associated with cancer."))
 			elif illness in ["Common Cold", "Flu"]:
 				self.remove_illness(illness)
-		if one_in(max(3000 - self.age*25, 1000)):
+		if self.age >= 4 and one_in(2000):
 			display_event(_("You have been diagnosed with cancer."))
 			self.add_illness(TranslateMarker("Cancer"))
 			self.change_health(-randint(16, 50))

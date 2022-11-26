@@ -6,12 +6,6 @@ from src.menus.main import main_menu
 from src.menus.start import start_menu
 from src.lifesim_lib.lifesim_lib import PlayerDied, yes_no, choice_input, clear_screen
 
-"""
-TODO List:
-- Add social media
-- Allow children to have traits
-"""
-
 def game_loop(player):
 	try:
 		while True:

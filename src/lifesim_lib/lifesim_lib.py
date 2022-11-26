@@ -343,9 +343,11 @@ def display_event(message, cls=True):
     if cls:
         clear_screen()
 
+def get_bar(val):
+	return draw_bar(val, 100, 25)
 
 def display_bar(stat_name, val):
-    print(stat_name + ": " + draw_bar(val, 100, 25))
+    print(stat_name + ": " + get_bar(val))
 
 
 def display_data(name, value):
@@ -373,6 +375,7 @@ def print_align_bars(*name_pairs, show_percent=False):
 
 
 def draw_bar(val, max_val, width):
+    val = clamp(val, 0, max_val)
     num = round(width * val / max_val)
     return "[" + "|" * num + " " * (width - num) + "]"
 

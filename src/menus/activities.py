@@ -49,7 +49,7 @@ def activities_menu(player):
 					"You played with your toys.",
 					"You had a lot of fun playing with your toys.",
 				]
-				if one_in(2):
+				if x_in_y(3, 5):
 					if player.age < 3:
 						sayings = [
 							_("You played with your toy wagon."),
@@ -584,7 +584,7 @@ def activities_menu(player):
 						if player.has_trait("CHEERFUL"):
 							player.change_happiness(3)
 						player.change_health(randint(3, 6))
-						if player.looks < randint(1, 100) and randint(1, 100) <= 70:
+						if player.looks < randint(1, 100):
 							player.change_looks(randint(2, 4))
 						player.worked_out = True
 					print()
@@ -679,6 +679,9 @@ def activities_menu(player):
 									s_amount = math.ceil(random.uniform(0.8, 1) * smarts_amount * (1 - player.smarts/100))
 									player.change_happiness(h_amount)
 									player.change_smarts(s_amount)
+									if happy_amount > 0:
+										amount = random.uniform(0, math.sqrt(happy_amount)) * (min(player.stress / 70, 1))**2
+										player.change_stress(-round_stochastic(amount))
 							else:
 								reading = False
 								if choice == 2:
@@ -694,19 +697,28 @@ def activities_menu(player):
 					print(_("You don't have enough money"))
 				else:
 					player.money -= 25000
-					if one_in(6):
-						damage = randint(15, 70)
+					surgeons = player.plastic_surgeons
+					print(_("Which plastic surgeon would you like to visit?"))
+					names = list(map(lambda s: _("Dr. {name}").format(name=s[0]), surgeons))
+					options = [names[i] + "\n   " + _("Reputation: {bar}").format(bar=get_bar(surgeons[i][1])) for i in range(len(surgeons))]
+					choice = choice_input(*options)
+					name = names[choice - 1]
+					reputation = surgeons[choice - 1][1]
+					if one_in(5) and not x_in_y(reputation, 100):
+						d = 100 - reputation
+						damage = randint(6, 12) + randint(d // 4, d*3//4)
 						val = round_stochastic(damage / 2)
-						print(_("Your plastic surgery was botched!"))
+						print(_("Your plastic surgery was botched by {name}!").format(name=name))
 						display_bar(_("Damage"), val)
 						press_enter()
 						player.change_happiness(-val)
 						player.change_health(-val)
 						player.change_looks(-val)
-						if player.health <= 0 and one_in(6) and not x_in_y(player.karma, 100) and damage >= randint(25, 100):
+						if player.health <= 0 and one_in(5) and not x_in_y(player.karma, 100) and damage >= randint(20, 100):
 							player.die(_("You died after receiving a botched plastic surgery."))
 					else:
-						results = min(randint(14, 100), randint(14, 100))
+						r = [randint(20, 100) for _ in range(2)]
+						results = min(r, key=lambda v: abs(v - reputation))
 						print(_("Your plastic surgery was successful."))
 						display_bar(_("Results"), results)
 						press_enter()
