@@ -133,7 +133,7 @@ class Player(Person):
 	def update_plastic_surgeon(self, index):
 		name = random_last_name()
 		reputation = randint(20, 60) + randint(0, 40)
-		self.plastic_surgeons[index] = (name, reputation)
+		self.plastic_surgeons[index] = [name, reputation]
 
 	def convert_child_to_player(self, c):  # This is here for when it's possible to continue as your child
 		parent_name = self.name
@@ -419,7 +419,7 @@ class Player(Person):
 		self.reset_already_did()
 		self.change_karma(randint(-2, 2))
 		for i in range(2):
-			if one_in(30):
+			if one_in(35):
 				self.update_plastic_surgeon(i)
 		for relation in self.relations:
 			relation.age_up()
@@ -455,7 +455,7 @@ class Player(Person):
 		if self.gender == Gender.Female:
 			if self.is_pregnant:
 				self.is_pregnant = False
-				if not x_in_y(self.fertility, 100) and one_in(5):
+				if not x_in_y(self.fertility, 150) and one_in(5):
 					display_event(_("You suffered a miscarriage and lost the baby!"))
 					self.change_happiness(-randint(30, 50))
 				else:

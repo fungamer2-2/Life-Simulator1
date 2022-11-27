@@ -690,7 +690,7 @@ def activities_menu(player):
 						done = True
 		elif choice == _("Plastic Surgery"):
 			selected = True
-			if player.age - player.last_plastic_surgery < 8:
+			if player.age - player.last_plastic_surgery < 6:
 				print(_("Please wait a while before getting another plastic surgery."))
 			elif yes_no(_("Would you like to receive plastic surgery? (Cost: $25000)")):
 				if player.money < 25000:
@@ -717,10 +717,18 @@ def activities_menu(player):
 						if player.health <= 0 and one_in(5) and not x_in_y(player.karma, 100) and damage >= randint(20, 100):
 							player.die(_("You died after receiving a botched plastic surgery."))
 					else:
-						r = [randint(20, 100) for _ in range(2)]
+						r = [randint(20, 100) for _ in range(randint(2, 3))]
 						results = min(r, key=lambda v: abs(v - reputation))
 						print(_("Your plastic surgery was successful."))
 						display_bar(_("Results"), results)
+						if results > reputation:
+							diff = results - reputation
+							if x_in_y(diff, 80):
+								cap = randint(50, 100)
+								if surgeons[choice - 1][1] < cap:
+									surgeons[choice - 1][1] += randint(2, 6)
+									if surgeons[choice - 1][1] > cap:
+										surgeons[choice - 1][1] = cap
 						press_enter()
 						val = round_stochastic(results / 2)
 						player.change_happiness(val)
