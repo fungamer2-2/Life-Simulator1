@@ -972,7 +972,7 @@ class Player(Person):
 						).format(him_her=him_her, insult=insult, he_she=he_she)
 					)
 					self.divorce()
-		if self.partner and self.money >= 1000000 and not x_in_y(self.karma, 130) and one_in(200):
+		if self.partner and self.money >= 1000000 and not x_in_y(self.karma, 130) and one_in(250):
 			rel = self.partner.name_accusative()
 			ransom = round(self.money * random.uniform(0.2, 0.8))
 			print(_("Your {partner} has been kidnapped and is being held for ${ransom} ransom!").format(partner=rel, ransom=ransom))
