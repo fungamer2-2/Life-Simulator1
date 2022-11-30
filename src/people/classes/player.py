@@ -978,7 +978,7 @@ class Player(Person):
 			print(_("Your {partner} has been kidnapped and is being held for ${ransom} ransom!").format(partner=rel, ransom=ransom))
 			print(_("The kidnappers warn you not to involve the police."))
 			print(_("What will you do?"))
-			self.change_happiness(-randint(35, 50))
+			self.change_happiness(-randint(30, 40))
 			choice = choice_input(
 				_("Pay the ransom"),
 				_("Involve the police"),
