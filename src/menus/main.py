@@ -483,12 +483,7 @@ def main_menu(player):
 					print(
 						_("You divorced your {partner}.").format(partner=partner)
 					)
-					amount = round(player.money * random.uniform(0.4, 0.6)) 
-					if amount > 0:
-						player.change_happiness(-randint(10, 15))
-						display_event(_("The judge has ordered you to pay {name} ${amount} to settle your divorce.").format(name=relation.name, amount=amount))
-						player.money -= amount
-					player.lose_partner()
+					player.divorce()
 			elif choice == _("Renew Vows"):
 				partner = relation.name_accusative()
 				if relation.asked_renew_vows or player.age - relation.last_renew_vows < 10 or relation.relationship < randint(40, 70):

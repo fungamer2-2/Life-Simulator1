@@ -827,7 +827,11 @@ class Player(Person):
 				_("Your mother is taking to to the doctor's office to get vaccinated.")
 			)
 			print(_("How will you behave?"))
-			choices = [_("Try to stay calm"), _("Throw a tantrum"), _("Bite her")]
+			choices = [
+				_("Try to stay calm"), 
+				_("Throw a conniption fit") if one_in(4) else _("Throw a tantrum"), 
+				_("Bite her")
+			]
 			choice = choice_input(*choices)
 			clear_screen()
 			if choice == 1:
@@ -968,7 +972,42 @@ class Player(Person):
 						).format(him_her=him_her, insult=insult, he_she=he_she)
 					)
 					self.divorce()
-		if (
+		if self.partner and self.money >= 1000000 and not x_in_y(self.karma, 130) and one_in(200):
+			rel = self.partner.name_accusative()
+			ransom = round(self.money * random.uniform(0.2, 0.8))
+			print(_("Your {partner} has been kidnapped and is being held for ${ransom} ransom!").format(partner=rel, ransom=ransom))
+			print(_("The kidnappers warn you not to involve the police."))
+			print(_("What will you do?"))
+			self.change_happiness(-randint(35, 50))
+			choice = choice_input(
+				_("Pay the ransom"),
+				_("Involve the police"),
+				_("Do nothing")
+			)
+			success = False
+			if choice == 1:
+				success = not one_in(6)
+				self.money -= ransom
+				if success:
+					display_event(_("You successfully paid ${ransom} ransom in exchange for {name}'s release.").format(ransom=ransom, name=self.partner.firstname), cls=False)
+				else:
+					display_event(_("You paid ${ransom} ransom but they did not return {name}!").format(ransom=ransom, name=self.partner.firstname), cls=False)
+			elif choice == 2:
+				success = not one_in(3)
+				if success:
+					display_event(_("The police managed to secure {name}'s release and arrest the kidnappers!").format(name=self.partner.firstname), cls=False)
+				else:
+					display_event(_("The police were unable to secure {name}'s release!").format(name=self.partner.firstname), cls=False)
+			else:
+				display_event(_("You did absolutely nothing!"), cls=False)
+				self.change_karma(-randint(8, 16))
+			if success:
+				self.change_happiness(randint(6, 12))
+				self.partner.change_relationship(randint(30, 50))
+			else:
+				display_event(_("{name} and {his_her} kidnappers vanished!").format(name=self.partner.firstname, his_her=self.partner.his_her()))
+				self.process_relation_death(self.partner, reason=_("is presumed dead after disappearing"))
+		elif (
 			self.age >= 18
 			and self.age < randint(42, 70)
 			and self.marital_status == 0

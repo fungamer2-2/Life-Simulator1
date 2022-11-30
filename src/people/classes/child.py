@@ -36,11 +36,21 @@ class Child(Relationship):
         self.salary = 0
         self.money = 0
         self.is_in_uv = 0
+        self.student_loan = 0
+        self.student_loan_total = 0
+        self.has_student_loan = False
         self.years_worked = 0
         self.partner = None
         self.partner_desire = randint(0, 100)
         self.may_divorce = False
         self.adopted = adopted
+        self.player = None
+        
+    def set_parent(self, player):
+    	if player.gender == Gender.Male:
+    		self.father = player
+    	else:
+    		self.mother = player
 
     def name_accusative(self):
         if self.adopted:

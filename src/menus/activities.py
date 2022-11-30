@@ -724,7 +724,7 @@ def activities_menu(player):
 						if results > reputation:
 							diff = results - reputation
 							if x_in_y(diff, 80):
-								cap = randint(50, 100)
+								cap = randint(50, 100) #Diminishing returns
 								if surgeons[choice - 1][1] < cap:
 									surgeons[choice - 1][1] += randint(2, 6)
 									if surgeons[choice - 1][1] > cap:
@@ -772,6 +772,7 @@ def activities_menu(player):
 							c.update_name()
 						print(_("You have adopted {name}, {name_and_age}.").format(name=c.name, name_and_age=s))
 						player.change_happiness(randint(15, 30))
+						c.set_parent(player)
 						player.relations.append(c)
 						player.children.append(c)
 		elif choice == _("Lottery"):
