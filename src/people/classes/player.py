@@ -98,6 +98,7 @@ class Player(Person):
 		self.plastic_surgeons = [None, None]
 		self.update_plastic_surgeon(0)
 		self.update_plastic_surgeon(1)
+		self.social_media = None
 
 	def learn_trait(self, trait):
 		if trait not in TRAITS_DICT:
@@ -527,6 +528,8 @@ class Player(Person):
 						son_daughter=typ, name=c.name
 					)
 				)
+				display_bar(_("Smarts"), c.smarts)
+				display_bar(_("Looks"), c.looks)
 		if self.happiness < randint(1, 10) and not self.is_depressed():
 			if not self.has_trait("NON_EMOTIONAL") or one_in(2):
 				display_event(_("You are suffering from depression."))

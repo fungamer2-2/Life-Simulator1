@@ -220,7 +220,7 @@ def main_menu(player):
 					relation.change_relationship(-randint(5, 10))
 				else:
 					if relation.asked_for_money == 0 and x_in_y(relation.generosity, 35):
-						amount = 5 ** (relation.generosity/22) * (relation.money/100)**2 * math.sqrt(player.age)
+						amount = 5 ** (relation.money/22) * (relation.generosity/100)**2 * math.sqrt(player.age)
 						amount = max(randint(1, 5), round_stochastic(amount * random.uniform(0.6, 1.4)))
 						print(_("Your {parent} gave you ${amount}.").format(parent=typ, amount=amount))
 						player.money += amount
@@ -231,19 +231,20 @@ def main_menu(player):
 						relation.change_relationship(-randint(4, 8))
 					relation.asked_for_money += 1
 			elif choice == _("Compliment"):
-				appreciation = randint(0, 60) + randint(0, 40)
+				gen_appreciation = lambda: randint(0, 50) + randint(0, 50)
+				appreciation = gen_appreciation()
 				relationship = relation.relationship
 				if relationship >= randint(51, 100):
-					appreciation = max(appreciation, randint(0, 60) + randint(0, 40))
+					appreciation = max(appreciation, gen_appreciation())
 					if relationship >= randint(75, 120):
 						appreciation = max(
-							appreciation, randint(0, 60) + randint(0, 40)
+							appreciation, gen_appreciation()
 						)
 				elif relationship <= randint(0, 49):
-					appreciation = min(appreciation, randint(0, 60) + randint(0, 40))
+					appreciation = min(appreciation, gen_appreciation())
 					if relationship <= randint(0, 25):
 						appreciation = min(
-							appreciation, randint(0, 60) + randint(0, 40)
+							appreciation, gen_appreciation()
 						)
 				compliments = COMPLIMENTS[:]
 				if relation.gender == Gender.Male:

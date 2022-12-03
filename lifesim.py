@@ -19,9 +19,12 @@ def game_loop(player):
 				import traceback
 				message = "".join(traceback.format_exception(type(e), e, e.__traceback__))
 				print(message)
-				with open("error.log", "w") as f:
-					f.write(message)
-				print(_("The above error message has been written to error.log"))
+				try:
+					with open("error.log", "w") as f:
+						f.write(message)
+					print(_("The above error message has been written to error.log"))
+				except:
+					pass
 				print(_("Please report this bug on Github"))
 				print("https://github.com/fungamer2-2/Life-Simulator1/issues/new?template=bug_report.md")
 				exit(1)

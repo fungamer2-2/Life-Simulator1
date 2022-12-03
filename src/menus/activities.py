@@ -643,7 +643,7 @@ def activities_menu(player):
 							if happy_amount > 0:
 								happy_amount = math.ceil(min(happy_amount * 1.5, (100 + happy_amount) / 2))
 							else:
-								happy_amount = -(abs(happy_amount)//2)
+								happy_amount = -(abs(happy_amount)//2)	
 						smarts_amount = book[5]
 						reading = True
 						pages = 0
@@ -677,6 +677,8 @@ def activities_menu(player):
 									press_enter()
 									h_amount = math.ceil(random.uniform(0.8, 1) * happy_amount * (1 - player.happiness/100))
 									s_amount = math.ceil(random.uniform(0.8, 1) * smarts_amount * (1 - player.smarts/100))
+									if player.has_trait("CHEERFUL"):
+										h_amount += max(4, h_amount//3)
 									player.change_happiness(h_amount)
 									player.change_smarts(s_amount)
 									if happy_amount > 0:
