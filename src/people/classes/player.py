@@ -382,6 +382,10 @@ class Player(Person):
 			self.change_karma(randint(3, 5))
 		else:
 			self.change_karma(-randint(2, 5))
+		if self.has_trait("THANATOPHOBIA"):
+			self.change_happiness(-randint(30, 45))
+			self.change_stress(randint(5, 10))
+			display_event(_("You feel intense panic as the death of your loved one reminds you of how much you are afraid of death."))
 		self.relations.remove(relation)
 		if inheritance > 0:
 			display_event(
@@ -548,6 +552,24 @@ class Player(Person):
 					if one_in(1000):
 						reason = _("starved to death after playing this game for too many days without stopping to eat")
 				self.process_relation_death(relation, reason)
+				
+		if self.age >= randint(12, 17) and self.has_trait("THANATOPHOBIA"):
+			if one_in(10):
+				thanatophobe_msgs = [
+					_("You begin to worry that one day you may not be here anymore."),
+					_("You begin to panic at the thought of dying."),
+					_("You are afraid of dying. You feel your heart beat quickly."),
+					_("You feel extremely anxious at the thought of one day not being here anyone."),
+					_("You're afraid to die. You feel you must stay out of any situations that involve dying."),
+					_("The thought of dying makes your heart race and you feel anxious."),
+					_("You find it hard to sleep at night, afraid of even the thought of dying."),
+					_("You don't even want to THINK about dying.")
+				]
+				self.change_happiness(-randint(4, 6))
+				self.change_stress(randint(3, 8))
+				self.change_health(-1)
+				print(random.choice(thanatophobe_msgs))
+		
 		self.random_events()
 		if self.partner:
 			assert self.partner in self.relations

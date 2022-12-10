@@ -214,6 +214,11 @@ TRAITS_DICT = {
         -1,
         ["WELL_KEPT"],
     ),
+    "THANATOPHOBIA": (
+    	_("Thanatophobia"),
+    	_("You are afraid of death. You often worry about your own death or the death of a relative, and you lose more Happiness when a relative dies."),
+    	-3
+    ),
     
     "MOODY": (
         _("Moody"),
