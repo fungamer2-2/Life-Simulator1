@@ -2719,22 +2719,36 @@ NEGATIVE_SOCIAL_RESPONSES = [
 # Books
 # name, category, pages, age unlocked, happiness change, smarts change
 BOOKS = [
-	(_("Alice's Adventure's In Wonderland"), _("Fantasy"), 239, 10, 100, 50),
-	(_("Atlas Shrugged"), _("Novel"), 1168, 17, 8, 100),
-	(_("Becoming"), _("Autobiography"), 463, 16, 16, 50),
-	(_("Brown Bear, Brown Bear, What Do You See?"), _("Children's Picture Book"), 32, 6, 16, 16),
-	(_("Captain Underpants and the Attack of the Talking Toilets"), _("Children's Novel"), 133, 7, 4, 4),
-	(_("Corduroy"), _("Children's Picture Book"), 32, 6, 30, 16),
-	(_("Cosmos"), _("Non-fiction"), 365, 17, 8, 50),
-	(_("Diary of a Wimpy Kid"), _("Children's Novel"), 221, 10, 50, 4),
-	(_("Goosebumps"), _("Children's Novel"), 122, 9, 16, 4),
-	(_("Hatchet"), _("Young Adult Novel"), 195, 13, 16, 16),
-	(_("I, Robot"), _("Science Fiction"), 253, 15, 8, 8),
-	(_("If You Give a Mouse a Cookie"), _("Children's Picture Book"), 32, 6, 16, 30),
-	(_("Stellaluna"), _("Children's Picture Book"), 48, 6, 30, 16),
-	(_("The Cat in the Hat"), _("Children's Picture Book"), 73, 6, 30, 16),
-	(_("The Little Engine That Could"), _("Children's Picture Book"), 48, 6, 50, 16),
-	(_("The Very Hungry Caterpillar"), _("Children's Picture Book"), 22, 6, 16, 4),
+    (_("Alice's Adventure's In Wonderland"), _("Fantasy"), 239, 10, 100, 50),
+    (_("Atlas Shrugged"), _("Novel"), 1168, 17, 8, 100),
+    (_("Becoming"), _("Autobiography"), 463, 16, 16, 50),
+    (
+        _("Brown Bear, Brown Bear, What Do You See?"),
+        _("Children's Picture Book"),
+        32,
+        6,
+        16,
+        16,
+    ),
+    (
+        _("Captain Underpants and the Attack of the Talking Toilets"),
+        _("Children's Novel"),
+        133,
+        7,
+        4,
+        4,
+    ),
+    (_("Corduroy"), _("Children's Picture Book"), 32, 6, 30, 16),
+    (_("Cosmos"), _("Non-fiction"), 365, 17, 8, 50),
+    (_("Diary of a Wimpy Kid"), _("Children's Novel"), 221, 10, 50, 4),
+    (_("Goosebumps"), _("Children's Novel"), 122, 9, 16, 4),
+    (_("Hatchet"), _("Young Adult Novel"), 195, 13, 16, 16),
+    (_("I, Robot"), _("Science Fiction"), 253, 15, 8, 8),
+    (_("If You Give a Mouse a Cookie"), _("Children's Picture Book"), 32, 6, 16, 30),
+    (_("Stellaluna"), _("Children's Picture Book"), 48, 6, 30, 16),
+    (_("The Cat in the Hat"), _("Children's Picture Book"), 73, 6, 30, 16),
+    (_("The Little Engine That Could"), _("Children's Picture Book"), 48, 6, 50, 16),
+    (_("The Very Hungry Caterpillar"), _("Children's Picture Book"), 22, 6, 16, 4),
 ]
 
 # ------------------------------------------------------------------
@@ -3439,9 +3453,9 @@ CHATS_CO_WORKERS = [
 
 # Academic / debatable topics, topics that are contentious etc. (can take words like 'discussed' prior to calling)
 DISCUSSIONS = [
-	_("Frida Kahlo's moustache"),
-	_("which is the best breed of dog"),
-	_("which is the best breed of cat"),
+    _("Frida Kahlo's moustache"),
+    _("which is the best breed of dog"),
+    _("which is the best breed of cat"),
     _("why cats are better than dogs"),
     _("why dogs are better than cats"),
     _("the Russia-Ukraine War"),
@@ -3679,7 +3693,7 @@ TALKS = [
     _("good vs evil"),
     _("how to deal with poor grammar"),
     _("investment options"),
-    _("whether or not a hot dog qualifies as a sandwich")
+    _("whether or not a hot dog qualifies as a sandwich"),
 ]
 TALKS_INFANT = [
     _("the importance of not sucking your thumb"),
@@ -3722,7 +3736,7 @@ HEART_TO_HEARTS_TEEN = [
 
 # ------------------------------------------------------------------
 # Spending time together section:
-	
+
 SPEND_TIME_PLACES = [
     _("shopping at a flea market"),
     _("bowling"),
