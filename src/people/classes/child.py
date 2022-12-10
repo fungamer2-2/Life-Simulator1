@@ -45,12 +45,12 @@ class Child(Relationship):
         self.may_divorce = False
         self.adopted = adopted
         self.player = None
-        
+
     def set_parent(self, player):
-    	if player.gender == Gender.Male:
-    		self.father = player
-    	else:
-    		self.mother = player
+        if player.gender == Gender.Male:
+            self.father = player
+        else:
+            self.mother = player
 
     def name_accusative(self):
         if self.adopted:

@@ -215,18 +215,19 @@ TRAITS_DICT = {
         ["WELL_KEPT"],
     ),
     "THANATOPHOBIA": (
-    	_("Thanatophobia"),
-    	_("You are afraid of death. You often worry about your own death or the death of a relative, and you lose more Happiness when a relative dies."),
-    	-3
+        _("Thanatophobia"),
+        _(
+            "You are afraid of death. You often worry about your own death or the death of a relative, and you lose more Happiness when a relative dies."
+        ),
+        -3,
     ),
-    
     "MOODY": (
         _("Moody"),
         _(
             "Your mood can change more easily. All changes to your Happiness are more intense."
         ),
         0,
-        ["NON_EMOTIONAL"]
+        ["NON_EMOTIONAL"],
     ),
     "NON_EMOTIONAL": (
         _("Non-Emotional"),
@@ -234,14 +235,12 @@ TRAITS_DICT = {
             "You don't react much to situations. Any changes to your Happiness are less intense."
         ),
         0,
-        ["MOODY"]
+        ["MOODY"],
     ),
 }
 
-#The below is a list of traits that cannot be randomly selected 
-NO_RAND_SELECT = {
-	"MEDITATOR"
-}
+# The below is a list of traits that cannot be randomly selected
+NO_RAND_SELECT = {"MEDITATOR"}
 
 
 class Trait:
@@ -261,7 +260,7 @@ class Trait:
 
     def roll_selection(self):
         if self.id in NO_RAND_SELECT:
-        	return False
+            return False
         if self.val == 0:
             return True
         return random.randint(1, abs(self.val)) == 1
@@ -348,8 +347,10 @@ def display_event(message, cls=True):
     if cls:
         clear_screen()
 
+
 def get_bar(val):
-	return draw_bar(val, 100, 25)
+    return draw_bar(val, 100, 25)
+
 
 def display_bar(stat_name, val):
     print(stat_name + ": " + get_bar(val))
