@@ -1,5 +1,5 @@
 import random, time, math
-from random import randint
+from random import randint, gauss, choice
 
 from src.lifesim_lib.const import *
 from src.lifesim_lib.translation import _
@@ -16,6 +16,8 @@ def activities_menu(player):
 			choices.append(_("Play with your toys"))
 		if player.age >= 4:
 			choices.append(_("Doctor"))
+			if player.age >= 18:
+				choices.append(_("Witch Doctor"))
 		if player.age >= 5:
 			choices.append(_("Arts and Crafts"))
 		if player.age >= 6:
@@ -532,6 +534,35 @@ def activities_menu(player):
 									   illness=n
 									)
 								)
+		elif choice == _("Witch Doctor"):
+			selected = True
+			health_mod = player.witch_doctor_health + gauss(0, 2)
+			if player.health >= 60:
+				health_mod -= (player.health-60)/10
+			if not player.illnesses:
+				health_mod -= abs(gauss(0, 5))
+			health_mod = round_stochastic(health_mod)
+			fee = randint(50, 100)
+			if yes_no(_("The witch doctor gives you a treatment they claim is \"special.\"\nDo you take it? Cost: {fee}").format(fee=fee)):
+				if player.money < fee:
+					print(_("You don't have enough money."))
+				else:
+					player.witch_doctor_health += gauss(-1.5, 1)
+					player.money -= fee
+					display_event(_("You took the witch doctor's treatments."))
+					player.change_health(health_mod)
+					player.change_happiness(health_mod)
+					if health_mod > 0 and player.illnesses and x_in_y(health_mod, 200):
+						illness = choice(player.illnesses)
+						display_event(
+							_(
+								"You are no longer suffering from {illness}."
+							).format(illness=illness)
+						)
+						player.remove_illness(illness)
+					elif player.health <= 0:
+						player.die(_("You died after taking a witch doctor's treatments."))
+	
 		elif choice == _("Mind & Body"):
 			print(_("Mind & Body"))
 			print()

@@ -1,5 +1,5 @@
 import math, os, random, uuid, pickle
-from random import randint
+from random import randint, gauss
 
 from src.lifesim_lib.const import *
 from src.lifesim_lib.translation import _
@@ -15,6 +15,7 @@ class Player(Person):
 	"""Base class for the player."""
 
 	def __init__(self, first=None, last=None, gender=None):
+		manual = first != None
 		gender = gender or Gender.random()
 		first = first or random_name(gender)
 		last = last or random.choice(LAST_NAMES)
@@ -22,7 +23,7 @@ class Player(Person):
 		health = randint(75, 100)
 		smarts = randint(0, 50) + randint(0, 50)
 		looks = randint(0, 65) + randint(0, 35)
-		if "belle" in first.lower(): #Congratulations, you discovered an easter egg!
+		if manual and "belle" in first.lower(): #Congratulations, you discovered an easter egg!
 			looks = 100
 		super().__init__(first, last, 0, gender, happiness, health, smarts, looks)
 		last1 = last2 = last
@@ -341,6 +342,12 @@ class Player(Person):
 		self.listened_to_music = False
 		self.asked_for_raise = False
 		self.skipped_school = False
+		w = abs(gauss(0, 16))
+		if x_in_y(2, 3):
+			w = -w
+		else:
+			w /= 3
+		self.witch_doctor_health = w
 		self.date_options = randint(9, 11)
 		
 	def process_relation_death(self, relation, reason=None):
@@ -706,7 +713,7 @@ class Player(Person):
 		elif self.looks < 65:
 			looks_symbol = "🌤"
 		elif self.looks < 85:
-			looks_symbol = "☉"
+			looks_symbol = "☀️"
 		else:
 			looks_symbol = "🔥"
 		print_align_bars(
