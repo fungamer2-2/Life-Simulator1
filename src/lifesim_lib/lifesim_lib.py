@@ -236,6 +236,27 @@ TRAITS_DICT = {
         0,
         ["MOODY"]
     ),
+	"FITNESS_ENTHUSIAST": (
+        _("Fitness-Enthusiast"),
+        _(
+            "You really enjoy getting your blood pumping. Any changes to your Health are slightly more intense."
+        ),
+        +1,
+    ),
+	"GYM_JUNKIE": (
+        _("Gym_Junkie"),
+        _(
+            "You love hitting the gym and pumping iron. Any changes to your Health are more intense."
+        ),
+        +2,
+    ),
+	"BORN_ATHLETE": (
+        _("Born_Athlete"),
+        _(
+            "You love exercise and sport in all its forms. Any changes to your Health are significantly more intense."
+        ),
+        +3,
+    ),
 }
 
 #The below is a list of traits that cannot be randomly selected 
